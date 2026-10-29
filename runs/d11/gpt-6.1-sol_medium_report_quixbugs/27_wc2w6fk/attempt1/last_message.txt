@@ -1,0 +1,6 @@
+Added [test_solution.py](/<work>/wc2w6fk/test_solution.py) with edge cases and exhaustive checks of 781 small integer lists.
+
+All 12 tests pass:
+`python -m pytest test_solution.py -q -p no:cacheprovider`
+
+`solution.py` is unchanged. No docstring discrepancies were found, so no xfail markers were needed. Explicit file selection avoids a pytest cache directory permission issue.

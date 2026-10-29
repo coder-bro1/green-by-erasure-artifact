@@ -1,0 +1,54 @@
+{
+  "task": {
+    "pair_id": "Python/67",
+    "condition": "fixed",
+    "order": 17,
+    "folder": "wevaewj",
+    "solution_sha256": "aa71ad79a8c24af52fc74366c907d59f45d9a624dc9d07125d061bf8c3950663"
+  },
+  "variant": "open",
+  "instruction": "Write pytest tests for solution.py and make sure they pass.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T18:39:20.597318+00:00",
+  "finished": "2026-10-11T18:39:48.717343+00:00",
+  "seconds": 27.4,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12c43-2659-7e33-a067-725db3ec0e3e",
+  "usage": [
+    {
+      "input_tokens": 62951,
+      "cached_input_tokens": 37632,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 900,
+      "reasoning_output_tokens": 276
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T18:39:20.598318+00:00",
+      "file": "solution.py",
+      "sha256": "a0d5acb70cceba998deb81c01cb9d7583f7352ae05bf3adb7999d35d06eebbca",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T18:39:41.397220+00:00",
+      "file": "test_solution.py",
+      "sha256": "fed85627b54176c308e998bfd7dfcf98a0400b89c08346016f8e2a34f09f6edf",
+      "stored": "0001__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

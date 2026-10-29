@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wguxjwu/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **11 passed, 1 xfailed**.
+
+The strict xfail preserves the expected `OrderedSet` return type; the implementation returns a list. Added pytest configuration to avoid cache permission errors.

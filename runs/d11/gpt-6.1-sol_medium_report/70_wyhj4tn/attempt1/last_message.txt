@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wyhj4tn/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **14 passed, 5 xfailed**.
+
+The five strict xfails preserve the documented expectations: `sort_numbers` returns input order instead of sorting numerically, including for its own docstring example.
+
+Added pytest configuration to avoid cache permission errors.

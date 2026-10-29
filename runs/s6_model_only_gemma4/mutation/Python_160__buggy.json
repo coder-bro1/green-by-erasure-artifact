@@ -1,0 +1,231 @@
+{
+  "pair_id": "Python/160",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_acbf8e0f6188ffbb.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-160__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_5db83efdd0ebe428.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-160__buggy__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_7b199bc373c0de98.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-160__buggy__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_6c3b1a9b746e0f1e.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-160__buggy__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_f862b44f1779489d.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-160__buggy__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_4ec45839c17103c5.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-160__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_02b27e40d3d0aef2.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-160__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "2815d17a50c84576a0d773734e1a8936",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "712a55bf4961463eba51ec2fc334a8aa",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "2923bdb64c574e36862889bb66e7765e",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "cecf0a1878f2481bb83a6119f3f8a187",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "578f5c4bc3c44f6e8056030e7072c49a",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "cf2f7343686b482a919847d2ca701249",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "92bf3e2ca58a4bb8b8d28102f62342d6",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ded3c5013bf04e698db24892a0279284",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "1a2d5e604b714b7a9bb06512d5dfea01",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "64da4d7d9dff4c14a5720546d1d35802",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6ff464ebbebe4a43ae33d3a57ba4c39b",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "fea6527a1c134877a576d0df00d5e1a6",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "d4938bd85a574679ac22c6ca6682ac72",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6f99f6b101fc46d0b539311710bda6ac",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "136771084a1443a7ae21e6042ff55700",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "f598c4960f7c498ea9a1e768651fe36d",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ff61bc091551468db259b091216659de",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8eba8f72ccd54cb7bf26ac90df9aacd1",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c6deda1a03fc44739c1497df2bb979fa",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "2d3b1fb5fc4742d9b7b97a67e0049dd2",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "35a735613d314e74a1b19cd7d5762b2d",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "738565af3075411d9d11fc166a0fa35a",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "f546ad54606b4e798840f5c703485768",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "a1d4ddfbfd0b4494a9ecc9b7a352751a",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "fdfb7c6ea5b0434187f5817bebff1e53",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "52cba3cdf9424f45beba8af863603584",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "53f0e9354b974e9d81a25736808aa2ab",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 5.4,
+  "finished": "2026-10-28T21:35:46.085260+00:00"
+}

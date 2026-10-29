@@ -1,0 +1,64 @@
+{
+  "task": {
+    "pair_id": "Python/24",
+    "condition": "buggy",
+    "order": 78,
+    "folder": "wz4q3pj",
+    "solution_sha256": "92a8f80990aa59a7c4a7abafe661ac7471c62bceae41d93d5be33cf316341bec"
+  },
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T10:27:31.636217+00:00",
+  "finished": "2026-10-11T10:28:20.655433+00:00",
+  "seconds": 48.8,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12a80-e0fa-7ec2-ab5e-8e9129cb8fb2",
+  "usage": [
+    {
+      "input_tokens": 99751,
+      "cached_input_tokens": 76928,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1211,
+      "reasoning_output_tokens": 158
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": true,
+  "snapshots": [
+    {
+      "time": "2026-10-11T10:27:31.637215+00:00",
+      "file": "solution.py",
+      "sha256": "b7b9ee467ffc7b130b2b6610ad51dedabdca368891e451416fc047078c8d09e5",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T10:27:57.532324+00:00",
+      "file": "test_solution.py",
+      "sha256": "1a2ca88cc35b4f55c0ee9bb9bae61918ec49c67baa741dd8de56848ee99f9df1",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T10:28:03.631338+00:00",
+      "file": "solution.py",
+      "sha256": "97e081efcd3545a2463e0bdc785fb9578f66533f7c06577228974bf18d79a4b1",
+      "stored": "0002__solution.py"
+    },
+    {
+      "time": "2026-10-11T10:28:13.814724+00:00",
+      "file": "pytest.ini",
+      "sha256": "e08279e0036f9813d0874146fda3511dd10119fd454e25e3e5690bf93d95c5cc",
+      "stored": "0003__pytest.ini"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

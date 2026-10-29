@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wj8jxtg/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **16 passed, 4 xfailed**.
+
+The four strict xfails preserve the correct expected values. The implementation reuses matching characters from the second input—for example, `("aa", "a")` returns `"aa"` instead of `"a"`, violating the documented subsequence requirement.

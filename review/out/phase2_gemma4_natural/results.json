@@ -1,0 +1,113 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 50,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 256,
+  "violations": [],
+  "n_violations": 0
+ },
+ "P1-m_judge_sees_body": {
+  "n": 0,
+  "examples": []
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 24,
+   "TEST_WRONG": 18,
+   "UNSURE": 2
+  },
+  "recovered_judge": {
+   "BUG": 24,
+   "TEST_WRONG": 18,
+   "UNSURE": 2
+  },
+  "recovered_with_code": {
+   "BUG": 26,
+   "TEST_WRONG": 17,
+   "UNSURE": 1
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 3,
+   "buggy|BUG|REVEALS": 13,
+   "buggy|TEST_WRONG|BROKEN": 7,
+   "buggy|TEST_WRONG|REVEALS": 3,
+   "buggy|UNSURE|BROKEN": 1,
+   "buggy|UNSURE|REVEALS": 1,
+   "fixed|BUG|BROKEN": 8,
+   "fixed|TEST_WRONG|BROKEN": 7,
+   "fixed|TEST_WRONG|ENCODES": 1
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 242,
+    "KEPT": 224,
+    "QUARANTINED": 18,
+    "QUARANTINED_REVEALS": 14,
+    "QUARANTINED_BROKEN": 4
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 252,
+    "KEPT": 234,
+    "QUARANTINED": 18,
+    "QUARANTINED_REVEALS": 14,
+    "QUARANTINED_BROKEN": 4
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 252,
+    "KEPT": 224,
+    "QUARANTINED": 28,
+    "QUARANTINED_REVEALS": 17,
+    "QUARANTINED_BROKEN": 11
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 240,
+    "KEPT": 224,
+    "QUARANTINED": 16,
+    "QUARANTINED_REVEALS": 13,
+    "QUARANTINED_BROKEN": 3
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 243,
+    "KEPT": 235,
+    "QUARANTINED": 8,
+    "QUARANTINED_BROKEN": 8
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 251,
+    "KEPT": 243,
+    "QUARANTINED": 8,
+    "QUARANTINED_BROKEN": 8
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 251,
+    "KEPT": 235,
+    "QUARANTINED": 16,
+    "QUARANTINED_BROKEN": 15,
+    "QUARANTINED_ENCODES": 1
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 243,
+    "KEPT": 235,
+    "QUARANTINED": 8,
+    "QUARANTINED_BROKEN": 8
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 21,
+  "written": 9
+ }
+}

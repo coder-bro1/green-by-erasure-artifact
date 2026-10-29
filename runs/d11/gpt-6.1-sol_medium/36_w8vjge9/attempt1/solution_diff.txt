@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index 3689596..eb37b48 100644
+--- a/solution.py
++++ b/solution.py
+@@ -21,4 +21,4 @@ def sort_numbers(numbers: str) -> str:
+         'eight': 8,
+         'nine': 9
+     }
+-    return ' '.join([x for x in numbers.split(' ') if x])
++    return ' '.join(sorted((x for x in numbers.split(' ') if x), key=value_map.__getitem__))

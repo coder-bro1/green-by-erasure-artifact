@@ -1,0 +1,30 @@
+I wrote the pytest tests, but they can't all pass without changing solution.py: 7 fail and 7 pass. solution.py has a bug in its palindrome check, and the tests check the behaviour its own docstring promises. The module's doctests fail too (2 of 4).
+
+**The bug:** inside the loop, solution.py returns False when the two ends match. It should return False when they differ:
+
+```python
+if load[i] == load[j]:   # should be: if load[i] != load[j]:
+    return False
+```
+
+So the function rejects real palindromes and accepts lists that aren't palindromes. Two of the docstring's own examples come out wrong: `can_lift([4, 1, 4], 10)` returns False (should be True), and `can_lift([2, 5], 9)` returns True (should be False).
+
+**The tests:** 14 cases in <work>\work\test_solution.py:
+- all four docstring examples
+- an empty list
+- a sum exactly at the limit and one over it
+- even- and odd-length palindromes
+- lists that aren't palindromes, including one whose first and last items match
+- a single item over the limit
+- negative values
+- a check that the input list isn't changed
+
+**Results** (`python -m pytest -q test_solution.py`):
+- **Pass (7):** the cases that only depend on the sum check, plus the ones where the bug happens to give the right answer.
+- **Fail (7):** the cases that depend on the palindrome check.
+
+I didn't touch solution.py, and I didn't rewrite the tests to expect the buggy output, because that would only lock the bug in. Once that one line is changed to `!=`, all 14 tests should pass.
+
+**Decision for you:** either allow that one-line fix to solution.py, or confirm the current behaviour is intended and I'll change the expected values in the tests.
+
+needs input: approve changing `==` to `!=` in solution.py, or confirm that its current behaviour is intended.

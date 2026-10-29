@@ -1,0 +1,93 @@
+{
+  "pair_id": "QuixBugs/powerset",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_bd5b48d18504878b.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-powerset__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "c90a5debef36432db85f08cc44c5d26b",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6e57f73fd40e4ad796ed30406a454902",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ec8379dc57564003a5c94aa2281414ef",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "7a0e847a39444f2a8493bebb7cc68d21",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "54fb5ec18eea4d85b7f72b5e16dd278d",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c95688ed35934d0fa0cb1d4493dca460",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ad7a599ffc6d4c50a71d78f158db9141",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "feb3c825d8944bd3b56fa0a8e1d10763",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8ec3e45e38234c21a5d1ae9800f5392c",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "109f95020a9a41069fde86e3b892f435",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "b798e3e79c974cfcb1e543a25d5c00e9",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "a14ab418f45b466e8d908659609ada64",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 2.4,
+  "finished": "2026-10-28T22:02:23.472883+00:00"
+}

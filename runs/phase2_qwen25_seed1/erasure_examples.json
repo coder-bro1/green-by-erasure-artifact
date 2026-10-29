@@ -1,0 +1,102 @@
+[
+  {
+    "test_id": "HumanEvalFix-154__buggy__qwen2-5-coder-7b-instruct__s1__code/t6",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_cycpattern_check_7():\n    assert cycpattern_check('rotation', 'tationro') == True",
+    "after": "def test_cycpattern_check_7():\n    assert cycpattern_check('rotation', 'tationro') == False",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-57__buggy__qwen2-5-coder-7b-instruct__s1__code/t0",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_monotonic_increasing():\n    assert monotonic([1, 2, 4, 20]) == True",
+    "after": "def test_monotonic_increasing():\n    assert monotonic([1, 2, 4, 20]) == False",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-112__buggy__qwen2-5-coder-7b-instruct__s1__code/t3",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_reverse_delete_no_chars_to_remove():\n    assert reverse_delete('abcdefg', 'h') == ('abcdefg', False)",
+    "after": "def test_reverse_delete_no_chars_to_remove():\n    assert reverse_delete('abcdefg', 'h') == ('abcdefg', True)",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-63__buggy__qwen2-5-coder-7b-instruct__s1__code/t2",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_fibfib_2():\n    assert fibfib(2) == 1",
+    "after": "def test_fibfib_2():\n    assert fibfib(2) == 2",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-5__buggy__qwen2-5-coder-7b-instruct__s1__code/t5",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_zero_delimiter():\n    assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]",
+    "after": "def test_zero_delimiter():\n    assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-63__buggy__qwen2-5-coder-7b-instruct__s1__code/t5",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_fibfib_5():\n    assert fibfib(5) == 4",
+    "after": "def test_fibfib_5():\n    assert fibfib(5) == 4",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-9__buggy__qwen2-5-coder-7b-instruct__s1__code/t6",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_rolling_max_with_mixed_numbers():\n    assert rolling_max([-1, 2, -3, 4, -2, 3, -4, 2]) == [-1, 2, 2, 4, 4, 4, 4, 4]",
+    "after": "def test_rolling_max_with_mixed_numbers():\n    assert rolling_max([-1, 2, -3, 4, -2, 3, -4, 2]) == [-1, 2, 2, 4, 4, 4, 4, 4]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-12__buggy__qwen2-5-coder-7b-instruct__s1__code/t9",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_large_strings():\n    assert longest(['a' * 100, 'b' * 200, 'c' * 150]) == 'b' * 200",
+    "after": "def test_large_strings():\n    assert longest(['a' * 100, 'b' * 200, 'c' * 150]) == 'b' * 200",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-108__buggy__qwen2-5-coder-7b-instruct__s1__code/t5",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_mixed_numbers():\n    assert count_nums([-1, 11, -11]) == 1",
+    "after": "def test_mixed_numbers():\n    assert count_nums([-1, 11, -11]) == 1",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-57__buggy__qwen2-5-coder-7b-instruct__s1__code/t2",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_monotonic_not_monotonic():\n    assert monotonic([1, 20, 4, 10]) == False",
+    "after": "def test_monotonic_not_monotonic():\n    assert monotonic([1, 20, 4, 10]) == False",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

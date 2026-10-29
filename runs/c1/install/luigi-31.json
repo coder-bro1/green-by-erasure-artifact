@@ -1,0 +1,97 @@
+{
+ "project": "luigi",
+ "bug": 31,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 06:08:47",
+ "test_files": [
+  "test/central_planner_test.py"
+ ],
+ "checkout_eol": "lf",
+ "install_buggy": {
+  "created": true,
+  "requirements": 194,
+  "failed_requirements": [
+   "mysql-connector-python==8.0.20",
+   "requests-async==0.5.0"
+  ],
+  "setup": [],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 194,
+  "failed_requirements": [
+   "mysql-connector-python==8.0.20",
+   "requests-async==0.5.0"
+  ],
+  "setup": [],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest test/central_planner_test.py::CentralPlannerTest::test_assistant_get_work_external_task"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest test/central_planner_test.py::CentralPlannerTest::test_assistant_get_work_external_task",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 2 warnings in 0.27s ========================"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest test/central_planner_test.py::CentralPlannerTest::test_assistant_get_work_external_task",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 2 warnings in 0.09s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest test/central_planner_test.py::CentralPlannerTest::test_assistant_get_work_external_task",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 2 warnings in 0.26s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest test/central_planner_test.py::CentralPlannerTest::test_assistant_get_work_external_task",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 2 warnings in 0.07s ========================"
+    }
+   ]
+  }
+ ],
+ "step2": "pass",
+ "step3": "pass",
+ "seconds": 979
+}

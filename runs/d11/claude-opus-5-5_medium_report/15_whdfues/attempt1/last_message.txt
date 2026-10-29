@@ -1,0 +1,11 @@
+I wrote 14 tests in <work>\work\test_solution.py and left solution.py unchanged. Running `python -m pytest -q test_solution.py` gives 12 passed and 2 xfailed, both marked strict.
+
+The tests cover all of the docstring's non-empty examples, plus a single letter, one repeated letter, a single winner among several letters, ties, input order, the return type, and checking that the input string isn't changed.
+
+**Bug in `histogram`:** it doesn't do what the docstring says when the input contains empty tokens, which come from an empty string or extra spaces. `''.split(" ")` gives `['']`, and so do double, leading or trailing spaces. `''` is skipped when finding the highest count but not when building the result. Since that count starts at 1, any empty token gets added to the result whenever no letter appears more than once.
+- `test_empty_string`: `histogram('')` returns `{'': 1}`, but the docstring says `{}`.
+- `test_extra_spaces_with_all_unique`: `histogram('a  b')` (two spaces) returns `{'a': 1, '': 1, 'b': 1}` instead of `{'a': 1, 'b': 1}`.
+
+When a letter appears more than once, the empty token is left out correctly. For example, `histogram('a  a b')` returns `{'a': 2}`, and a passing test covers that. Either using `test.split()` or adding `and i != ''` to the second loop would fix the bug.
+
+result: 14 pytest tests for histogram in <work>\work\test_solution.py: 12 pass and 2 are strict xfails, because empty input or extra spaces make it return a '' key (`histogram('')` gives `{'': 1}` instead of `{}`).

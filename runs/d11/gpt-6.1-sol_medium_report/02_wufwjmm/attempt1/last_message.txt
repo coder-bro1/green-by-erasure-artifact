@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wufwjmm/test_solution.py) covering docstring examples, signs, zeros, and large integers. `solution.py` is unchanged.
+
+`python -m pytest -q`: **1 passed, 15 xfailed**.
+
+The function returns `b`, which is always `0` when the loop ends, instead of the documented GCD. Failing tests retain their correct expected values and use `@pytest.mark.xfail(strict=True, reason=...)`.
+
+Added pytest configuration to avoid inaccessible cache directories.

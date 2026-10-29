@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wwsm2k6/test_solution.py). `solution.py` is unchanged.
+
+Validation: `python -m pytest test_solution.py -q -p no:cacheprovider` → **13 passed, 5 xfailed**.
+
+The five strict xfails preserve the documented expectations. The function computes maximum prefix sums, missing sublists that start later. Its docstring example returns `4` instead of `5`.

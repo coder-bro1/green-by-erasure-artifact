@@ -1,0 +1,11 @@
+I wrote the pytest tests and the suite passes: 17 passed, 8 expected failures (xfail). But solution.py has a bug, and the 8 expected failures are the tests that catch it.
+
+**The bug:** the docstring says 'y' only counts as a vowel at the end of a word, but `vowels_count` uses `vowels = "aeiouyAEIOUY"` and counts every 'y'. So `vowels_count("yes")` returns 2 instead of 1, and `vowels_count("rhythm")` returns 2 instead of 0. I didn't touch solution.py, as asked. git status shows it unchanged; the test file is the only new file.
+
+The tests are in <work>\work\test_solution.py:
+- **17 passing tests:** the two docstring examples, empty string, no vowels, all vowels in lower, upper and mixed case, a trailing 'y'/'Y' counting (including the one-letter word "y"), digits and punctuation, accented letters not counting, the return type being an int, and a 10,000-character input.
+- **8 expected failures:** 'y' that isn't at the end should not count ("yes", "Yellow", "myth", "syzygy", "YaY", "bye", "rhythm", "xyz"). Each expects the answer the docstring specifies and is marked `xfail(strict=True)` with a reason naming the bug. Once solution.py is fixed, these will start passing and the suite will report them as failures (because of `strict=True`), so the marker needs to be removed then.
+
+I made the suite pass this way rather than by asserting the buggy output, so it doesn't hide the problem. To fix it, count 'y'/'Y' only when it is the last character.
+
+result: Added <work>\work\test_solution.py (17 passed, 8 expected failures). The expected failures show that solution.py counts 'y' anywhere in the word, not only at the end as its docstring says; solution.py was not changed.

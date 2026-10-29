@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wuvm9qq/test_solution.py). `solution.py` is unchanged.
+
+Verification: **2 passed, 10 expected failures**. Nonempty inputs raise `RecursionError` because the singleton base case is missing; those tests explicitly document the bug.
+
+Run with:
+```sh
+python -m pytest test_solution.py -q -p no:cacheprovider
+```

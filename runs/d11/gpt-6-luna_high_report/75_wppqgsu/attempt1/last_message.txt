@@ -1,0 +1,3 @@
+Added [test_solution.py](/<work>/wppqgsu/test_solution.py) with coverage for empty input, a single string, finding the longest string, and preserving the first string in a tie. `solution.py` is unchanged.
+
+`pytest -q` succeeds: **1 passed, 3 xfailed**. The nonempty cases are strict xfails because `longest()` currently returns `None` instead of a string. The run also reported a pytest cache permission warning.

@@ -1,0 +1,102 @@
+[
+  {
+    "test_id": "HumanEvalFix-152__buggy__qwen3-5-9b__s0__code/t6",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_compare_large_numbers():\n    assert compare([100, 200], [99, 201]) == [1, 1]",
+    "after": "def test_compare_large_numbers():\n    assert compare([100, 200], [99, 201]) == [2, 2]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-126__buggy__qwen3-5-9b__s0__code/t7",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_with_triple_duplicate():\n    assert is_sorted([1, 2, 2, 2, 3, 4]) == False",
+    "after": "def test_with_triple_duplicate():\n    assert is_sorted([1, 2, 2, 2, 3, 4]) == True",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-135__buggy__qwen3-5-9b__s0__code/t5",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_can_arrange_three_elements_middle_drop():\n    assert can_arrange([3, 5, 2, 4]) == 2",
+    "after": "def test_can_arrange_three_elements_middle_drop():\n    assert can_arrange([3, 5, 2, 4]) == 0",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-67__buggy__qwen3-5-9b__s0__code/t6",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_fruit_distribution_mixed_lengths():\n    assert fruit_distribution('100 apples and 200 oranges', 300) == 0",
+    "after": "def test_fruit_distribution_mixed_lengths():\n    assert fruit_distribution('100 apples and 200 oranges', 300) == -1",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-67__buggy__qwen3-5-9b__s0__code/t0",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_fruit_distribution_basic_case():\n    assert fruit_distribution('5 apples and 6 oranges', 19) == 8",
+    "after": "def test_fruit_distribution_basic_case():\n    assert fruit_distribution('5 apples and 6 oranges', 19) == 7",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "QuixBugs-hanoi__buggy__qwen3-5-9b__s0__code/t8",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_hanoi_two_disks_start_3_end_2():\n    assert hanoi(2, 3, 2) == [(3, 1), (3, 2), (1, 2)]",
+    "after": "def test_hanoi_two_disks_start_3_end_2():\n    assert hanoi(2, 3, 2) == [(3, 1), (3, 2), (1, 2)]",
+    "change_modes": "INPUT_CHANGED|FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "QuixBugs-pascal__buggy__qwen3-5-9b__s0__code/t9",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_pascal_first_column_all_ones():\n    result = pascal(10)\n    for row in result:\n        assert row[0] == 1",
+    "after": "def test_pascal_first_column_all_ones():\n    result = pascal(10)\n    for row in result:\n        assert row[0] == 1",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "QuixBugs-powerset__buggy__qwen3-5-9b__s0__code/t4",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_powerset_four_elements():\n    result = powerset(['w', 'x', 'y', 'z'])\n    assert len(result) == 16\n    assert [] in result\n    assert ['w', 'x', 'y', 'z'] in result",
+    "after": "def test_powerset_four_elements():\n    result = powerset(['w', 'x', 'y', 'z'])\n    assert len(result) == 16\n    assert [] in result\n    assert ['w', 'x', 'y', 'z'] in result",
+    "change_modes": "INPUT_CHANGED|FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-132__buggy__qwen3-5-9b__s0__code/t3",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_is_nested_complex_valid():\n    assert is_nested('[[][]]') == True",
+    "after": "def test_is_nested_complex_valid():\n    assert is_nested('[[][]]') == True",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-117__buggy__qwen3-5-9b__s0__code/t3",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_select_words_four_consonants_hello_world():\n    assert select_words('Hello world', 4) == ['world']",
+    "after": "def test_select_words_four_consonants_hello_world():\n    assert select_words('Hello world', 4) == ['world']",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

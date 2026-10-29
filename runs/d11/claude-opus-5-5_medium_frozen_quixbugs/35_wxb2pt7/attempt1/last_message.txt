@@ -1,0 +1,19 @@
+I wrote `<work>\work\test_solution.py` and the suite passes: 41 passed and 3 xfailed (expected failures that don't fail the run). `solution.py` has a bug, and three of the tests show it; `git status` confirms I didn't change `solution.py`.
+
+**The bug:** line 26 of `<work>\work\solution.py` reads `if weight < j:` where it should be `<=`. As a result, an item that exactly fills the space left in the knapsack is never taken.
+- `knapsack(5, [(5, 10)])` returns 0; the right answer is 10.
+- `knapsack(10, [(4, 5), (6, 7)])` returns 7; the right answer is 12.
+- A related problem: with capacity 0, a zero-weight item is never counted, because the inner loop starts at 1. `knapsack(0, [(0, 5)])` returns 0 instead of 5.
+
+**How I handled it:** you asked for passing tests without touching `solution.py`, so I wrote those three cases to expect the correct answers and marked them `xfail(strict=True)`. They don't fail the suite now, but once the bug is fixed they will start failing, which tells you to remove the markers. I didn't write tests that expect the wrong answers.
+
+**What the passing tests cover:**
+- The example from the docstring.
+- An empty item list, zero capacity, and items too heavy to fit.
+- Picking one valuable item over several cheap ones, and a combination over the single best item.
+- Each item being used at most once.
+- A zero-weight item when there is spare capacity.
+- The input list not being changed.
+- 30 random cases checked against a brute-force solver that tries every combination. Because of the bug, these only check that the result falls between the best answer for capacity − 1 and the best answer for the full capacity.
+
+result: Added `<work>\work\test_solution.py` (41 passed, 3 xfailed); it shows that `solution.py` never takes an item that exactly fills the remaining capacity (`weight < j` should be `weight <= j`).

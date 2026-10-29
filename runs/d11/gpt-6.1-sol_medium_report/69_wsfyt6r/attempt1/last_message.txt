@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wsfyt6r/test_solution.py) covering docstring examples and edge cases. `solution.py` is unchanged.
+
+`monotonic` returns the opposite of its documented result. All 13 cases retain their correct expectations and use `xfail(strict=True, reason=...)`.
+
+Validation: `python -m pytest -q` succeeds with **13 xfailed**. Added pytest configuration to avoid workspace cache permission errors.

@@ -1,0 +1,26 @@
+I wrote 11 tests in <work>\work\test_solution.py. Running `python -m pytest -v test_solution.py` gives 5 passed and 6 xfailed (strict), with nothing failing. I did not change <work>\work\solution.py.
+
+**The bug:** `sum_product` always returns 0 as the product. It starts the running product at 0 instead of 1:
+
+```python
+prod_value = 0   # should be 1
+```
+
+Multiplying by 0 keeps it at 0, so the second value in the result is wrong in every case except when the true product is 0. The docstring says it should return `(0, 1)` for an empty list and `(10, 24)` for `[1, 2, 3, 4]`. It actually returns `(0, 0)` and `(10, 0)`.
+
+**The 6 xfail tests** keep the expected values from the docstring and are marked `@pytest.mark.xfail(strict=True, reason=...)`:
+- empty list
+- the docstring example
+- a single element
+- negative numbers
+- all ones
+- large values
+
+**The 5 passing tests:**
+- a list containing 0, which passes only because the right product is 0 anyway
+- the list `[0]`
+- the sum value on its own, which is computed correctly
+- the result is a tuple of two values
+- the input list is not changed
+
+Changing `prod_value = 0` to `prod_value = 1` should make all 6 xfail tests pass. Because they are strict, they will then be reported as errors (XPASS) until the xfail markers are removed.

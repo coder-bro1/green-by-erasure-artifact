@@ -1,0 +1,17 @@
+The tests are written and the suite runs clean: 13 pass and 5 are marked as expected failures, because `solution.py` has a bug that makes them fail. I left `solution.py` untouched as asked.
+
+**The bug:** the planet list in `solution.py` spells Jupiter as `'Jupyter'`. So any call with `'Jupiter'` treats it as an unknown planet and returns `()`, and ranges that pass Jupiter return `'Jupyter'` in its place. Both examples in the function's own docstring are wrong as a result: `planets_between('Venus', 'Jupiter')` returns `()` instead of `('Earth', 'Mars')`. The fix is to correct that one word in the list.
+
+**The tests** (`<work>\work\test_solution.py`):
+- **Passing (13):**
+  - neighbouring planets give an empty result
+  - ranges that don't touch Jupiter
+  - arguments in reverse order still come back nearest-to-Sun first
+  - the same planet twice gives an empty result
+  - invalid names give an empty result: Pluto, an empty string, wrong capitalisation, a trailing space, Sun/Moon
+  - the result is always a tuple
+- **Marked as expected failures (5):** the two docstring examples, Mercury to Neptune, cases next to Jupiter, and a check that `'Jupyter'` is rejected. These tests expect the correct answers, so they don't pass while the typo exists. They are marked strict, so once `'Jupyter'` is fixed they will pass and pytest will report them, telling you to remove the marker.
+
+If you'd rather the bug showed up as plain failures, delete the `@JUPITER_BUG` lines. That leaves 5 failures until `solution.py` is fixed.
+
+To run it: `python -m pytest -v test_solution.py` from `<work>\work`.

@@ -1,0 +1,252 @@
+﻿case,link,title,changed_asserts,YOUR WHY,YOUR SAYS,your note,CLAUDE WHY,CLAUDE SAYS,Claude reason,FINAL WHY (I / W / E / M / U),FINAL SAYS (Y / N),final note (optional)
+C001,https://github.com/TracecatHQ/tracecat/pull/1493,feat: surface workflow input schema when running from case,"OLD: assert set(schema.get(""required"", [])) == {""case_id"", ""severity"", ""count""}
+NEW: assert set(schema.get(""required"", [])) == {""case_id"", ""severity""}",U,N,Need the field definition for count to tell whether it should be required.,I,N,agent's own new test for the schema helper; required set follows the implementation,U,N,
+C003,https://github.com/simonw/datasette/pull/2533,"Remove old permission_allowed() methods, complete migration to new allowed() system","OLD: assert ""fixtures/users"" in table_names
+NEW: assert ""restricted_db/users"" in table_names
+
+OLD: assert ""fixtures/posts"" in table_names
+NEW: assert ""restricted_db/posts"" in table_names",U,N,The excerpt does not show why these tables belong to restricted_db rather than fixtures.,W,N,"fixture database renamed; same expectation (revised M to W on 17 October: test data changed, per the label guide)",U,N,
+C004,https://github.com/swingerman/ha-dual-smart-thermostat/pull/431,Add E2E CI workflow for automated integration testing,"OLD: assert result[""step_id""] == ""cooling_only""
+NEW: assert result[""step_id""] == ""basic_ac""
+
+OLD: assert result[""step_id""] == ""basic_ac""
+NEW: assert result[""step_id""] == ""basic_ac_only""",E,N,"The description covers CI setup, but the assertions change configuration step names.",I,N,config-flow steps renamed in the code,E,N,
+C005,https://github.com/aws/bedrock-agentcore-starter-toolkit/pull/90,fix: Pass environment variables when using CodeBuild for deployment,"OLD: assert call_args[1][""timeout""] == 100
+NEW: assert call_args[1][""timeout""] == 900",I,N,,I,Y,description states the timeout increase from 100 s to 900 s,I,N,
+C007,https://github.com/NewFuture/DDNS/pull/539,feat(config): 支持远程配置文件 add remote HTTP(S) config loading support,"OLD: self.assertIn(""DDNS/"", USER_AGENT)
+NEW: self.assertIn(""<email>"", USER_AGENT)
+
+OLD: self.assertIn(""<email>"", USER_AGENT)
+NEW: self.assertIn(""DDNS/"", USER_AGENT)
+
+OLD: self.assertIn(""httpbin.org/get"", data_post[""url""])
+NEW: self.assertIn("".org/get"", data_post[""url""])",E,N,The URL check now accepts any host ending in .org. The two user-agent checks just swap places.,W,N,USER_AGENT asserts swapped; URL check loosened for a different test endpoint,E,N,
+C008,https://github.com/netket/netket/pull/2064,Implement SpinfulParticle and ParticleSet,"OLD: assert len(hi.domain) == (hi.size // hi.n_particles)
+NEW: assert len(hi.domain) == hi.size
+
+OLD: assert q_obj.dims[1] == [1 for i in range(vstate.hilbert.size)]
+NEW: assert q_obj.dims[1] == [1]",I,N,,I,Y,description says the QuTiP tests were updated for version 5; domain size follows the new design,I,Y,
+C012,https://github.com/llama-farm/llamafarm/pull/32,"PREVIEW: 🚀 feat: LlamaFarm Enterprise AI Framework - Comprehensive Models, Prompts & RAG System","OLD: assert ""test_strategy"" in usage[""qa_basic""]
+NEW: assert ""simple_qa"" in usage[""qa_basic""]
+
+OLD: assert ""another_strategy"" in usage[""qa_basic""]
+NEW: assert ""custom_template"" in usage[""qa_basic""]
+
+OLD: assert doc.source == ""samples/test_document.pdf""
+NEW: assert doc.source == ""samples/pdfs/test_document.pdf""",U,N,,I,N,strategies renamed and sample moved in a large refactor,U,N,
+C014,https://github.com/charlesvestal/extending-move/pull/476,Implement pitchbend editor for drum pads,"OLD: assert b'ok' in resp.data
+NEW: assert b""ADSR Envelope Visualizer"" in resp.data
+
+OLD: assert b'ADSR Envelope Visualizer' in resp.data
+NEW: assert b""ok"" in resp.data
+
+OLD: assert b'Cyclic Envelope Visualizer' in resp.data
+NEW: assert b""LFO Cycle Visualizer"" in resp.data
+
+(+33 more changed asserts in this PR)",U,N,,I,N,page titles renamed and tests reordered,M,N,All 36 listed changes pair off as swapped assertions; neither page title disappears.
+C015,https://github.com/marin-community/levanter/pull/1095,Add torch-free radix cache,"OLD: assert res.last_node.key == [1, 2, 3]
+NEW: assert res.last_node.key == [3]
+
+OLD: assert res.last_node.key == [1, 2]
+NEW: assert res.last_node.key == [2]
+
+OLD: assert res.indices == []
+NEW: assert res.indices == [1]
+
+(+5 more changed asserts in this PR)",U,N,,W,N,"agent's own new radix-cache tests: first expected the full prefix, then the edge segment, which matches the SGLang design",W,N,
+C017,https://github.com/charlesvestal/extending-move/pull/38,Implement HTML file browser for preset tools,"OLD: assert b'sample.wav' in resp.data
+NEW: assert b'class=""file-browser""' in resp.data
+
+OLD: assert b'name=""preset_select"" value=""x""' in resp.data
+NEW: assert b'<p>done</p>' in resp.data
+
+OLD: assert b'<option value=""1"">P</option>' in resp.data
+NEW: assert b'class=""file-browser""' in resp.data
+
+(+1 more changed asserts in this PR)",E,N,Checking for the browser container no longer checks that sample.wav is listed.,I,N,pages now render the new file browser,E,N,
+C020,https://github.com/BerriAI/litellm/pull/12551,[Feat] New LLM API Integration - Add Moonshot API (Kimi),"OLD: assert result.get(""temperature"") == 0.2
+NEW: assert result.get(""temperature"") == 0.7
+
+OLD: assert result.get(""temperature"") == 0.8
+NEW: assert result.get(""temperature"") == 1
+
+OLD: assert ""max_completion_tokens"" not in result
+NEW: assert ""tool_choice"" not in result",U,N,,I,N,agent's own tests for the new provider follow its parameter mapping,U,N,
+C021,https://github.com/langchain-ai/langchain/pull/32161,feat(ollama): warn on empty `load` responses,"OLD: assert result.content == 'Hello! How can I help you today?'
+NEW: assert result.content == ""This is actual content""
+
+OLD: assert result.response_metadata.get('done_reason') == 'stop'
+NEW: assert result.response_metadata.get(""done_reason"") == ""load""
+
+OLD: assert result.content == 'This is actual content'
+NEW: assert result.content == ""Hello! How can I help you today?""
+
+(+1 more changed asserts in this PR)",U,N,,I,N,asserts reordered; new done_reason case is the subject of the PR,M,N,Both content strings and both done_reason values are still checked. The pairs trade places.
+C024,https://github.com/swingerman/ha-dual-smart-thermostat/pull/426,Add Playwright E2E tests for config &amp; options flows (Phase 1A) - Merged with Docker Infrastructure,"OLD: assert len(calls) == 1
+NEW: assert len(calls) == 0",U,N,,E,N,"E2E-test PR also changes climate.py; a test that expected one service call now expects none, not explained",E,N,
+C025,https://github.com/crewAIInc/crewAI/pull/2792,Fix issue #2791: Task tools now combine with agent tools instead of overriding them,"OLD: assert len(task.tools) == 1  # AnotherTestTool
+NEW: assert len(task.tools) == 2",I,Y,,I,N,"task tools now combine with agent tools, the fix the PR describes",I,Y,
+C026,https://github.com/jrkropp/open-webui-developer-toolkit/pull/621,Update markers to v2 format,"OLD: assert parsed['ulid'] == '01HX4Y2VW5VR2Z2HDQ5QY9REHB'
+NEW: assert parsed['ulid'] == '01HX4Y2VW5VR2Z2H'
+
+OLD: assert 'openai_responses:v1:function_call' in segments[1]['marker']
+NEW: assert 'openai_responses:v2:function_call' in segments[1]['marker']",I,N,,I,Y,"ULID regex and marker version changed as described; ""refresh changelog and tests""",I,N,
+C028,https://github.com/crewAIInc/crewAI/pull/3523,Fix Windows CLI execution issue with subprocess permissions,"OLD: assert call_args[1][""cwd""] == ""/tmp""
+NEW: assert call_args[1][""cwd""] == ""/home/test""",U,N,,W,N,"mocked working directory changed; same expectation (revised M to W on 17 October: test data changed, per the label guide)",W,N,
+C030,https://github.com/microsoft/Qcodes/pull/7240,Fix inferred parameters missing from dataset when explicitly added,"OLD: assert ""del_param_1"" in param_data, ""del_param_1 should be in parameter data""
+NEW: assert ""standalone"" in param_data, ""standalone parameter should be in parameter data""
+
+OLD: assert ""standalone"" in param_data, ""standalone parameter should be in parameter data""
+NEW: assert ""del_param_1"" in param_data, ""del_param_1 should be in parameter data""
+
+OLD: assert len(interdeps.standalones) == 1  # dac_ch1 is standalone
+NEW: assert len(interdeps.standalones) == 0  # dac_ch1 is standalone
+
+(+2 more changed asserts in this PR)",I,N,,E,N,standalones 1 to 0 while the comment on the same line still says dac_ch1 is standalone,E,N,"The count is now zero, but the comment and description still call dac_ch1 standalone."
+C034,https://github.com/Uberi/speech_recognition/pull/845,Add verbose parameter to recognize_vosk(),"OLD: assert actual == expected
+NEW: assert actual == ""one two three""
+
+OLD: assert actual == expected
+NEW: assert actual == {""text"": ""one two three""}",I,N,,M,N,expected variable replaced by its literal value,I,N,
+C039,https://github.com/sunriseapps/imagesorcery-mcp/pull/6,Refactor mask handling to use PNG files,"OLD: assert ""mask"" in detection
+NEW: assert ""mask_path"" in detection
+
+OLD: assert ""mask"" not in detection
+NEW: assert ""mask_path"" not in detection
+
+OLD: assert ""mask"" in found_object
+NEW: assert ""mask_path"" in found_object
+
+(+1 more changed asserts in this PR)",I,Y,,I,N,"masks are now returned as file paths, as described",I,Y,
+C043,https://github.com/mlflow/mlflow/pull/15839,Add support for classmethods and staticmethods to @mlflow.trace decorator,"OLD: assert span.outputs == {""output"": 3}
+NEW: assert span.outputs == 3",W,N,,U,N,traced output changes from a dict to the bare value; not explained,W,N,
+C045,https://github.com/NVIDIA-NeMo/Curator/pull/987,"Standardize Stage Naming Convention: CamelCase classes, snake_case identifiers","OLD: assert stage.name == ""ConcreteProcessingStage""  # Original unchanged
+NEW: assert stage.name == ""concrete_processing_stage""  # Original unchanged
+
+OLD: assert stage.name == ""ConcreteProcessingStage""
+NEW: assert stage.name == ""concrete_processing_stage""
+
+OLD: assert modified_stages[1].name == ""MockStageB""
+NEW: assert modified_stages[1].name == ""mock_stage_b""
+
+(+4 more changed asserts in this PR)",I,N,,I,Y,stage names converted to snake_case as listed in the description,I,Y,
+C048,https://github.com/atopile/atopile/pull/1438,Libs: Parts: Fix trait parsing for footprint names containing commas (Issue #1278),"OLD: assert atomic_trait._symbol == ""ICM-20948.kicad_sym""
+NEW: assert atomic_trait._symbol == ""PCA9536.kicad_sym""
+
+OLD: assert atomic_trait._footprint == ""TSSOP-8_L3.0-W3.0-P0.65-LS4.4-BL,EP.kicad_mod""
+NEW: assert atomic_trait._footprint == ""TSSOP-8_L3.0-W3.0-P0.65-LS4.4-BL_EP.kicad_mod""
+
+OLD: assert atomic_trait._footprint == ""TSSOP-8_L3.0-W3.0-P0.65-LS4.4-BL_EP.kicad_mod""
+NEW: assert atomic_trait._footprint == ""TSSOP-8_L3_0-W3_0-P0_65-LS4_4-BL_EP.kicad_mod""",I,Y,,E,N,"comma sanitisation is the fix, but the last change also turns dots into underscores in footprint names without explanation",I,Y,"The description explicitly lists periods as well as commas, and says the test was updated for sanitized names."
+C054,https://github.com/crewAIInc/crewAI/pull/2121,fix: Handle thread locks in Flow state serialization,"OLD: assert ""Saving flow state to memory for ID: test-uuid-1"" not in caplog.text
+NEW: assert ""Saving flow state"" not in caplog.text
+
+OLD: assert ""Saving flow state to memory for ID: test-uuid-2"" in caplog.text
+NEW: assert ""Saving flow state"" in caplog.text
+
+OLD: assert ""validation error"" in str(exc_info.value).lower()
+NEW: assert ""failed to convert text into a pydantic model"" in str(exc_info.value).lower()",E,N,"The log checks lose the flow ID, so they can pass on a message from another flow.",U,N,log checks loosened and a different exception message expected after the state-serialisation change,E,N,
+C060,https://github.com/FarisZR/knocker/pull/8,Security Audit: Fix Critical IP Spoofing and Multiple Vulnerabilities,"OLD: assert response.json()[""whitelisted_entry""] == ""2001:db8::/64""
+NEW: assert response.json()[""whitelisted_entry""] == ""2001:db8::/120""
+
+OLD: assert response.status_code == 200
+NEW: assert response.status_code == 400
+
+OLD: assert response.status_code == 200
+NEW: assert response.status_code == 401",I,Y,,I,N,security fixes reject requests with 400 and 401 as described,I,Y,
+C061,https://github.com/NewFuture/DDNS/pull/498,feat(AliESA) 阿里云边缘安全加速 DNS provider support,"OLD: self.assertEqual(result, (None, None, ""example.com""))
+NEW: self.assertEqual(result, (None, None, ""www.example.com""))
+
+OLD: self.assertEqual(result, (expected_site_id, expected_subdomain, expected_main_domain))
+NEW: self.assertEqual(result, (""12345"", ""@"", ""example.com""))
+
+OLD: self.assertEqual(ssl_config, 'false')
+NEW: self.assertEqual(ssl_config, ""true"")
+
+(+11 more changed asserts in this PR)",U,N,,I,N,agent's own tests for the new provider,U,N,
+C064,https://github.com/tomquist/b2500-meter/pull/134,Add flexible modbus payload decoding,"OLD: self.assertEqual(modbuspowermeter.get_powermeter_watts(), [500])
+NEW: self.assertEqual(modbuspowermeter.get_powermeter_watts(), [500.0])",M,N,[500] and [500.0] compare equal here; this assertion does not check the numeric type.,I,N,decoded values are now floats,M,N,Both implementations already return floats. assertEqual accepts [500] and [500.0] equally.
+C065,https://github.com/vllm-project/vllm/pull/22138,[V0 Deprecation] Remove multi-step scheduling,"OLD: assert len(kv_connector_metadata.reqs_to_recv) == 0
+NEW: assert len(kv_connector_metadata.reqs_to_recv) == 1
+
+OLD: assert len(scheduler_output.scheduled_new_reqs) == 1
+NEW: assert len(scheduler_output.scheduled_new_reqs) == 0",U,N,,E,N,removing multi-step scheduling changes single-step scheduler counts; not explained,E,N,
+C067,https://github.com/wshobson/maverick-mcp/pull/24,feat: add tool estimation config and rate limiting infrastructure,"OLD: assert exc.message == ""Payment processing failed""
+NEW: assert exc.message == ""Service request failed""
+
+OLD: assert exc.context[""service""] == ""Stripe""
+NEW: assert exc.context[""service""] == ""MarketDataAPI""
+
+OLD: assert ""script-src 'self' 'unsafe-inline' https://js.stripe.com"" in csp_header
+NEW: assert ""script-src 'self' 'unsafe-inline'"" in csp_header
+
+(+3 more changed asserts in this PR)",E,N,,U,N,billing PR now expects a generic service error and a CSP without Stripe; unclear,E,N,
+C069,https://github.com/translate/translate/pull/5760,Add support for data-translate-ignore attribute and translate:off/on comments in HTML translation,"OLD: assert '<p>Traduire ceci</p>' in result
+NEW: assert ""<p data-translate-ignore>Do not translate</p>"" in result
+
+OLD: assert '<p data-translate-ignore>Do not translate</p>' in result
+NEW: assert ""<p>Traduire ceci</p>"" in result
+
+OLD: assert '<p>Traduire ceci aussi</p>' in result
+NEW: assert ""<div>Traduire ceci</div>"" in result
+
+(+7 more changed asserts in this PR)",U,N,,I,N,"agent's own tests for the new ignore feature, partly reordered",M,N,
+C072,https://github.com/Significant-Gravitas/AutoGPT/pull/11008,fix(backend): prevent duplicate graph executions across multiple executor pods,"OLD: assert redis_client.exists(lock_key) == 1
+NEW: assert redis_client.exists(lock_key) == 0
+
+OLD: assert new_lock.try_acquire() is True
+NEW: assert new_lock.try_acquire() is None
+
+OLD: assert lock.try_acquire() is True
+NEW: assert lock.try_acquire() is None
+
+(+2 more changed asserts in this PR)",U,N,,E,N,"lock tests now expect try_acquire to return None and the lock key to be absent after acquiring; contradicts what a lock should do, not explained",U,N,"The test setup is missing, so I cannot tell whether the lock is absent after release, expiry or a failed acquisition."
+C073,https://github.com/machinewrapped/llm-subtrans/pull/371,Simplify test subtitle helper generation,"OLD: self.assertEqual(batch_one_item.line_count, 2)
+NEW: self.assertEqual(batch_one_item.line_count, 3)",U,N,,W,N,new test-data helper builds batches with three lines,W,N,
+C074,https://github.com/Metta-AI/metta/pull/2484,Optimize GitHub Actions workflows with pytest-testmon,"OLD: self.assertLess(total_time, 0.25, f""Parallel execution took {total_time}s, expected ~0.1s"")
+NEW: self.assertLess(total_time, 0.15, f""Parallel execution took {total_time}s, expected ~0.05s"")
+
+OLD: self.assertGreater(total_time, 0.08, f""Execution too fast: {total_time}s, expected ~0.1s"")
+NEW: self.assertGreater(total_time, 0.04, f""Execution too fast: {total_time}s, expected ~0.05s"")
+
+OLD: self.assertGreater(total_time, 0.25, f""Sequential execution too fast: {total_time}s"")
+NEW: self.assertGreater(total_time, 0.12, f""Sequential execution too fast: {total_time}s"")
+
+(+4 more changed asserts in this PR)",U,N,,W,N,timing thresholds follow shorter sleeps in the test,W,N,
+C076,https://github.com/Ziems/arbor/pull/109,Autodetect GPUs,"OLD: assert set(allocated) == {0, 1, 2}
+NEW: assert set(allocated) == {0, 2}",W,N,,W,Y,"GPU fixture now marks GPU 1 busy; ""keep the GPU manager tests green""",W,N,
+C080,https://github.com/HarrisonKramer/optiland/pull/342,Finalize and Test `optiland.environment` Subpackage,"OLD: assert n_api == pytest.approx(expected_n_approx, abs=1e-8)
+NEW: assert n_calculated == pytest.approx(expected_n_approx, abs=1e-8)",M,Y,,M,N,variable renamed,M,Y,
+C081,https://github.com/microsoft/Olive/pull/1897,Add dynamic version control to Olive documentation based on Git tags,"OLD: self.assertEqual(version, ""0.9.1.dev"")
+NEW: self.assertEqual(version, ""latest"")
+
+OLD: self.assertEqual(version, ""0.9.1"")
+NEW: self.assertEqual(version, ""0.10.0"")
+
+OLD: self.assertEqual(version, ""latest"")
+NEW: self.assertEqual(version, ""1.0.0"")",U,N,,I,N,agent's own tests for version detection,U,N,
+C084,https://github.com/Metta-AI/metta/pull/1593,Add move_cardinal and move_8way,"OLD: assert objects[agent_id][""orientation""] == 3  # But orientation should update to East
+NEW: assert objects[agent_id][""orientation""] == 2  # Left
+
+OLD: assert objects[agent_id][""orientation""] == 0  # But orientation should update to North
+NEW: assert objects[agent_id][""orientation""] == 2  # Orientation should remain Left
+
+OLD: assert objects[agent_id][""orientation""] == initial_orientation  # Orientation unchanged
+NEW: assert objects[agent_id][""orientation""] == 0  # Orientation changes to North
+
+(+3 more changed asserts in this PR)",I,N,,U,N,orientation expectations reversed in existing movement tests while adding new movement modes; default behaviour may have changed,U,N,
+C085,https://github.com/swarmauri/swarmauri-sdk/pull/1478,Add IPublish interface and PublishBase,"OLD: assert pub.type == ""PublishBase""
+NEW: assert pub.type == ""DummyPublisher""",W,N,,I,N,agent's own tests for the new base class with a dummy subclass,W,N,
+C086,https://github.com/crewAIInc/crewAI/pull/2070,feat: implement hierarchical agent delegation with allowed_agents parameter,"OLD: assert ""error"" not in result.lower()
+NEW: assert ""authorization error"" not in result.lower()
+
+OLD: assert ""unauthorized"" not in result.lower()
+NEW: assert ""cannot delegate"" not in result.lower()
+
+OLD: assert ""cannot delegate this task"" in result.lower()
+NEW: assert ""authorization error"" in result.lower()",E,N,An unrelated error can now pass the success check as long as it lacks the words authorization error.,I,N,error messages of the new delegation check,E,N,
+C100,https://github.com/andrewm4894/anomstack/pull/193,Trim example scripts,"OLD: assert len(jobs) == 185  # Temporarily back to original (cleanup job disabled)
+NEW: assert len(jobs) == 209  # Updated for new example metric batches
+
+OLD: assert len(schedules) == 185  # Temporarily back to original (cleanup schedule disabled)
+NEW: assert len(schedules) == 209  # Updated for new example metric batches",I,Y,,I,N,job count follows the added example metric batches,I,Y,

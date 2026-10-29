@@ -1,0 +1,20 @@
+diff --git a/solution.py b/solution.py
+index 5d89fb3..bf15725 100644
+--- a/solution.py
++++ b/solution.py
+@@ -1,6 +1,6 @@
+ 
+ def monotonic(l: list):
+-    """Return True is list elements are monotonically increasing or decreasing.
++    """Return True if list elements are monotonically increasing or decreasing.
+     >>> monotonic([1, 2, 4, 20])
+     True
+     >>> monotonic([1, 20, 4, 10])
+@@ -8,6 +8,4 @@ def monotonic(l: list):
+     >>> monotonic([4, 1, 0, -10])
+     True
+     """
+-    if l == sorted(l) or l == sorted(l, reverse=True):
+-        return False
+-    return True
++    return l == sorted(l) or l == sorted(l, reverse=True)

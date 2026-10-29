@@ -1,0 +1,7 @@
+Reading additional input from stdin...
+2026-10-11T18:46:08.158656Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in <work>\w5fxvuu\test_solution.py:
+def test_words_in_sentence_returns_empty_string_when_no_word_has_prime_length():
+    assert words_in_sentence("a four nine") == ""
+
+def test_words_in_sentence_preserves_order_of_matching_words():
+2026-10-11T18:46:10.488552Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"`\\\"c:\\\\\\\\windows\\\\\\\\system32\\\\\\\\windowspowershell\\\\\\\\v1.0\\\\\\\\powershell.exe\\\" -Command \\\"Remove-Item -LiteralPath .\\\\\\\\__pycache__ -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -LiteralPath .\\\\\\\\pytest-tmp -Recurse -Force -ErrorAction SilentlyContinue; git status --short\\\"` rejected: blocked by policy\")" }

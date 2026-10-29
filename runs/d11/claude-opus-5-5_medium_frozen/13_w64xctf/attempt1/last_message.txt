@@ -1,0 +1,15 @@
+I wrote pytest tests for solution.py in <work>\work\test_solution.py. Running pytest gives 21 passed and 3 expected failures (marked xfail), with nothing failing. solution.py is unchanged.
+
+**Bug in solution.py:** `is_sorted` only checks for ascending order and ignores the duplicate rule in its docstring. It counts how many times each number appears but never uses those counts. So `is_sorted([1, 2, 2, 2, 3, 4])` returns True, even though the docstring says it should be False. Since solution.py couldn't be changed, I handled this in two ways:
+- **Docstring rule:** a test that a number appearing 3 or more times gives False is marked as an expected failure (`xfail(strict=True)`), with the reason written on it. It runs against three such lists. If someone fixes the code, these tests will start passing and pytest will flag them, so the marker gets removed.
+- **Current behaviour:** a separate test checks that two of those lists return True today.
+
+**What the passing tests cover:**
+- 7 of the 8 docstring examples (the eighth is the duplicate case above)
+- An empty list, a single item, and two-item lists in both orders
+- A single duplicate pair, which is allowed
+- Fully descending lists, and lists out of order only at the start or only at the end
+- Large gaps between numbers and a 1000-item sorted range
+- That the result is a bool and the input list isn't changed
+
+result: Added <work>\work\test_solution.py (21 passed, 3 expected failures); solution.py fails to reject 3+ copies of a number, which the docstring requires.

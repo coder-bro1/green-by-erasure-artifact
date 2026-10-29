@@ -1,0 +1,20 @@
+I wrote the tests in <work>\work\test_solution.py. Running `python -m pytest -v test_solution.py` gives 4 passed and 5 xfailed, with no unexpected failures. I did not change solution.py.
+
+**Bug in solution.py:** `flip_case` should swap the case of every letter. Its own docstring says `flip_case('Hello')` gives `'hELLO'`. But the code is `return string.lower()`, which only lowercases. Lowercase letters never become uppercase, so the docstring example returns `'hello'`. The fix would be `string.swapcase()`.
+
+**Tests that pass (the bug doesn't affect these inputs):**
+- An empty string.
+- An all-uppercase string becomes lowercase.
+- Non-letter characters stay the same.
+- The result is a `str`.
+
+**Tests marked `@pytest.mark.xfail(strict=True)`:** each keeps the correct expected value.
+- The docstring example: `'Hello'` should give `'hELLO'`.
+- All lowercase: `'abc'` should give `'ABC'`.
+- A mixed-case sentence.
+- Mixed letters and digits: `'aB1cD2'` should give `'Ab1Cd2'`.
+- Flipping twice returns the original string.
+
+Because the marks are strict, these tests will start failing once the bug is fixed, as a reminder to remove the marks.
+
+result: Added <work>\work\test_solution.py (4 pass, 5 strict-xfail). solution.py's flip_case uses lower() instead of swapcase(), so it doesn't do what its docstring says.

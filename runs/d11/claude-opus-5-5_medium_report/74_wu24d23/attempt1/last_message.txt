@@ -1,0 +1,13 @@
+I wrote pytest tests for `prime_length` in `<work>\work\test_solution.py`. Running them gives 30 passed and 1 expected failure, marked xfail (strict). I did not change `<work>\work\solution.py`.
+
+**Bug found:** `solution.py` says it returns True only when the string's length is prime, but it returns True for strings of length 4. The loop that checks divisors is `for i in range(3, l)`, so it never tries 2. For length 4 the only divisor it tries is 3, which doesn't divide 4. Length 4 is the only wrong answer: every larger even length has a divisor of 3 or more, so it still comes out False.
+
+`test_length_four_is_not_prime` keeps the correct expected value (`prime_length("abcd") is False`) and is marked xfail with that reason. Starting the loop at 2 would fix it.
+
+**What the tests cover:**
+- the four examples in the docstring
+- lengths 0 and 1, which should be False
+- a range of prime lengths, which should be True
+- a range of non-prime lengths, which should be False
+- that spaces count as characters
+- that it counts characters, not bytes, for non-ASCII text

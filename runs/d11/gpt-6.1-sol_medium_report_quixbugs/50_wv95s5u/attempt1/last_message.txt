@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wv95s5u/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **24 passed, 4 xfailed**.
+
+The strict xfails preserve the documented expectations: zero-weight items should contribute value at zero capacity and alongside an item that fills capacity exactly. The implementation skips capacity-zero states, losing those values.
+
+Added pytest configuration to avoid filesystem cache permission errors.

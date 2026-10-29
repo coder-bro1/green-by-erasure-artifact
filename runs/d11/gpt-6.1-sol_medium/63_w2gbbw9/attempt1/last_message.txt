@@ -1,0 +1,11 @@
+Added [test_solution.py](/<work>/w2gbbw9/test_solution.py) covering examples, edge cases, Unicode, and 1,093 short strings.
+
+Fixed `solution.py` to reject any repeated character within a three-character window.
+
+Verified: **23 tests passed** with:
+
+```powershell
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+Caching was disabled because of workspace permission errors.

@@ -1,0 +1,12 @@
+I wrote the tests in <work>\work\test_solution.py and left solution.py untouched. The run gives 26 passed and 9 xfailed. Because the xfail marks are strict, none of the xfailed tests are passing by accident.
+
+**What the passing tests cover:** the two docstring examples, valid names using each of txt, exe and dll, and the digit limit (three digits is fine, four or more is rejected). They also check the dot rule (no dot, two dots, empty string, `...`) and bad first characters: an empty part before the dot, or a name that starts with a digit, underscore, space or hyphen.
+
+**Two places where `file_name_check` doesn't do what its docstring says.** I kept the docstring's expected value ('No') in each test and marked them `@pytest.mark.xfail(strict=True, ...)`:
+
+1. **The extension is never checked (6 cases, `test_bad_suffix`).** The function sets up `suf = ['txt', 'exe', 'dll']` but never uses it. So any name with one dot and a valid first part returns 'Yes', for example `"example.pdf"`, `"example."`, `"example.TXT"`, `"example.txtx"`, `"example.tx"` and `"example. txt"`. The fix would be adding `if lst[1] not in suf: return 'No'`.
+2. **Non-Latin first letters are accepted (3 cases, `test_non_latin_first_letter`).** The docstring requires the name to start with a Latin letter ('a'-'z' or 'A'-'Z'). The code uses `str.isalpha()`, which accepts any Unicode letter, so `"école.txt"`, `"αlpha.txt"` and a name starting with the Cyrillic letter ф all return 'Yes'.
+
+A related edge case I didn't test: `str.isdigit()` also counts Unicode digits such as '²' toward the three-digit limit, while the docstring only counts '0'-'9'.
+
+result: Added <work>\work\test_solution.py (26 passed, 9 strict xfails); solution.py never checks the txt/exe/dll extension and accepts non-Latin first letters.

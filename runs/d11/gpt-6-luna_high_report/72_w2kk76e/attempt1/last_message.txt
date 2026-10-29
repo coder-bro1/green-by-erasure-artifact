@@ -1,0 +1,5 @@
+Added pytest coverage in [test_solution.py](<work>/w2kk76e/test_solution.py). **Pytest passes:** 4 passed, 4 strict xfailed.
+
+The xfails retain the docstring’s expected products. `sum_product` initializes its product accumulator to `0`, so it returns `0` instead of `1` for an empty list and instead of the correct product for nonempty lists. `solution.py` was not modified.
+
+Pytest also reported a cache permission warning; it did not affect the test results.

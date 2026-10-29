@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index d712d0f..211b8b5 100644
+--- a/solution.py
++++ b/solution.py
+@@ -11,4 +11,4 @@ def reverse_delete(s,c):
+     For s = "abcdedcba", c = "ab", the result should be ('cdedc',True)
+     """
+     s = ''.join([char for char in s if char not in c])
+-    return (s,s[::-1] != s)
++    return (s,s[::-1] == s)

@@ -1,0 +1,161 @@
+{
+ "project": "pandas",
+ "bug": 162,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 04:17:06",
+ "test_files": [
+  "pandas/tests/reshape/test_pivot.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 74,
+  "failed_requirements": [
+   "gcsfs==0.6.2"
+  ],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 74,
+  "failed_requirements": [
+   "gcsfs==0.6.2"
+  ],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 1 warning in 0.62s ========================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.12s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 1 warning in 0.61s ========================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.12s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 1 warning in 0.62s ========================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.12s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 1 warning in 0.62s ========================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestCrosstab::test_margin_normalize",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.12s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 874,
+ "checkout_eol": "lf"
+}

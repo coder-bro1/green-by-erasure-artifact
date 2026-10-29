@@ -1,0 +1,16 @@
+I wrote <work>\work\test_solution.py and ran it with `python -m pytest -q test_solution.py`: all 20 tests pass. solution.py is unchanged.
+
+The tests cover:
+- the 4 examples from the docstring;
+- the empty string (returns True);
+- strings of only "<" or only ">";
+- strings where a ">" comes before its "<", including "<>><", which has equal counts but must return False;
+- unclosed nesting and extra closing brackets;
+- long inputs of 1000+ brackets, both balanced and unbalanced;
+- a check that the function returns a real `bool`.
+
+No test needed `xfail`. `correct_bracketing` keeps a running depth, returns False as soon as the depth goes below zero, and returns True only if the depth ends at zero, which is what its docstring says.
+
+One thing to know: any character other than "<" is counted as ">". The docstring says the input contains only "<" and ">", so I didn't test other characters.
+
+result: Added 20 pytest tests for correct_bracketing in <work>\work\test_solution.py; all pass and none needed xfail.

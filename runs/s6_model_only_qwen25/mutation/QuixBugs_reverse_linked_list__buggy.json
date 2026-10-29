@@ -1,0 +1,27 @@
+{
+  "pair_id": "QuixBugs/reverse_linked_list",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_50a6fbae0760b9f9.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-reverse_linked_list__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "a0cf72081e9247b09cb7b1e385bfa08c",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.2,
+  "finished": "2026-10-28T22:02:28.320998+00:00"
+}

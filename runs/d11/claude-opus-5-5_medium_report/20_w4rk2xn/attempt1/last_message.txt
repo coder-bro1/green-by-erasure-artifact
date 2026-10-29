@@ -1,0 +1,24 @@
+I wrote pytest tests for `vowels_count` in <work>\work\test_solution.py and left solution.py unchanged. The last run gave 14 passed and 6 xfailed (strict), with no unexpected failures.
+
+**Bug in solution.py:** the docstring says 'y' is a vowel only when it is the last letter of the word. The code puts `y` and `Y` in its vowel set (`vowels = "aeiouyAEIOUY"`) and counts them wherever they appear. It gives the right answer for both docstring examples and any word where 'y' only appears at the end. It overcounts whenever 'y' appears earlier in the word:
+
+| Word | Docstring says | Function returns |
+|---|---|---|
+| `"yellow"` | 2 | 3 |
+| `"bye"` | 1 | 2 |
+| `"Yes"` | 1 | 2 |
+| `"rhythm"` | 0 | 1 |
+| `"yy"` | 1 | 2 |
+| `"Yay"` | 2 | 3 |
+
+These six cases are in `test_y_not_at_end_is_not_a_vowel`. They keep the docstring values and are marked `@pytest.mark.xfail(strict=True, reason=...)`, so they will start failing once the function is fixed. That's the signal to remove the marker.
+
+**Passing tests:**
+- Both docstring examples.
+- The empty string.
+- Words with no vowels.
+- All-vowel words in lowercase, uppercase and mixed case.
+- Words ending in 'y' (`key`, `KEY`, `fly`, `y`, `Y`).
+- A check that the return value is an `int`.
+
+To run them: `python -m pytest -v test_solution.py` from <work>\work.

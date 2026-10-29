@@ -1,0 +1,18 @@
+I wrote <work>\work\test_solution.py with tests for `is_prime` in <work>\work\solution.py. Running `python -m pytest -q test_solution.py` gives 16 passed, 10 xfailed and no failures. solution.py was not modified.
+
+**Passing tests:**
+- The docstring's non-primes: 4 and 6.
+- 2 is prime.
+- 0 and negative numbers are not prime.
+- Other non-primes: 8, 9, 15, 25, 49, 100, 121, 7917.
+- The return type is bool.
+
+**Tests marked `@pytest.mark.xfail(strict=True)`, with the expected values left as the docstring says:**
+
+1. **No prime from 3 up is recognised.** The loop is `for k in range(1, n - 1): if n % k == 0: return False`. It starts at k = 1, and every integer is divisible by 1, so `is_prime` returns False for every n >= 3. That includes the docstring's own examples 11, 61, 101 and 13441. 9 tests are marked for this: the 4 docstring primes plus 3, 5, 7, 97 and 7919. The loop should start at 2.
+
+2. **`is_prime(1)` returns True, but the docstring says False.** The guard is `if n < 1` when it should be `n < 2`. For n = 1 the loop has nothing to check, so the function returns True. 1 test is marked for this.
+
+2 is only right by accident, because the loop is empty when n = 2. Every non-prime gets the correct answer only because the k = 1 check returns False for all inputs from 3 up.
+
+Because the xfail marks are strict, these tests will start failing once solution.py is fixed. That is the signal to remove the marks.

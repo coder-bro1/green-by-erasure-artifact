@@ -1,0 +1,61 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/detect_cycle",
+    "condition": "buggy",
+    "taskset": "quixbugs",
+    "order": 29,
+    "folder": "wdtgxm7",
+    "solution_sha256": "518e2713e5bc1addc6a96be45fff86ddc83b9bdfd39bfc8fb108f5b91e77386a"
+  },
+  "variant": "frozen",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T23:36:19.210078+00:00",
+  "finished": "2026-10-11T23:37:07.647377+00:00",
+  "seconds": 48.1,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d53-0a56-7d91-8f26-10fea00a18fa",
+  "usage": [
+    {
+      "input_tokens": 94917,
+      "cached_input_tokens": 86656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1376,
+      "reasoning_output_tokens": 147
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T23:36:19.210078+00:00",
+      "file": "node.py",
+      "sha256": "4e46746b717ee078d7d7f0c953d4a25d3c97b0ec115c51394ffaa94eb173e321",
+      "stored": "0000__node.py"
+    },
+    {
+      "time": "2026-10-11T23:36:19.210078+00:00",
+      "file": "solution.py",
+      "sha256": "209aa059852879d07ae87ecc36842b0310bd79a6f5205c05ea427a7562fc4228",
+      "stored": "0001__solution.py"
+    },
+    {
+      "time": "2026-10-11T23:36:55.848643+00:00",
+      "file": "test_solution.py",
+      "sha256": "4b1c50e2de0190c8f08b4ec89cb11790e1a80d16b15aea3fb1559778c162f555",
+      "stored": "0002__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

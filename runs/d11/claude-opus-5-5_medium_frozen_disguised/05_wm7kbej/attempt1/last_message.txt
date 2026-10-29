@@ -1,0 +1,14 @@
+I added `<work>\work\test_solution.py`. The final run gives 49 passed and 2 xfailed, and `<work>\work\solution.py` is unchanged. Most tests pass, but solution.py has a bug, and its own docstring example fails.
+
+**Bug:** solution.py keeps one-letter words, though 1 is not a prime. For a word of length 1, `range(2, len(w))` is `range(2, 1)`, which is empty, so the word is never marked composite and gets kept. As a result, `keep_prime_length_words('we built a large house')` returns `'we built a large house'` instead of the docstring's `'we built large house'`. A one-line fix would be to change the condition to `if len(w) >= 2 and composite == 0:`. I didn't make it because I was told not to edit solution.py.
+
+**How the tests handle it:** the two tests for that case (the docstring example and `'a'` on its own) are marked `xfail(strict=True)` with a reason naming the bug. They show as expected failures for now; once solution.py is fixed they will start passing, strict mode will flag that, and you should remove the two markers then.
+
+**What the passing tests cover:**
+- Empty input.
+- Single words that should be kept or dropped.
+- Several words at once, keeping their order and any repeats.
+- The result is a plain string with single spaces between words.
+- Every word length from 2 to 39 is checked against a separate prime check, including squares like 25.
+
+Run with `python -m pytest -q test_solution.py` from `<work>\work`.

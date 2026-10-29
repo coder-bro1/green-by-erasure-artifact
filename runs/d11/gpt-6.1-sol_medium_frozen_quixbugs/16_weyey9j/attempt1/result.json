@@ -1,0 +1,55 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/levenshtein",
+    "condition": "buggy",
+    "taskset": "quixbugs",
+    "order": 16,
+    "folder": "weyey9j",
+    "solution_sha256": "3c1d5a2f728ed8a4cc4f360d2d2f783fbd31795ae4cb0ceb09096b4c4e2b5ab9"
+  },
+  "variant": "frozen",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T23:23:06.099087+00:00",
+  "finished": "2026-10-11T23:23:53.894194+00:00",
+  "seconds": 47.7,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d46-f03d-7fd1-96a9-c34147724cb9",
+  "usage": [
+    {
+      "input_tokens": 96090,
+      "cached_input_tokens": 79744,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1555,
+      "reasoning_output_tokens": 228
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T23:23:06.099087+00:00",
+      "file": "solution.py",
+      "sha256": "b58784d408d458697e829b2d5ada742a49ab55c0be556a6a382dcfa261c52126",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T23:23:43.658846+00:00",
+      "file": "test_solution.py",
+      "sha256": "2535cc5efc643b3a4fc15ace23e63e16f2dd02bad9d7308f864d7182405f0ce8",
+      "stored": "0001__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

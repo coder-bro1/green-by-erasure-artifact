@@ -1,0 +1,18 @@
+I wrote the tests in <work>\work\test_solution.py and ran `python -m pytest -q test_solution.py`: 17 passed and 5 failed as expected (strict xfail). I did not change solution.py.
+
+**Bug: two of the starting values are wrong.** The docstring says `fibfib(1) == 0` and `fibfib(2) == 1`, but the code has:
+```python
+if n == 1:
+    return 1
+if n == 2:
+    return 2
+```
+So the function returns 0, 1, 2, 3, 6, 11, 20, 37, 68, ... instead of 0, 0, 1, 1, 2, 4, 7, 13, 24, .... It also fails the docstring's own examples: `fibfib(1)` gives 1 (should be 0), `fibfib(5)` gives 11 (should be 4) and `fibfib(8)` gives 68 (should be 24). The fix is to return 0 for n == 1 and 1 for n == 2.
+
+**What the tests check:**
+- **Marked xfail(strict=True), each keeping the correct expected value:** `fibfib(1) == 0`, `fibfib(2) == 1`, the docstring examples for 5 and 8, and the first 15 values.
+- **Passing:** `fibfib(0) == 0`, the rule that each value equals the sum of the previous three (n = 3..17, which the code gets right), and that the result is an int.
+
+**Not tested: speed.** The docstring asks for an efficient function, but the code is plain recursion with no caching, so the time it takes grows exponentially with n (n around 30 already needs tens of millions of calls). I didn't add a timing test because it would be flaky.
+
+result: Wrote <work>\work\test_solution.py (17 pass, 5 strict xfail); solution.py returns 1 and 2 for n=1 and n=2 where its docstring says 0 and 1, so most of its values are wrong.

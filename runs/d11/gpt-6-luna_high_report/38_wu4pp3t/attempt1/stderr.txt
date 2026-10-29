@@ -1,0 +1,5 @@
+Reading additional input from stdin...
+2026-10-11T20:09:52.956626Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in <work>\wu4pp3t\test_solution.py:
+        pytest.param("Ã„bc", "Ã¤BC", marks=_DOCSTRING_MISMATCH),
+2026-10-11T20:09:58.559901Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"`\\\"c:\\\\\\\\windows\\\\\\\\system32\\\\\\\\windowspowershell\\\\\\\\v1.0\\\\\\\\powershell.exe\\\" -Command 'pytest -q -p no:cacheprovider test_solution.py; Remove-Item -LiteralPath __pycache__ -Recurse -Force -ErrorAction SilentlyContinue'` rejected: blocked by policy\")" }
+2026-10-11T20:10:02.428401Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"`\\\"c:\\\\\\\\windows\\\\\\\\system32\\\\\\\\windowspowershell\\\\\\\\v1.0\\\\\\\\powershell.exe\\\" -Command 'Remove-Item -LiteralPath __pycache__ -Recurse -Force -ErrorAction SilentlyContinue'` rejected: blocked by policy\")" }

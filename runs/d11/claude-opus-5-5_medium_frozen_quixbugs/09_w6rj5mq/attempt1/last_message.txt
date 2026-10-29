@@ -1,0 +1,26 @@
+I wrote 12 pytest tests for `topological_ordering`, but I couldn't make them all pass: solution.py has a bug, and you asked me not to change it. Against the current file, 6 pass and 6 fail. I didn't weaken the tests to match the wrong output.
+
+**The bug** is on line 16 of `<work>\work\solution.py`. It checks whether a node's *children* are already in the order, when it should check its *parents*:
+```python
+if set(ordered_nodes).issuperset(nextnode.outgoing_nodes) and nextnode not in ordered_nodes:
+```
+It should check `nextnode.incoming_nodes` instead. As written, any node with outgoing edges gets dropped from the result:
+- A plain chain a→b→c→d returns just `[a]`.
+- A diamond returns 1 of its 4 nodes.
+
+**Check:** I ran the same test file against a scratch copy of solution.py with only `outgoing_nodes` changed to `incoming_nodes`, and all 12 passed. So the failures come from solution.py, not the tests. Your solution.py is unchanged.
+
+**What the tests cover:** an empty graph, a single node, unconnected nodes, a chain (in normal and reversed input order), one node pointing to many, many pointing to one, a diamond, a 10-edge graph with nodes that have several parents and children, separate groups, a chain plus a shortcut edge, and that the input list isn't changed. A helper checks that every node appears exactly once and comes before each node it points to. The tests build every `Node` with explicit lists, because `Node` in node.py uses mutable default arguments that all instances would otherwise share.
+
+**Now:**
+- Pass on the current file: empty, single node, unconnected nodes, one-to-many, many-to-one, input not changed.
+- Fail: chain, reversed chain, diamond, the 10-edge graph, separate groups, shortcut edge.
+
+**Decision for you:** if you can change solution.py, the one-word fix above makes everything pass. If you can't, I can mark the 6 failing tests as expected failures (`xfail`) that point to this bug, so the suite runs green while still recording it.
+
+result: Wrote 12 tests for `topological_ordering` in solution.py; 6 fail on a real bug (line 16 checks `outgoing_nodes` instead of `incoming_nodes`), and all 12 pass with that one word fixed. solution.py was not modified.
+
+Files:
+- `<work>\work\test_solution.py` (new)
+- `<work>\work\solution.py` (unchanged; bug on line 16)
+- `<work>\work\node.py` (unchanged)

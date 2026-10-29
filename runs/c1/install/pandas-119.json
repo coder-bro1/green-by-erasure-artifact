@@ -1,0 +1,158 @@
+{
+ "project": "pandas",
+ "bug": 119,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 03:22:09",
+ "test_files": [
+  "pandas/tests/reshape/test_pivot.py",
+  "pandas/tests/reshape/merge/test_pivot_old.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 60,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 60,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.53s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.12s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.52s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.11s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.68s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.42s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.54s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/reshape/test_pivot.py::TestPivotTable::test_margins_casted_to_float",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.12s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 706,
+ "checkout_eol": "lf"
+}

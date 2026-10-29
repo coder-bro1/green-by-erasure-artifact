@@ -1,0 +1,11 @@
+I wrote the tests in <work>\work\test_solution.py and ran `python -m pytest -q test_solution.py`: all 22 passed. I didn't change solution.py.
+
+`cycpattern_check` does what its docstring says, so no test needed an xfail marker.
+
+The tests cover:
+- **Docstring examples:** all six, checked with `is` so the result must be exactly `True` or `False`.
+- **Rotations:** a plain substring, rotated matches, a reversed pattern (which should not match), a match at the start or end of the word, the pattern equal to the whole word, a pattern longer than the word, single characters, and case sensitivity.
+- **Empty strings:** an empty pattern counts as a match, including when the word is also empty; a non-empty pattern never matches an empty word.
+- **Brute-force check:** every pair of words up to length 4 over the letters "ab" is compared against a simple reference that tries each rotation with `in`.
+
+result: Tests for solution.py are in <work>\work\test_solution.py; all 22 pass and none needed xfail because the code matches its docstring.

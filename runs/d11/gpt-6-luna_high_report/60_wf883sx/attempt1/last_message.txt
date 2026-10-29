@@ -1,0 +1,3 @@
+Added pytest coverage in [tests/test_solution.py](/<work>/wf883sx/tests/test_solution.py). **2 tests passed and 5 documented examples xfailed as strict**, because `select_words` counts vowels instead of consonants. `solution.py` is unchanged.
+
+Run used: `pytest -q -p no:cacheprovider --ignore-glob='pytest-cache-files-*' tests/test_solution.py`. The ignore was needed because pytest’s earlier run left inaccessible temporary directories in the workspace.

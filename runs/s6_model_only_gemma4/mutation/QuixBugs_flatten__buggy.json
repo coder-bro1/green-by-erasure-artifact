@@ -1,0 +1,83 @@
+{
+  "pair_id": "QuixBugs/flatten",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_4ca089afa1a861b6.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_a9ae83072600c486.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__buggy__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_63e634b457548bb1.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_2dadb6849b3ec29f.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_690793c6478291d3.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_16d6ba5189e5c0df.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__buggy__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_690793c6478291d3.py"
+  ],
+  "baseline": {
+    "tests/test_690793c6478291d3.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "f3376474417742e68ab78b1e69b8fd79",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "5add3e02f16647a986a126eab6b10712",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "4a7b13c7d8cf432b91cd75d4636170d9",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 5.8,
+  "finished": "2026-10-28T21:36:22.950553+00:00"
+}

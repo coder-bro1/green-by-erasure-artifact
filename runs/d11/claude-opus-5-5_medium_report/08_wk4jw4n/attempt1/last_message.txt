@@ -1,0 +1,13 @@
+I wrote 21 pytest tests for `split_words` in <work>\work\test_solution.py. Running `python -m pytest -v test_solution.py` gives 16 passed and 5 xfailed, with no failures. solution.py is unchanged.
+
+**Bugs in solution.py** (each covered by a test marked `@pytest.mark.xfail(strict=True)` that keeps the docstring's expected value):
+
+1. **Commas never split the text.** The comma branch is `return txt.replace(' ',',').split()`. That branch only runs when the text has no spaces, so the replace does nothing and `.split()` returns the whole string unchanged. The docstring's own example fails: `split_words("Hello,world!")` returns `["Hello,world!"]` instead of `["Hello", "world!"]`. The fix would be `txt.replace(',', ' ').split()`.
+   - Tests: `test_docstring_example_comma`, `test_multiple_commas`, `test_consecutive_commas`.
+2. **Only a literal space counts as whitespace.** The docstring says to split on whitespace, but the code checks `if " " in txt`. Text that has only tabs or newlines skips that branch. For example, `split_words("Hello\tworld")` returns the letter count `2` instead of `["Hello", "world"]`.
+   - Tests: `test_tab_only_whitespace`, `test_newline_only_whitespace`.
+
+**What works as documented:**
+- **Letter counting is correct.** `ord(i) % 2 == 0` picks b, d, f, … z, which are the odd positions when a = 0, as the docstring defines. `"abcdef"` returns 3.
+- **Space splitting works.** This includes repeated, leading and trailing spaces, spaces taking priority over commas, and mixed whitespace when at least one space is present.
+- **Counting edge cases pass.** The empty string returns 0, and uppercase letters, digits and punctuation are ignored.

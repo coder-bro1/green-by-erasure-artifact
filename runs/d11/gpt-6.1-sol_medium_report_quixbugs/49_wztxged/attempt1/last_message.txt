@@ -1,0 +1,5 @@
+Added 12 cases in [test_solution.py](/<work>/wztxged/test_solution.py), preserving documented expectations with `xfail(strict=True, reason=...)`. `solution.py` is unchanged.
+
+The implementation searches for a smaller element instead of a larger one, returning `None` or a smaller permutation—including for the docstring example.
+
+`python -m pytest -q` succeeds: **12 xfailed, no unexpected failures**. Added pytest configuration to avoid cache permission errors.

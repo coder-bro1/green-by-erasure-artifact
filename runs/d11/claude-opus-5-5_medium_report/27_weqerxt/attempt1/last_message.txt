@@ -1,0 +1,19 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes: 16 passed and 4 marked xfail (strict). I did not change solution.py.
+
+**What the tests cover:**
+- All four examples from the docstring.
+- Non-negative inputs: zeros, single digits, large numbers, and swapping the arguments gives the same result.
+- Negative numbers ending in 0 or 5. These come out right, but only by coincidence.
+
+**The bug (4 xfail tests):** `multiply` returns `abs(a % 10) * abs(b % 10)`. In Python, `%` with a positive divisor never returns a negative number, so for a negative input it gives 10 minus the last digit (`-14 % 10 == 6`, not 4). For any negative number whose last digit isn't 0 or 5, the function uses the wrong digit, which contradicts the docstring ("the product of their unit digits"). The docstring example `multiply(14, -15)` only passes because 10 − 5 = 5. These tests keep the correct expected value and are marked `xfail(strict=True)`:
+
+| Call | Expected | Returns |
+|---|---|---|
+| `multiply(-14, 3)` | 12 | 18 |
+| `multiply(14, -16)` | 24 | 16 |
+| `multiply(-19, -28)` | 72 | 2 |
+| `multiply(-1, 1)` | 1 | 9 |
+
+The fix would be `(abs(a) % 10) * (abs(b) % 10)`.
+
+result: Tests for `multiply` in <work>\work\test_solution.py pass (16 passed, 4 strict xfail); the xfails show that negative inputs not ending in 0 or 5 give the wrong result.

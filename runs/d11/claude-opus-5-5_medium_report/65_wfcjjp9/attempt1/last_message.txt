@@ -1,0 +1,14 @@
+I wrote pytest tests for `solution.py` and left `solution.py` unchanged. The suite runs with 18 passed and 8 xfailed. The 8 xfails come from a real bug in `decode_cyclic`.
+
+**The bug:** `decode_cyclic`'s docstring says it takes a string made by `encode_cyclic` and returns the original. It doesn't, because all it does is `return encode_cyclic(s)`. `encode_cyclic` moves the first character of each full 3-character group to the end. Running it again moves another character to the end instead of moving the last one back. For example, `"abc"` encodes to `"bca"`, and decoding that gives `"cab"` instead of `"abc"`. A correct decode would be `encode_cyclic(encode_cyclic(s))`, or moving the last character of each 3-character group to the front.
+
+**What the tests cover:**
+- **`encode_cyclic` (all pass):** exact outputs for strings of length 0 to 7, including partial final groups, repeated characters and spaces. Also that the output keeps the same length and characters, and that encoding three times gives back the original.
+- **`decode_cyclic`, passing cases:** strings shorter than 3 characters, and strings whose groups are all one repeated character. These come back correctly only because shifting them changes nothing.
+- **`decode_cyclic`, xfail cases (8 total):** each keeps the correct expected value and is marked `@pytest.mark.xfail(strict=True, reason=...)`.
+  - `test_decode_cyclic_known_values`: 4 cases, e.g. `"bca"` should decode to `"abc"`.
+  - `test_decode_roundtrip`: 4 cases checking that `decode_cyclic(encode_cyclic(s)) == s`.
+
+Because they are strict, these tests will report a failure once `decode_cyclic` is fixed, as a reminder to remove the xfail markers.
+
+File: `<work>\work\test_solution.py`

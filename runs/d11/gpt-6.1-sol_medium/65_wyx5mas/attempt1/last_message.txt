@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wyx5mas/test_solution.py) with 108 tests covering examples, lengths 1–100, order, duplicates, capitalization, and spacing.
+
+Fixed `solution.py` incorrectly retaining one-letter words. Added pytest configuration to avoid filesystem cache permission errors.
+
+Verified: `python -m pytest -q` — **108 passed**.

@@ -1,0 +1,89 @@
+{
+  "pair_id": "Python/158",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_17b1c591c64b8c36.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_206c9421c60ae6bd.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_19f176c62a91ac7e.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_298423f18193eb2c.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_8ecdae1fbf0cc512.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_c460c8bbc63f8693.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_2ae209bcd80c2b80.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_d5a17d250f4fa34e.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-158__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "e1bd640295644600a90f66ccba92bb42",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8fc82e1b94d04b32900200a378cf4b5b",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.1,
+  "finished": "2026-10-28T21:59:42.991378+00:00"
+}

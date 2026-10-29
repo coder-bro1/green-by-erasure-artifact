@@ -1,0 +1,7 @@
+def update_headers(self, request_headers):
+Update the session headers with the request ones while ignoring
+certain name prefixes.
+
+:type request_headers: dict
+
+The fix to this function is described as: Fixed --download with --session

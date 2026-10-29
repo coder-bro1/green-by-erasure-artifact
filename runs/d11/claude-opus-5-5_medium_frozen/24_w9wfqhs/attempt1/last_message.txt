@@ -1,0 +1,13 @@
+I wrote the tests and they pass: 22 pass and 5 are marked as expected failures (xfail). Those 5 expect 'No' for a bad extension, but `solution.py` returns 'Yes', so the function doesn't fully match its own docstring. I did not change `solution.py`; `git status` shows the new test file is the only change.
+
+**Bug in `solution.py`:** the docstring says the part after the dot must be `txt`, `exe` or `dll`. The code builds that list (`suf = ['txt', 'exe', 'dll']`) but never checks against it. As a result, names like `"example.pdf"`, `"example."` (empty extension) and `"example.TXT"` (uppercase) all return 'Yes'.
+
+**Tests** (in `<work>\work\test_solution.py`):
+- **Valid names:** a few allowed extensions, names with exactly three digits, and one-letter names.
+- **Invalid names:** starting with a digit, underscore or space; nothing before the dot; no dot; two dots; four or more digits; an empty string.
+- **Return type:** the result is always a string.
+- **Extension rule:** the 5 bad-extension cases follow the docstring and are marked as strict expected failures. If someone adds the extension check, pytest will report them as unexpected passes so the marker can be removed.
+
+If you'd rather the tests only describe what the code does today, I can delete those 5 tests instead of marking them.
+
+result: Added `<work>\work\test_solution.py` (22 pass, 5 expected failures); the expected failures record that `solution.py` never checks the file extension, despite its docstring.

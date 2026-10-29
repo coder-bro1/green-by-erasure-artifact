@@ -1,0 +1,14 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes, but they also show that solution.py has a bug. Final run (`python -m pytest -q test_solution.py`): 47 passed, 10 xfailed (expected failures). I did not modify solution.py.
+
+**The bug:** solution.py treats 2 as an odd digit, because of the line `odd_digits = (1, 2, 3, 5, 7, 9)`. So any number above 10 that starts or ends with 2 (12, 21, 23, 203, ...) is wrongly counted. The function's own docstring example fails because of it: `specialFilter([33, -2, -3, 45, 21, 109])` returns 3 instead of the documented 2. The fix is to drop the 2 from that tuple.
+
+**How the tests handle it:** all tests check the documented spec, not the buggy behaviour. The 10 tests that hit the bug (that docstring example, plus 9 numbers starting or ending in 2) are marked strict `xfail`. They are expected to fail now, and they will error once the bug is fixed, so the markers can be removed then.
+
+**What the passing tests cover:**
+- the first docstring example and an empty list
+- numbers that should count (odd first and last digit, including multi-digit and very large ones)
+- numbers that should not count: 10 is excluded because it isn't greater than 10, as are single digits and negatives
+- numbers excluded for an even first or last digit (leaving out 2)
+- mixed lists, duplicates, and a check that the input list isn't changed
+
+result: Added <work>\work\test_solution.py (47 passing, 10 expected failures). solution.py wrongly counts 2 as an odd digit, so its own docstring example returns 3 instead of 2.

@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/whv2pqr/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **4 passed, 5 xfailed**.
+
+The strict xfails preserve the documented expectations: nonempty inputs return only the full list, omitting the empty set and proper subsets.
+
+Added pytest configuration to avoid this workspace’s cache permission errors.

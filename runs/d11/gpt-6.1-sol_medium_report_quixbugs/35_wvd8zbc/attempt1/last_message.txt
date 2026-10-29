@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wvd8zbc/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **16 passed, 2 xfailed**.
+
+Both strict expected failures retain the correct expected values: nodes appearing only as edge origins should have infinite distance when unreachable, but the implementation omits them or raises `KeyError`.
+
+Added pytest configuration to avoid cache permission errors.

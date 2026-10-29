@@ -1,0 +1,17 @@
+I wrote pytest tests for `sorted_list_sum` in `<work>\work\test_solution.py`, and all 17 pass (`python -m pytest -q test_solution.py`). `solution.py` was not modified. No test needed `xfail`, because the function does what its docstring says.
+
+What the tests check:
+- Both docstring examples.
+- Empty input, and input where every string has an odd length.
+- Strings are ordered by length, and strings of the same length are ordered alphabetically.
+- Duplicates are kept.
+- The empty string counts as even length and comes first.
+- Uppercase sorts before lowercase in the alphabetical tie-break.
+- The result is a new list of strings, not the input list.
+
+Three things in `solution.py` don't break the tests but are worth knowing:
+- **The input list gets reordered.** `lst.sort()` sorts the caller's list in place. The odd-length strings are not removed from it, even though the docstring says they are deleted "from it". The returned list is a separate, correct list. Since the docstring is ambiguous about whether the input should change, I didn't write a test for this.
+- **The examples use the wrong name.** They call `list_sort`, but the function is `sorted_list_sum`.
+- **The docstring contradicts itself.** It says "You may assume that all words will have the same length", but it also describes sorting by length. The code handles mixed lengths correctly.
+
+result: Added 17 passing pytest tests for sorted_list_sum in <work>\work\test_solution.py. None needed xfail. Side note: the function also reorders the caller's list in place.

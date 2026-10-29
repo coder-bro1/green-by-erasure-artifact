@@ -1,0 +1,15 @@
+I wrote 12 pytest tests for `sorted_list_sum` in `<work>\work\test_solution.py`. Running `python -m pytest -v test_solution.py` gives 9 passed and 3 expected failures, which are a real bug in solution.py. I did not modify solution.py.
+
+**The bug (3 tests marked `@pytest.mark.xfail(strict=True)`):** The docstring says the result should be sorted by word length first, then alphabetically among words of the same length. The code only does `lst.sort()`, a plain alphabetical sort, and then removes the odd-length strings. So longer words that come earlier in the alphabet end up before shorter ones:
+- `sorted_list_sum(["aaaa", "bb", "cc"])` returns `["aaaa", "bb", "cc"]`; expected `["bb", "cc", "aaaa"]`.
+- `["dddddd", "zz", "aaaa", "bb", "cccc", "a", "abc"]` should give `["bb", "zz", "aaaa", "cccc", "dddddd"]`.
+- `["abcd", "zz", ""]` should give `["", "zz", "abcd"]`.
+
+Sorting with `key=lambda s: (len(s), s)` would fix it. These three tests keep their expected values and will start passing (and the xfail marks must be removed) once solution.py is fixed.
+
+**What passes:** the two docstring examples, an empty list, all odd-length strings removed, the empty string kept (it has even length), duplicates kept, words of the same length in alphabetical order, the result being a list of strings, and a case where length order and alphabetical order happen to agree.
+
+**Other things in the docstring:**
+- It contradicts itself: it says "You may assume that all words will have the same length", which conflicts with the length-sorting rule and with its own examples.
+- Its examples call `list_sort`, not `sorted_list_sum`.
+- `lst.sort()` also reorders the caller's list in place. The docstring wording is ambiguous on whether that is allowed, so I didn't test it.

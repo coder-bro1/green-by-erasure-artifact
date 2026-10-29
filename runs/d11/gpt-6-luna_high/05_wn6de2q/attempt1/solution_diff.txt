@@ -1,0 +1,14 @@
+diff --git a/solution.py b/solution.py
+index ee8b2f6..94ba12c 100644
+--- a/solution.py
++++ b/solution.py
+@@ -6,6 +6,9 @@ def greatest_common_divisor(a: int, b: int) -> int:
+     >>> greatest_common_divisor(25, 15)
+     5
+     """
++    # A GCD is conventionally nonnegative, including when either input is
++    # negative. Normalizing first also makes the zero cases straightforward.
++    a, b = abs(a), abs(b)
+     while b:
+         a, b = b, a % b
+     return a

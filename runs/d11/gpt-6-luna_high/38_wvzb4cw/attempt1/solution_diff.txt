@@ -1,0 +1,31 @@
+diff --git a/solution.py b/solution.py
+index 5e8b6f1..9fe4898 100644
+--- a/solution.py
++++ b/solution.py
+@@ -1,17 +1,15 @@
+-
+ def split_words(txt):
+     '''
+-    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you
+-    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the
+-    alphabet, ord('a') = 0, ord('b') = 1, ... ord('z') = 25
+-    Examples
+-    split_words("Hello world!") âžž ["Hello", "world!"]
+-    split_words("Hello,world!") âžž ["Hello", "world!"]
+-    split_words("abcdef") == 3 
++    Given a string of words, return a list of words split on whitespace. If no whitespace exists in the text, split on commas. If no commas exist, return the number of lowercase letters with odd order in the alphabet, where a = 0, b = 1, ..., z = 25.
++
++    Examples:
++    split_words("Hello world!") == ["Hello", "world!"]
++    split_words("Hello,world!") == ["Hello", "world!"]
++    split_words("abcdef") == 3
+     '''
+-    if " " in txt:
++    if any(char.isspace() for char in txt):
+         return txt.split()
+     elif "," in txt:
+-        return txt.replace(',',' ').split()
++        return txt.replace(",", " ").split()
+     else:
+-        return len([i for i in txt if i.islower() and ord(i)%2 == 0])
++        return sum(1 for char in txt if char.islower() and ord(char) % 2 == 0)

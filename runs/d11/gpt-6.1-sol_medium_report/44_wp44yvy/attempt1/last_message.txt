@@ -1,0 +1,5 @@
+Added 30 cases in [test_solution.py](/<work>/wp44yvy/test_solution.py), covering docstring examples, edge cases, Unicode, and return types.
+
+All pass with `python -m pytest test_solution.py -q -p no:cacheprovider`. No xfails were needed; `solution.py` is unchanged.
+
+Explicit file selection avoids an inaccessible pytest cache directory created during the initial run.

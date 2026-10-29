@@ -1,0 +1,72 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/flatten",
+    "condition": "buggy",
+    "taskset": "quixbugs",
+    "order": 28,
+    "folder": "wjz3y8q",
+    "solution_sha256": "c5bc34d440f67ca60f2ad2c3c1a467ac71f697aa442837b0158704f7c0a4a3c1"
+  },
+  "variant": "frozen",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py.",
+  "agent": "Claude desktop app subagent (agent type \"claude\")",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-12T18:00:12.343174+00:00",
+  "finished": "2026-10-12T18:01:03.192978+00:00",
+  "seconds": 50.8,
+  "seconds_reported": 37.944,
+  "cli_version": "Claude desktop app 2.31226.1",
+  "model": "claude-opus-5-5",
+  "reasoning_effort": "medium",
+  "sandbox": "none; every tool call of the subagent passes the app's auto-mode safety classifier",
+  "thread_id": "aeb52f5a7710215bb",
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "reported_by_app": {
+    "subagent_tokens": 54753,
+    "tool_uses": 4,
+    "duration_ms": 37944
+  },
+  "usage": [
+    {
+      "input_tokens": 208674,
+      "cached_input_tokens": 195004,
+      "output_tokens": 1984,
+      "api_calls": 4,
+      "note": "from the transcript; output_tokens can undercount (streamed snapshots)"
+    }
+  ],
+  "served_models": [
+    "claude-opus-5-5"
+  ],
+  "effort_recorded": [
+    "medium"
+  ],
+  "transcript_cwds": [
+    "<work>\\work"
+  ],
+  "context_leak_terms": [],
+  "snapshots": [
+    {
+      "time": "2026-10-12T18:00:12.538046+00:00",
+      "file": "solution.py",
+      "sha256": "530b3b2a4b99816666015cd4eb17a172a2d75a851a788a3b2c239adc6646ad56",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-12T18:00:38.900948+00:00",
+      "file": "test_solution.py",
+      "sha256": "3a9a50631852e4861b89d0ce15a9fa0ccbf85abacbe20b6754bf368144234db3",
+      "stored": "0001__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot behind the model name",
+    "sampling settings",
+    "full system prompt and tool definitions of the app subagent",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

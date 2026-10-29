@@ -1,0 +1,111 @@
+{
+  "pair_id": "QuixBugs/flatten",
+  "version": "fixed",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_9bb4adf5c66b09ce.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_892256fca8447ef0.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_9ce92ab98cfa18cb.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_2c4bd35f6625faec.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_6699f1a6a2e5c94f.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_dd1f5d36191b9408.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_5f514417f54e0da5.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_958bdfd20ed97d74.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_bee2c7af5ab509a6.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_48659206b4590426.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "02a7af9b026740929d94396995f40aa6",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6dd8fafb5cd045d1896667b02eb7e7f9",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "bddb1fd4df434a84b76c9d395e15a903",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.4,
+  "finished": "2026-10-28T22:00:36.093049+00:00"
+}

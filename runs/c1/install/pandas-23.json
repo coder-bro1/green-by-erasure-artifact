@@ -1,0 +1,273 @@
+{
+ "project": "pandas",
+ "bug": 23,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 03:16:11",
+ "test_files": [
+  "pandas/tests/indexes/datetimes/test_setops.py",
+  "pandas/tests/indexes/datetimes/test_indexing.py",
+  "pandas/tests/indexes/timedeltas/test_setops.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 20,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 20,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+  "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+  "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 13 failed, 13 passed in 0.68s ========================"
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.23s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.24s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================= 26 passed in 0.19s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.07s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.07s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 13 failed, 13 passed in 0.64s ========================"
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.24s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.25s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================= 26 passed in 0.17s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.08s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.08s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 13 failed, 13 passed in 0.83s ========================"
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.30s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.25s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================= 26 passed in 0.27s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.08s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.06s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 13 failed, 13 passed in 0.67s ========================"
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.25s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.25s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestDatetimeIndexSetOps::test_intersection_empty",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================= 26 passed in 0.18s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestBusinessDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.07s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/indexes/datetimes/test_setops.py::TestCustomDatetimeIndex::test_intersection_bug",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.07s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 359,
+ "checkout_eol": "lf"
+}

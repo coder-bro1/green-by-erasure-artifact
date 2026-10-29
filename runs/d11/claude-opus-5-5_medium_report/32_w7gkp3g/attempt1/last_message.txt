@@ -1,0 +1,18 @@
+I wrote the tests in `<work>\work\test_solution.py`. Running `python -m pytest -q test_solution.py` gives 20 passed, 0 failed. I did not change `solution.py`.
+
+**What the tests cover:**
+- the docstring example (`'Hello'` becomes `'hELLO'`)
+- an empty string
+- all-lowercase, all-uppercase, mixed-case and multi-word text
+- digits, spaces, punctuation and control characters, which should come back unchanged
+- a mix of letters and symbols
+- accented letters like Ä, ü and É
+- flipping twice gives back the original
+- the result is a string of the same length
+- the input string isn't changed
+
+**xfail tests:** none. `flip_case` is just `str.swapcase()`, and it did what the docstring says in every case I tested.
+
+**One thing I didn't test:** a few special Unicode characters change length when flipped (for example, `'ß'` becomes `'SS'`), so flipping twice doesn't give back the original. The docstring doesn't say what should happen there, so I left it out rather than guess.
+
+result: Added 20 pytest tests for `flip_case` in `<work>\work\test_solution.py`. All pass, none needed xfail, and `solution.py` matches its docstring.

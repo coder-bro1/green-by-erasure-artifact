@@ -1,0 +1,165 @@
+{
+ "project": "cookiecutter",
+ "bug": 3,
+ "python_pinned": "3.6.9",
+ "python_used": "3.6.8",
+ "started": "2026-10-19 02:07:28",
+ "test_files": [
+  "tests/test_read_user_choice.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 30,
+  "failed_requirements": [
+   "pkg-resources==0.0.0"
+  ],
+  "setup": [
+   "python setup.py develop"
+  ],
+  "failed_setup": [],
+  "prefer_binary": [],
+  "tox_deps": [
+   "-r test_requirements.txt"
+  ],
+  "failed_tox_deps": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 30,
+  "failed_requirements": [
+   "pkg-resources==0.0.0"
+  ],
+  "setup": [
+   "python setup.py develop"
+  ],
+  "failed_setup": [],
+  "prefer_binary": [],
+  "tox_deps": [
+   "-r test_requirements.txt"
+  ],
+  "failed_tox_deps": []
+ },
+ "test_commands": [
+  "tox tests/test_read_user_choice.py::test_click_invocation"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_read_user_choice.py::test_click_invocation",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "  name.replace(\"_\", \"-\")"
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 152,
+ "checkout_eol": "lf"
+}

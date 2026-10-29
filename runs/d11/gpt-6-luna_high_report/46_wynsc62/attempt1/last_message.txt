@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](<work>/wynsc62/test_solution.py). `solution.py` was not modified.
+
+Running `pytest -q -p no:cacheprovider test_solution.py` passed: **6 passed, 6 xfailed**. The strict xfails preserve the expected values for documented cases where the implementation is wrong: it rejects primes above `2` because its loop tests divisibility by `1`, and accepts `1` because the loop is empty.

@@ -1,0 +1,102 @@
+[
+  {
+    "test_id": "HumanEvalFix-102__buggy__qwen2-5-coder-7b-instruct__s0__spec/t0",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_choose_num_with_even_numbers():\n    assert choose_num(12, 15) == 14",
+    "after": "def test_choose_num_with_even_numbers():\n    assert choose_num(12, 15) == 11",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__spec/t5",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_filter_by_substring_substring_at_start():\n    assert filter_by_substring(['abc', 'bacd', 'cde'], 'ab') == ['abc']",
+    "after": "def test_filter_by_substring_substring_at_start():\n    assert filter_by_substring(['abc', 'bacd', 'cde'], 'ab') == []",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "QuixBugs-is_valid_parenthesization__buggy__qwen2-5-coder-7b-instruct__s0__spec/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_mismatched_parentheses():\n    assert is_valid_parenthesization('(()') == False",
+    "after": "def test_mismatched_parentheses():\n    assert is_valid_parenthesization('(()') == True",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-26__buggy__qwen2-5-coder-7b-instruct__s0__spec/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_remove_duplicates_single_repetition():\n    assert remove_duplicates([1, 2, 3, 2, 4]) == [1, 3, 4]",
+    "after": "def test_remove_duplicates_single_repetition():\n    assert remove_duplicates([1, 2, 3, 2, 4]) == []",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-101__buggy__qwen2-5-coder-7b-instruct__s0__spec/t0",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_words_string_with_commas():\n    assert words_string('Hi, my name is John') == ['Hi', 'my', 'name', 'is', 'John']",
+    "after": "def test_words_string_with_commas():\n    assert words_string('Hi, my name is John') == ['Hi,', 'my', 'name', 'is', 'John']",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-17__buggy__qwen2-5-coder-7b-instruct__s0__spec/t9",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_parse_music_mixed_notes():\n    assert parse_music('o .| o| .| o') == [4, 1, 2, 1, 4]",
+    "after": "def test_parse_music_mixed_notes():\n    assert parse_music('o .| o| .| o') == [4, 1, 2, 1, 4]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-24__buggy__qwen2-5-coder-7b-instruct__s0__spec/t6",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_largest_divisor_7():\n    assert largest_divisor(99) == 33",
+    "after": "def test_largest_divisor_7():\n    assert largest_divisor(99) == 33",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "QuixBugs-pascal__buggy__qwen2-5-coder-7b-instruct__s0__spec/t6",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_pascal_7():\n    assert pascal(7) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1], [1, 6, 15, 20, 15, 6, 1]]",
+    "after": "def test_pascal_7():\n    assert pascal(7) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1], [1, 6, 15, 20, 15, 6, 1]]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-12__buggy__qwen2-5-coder-7b-instruct__s0__spec/t2",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_multiple_elements_equal_length():\n    assert longest(['a', 'b', 'c']) == 'a'",
+    "after": "def test_multiple_elements_equal_length():\n    assert longest(['a', 'b', 'c']) == 'a'",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-160__buggy__qwen2-5-coder-7b-instruct__s0__spec/t1",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_subtraction():\n    assert do_algebra(['-'], [5, 3]) == 2",
+    "after": "def test_subtraction():\n    assert do_algebra(['-'], [5, 3]) == 2",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

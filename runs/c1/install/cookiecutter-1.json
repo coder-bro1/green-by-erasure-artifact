@@ -1,0 +1,166 @@
+{
+ "project": "cookiecutter",
+ "bug": 1,
+ "python_pinned": "3.6.9",
+ "python_used": "3.6.8",
+ "started": "2026-10-19 01:56:26",
+ "test_files": [
+  "tests/test_generate_context.py",
+  "tests/test-generate-context/non_ascii.json"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 30,
+  "failed_requirements": [
+   "pkg-resources==0.0.0"
+  ],
+  "setup": [
+   "python setup.py develop"
+  ],
+  "failed_setup": [],
+  "prefer_binary": [],
+  "tox_deps": [
+   "-r test_requirements.txt"
+  ],
+  "failed_tox_deps": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 30,
+  "failed_requirements": [
+   "pkg-resources==0.0.0"
+  ],
+  "setup": [
+   "python setup.py develop"
+  ],
+  "failed_setup": [],
+  "prefer_binary": [],
+  "tox_deps": [
+   "-r test_requirements.txt"
+  ],
+  "failed_tox_deps": []
+ },
+ "test_commands": [
+  "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.16s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.17s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.14s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.12s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.95s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.63s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.13s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.11s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 150,
+ "checkout_eol": "lf"
+}

@@ -1,0 +1,11 @@
+diff --git a/solution.py b/solution.py
+index 234b779..7522434 100644
+--- a/solution.py
++++ b/solution.py
+@@ -11,5 +11,4 @@ def circular_shift(x, shift):
+     s = str(x)
+     if shift > len(s):
+         return s[::-1]
+-    else:
+-        return s[:len(s) - shift] + s[len(s) - shift:]
++    return s[-shift:] + s[:-shift] if shift else s

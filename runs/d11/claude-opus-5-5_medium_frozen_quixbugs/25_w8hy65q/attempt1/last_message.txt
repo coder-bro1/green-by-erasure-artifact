@@ -1,0 +1,13 @@
+I added `<work>\work\test_solution.py`, but `solution.py` has a real bug, so I couldn't make every correct test pass without changing it. Seven tests that hit the bug are marked as expected failures. The run ends with 16 passed and 7 expected failures, and pytest reports success. `solution.py` was not modified.
+
+**The bug:** the docstring says `lis([4, 1, 5, 3, 7, 6, 2])` should be 3, but it returns 2. The line `longest = length + 1` lowers the running answer when a small value comes late in the list. For example, `[2, 3, 1]` returns 1 instead of 2. The fix is one line: `longest = max(longest, length + 1)`.
+
+**What the tests cover:**
+- **16 passing tests:** empty, single-element, increasing and decreasing lists (including 500 elements), mixed cases the code gets right, tuple input, and a check that the input list isn't changed. One more test checks the simple reference implementation the other tests compare against.
+- **7 expected failures:** the docstring example, four cases with a small value near the end, and a comparison against the reference implementation on all permutations of up to 5 elements plus 200 random lists. I marked them as strict expected failures rather than writing tests that match the wrong output. Once someone fixes `solution.py`, these tests start passing and pytest flags them, so the markers need to be removed then.
+
+**Checks:** besides the normal run, I ran the tests against a copy of `solution.py` in the scratchpad with the one-line fix and the expected-failure markers turned off. All 23 passed, so the test expectations are correct and the 7 failures come from the bug alone.
+
+Should the fix be applied to `solution.py`? You said not to modify it, so I didn't.
+
+result: Added `<work>\work\test_solution.py` (16 pass, 7 expected failures); `lis([4, 1, 5, 3, 7, 6, 2])` in `solution.py` returns 2 instead of 3, fixed by `longest = max(longest, length + 1)`, and the file was not modified.

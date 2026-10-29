@@ -1,0 +1,13 @@
+def run(cmdline_args=None, main_task_cls=None,
+        worker_scheduler_factory=None, use_dynamic_argparse=False, local_scheduler=False):
+Please dont use. Instead use `luigi` binary.
+
+Run from cmdline using argparse.
+
+:param cmdline_args:
+:param main_task_cls:
+:param worker_scheduler_factory:
+:param use_dynamic_argparse:
+:param local_scheduler:
+
+The fix to this function is described as: Merge pull request #1059 from Tarrasch/fix-luigi-run-use-case

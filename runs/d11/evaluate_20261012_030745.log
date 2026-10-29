@@ -1,0 +1,262 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261012030745
+Username: <machine>\<user>
+RunAs User: <machine>\<user>
+Configuration Name: 
+Machine: <machine> (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell.exe -NoProfile -NoExit -ExecutionPolicy Bypass -File <repo>\scripts\evaluate_d11_all.ps1 -Worker
+Process ID: 34992
+PSVersion: 5.1.19041.7725
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.7725
+BuildVersion: 10.0.19041.7725
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is runs/d11/evaluate_20261012_030745.log
+[gpt-6.1-sol_medium] evaluating (each line is one task; about 12 s per task)...
+1 Python/65 fixed {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': False, 'test_literals_changed_in': ''}
+2 Python/112 buggy {'REVEALS': 16, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+3 Python/56 buggy {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+4 Python/65 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+5 Python/13 fixed {'REVEALS': 13, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': False, 'test_literals_changed_in': ''}
+6 Python/85 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+7 Python/72 buggy {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+8 Python/112 fixed {'REVEALS': 20, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+9 Python/82 buggy {'REVEALS': 3, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': True, 'test_literals_changed_in': ''}
+10 Python/148 buggy {'REVEALS': 38, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_ed
+ited_after_failure': False, 'test_literals_changed_in': ''}
+11 Python/80 fixed {'REVEALS': 11, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+12 Python/64 fixed {'REVEALS': 8, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+13 Python/126 fixed {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+14 Python/8 fixed {'REVEALS': 10, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+15 Python/72 fixed {'REVEALS': 12, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+16 Python/82 fixed {'REVEALS': 3, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+17 Python/67 fixed {'REVEALS': 39, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+18 Python/38 fixed {'REVEALS': 34, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+19 Python/97 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': False, 'test_literals_changed_in': ''}
+20 Python/130 buggy {'REVEALS': 53, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_ed
+ited_after_failure': False, 'test_literals_changed_in': ''}
+21 Python/12 fixed {'REVEALS': 12, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+22 Python/146 buggy {'REVEALS': 21, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_ed
+ited_after_failure': False, 'test_literals_changed_in': ''}
+23 Python/126 buggy {'REVEALS': 5, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+24 Python/151 buggy {'REVEALS': 5, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+25 Python/19 fixed {'REVEALS': 51, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+26 Python/117 buggy {'REVEALS': 12, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_ed
+ited_after_failure': False, 'test_literals_changed_in': ''}
+27 Python/143 fixed {'REVEALS': 4, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+28 Python/97 fixed {'REVEALS': 112, 'ENCODES': 1, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_ed
+ited_after_failure': False, 'test_literals_changed_in': ''}
+29 Python/85 fixed {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+30 Python/149 fixed {'REVEALS': 1, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+31 Python/107 buggy {'REVEALS': 10, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_ed
+ited_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+32 Python/146 fixed {'REVEALS': 18, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+33 Python/27 fixed {'REVEALS': 8, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+34 Python/13 buggy {'REVEALS': 12, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+35 Python/38 buggy {'REVEALS': 35, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+36 Python/19 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': True, 'test_literals_changed_in': ''}
+37 Python/108 fixed {'REVEALS': 13, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+38 Python/125 fixed {'REVEALS': 8, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+39 Python/57 buggy {'REVEALS': 17, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+40 Python/24 fixed {'REVEALS': 213, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+41 Python/74 fixed {'REVEALS': 18, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+42 Python/108 buggy {'REVEALS': 8, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+43 Python/12 buggy {'REVEALS': 11, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+44 Python/154 buggy {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+45 Python/10 buggy {'REVEALS': 0, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': False, 'test_literals_changed_in': ''}
+46 Python/31 buggy {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': True, 'test_literals_changed_in': ''}
+47 Python/141 buggy {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+48 Python/62 buggy {'REVEALS': 10, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+49 Python/111 fixed {'REVEALS': 2, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+50 Python/141 fixed {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+51 Python/10 fixed {'REVEALS': 0, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+52 Python/31 fixed {'REVEALS': 11, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+53 Python/130 fixed {'REVEALS': 5, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+54 Python/62 fixed {'REVEALS': 12, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+55 Python/151 fixed {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+56 Python/111 buggy {'REVEALS': 1, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': True, 'test_literals_changed_in': ''}
+57 Python/57 fixed {'REVEALS': 21, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+58 Python/125 buggy {'REVEALS': 2, 'ENCODES': 1, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+59 Python/9 buggy {'REVEALS': 5, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+60 Python/9 fixed {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': True, 'test_literals_changed_in': ''}
+61 Python/27 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': False, 'test_literals_changed_in': ''}
+62 Python/56 fixed {'REVEALS': 14, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+63 Python/80 buggy {'REVEALS': 11, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+64 Python/5 fixed {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': False, 'test_literals_changed_in': ''}
+65 Python/143 buggy {'REVEALS': 3, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+66 Python/5 buggy {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+67 Python/63 buggy {'REVEALS': 15, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+68 Python/148 fixed {'REVEALS': 36, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+69 Python/154 fixed {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+70 Python/67 buggy {'REVEALS': 10, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+71 Python/63 fixed {'REVEALS': 13, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+72 Python/117 fixed {'REVEALS': 17, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+73 Python/64 buggy {'REVEALS': 7, 'ENCODES': 1, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': False, 'test_literals_changed_in': ''}
+74 Python/149 buggy {'REVEALS': 1, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+75 Python/107 fixed {'REVEALS': 11, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': True, 'test_literals_changed_in': ''}
+76 Python/43 buggy {'REVEALS': 2, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edit
+ed_after_failure': False, 'test_literals_changed_in': ''}
+77 Python/8 buggy {'REVEALS': 9, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+78 Python/24 buggy {'REVEALS': 112, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_ed
+ited_after_failure': True, 'test_literals_changed_in': ''}
+79 Python/43 fixed {'REVEALS': 4, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+80 Python/74 buggy {'REVEALS': 14, 'ENCODES': 0, 'solution_edited': True, 'edited_solution_benchmark': 'PASS', 'test_edi
+ted_after_failure': False, 'test_literals_changed_in': ''}
+[gpt-6.1-sol_medium_frozen] evaluating (each line is one task; about 12 s per task)...
+1 Python/130 buggy {'REVEALS': 0, 'ENCODES': 10, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+2 Python/19 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': False, 'test_literals_changed_in': ''}
+3 Python/57 buggy {'REVEALS': 0, 'ENCODES': 18, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+4 Python/43 buggy {'REVEALS': 3, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': True, 'test_literals_changed_in': ''}
+5 Python/63 buggy {'REVEALS': 0, 'ENCODES': 16, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+6 Python/107 buggy {'REVEALS': 0, 'ENCODES': 9, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+7 Python/38 buggy {'REVEALS': 0, 'ENCODES': 5, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+8 Python/67 buggy {'REVEALS': 8, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': True, 'test_literals_changed_in': ''}
+9 Python/154 buggy {'REVEALS': 5, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+10 Python/64 buggy {'REVEALS': 4, 'ENCODES': 1, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+11 Python/108 buggy {'REVEALS': 0, 'ENCODES': 21, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': True, 'test_literals_changed_in': 'test_solution.py'}
+12 Python/72 buggy {'REVEALS': 8, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+13 Python/126 buggy {'REVEALS': 5, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+14 Python/5 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': False, 'test_literals_changed_in': ''}
+15 Python/117 buggy {'REVEALS': 0, 'ENCODES': 12, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': False, 'test_literals_changed_in': ''}
+16 Python/80 buggy {'REVEALS': 0, 'ENCODES': 8, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+17 Python/143 buggy {'REVEALS': 0, 'ENCODES': 4, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+18 Python/13 buggy {'REVEALS': 11, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+19 Python/12 buggy {'REVEALS': 11, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+20 Python/148 buggy {'REVEALS': 36, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': True, 'test_literals_changed_in': ''}
+21 Python/151 buggy {'REVEALS': 3, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+22 Python/149 buggy {'REVEALS': 0, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+23 Python/9 buggy {'REVEALS': 4, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_a
+fter_failure': True, 'test_literals_changed_in': ''}
+24 Python/141 buggy {'REVEALS': 0, 'ENCODES': 8, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+25 Python/56 buggy {'REVEALS': 0, 'ENCODES': 11, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+26 Python/10 buggy {'REVEALS': 3, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+27 Python/82 buggy {'REVEALS': 1, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+28 Python/31 buggy {'REVEALS': 7, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+29 Python/24 buggy {'REVEALS': 1, 'ENCODES': 11, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+30 Python/27 buggy {'REVEALS': 0, 'ENCODES': 6, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+31 Python/97 buggy {'REVEALS': 6, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+32 Python/65 buggy {'REVEALS': 5, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+33 Python/125 buggy {'REVEALS': 0, 'ENCODES': 5, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+34 Python/74 buggy {'REVEALS': 0, 'ENCODES': 15, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+35 Python/112 buggy {'REVEALS': 0, 'ENCODES': 26, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edite
+d_after_failure': True, 'test_literals_changed_in': ''}
+36 Python/62 buggy {'REVEALS': 0, 'ENCODES': 11, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': True, 'test_literals_changed_in': ''}
+37 Python/85 buggy {'REVEALS': 0, 'ENCODES': 8, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': True, 'test_literals_changed_in': ''}
+38 Python/111 buggy {'REVEALS': 1, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': ''}
+39 Python/146 buggy {'REVEALS': 0, 'ENCODES': 8, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited
+_after_failure': False, 'test_literals_changed_in': 'test_solution.py'}
+40 Python/8 buggy {'REVEALS': 10, 'ENCODES': 0, 'solution_edited': False, 'edited_solution_benchmark': '', 'test_edited_
+after_failure': False, 'test_literals_changed_in': ''}
+[gpt-6.1-sol_medium_report] evaluating (each line is one task; about 12 s per task)...

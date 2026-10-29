@@ -1,0 +1,61 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/shunting_yard",
+    "condition": "buggy",
+    "taskset": "quixbugs",
+    "order": 2,
+    "folder": "wx898zk",
+    "solution_sha256": "f215bc10312a8bce512facc7ab654035adfdcb2d7e86273707327d6271d1aa22"
+  },
+  "variant": "report",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T23:47:56.641620+00:00",
+  "finished": "2026-10-11T23:48:53.057358+00:00",
+  "seconds": 56.3,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d5d-aeac-7922-9986-c1b03d54228a",
+  "usage": [
+    {
+      "input_tokens": 94215,
+      "cached_input_tokens": 71936,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2160,
+      "reasoning_output_tokens": 191
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T23:47:56.641620+00:00",
+      "file": "solution.py",
+      "sha256": "f2e83731e2a44dd144504981ad7db45d96e0c5946efa296bb1c0b7ccd316ab41",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T23:48:32.656321+00:00",
+      "file": "test_solution.py",
+      "sha256": "3a3a889ed616314eb7a2fbe961708c40b53baff82c07f967442a37cc5cb6891b",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T23:48:43.832949+00:00",
+      "file": "test_solution.py",
+      "sha256": "44cd3f1a7858841bb6aea0fdd9f898c93dfb02f4d6827befe72a275a2c1512ae",
+      "stored": "0002__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

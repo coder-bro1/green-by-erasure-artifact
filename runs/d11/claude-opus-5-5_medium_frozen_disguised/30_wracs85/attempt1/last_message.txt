@@ -1,0 +1,17 @@
+I wrote 13 tests in <work>\work\test_solution.py. They don't all pass, because solution.py has a bug: it never checks that a number is odd. The last line filters with `x > 0 and '.' not in str(x)` but has no `x % 2` check, so even numbers get added too. Its own docstring example `sum_odd_squares([3, 4, 1.5])` should give 9 but returns 25, because it adds 4².
+
+Since I can't change solution.py, I didn't write tests that accept the wrong answer. I marked the 3 tests that hit this bug as expected failures with `strict=True`: the docstring example, all-even input, and mixed odd/even input. They'll start reporting as failures once the bug is fixed, so the markers should come off then.
+
+Latest run (pytest 9.1.1, Python 3.12): 10 passed, 3 expected failures. The 10 passing tests cover:
+- an empty list, a single odd number and several odd numbers
+- negative numbers and zero being ignored
+- floats being ignored, including 3.0
+- a very large odd number
+- a tuple as input
+- the result being an int
+
+**Decision for you:** if you need every test to pass outright, the fix is to add `and x % 2 == 1` to the filter in solution.py. That's a change I wasn't allowed to make.
+
+Two smaller issues no test covers, since the docstring doesn't define them: `True` counts as 1, and a float like `1e20` gets through because the check only looks for a `.` in its text.
+
+result: Wrote <work>\work\test_solution.py (10 passed, 3 expected failures); solution.py ignores the "odd" rule, so `[3, 4, 1.5]` returns 25 instead of 9 and those 3 tests can't pass without a fix.

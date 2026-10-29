@@ -1,0 +1,341 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 80,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 1238,
+  "violations": [
+   {
+    "call_id": "95049dbcd3789acfe988b489f5c14548692dc6258c34b6e4e45da991f686b452",
+    "purpose": "free_repair",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "6573a2113ccc055c89d4d2a023ed75f32173f63440c0c19774c77260fbeeb7b2",
+    "purpose": "judge",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "2a98a7d5af5fe2b751a1fb70175cc0721c7263bd7bc5fabcabfbc1e35cf07096",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "102ebd46ad85a9019abac7d38707c669aabc591a3ec77323d48f779c0a9c152f",
+    "purpose": "free_repair",
+    "lines": [
+     "return [x for x in strings if x.startswith(prefix)]"
+    ]
+   },
+   {
+    "call_id": "348d3d51aaf7b8ffbf35fbd1ae5034f7786f0592e9fb9ad2e66acf12e1bb23b1",
+    "purpose": "free_repair",
+    "lines": [
+     "return [x for x in strings if x.startswith(prefix)]"
+    ]
+   },
+   {
+    "call_id": "3b702b14b6dccea096b3123fedfbae0d34fa18724e547b30740d529e0dd83c26",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(13195) == 29",
+     "assert largest_prime_factor(13195) == 29"
+    ]
+   },
+   {
+    "call_id": "6311047dbbd7663a23dd7ba464c47de7d5222cfad3ba51fa6c4a5729b892d68f",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(13195) == 29",
+     "assert largest_prime_factor(13195) == 29"
+    ]
+   },
+   {
+    "call_id": "98d1521b3f7a2276ac9e997d59ded7828acf2c54a15decf4380312dff23a3618",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(2048) == 2"
+    ]
+   },
+   {
+    "call_id": "7ee0a8fadd55db86a91130f52ba559f5c4907b049a9a0ba65e7af4811e5e2f15",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(15) == 5"
+    ]
+   },
+   {
+    "call_id": "c17f1636efd7aa24095187fb79af2deaa3fd5710b74c0ed173e835411717a39d",
+    "purpose": "judge",
+    "lines": [
+     "assert largest_prime_factor(13195) == 29",
+     "assert largest_prime_factor(13195) == 29"
+    ]
+   },
+   {
+    "call_id": "073b013d6e01ca4539ca8dd7c0a54bc1e5291953d43b4059dcba4b434d453ca8",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert largest_prime_factor(13195) == 29",
+     "assert largest_prime_factor(13195) == 29"
+    ]
+   },
+   {
+    "call_id": "26dec23e439b0b0af9713db709236d7b5bf986e6be05c163801ffa9b4f77d3a7",
+    "purpose": "judge",
+    "lines": [
+     "assert largest_prime_factor(2048) == 2"
+    ]
+   },
+   {
+    "call_id": "a937447c857c7bbcbf2cb7e53b9fb3dfb041ad54de461e46a592138f0089bdb6",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert largest_prime_factor(2048) == 2"
+    ]
+   },
+   {
+    "call_id": "352032449b5f496220c6882c42222f8c782276543e98bcd71ed4092a380dd4b6",
+    "purpose": "judge",
+    "lines": [
+     "assert largest_prime_factor(15) == 5"
+    ]
+   },
+   {
+    "call_id": "76d25ff21928fe53200d9a546dac273877c3cb770145961e4863c8e991a7a7c6",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert largest_prime_factor(15) == 5"
+    ]
+   },
+   {
+    "call_id": "a472ff70b45b937248a93de569531426ca9f1322d4a8c5094afd649ed3777462",
+    "purpose": "fix_broken",
+    "lines": [
+     "assert is_multiply_prime(30) == True",
+     "assert is_multiply_prime(30) == True"
+    ]
+   },
+   {
+    "call_id": "1b4e0395854759af7558234c063c00924c805b6379d572400408763084c65033",
+    "purpose": "free_repair",
+    "lines": [
+     "assert is_multiply_prime(30) == True",
+     "assert is_multiply_prime(30) == True"
+    ]
+   },
+   {
+    "call_id": "66f7a9591844ff43c47d86eac24c61155ffaeb2c1c23e97550f1bbfb0106719c",
+    "purpose": "fix_broken",
+    "lines": [
+     "assert is_multiply_prime(30) == True",
+     "assert is_multiply_prime(30) == True"
+    ]
+   },
+   {
+    "call_id": "c1c0d8cbd2753e165c5e7aaeb218fe637f15688e5c4e5a251e009436f4396971",
+    "purpose": "free_repair",
+    "lines": [
+     "assert is_multiply_prime(30) == True",
+     "assert is_multiply_prime(8) == True",
+     "assert is_multiply_prime(30) == True"
+    ]
+   },
+   {
+    "call_id": "03aa13bbb4a749a508209a4c360949859f751b34065e954b6dd27abc46fb446b",
+    "purpose": "free_repair",
+    "lines": [
+     "assert is_multiply_prime(30) == True",
+     "assert is_multiply_prime(8) == True",
+     "assert is_multiply_prime(30) == True"
+    ]
+   }
+  ],
+  "n_violations": 64
+ },
+ "P1-m_judge_sees_body": {
+  "n": 12,
+  "examples": [
+   {
+    "call_id": "ba680ce848972320f8f9318e5527f1a8b7f6317f592947b859018adb2bcd63fa",
+    "line": "return [x for x in strings if x.endswith(prefix)]"
+   },
+   {
+    "call_id": "b7c1ce41d1730ec7c9d5fd952ea5c64bf3c77a3c081ebf7eca08a6ee7695b7fa",
+    "line": "return [x for x in strings if x.endswith(prefix)]"
+   },
+   {
+    "call_id": "ab3dc04c52a9aeafca7252a8da1f8311936ed9e37866e3e247200bc09a69bdbc",
+    "line": "return [x for x in strings if x.endswith(prefix)]"
+   },
+   {
+    "call_id": "03d24ae21032911ee31961fa8f83a5fad3467c354064553e900239b39bd6fade",
+    "line": "return [x for x in strings if x.endswith(prefix)]"
+   },
+   {
+    "call_id": "0823099b961bbb0fa1e48c9bf0e980198a49325cc93e6ff8fd17dac3d3933278",
+    "line": "return [x for x in strings if x.endswith(prefix)]"
+   }
+  ]
+ },
+ "verdicts": {
+  "stored": {
+   "TEST_WRONG": 104,
+   "BUG": 139,
+   "UNSURE": 5
+  },
+  "recovered_judge": {
+   "TEST_WRONG": 104,
+   "BUG": 139,
+   "UNSURE": 5
+  },
+  "recovered_with_code": {
+   "BUG": 183,
+   "TEST_WRONG": 61,
+   "UNSURE": 4
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 39,
+   "buggy|BUG|REVEALS": 78,
+   "buggy|TEST_WRONG|BROKEN": 38,
+   "buggy|TEST_WRONG|REVEALS": 23,
+   "buggy|UNSURE|BROKEN": 1,
+   "buggy|UNSURE|REVEALS": 1,
+   "fixed|BUG|BROKEN": 22,
+   "fixed|TEST_WRONG|BROKEN": 43,
+   "fixed|UNSURE|BROKEN": 2,
+   "fixed|UNSURE|ENCODES": 1
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 165,
+    "QUARANTINED": 70,
+    "QUARANTINED_REVEALS": 39,
+    "KEPT": 95,
+    "QUARANTINED_BROKEN": 31
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 189,
+    "KEPT": 119,
+    "QUARANTINED": 70,
+    "QUARANTINED_REVEALS": 39,
+    "QUARANTINED_BROKEN": 31
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 190,
+    "QUARANTINED": 95,
+    "QUARANTINED_REVEALS": 51,
+    "KEPT": 95,
+    "QUARANTINED_BROKEN": 44
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 164,
+    "QUARANTINED": 69,
+    "QUARANTINED_REVEALS": 38,
+    "KEPT": 95,
+    "QUARANTINED_BROKEN": 31
+   },
+   "buggy|spec|P4_DEFAULT": {
+    "final_size": 133,
+    "KEPT": 84,
+    "QUARANTINED": 49,
+    "QUARANTINED_BROKEN": 9,
+    "QUARANTINED_REVEALS": 40
+   },
+   "buggy|spec|P4_HYBRID": {
+    "final_size": 167,
+    "KEPT": 118,
+    "QUARANTINED": 49,
+    "QUARANTINED_BROKEN": 9,
+    "QUARANTINED_REVEALS": 40
+   },
+   "buggy|spec|P4_KEEP_ALL": {
+    "final_size": 169,
+    "KEPT": 84,
+    "QUARANTINED": 85,
+    "QUARANTINED_BROKEN": 34,
+    "QUARANTINED_REVEALS": 51
+   },
+   "buggy|spec|P4_STRICT": {
+    "final_size": 132,
+    "KEPT": 84,
+    "QUARANTINED": 48,
+    "QUARANTINED_BROKEN": 8,
+    "QUARANTINED_REVEALS": 40
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 174,
+    "KEPT": 159,
+    "QUARANTINED": 15,
+    "QUARANTINED_BROKEN": 15
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 192,
+    "KEPT": 177,
+    "QUARANTINED": 15,
+    "QUARANTINED_BROKEN": 15
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 192,
+    "KEPT": 159,
+    "QUARANTINED": 33,
+    "QUARANTINED_BROKEN": 33
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 173,
+    "KEPT": 159,
+    "QUARANTINED": 14,
+    "QUARANTINED_BROKEN": 14
+   },
+   "fixed|spec|P4_DEFAULT": {
+    "final_size": 144,
+    "KEPT": 134,
+    "QUARANTINED": 10,
+    "QUARANTINED_BROKEN": 9,
+    "QUARANTINED_ENCODES": 1
+   },
+   "fixed|spec|P4_HYBRID": {
+    "final_size": 168,
+    "KEPT": 158,
+    "QUARANTINED": 10,
+    "QUARANTINED_BROKEN": 9,
+    "QUARANTINED_ENCODES": 1
+   },
+   "fixed|spec|P4_KEEP_ALL": {
+    "final_size": 169,
+    "KEPT": 134,
+    "QUARANTINED": 35,
+    "QUARANTINED_BROKEN": 34,
+    "QUARANTINED_ENCODES": 1
+   },
+   "fixed|spec|P4_STRICT": {
+    "final_size": 142,
+    "KEPT": 134,
+    "QUARANTINED": 8,
+    "QUARANTINED_BROKEN": 8
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 151,
+  "written": 10
+ }
+}

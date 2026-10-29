@@ -1,0 +1,149 @@
+{
+ "project": "httpie",
+ "bug": 3,
+ "python_pinned": "3.7.3",
+ "python_used": "3.7.3",
+ "started": "2026-10-19 02:10:00",
+ "test_files": [
+  "tests/test_sessions.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 34,
+  "failed_requirements": [],
+  "setup": [],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 34,
+  "failed_requirements": [],
+  "setup": [],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest tests/test_sessions.py::TestSession::test_download_in_session"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 5 warnings in 0.70s ========================"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 5 warnings in 1.17s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 5 warnings in 0.65s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 5 warnings in 1.18s ========================"
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 5 warnings in 1.23s ========================"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 5 warnings in 1.51s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 5 warnings in 0.65s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_sessions.py::TestSession::test_download_in_session",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 5 warnings in 1.16s ========================"
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 106,
+ "checkout_eol": "lf"
+}

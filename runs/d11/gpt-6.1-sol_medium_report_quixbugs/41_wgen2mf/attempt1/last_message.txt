@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wgen2mf/test_solution.py) covering boundaries, duplicates, empty lists, and exhaustive small inputs.
+
+Validation: `python -m pytest test_solution.py -q -p no:cacheprovider` — **18 passed**.
+
+`solution.py` is unchanged. No docstring mismatches were found, so no xfails were needed. The explicit test path avoids an inaccessible pytest cache directory.

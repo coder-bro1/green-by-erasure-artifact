@@ -1,0 +1,11 @@
+I wrote `<work>\work\test_solution.py` (16 tests) and the suite passes: 7 passed, 9 expected failures (xfail). `solution.py` is unchanged, but it has a bug that stops the spec tests from passing outright.
+
+**The bug:** `select_words` is meant to return the words with exactly `n` consonants, but it counts vowels instead. The check is `if word[i].lower() in ["a","e","i","o","u"]: n_consonants += 1`, which should be `not in`. As a result, all five examples in its own docstring give wrong output. For example, `select_words("Mary had a little lamb", 4)` returns `[]` instead of `["little"]`.
+
+**How the tests handle it:**
+- **7 tests that pass normally.** They cover behaviour the bug doesn't affect: empty and whitespace-only input, the return type, no matches, repeated spaces, duplicate words kept, and words with as many vowels as consonants.
+- **9 tests marked `xfail(strict=True)`.** They check the correct behaviour: the five docstring examples, words with zero consonants, uppercase letters, word order, and single-letter words. They are expected to fail for now. Because they are strict, they will start failing the run as soon as `solution.py` is fixed, which is the signal to remove the markers.
+
+**Checks:** I ran `python -m pytest -v test_solution.py` and got 7 passed, 9 xfailed. To make sure the 9 expected-failure tests are themselves right, I ran all 16 against a copy of `solution.py` with the one-word fix, in the scratchpad, without the markers. All 16 passed.
+
+result: Added 16 pytest tests in <work>\work\test_solution.py (7 passed, 9 xfailed). `solution.py` counts vowels instead of consonants, so the 9 tests that check correct behaviour are marked as expected failures.

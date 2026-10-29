@@ -1,0 +1,18 @@
+I wrote <work>\work\test_solution.py with 17 pytest tests for `longest` in <work>\work\solution.py. All 17 pass, and the docstring examples also pass when run with `pytest --doctest-modules solution.py`. I didn't change solution.py.
+
+**No xfail markers:** the function does what its docstring says.
+- It returns None for an empty list.
+- It returns the longest string.
+- When several strings tie for longest, it returns the first one.
+
+**What the tests cover:**
+- The three docstring examples.
+- A single element, including a single empty string, and a list of only empty strings.
+- The longest string at the start or in the middle of the list.
+- Ties: the tests check that the first tied string is the exact object returned, not just an equal value.
+- Whitespace counting toward length.
+- Non-ASCII strings, where length is counted in characters, not bytes.
+- The input list is not changed.
+- A few extra parametrized cases.
+
+result: 17 pytest tests for solution.py's `longest` pass with no xfails, because the function matches its docstring.

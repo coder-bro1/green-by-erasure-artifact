@@ -1,0 +1,102 @@
+[
+  {
+    "test_id": "HumanEvalFix-97__buggy__qwen2-5-coder-7b-instruct__s2__code/t4",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_multiply_single_digit_numbers():\n    assert multiply(3, 7) == 21",
+    "after": "def test_multiply_single_digit_numbers():\n    assert multiply(3, 7) == 441",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-85__buggy__qwen2-5-coder-7b-instruct__s2__code/t2",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_add_all_even_at_odd_indices():\n    assert add([2, 4, 6, 8]) == 12",
+    "after": "def test_add_all_even_at_odd_indices():\n    assert add([2, 4, 6, 8]) == 18",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-12__buggy__qwen2-5-coder-7b-instruct__s2__code/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_longest_all_whitespace_strings():\n    assert longest(['   ', '  ', ' ']) == '   '",
+    "after": "def test_longest_all_whitespace_strings():\n    assert longest(['   ', '  ', ' ']) == None",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-24__buggy__qwen2-5-coder-7b-instruct__s2__code/t7",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_largest_divisor_8():\n    assert largest_divisor(99) == 33",
+    "after": "def test_largest_divisor_8():\n    assert largest_divisor(99) == None",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-19__buggy__qwen2-5-coder-7b-instruct__s2__code/t3",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_sort_numbers_multiple_numbers():\n    assert sort_numbers('five three one') == 'one three five'",
+    "after": "def test_sort_numbers_multiple_numbers():\n    assert sort_numbers('five three one') == 'five three one'",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-67__buggy__qwen2-5-coder-7b-instruct__s2__code/t4",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_fruit_distribution_5():\n    assert fruit_distribution('1 apples and 1 oranges', 5) == 3",
+    "after": "def test_fruit_distribution_5():\n    assert fruit_distribution('1 apples and 1 oranges', 5) == 3",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-24__buggy__qwen2-5-coder-7b-instruct__s2__code/t3",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_largest_divisor_4():\n    assert largest_divisor(60) == 30",
+    "after": "def test_largest_divisor_4():\n    assert largest_divisor(60) == 30",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-9__buggy__qwen2-5-coder-7b-instruct__s2__code/t2",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_rolling_max_increasing_sequence():\n    assert rolling_max([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]",
+    "after": "def test_rolling_max_increasing_sequence():\n    assert rolling_max([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-24__buggy__qwen2-5-coder-7b-instruct__s2__code/t1",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_largest_divisor_2():\n    assert largest_divisor(100) == 50",
+    "after": "def test_largest_divisor_2():\n    assert largest_divisor(100) == 50",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-27__buggy__qwen2-5-coder-7b-instruct__s2__code/t4",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_flip_case_mixed():\n    assert flip_case('hElLo') == 'HeLlO'",
+    "after": "def test_flip_case_mixed():\n    assert flip_case('hElLo') == 'HeLlO'",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

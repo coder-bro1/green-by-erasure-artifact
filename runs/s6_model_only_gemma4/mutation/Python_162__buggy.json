@@ -1,0 +1,103 @@
+{
+  "pair_id": "Python/162",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_8ab9e77913ba868a.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_b3684465500f3fad.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_8f3b4875ef792911.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_3b823ce1dda0456c.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_065586388ee67001.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_512ca2fd1b429b3d.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ],
+    "tests/test_d16280ddcefb63ec.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        13
+      ]
+    ],
+    "tests/test_0b46a6a71332405f.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        15
+      ]
+    ],
+    "tests/test_8edc047824296aaa.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-162__buggy__gemma4-12b__s0__code",
+        "P2M",
+        16
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_0b46a6a71332405f.py",
+    "tests/test_8edc047824296aaa.py",
+    "tests/test_d16280ddcefb63ec.py"
+  ],
+  "baseline": {
+    "tests/test_0b46a6a71332405f.py": "PASS",
+    "tests/test_8edc047824296aaa.py": "PASS",
+    "tests/test_d16280ddcefb63ec.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "04da9d712fd74031b7e5ca57053af2eb",
+      "killed_by": [
+        "tests/test_0b46a6a71332405f.py",
+        "tests/test_8edc047824296aaa.py",
+        "tests/test_d16280ddcefb63ec.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 4.9,
+  "finished": "2026-10-28T21:35:51.515052+00:00"
+}

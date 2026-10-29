@@ -1,0 +1,15 @@
+I wrote <work>\work\test_solution.py for `words_in_sentence` in solution.py, and all 40 tests pass (`python -m pytest -q test_solution.py`). I did not change solution.py.
+
+The tests cover:
+- both examples from the docstring;
+- a few sentences that mix kept and dropped words;
+- one-letter words, which should be dropped because 1 is not prime;
+- word lengths that are prime (2 up to 97), which should be kept;
+- word lengths that are not prime (4 up to 100), which should be dropped;
+- that word order, repeated words and letter case come through unchanged;
+- that a sentence with no prime-length words returns an empty string;
+- that the result is always a string.
+
+No test is marked xfail, because the code does what its docstring says. It checks whether each word's length is prime, drops one-letter words, keeps two-letter words, and joins the kept words with single spaces in their original order. I found no case where it disagrees with the docstring.
+
+result: 40 pytest tests for solution.py's words_in_sentence all pass, and none needed xfail because the code matches its docstring.

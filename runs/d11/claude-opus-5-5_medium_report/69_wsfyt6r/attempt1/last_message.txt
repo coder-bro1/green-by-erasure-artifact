@@ -1,0 +1,25 @@
+I wrote <work>\work\test_solution.py and the suite passes: 2 tests pass and 16 are expected failures (marked xfail with strict=True). Most tests are expected failures because `solution.py` has a bug. I did not modify `solution.py`.
+
+**The bug:** `monotonic()` returns the opposite of what its docstring promises. When the list is sorted ascending or descending it returns False, and otherwise it returns True:
+
+```python
+if l == sorted(l) or l == sorted(l, reverse=True):
+    return False
+return True
+```
+
+So all three docstring examples come out wrong:
+- `[1, 2, 4, 20]` gives False instead of True.
+- `[1, 20, 4, 10]` gives True instead of False.
+- `[4, 1, 0, -10]` gives False instead of True.
+
+The fix would be to swap the two return values, which is all the 16 failing tests are waiting on.
+
+**What the tests cover:**
+- **Lists that should give True (10 cases, all marked expected failure):** the two monotonic docstring examples, strictly increasing and decreasing lists, increasing and decreasing lists with repeated values, a constant list, floats, a single element, and an empty list.
+- **Lists that should give False (6 cases, all marked expected failure):** the non-monotonic docstring example and other unsorted lists.
+- **Tests that pass (2):** the function doesn't change the list it's given, and it always returns a bool.
+
+Each expected-failure test keeps the expected value from the docstring and gives the swapped return values as the reason. Because they are strict, they will start reporting as failures once the bug is fixed, and the markers should then be removed.
+
+result: Added <work>\work\test_solution.py (2 passed, 16 strict xfail); `monotonic()` in `solution.py` returns the inverse of its docstring, so every check of its True/False answer is marked xfail.

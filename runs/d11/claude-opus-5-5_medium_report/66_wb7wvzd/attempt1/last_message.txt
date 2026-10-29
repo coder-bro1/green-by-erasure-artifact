@@ -1,0 +1,11 @@
+I wrote the tests in <work>\work\test_solution.py and ran them with `python -m pytest -q test_solution.py`: all 1017 passed. I did not change solution.py.
+
+What the tests cover:
+- **Hand-checked values:** the two docstring examples, n=3 gives (1, 2) and n=12 gives (4, 6). Also the edge cases n=1 → (0, 1) and n=1000 → (48, 60), and the points where a new palindrome first appears (10, 11, 22, 99, 100, 101, 121, 191, 202).
+- **Return type:** the result is a tuple of exactly two ints.
+- **Reference check:** a simple brute-force version gives the same answer for every n from 1 to 1000, which is the whole allowed input range.
+- **Running totals:** as n goes up by one, neither count ever goes down, and the combined total goes up by at most 1.
+
+I found no gaps between what the docstring promises and what the code does, so no test is marked xfail. One wording issue: the docstring says "range(1, n), inclusive". In Python, `range(1, n)` leaves out n, but the docstring examples count n itself. The code also counts n, so it matches the intended behaviour.
+
+result: Added 1017 pytest tests for solution.py's even_odd_palindrome in <work>\work\test_solution.py. All pass, and none needed xfail because the code matches its docstring.

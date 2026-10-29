@@ -1,0 +1,16 @@
+I wrote pytest tests for `cycpattern_check` in `<work>\work\test_solution.py` and the suite passes, but they show that solution.py has a real bug. It never checks rotations of the second word, only the word itself. Two of its own docstring examples are wrong because of this.
+
+The suite ran with 431 passed, 54 skipped and 5 xfailed (expected failures), with no failures. `git status` shows solution.py is unchanged and the test file is the only new file.
+
+**The bug:** the inner loop is `for j in range(len(b) - l + 1)`. Since `l = len(b)`, that is `range(1)`, so it only ever compares `b` itself. So:
+- `cycpattern_check("abab", "baa")` returns False; the docstring says True.
+- `cycpattern_check("himenss", "simen")` returns False; the docstring says True.
+
+To fix it, loop `j` over `range(len(b))`.
+
+**How the tests handle it:** you asked for tests that pass without changing solution.py, so I tested what the docstring says and marked the cases that hit the bug as strict expected failures:
+- **Expected failures (5):** the two docstring examples above and three other cases that need a rotation to match. Each says why it fails. Because they are strict, they will start failing once the bug is fixed, so you know to remove the marks.
+- **Normal tests:** the four docstring examples it gets right, exact substrings, non-matches (including `b` longer than `a`, an empty `a` and case sensitivity), empty strings, a check that it returns a real bool, and a check that inputs aren't changed.
+- **Comparison against a correct version:** the tests include a small correct implementation and compare against it for every pair of short words made of "a" and "b". The 54 skips are pairs where the right answer depends on a rotation, which the bug gets wrong.
+
+result: Wrote `<work>\work\test_solution.py` and it passes (431 passed, 54 skipped, 5 expected failures); the tests show solution.py never checks rotations, so two of its own docstring examples return the wrong answer.

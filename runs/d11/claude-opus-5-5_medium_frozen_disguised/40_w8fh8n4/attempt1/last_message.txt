@@ -1,0 +1,11 @@
+I wrote `<work>\work\test_solution.py`. The suite runs clean (17 passed, 5 expected failures), but that's only because I marked the failing checks as expected failures: `solution.py` has a bug that contradicts its own docstring. I left `solution.py` unchanged as asked.
+
+**The bug:** the docstring says the sequence starts s(0)=0, s(1)=0, s(2)=1. The code returns 0, 1 and 2 for those three. Each later value is the sum of the previous three, so the error carries forward: `tri_sum_seq(6)` returns 20 instead of 7, and `tri_sum_seq(9)` returns 149 instead of 44. All three examples in the docstring fail against the current code.
+
+**The tests:**
+- **17 normal tests that pass:** s(0) is 0, the result is an int, the sum-of-previous-three rule holds for k=3..15, the values never decrease, and a sanity check on the expected-values helper used by the tests.
+- **5 tests marked as expected failures** (`xfail(strict=True)`): s(1)=0, s(2)=1, the docstring values for 6 and 9, and the first 12 values. These describe the docstring's behaviour and fail against the current code. Because the marking is strict, they'll show up as errors once `solution.py` is fixed, so the markers can be removed then.
+
+Command: `python -m pytest -q test_solution.py -rxX`
+
+Decision for you: the request was for tests that pass, but the code doesn't do what its docstring says, so the docstring checks can't pass as plain tests without changing `solution.py`. If you'd rather lock in what the code does now, I'd swap the 5 expected failures for checks against the code's current values. That hides the bug, so I didn't do it by default.

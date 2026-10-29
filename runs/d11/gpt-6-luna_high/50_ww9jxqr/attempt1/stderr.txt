@@ -1,0 +1,4 @@
+Reading additional input from stdin...
+2026-10-11T19:00:46.803459Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in <work>\ww9jxqr\tests\test_solution.py:
+        "aÙ¡Ù¢Ù£Ù¤.txt",  # Non-ASCII numerals are not ASCII digits.
+2026-10-11T19:00:52.807373Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"`\\\"c:\\\\\\\\windows\\\\\\\\system32\\\\\\\\windowspowershell\\\\\\\\v1.0\\\\\\\\powershell.exe\\\" -Command \\\"Remove-Item -LiteralPath .\\\\\\\\__pycache__ -Recurse -Force; git status --short\\\"` rejected: blocked by policy\")" }

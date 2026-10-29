@@ -1,0 +1,15 @@
+I wrote the test file and the suite passes, but I found a bug in solution.py: it drops every operator. `shunting_yard` never calls `opstack.append(token)` in its operator branch, so `[10, '-', 5]` returns `[10, 5]` instead of `[10, 5, '-']`. None of the three examples in its own docstring produce the documented output. I left solution.py unchanged as instructed.
+
+Result: `python -m pytest -q test_solution.py` gives **7 passed, 15 xfailed**.
+
+- **7 tests pass:** they cover what the code does correctly: empty input, a single number, numbers only, zero and negative numbers, not changing the input list, returning a new list, and keeping numbers in their original order.
+- **15 tests are marked as expected failures:** they check the behaviour the docstring describes: its three examples, each of `+ - * /`, operator precedence, left-to-right grouping, a mixed chain, that no tokens go missing, and that evaluating the output gives the same value as Python's `eval`. I marked them expected failures instead of matching the current output, because tests that matched it would treat the bug as correct.
+- **The expected answers are right:** I ran the same tests against a fixed copy of the function in the scratchpad (solution.py untouched), and all 15 passed their checks.
+- **What happens after a fix:** the markers are strict, so once someone fixes the function those 15 will start failing as "unexpectedly passed". At that point delete the `@BUG` markers.
+
+The fix is to add `opstack.append(token)` right after the inner `while` loop in solution.py.
+
+Files are in <work>\work:
+- test_solution.py
+
+result: Added test_solution.py for solution.py: 7 passed, 15 expected failures. The expected failures come from a real bug in `shunting_yard`, which drops every operator because it never pushes them onto its stack.

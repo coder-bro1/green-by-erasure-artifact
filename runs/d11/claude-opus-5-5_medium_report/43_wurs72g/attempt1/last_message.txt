@@ -1,0 +1,14 @@
+I wrote pytest tests for `vowels_count` in `<work>\work\test_solution.py`. Running `python -m pytest -q test_solution.py` gives 20 passed and 1 xfailed. I did not change `solution.py`.
+
+**What the tests check:**
+- The two docstring examples: `"abcde"` gives 2 and `"ACEDY"` gives 3.
+- Upper, lower and mixed case.
+- Words with no vowels, like `"rhythm"`.
+- Words where `y` is not at the end, so it should not count: `"yellow"`, `"bayou"` and `"syzygy"` (only its last `y` counts).
+- Words where `y` or `Y` is the last letter, so it should count: `"key"` and `"KEY"`.
+- `"y"` and `"yy"`.
+- That the result is an `int`.
+
+**Problem found (one test marked xfail):** `test_empty_string` expects `vowels_count("") == 0`, because an empty string has no vowels. Instead the function crashes with `IndexError`. It reads `s[-1]` to check for a trailing `y` without first checking that the string isn't empty. The test is marked `@pytest.mark.xfail(strict=True, reason=...)` and keeps the expected value of 0. A guard like `if s and s[-1] in "yY":` would fix it.
+
+result: Added 21 pytest tests for solution.py in <work>\work\test_solution.py (20 pass). One is marked xfail because `vowels_count("")` crashes with IndexError instead of returning 0.

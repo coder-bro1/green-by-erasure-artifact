@@ -1,0 +1,17 @@
+I wrote the tests in <work>\work\test_solution.py and ran `python -m pytest -q test_solution.py`: all 37 pass. I didn't change solution.py.
+
+For integer inputs, `specialFilter` does what its docstring says, so no test needed `xfail`.
+
+The tests cover:
+- both docstring examples;
+- an empty list;
+- numbers whose first and last digits are both odd (11, 101, 12345 and others);
+- numbers where the first or last digit is even or zero;
+- 10 and smaller numbers, which should not count, since the rule is strictly greater than 10;
+- negative numbers;
+- mixed lists, duplicates and very large integers;
+- a check that the input list is left unchanged.
+
+I didn't test floats. The docstring says "array of numbers" but doesn't say which digits count as first and last for something like 15.5. The function treats the decimal point and the digits after it as part of the number, so 15.5 counts and 11.0 does not. I couldn't tell what the right answer should be, so I didn't write tests for those cases.
+
+result: 37 pytest tests for `specialFilter` in <work>\work\test_solution.py all pass; no bugs found for integers, so nothing is marked `xfail`.

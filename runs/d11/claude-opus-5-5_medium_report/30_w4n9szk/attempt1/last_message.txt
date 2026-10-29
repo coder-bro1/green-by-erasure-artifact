@@ -1,0 +1,21 @@
+I wrote 9 pytest tests for `derivative()` in `<work>\work\test_solution.py`, and 6 of them are marked xfail because the function doesn't do what its docstring says. The run gives 3 passed, 6 xfailed (strict) and nothing failing. I didn't change `solution.py`.
+
+**The bug:** `solution.py` returns `[(i * x) for i, x in enumerate(xs)]`. That multiplies the constant term by 0 but never removes it, so every result starts with an extra `0` and is as long as the input. The derivative should be one element shorter.
+- `derivative([3, 1, 2, 4, 5])` gives `[0, 1, 4, 12, 20]`; the docstring expects `[1, 4, 12, 20]`.
+- `derivative([1, 2, 3])` gives `[0, 2, 6]`; the docstring expects `[2, 6]`.
+
+A fix would be `[i * x for i, x in enumerate(xs)][1:]`.
+
+**Marked xfail, with the correct expected values kept:**
+- both docstring examples
+- a linear polynomial (`[5, 7]` should give `[7]`)
+- a constant polynomial (`[42]` should give `[]`)
+- negative and float coefficients
+- the result being one element shorter than the input
+
+**Passing:**
+- an empty list returns `[]`
+- the input list isn't changed
+- the result is a list
+
+result: Added 9 pytest tests in <work>\work\test_solution.py (3 pass, 6 xfail) — solution.py's derivative() doesn't drop the constant term, so it returns an extra leading 0 (e.g. [0, 1, 4, 12, 20] instead of [1, 4, 12, 20]).

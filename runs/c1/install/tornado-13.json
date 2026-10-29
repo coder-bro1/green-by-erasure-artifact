@@ -1,0 +1,104 @@
+{
+ "project": "tornado",
+ "bug": 13,
+ "python_pinned": "3.7.0",
+ "python_used": "3.7.0",
+ "started": "2026-10-19 04:43:20",
+ "test_files": [
+  "tornado/test/http1connection_test.py",
+  "tornado/test/runtests.py"
+ ],
+ "checkout_eol": "lf",
+ "install_buggy": {
+  "created": true,
+  "requirements": 0,
+  "failed_requirements": [],
+  "setup": [
+   "pip install unittest",
+   "pip install python-gettext",
+   "pip install tornado"
+  ],
+  "failed_setup": [
+   "pip install unittest"
+  ],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 0,
+  "failed_requirements": [],
+  "setup": [
+   "pip install unittest",
+   "pip install python-gettext",
+   "pip install tornado"
+  ],
+  "failed_setup": [
+   "pip install unittest"
+  ],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "python -m unittest -q tornado.test.http1connection_test.HTTP1ConnectionTest.test_http10_no_content_length"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.http1connection_test.HTTP1ConnectionTest.test_http10_no_content_length",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (errors=1)"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.http1connection_test.HTTP1ConnectionTest.test_http10_no_content_length",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.http1connection_test.HTTP1ConnectionTest.test_http10_no_content_length",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (errors=1)"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.http1connection_test.HTTP1ConnectionTest.test_http10_no_content_length",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  }
+ ],
+ "step2": "pass",
+ "step3": "pass",
+ "seconds": 37
+}

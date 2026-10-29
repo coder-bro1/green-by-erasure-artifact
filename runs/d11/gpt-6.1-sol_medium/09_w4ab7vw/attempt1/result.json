@@ -1,0 +1,64 @@
+{
+  "task": {
+    "pair_id": "Python/82",
+    "condition": "buggy",
+    "order": 9,
+    "folder": "w4ab7vw",
+    "solution_sha256": "d7d3eba31eae372961e99ec9efa2ec4a540b932450c13b5217d8620de6747394"
+  },
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T09:28:50.799156+00:00",
+  "finished": "2026-10-11T09:29:35.049292+00:00",
+  "seconds": 43.8,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12a4b-27b1-75b0-a4c8-f5955189fc2d",
+  "usage": [
+    {
+      "input_tokens": 83279,
+      "cached_input_tokens": 51456,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1137,
+      "reasoning_output_tokens": 131
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": true,
+  "snapshots": [
+    {
+      "time": "2026-10-11T09:28:50.800157+00:00",
+      "file": "solution.py",
+      "sha256": "d01d72c61e76bfe70776f876ee9e5e6acce9db6cba72f372865c5f44a212ba78",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:29:16.160425+00:00",
+      "file": "test_solution.py",
+      "sha256": "fd1c8edb75766f8d97a9bdb345f275a5664e7febe04dafc0c3e32058c9e30087",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T09:29:20.735438+00:00",
+      "file": "solution.py",
+      "sha256": "7c1415d314e9f0f0ef5a2d5f299e1de0e725f586b52f714cd05a7632876e173e",
+      "stored": "0002__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:29:30.395879+00:00",
+      "file": "pytest.ini",
+      "sha256": "e08279e0036f9813d0874146fda3511dd10119fd454e25e3e5690bf93d95c5cc",
+      "stored": "0003__pytest.ini"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

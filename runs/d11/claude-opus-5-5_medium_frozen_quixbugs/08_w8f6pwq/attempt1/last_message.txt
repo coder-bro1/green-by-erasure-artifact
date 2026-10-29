@@ -1,0 +1,9 @@
+I wrote <work>\work\test_solution.py and the suite passes (`python -m pytest -q test_solution.py`: 16 passed, 11 xfailed). But solution.py has a bug, so 11 of those tests are expected failures, not real passes.
+
+**The bug:** `possible_change` crashes with `ValueError: not enough values to unpack` for almost every total above 0, including the docstring's own example `possible_change([1, 5, 10, 25], 11)`. When the coin list runs out and some total is still left, `first, *rest = coins` is called on an empty list. Adding one guard before the unpacking line would fix it: `if not coins: return 0`. I left solution.py unchanged as asked.
+
+**What the tests cover:**
+- **Passing (16):** inputs the code handles today: a total of 0 gives 1 for any coin list (including an empty one), a negative total gives 0, and the input list is not modified.
+- **Expected failures (11):** the docstring example, an empty coin list with a positive total, and nine known counts such as `[1, 2]` → 4 gives 3 and `[1, 5, 10, 25]` → 100 gives 242. I checked every expected count against a separate standard implementation. These tests are marked `xfail(strict=True, raises=ValueError)`, so they only count as expected failures while that exact crash happens. Once the bug is fixed they will pass, strict mode will report that as a failure, and the markers should then be removed.
+
+result: Added pytest tests for solution.py (16 pass, 11 expected failures). solution.py crashes for almost every total above 0, including its own docstring example; the tests for that are marked as expected failures until it is fixed.

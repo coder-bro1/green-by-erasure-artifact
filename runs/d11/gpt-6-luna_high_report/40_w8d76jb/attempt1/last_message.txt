@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](<work>/w8d76jb/test_solution.py). `solution.py` is unchanged.
+
+Run result: **3 passed, 3 xfailed**. The strict xfails preserve the documented expected values for `tri(3)`, `tri(4)`, and `tri(5)`. The implementation’s odd-index formula returns `tri(3) == 11` instead of `8`; that incorrect value also makes the documented prefixes for `tri(4)` and `tri(5)` incorrect.

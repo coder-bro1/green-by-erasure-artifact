@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/w598ry5/test_solution.py) covering edge cases, large inputs, and all 511 bracket strings up to length 8.
+
+Verified: **21 passed** with:
+```powershell
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+`solution.py` is unchanged. Tests reflect its current reversed bracket behavior, which differs from its docstring.

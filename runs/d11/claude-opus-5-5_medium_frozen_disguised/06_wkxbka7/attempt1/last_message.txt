@@ -1,0 +1,20 @@
+I wrote `<work>\work\test_solution.py` and it runs clean (23 passed, 8 xfailed). I didn't change `solution.py`, but it has a bug: the code doesn't do what its docstring says.
+
+**The bug:** the docstring says every window of three neighbouring characters must contain three *different* characters. Its own example says `no_close_repeats('xyx')` should be False. The code only returns False when all three characters in a window are the same (`aaa`), so any window with just two matching characters slips through:
+```python
+if text[i] == text[i + 1] and text[i + 1] == text[i + 2] and (text[i] == text[i + 2]):
+```
+So `'xyx'`, `'aab'`, `'abb'` and `'hello'` all return True when they should return False. The fix would be to return False whenever any two of the three characters match (`or` instead of `and`). I didn't make that change because you asked me not to touch `solution.py`.
+
+**What the tests cover:**
+- **Too short:** strings with fewer than 3 characters (`''`, `'a'`, `'pq'`, `'aa'`) return False.
+- **Valid strings:** strings where every window is all-different return True, including `'xyzx'`, `'abca'`, a string with a space and non-ASCII characters.
+- **Triple repeats:** three identical characters in a row return False, whether at the start, middle or end.
+- **Basics:** the function returns a real bool, and upper and lower case count as different characters.
+- **The bug cases:** 8 tests marked `xfail(strict=True)` check the docstring's rule, including the `'xyx'` example. They are expected to fail for now. If `solution.py` is fixed, they will pass and pytest will report them as errors, which tells you to remove the xfail markers.
+
+The "make sure they pass" requirement and the docstring can't both be met as the code stands. Marking the bug cases as expected failures keeps the run green without writing tests that lock in the wrong behaviour. If you'd rather they fail outright until the bug is fixed, delete the two `@pytest.mark.xfail` lines.
+
+Run with: `python -m pytest -q <work>\work\test_solution.py`
+
+result: Wrote <work>\work\test_solution.py (23 passed, 8 expected failures); solution.py is unchanged but has a bug: it only rejects "aaa"-style windows, so 'xyx' returns True when its docstring says False.

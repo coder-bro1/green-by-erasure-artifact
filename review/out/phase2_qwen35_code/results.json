@@ -1,0 +1,292 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 408,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 6814,
+  "violations": [
+   {
+    "call_id": "0d077a64d4c73abc7cb6a452982ab6e8dc6928df3be509a3bcc3a765af6238e4",
+    "purpose": "free_repair",
+    "lines": [
+     "distance = abs(elem - elem2)"
+    ]
+   },
+   {
+    "call_id": "8bb73a425158ab18fae24929bc429ea9b0c6c635d587bbf8f50a03341315036b",
+    "purpose": "free_repair",
+    "lines": [
+     "distance = abs(elem - elem2)"
+    ]
+   },
+   {
+    "call_id": "9f5112eb26f1d9864fae74f363719c7ca6d75390bd789361cc855bb4c758a340",
+    "purpose": "free_repair",
+    "lines": [
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']",
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']"
+    ]
+   },
+   {
+    "call_id": "7d5ef364d335753a848359c5fadcd8f22c791e656e0f84943ec81cce2b906faf",
+    "purpose": "free_repair",
+    "lines": [
+     "assert separate_paren_groups('() (()) ((())) (((())))') == ["
+    ]
+   },
+   {
+    "call_id": "671ede02f9c79ed07185a38e5cb4bd55f76fe20c6fe41100b9978384c61036a1",
+    "purpose": "free_repair",
+    "lines": [
+     "assert separate_paren_groups('() (()) ((())) (((())))') == ["
+    ]
+   },
+   {
+    "call_id": "0671ee2ab27835e94c697af509c4ec09e5712e30c778e4d017fd7ffab669445f",
+    "purpose": "free_repair",
+    "lines": [
+     "assert separate_paren_groups('() (()) ((())) (((())))') == ["
+    ]
+   },
+   {
+    "call_id": "cf6158baafebd747c5eabe49001ebe337ff8d21bf41cf6f54256167c1f107abd",
+    "purpose": "judge",
+    "lines": [
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']",
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']"
+    ]
+   },
+   {
+    "call_id": "4424efa371fc21e2189ac0699e1dc734b7b90f4cfe3d6b324cde5d993532301d",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']",
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']"
+    ]
+   },
+   {
+    "call_id": "809daffa6517e46e30e53df87c10bfc5d3ff49f134ccf4243d6d92b1cdf5ef49",
+    "purpose": "judge",
+    "lines": [
+     "assert separate_paren_groups('() (()) ((())) (((())))') == ["
+    ]
+   },
+   {
+    "call_id": "873911f89ba5534e6ebffb4c7f2ffb212c33a7ef6681db3becdeda3c4a382531",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert separate_paren_groups('() (()) ((())) (((())))') == ["
+    ]
+   },
+   {
+    "call_id": "ca2dfcde39afaca589024cfb0c9acb57c1cc517d6857de5d5d0c8e500a48fd90",
+    "purpose": "free_repair",
+    "lines": [
+     "assert truncate_number(3.5) == 0.5",
+     "assert truncate_number(3.5) == 0.5"
+    ]
+   },
+   {
+    "call_id": "506efd7a8e1a5d12db20ec9e83105780deadefa7a903721b52ed794239ea402c",
+    "purpose": "free_repair",
+    "lines": [
+     "assert truncate_number(3.5) == 0.5",
+     "assert truncate_number(3.5) == 0.5"
+    ]
+   },
+   {
+    "call_id": "468cd44c445d11aa06992fde268de7dad0c1c5c2220fa3735d7ea16876113ffd",
+    "purpose": "free_repair",
+    "lines": [
+     "assert truncate_number(3.5) == 0.5",
+     "assert truncate_number(3.5) == 0.5"
+    ]
+   },
+   {
+    "call_id": "8e27f279279408d64298e23d42763b9f2f4d2bb0eabfb886e046fae5bea57f74",
+    "purpose": "judge",
+    "lines": [
+     "assert truncate_number(3.5) == 0.5",
+     "assert truncate_number(3.5) == 0.5"
+    ]
+   },
+   {
+    "call_id": "e98ce291ab48d555063ff1ac925ad5de28054b945b51bb899a9f406bb38d67ff",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert truncate_number(3.5) == 0.5",
+     "assert truncate_number(3.5) == 0.5"
+    ]
+   },
+   {
+    "call_id": "48ee61c43f502e471c9ea5eb2ec196a64a61f6d7970489eafb20647e7b0ad8f6",
+    "purpose": "free_repair",
+    "lines": [
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]"
+    ]
+   },
+   {
+    "call_id": "996f44026e3e03bb8a859d616509d0ff5929734a4a5c47cc85dc57a8c9063b98",
+    "purpose": "free_repair",
+    "lines": [
+     "assert parse_nested_parens('() (()) ((())) (((())))') == [1, 2, 3, 4]"
+    ]
+   },
+   {
+    "call_id": "5fa3d0017b560eb3481194d535b494ef7953a3a7ad14edec89d22e45c8e3aefe",
+    "purpose": "judge",
+    "lines": [
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]"
+    ]
+   },
+   {
+    "call_id": "a5d6848de53d7f1faa29d4da1b4ea5e75fd9741eb190560166f6b85e857df7e4",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]"
+    ]
+   },
+   {
+    "call_id": "b68020a3027836ee4dfb2c4f78e2a5337e1ad52c6b95f0b72de353f63011a037",
+    "purpose": "judge",
+    "lines": [
+     "assert parse_nested_parens('() (()) ((())) (((())))') == [1, 2, 3, 4]"
+    ]
+   }
+  ],
+  "n_violations": 524
+ },
+ "P1-m_judge_sees_body": {
+  "n": 186,
+  "examples": [
+   {
+    "call_id": "a7d12f22483a25016ead8aa808d28a79ffe95688baf4f30e361046099f180dd9",
+    "line": "for idx, elem in enumerate(numbers):"
+   },
+   {
+    "call_id": "8548373949e63220f28e092b797478a98217b6d8fc6b4ceab8b22c79c24e962e",
+    "line": "for idx, elem in enumerate(numbers):"
+   },
+   {
+    "call_id": "5e274cc1c8191b7b2e67c5ab2eaf48a6aefe2e28fd8c5f0e1c6434ed0f9d66d4",
+    "line": "for idx, elem in enumerate(numbers):"
+   },
+   {
+    "call_id": "d5ebcc7e2c3f109d9caaf61f7ff656b17c7b4b0b68c2466521df1bae49f748ed",
+    "line": "for idx, elem in enumerate(numbers):"
+   },
+   {
+    "call_id": "cf6158baafebd747c5eabe49001ebe337ff8d21bf41cf6f54256167c1f107abd",
+    "line": "result.append(''.join(current_string))"
+   }
+  ]
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 956,
+   "TEST_WRONG": 419,
+   "UNSURE": 65
+  },
+  "recovered_judge": {
+   "BUG": 956,
+   "TEST_WRONG": 419,
+   "UNSURE": 65
+  },
+  "recovered_with_code": {
+   "BUG": 835,
+   "TEST_WRONG": 535,
+   "UNSURE": 70
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 167,
+   "buggy|BUG|REVEALS": 696,
+   "buggy|TEST_WRONG|BROKEN": 218,
+   "buggy|TEST_WRONG|REVEALS": 46,
+   "buggy|UNSURE|BROKEN": 28,
+   "buggy|UNSURE|REVEALS": 15,
+   "fixed|BUG|BROKEN": 83,
+   "fixed|BUG|ENCODES": 10,
+   "fixed|TEST_WRONG|BROKEN": 143,
+   "fixed|TEST_WRONG|ENCODES": 12,
+   "fixed|UNSURE|BROKEN": 21,
+   "fixed|UNSURE|ENCODES": 1
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 1768,
+    "QUARANTINED": 906,
+    "QUARANTINED_BROKEN": 195,
+    "KEPT": 862,
+    "QUARANTINED_REVEALS": 711
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 2009,
+    "QUARANTINED": 906,
+    "QUARANTINED_BROKEN": 195,
+    "KEPT": 1103,
+    "QUARANTINED_REVEALS": 711
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 2032,
+    "QUARANTINED": 1170,
+    "QUARANTINED_BROKEN": 413,
+    "KEPT": 862,
+    "QUARANTINED_REVEALS": 757
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 1725,
+    "QUARANTINED": 863,
+    "QUARANTINED_BROKEN": 167,
+    "KEPT": 862,
+    "QUARANTINED_REVEALS": 696
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 1850,
+    "KEPT": 1735,
+    "QUARANTINED": 115,
+    "QUARANTINED_BROKEN": 104,
+    "QUARANTINED_ENCODES": 11
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 2000,
+    "KEPT": 1885,
+    "QUARANTINED": 115,
+    "QUARANTINED_BROKEN": 104,
+    "QUARANTINED_ENCODES": 11
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 2005,
+    "KEPT": 1735,
+    "QUARANTINED": 270,
+    "QUARANTINED_BROKEN": 247,
+    "QUARANTINED_ENCODES": 23
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 1828,
+    "KEPT": 1735,
+    "QUARANTINED": 93,
+    "QUARANTINED_BROKEN": 83,
+    "QUARANTINED_ENCODES": 10
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 1054,
+  "written": 10
+ }
+}

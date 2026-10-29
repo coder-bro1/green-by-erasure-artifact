@@ -1,0 +1,14 @@
+I wrote 22 pytest tests in <work>\work\test_solution.py and the suite passes (14 passed, 8 xfailed). The 8 xfailed ones exist because `solution.py` has a bug, and I left `solution.py` unchanged as asked (git confirms).
+
+**The bug:** the update line uses `dp[i - 1, j] + 1` where it should use `dp[i - 1, j - 1] + 1`. As written, it counts runs of a repeated character in `s` instead of matching substrings. It even fails its own docstring examples:
+- `lcs_length('witch', 'sandwich')` returns 1; it should be 2.
+- `lcs_length('meow', 'homeowner')` returns 1; it should be 4.
+- `lcs_length('aaa', 'a')` returns 3; it should be 1.
+
+**What the tests cover:**
+- **14 tests that pass now:** the cases the bug doesn't affect. These are empty inputs, strings with nothing in common, one-character overlaps, case sensitivity, list inputs, the return type, and a check of the simple reference implementation the tests compare against.
+- **8 tests marked `xfail(strict=True)`:** they assert the correct behaviour that the bug breaks. That's both docstring examples, identical strings, a contained substring, the repeated-character overcount, symmetry, an exhaustive check over a two-letter alphabet against the reference, and 200 random cases against the reference. "Strict" means that once the bug is fixed these tests will start failing the run, which tells you to remove the markers.
+
+To check the xfail tests are correct, I applied the one-line fix to a scratch copy of `solution.py` and ran the tests without the markers: all 22 passed.
+
+result: Added 22 pytest tests in <work>\work\test_solution.py (14 pass, 8 expected failures); they expose a bug in solution.py (`dp[i-1, j]` should be `dp[i-1, j-1]`) that makes it return wrong answers, including for its own docstring examples.

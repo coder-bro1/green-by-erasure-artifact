@@ -1,0 +1,12 @@
+I wrote the tests in `<work>\work\test_solution.py` and the suite runs green, but `solution.py` has a real bug, so the main rotation feature doesn't work. I didn't touch `solution.py`.
+
+**The bug:** for any rotation smaller than the number of digits, the function hands the number back unchanged. The second branch is `return digits[:len(digits) - steps] + digits[len(digits) - steps:]`, which just joins the original string back together. So `rotate_digits(4567, 1)` returns `'4567'`, not the `'7456'` the docstring promises. The fix is to swap the two pieces: `digits[len(digits) - steps:] + digits[:len(digits) - steps]`.
+
+**Results:** `python -m pytest -v test_solution.py` gives 16 passed and 5 xfailed (expected failures) in 0.10s.
+
+- **Passing (16):** the result is a string; steps larger than the digit count reverse the digits (including the docstring's `(89, 3) -> '98'`, plus inputs with zeros and single digits); 0 steps leaves the number unchanged; steps equal to the digit count give the original back; a single digit and repeated digits behave correctly.
+- **Expected failures (5):** these check the documented rotation: the docstring's `(4567, 1) -> '7456'`, plus `(12345, 2) -> '45123'`, `(12345, 4) -> '23451'`, `(12, 1) -> '21'` and `(1020, 1) -> '0102'`. Each is marked `xfail(strict=True)` with a note describing the bug.
+
+I marked those five as expected failures rather than dropping them or changing them to match the buggy output, so the suite still records the problem. Because they're strict, they will turn into failures once the bug is fixed; at that point, remove the `xfail` markers.
+
+result: Added `<work>\work\test_solution.py` (16 passed, 5 strict xfail). It shows that `rotate_digits` returns the number unchanged instead of rotating it whenever steps are fewer than the digit count.

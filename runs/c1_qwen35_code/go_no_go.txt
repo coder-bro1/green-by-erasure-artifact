@@ -1,0 +1,46 @@
+Run: c1_qwen35_code
+Buggy pre-repair signal: 1/30 pairs; 1/30 units; 3/152 tests REVEALS.
+GEN_FAIL units (counted in all unit denominators): 28 of 60: BugsInPy-cookiecutter-3__buggy__qwen3-5-9b__s0__code, BugsInPy-cookiecutter-3__fixed__qwen3-5-9b__s0__code, BugsInPy-httpie-3__buggy__qwen3-5-9b__s0__code, BugsInPy-httpie-3__fixed__qwen3-5-9b__s0__code, BugsInPy-luigi-20__buggy__qwen3-5-9b__s0__code, BugsInPy-luigi-20__fixed__qwen3-5-9b__s0__code, BugsInPy-luigi-21__fixed__qwen3-5-9b__s0__code, BugsInPy-luigi-25__fixed__qwen3-5-9b__s0__code, BugsInPy-luigi-31__buggy__qwen3-5-9b__s0__code, BugsInPy-luigi-31__fixed__qwen3-5-9b__s0__code, BugsInPy-luigi-33__fixed__qwen3-5-9b__s0__code, BugsInPy-luigi-4__buggy__qwen3-5-9b__s0__code, BugsInPy-luigi-4__fixed__qwen3-5-9b__s0__code, BugsInPy-pandas-119__buggy__qwen3-5-9b__s0__code, BugsInPy-pandas-119__fixed__qwen3-5-9b__s0__code, BugsInPy-pandas-23__buggy__qwen3-5-9b__s0__code, BugsInPy-pandas-69__buggy__qwen3-5-9b__s0__code, BugsInPy-sanic-1__buggy__qwen3-5-9b__s0__code, BugsInPy-spacy-2__buggy__qwen3-5-9b__s0__code, BugsInPy-tornado-14__buggy__qwen3-5-9b__s0__code, BugsInPy-tornado-14__fixed__qwen3-5-9b__s0__code, BugsInPy-tornado-2__buggy__qwen3-5-9b__s0__code, BugsInPy-tornado-3__buggy__qwen3-5-9b__s0__code, BugsInPy-tornado-3__fixed__qwen3-5-9b__s0__code, BugsInPy-tornado-4__buggy__qwen3-5-9b__s0__code, BugsInPy-tornado-4__fixed__qwen3-5-9b__s0__code, BugsInPy-tornado-8__buggy__qwen3-5-9b__s0__code, BugsInPy-tornado-8__fixed__qwen3-5-9b__s0__code
+P2/P3 inversions or neutralizations: 4
+Signal pairs by input (each denominator 30): {"code": 1}
+
+| Condition | Input | Policy | Final size | REVEALS | ENCODES generated | ENCODES repaired | REPORTED | DROPPED | INVERTED | NEUTRALIZED | OTHER | Quarantined | Quarantined REVEALS | Logical calls | Network calls | LLM seconds | Policy wall seconds |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| buggy | code | GEN | 150 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 50 | 50 | 1440.654 | 0 |
+| buggy | code | P1 | 32 | 0 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| buggy | code | P2 | 74 | 0 | 1 | 4 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 241 | 195 | 3075.410 | 3229.829 |
+| buggy | code | P3 | 65 | 0 | 1 | 0 | 0 | 2 | 0 | 1 | 0 | 0 | 0 | 307 | 228 | 4688.006 | 4780.451 |
+| buggy | code | P4 | 64 | 0 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 18 | 0 | 299 | 166 | 1412.907 | 1547.795 |
+| fixed | code | GEN | 171 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 49 | 49 | 1334.894 | 0 |
+| fixed | code | P1 | 79 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| fixed | code | P2 | 105 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 204 | 170 | 2640.483 | 2791.111 |
+| fixed | code | P3 | 104 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 242 | 178 | 3238.584 | 3372.455 |
+| fixed | code | P4 | 106 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 13 | 0 | 227 | 128 | 1155.064 | 1252.577 |
+
+P4 buggy/code quarantine precision: 0/18 nonflaky tests REVEALS; raw quarantines 18.
+P4 fixed/code: 13 raw quarantines are false alarms; 13 nonflaky false alarms.
+
+P2/P3 rewritten tests (change-mode denominators): {"P2": 145, "P3": 132}
+P2/P3 change modes: {"P2": {"ASSERT_ADDED": 3, "ASSERT_REMOVED": 3, "ASSERT_WEAKENED": 2, "EXCEPTION_EXPECTED": 28, "EXPECTED_CHANGED": 4, "FUNCTION_SHADOWED": 34, "INPUT_CHANGED": 33, "SETUP_CHANGED": 26, "TEST_REWRITTEN": 50}, "P3": {"ASSERT_ADDED": 4, "ASSERT_REMOVED": 1, "FUNCTION_SHADOWED": 38, "INPUT_CHANGED": 45, "SETUP_CHANGED": 51, "TEST_REWRITTEN": 28}}
+LLM calls by purpose: {"fix_broken": 731, "free_repair": 549, "generate": 99, "judge": 90, "judge_with_code": 90, "overwrite_fallback": 60}
+Total tokens (logical requests): 3389423
+Logical LLM calls: 1619; cache hits: 455
+Mean seconds per uncached LLM call: 16.311
+Mean seconds per unit: 389.640
+Reasoning-bearing calls: 0
+Flaky rows (excluded): 5
+Generation failures: 28
+Unique network requests: 1164
+Total tokens (unique network requests): 2252675
+LLM serving seconds (unique requests): 18986.002
+Pilot wall seconds: 26649.226
+
+Measured serving seconds per unit (unique requests, all purposes):
+code: 316.4 s per unit over 60 units (5.27 h)
+
+| Model | Full digest | Peak GPU MiB | Load seconds | Tokens/s | Fully on GPU | Reasoning returned |
+|---|---|---:|---:|---:|---|---|
+| qwen2.5-coder:7b-instruct | dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364 | 6720 | 34.960 | 12.175 | True | False |
+| qwen3.5:9b | 56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90 | 7157 | 33.555 | 52.734 | True | False |
+| gemma4:12b | 6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b | 9237 | 39.030 | 77.859 | True | False |
+Ollama version: 0.40.1

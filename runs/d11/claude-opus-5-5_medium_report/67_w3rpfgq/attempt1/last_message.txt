@@ -1,0 +1,27 @@
+I wrote 15 pytest tests for `will_it_fly` in `solution.py`. They pass: 9 pass and 6 are marked xfail (strict) because `solution.py` has a bug. I did not change `solution.py`.
+
+Test file: <work>\work\test_solution.py
+
+The tests cover the four examples in the docstring, the weight limit (exactly at the limit, and one over it), an empty list, a single element, palindromes of odd and even length, and lists that are not palindromes.
+
+**The bug:** the check for whether the list is balanced (a palindrome) is backwards.
+```python
+if q[i] == q[j]:
+    return False
+```
+It should be `!=`. Because of this:
+- Any palindrome of length 2 or more is rejected, even when it is light enough. For example, `will_it_fly([3, 2, 3], 9)` returns False, but the docstring says True.
+- Some lists that are not palindromes are accepted. For example, `will_it_fly([1, 2], 5)` and `will_it_fly([1, 2, 3], 10)` return True, but they should return False.
+
+**The 6 xfail tests** (their expected values are what the docstring says):
+- `test_docstring_unbalanced`: `[1,2], 5` should be False.
+- `test_docstring_balanced_light_enough`: `[3,2,3], 9` should be True.
+- `test_palindrome_sum_equal_to_limit`: `[3,2,3], 8` should be True.
+- `test_two_equal_elements`: `[2,2], 10` should be True.
+- `test_even_length_palindrome`: `[1,2,2,1], 10` should be True.
+- `test_non_palindrome_odd_length`: `[1,2,3], 10` should be False.
+
+These cases still pass despite the bug, which is why they are not xfail:
+- The weight check runs first and is correct.
+- Lists of length 0 or 1 never reach the broken comparison.
+- Two non-palindromes, `[1,2,3,1]` and `[1,2,2,3]`, get the right answer (False) only by luck: the code returns as soon as it finds any matching pair. I first marked `[1,2,3,1]` as xfail, but it passed, so I removed the mark and left a comment explaining why it passes.

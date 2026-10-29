@@ -1,0 +1,18 @@
+I wrote pytest tests for `add` in solution.py and all 13 pass. None needed `xfail`, because the function does what its docstring says: it adds up the even numbers that sit at odd positions in the list. I did not modify solution.py.
+
+The tests cover:
+- the docstring example, `add([4, 2, 6, 7]) == 2`
+- 6 mixed lists checked against expected sums
+- a one-element list, which gives 0
+- even numbers at even positions, which are left out
+- a list of only odd numbers
+- negative even numbers, which are added (for example -2 and -4 give -6)
+- negative odd numbers, which are left out
+- a check that the input list is not changed
+
+The run was `python -m pytest -q test_solution.py` in `<work>\work`.
+
+result: 13 pytest tests for `add` in solution.py all pass; it matches its docstring, so no xfail marks were needed.
+
+Files are in <work>\work:
+- test_solution.py

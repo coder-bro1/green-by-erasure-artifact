@@ -1,0 +1,39 @@
+{
+  "pair_id": "QuixBugs/flatten",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_9bb4adf5c66b09ce.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-flatten__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "f3376474417742e68ab78b1e69b8fd79",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "5add3e02f16647a986a126eab6b10712",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "4a7b13c7d8cf432b91cd75d4636170d9",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.4,
+  "finished": "2026-10-28T22:00:35.441149+00:00"
+}

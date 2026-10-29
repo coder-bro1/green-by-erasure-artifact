@@ -1,0 +1,86 @@
+[
+  {
+    "unit_id": "HumanEvalFix-11__buggy__gemma4-12b__s0__code",
+    "request": {
+      "model": "gemma4:12b",
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "num_predict": 2048
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write 10 top-level pytest test functions named test_* with concrete expected values.\nThe function is importable with: from solution import string_xor\nUse the following generation input as the only information about the function:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n    def xor(i, j):\n        if i == j:\n            return '1'\n        else:\n            return '0'\n\n    return ''.join(xor(x, y) for x, y in zip(a, b))\n\nReturn no explanations, only one fenced Python code block, including necessary imports and helpers.\n\n"
+        }
+      ]
+    },
+    "response": {
+      "model": "gemma4:12b",
+      "created_at": "2026-10-09T11:55:31.8888502Z",
+      "message": {
+        "role": "assistant",
+        "content": "```python\nimport pytest\nfrom solution import string_xor\n\ndef test_xor_basic_example():\n    assert string_xor('010', '110') == '100'\n\ndef test_xor_all_zeros():\n    assert string_xor('000', '000') == '111'\n\ndef test_xor_all_ones():\n    assert string_xor('111', '111') == '000'\n\ndef test_xor_different_values():\n    assert string_xor('101', '010') == '111'\n\ndef test_xor_identical_strings():\n    assert string_xor('1100', '1100') == '0000'\n\ndef test_xor_single_character_zero():\n    assert string_xor('0', '0') == '1'\n\ndef test_xor_single_character_one():\n    assert string_xor('1', '1') == '0'\n\ndef test_xor_mixed_single_characters():\n    assert string_xor('1', '0') == '0'\n\ndef test_xor_long_strings():\n    assert string_xor('11111111', '00000000') == '11111111'\n\ndef test_xor_alternating_patterns():\n    assert string_xor('1010', '0101') == '1111'\n```"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 26067917300,
+      "load_duration": 21134590200,
+      "prompt_eval_count": 218,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 458248000,
+      "eval_count": 345,
+      "eval_duration": 4471386000
+    },
+    "model_digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+    "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+    "timestamp": "2026-10-09T11:55:31.888850+00:00",
+    "duration_s": 28.14000000001397,
+    "identical_content": true
+  },
+  {
+    "unit_id": "HumanEvalFix-11__buggy__gemma4-12b__s0__spec",
+    "request": {
+      "model": "gemma4:12b",
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "num_predict": 2048
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write 10 top-level pytest test functions named test_* with concrete expected values.\nThe function is importable with: from solution import string_xor\nUse the following generation input as the only information about the function:\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n\nReturn no explanations, only one fenced Python code block, including necessary imports and helpers.\n\n"
+        }
+      ]
+    },
+    "response": {
+      "model": "gemma4:12b",
+      "created_at": "2026-10-09T11:55:39.8114895Z",
+      "message": {
+        "role": "assistant",
+        "content": "```python\nimport pytest\nfrom solution import string_xor\n\ndef test_xor_basic_example():\n    assert string_xor('010', '110') == '100'\n\ndef test_xor_all_zeros():\n    assert string_xor('000', '000') == '000'\n\ndef test_xor_all_ones():\n    assert string_xor('111', '111') == '000'\n\ndef test_xor_different_lengths_even_logic():\n    # Note: Standard XOR logic usually implies equal length, \n    # but based on the docstring, we assume standard bitwise behavior.\n    # If lengths differ, behavior depends on implementation, \n    # but here we test standard equal length.\n    assert string_xor('1010', '0101') == '1111'\n\ndef test_xor_single_bit_zero():\n    assert string_xor('0', '0') == '0'\n\ndef test_xor_single_bit_one():\n    assert string_xor('1', '1') == '0'\n\ndef test_xor_mixed_bits():\n    assert string_xor('1100', '1010') == '0110'\n\ndef test_xor_long_string():\n    assert string_xor('11111111', '00000000') == '11111111'\n\ndef test_xor_alternating_bits():\n    assert string_xor('101010', '101010') == '000000'\n\ndef test_xor_identity():\n    assert string_xor('1101', '0000') == '1101'\n```"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 5870826100,
+      "load_duration": 5269200,
+      "prompt_eval_count": 162,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 203947000,
+      "eval_count": 418,
+      "eval_duration": 5575508000
+    },
+    "model_digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+    "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+    "timestamp": "2026-10-09T11:55:39.812461+00:00",
+    "duration_s": 7.937999999994645,
+    "identical_content": true
+  }
+]

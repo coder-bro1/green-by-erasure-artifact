@@ -1,0 +1,28 @@
+I wrote pytest tests for `tri()` in `<work>\work\solution.py`. Running `python -m pytest -v test_solution.py` gives 16 passed and 8 xfailed (strict), with no failures and no unexpected passes. I did not change solution.py.
+
+File: `<work>\work\test_solution.py`
+
+**Tests that pass (16):**
+- tri(0), tri(1) and tri(2) return the right lists.
+- The result always has n + 1 items.
+- Even-index terms match 1 + n/2.
+- Each shorter result is the start of a longer one.
+
+**The bug (8 xfail tests):** every odd term is wrong. The docstring says tri(n) = tri(n-1) + tri(n-2) + tri(n+1) for odd n, and tri(n+1) = 1 + (n+1)/2 = (n+3)/2. The code adds an extra `i` on top of that:
+```python
+my_tri.append(my_tri[i - 1] + my_tri[i - 2] + i + (i + 3) / 2)
+```
+The expected line is:
+```python
+my_tri.append(my_tri[i - 1] + my_tri[i - 2] + (i + 3) / 2)
+```
+So the docstring's own example fails. tri(3) should be [1, 3, 2, 8], but the code returns [1, 3, 2.0, 11.0], because the third value comes out as 2 + 3 + 3 + 3 = 11 instead of 2 + 3 + 3 = 8. Any n ≥ 3 is wrong.
+
+The xfail tests keep the values worked out from the docstring:
+- the docstring example, tri(3)
+- tri(4) = [1, 3, 2, 8, 3]
+- tri(5) ends in 15
+- tri(7) ends in 24
+- the odd-term rule checked for n = 3, 5, 7, 9
+
+Smaller point: even terms come back as floats (2.0, not 2). They still compare equal to the integers in the docstring, so no test fails because of it.

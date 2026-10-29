@@ -1,0 +1,17 @@
+I wrote pytest tests for `pascal` in <work>\work\test_solution.py, and the suite passes: 8 passed, 13 xfailed. solution.py is unchanged. But solution.py has a bug, so the suite only passes because the tests that check correct output are marked as expected failures.
+
+**The bug:** in solution.py line 23, `for c in range(0, r):` should be `range(0, r + 1)`. As a result:
+- `pascal(1)` is correct: `[[1]]`.
+- `pascal(2)` returns `[[1], [1]]` instead of `[[1], [1, 1]]`.
+- Any `n >= 3`, including the docstring example `pascal(5)`, raises `IndexError`.
+
+**How the tests are set up:**
+- **Pass now (3):** the cases that already work: `pascal(1)`, the return type, and a fresh list on each call.
+- **Expected failures (13):** the documented behaviour: the docstring example, `pascal(2)`, comparison with binomial coefficients for several `n`, row lengths, symmetry and row sums. Each is marked `xfail(strict=True)` with the bug as the reason.
+- **Pass now (5):** they record the current wrong output (`pascal(2) == [[1], [1]]`, and `IndexError` for `n` of 3 or more).
+
+**What I checked:** I ran the suite (pytest 9.1.1): 8 passed, 13 xfailed. I also ran it against a copy of solution.py with the one-line fix, in the scratchpad: the 13 expected-failure tests passed, so they check the right output. Under the fixed copy those 13 count as failures, and the 5 tests recording the current output fail too.
+
+Once solution.py is fixed, remove the `xfail` markers and delete the 5 tests that record the current output.
+
+result: Added <work>\work\test_solution.py (8 passed, 13 xfailed); solution.py has an off-by-one bug (`range(0, r)` should be `range(0, r + 1)`), so tests of correct output are marked as expected failures.

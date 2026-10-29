@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/w5rtdp9/test_solution.py) with edge cases and exhaustive checks of all 512 three-node directed graphs.
+
+Validation: `python -m pytest test_solution.py -q -p no:cacheprovider` — **16 passed**.
+
+`solution.py` is unchanged. No docstring mismatches required `xfail`. Pytest’s cache hit a filesystem permission issue, so the final run disabled caching.

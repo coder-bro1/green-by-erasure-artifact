@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index ee8b2f6..9e3d17a 100644
+--- a/solution.py
++++ b/solution.py
+@@ -8,4 +8,4 @@ def greatest_common_divisor(a: int, b: int) -> int:
+     """
+     while b:
+         a, b = b, a % b
+-    return a
++    return abs(a)

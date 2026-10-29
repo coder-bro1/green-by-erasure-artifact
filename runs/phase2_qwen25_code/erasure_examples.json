@@ -1,0 +1,102 @@
+[
+  {
+    "test_id": "HumanEvalFix-106__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_f_7():\n    assert f(7) == [1, 2, 6, 24, 15, 720, 28]",
+    "after": "def test_f_7():\n    assert f(7) == [1, 4, 6, 256, 15, 46656, 28]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-154__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_cycpattern_check_6():\n    assert cycpattern_check('himenss', 'simen') == True",
+    "after": "def test_cycpattern_check_6():\n    assert cycpattern_check('himenss', 'simen') == False",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-157__buggy__qwen2-5-coder-7b-instruct__s0__code/t2",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_right_angle_triangle_other_order():\n    assert right_angle_triangle(5, 3, 4) == True",
+    "after": "def test_right_angle_triangle_other_order():\n    assert right_angle_triangle(5, 3, 4) == False",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-30__buggy__qwen2-5-coder-7b-instruct__s0__code/t3",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_get_positive_mixed_numbers():\n    assert get_positive([-1, 2, -4, 5, 6]) == [2, 5, 6]",
+    "after": "def test_get_positive_mixed_numbers():\n    assert get_positive([-1, 2, -4, 5, 6]) == [-1, -4]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFix-58__buggy__qwen2-5-coder-7b-instruct__s0__code/t9",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_common_mixed_types():\n    assert common([1, 'a'], ['a', 2]) == ['a']",
+    "after": "def test_common_mixed_types():\n    with pytest.raises(TypeError):\n        assert common([1, 'a'], ['a', 2]) == ['a']",
+    "change_modes": "EXCEPTION_EXPECTED"
+  },
+  {
+    "test_id": "HumanEvalFix-3__buggy__qwen2-5-coder-7b-instruct__s0__code/t7",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_below_zero_large_operations():\n    assert below_zero([1000, -500, -500]) == False",
+    "after": "def test_below_zero_large_operations():\n    assert below_zero([1000, -500, -500]) == False",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-12__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_mixed_lengths():\n    assert longest(['abc', 'de', 'fghi']) == 'fghi'",
+    "after": "def test_mixed_lengths():\n    assert longest(['abc', 'de', 'fghi']) == 'fghi'",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-6__buggy__qwen2-5-coder-7b-instruct__s0__code/t2",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_parse_nested_parens_multiple_groups():\n    assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+    "after": "def test_parse_nested_parens_multiple_groups():\n    assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-21__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_rescale_to_unit_large_numbers():\n    assert rescale_to_unit([1000.0, 2000.0, 3000.0]) == [0.0, 0.5, 1.0]",
+    "after": "def test_rescale_to_unit_large_numbers():\n    assert rescale_to_unit([1000.0, 2000.0, 3000.0]) == [0.0, 0.5, 1.0]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFix-67__buggy__qwen2-5-coder-7b-instruct__s0__code/t3",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_fruit_distribution_4():\n    assert fruit_distribution('100 apples and 1 oranges', 120) == 19",
+    "after": "def test_fruit_distribution_4():\n    assert fruit_distribution('100 apples and 1 oranges', 120) == 19",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

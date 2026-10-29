@@ -1,0 +1,9 @@
+Added 16 pytest cases in [test_solution.py](/<work>/wyan5yb/test_solution.py), covering documented examples and edge cases. Fixed the inverted palindrome check in [solution.py](/<work>/wyan5yb/solution.py).
+
+Verified: **16 passed** with:
+
+```powershell
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+This command avoids pytest cache permission issues in the workspace.

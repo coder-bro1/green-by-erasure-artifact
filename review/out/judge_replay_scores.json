@@ -1,0 +1,257 @@
+{
+ "phase1_pilot": {
+  "v1": {
+   "n": 324,
+   "verdicts": {
+    "BUG": 324
+   },
+   "strict": {
+    "buggy_tp": 177,
+    "buggy_fp": 71,
+    "buggy_fn": 0,
+    "precision": 0.714,
+    "recall": 1.0,
+    "fixed_false_alarms": 76,
+    "fixed_failures": 76,
+    "fixed_false_alarm_rate": 1.0
+   },
+   "default": {
+    "buggy_tp": 177,
+    "buggy_fp": 71,
+    "buggy_fn": 0,
+    "precision": 0.714,
+    "recall": 1.0,
+    "fixed_false_alarms": 76,
+    "fixed_failures": 76,
+    "fixed_false_alarm_rate": 1.0
+   }
+  },
+  "v2a": {
+   "n": 324,
+   "verdicts": {
+    "BUG": 308,
+    "UNSURE": 5,
+    "TEST_WRONG": 11
+   },
+   "strict": {
+    "buggy_tp": 175,
+    "buggy_fp": 66,
+    "buggy_fn": 2,
+    "precision": 0.726,
+    "recall": 0.989,
+    "fixed_false_alarms": 67,
+    "fixed_failures": 76,
+    "fixed_false_alarm_rate": 0.882
+   },
+   "default": {
+    "buggy_tp": 176,
+    "buggy_fp": 68,
+    "buggy_fn": 1,
+    "precision": 0.721,
+    "recall": 0.994,
+    "fixed_false_alarms": 69,
+    "fixed_failures": 76,
+    "fixed_false_alarm_rate": 0.908
+   }
+  },
+  "v2b": {
+   "n": 324,
+   "verdicts": {
+    "BUG": 168,
+    "TEST_WRONG": 156
+   },
+   "strict": {
+    "buggy_tp": 126,
+    "buggy_fp": 22,
+    "buggy_fn": 51,
+    "precision": 0.851,
+    "recall": 0.712,
+    "fixed_false_alarms": 20,
+    "fixed_failures": 76,
+    "fixed_false_alarm_rate": 0.263
+   },
+   "default": {
+    "buggy_tp": 126,
+    "buggy_fp": 22,
+    "buggy_fn": 51,
+    "precision": 0.851,
+    "recall": 0.712,
+    "fixed_false_alarms": 20,
+    "fixed_failures": 76,
+    "fixed_false_alarm_rate": 0.263
+   }
+  }
+ },
+ "phase1_qwen35_pilot_r2": {
+  "v1": {
+   "n": 248,
+   "verdicts": {
+    "TEST_WRONG": 104,
+    "BUG": 139,
+    "UNSURE": 5
+   },
+   "strict": {
+    "buggy_tp": 78,
+    "buggy_fp": 39,
+    "buggy_fn": 24,
+    "precision": 0.667,
+    "recall": 0.765,
+    "fixed_false_alarms": 22,
+    "fixed_failures": 68,
+    "fixed_false_alarm_rate": 0.324
+   },
+   "default": {
+    "buggy_tp": 79,
+    "buggy_fp": 40,
+    "buggy_fn": 23,
+    "precision": 0.664,
+    "recall": 0.775,
+    "fixed_false_alarms": 25,
+    "fixed_failures": 68,
+    "fixed_false_alarm_rate": 0.368
+   }
+  },
+  "v2a": {
+   "n": 248,
+   "verdicts": {
+    "BUG": 162,
+    "TEST_WRONG": 50,
+    "UNSURE": 36
+   },
+   "strict": {
+    "buggy_tp": 96,
+    "buggy_fp": 33,
+    "buggy_fn": 6,
+    "precision": 0.744,
+    "recall": 0.941,
+    "fixed_false_alarms": 33,
+    "fixed_failures": 68,
+    "fixed_false_alarm_rate": 0.485
+   },
+   "default": {
+    "buggy_tp": 99,
+    "buggy_fp": 55,
+    "buggy_fn": 3,
+    "precision": 0.643,
+    "recall": 0.971,
+    "fixed_false_alarms": 44,
+    "fixed_failures": 68,
+    "fixed_false_alarm_rate": 0.647
+   }
+  },
+  "v2b": {
+   "n": 248,
+   "verdicts": {
+    "BUG": 111,
+    "TEST_WRONG": 102,
+    "UNSURE": 35
+   },
+   "strict": {
+    "buggy_tp": 84,
+    "buggy_fp": 13,
+    "buggy_fn": 18,
+    "precision": 0.866,
+    "recall": 0.824,
+    "fixed_false_alarms": 14,
+    "fixed_failures": 68,
+    "fixed_false_alarm_rate": 0.206
+   },
+   "default": {
+    "buggy_tp": 91,
+    "buggy_fp": 26,
+    "buggy_fn": 11,
+    "precision": 0.778,
+    "recall": 0.892,
+    "fixed_false_alarms": 29,
+    "fixed_failures": 68,
+    "fixed_false_alarm_rate": 0.426
+   }
+  }
+ },
+ "phase1_gemma4_pilot": {
+  "v1": {
+   "n": 256,
+   "verdicts": {
+    "BUG": 227,
+    "UNSURE": 9,
+    "TEST_WRONG": 20
+   },
+   "strict": {
+    "buggy_tp": 179,
+    "buggy_fp": 30,
+    "buggy_fn": 11,
+    "precision": 0.856,
+    "recall": 0.942,
+    "fixed_false_alarms": 18,
+    "fixed_failures": 29,
+    "fixed_false_alarm_rate": 0.621
+   },
+   "default": {
+    "buggy_tp": 184,
+    "buggy_fp": 33,
+    "buggy_fn": 6,
+    "precision": 0.848,
+    "recall": 0.968,
+    "fixed_false_alarms": 19,
+    "fixed_failures": 29,
+    "fixed_false_alarm_rate": 0.655
+   }
+  },
+  "v2a": {
+   "n": 256,
+   "verdicts": {
+    "BUG": 209,
+    "TEST_WRONG": 43,
+    "UNSURE": 4
+   },
+   "strict": {
+    "buggy_tp": 181,
+    "buggy_fp": 18,
+    "buggy_fn": 9,
+    "precision": 0.91,
+    "recall": 0.953,
+    "fixed_false_alarms": 10,
+    "fixed_failures": 29,
+    "fixed_false_alarm_rate": 0.345
+   },
+   "default": {
+    "buggy_tp": 181,
+    "buggy_fp": 20,
+    "buggy_fn": 9,
+    "precision": 0.9,
+    "recall": 0.953,
+    "fixed_false_alarms": 12,
+    "fixed_failures": 29,
+    "fixed_false_alarm_rate": 0.414
+   }
+  },
+  "v2b": {
+   "n": 256,
+   "verdicts": {
+    "BUG": 192,
+    "UNSURE": 12,
+    "TEST_WRONG": 52
+   },
+   "strict": {
+    "buggy_tp": 175,
+    "buggy_fp": 7,
+    "buggy_fn": 15,
+    "precision": 0.962,
+    "recall": 0.921,
+    "fixed_false_alarms": 10,
+    "fixed_failures": 29,
+    "fixed_false_alarm_rate": 0.345
+   },
+   "default": {
+    "buggy_tp": 180,
+    "buggy_fp": 13,
+    "buggy_fn": 10,
+    "precision": 0.933,
+    "recall": 0.947,
+    "fixed_false_alarms": 11,
+    "fixed_failures": 29,
+    "fixed_false_alarm_rate": 0.379
+   }
+  }
+ }
+}

@@ -1,0 +1,3 @@
+Added [test_solution.py](<work>/wbmpvf6/test_solution.py) with 10 passing pytest cases. `solution.py` is unchanged.
+
+`pytest -q` reports **10 passed**. It also showed a cache permission warning. The tests don’t cover a `y` inside a word: the docstring says only a final `y` counts, but the current implementation counts every `y`. Testing that documented behavior would fail until `solution.py` is corrected.

@@ -1,0 +1,86 @@
+[
+  {
+    "unit_id": "HumanEvalFix-11__buggy__qwen2-5-coder-7b-instruct__s0__code",
+    "request": {
+      "model": "qwen2.5-coder:7b-instruct",
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "num_predict": 2048
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write 10 top-level pytest test functions named test_* with concrete expected values.\nThe function is importable with: from solution import string_xor\nUse the following generation input as the only information about the function:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n    def xor(i, j):\n        if i == j:\n            return '1'\n        else:\n            return '0'\n\n    return ''.join(xor(x, y) for x, y in zip(a, b))\n\nReturn no explanations, only one fenced Python code block, including necessary imports and helpers.\n\n"
+        }
+      ]
+    },
+    "response": {
+      "model": "qwen2.5-coder:7b-instruct",
+      "created_at": "2026-10-09T11:54:15.3054694Z",
+      "message": {
+        "role": "assistant",
+        "content": "```python\nfrom solution import string_xor\n\ndef test_string_xor_equal_length():\n    assert string_xor('010', '110') == '100'\n\ndef test_string_xor_different_length():\n    assert string_xor('0101', '110') == '1011'\n\ndef test_string_xor_all_zeros():\n    assert string_xor('000', '000') == '000'\n\ndef test_string_xor_all_ones():\n    assert string_xor('111', '111') == '111'\n\ndef test_string_xor_mixed():\n    assert string_xor('0110', '1010') == '1100'\n\ndef test_string_xor_single_char():\n    assert string_xor('1', '0') == '1'\n\ndef test_string_xor_long_strings():\n    assert string_xor('1111111111111111', '0000000000000000') == '1111111111111111'\n\ndef test_string_xor_same_strings():\n    assert string_xor('1111', '1111') == '0000'\n\ndef test_string_xor_empty_strings():\n    assert string_xor('', '') == ''\n\ndef test_string_xor_one_empty_string():\n    assert string_xor('1111', '') == ''\n```"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 16617385400,
+      "load_duration": 11824016100,
+      "prompt_eval_count": 211,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 196967000,
+      "eval_count": 305,
+      "eval_duration": 4593311000
+    },
+    "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "harness_commit": "a7d865d253f60ca14aaa19d2327ee286075b221d",
+    "timestamp": "2026-10-09T11:54:15.305999+00:00",
+    "duration_s": 18.655999999988126,
+    "identical_content": true
+  },
+  {
+    "unit_id": "HumanEvalFix-11__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+    "request": {
+      "model": "qwen2.5-coder:7b-instruct",
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "num_predict": 2048
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write 10 top-level pytest test functions named test_* with concrete expected values.\nThe function is importable with: from solution import string_xor\nUse the following generation input as the only information about the function:\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n\nReturn no explanations, only one fenced Python code block, including necessary imports and helpers.\n\n"
+        }
+      ]
+    },
+    "response": {
+      "model": "qwen2.5-coder:7b-instruct",
+      "created_at": "2026-10-09T11:54:22.3734976Z",
+      "message": {
+        "role": "assistant",
+        "content": "```python\nfrom solution import string_xor\n\ndef test_string_xor_basic():\n    assert string_xor('010', '110') == '100'\n\ndef test_string_xor_all_zeros():\n    assert string_xor('000', '000') == '000'\n\ndef test_string_xor_all_ones():\n    assert string_xor('111', '111') == '000'\n\ndef test_string_xor_single_bit():\n    assert string_xor('1', '0') == '1'\n\ndef test_string_xor_single_bit_reverse():\n    assert string_xor('0', '1') == '1'\n\ndef test_string_xor_different_lengths():\n    assert string_xor('1111', '11') == '1100'\n\ndef test_string_xor_long_strings():\n    assert string_xor('1111111111111111', '0000000000000000') == '1111111111111111'\n\ndef test_string_xor_identical_strings():\n    assert string_xor('101010', '101010') == '000000'\n\ndef test_string_xor_mixed_strings():\n    assert string_xor('101010', '010101') == '111111'\n\ndef test_string_xor_empty_strings():\n    assert string_xor('', '') == ''\n```"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 5029788900,
+      "load_duration": 5179200,
+      "prompt_eval_count": 165,
+      "prompt_eval_cached_count": 66,
+      "prompt_eval_duration": 179677000,
+      "eval_count": 318,
+      "eval_duration": 4832888000
+    },
+    "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "harness_commit": "a7d865d253f60ca14aaa19d2327ee286075b221d",
+    "timestamp": "2026-10-09T11:54:22.374051+00:00",
+    "duration_s": 7.062999999994645,
+    "identical_content": true
+  }
+]

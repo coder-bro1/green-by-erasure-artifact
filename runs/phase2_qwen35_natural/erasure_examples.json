@@ -1,0 +1,72 @@
+[
+  {
+    "test_id": "HumanEvalPlusNatural-22__buggy__qwen3-5-9b__s0__code/t5",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_filter_integers_with_booleans():\n    assert filter_integers([True, False, 1, 0]) == [1, 0]",
+    "after": "def test_filter_integers_with_booleans():\n    assert filter_integers([True, False, 1, 0]) == [True, False, 1, 0]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-10__buggy__qwen3-5-9b__s0__code/t5",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_make_palindrome_cata():\n    assert make_palindrome('cata') == 'catac'",
+    "after": "def test_make_palindrome_cata():\n    assert make_palindrome('cata') == 'catatac'",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-24__buggy__qwen3-5-9b__s0__code/t4",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_largest_divisor_two():\n    assert largest_divisor(2) == 1",
+    "after": "def test_largest_divisor_two():\n    assert largest_divisor(2) == 2",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-6__buggy__qwen3-5-9b__s0__code/t9",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_single_group_empty_string_not_expected():\n    assert parse_nested_parens('') == []",
+    "after": "def test_single_group_empty_string_not_expected():\n    assert parse_nested_parens('') == [0]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-22__buggy__qwen3-5-9b__s0__code/t3",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_filter_integers_mixed_types():\n    assert filter_integers([1, 'a', 3.14, True, None]) == [1]",
+    "after": "def test_filter_integers_mixed_types():\n    assert filter_integers([1, 'a', 3.14, True, None]) == [1, True]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-22__buggy__qwen3-5-9b__s0__code/t3",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_filter_integers_mixed_types():\n    assert filter_integers([1, 'a', 3.14, True, None]) == [1]",
+    "after": "def test_filter_integers_mixed_types():\n    assert filter_integers([1, 'a', 3.14, True, None]) == [1]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-109__buggy__qwen3-5-9b__s0__code/t2",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_move_one_ball_single_element():\n    assert move_one_ball([5]) is True",
+    "after": "def test_move_one_ball_single_element():\n    assert move_one_ball([5]) is True",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

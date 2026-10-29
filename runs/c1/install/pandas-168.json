@@ -1,0 +1,161 @@
+{
+ "project": "pandas",
+ "bug": 168,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 02:59:23",
+ "test_files": [
+  "pandas/tests/groupby/test_groupby.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 74,
+  "failed_requirements": [
+   "gcsfs==0.6.2"
+  ],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 74,
+  "failed_requirements": [
+   "gcsfs==0.6.2"
+  ],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 0.63s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.11s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 0.59s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.10s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 1.08s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.39s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 0.64s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/groupby/test_groupby.py::test_groupby_axis_1",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.09s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 1008,
+ "checkout_eol": "lf"
+}

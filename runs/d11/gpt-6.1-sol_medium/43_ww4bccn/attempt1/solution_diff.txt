@@ -1,0 +1,11 @@
+diff --git a/solution.py b/solution.py
+index c85fbaa..2fbffb7 100644
+--- a/solution.py
++++ b/solution.py
+@@ -17,5 +17,5 @@ def longest(strings: List[str]) -> Optional[str]:
+ 
+     maxlen = max(len(x) for x in strings)
+     for s in strings:
+-        if len(s) > maxlen:
++        if len(s) == maxlen:
+             return s

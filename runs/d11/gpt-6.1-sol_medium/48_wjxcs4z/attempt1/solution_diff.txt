@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index bdb9e2a..a823670 100644
+--- a/solution.py
++++ b/solution.py
+@@ -8,4 +8,4 @@ def derivative(xs: list):
+     >>> derivative([1, 2, 3])
+     [2, 6]
+     """
+-    return [(i * x) for i, x in enumerate(xs)]
++    return [i * x for i, x in enumerate(xs[1:], start=1)]

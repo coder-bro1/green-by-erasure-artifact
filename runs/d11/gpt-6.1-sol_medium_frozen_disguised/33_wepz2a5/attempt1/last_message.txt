@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wepz2a5/test_solution.py), covering every valid limit and known totals. `solution.py` is unchanged.
+
+`python -m pytest -q`: **897 passed, 108 expected failures**.
+
+Expected failures expose the existing bug: palindromic endpoints are excluded despite the documented inclusive range.

@@ -1,0 +1,11 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes (11 passed, 5 expected failures), but solution.py has a bug, so "make sure they pass" needed a workaround.
+
+**The bug:** `even_values_at_odd_slots` loops with `range(1, len(values), 1)`. That checks every index from 1 onward instead of only odd ones; it should be `range(1, len(values), 2)`. Its own docstring example `[1, 6, 3, 8, 2]` should give 14, but it returns 16 because the 2 at index 4 gets counted.
+
+I didn't modify solution.py, so I handled the conflict like this:
+- **11 tests pass:** inputs where the buggy and correct versions give the same answer (one item, two items, zeros, negatives, odd values at odd indexes), plus checks that the input list isn't changed and the result is an int.
+- **5 tests are marked `xfail(strict=True)`:** the docstring example and four cases with even numbers at even indexes of 2 or more. They describe what the docstring says should happen and fail on the current code. Because they're strict, they will start failing the suite as soon as the bug is fixed, so remove the markers then.
+
+If you'd rather the tests match what the code does now (expect 16 for the docstring example), the xfail tests can be rewritten that way, but they would then lock in the bug.
+
+result: Added <work>\work\test_solution.py (11 passed, 5 strict xfail); solution.py has a bug (`range(1, len(values), 1)` should be step 2) that makes its docstring example return 16 instead of 14.

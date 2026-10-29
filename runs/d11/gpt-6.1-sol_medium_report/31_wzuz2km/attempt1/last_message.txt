@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wzuz2km/test_solution.py). `solution.py` remains unchanged.
+
+Validation: `python -m pytest test_solution.py -q -p no:cacheprovider` — **6 passed, 8 xfailed**.
+
+The eight cases use `@pytest.mark.xfail(strict=True, reason=...)` and retain their expected values: `intersperse` incorrectly omits the final input element, contradicting its docstring.

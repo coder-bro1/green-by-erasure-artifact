@@ -1,0 +1,13 @@
+def _add_margins(
+    table: Union["Series", "DataFrame"],
+    data,
+    values,
+    rows,
+    cols,
+    aggfunc,
+    observed=None,
+    margins_name: str = "All",
+    fill_value=None,
+):
+
+The fix to this function is described as: BUG: pivot_table not returning correct type when margin=True and aggfunc='mean' (#28248)

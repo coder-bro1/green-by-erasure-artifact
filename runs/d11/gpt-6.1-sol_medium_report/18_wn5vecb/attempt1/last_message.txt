@@ -1,0 +1,5 @@
+Added 12 cases in [test_solution.py](/<work>/wn5vecb/test_solution.py), covering docstring examples and edge cases. `solution.py` is unchanged.
+
+The function subtracts an extra `1`; for example, it returns `7` where the docstring expects `8`. Expected values are preserved, with `xfail(strict=True, reason=...)`.
+
+Validation: `python -m pytest -q` exits successfully with **12 xfailed**.

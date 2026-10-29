@@ -1,0 +1,20 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes with `python -m pytest -q test_solution.py`: 118 passed, 4 xfailed. I didn't touch <work>\work\solution.py, but it has a bug: it treats 1-letter words as having prime length.
+
+**The bug:** for a 1-letter word, `range(2, len(word))` is `range(2, 1)`, which is empty. So `flg` stays 0 and the word is kept, even though 1 is not prime. Because of this, Example 1 in the function's own docstring fails: `words_in_sentence("This is a test")` returns `'is a'` instead of `'is'`.
+
+**How the tests handle it:** the 4 tests that check 1-letter words are marked `xfail(strict=True)`, with the reason written on the marker:
+- docstring Example 1
+- `"a"` on its own
+- `"I am a go"`
+- `"Hi I am Hussein"`
+
+The whole suite passes now without hiding the defect. Because the marking is strict, those 4 tests will be reported as failures once solution.py is fixed, which is the signal to remove the markers. The fix itself is one line: add `len(word) > 1` to the condition that decides whether to keep a word.
+
+**What the passing tests cover:**
+- docstring Example 2
+- a set of hand-written sentences
+- a single word of every length from 2 to 100, checked against a reference primality function
+- word order, duplicates and case are kept
+- an empty string is returned when nothing matches
+- extra spaces are collapsed
+- the input string is not changed

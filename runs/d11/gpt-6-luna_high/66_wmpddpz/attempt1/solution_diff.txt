@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index 36bede2..4d8b5e6 100644
+--- a/solution.py
++++ b/solution.py
+@@ -18,4 +18,5 @@ def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+         result.append(n)
+         result.append(delimeter)
+ 
++    result.append(numbers[-1])
+     return result

@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wb97bht/test_solution.py). `solution.py` is unchanged.
+
+Verified with `python -m pytest test_solution.py -q -p no:cacheprovider`: **1 passed, 7 xfailed**.
+
+The seven cases retain their documented expected values and use `xfail(strict=True)`. `sieve()` incorrectly returns `[]` for bounds ≥ 2 because `any()` on the initially empty primes list prevents adding the first prime.

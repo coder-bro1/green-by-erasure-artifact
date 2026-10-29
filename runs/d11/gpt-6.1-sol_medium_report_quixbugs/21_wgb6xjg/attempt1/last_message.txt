@@ -1,0 +1,13 @@
+Added [test_solution.py](/<work>/wgb6xjg/test_solution.py). `solution.py` is unchanged.
+
+Verified: **9 passed, 4 xfailed** using:
+```powershell
+python -B -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+The four strict expected failures retain the documented expectations:
+
+- Three DAG cases omit required nodes because the function checks outgoing neighbors instead of predecessors.
+- The return value is a plain list rather than the promised `OrderedSet`.
+
+The explicit test path and disabled cache avoid a pytest cache-directory permission issue.

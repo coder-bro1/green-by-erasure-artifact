@@ -1,0 +1,15 @@
+I wrote `<work>\work\test_solution.py` and the suite runs green: 10 tests pass and 6 more fail as expected. Those 6 are marked as expected failures because `solution.py` has a bug in `kth`, and I couldn't fix it since the file was off-limits.
+
+**The bug:** in the last branch, when the answer is among the elements larger than the pivot, the code calls `kth(above, k)`. It should call `kth(above, k - num_lessoreq)`. Because the position isn't adjusted, the function either crashes or returns the wrong number:
+- `kth([1, 2, 3], 2)` raises IndexError (it should return 3).
+- `kth([1, 5, 6, 7, 2, 3, 4], 1)` returns 3 instead of 2, with no error.
+
+**What the tests cover:**
+- **10 normal tests** use inputs that never reach the broken branch. They cover a single element, k=0, the first element being the answer, the first element being the largest, every k on a descending list, all-equal values, repeated values, negative numbers, the input list not being changed, and random descending lists.
+- **6 known-bug tests** are marked `xfail(strict=True)`. They cover the ascending list, a middle value in an ascending list, the silently wrong result, a two-element list, a negative-number case that only goes wrong one level down, and 200 random lists checked against `sorted(arr)[k]`.
+
+Because the marker is strict, once the one-line fix is made those 6 tests will start passing and pytest will flag them. At that point remove the `@KNOWN_BUG` markers.
+
+I ran `python -m pytest test_solution.py` (pytest 9.1.1): 10 passed, 6 xfailed. `git status` shows `solution.py` unchanged; the only new file is the test file.
+
+result: `<work>\work\test_solution.py` passes (10 passed, 6 expected failures). The expected failures are a bug in `solution.kth`, which I left unmodified as instructed: it recurses with `kth(above, k)` instead of `kth(above, k - num_lessoreq)`.

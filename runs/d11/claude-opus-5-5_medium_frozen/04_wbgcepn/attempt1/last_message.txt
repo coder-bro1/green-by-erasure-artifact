@@ -1,0 +1,9 @@
+I wrote `<work>\work\test_solution.py` and ran it: 19 tests pass and 3 are expected failures (strict xfail). I did not change `solution.py`.
+
+**Bug in `solution.py`:** the inner loop starts at `j = i` (`for j in range(i, len(l))`), so each element is also paired with itself. Any list with a single `0` returns True, even though the docstring asks for "two distinct elements". The docstring's own first example, `pairs_sum_to_zero([1, 3, 5, 0])`, should return False and returns True. Changing the loop to `range(i + 1, len(l))` would fix it.
+
+**What the tests cover:** they check the behaviour the docstring describes. That includes the docstring examples that do work, empty and one-item lists, lists with no matching pair, `[0, 0]` (two separate zeros, which is True), very large numbers, input given as a tuple, that the input list isn't changed, and lists of about 500 numbers.
+
+**The bug cases:** `[1, 3, 5, 0]`, `[0]` and `[0, 1, 2]` should return False. They are marked `xfail(strict=True)` so the suite passes now without hiding the bug. Once `solution.py` is fixed, those 3 will pass unexpectedly and fail the run, which is the cue to remove the marker.
+
+result: 19 tests pass and 3 are expected failures. They expose a bug in `solution.py`: one `0` counts as a pair with itself, so its own docstring example `[1, 3, 5, 0]` returns True instead of False.

@@ -1,0 +1,91 @@
+{
+  "pair_id": "QuixBugs/topological_ordering",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_60fe7a92146865e8.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_0ce70f7d7b631010.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_09df7296613a8273.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_33176345411e088b.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_1065e0f9ce0e7343.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_a81ecdee496101f5.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "53d8cb8ed4c94eba9c076d22fccab893",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "69dcadc2efb74353b785a05db9822365",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "69c3d286681942db8d329a39407b0493",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "7b3e419e6f3b44f0ad464ce0df3fe346",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "2be7253e2d134a02bc35e2f39945ba12",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.5,
+  "finished": "2026-10-28T22:03:34.741436+00:00"
+}

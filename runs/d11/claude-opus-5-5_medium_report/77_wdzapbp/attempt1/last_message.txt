@@ -1,0 +1,19 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes: 6 passed, 10 xfailed (strict), 0 failures. I left solution.py unchanged; `git status` shows only the new test file.
+
+**The bug in solution.py:** `multiply` should return the product of the two unit digits, but it returns
+```python
+return abs(a % 10) * abs(b % 10) * a * b
+```
+The extra `* a * b` factor is wrong. For example, `multiply(148, 412)` returns 16 * 148 * 412 = 975,616 instead of 16, and `multiply(19, 28)` returns 38,304 instead of 72. Three of the four docstring examples get the wrong answer.
+
+**What passes:** the 6 passing tests are cases where the bug happens to make no difference. Either a unit digit is 0, so the result is 0 anyway (this includes the docstring example `multiply(2020, 1851) == 0`), or `a*b == 1`, as in `multiply(1, 1)`.
+
+**What is marked xfail:** 10 tests keep their docstring-based expected values and are marked `@pytest.mark.xfail(strict=True, reason=...)`:
+- the three failing docstring examples: (148, 412) → 16, (19, 28) → 72, (14, -15) → 20
+- other unit-digit products: (3, 4) → 12, (9, 9) → 81, (123, 456) → 18, (-14, -15) → 20, (-7, 3) → 21
+- the result can never exceed 81
+- order and sign of the inputs don't change the result: 37 and 58 give 56 in either order, and with 37 negated
+
+**Second problem, with negative numbers:** removing `* a * b` alone won't fix everything. Python's `%` takes the sign of the divisor, so `-7 % 10 == 3`, not 7, and `-14 % 10 == 6`. That means `abs(a % 10)` gets the unit digit of a negative number wrong; `abs(a) % 10` would be correct. The docstring example (14, -15) only works because `-15 % 10` is 5. The tests (-14, -15) → 20 and (-7, 3) → 21 would still fail after removing the extra factor.
+
+result: Added 16 pytest tests for solution.py's multiply() (6 pass, 10 strict-xfail). The function multiplies by an extra a*b and also gets the unit digit of negative numbers wrong.

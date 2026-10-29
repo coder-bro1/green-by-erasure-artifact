@@ -1,0 +1,14 @@
+I wrote 22 pytest tests for `is_happy` in `<work>\work\test_solution.py`. 17 pass and 5 fail because `solution.py` doesn't do what its docstring says. Those 5 keep their expected values and are marked `@pytest.mark.xfail(strict=True, reason=...)`. Running `python -m pytest -q -rxX test_solution.py` gives "17 passed, 5 xfailed". I did not change `solution.py`.
+
+**The bug:** The docstring says a string is happy only if every 3 consecutive letters are distinct. The code only returns False when all three letters in a window are the same:
+```python
+if s[i] == s[i+1] and s[i+1] == s[i+2] and s[i] == s[i+2]:
+    return False
+```
+So a window where just two letters match still passes. Two of the docstring's own examples are wrong as a result: `is_happy("aabb")` and `is_happy("xyy")` return True, but the docstring says False. The same goes for `"aab"`, `"aba"` and `"abcdefgg"`. These are the 5 xfail tests. Changing that condition from `and` to `or` would fix it, and then the 5 xfail tests would start passing.
+
+**What passes:**
+- Strings shorter than 3 characters (`""`, `"a"`, `"aa"`, `"ab"`) return False.
+- Happy strings (`"abc"`, `"adb"`, `"abcd"`, `"abcabc"`, `"xyzxyz"`, `"iopaxpoi"`) return True.
+- Strings with three identical letters in a row (`"aaa"`, `"abbbc"`, `"xaaay"`) return False.
+- The other docstring examples (`a`, `aa`, `abcd`, `adb`) give the right answers.

@@ -1,0 +1,15 @@
+I wrote `<work>\work\test_solution.py`, and the suite runs green (12 passed, 6 xfailed), but solution.py has a bug that gives wrong answers on directed graphs. The 6 xfailed tests are exactly the ones that hit it. I didn't edit solution.py.
+
+**The bug:** the update line adds `length_by_path[j, k]` where Floyd-Warshall needs `length_by_path[k, j]`:
+```python
+length_by_path[i, j] = min(length_by_path[i, j], length_by_path[i, k] + length_by_path[j, k])  # should be [k, j]
+```
+Results are only right when the graph is symmetric (every edge has a matching reverse edge with the same length). On a directed graph they're wrong: with the single edge `{(0, 1): 4}`, the distance from 1 to 0 comes out as 4 instead of infinity, and the chain 0→1→2 isn't found as length 2.
+
+**The 12 passing tests** cover what currently works: an empty graph, distance 0 from a node to itself, infinity when there are no edges, infinity for keys not in the graph, a single edge in its forward direction, the input dict not being changed, symmetric graphs (triangle, path, separate components, and a 6-node graph checked against a reference implementation in the test file), float lengths, and a negative edge length.
+
+**The 6 xfailed tests** state the correct directed-graph answers: the reverse of a single edge is unreachable, two-hop chains, taking a cheaper route through a middle node, unreachable reverse directions, a negative-edge directed graph, and a full comparison against the reference implementation. They're marked `xfail(strict=True)`, so once solution.py is fixed they'll start reporting failures as a reminder to remove the marker.
+
+To make the suite pass, I marked the tests that show the bug as expected failures rather than writing tests that accept the wrong answers. If every test must pass with no expected failures, the one-line fix to `[k, j]` above has to go into solution.py.
+
+result: Added `<work>\work\test_solution.py` (12 passed, 6 xfailed); it shows solution.py gets directed graphs wrong because it uses `[j, k]` instead of `[k, j]`.

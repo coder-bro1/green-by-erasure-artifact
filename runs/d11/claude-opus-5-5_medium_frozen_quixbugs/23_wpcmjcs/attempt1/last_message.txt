@@ -1,0 +1,14 @@
+I wrote `<work>\work\test_solution.py`, and running `python -m pytest -q test_solution.py` gives 29 passed and 3 expected failures. Those 3 come from a real bug in `solution.py`: `quicksort` drops repeated values. I did not change `solution.py` (git status shows only the new test file).
+
+**The bug:** the code keeps only items that are `x < pivot` or `x > pivot`, so any other item equal to the pivot is thrown away. For example, `quicksort([3, 1, 2, 3, 1])` returns `[1, 2, 3]`. The docstring says it should return the elements of `arr` in sorted order, which would be `[1, 1, 2, 3, 3]`.
+
+**How the tests handle it:** the three tests that use repeated values (mixed duplicates, all values equal, output length equals input length) are marked as expected failures in strict mode. The suite is green without hiding the bug, and once `solution.py` is fixed those tests will start failing until the markers are removed. If you'd rather the suite fail on the bug right now, delete the three `@pytest.mark.xfail` lines.
+
+**What else is tested, all passing:**
+- empty list, one element, two elements
+- lists already sorted, reverse sorted, and in random order
+- negative numbers
+- the input list is not changed, and a new list is returned
+- 20 random lists of distinct values, each checked against Python's `sorted()`
+
+result: Added `test_solution.py` for `quicksort` (29 pass, 3 expected failures); the 3 cover a real bug where `solution.py` drops duplicate values.

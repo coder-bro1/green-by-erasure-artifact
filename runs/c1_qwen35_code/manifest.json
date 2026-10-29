@@ -1,0 +1,767 @@
+{
+  "run_id": "c1_qwen35_code",
+  "config": {
+    "model": "qwen3.5:9b",
+    "gen_inputs": [
+      "code"
+    ],
+    "benchmarks": [
+      "BugsInPy"
+    ],
+    "seed": 0,
+    "temperature": 0,
+    "subset": null,
+    "note": "Stage C optional second model (C1 protocol section 8), reported separately"
+  },
+  "model": "qwen3.5:9b",
+  "model_digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+  "ollama_version": "0.40.1",
+  "models": {
+    "qwen2.5-coder:7b-instruct": {
+      "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      },
+      "wall_seconds": 65.65600000001723,
+      "load_seconds": 34.9603136,
+      "tokens_per_second": 12.174651462556099,
+      "peak_gpu_mib": 6720,
+      "memory_samples": 265,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen2.5-coder:7b-instruct",
+        "model": "qwen2.5-coder:7b-instruct",
+        "size": 5133943438,
+        "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "7.6B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T03:40:57.1292029+06:00",
+        "size_vram": 5133943438,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "created_at": "2026-10-08T21:35:57.1286876Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(-5, -5) == -10\n    assert add(100, 200) == 300\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 61611145100,
+        "load_duration": 34960313600,
+        "prompt_eval_count": 50,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 18755278000,
+        "eval_count": 96,
+        "eval_duration": 7885236000
+      },
+      "timestamp": "2026-10-08T21:35:59.154269+00:00",
+      "harness_commit": "78261db0cc1faae7f498fc3d9798d3827fbb9243",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "qwen3.5:9b": {
+      "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "details": {
+        "parent_model": "model.gguf",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 50.17200000002049,
+      "load_seconds": 33.5554006,
+      "tokens_per_second": 52.73447953429945,
+      "peak_gpu_mib": 7157,
+      "memory_samples": 196,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen3.5:9b",
+        "model": "qwen3.5:9b",
+        "size": 5828646010,
+        "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "9.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T10:07:30.3130046+06:00",
+        "size_vram": 5828646010,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen3.5:9b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen3.5:9b",
+        "created_at": "2026-10-09T04:02:30.3124752Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\n\ndef add(a, b):\n    return a + b\n\n\n@pytest.mark.parametrize(\"a,b\", [(1, 2), (0, 0), (-1, -1)])\ndef test_add(a, b):\n    assert add(a, b) == a + b\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 46080394900,
+        "load_duration": 33555400600,
+        "prompt_eval_count": 33,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11248236000,
+        "eval_count": 67,
+        "eval_duration": 1270516000
+      },
+      "timestamp": "2026-10-09T04:02:32.354252+00:00",
+      "harness_commit": "720ec172eb4dd153fc8ceb1da6180b592280b689",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "gemma4:12b": {
+      "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+      "details": {
+        "parent_model": "imatrix-20260927-12b/model-q4_K_M.gguf",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "11.9B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 3840,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 55.359000000025844,
+      "load_seconds": 39.0296813,
+      "tokens_per_second": 77.85863406985187,
+      "peak_gpu_mib": 9237,
+      "memory_samples": 208,
+      "thinking_returned": false,
+      "resident": {
+        "name": "gemma4:12b",
+        "model": "gemma4:12b",
+        "size": 1090120580,
+        "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "11.9B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T15:02:42.6803519+06:00",
+        "size_vram": 1090120580,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "gemma4:12b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "gemma4:12b",
+        "created_at": "2026-10-09T08:57:42.6798262Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(1.5, 2.5) == 4.0\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 51267437700,
+        "load_duration": 39029681300,
+        "prompt_eval_count": 37,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11126798000,
+        "eval_count": 86,
+        "eval_duration": 1104566000
+      },
+      "timestamp": "2026-10-09T08:57:44.726301+00:00",
+      "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    }
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 2048
+  },
+  "think": false,
+  "dataset": {
+    "repository": "bigcode/humanevalpack",
+    "revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+    "license": "MIT",
+    "file": "python/test-00000-of-00001.parquet",
+    "file_sha256": "ed5f15d789156e21222bfcd556c425a39042355c84ae1e8b058abd6a3d7f8075"
+  },
+  "dataset_revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+  "quixbugs_commit": null,
+  "disguised_sha256": null,
+  "natural_sha256": null,
+  "c1": {
+    "file": "data/c1/tasks.json",
+    "sha256": "6188120f4a0df9fb29b969a1af1d41300606e119ede93188ce0f54c43cf479f3",
+    "bugsinpy_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+    "tasks": 30
+  },
+  "judge": {
+    "prompt": "judge_v2b",
+    "ablation_prompt": "judge_with_code_v2b",
+    "prompt_sha256": {
+      "judge_v2b": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+      "judge_with_code_v2b": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d"
+    },
+    "parser_sha256": "870c2a3969c295c85bae1f481b30d726ca1dd38602687af84c264daf6a45883d"
+  },
+  "excluded_tasks": [],
+  "prompt_hashes": {
+    "fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "generate_c1_v1.txt": "5f4644c34d4247c3a38d59ef70ef90c20cb1ef85704c01a3bc7796dfad015dfa",
+    "generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363"
+  },
+  "harness_commit": "c1aa76aad073aee30b1c6bac44a664ab07e6418e",
+  "harness_files_sha256": {
+    "src/gbe/benchmarks.py": "b58012cf8427449a5318097047b0d8343fe7dd9aeac6a945465a6b4d403508c3",
+    "src/gbe/c1.py": "9383e991d1855991b96edb1b0aedbb3695b9b46a595911c72a3f0aedb913623b",
+    "src/gbe/disguised.py": "8fdc3c56984e5e3d64df0484a267508c98f3d311598c97822dabbc6d97cb7928",
+    "src/gbe/evaluate.py": "09fd3c7d925300b84e0f873233fe7a084e6db235b929fc37bf6c63c78930d241",
+    "src/gbe/execute.py": "fc1e7ab88af08d76cb1ea1bb1534ad6ca5296b089538d97d10722557b7ff959f",
+    "src/gbe/generate.py": "4af5810c351b1956a57314fb41ed10b8bb41b404af74dccf3ecdc477949b2d2a",
+    "src/gbe/llm.py": "e445b64013e1cc677488f63e6e27485239a5e042e9a31d23e23a34bfccbe3a15",
+    "src/gbe/natural.py": "392d8cac22e23f1d3310e92808d6b1c3a412b6ec9f918ec82a5b95ae73929ff4",
+    "src/gbe/policies.py": "6034ba8f0e5090d1af7914acdbfee88dccd9c427591455129d53097b6e8c0a1c",
+    "src/gbe/pytest_probe.py": "269df951792d42243120dd1611cbaf5b7962a054d3f18960589bee34cb22b72a",
+    "src/gbe/quixbugs.py": "43ca946e7929a8e7d0427f5e448cb661aac1320add3f5313bc3e18cff84150b9",
+    "src/gbe/report.py": "044c4b0d489e30fc913f147ef83a98ace3606968d1364a7b7a269d216a8dbf40",
+    "src/gbe/runner.py": "6335f8028c2d392b2cb15a63937424da8965690dc1a04af75276801fa74956e9",
+    "src/gbe/util.py": "1c4c0f7ee7ebbc3c0272da2c6cc018ff5fe62665e5d0500b8806c0b9a130d85a",
+    "src/gbe/__init__.py": "96e4ce45e295f08fd440e06e9f7260204af2ec340ec173b9a0472af0e40927f2",
+    "prompts/fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "prompts/free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "prompts/generate_c1_v1.txt": "5f4644c34d4247c3a38d59ef70ef90c20cb1ef85704c01a3bc7796dfad015dfa",
+    "prompts/generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "prompts/judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "prompts/judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "prompts/judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "prompts/judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "prompts/overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363",
+    "pyproject.toml": "175c943243f769d40ce1f0a61ccc04387e60d9335d3d3088e11edf46fb92326c",
+    "requirements.txt": "71f20ad0cff3f7b0f386d72389aa079c17975a1e1179a579b16a838488074ecb"
+  },
+  "start_time": "2026-10-20T07:14:24.922450+00:00",
+  "end_time": "2026-10-20T14:38:34.148527+00:00",
+  "input_test_hashes": {
+    "BugsInPy-cookiecutter-1__buggy__qwen3-5-9b__s0__code": {
+      "P1": "7843412aa15bbbe847f16cc8b45d652ca63bbc51b65a9ac540a3bc49723f5b6b",
+      "P2": "7843412aa15bbbe847f16cc8b45d652ca63bbc51b65a9ac540a3bc49723f5b6b",
+      "P3": "7843412aa15bbbe847f16cc8b45d652ca63bbc51b65a9ac540a3bc49723f5b6b",
+      "P4": "7843412aa15bbbe847f16cc8b45d652ca63bbc51b65a9ac540a3bc49723f5b6b"
+    },
+    "BugsInPy-cookiecutter-1__fixed__qwen3-5-9b__s0__code": {
+      "P1": "29ca77e76d37198711fc7ee7ca5c009db0ff44550285a34cf25ba3321227cbfc",
+      "P2": "29ca77e76d37198711fc7ee7ca5c009db0ff44550285a34cf25ba3321227cbfc",
+      "P3": "29ca77e76d37198711fc7ee7ca5c009db0ff44550285a34cf25ba3321227cbfc",
+      "P4": "29ca77e76d37198711fc7ee7ca5c009db0ff44550285a34cf25ba3321227cbfc"
+    },
+    "BugsInPy-cookiecutter-3__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-cookiecutter-3__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-httpie-3__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-httpie-3__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-httpie-4__buggy__qwen3-5-9b__s0__code": {
+      "P1": "babd182cbcec637af1d0d177104d5b5ccbd5ea73525ee5db780fb5af7b5f51e6",
+      "P2": "babd182cbcec637af1d0d177104d5b5ccbd5ea73525ee5db780fb5af7b5f51e6",
+      "P3": "babd182cbcec637af1d0d177104d5b5ccbd5ea73525ee5db780fb5af7b5f51e6",
+      "P4": "babd182cbcec637af1d0d177104d5b5ccbd5ea73525ee5db780fb5af7b5f51e6"
+    },
+    "BugsInPy-httpie-4__fixed__qwen3-5-9b__s0__code": {
+      "P1": "1152147a193a55ca981d535c79a365a1a38adad1f99c10c1d038c1eb09644073",
+      "P2": "1152147a193a55ca981d535c79a365a1a38adad1f99c10c1d038c1eb09644073",
+      "P3": "1152147a193a55ca981d535c79a365a1a38adad1f99c10c1d038c1eb09644073",
+      "P4": "1152147a193a55ca981d535c79a365a1a38adad1f99c10c1d038c1eb09644073"
+    },
+    "BugsInPy-luigi-20__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-20__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-21__buggy__qwen3-5-9b__s0__code": {
+      "P1": "4cfff3778c81e4882218c124ff9d6d805f9a6a0053df1b8b017c2ffbeb65217a",
+      "P2": "4cfff3778c81e4882218c124ff9d6d805f9a6a0053df1b8b017c2ffbeb65217a",
+      "P3": "4cfff3778c81e4882218c124ff9d6d805f9a6a0053df1b8b017c2ffbeb65217a",
+      "P4": "4cfff3778c81e4882218c124ff9d6d805f9a6a0053df1b8b017c2ffbeb65217a"
+    },
+    "BugsInPy-luigi-21__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-25__buggy__qwen3-5-9b__s0__code": {
+      "P1": "c0a95b4d89459cad807738da8b78782988dc9fcd499d689375b728358dc5c17e",
+      "P2": "c0a95b4d89459cad807738da8b78782988dc9fcd499d689375b728358dc5c17e",
+      "P3": "c0a95b4d89459cad807738da8b78782988dc9fcd499d689375b728358dc5c17e",
+      "P4": "c0a95b4d89459cad807738da8b78782988dc9fcd499d689375b728358dc5c17e"
+    },
+    "BugsInPy-luigi-25__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-28__buggy__qwen3-5-9b__s0__code": {
+      "P1": "3647a63c73f53444f890f34321fb9365e02fea60d0ab7fe3ac05306b0b044096",
+      "P2": "3647a63c73f53444f890f34321fb9365e02fea60d0ab7fe3ac05306b0b044096",
+      "P3": "3647a63c73f53444f890f34321fb9365e02fea60d0ab7fe3ac05306b0b044096",
+      "P4": "3647a63c73f53444f890f34321fb9365e02fea60d0ab7fe3ac05306b0b044096"
+    },
+    "BugsInPy-luigi-28__fixed__qwen3-5-9b__s0__code": {
+      "P1": "e05ca1207e1efd9c3022d1d64807c57aa9c6386975dc216bda69166217abb272",
+      "P2": "e05ca1207e1efd9c3022d1d64807c57aa9c6386975dc216bda69166217abb272",
+      "P3": "e05ca1207e1efd9c3022d1d64807c57aa9c6386975dc216bda69166217abb272",
+      "P4": "e05ca1207e1efd9c3022d1d64807c57aa9c6386975dc216bda69166217abb272"
+    },
+    "BugsInPy-luigi-31__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-31__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-33__buggy__qwen3-5-9b__s0__code": {
+      "P1": "6083b8afc9ee71213d3c5392be6695524d6ca445b8df1833b218678a56b21603",
+      "P2": "6083b8afc9ee71213d3c5392be6695524d6ca445b8df1833b218678a56b21603",
+      "P3": "6083b8afc9ee71213d3c5392be6695524d6ca445b8df1833b218678a56b21603",
+      "P4": "6083b8afc9ee71213d3c5392be6695524d6ca445b8df1833b218678a56b21603"
+    },
+    "BugsInPy-luigi-33__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-4__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-luigi-4__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-pandas-119__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-pandas-119__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-pandas-127__buggy__qwen3-5-9b__s0__code": {
+      "P1": "e32a20012384f97c18c227a463703fc30967e070791931829e49200fdd654bcb",
+      "P2": "e32a20012384f97c18c227a463703fc30967e070791931829e49200fdd654bcb",
+      "P3": "e32a20012384f97c18c227a463703fc30967e070791931829e49200fdd654bcb",
+      "P4": "e32a20012384f97c18c227a463703fc30967e070791931829e49200fdd654bcb"
+    },
+    "BugsInPy-pandas-127__fixed__qwen3-5-9b__s0__code": {
+      "P1": "c0c91463dd0b2eec888c8ae4671525bed669f0d247133f4bb78a53813b0c287d",
+      "P2": "c0c91463dd0b2eec888c8ae4671525bed669f0d247133f4bb78a53813b0c287d",
+      "P3": "c0c91463dd0b2eec888c8ae4671525bed669f0d247133f4bb78a53813b0c287d",
+      "P4": "c0c91463dd0b2eec888c8ae4671525bed669f0d247133f4bb78a53813b0c287d"
+    },
+    "BugsInPy-pandas-161__buggy__qwen3-5-9b__s0__code": {
+      "P1": "ec2a844961bcb3cc2fd64abb0bf65762e1350cf70c2d9809b43b4adb608027e6",
+      "P2": "ec2a844961bcb3cc2fd64abb0bf65762e1350cf70c2d9809b43b4adb608027e6",
+      "P3": "ec2a844961bcb3cc2fd64abb0bf65762e1350cf70c2d9809b43b4adb608027e6",
+      "P4": "ec2a844961bcb3cc2fd64abb0bf65762e1350cf70c2d9809b43b4adb608027e6"
+    },
+    "BugsInPy-pandas-161__fixed__qwen3-5-9b__s0__code": {
+      "P1": "beeafba6cb9f23caec4d1a16c5f0aaaaf9fbc5c82f031c94031e9f0a208f793f",
+      "P2": "beeafba6cb9f23caec4d1a16c5f0aaaaf9fbc5c82f031c94031e9f0a208f793f",
+      "P3": "beeafba6cb9f23caec4d1a16c5f0aaaaf9fbc5c82f031c94031e9f0a208f793f",
+      "P4": "beeafba6cb9f23caec4d1a16c5f0aaaaf9fbc5c82f031c94031e9f0a208f793f"
+    },
+    "BugsInPy-pandas-162__buggy__qwen3-5-9b__s0__code": {
+      "P1": "c3b699513af09209dd6e6fecedb38b54af3a2e7b39c4182afdf51c6523327858",
+      "P2": "c3b699513af09209dd6e6fecedb38b54af3a2e7b39c4182afdf51c6523327858",
+      "P3": "c3b699513af09209dd6e6fecedb38b54af3a2e7b39c4182afdf51c6523327858",
+      "P4": "c3b699513af09209dd6e6fecedb38b54af3a2e7b39c4182afdf51c6523327858"
+    },
+    "BugsInPy-pandas-162__fixed__qwen3-5-9b__s0__code": {
+      "P1": "5fcae0122b9dde1d9534b2adb5762769332242cd4da0250744d3ac8f5e9d1e59",
+      "P2": "5fcae0122b9dde1d9534b2adb5762769332242cd4da0250744d3ac8f5e9d1e59",
+      "P3": "5fcae0122b9dde1d9534b2adb5762769332242cd4da0250744d3ac8f5e9d1e59",
+      "P4": "5fcae0122b9dde1d9534b2adb5762769332242cd4da0250744d3ac8f5e9d1e59"
+    },
+    "BugsInPy-pandas-168__buggy__qwen3-5-9b__s0__code": {
+      "P1": "d552e08cfeaccdab87c845544bbcea78be5b59aafad2d17abf670188f6f93f2f",
+      "P2": "d552e08cfeaccdab87c845544bbcea78be5b59aafad2d17abf670188f6f93f2f",
+      "P3": "d552e08cfeaccdab87c845544bbcea78be5b59aafad2d17abf670188f6f93f2f",
+      "P4": "d552e08cfeaccdab87c845544bbcea78be5b59aafad2d17abf670188f6f93f2f"
+    },
+    "BugsInPy-pandas-168__fixed__qwen3-5-9b__s0__code": {
+      "P1": "6909c12dff6c9ac93a74d1426a6944e3106b5c9b658a5dc1865c48fc8b4370dd",
+      "P2": "6909c12dff6c9ac93a74d1426a6944e3106b5c9b658a5dc1865c48fc8b4370dd",
+      "P3": "6909c12dff6c9ac93a74d1426a6944e3106b5c9b658a5dc1865c48fc8b4370dd",
+      "P4": "6909c12dff6c9ac93a74d1426a6944e3106b5c9b658a5dc1865c48fc8b4370dd"
+    },
+    "BugsInPy-pandas-23__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-pandas-23__fixed__qwen3-5-9b__s0__code": {
+      "P1": "dbbae0974443d40b1c0dfb5f28724ad2591e3dd7216cec7c7d47ea4d84cbe5f2",
+      "P2": "dbbae0974443d40b1c0dfb5f28724ad2591e3dd7216cec7c7d47ea4d84cbe5f2",
+      "P3": "dbbae0974443d40b1c0dfb5f28724ad2591e3dd7216cec7c7d47ea4d84cbe5f2",
+      "P4": "dbbae0974443d40b1c0dfb5f28724ad2591e3dd7216cec7c7d47ea4d84cbe5f2"
+    },
+    "BugsInPy-pandas-58__buggy__qwen3-5-9b__s0__code": {
+      "P1": "dac3aa2fe9d2c78a69d76044c57b49beb2e85eb87d11e511c8eb22fa5e2cec6a",
+      "P2": "dac3aa2fe9d2c78a69d76044c57b49beb2e85eb87d11e511c8eb22fa5e2cec6a",
+      "P3": "dac3aa2fe9d2c78a69d76044c57b49beb2e85eb87d11e511c8eb22fa5e2cec6a",
+      "P4": "dac3aa2fe9d2c78a69d76044c57b49beb2e85eb87d11e511c8eb22fa5e2cec6a"
+    },
+    "BugsInPy-pandas-58__fixed__qwen3-5-9b__s0__code": {
+      "P1": "5ad88bdc7f2faf16c5d7c8479380f4a36a7562eee554a3f91c94138f2d4b0e3d",
+      "P2": "5ad88bdc7f2faf16c5d7c8479380f4a36a7562eee554a3f91c94138f2d4b0e3d",
+      "P3": "5ad88bdc7f2faf16c5d7c8479380f4a36a7562eee554a3f91c94138f2d4b0e3d",
+      "P4": "5ad88bdc7f2faf16c5d7c8479380f4a36a7562eee554a3f91c94138f2d4b0e3d"
+    },
+    "BugsInPy-pandas-69__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-pandas-69__fixed__qwen3-5-9b__s0__code": {
+      "P1": "0fb5407b8998208926ea3af43356766b0975b55e13f48d97a85729625fbe1a23",
+      "P2": "0fb5407b8998208926ea3af43356766b0975b55e13f48d97a85729625fbe1a23",
+      "P3": "0fb5407b8998208926ea3af43356766b0975b55e13f48d97a85729625fbe1a23",
+      "P4": "0fb5407b8998208926ea3af43356766b0975b55e13f48d97a85729625fbe1a23"
+    },
+    "BugsInPy-sanic-1__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-sanic-1__fixed__qwen3-5-9b__s0__code": {
+      "P1": "54e77dea7d5cf38f2654a857d92942d630567f49cc5f03bb4b1432e1335a9fc6",
+      "P2": "54e77dea7d5cf38f2654a857d92942d630567f49cc5f03bb4b1432e1335a9fc6",
+      "P3": "54e77dea7d5cf38f2654a857d92942d630567f49cc5f03bb4b1432e1335a9fc6",
+      "P4": "54e77dea7d5cf38f2654a857d92942d630567f49cc5f03bb4b1432e1335a9fc6"
+    },
+    "BugsInPy-sanic-3__buggy__qwen3-5-9b__s0__code": {
+      "P1": "85367ad2f1b7c34d519b747a3d6318afab7c7a17a4f9d0b6fadb4866ae1f4b3f",
+      "P2": "85367ad2f1b7c34d519b747a3d6318afab7c7a17a4f9d0b6fadb4866ae1f4b3f",
+      "P3": "85367ad2f1b7c34d519b747a3d6318afab7c7a17a4f9d0b6fadb4866ae1f4b3f",
+      "P4": "85367ad2f1b7c34d519b747a3d6318afab7c7a17a4f9d0b6fadb4866ae1f4b3f"
+    },
+    "BugsInPy-sanic-3__fixed__qwen3-5-9b__s0__code": {
+      "P1": "c8f4f34914e16238ba5fad3464e61ec09ffe2a84a45efb0efae06aefc09ffcd5",
+      "P2": "c8f4f34914e16238ba5fad3464e61ec09ffe2a84a45efb0efae06aefc09ffcd5",
+      "P3": "c8f4f34914e16238ba5fad3464e61ec09ffe2a84a45efb0efae06aefc09ffcd5",
+      "P4": "c8f4f34914e16238ba5fad3464e61ec09ffe2a84a45efb0efae06aefc09ffcd5"
+    },
+    "BugsInPy-spacy-2__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-spacy-2__fixed__qwen3-5-9b__s0__code": {
+      "P1": "4cbfb2c43868359bdbb34f0fdbd5ae97a28e9003f5355d40664ed5691565ed20",
+      "P2": "4cbfb2c43868359bdbb34f0fdbd5ae97a28e9003f5355d40664ed5691565ed20",
+      "P3": "4cbfb2c43868359bdbb34f0fdbd5ae97a28e9003f5355d40664ed5691565ed20",
+      "P4": "4cbfb2c43868359bdbb34f0fdbd5ae97a28e9003f5355d40664ed5691565ed20"
+    },
+    "BugsInPy-tornado-11__buggy__qwen3-5-9b__s0__code": {
+      "P1": "ef921f359365857cc30f579a70408baf15af2d7e572324be2543f5ddacd8574f",
+      "P2": "ef921f359365857cc30f579a70408baf15af2d7e572324be2543f5ddacd8574f",
+      "P3": "ef921f359365857cc30f579a70408baf15af2d7e572324be2543f5ddacd8574f",
+      "P4": "ef921f359365857cc30f579a70408baf15af2d7e572324be2543f5ddacd8574f"
+    },
+    "BugsInPy-tornado-11__fixed__qwen3-5-9b__s0__code": {
+      "P1": "963b671af7bf694f8abfb39b4e939f2fb69e94b1469579fc163c85b1383bd49e",
+      "P2": "963b671af7bf694f8abfb39b4e939f2fb69e94b1469579fc163c85b1383bd49e",
+      "P3": "963b671af7bf694f8abfb39b4e939f2fb69e94b1469579fc163c85b1383bd49e",
+      "P4": "963b671af7bf694f8abfb39b4e939f2fb69e94b1469579fc163c85b1383bd49e"
+    },
+    "BugsInPy-tornado-13__buggy__qwen3-5-9b__s0__code": {
+      "P1": "cbf2389d4ffde2fbafb689dda17118eb8d6d901a8b2da9b516e8fbb71fbcff51",
+      "P2": "cbf2389d4ffde2fbafb689dda17118eb8d6d901a8b2da9b516e8fbb71fbcff51",
+      "P3": "cbf2389d4ffde2fbafb689dda17118eb8d6d901a8b2da9b516e8fbb71fbcff51",
+      "P4": "cbf2389d4ffde2fbafb689dda17118eb8d6d901a8b2da9b516e8fbb71fbcff51"
+    },
+    "BugsInPy-tornado-13__fixed__qwen3-5-9b__s0__code": {
+      "P1": "c8e1201cfe2637d84f6be98e7962718c6b4f99e97c608218b000da7b520f1776",
+      "P2": "c8e1201cfe2637d84f6be98e7962718c6b4f99e97c608218b000da7b520f1776",
+      "P3": "c8e1201cfe2637d84f6be98e7962718c6b4f99e97c608218b000da7b520f1776",
+      "P4": "c8e1201cfe2637d84f6be98e7962718c6b4f99e97c608218b000da7b520f1776"
+    },
+    "BugsInPy-tornado-14__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-14__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-2__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-2__fixed__qwen3-5-9b__s0__code": {
+      "P1": "747db455e6d0a199a634a861bb303a2989a5a629fe2a6adaddd3d8edee6f0d29",
+      "P2": "747db455e6d0a199a634a861bb303a2989a5a629fe2a6adaddd3d8edee6f0d29",
+      "P3": "747db455e6d0a199a634a861bb303a2989a5a629fe2a6adaddd3d8edee6f0d29",
+      "P4": "747db455e6d0a199a634a861bb303a2989a5a629fe2a6adaddd3d8edee6f0d29"
+    },
+    "BugsInPy-tornado-3__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-3__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-4__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-4__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-5__buggy__qwen3-5-9b__s0__code": {
+      "P1": "03dde96e9f4decf9478924dac27bc94c2611d4008ae813c4b018eea611042c49",
+      "P2": "03dde96e9f4decf9478924dac27bc94c2611d4008ae813c4b018eea611042c49",
+      "P3": "03dde96e9f4decf9478924dac27bc94c2611d4008ae813c4b018eea611042c49",
+      "P4": "03dde96e9f4decf9478924dac27bc94c2611d4008ae813c4b018eea611042c49"
+    },
+    "BugsInPy-tornado-5__fixed__qwen3-5-9b__s0__code": {
+      "P1": "9da7355ba601c5c5badff946188384357d14b17e1cc916ce7d641f02c6e6ab1c",
+      "P2": "9da7355ba601c5c5badff946188384357d14b17e1cc916ce7d641f02c6e6ab1c",
+      "P3": "9da7355ba601c5c5badff946188384357d14b17e1cc916ce7d641f02c6e6ab1c",
+      "P4": "9da7355ba601c5c5badff946188384357d14b17e1cc916ce7d641f02c6e6ab1c"
+    },
+    "BugsInPy-tornado-8__buggy__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    },
+    "BugsInPy-tornado-8__fixed__qwen3-5-9b__s0__code": {
+      "P1": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P2": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P3": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9",
+      "P4": "636946a298c48f7412d557693132ebc66f4234775f5292b9d61c415dc1dd65c9"
+    }
+  },
+  "unit_seconds": {
+    "BugsInPy-cookiecutter-1__buggy__qwen3-5-9b__s0__code": 210.875,
+    "BugsInPy-cookiecutter-1__fixed__qwen3-5-9b__s0__code": 240.04699999999866,
+    "BugsInPy-cookiecutter-3__buggy__qwen3-5-9b__s0__code": 27.25,
+    "BugsInPy-cookiecutter-3__fixed__qwen3-5-9b__s0__code": 28.437999999994645,
+    "BugsInPy-httpie-3__buggy__qwen3-5-9b__s0__code": 31.39100000000326,
+    "BugsInPy-httpie-3__fixed__qwen3-5-9b__s0__code": 30.76600000000326,
+    "BugsInPy-httpie-4__buggy__qwen3-5-9b__s0__code": 364.26600000000326,
+    "BugsInPy-httpie-4__fixed__qwen3-5-9b__s0__code": 382.09300000000803,
+    "BugsInPy-luigi-20__buggy__qwen3-5-9b__s0__code": 32.71899999999732,
+    "BugsInPy-luigi-20__fixed__qwen3-5-9b__s0__code": 69.29699999999139,
+    "BugsInPy-luigi-21__buggy__qwen3-5-9b__s0__code": 394.23399999999674,
+    "BugsInPy-luigi-21__fixed__qwen3-5-9b__s0__code": 48.03200000000652,
+    "BugsInPy-luigi-25__buggy__qwen3-5-9b__s0__code": 1355.0630000000092,
+    "BugsInPy-luigi-25__fixed__qwen3-5-9b__s0__code": 65.51600000000326,
+    "BugsInPy-luigi-28__buggy__qwen3-5-9b__s0__code": 676.8279999999941,
+    "BugsInPy-luigi-28__fixed__qwen3-5-9b__s0__code": 634.125,
+    "BugsInPy-luigi-31__buggy__qwen3-5-9b__s0__code": 63.09299999999348,
+    "BugsInPy-luigi-31__fixed__qwen3-5-9b__s0__code": 73.39100000000326,
+    "BugsInPy-luigi-33__buggy__qwen3-5-9b__s0__code": 801.4839999999967,
+    "BugsInPy-luigi-33__fixed__qwen3-5-9b__s0__code": 47.21899999999732,
+    "BugsInPy-luigi-4__buggy__qwen3-5-9b__s0__code": 66.70300000000861,
+    "BugsInPy-luigi-4__fixed__qwen3-5-9b__s0__code": 54.844000000011874,
+    "BugsInPy-pandas-119__buggy__qwen3-5-9b__s0__code": 82.98500000000058,
+    "BugsInPy-pandas-119__fixed__qwen3-5-9b__s0__code": 82.92199999999139,
+    "BugsInPy-pandas-127__buggy__qwen3-5-9b__s0__code": 714.0789999999979,
+    "BugsInPy-pandas-127__fixed__qwen3-5-9b__s0__code": 1486.7030000000086,
+    "BugsInPy-pandas-161__buggy__qwen3-5-9b__s0__code": 643.2030000000086,
+    "BugsInPy-pandas-161__fixed__qwen3-5-9b__s0__code": 389.0939999999973,
+    "BugsInPy-pandas-162__buggy__qwen3-5-9b__s0__code": 942.781999999992,
+    "BugsInPy-pandas-162__fixed__qwen3-5-9b__s0__code": 1295.656999999992,
+    "BugsInPy-pandas-168__buggy__qwen3-5-9b__s0__code": 949.1719999999914,
+    "BugsInPy-pandas-168__fixed__qwen3-5-9b__s0__code": 566.1410000000033,
+    "BugsInPy-pandas-23__buggy__qwen3-5-9b__s0__code": 70.4380000000092,
+    "BugsInPy-pandas-23__fixed__qwen3-5-9b__s0__code": 328.0940000000119,
+    "BugsInPy-pandas-58__buggy__qwen3-5-9b__s0__code": 342.2960000000021,
+    "BugsInPy-pandas-58__fixed__qwen3-5-9b__s0__code": 269.4689999999973,
+    "BugsInPy-pandas-69__buggy__qwen3-5-9b__s0__code": 48.39100000000326,
+    "BugsInPy-pandas-69__fixed__qwen3-5-9b__s0__code": 581.125,
+    "BugsInPy-sanic-1__buggy__qwen3-5-9b__s0__code": 39.062999999994645,
+    "BugsInPy-sanic-1__fixed__qwen3-5-9b__s0__code": 247.875,
+    "BugsInPy-sanic-3__buggy__qwen3-5-9b__s0__code": 1115.8589999999967,
+    "BugsInPy-sanic-3__fixed__qwen3-5-9b__s0__code": 382.5,
+    "BugsInPy-spacy-2__buggy__qwen3-5-9b__s0__code": 84.40600000000268,
+    "BugsInPy-spacy-2__fixed__qwen3-5-9b__s0__code": 426.95299999999406,
+    "BugsInPy-tornado-11__buggy__qwen3-5-9b__s0__code": 1707.327999999994,
+    "BugsInPy-tornado-11__fixed__qwen3-5-9b__s0__code": 369.73399999999674,
+    "BugsInPy-tornado-13__buggy__qwen3-5-9b__s0__code": 901.8899999999994,
+    "BugsInPy-tornado-13__fixed__qwen3-5-9b__s0__code": 898.6560000000027,
+    "BugsInPy-tornado-14__buggy__qwen3-5-9b__s0__code": 39.09399999999732,
+    "BugsInPy-tornado-14__fixed__qwen3-5-9b__s0__code": 38.344000000011874,
+    "BugsInPy-tornado-2__buggy__qwen3-5-9b__s0__code": 94.28100000000268,
+    "BugsInPy-tornado-2__fixed__qwen3-5-9b__s0__code": 1031.8910000000033,
+    "BugsInPy-tornado-3__buggy__qwen3-5-9b__s0__code": 90.89100000000326,
+    "BugsInPy-tornado-3__fixed__qwen3-5-9b__s0__code": 39.28100000000268,
+    "BugsInPy-tornado-4__buggy__qwen3-5-9b__s0__code": 91.625,
+    "BugsInPy-tornado-4__fixed__qwen3-5-9b__s0__code": 90.84399999999732,
+    "BugsInPy-tornado-5__buggy__qwen3-5-9b__s0__code": 296.6100000000006,
+    "BugsInPy-tornado-5__fixed__qwen3-5-9b__s0__code": 769.8439999999973,
+    "BugsInPy-tornado-8__buggy__qwen3-5-9b__s0__code": 59.53100000000268,
+    "BugsInPy-tornado-8__fixed__qwen3-5-9b__s0__code": 71.70299999999406
+  }
+}

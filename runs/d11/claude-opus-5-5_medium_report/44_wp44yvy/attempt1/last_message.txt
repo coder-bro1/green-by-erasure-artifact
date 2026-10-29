@@ -1,0 +1,17 @@
+I wrote 19 pytest tests for `reverse_delete` in solution.py, and all of them pass when run with `python -m pytest -q test_solution.py`. I didn't change solution.py.
+
+**No xfail needed:** the function does what its docstring says, including all three examples, so no test is marked xfail.
+
+Besides the three docstring examples, the tests cover:
+- empty `s`, empty `c`, or both
+- deleting every occurrence of a character, and repeated characters in `c`
+- a result that ends up empty, which counts as a palindrome
+- a single-character result, and odd- and even-length palindromes
+- case sensitivity
+- the return type, a `(str, bool)` tuple
+- the inputs are left unchanged
+
+Files are in <work>\work:
+- test_solution.py
+
+result: 19 pytest tests for solution.py's `reverse_delete` all pass and no xfail was needed, since the code matches its docstring.

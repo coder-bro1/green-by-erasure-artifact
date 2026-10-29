@@ -1,0 +1,9 @@
+Added 24 pytest tests in [test_solution.py](/<work>/wjzmyeh/test_solution.py), covering examples, boundaries, composites, prime squares, and integers 0–500.
+
+Fixed `is_prime` in [solution.py](/<work>/wjzmyeh/solution.py).
+
+Validation: **25 passed**, including the existing doctest:
+
+```sh
+python -m pytest -q -p no:cacheprovider --doctest-modules test_solution.py solution.py
+```

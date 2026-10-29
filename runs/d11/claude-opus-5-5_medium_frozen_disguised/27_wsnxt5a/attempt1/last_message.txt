@@ -1,0 +1,16 @@
+I wrote `<work>\work\test_solution.py`. The suite passes, but `solution.py` has a bug, so 11 of the tests are marked as expected failures (xfail) rather than passing. Last run: 37 passed, 11 xfailed. I did not change `solution.py`.
+
+**The bug:** the digit check uses `odd = (1, 2, 3, 5, 7, 9)`, so 2 counts as an odd digit. Numbers like 25, 12 and 21 get counted when they shouldn't be. The function's own docstring example fails because of it: `count_odd_edged([31, 25, 12, 9])` returns 3 instead of 1. Running `pytest --doctest-modules solution.py` shows this failure.
+
+**Passing tests (37)**, written against what the docstring says the function should do:
+- An empty list returns 0.
+- The docstring example `[57, -73]` returns 1.
+- Numbers with an odd first and last digit are counted (11, 135, 97531, ...).
+- Numbers with an even first or last digit are not counted.
+- Numbers of 10 or less, including negatives, are not counted.
+- A mixed list gives the right count, and duplicates are each counted.
+- Any iterable works as input, and the input list is not changed.
+
+**Expected failures (11):** the docstring example with 25, numbers starting with 2 (21–29, 211) and numbers ending in 2 (12, 32, 52, 112). They're marked `xfail(strict=True)` with the bug as the reason. Once `odd` is changed to `(1, 3, 5, 7, 9)`, they will flip to passing. pytest will then report them as unexpected passes and fail the run until the `@KNOWN_BUG` markers are removed. That way the bug isn't hidden, and you'll know when the markers can go.
+
+result: Wrote `<work>\work\test_solution.py` (37 passed, 11 xfailed); the 11 xfails expose a bug in `solution.py`, which treats 2 as an odd digit.

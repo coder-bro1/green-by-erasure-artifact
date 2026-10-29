@@ -1,0 +1,20 @@
+I wrote 10 tests in `<work>\work\test_solution.py`. The run gives 5 passed and 5 xfailed. Five tests fail because `sort_numbers` does no sorting, even though its docstring says it should. I didn't change `solution.py`.
+
+**The bug:** the function builds `value_map` (word to number) but never uses it. It only returns the input words in their original order:
+```python
+return ' '.join([x for x in numbers.split(' ') if x])
+```
+So even the docstring's own example fails: `sort_numbers('three one five')` returns `'three one five'`, not `'one three five'`. A likely fix would be `' '.join(sorted([x for x in numbers.split(' ') if x], key=lambda x: value_map[x]))`, but I didn't apply it.
+
+**Expected failures:** these 5 tests keep the values the docstring calls for and are marked `@pytest.mark.xfail(strict=True)`. They all fail for the reason above:
+- the docstring example (`'three one five'` should give `'one three five'`)
+- all ten words in reverse order
+- an unsorted input with duplicates
+- a case where number order differs from alphabetical order (`'four eight five'` should give `'four five eight'`)
+- two words swapped
+
+Because they are strict, they will start failing the suite once the bug is fixed, as a reminder to remove the marks.
+
+**Passing tests:** empty string, a single word, input that is already sorted (with and without duplicates), and extra spaces being dropped.
+
+result: Added 10 pytest tests in <work>\work\test_solution.py (5 pass, 5 strict xfail). The 5 xfails are because sort_numbers never sorts — it ignores value_map and returns words in input order.

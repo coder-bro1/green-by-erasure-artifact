@@ -1,0 +1,25 @@
+diff --git a/solution.py b/solution.py
+index 0983b9b..35ee0ec 100644
+--- a/solution.py
++++ b/solution.py
+@@ -15,12 +15,14 @@ def is_sorted(lst):
+     is_sorted([1, 2, 2, 3, 3, 4]) âžž True
+     is_sorted([1, 2, 2, 2, 3, 4]) âžž False
+     '''
+-    count_digit = dict([(i, 0) for i in lst])
+-    for i in lst:
+-        count_digit[i]+=1
+-    if all(lst[i-1] <= lst[i] for i in range(1, len(lst))):
+-        return True
+-    else:
++    if not all(lst[i - 1] <= lst[i] for i in range(1, len(lst))):
+         return False
++
++    counts = {}
++    for value in lst:
++        counts[value] = counts.get(value, 0) + 1
++        if counts[value] > 2:
++            return False
++    return True
+     
+     

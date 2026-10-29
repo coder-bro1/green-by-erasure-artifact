@@ -1,0 +1,27 @@
+I wrote the tests in `<work>\work\test_solution.py`, but `flatten` in solution.py has a bug, so 7 of the 21 tests are expected failures rather than real passes. Running `python -m pytest -q -rxX test_solution.py` gives 14 passed, 7 xfailed, 0 failed. I did not change solution.py.
+
+**The bug:** for anything that isn't a list, the last line of `flatten` does
+```python
+yield flatten(x)   # should be: yield x
+```
+So each value comes out as an unused generator object instead of the value itself. Even the docstring example `list(flatten([[1, [], [2, 3]], [[4]], 5]))` returns five generator objects, not `[1, 2, 3, 4, 5]`.
+
+Because I couldn't edit solution.py, there were two ways to get a passing suite: write tests that accept the buggy output, or mark the correct-output tests as expected failures. I did the second, with `xfail(strict=True)`. "Strict" means that once the line is fixed, those 7 tests will report as failures, which is the signal to remove the markers.
+
+**The 14 passing tests:**
+- `flatten` returns a lazy generator.
+- Empty input and lists that contain only empty lists produce nothing.
+- It yields one item per value, however deeply nested.
+- The input list isn't changed.
+- The same sub-list appearing twice is handled fine.
+
+**The 7 expected failures check the documented behaviour:**
+- the docstring example
+- a flat list comes back unchanged
+- deep nesting
+- order is kept
+- tuples, strings, dicts and sets are returned as single items
+- mixed types
+- no generator objects appear in the output
+
+result: Wrote `<work>\work\test_solution.py` (14 passed, 7 xfailed); the 7 expected failures are caused by a bug in solution.py, which yields `flatten(x)` instead of `x` for non-list items.

@@ -1,0 +1,16 @@
+I wrote the tests in <work>\work\test_solution.py, but I couldn't get them all to pass without changing solution.py: 19 fail and 9 pass, because the function has an off-by-one bug.
+
+The bug: the docstring says it covers 1 to limit inclusive, but the loop is `for k in range(1, limit):`, which stops at limit - 1. Whenever limit is itself a palindrome, it gets left out of the count. The function's own doctests fail too:
+- palindrome_parity_counts(5): the docstring expects (2, 3), the function returns (2, 2)
+- palindrome_parity_counts(22): the docstring expects (5, 6), the function returns (4, 6)
+- palindrome_parity_counts(1): should be (0, 1), the function returns (0, 0)
+
+What I checked: I ran pytest on the test file and ran the doctests in solution.py (that doctest run fails as well). The tests compare the function against a separate, simple implementation of the inclusive rule, which gives the docstring's expected results. They cover both doctest examples, the edges at 1 and 1000, the step from one-digit to two-digit numbers, parity checks, and the return type. They also check every limit from 1 to 1000 and that the counts never decrease. The 9 that pass are the ones where limit isn't a palindrome, plus the type and never-decrease checks.
+
+I could have made everything pass by writing tests that expect the current output, but then the tests would lock in the bug and contradict the docstring, so I didn't.
+
+Decision needed:
+- Fix the code: if a change to solution.py is allowed, changing range(1, limit) to range(1, limit + 1) should make all 28 tests and both doctests pass.
+- Keep the code as is: the failing tests can be marked as known failures, so the suite passes while still recording the bug.
+
+result: I wrote <work>\work\test_solution.py; 19 of 28 tests fail because solution.py stops one number short (range(1, limit) instead of range(1, limit + 1)), and its own doctests fail too, so the suite can't pass unless solution.py is changed.

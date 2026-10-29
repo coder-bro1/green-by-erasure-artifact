@@ -1,0 +1,45 @@
+\definecolor{oiblue}{HTML}{0072B2}
+\definecolor{oivermillion}{HTML}{D55E00}
+\definecolor{oigreen}{HTML}{009E73}
+\definecolor{oiorange}{HTML}{E69F00}
+\definecolor{oisky}{HTML}{56B4E9}
+\definecolor{oipurple}{HTML}{CC79A7}
+\definecolor{oigrey}{HTML}{999999}
+
+\begin{tikzpicture}
+\begin{axis}[width=6.8cm, height=6.2cm, xmin=-4, xmax=104, ymin=-4, ymax=104,
+  xlabel={failing tests of correct programs reported (\%)}, ylabel={bug-revealing tests reported (\%)},
+  label style={font=\footnotesize}, tick label style={font=\footnotesize}, grid=major, grid style={gray!20},
+  legend style={font=\scriptsize, at={(0.5,-0.2)}, anchor=north, draw=none, legend columns=2,  /tikz/every even column/.append style={column sep=6pt}}, legend cell align=left]
+\addplot[only marks, mark=o, mark size=2.6pt, black] coordinates {(0,0)};
+\addlegendentry{discard or overwrite}
+\addplot[only marks, mark=x, mark size=3pt, black, thick] coordinates {(100,100)};
+\addlegendentry{report every failing test}
+\addlegendimage{only marks, mark=*, black}
+\addlegendentry{judge (triage)}
+\addlegendimage{only marks, mark=square*, black}
+\addlegendentry{judge also sees the code}
+\addlegendimage{only marks, mark=triangle*, black}
+\addlegendentry{judge, docstring without examples}
+\addlegendimage{only marks, mark=diamond*, black}
+\addlegendentry{judge, signature only}
+\addlegendimage{line width=2pt, oiblue}
+\addlegendentry{Qwen2.5-Coder 7B}
+\addlegendimage{line width=2pt, oivermillion}
+\addlegendentry{Qwen3.5 9B}
+\addlegendimage{line width=2pt, oigreen}
+\addlegendentry{Gemma 4 12B}
+\addplot[only marks, mark=*, mark size=2.2pt, oiblue, fill opacity=0.85] coordinates {(42.2,77.0)};
+\addplot[only marks, mark=square*, mark size=2.2pt, oiblue, fill opacity=0.85] coordinates {(57.2,59.3)};
+\addplot[only marks, mark=triangle*, mark size=2.2pt, oiblue, fill opacity=0.85] coordinates {(51.0,81.0)};
+\addplot[only marks, mark=diamond*, mark size=2.2pt, oiblue, fill opacity=0.85] coordinates {(45.0,61.0)};
+\addplot[only marks, mark=*, mark size=2.2pt, oivermillion, fill opacity=0.85] coordinates {(42.6,93.7)};
+\addplot[only marks, mark=square*, mark size=2.2pt, oivermillion, fill opacity=0.85] coordinates {(37.0,83.2)};
+\addplot[only marks, mark=triangle*, mark size=2.2pt, oivermillion, fill opacity=0.85] coordinates {(41.0,86.0)};
+\addplot[only marks, mark=diamond*, mark size=2.2pt, oivermillion, fill opacity=0.85] coordinates {(87.0,95.0)};
+\addplot[only marks, mark=*, mark size=2.2pt, oigreen, fill opacity=0.85] coordinates {(41.7,95.0)};
+\addplot[only marks, mark=square*, mark size=2.2pt, oigreen, fill opacity=0.85] coordinates {(43.1,90.7)};
+\addplot[only marks, mark=triangle*, mark size=2.2pt, oigreen, fill opacity=0.85] coordinates {(42.0,94.0)};
+\addplot[only marks, mark=diamond*, mark size=2.2pt, oigreen, fill opacity=0.85] coordinates {(94.0,98.0)};
+\end{axis}
+\end{tikzpicture}

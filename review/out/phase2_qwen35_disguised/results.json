@@ -1,0 +1,238 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 80,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 1125,
+  "violations": [
+   {
+    "call_id": "1225fd6e0b68271a54acde711e225ce182a9604d737a2f76699412ed80b441fb",
+    "purpose": "free_repair",
+    "lines": [
+     "return sum([values[k] for k in range(1, len(values), 2) if values[k] % 2 == 0])"
+    ]
+   },
+   {
+    "call_id": "b7250ff3cb7295001367bb9e12e09a5c0869ee6d96c36ce4aec5289c5a28676e",
+    "purpose": "free_repair",
+    "lines": [
+     "return sum([values[k] for k in range(1, len(values), 2) if values[k] % 2 == 0])"
+    ]
+   },
+   {
+    "call_id": "d803e0eaa77e169483ac00f268195385c21b08a462fd42ba73f4b277084d4937",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "55a8f67c0542152cc3f2b94e40e746019da8f141b075c8d9f70eca18a8131c3e",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "17c17183280e164ca45c7d229289d97eadfdd0a1b6509e7b7e32e01840d8b5f8",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "5adb56e92e17b8a50e808c8bcb5959e006cd280a34eda55107b3412640f03c7d",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "0763e4fcc5e6683829b3887eef15df4841ffededcd0bd70ba7776c7f915d9113",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "f3089020e0eb731c2cd7cf7dbe38ef88d0aa93ac073f68b49e699d7fbcb741c3",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "36c947e0a463aed6a88509cfd8adc365249f5162afe09b793549d5a7a8855c2f",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "9ebd2a3b79923140c5fc257b397199251bde60e8c7f1bdf61bada15f813c88cd",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "0b3d51ac02d1377bd3af84ecf274eca720a2b75610a84227ca92178c7ae49247",
+    "purpose": "free_repair",
+    "lines": [
+     "order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')"
+    ]
+   },
+   {
+    "call_id": "04cfb6fed8ab67141aa22eb4f432f4c54446b4e27ab3ab0e7f8c7976b4eae714",
+    "purpose": "free_repair",
+    "lines": [
+     "order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')"
+    ]
+   },
+   {
+    "call_id": "1186beee2bd33a09a454f38bf1579c0d1db6f5338a9f373fa9f05115b574f809",
+    "purpose": "free_repair",
+    "lines": [
+     "order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')"
+    ]
+   },
+   {
+    "call_id": "8ca9368e471ce2d39d4d61d6d5f7ec691b2aa7f003e8438056c083e3b0a0937c",
+    "purpose": "free_repair",
+    "lines": [
+     "order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')"
+    ]
+   }
+  ],
+  "n_violations": 14
+ },
+ "P1-m_judge_sees_body": {
+  "n": 16,
+  "examples": [
+   {
+    "call_id": "522cbc1a7706b08750880f6417fad2d8a5ec84852b575f1f046b41ed690f6142",
+    "line": "return (acc_sum, acc_prod)"
+   },
+   {
+    "call_id": "2d48d653b7fafc3b84efab8e55d30b0ba383699953354bb1c5a568787d9cbb8a",
+    "line": "return (acc_sum, acc_prod)"
+   },
+   {
+    "call_id": "967f3343584ad2fa1c642e52cb63ab1e84f4375a8d4201e20fa54d9934d7f8b7",
+    "line": "return (acc_sum, acc_prod)"
+   },
+   {
+    "call_id": "9ddf1d5616792c2f82193f33fffa8cbb61d866a2ee270daa465e5ba3a92120f8",
+    "line": "return (acc_sum, acc_prod)"
+   },
+   {
+    "call_id": "c05db9787a2879bcdc6dddd8832d9845ed8e408031238e2c48230309a28df59e",
+    "line": "return (acc_sum, acc_prod)"
+   }
+  ]
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 163,
+   "TEST_WRONG": 65,
+   "UNSURE": 7
+  },
+  "recovered_judge": {
+   "BUG": 163,
+   "TEST_WRONG": 65,
+   "UNSURE": 7
+  },
+  "recovered_with_code": {
+   "BUG": 142,
+   "TEST_WRONG": 83,
+   "UNSURE": 10
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 32,
+   "buggy|BUG|REVEALS": 116,
+   "buggy|TEST_WRONG|BROKEN": 36,
+   "buggy|TEST_WRONG|REVEALS": 8,
+   "buggy|UNSURE|BROKEN": 4,
+   "buggy|UNSURE|REVEALS": 1,
+   "fixed|BUG|BROKEN": 12,
+   "fixed|BUG|ENCODES": 3,
+   "fixed|TEST_WRONG|BROKEN": 16,
+   "fixed|TEST_WRONG|ENCODES": 5,
+   "fixed|UNSURE|BROKEN": 2
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 350,
+    "QUARANTINED": 153,
+    "QUARANTINED_BROKEN": 36,
+    "KEPT": 197,
+    "QUARANTINED_REVEALS": 117
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 391,
+    "QUARANTINED": 153,
+    "QUARANTINED_BROKEN": 36,
+    "KEPT": 238,
+    "QUARANTINED_REVEALS": 117
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 394,
+    "QUARANTINED": 197,
+    "QUARANTINED_BROKEN": 72,
+    "KEPT": 197,
+    "QUARANTINED_REVEALS": 125
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 345,
+    "QUARANTINED": 148,
+    "QUARANTINED_BROKEN": 32,
+    "KEPT": 197,
+    "QUARANTINED_REVEALS": 116
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 378,
+    "KEPT": 361,
+    "QUARANTINED": 17,
+    "QUARANTINED_BROKEN": 14,
+    "QUARANTINED_ENCODES": 3
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 397,
+    "KEPT": 380,
+    "QUARANTINED": 17,
+    "QUARANTINED_BROKEN": 14,
+    "QUARANTINED_ENCODES": 3
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 399,
+    "KEPT": 361,
+    "QUARANTINED": 38,
+    "QUARANTINED_BROKEN": 30,
+    "QUARANTINED_ENCODES": 8
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 376,
+    "KEPT": 361,
+    "QUARANTINED": 15,
+    "QUARANTINED_BROKEN": 12,
+    "QUARANTINED_ENCODES": 3
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 180,
+  "written": 10
+ }
+}

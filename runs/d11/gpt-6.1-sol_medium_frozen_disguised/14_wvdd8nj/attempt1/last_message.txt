@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wvdd8nj/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **11 passed, 11 expected failures**.
+
+The expected failures expose the existing bug: the function returns `None` instead of a factor. They use strict `xfail` markers to keep that defect visible.

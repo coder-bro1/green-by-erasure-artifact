@@ -1,0 +1,54 @@
+{
+ "project": "spacy",
+ "bug": 4,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 01:36:39",
+ "install_buggy": {
+  "created": true,
+  "requirements": 19,
+  "failed_requirements": [],
+  "setup": [
+   "pip3 install -r requirements.txt",
+   "python setup.py build_ext --inplace"
+  ],
+  "failed_setup": [
+   "python setup.py build_ext --inplace"
+  ],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 19,
+  "failed_requirements": [],
+  "setup": [
+   "pip3 install -r requirements.txt",
+   "python setup.py build_ext --inplace"
+  ],
+  "failed_setup": [
+   "python setup.py build_ext --inplace"
+  ],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "py.test spacy/tests/regression/test_issue4665.py::test_issue4665"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "norun",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue4665.py::test_issue4665",
+     "exit": 4,
+     "outcome": "norun",
+     "import_error": true,
+     "last_line": "E   ModuleNotFoundError: No module named 'spacy.pipeline.pipes'"
+    }
+   ]
+  }
+ ],
+ "step2": "fail: the buggy checkout cannot import the project or a dependency",
+ "seconds": 185
+}

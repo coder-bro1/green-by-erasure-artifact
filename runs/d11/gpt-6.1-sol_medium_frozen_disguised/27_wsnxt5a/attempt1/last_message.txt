@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wsnxt5a/test_solution.py). All **23 tests pass**:
+
+```powershell
+python -B -m pytest -q -p no:cacheprovider test_solution.py
+```
+
+`solution.py` is unchanged. Tests explicitly record its existing behavior of accepting digit `2` as odd, which contradicts the docstring.

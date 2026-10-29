@@ -1,0 +1,17 @@
+I wrote 20 pytest tests for `sort_numbers` and all 20 pass (`python -m pytest -q test_solution.py`). None needed `xfail`, because the function does what its docstring says. I did not change `solution.py`.
+
+The tests cover:
+- the docstring example
+- an empty string and a string of only spaces
+- each of the ten number words on its own
+- input that is already sorted, and all ten words in reverse order
+- sorting by number value rather than alphabetically (e.g. `'nine eight four five'` gives `'four five eight nine'`)
+- repeated words, which are kept
+- extra spaces at the ends and between words, which are ignored
+- that the result is a string and the input is unchanged
+
+One test covers behaviour the docstring doesn't define: an invalid word such as `'eleven'` raises `KeyError`. That test only records what the code currently does.
+
+Files:
+- <work>\work\test_solution.py (new)
+- <work>\work\solution.py (unchanged)

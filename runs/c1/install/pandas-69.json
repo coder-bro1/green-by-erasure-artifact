@@ -1,0 +1,157 @@
+{
+ "project": "pandas",
+ "bug": 69,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 04:06:16",
+ "test_files": [
+  "pandas/tests/indexes/test_numeric.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 54,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 54,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 0.51s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.11s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 0.50s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.08s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 0.53s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.12s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 2 failed in 0.51s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/indexes/test_numeric.py::TestFloat64Index::test_lookups_datetimelike_values",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 2 passed in 0.11s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 650,
+ "checkout_eol": "lf"
+}

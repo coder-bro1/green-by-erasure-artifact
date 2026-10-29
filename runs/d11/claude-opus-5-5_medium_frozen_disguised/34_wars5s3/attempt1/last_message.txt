@@ -1,0 +1,17 @@
+I wrote the tests, but I couldn't get them all to pass: solution.py has a bug, and I wasn't allowed to change it. I ran the suite with `python -m pytest test_solution.py`: 10 tests pass and 9 fail.
+
+**The bug:** in `total_and_multiple`, the product starts at `acc_prod = 0` instead of `1`. Multiplying onto 0 always gives 0, so the function returns 0 as the product for every input. This contradicts its own docstring, which says `[2, 5]` should give `(7, 10)`, `[-3, 4, 1]` should give `(2, -12)`, and an empty list should have a product of 1.
+
+**What passes (10):** all 7 sum checks, including the empty list, negative numbers and very large numbers. The type check (the function returns a tuple of two ints) and the check that the input list isn't changed also pass.
+
+**What fails (9):** 6 of the 7 product checks, and all 3 docstring examples. The one product check that passes expects 0 because the list contains a 0, so it only passes by coincidence.
+
+I wrote the tests against the documented behaviour, not against what the code currently does. Changing them to match the bug, for example expecting a product of 0, would make the suite pass but lock in wrong behaviour.
+
+**Decision for you:** the one-line fix is to change `acc_prod = 0` to `acc_prod = 1` in solution.py, and then every test should pass. If solution.py has to stay as it is, I can mark the product tests as expected failures (`xfail`) instead. The suite would then pass while still recording the bug.
+
+result: Wrote 19 pytest tests in <work>\work\test_solution.py; 10 pass and 9 fail because solution.py always returns 0 as the product (the product starts at 0 instead of 1), which can't be fixed without editing solution.py.
+
+Files:
+- <work>\work\test_solution.py (new)
+- <work>\work\solution.py (unchanged)

@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wu4pp3t/test_solution.py) covering empty strings, case changes, punctuation, whitespace, and Unicode. `solution.py` is unchanged.
+
+Validation: **5 passed, 5 xfailed** using `python -m pytest test_solution.py -q -p no:cacheprovider`.
+
+The strict xfails preserve the documented expectations: `flip_case` calls `.lower()`, so `"Hello"` returns `"hello"` instead of `"hELLO"`.

@@ -1,0 +1,25 @@
+I wrote the tests in <work>\work\test_solution.py and did not change solution.py. Running `python -m pytest -v test_solution.py` gives 4 passed and 10 xfailed, with no failures.
+
+**The bug:** `intersperse` drops the last element of the input list. Its loop only goes over `numbers[:-1]`, adding each element and then the delimiter, and nothing adds `numbers[-1]` afterwards. As a result:
+- The docstring's own example `intersperse([1, 2, 3], 4)` returns `[1, 4, 2, 4]` instead of `[1, 4, 2, 4, 3]`.
+- A one-element list like `intersperse([7], 0)` returns `[]` instead of `[7]`.
+- Every non-empty input ends with an extra delimiter in place of its last element.
+
+The fix would be to add `result.append(numbers[-1])` before the `return`, but I left solution.py unchanged as instructed.
+
+**Marked xfail (10 tests):** these keep the expected values from the docstring and use `@pytest.mark.xfail(strict=True)`:
+- the docstring example
+- a single element
+- two elements
+- negative numbers and zero
+- a delimiter equal to the elements
+- output length is 2n-1 (4 parametrized cases)
+- the original elements appear in order at even positions
+
+Because the marks are strict, these will show up as failures once the bug is fixed, so the marks should be removed then.
+
+**Passing (4 tests):**
+- an empty list gives `[]`
+- the result is a list
+- every odd position holds the delimiter
+- the input list is not modified

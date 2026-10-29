@@ -1,0 +1,161 @@
+{
+ "project": "sanic",
+ "bug": 1,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 02:13:21",
+ "test_files": [
+  "tests/test_blueprints.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 138,
+  "failed_requirements": [],
+  "setup": [
+   "python setup.py build",
+   "python setup.py install",
+   "pip3 install -e .[dev]",
+   "pip3 install -e .",
+   "pip3 install -e .[test]"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 138,
+  "failed_requirements": [],
+  "setup": [
+   "python setup.py build",
+   "python setup.py install",
+   "pip3 install -e .[dev]",
+   "pip3 install -e .",
+   "pip3 install -e .[test]"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest tests/test_blueprints.py::test_bp_middleware_order"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.30s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.07s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.20s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.06s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.34s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.20s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.19s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest tests/test_blueprints.py::test_bp_middleware_order",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.05s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 1055,
+ "checkout_eol": "lf"
+}

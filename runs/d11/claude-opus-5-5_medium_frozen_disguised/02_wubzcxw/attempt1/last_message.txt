@@ -1,0 +1,22 @@
+I wrote the tests in <work>\work\test_solution.py, but they only pass because 10 of the 16 are marked as expected failures. solution.py has a bug, and I didn't change it, as asked.
+
+Last run: 6 passed, 10 expected failures, 0 failed.
+
+**The bug:** the docstring says `fewer_letters` should return the list with fewer total characters, and `first` on a tie. The code does the opposite:
+```python
+if n1 <= n2:
+    return second
+else:
+    return first
+```
+It returns the list with more characters, and `second` on a tie. Two of the three examples in the docstring fail because of this. The fix is to change that condition to `if n1 <= n2: return first` / `else: return second`.
+
+**What's covered:**
+- **6 tests that pass now:** both lists empty, the result is one of the two input lists itself rather than a copy, the inputs aren't changed, a tie between identical lists, tuples as input, and a `TypeError` when an item isn't a string.
+- **10 tests of the documented behaviour, marked as expected failures (`xfail(strict=True)`):** both docstring examples, a tie returning `first`, an empty list against a non-empty one, empty strings counting as zero, total characters mattering rather than the number of items, accented (non-ASCII) characters, and 3 parametrized cases.
+
+Because the markers are strict, these 10 tests will start failing once solution.py is fixed. That's the signal to delete the `@BUG` markers so they become normal tests.
+
+If you'd rather the tests confirm the current (buggy) output, the expected values in those 10 tests need to be swapped.
+
+result: <work>\work\test_solution.py has 16 pytest tests for `fewer_letters`. 6 pass and 10 are marked as expected failures because solution.py returns the list with more characters instead of fewer; there are no unexpected failures.

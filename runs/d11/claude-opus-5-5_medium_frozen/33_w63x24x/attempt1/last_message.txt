@@ -1,0 +1,13 @@
+I wrote `<work>\work\test_solution.py` for `solution.py` (left unchanged). Running `python -m pytest -q test_solution.py` gives 22 passed and 1 expected failure, which is a test that shows a bug.
+
+**The bug:** `split_words("Hello,world!")` returns `["Hello,world!"]`, not `["Hello", "world!"]` as the docstring says. The comma branch does `txt.replace(' ',',').split()`, which splits on whitespace instead of commas. That branch only runs when the text has no space, so commas are never split.
+
+The tests cover:
+- **Splitting on spaces:** leading, trailing and repeated spaces; tabs and newlines mixed with spaces; and a single space, which gives `[]`.
+- **Comma text:** checks what the code actually does, e.g. `"a,b,c"` comes back as `["a,b,c"]`.
+- **The docstring's comma example:** marked as an expected failure (`xfail(strict=True)`). If someone fixes `solution.py`, that test will flag it so the marker can be removed.
+- **Letter counting:** the docstring example `"abcdef"` gives 3. Uppercase letters, digits and punctuation are ignored, the empty string gives 0, and the result is always a whole number.
+
+Two other behaviours are pinned by the tests:
+- **Tab-only text:** the function only checks for a literal space, so `"a\tb"` returns the count 1 instead of being split.
+- **Comma plus tab:** `"a,\tb"` gives `["a,", "b"]`.

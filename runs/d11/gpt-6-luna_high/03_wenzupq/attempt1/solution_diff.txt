@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index f1b33f7..6ff737c 100644
+--- a/solution.py
++++ b/solution.py
+@@ -14,7 +14,7 @@ def correct_bracketing(brackets: str):
+     """
+     depth = 0
+     for b in brackets:
+-        if b == ">":
++        if b == "<":
+             depth += 1
+         else:
+             depth -= 1

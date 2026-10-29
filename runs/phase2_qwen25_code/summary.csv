@@ -1,0 +1,11 @@
+condition,model,gen_input,policy,units,tests,final_size,reveals,encodes,neutral,broken,flaky,signal_units,encodes_generated,encodes_repaired,quarantined,quarantined_reveals,REPORTED,DROPPED,INVERTED,NEUTRALIZED,OTHER,llm_calls,network_calls,llm_seconds,wall_seconds
+buggy,qwen2.5-coder:7b-instruct,code,GEN,204,2004,2004,868,95,702,339,0,184,95,0,0,0,0,0,0,0,0,204,204,1600.5680000002612,0
+buggy,qwen2.5-coder:7b-instruct,code,P1,204,2004,797,0,95,702,0,0,0,95,0,0,0,0,868,0,0,0,0,0,0,0.01600000000325963
+buggy,qwen2.5-coder:7b-instruct,code,P2,204,2004,1901,0,1093,808,0,0,0,95,998,0,0,0,61,806,1,0,151,134,654.0090000003984,1034.1339999996999
+buggy,qwen2.5-coder:7b-instruct,code,P3,204,2004,978,0,107,871,0,0,0,95,12,0,0,0,717,7,144,0,3309,1873,10356.735999999713,11125.928999999684
+buggy,qwen2.5-coder:7b-instruct,code,P4,204,2004,1605,668,95,702,140,0,176,95,0,808,668,668,200,0,0,0,2418,2406,8456.451999999961,8465.942000000301
+fixed,qwen2.5-coder:7b-instruct,code,GEN,203,2000,2000,938,23,711,328,0,189,23,0,0,0,0,0,0,0,0,206,206,1613.6420000002545,0
+fixed,qwen2.5-coder:7b-instruct,code,P1,203,2000,1650,939,0,711,0,0,189,0,0,0,0,0,0,0,0,0,0,0,0,0.0
+fixed,qwen2.5-coder:7b-instruct,code,P2,203,2000,1976,1157,0,819,0,0,194,0,0,0,0,0,0,0,0,0,66,50,267.40299999993294,378.527000000875
+fixed,qwen2.5-coder:7b-instruct,code,P3,203,2000,1695,956,0,739,0,0,190,0,0,0,0,0,0,0,0,0,974,590,3540.2150000002584,3746.2789999997476
+fixed,qwen2.5-coder:7b-instruct,code,P4,203,2000,1794,939,13,711,131,0,189,13,0,144,0,0,0,0,0,0,711,569,2043.9799999998359,2053.345999999903

@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index af61515..efa5f76 100644
+--- a/solution.py
++++ b/solution.py
+@@ -16,7 +16,7 @@ def pairs_sum_to_zero(l):
+     False
+     """
+     for i, l1 in enumerate(l):
+-        for j in range(i, len(l)):
++        for j in range(i + 1, len(l)):
+             if l1 + l[j] == 0:
+                 return True
+     return False

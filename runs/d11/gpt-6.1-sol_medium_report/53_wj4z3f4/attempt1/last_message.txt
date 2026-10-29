@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wj4z3f4/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **23 passed, 8 xfailed**.
+
+The eight strict xfails preserve the expected results: `make_palindrome` loops forever for non-palindromic inputs because it checks the unchanged string instead of its suffix. Subprocess timeouts prevent these tests from hanging pytest.

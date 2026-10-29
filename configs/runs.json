@@ -1,0 +1,260 @@
+{
+ "phase2_qwen25_code": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFix",
+   "QuixBugs"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null
+ },
+ "phase2_qwen35_code": {
+  "model": "qwen3.5:9b",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFix",
+   "QuixBugs"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null
+ },
+ "phase2_gemma4_code": {
+  "model": "gemma4:12b",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFix",
+   "QuixBugs"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null
+ },
+ "phase2_qwen25_spec": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "spec"
+  ],
+  "benchmarks": [
+   "HumanEvalFix",
+   "QuixBugs"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null
+ },
+ "phase2_qwen25_seed1": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFix"
+  ],
+  "seed": 1,
+  "temperature": 0.8,
+  "subset": "configs/phase2_seed_subset.json"
+ },
+ "phase2_qwen25_seed2": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFix"
+  ],
+  "seed": 2,
+  "temperature": 0.8,
+  "subset": "configs/phase2_seed_subset.json"
+ },
+ "phase2_qwen25_seed3": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFix"
+  ],
+  "seed": 3,
+  "temperature": 0.8,
+  "subset": "configs/phase2_seed_subset.json"
+ },
+ "phase2_qwen25_disguised": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFixDisguised"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "S1 contamination control (docs/PHASE2_SPEC.md 8.8): the 40 disguised HumanEvalFix pairs of D11"
+ },
+ "phase2_qwen35_disguised": {
+  "model": "qwen3.5:9b",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFixDisguised"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "S1 contamination control (docs/PHASE2_SPEC.md 8.8): the 40 disguised HumanEvalFix pairs of D11"
+ },
+ "phase2_gemma4_disguised": {
+  "model": "gemma4:12b",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFixDisguised"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "S1 contamination control (docs/PHASE2_SPEC.md 8.8): the 40 disguised HumanEvalFix pairs of D11"
+ },
+ "phase2_qwen25_natural": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalPlusNatural"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "S2 natural LLM faults (docs/PHASE2_SPEC.md 8.8): wrong HumanEval+ solutions written by the local models, against the canonical solution"
+ },
+ "phase2_qwen35_natural": {
+  "model": "qwen3.5:9b",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalPlusNatural"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "S2 natural LLM faults (docs/PHASE2_SPEC.md 8.8): wrong HumanEval+ solutions written by the local models, against the canonical solution; the same 25 pairs with this model as the tester (added 16 October 2026)"
+ },
+ "phase2_gemma4_natural": {
+  "model": "gemma4:12b",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalPlusNatural"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "S2 natural LLM faults (docs/PHASE2_SPEC.md 8.8): wrong HumanEval+ solutions written by the local models, against the canonical solution; the same 25 pairs with this model as the tester (added 16 October 2026)"
+ },
+ "phase2_smoke": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "HumanEvalFix",
+   "QuixBugs"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": "configs/phase2_smoke_subset.json",
+  "note": "Smoke test only; not part of the study"
+ },
+ "c1_qwen25_code": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "BugsInPy"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "Superseded by c1_qwen25_code_r2 (C1 protocol change 6): the probe misread assertion failures under Python 3.6 and 3.7, and cold starts caused spurious time-outs. Not reported."
+ },
+ "c1_smoke": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "BugsInPy"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": "configs/c1_smoke_subset.json",
+  "note": "Smoke test only; not part of the study"
+ },
+ "c1_qwen25_code_r2": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "BugsInPy"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "Stage C study run (C1 protocol change 6); model answers reused from the cache of c1_qwen25_code where the prompt is identical"
+ },
+ "c1_qwen35_code": {
+  "model": "qwen3.5:9b",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "BugsInPy"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": null,
+  "note": "Stage C optional second model (C1 protocol section 8), reported separately"
+ },
+ "c1_devtests_qwen25": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "BugsInPy"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": "configs/c1_devtests_subset.json",
+  "note": "Superseded by c1_devtests_qwen25_r2 (C1 protocol change 8: cold-start time-outs at first execution). Not reported."
+ },
+ "c1_devtests_qwen25_r2": {
+  "model": "qwen2.5-coder:7b-instruct",
+  "gen_inputs": [
+   "code"
+  ],
+  "benchmarks": [
+   "BugsInPy"
+  ],
+  "seed": 0,
+  "temperature": 0,
+  "subset": "configs/c1_devtests_subset.json",
+  "note": "C1 protocol sections 10 and 11 (change 8): developers' tests with environment warm-up; suites and model-answer cache copied from c1_devtests_qwen25"
+ }
+}

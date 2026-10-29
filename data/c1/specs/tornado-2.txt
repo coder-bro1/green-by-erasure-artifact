@@ -1,0 +1,9 @@
+def write_headers(
+        self,
+        start_line: Union[httputil.RequestStartLine, httputil.ResponseStartLine],
+        headers: httputil.HTTPHeaders,
+        chunk: bytes = None,
+    ) -> "Future[None]":
+Implements `.HTTPConnection.write_headers`.
+
+The fix to this function is described as: http1connection: Fix a bug with redirects and chunked requests

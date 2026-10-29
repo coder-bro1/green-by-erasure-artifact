@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](/<work>/wj4z3f4/tests/test_solution.py). `solution.py` was not modified.
+
+`pytest tests -q -p no:cacheprovider` reports **11 passed, 2 xfailed**. The strict xfails preserve the docstring’s expected results for `"cat"` and `"cata"`; `make_palindrome` hangs on both because its loop never updates the string it checks.

@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wz4tbg3/test_solution.py). `solution.py` is unchanged.
+
+Verified with `python -m pytest test_solution.py -q -p no:cacheprovider`: **17 passed, 12 xfailed**.
+
+The 12 cases retain correct expected values and use `@pytest.mark.xfail(strict=True, reason=...)`. Matching characters incorrectly cost one edit, so even the docstring’s `electron` → `neutron` example returns 8 instead of 3.

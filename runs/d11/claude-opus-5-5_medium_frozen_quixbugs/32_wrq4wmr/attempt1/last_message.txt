@@ -1,0 +1,17 @@
+I wrote `<work>\work\test_solution.py` and it passes (15 passed, 14 xfailed), but 14 of those tests can only pass as expected failures because `powerset` in solution.py has a bug.
+
+**The bug:** the recursive step returns only the subsets that contain the first element and drops the rest. The broken line is:
+```python
+return [[first] + subset for subset in rest_subsets]
+```
+It should be `return rest_subsets + [[first] + subset for subset in rest_subsets]`. Running it confirmed this: `powerset(['a','b','c'])` returns `[['a','b','c']]` instead of all 8 subsets, and `powerset([1])` returns `[[1]]` with no empty set. Only `powerset([])` comes out right.
+
+Since you said not to modify solution.py, I didn't. Tests that pass by checking the current wrong output would protect the bug, so I tested the behavior described in the docstring instead:
+- **15 pass on the current code:** empty input gives `[[]]`, the full input is in the result, every result is an ordered subset of the input, no subset appears twice, the result is a list of lists, and the input list isn't changed.
+- **14 are marked `xfail(strict=True)` with the reason written in:** the exact docstring example, a single element giving `[[], [1]]`, the empty set always being included, the result having 2^n subsets, and matching all combinations from `itertools`.
+
+To check those 14 really test the documented behavior, I ran them against a copy of solution.py with the one-line fix (in the scratchpad, not the original). All 14 then passed, and strict mode reported each as an unexpected pass. So once the fix goes in, the suite will fail until the `@BUG` markers are removed. That's deliberate, so nobody forgets to turn them back into normal tests.
+
+Run with: `python -m pytest -q <work>\work\test_solution.py`
+
+result: Tests for solution.py's `powerset` are in `<work>\work\test_solution.py` (15 passed, 14 expected failures); the expected failures come from a bug in `powerset` that loses all subsets without the first element, and solution.py was not changed.

@@ -1,0 +1,17 @@
+I wrote pytest tests for `bf` in `<work>\work\test_solution.py`. The run gives 19 passed and 2 xfailed (expected failures), and solution.py is unchanged.
+
+**Bug in solution.py:** Jupiter is spelled "Jupyter" in the function's planet list. So any call that uses the correct name "Jupiter" returns `()`. For example, `bf("Jupiter", "Neptune")` gives `()`, but the docstring says it should give `("Saturn", "Uranus")`. Results that span that slot also contain "Jupyter".
+
+Because I couldn't change solution.py, the tests are built around that bug:
+- **Passing tests** check what the function actually does, including the "Jupyter" spelling and the fact that "Jupiter" is rejected.
+- **Two strict xfail tests** check the correct spelling. They are expected to fail now. If the spelling is fixed, they will start passing, pytest will flag that, and you can remove the xfail markers and the test that checks "Jupiter" is rejected.
+
+What the passing tests cover:
+- the two docstring examples that don't involve Jupiter
+- the result is always a tuple
+- order of the two arguments doesn't matter, checked for every pair of planets
+- every pair of planets returns exactly the planets between them, sorted by distance from the sun
+- neighbouring planets, or the same planet twice, return `()`
+- invalid names return `()`: Pluto, an empty string, wrong capitalisation, leading spaces, "Sun"
+
+result: Added pytest tests for solution.py (19 pass, 2 expected failures); solution.py misspells Jupiter as "Jupyter", so `bf("Jupiter", ...)` returns an empty tuple.

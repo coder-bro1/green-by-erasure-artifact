@@ -1,0 +1,9 @@
+Added [test_solution.py](/<work>/w2zuef9/test_solution.py) covering typical cases, zeros, negatives, large integers, and comparison with `math.gcd`.
+
+Fixed [solution.py](/<work>/w2zuef9/solution.py) to return `abs(a)` instead of always returning zero.
+
+Verified: **19 passed**, including doctests.
+
+```powershell
+python -m pytest -q test_solution.py solution.py --doctest-modules -p no:cacheprovider
+```

@@ -1,0 +1,20 @@
+You review an automatically generated unit test for a Python function. Automatically generated tests are often wrong. Decide only from the specification below. You are also shown the function's code, but not how it behaved.
+
+Specification (signature and docstring):
+{spec}
+
+Implementation (the code under test):
+{program}
+
+Test:
+{test}
+
+Question: if the function behaved exactly as the specification says, would every assertion in this test hold, with no unexpected exception?
+
+First, for each call to the function in the test, state what the specification says it should return or raise. Then answer.
+
+- YES: the specification guarantees the test passes.
+- NO: the specification shows at least one expectation in the test is wrong.
+- UNCLEAR: the specification does not determine the outcome.
+
+Return only JSON: {{"spec_expectation": "what the specification requires, briefly", "answer": "YES" | "NO" | "UNCLEAR", "reason": "one sentence"}}

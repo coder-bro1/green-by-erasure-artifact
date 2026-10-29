@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wer9ydv/test_solution.py). `solution.py` is unchanged.
+
+Validation: **94 passed, 12 xfailed** using:
+```sh
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+The implementation incorrectly includes `2` among odd digits, including returning `3` instead of `2` for the second docstring example. All affected tests retain their expected values and use `xfail(strict=True, reason=...)`.

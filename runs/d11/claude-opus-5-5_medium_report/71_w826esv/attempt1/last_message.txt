@@ -1,0 +1,20 @@
+I wrote the tests in <work>\work\test_solution.py. Running `python -m pytest -q test_solution.py` gives 9 passed and 8 xfailed. I did not change solution.py.
+
+**Bug in solution.py:** The docstring says to count palindromes in the range 1 to n, inclusive. The code loops over `for i in range(1, n):`, which stops at n-1. Whenever n is itself a palindrome, it is left out of the count.
+- Docstring Example 1 fails: `even_odd_palindrome(3)` returns `(1, 1)` instead of `(1, 2)`.
+- `even_odd_palindrome(1)` returns `(0, 0)` instead of `(0, 1)`.
+- The fix would be `range(1, n + 1)`.
+
+**Tests that pass:** These all use values of n that are not palindromes, so the bug doesn't change the answer.
+- Docstring Example 2: n=12 gives (4, 6).
+- n = 10, 20, 23, 100, 123 and 1000; n=1000 gives (48, 60).
+- A check that the result is a tuple of two ints.
+
+**Tests marked `@pytest.mark.xfail(strict=True)`:** These all use values of n that are palindromes. Each keeps the expected value from the docstring.
+- Docstring Example 1 (n=3).
+- n = 1, 2, 9, 11, 22 and 999.
+- A comparison against a simple reference count for every n from 1 to 1000.
+
+Because the xfails are strict, they will start failing once the bug is fixed, and the markers should then be removed.
+
+result: Added <work>\work\test_solution.py (9 passed, 8 strict xfail); solution.py stops one short of n, so a palindromic n is never counted and docstring Example 1 fails.

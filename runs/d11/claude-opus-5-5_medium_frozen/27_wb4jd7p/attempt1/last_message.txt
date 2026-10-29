@@ -1,0 +1,16 @@
+I wrote pytest tests for `prime_length` in `<work>\work\test_solution.py`. The suite passes (228 passed, 1 expected failure), and `solution.py` is unchanged.
+
+**Bug in solution.py:** a 4-character string is wrongly reported as prime. The divisor loop is `range(3, l)`, so it never checks division by 2. Other even lengths still come out right because half the length falls inside that range; length 4 is the only exception. `prime_length('abcd')` returns True when it should return False. Starting the loop at 2 would fix it, but I couldn't touch `solution.py`.
+
+So that the suite passes without hiding the bug, `test_length_four_is_not_prime` asserts the correct answer and is marked as an expected failure (strict xfail). If `solution.py` is fixed, that test will start passing, and because the mark is strict pytest will then report it as a failure. That's the signal to remove the mark.
+
+**What the tests cover:**
+- The four examples from the docstring.
+- Empty and one-character strings (both False).
+- A set of prime and non-prime lengths.
+- Every length from 0 to 199 except 4, checked against a separate prime checker inside the test file.
+- Spaces and accented characters, which count as ordinary characters.
+
+Run from `<work>\work` with: `python -m pytest -q test_solution.py`
+
+result: Wrote `<work>\work\test_solution.py` (228 passed, 1 expected failure); the expected failure records a bug where `solution.py` says a 4-character string has a prime length.

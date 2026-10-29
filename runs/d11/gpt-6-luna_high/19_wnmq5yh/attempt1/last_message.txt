@@ -1,0 +1,5 @@
+Added parameterized pytest coverage in [test_solution.py](<work>/wnmq5yh/test_solution.py) for the examples, negative inputs, zero, single digit values, and large integers.
+
+The tests exposed an error in `multiply`; I corrected it in [solution.py](<work>/wnmq5yh/solution.py) to multiply the absolute unit digits.
+
+`pytest -q -p no:cacheprovider test_solution.py` passes: **9 passed**.

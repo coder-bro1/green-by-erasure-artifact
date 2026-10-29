@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wqyzxq6/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **13 passed, 1 xfailed**.
+
+The strict xfail preserves the expected distance `0` from a node to itself. With a positive self-loop of weight `5`, the implementation incorrectly returns `5`.

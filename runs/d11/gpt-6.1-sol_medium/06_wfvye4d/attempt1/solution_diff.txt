@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index b0d1b45..3ffd9ac 100644
+--- a/solution.py
++++ b/solution.py
+@@ -6,4 +6,4 @@ def add(lst):
+     Examples:
+         add([4, 2, 6, 7]) ==> 2 
+     """
+-    return sum([lst[i] for i in range(1, len(lst), 1) if lst[i]%2 == 0])
++    return sum([lst[i] for i in range(1, len(lst), 2) if lst[i]%2 == 0])

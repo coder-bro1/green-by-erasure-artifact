@@ -1,0 +1,22 @@
+I wrote the tests in <work>\work\test_solution.py and they all pass: `python -m pytest -q test_solution.py` gives 19 passed and 3 xfailed. Three tests are marked `@pytest.mark.xfail(strict=True)` because solution.py has a bug. I did not change solution.py.
+
+**The bug:** `words_in_sentence` keeps one-letter words, but 1 is not a prime number. For a word of length 1, the loop `for i in range(2, len(word))` is `range(2, 1)`, which never runs. So `flg` stays 0 and the check `if flg == 0 or len(word) == 2` lets the word through. Because of this, the docstring's own Example 1 fails: `words_in_sentence("This is a test")` returns `"is a"` instead of `"is"`.
+
+These tests keep the docstring's expected values and are marked xfail:
+- `test_docstring_example_1`: `"This is a test"` should give `"is"`; the function returns `"is a"`.
+- `test_single_letter_word_excluded`: `"a"` should give `""`.
+- `test_single_letter_words_in_sentence_excluded`: `"I am a go"` should give `"am go"`.
+
+The tests that pass cover:
+- Docstring Example 2.
+- Single words of lengths 2 to 9, 11, 25, 97 and 100, sorted correctly into prime and not prime.
+- Word order is kept.
+- An empty string comes back when no word qualifies.
+- All words come back when every word qualifies.
+- Repeated words are kept.
+- Upper and lower case are kept.
+- The function returns a string.
+
+A fix would be to require `len(word) >= 2` before treating a word as prime. The `len(word) == 2` special case isn't needed either, since the loop already handles length 2 correctly.
+
+result: Wrote pytest tests for words_in_sentence (19 pass, 3 strict-xfail): solution.py wrongly counts one-letter words as prime, so docstring Example 1 returns "is a" instead of "is".

@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wfdvhvn/test_solution.py). `solution.py` remains unchanged.
+
+`python -m pytest -q`: **4 passed, 9 xfailed**.
+
+The failures retain their expected values and use `@pytest.mark.xfail(strict=True, reason=...)`: `flatten` yields generators instead of the non-list objects promised by its docstring.
+
+Added pytest configuration to avoid cache permission errors.

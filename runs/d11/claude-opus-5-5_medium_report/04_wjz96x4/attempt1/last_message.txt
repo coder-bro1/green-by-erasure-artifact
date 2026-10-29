@@ -1,0 +1,22 @@
+I wrote pytest tests for `solution.py` and ran them: 11 pass and 5 are marked xfail because of one bug in the code. `solution.py` was not modified.
+
+**The bug:** in `bf`, the planet list spells the fifth planet `"Jupyter"` instead of `"Jupiter"`:
+```python
+planet_names = ("Mercury", "Venus", "Earth", "Mars", "Jupyter", "Saturn", "Uranus", "Neptune")
+```
+This breaks the function in three ways:
+- **Correct name rejected:** any call with `"Jupiter"` returns `()`. For example, `bf("Jupiter", "Neptune")` should give `("Saturn", "Uranus")`.
+- **Wrong name in results:** a range that crosses Jupiter returns `"Jupyter"`. For example, `bf("Mercury", "Uranus")` returns `('Venus', 'Earth', 'Mars', 'Jupyter', 'Saturn')`.
+- **Misspelling accepted:** `bf("Jupyter", "Earth")` returns `('Mars',)` when it should return `()`.
+
+Two of the three docstring examples fail because of this. The fix is a one-word spelling change in that list.
+
+The 5 xfail tests keep the expected values from the docstring and use `strict=True`, so they will start failing as unexpected passes once the spelling is fixed. They are `test_docstring_example_jupiter_neptune`, `test_docstring_example_mercury_uranus`, `test_full_span_neptune_mercury`, `test_misspelled_jupyter_is_invalid` and `test_jupiter_as_endpoint_reverse`.
+
+The 11 passing tests cover the third docstring example, neighbouring planets, the same planet twice, ranges given in either order, invalid names (unknown, empty, wrong case) and that the result is always a tuple.
+
+The docstring example `bf("Earth", "Mercury") ==> ("Venus")` is technically the string `"Venus"` in Python. I took it to mean the one-item tuple `("Venus",)`, which is what the code returns.
+
+File: <work>\work\test_solution.py
+
+result: 16 pytest tests for solution.py: 11 pass and 5 are strict-xfail because "Jupiter" is misspelled "Jupyter" in its planet list.

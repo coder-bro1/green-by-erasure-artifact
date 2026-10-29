@@ -1,0 +1,21 @@
+I wrote tests for `histogram` in a new file, `<work>\work\test_solution.py`. The run passes: 14 tests pass and 3 are marked as expected failures because they hit real bugs. `solution.py` is unchanged.
+
+**Bug in `solution.py`:** its docstring says `histogram('') == {}`, but the function actually returns `{'': 1}`. The cause is that it splits on a single space and doesn't drop empty pieces, so an empty `''` key ends up in the result:
+- `histogram('')` returns `{'': 1}`
+- `histogram('a  b')` (two spaces) returns `{'a': 1, '': 1, 'b': 1}`
+- `histogram(' a a ')` returns `{'': 2, 'a': 2}`
+
+**What the tests cover:**
+- All four other examples from the docstring.
+- A single letter, alone and repeated.
+- One clear winner, and several letters tied for the top count.
+- All 26 letters appearing once each.
+- Input order not changing the result.
+- A large input (about 2,000 letters).
+- Each call returning a new dict.
+
+**How the bugs are handled:** the three bug cases above are tests of what the docstring promises, marked "strict xfail". That keeps the suite passing while the bugs stay visible. If someone fixes `solution.py`, those tests will start passing, which makes the run fail as a reminder to remove the markers. One more test, `test_current_behavior_empty_string`, records the current `{'': 1}` result; it would also need updating after a fix.
+
+To run it: `python -m pytest -q test_solution.py -rx` from `<work>\work` (pytest 9.1.1).
+
+result: Added pytest tests for `solution.py` (14 pass, 3 marked as expected failures) and found that `histogram('')` and inputs with extra spaces put a stray `''` key in the result, which the docstring says shouldn't happen.

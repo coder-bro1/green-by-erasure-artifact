@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index 30fba9e..ba0cadd 100644
+--- a/solution.py
++++ b/solution.py
+@@ -21,7 +21,7 @@ def make_palindrome(string: str) -> str:
+ 
+     beginning_of_suffix = 0
+ 
+-    while not is_palindrome(string):
++    while not is_palindrome(string[beginning_of_suffix:]):
+         beginning_of_suffix += 1
+ 
+     return string + string[:beginning_of_suffix][::-1]

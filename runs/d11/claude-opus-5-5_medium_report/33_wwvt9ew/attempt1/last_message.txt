@@ -1,0 +1,12 @@
+I wrote the tests in <work>\work\test_solution.py and all 32 pass (`python -m pytest -q test_solution.py`). I did not change solution.py.
+
+None of the tests fail, so none are marked xfail. `prime_length` does what its docstring says: it returns True when the string's length is prime and False otherwise.
+
+The tests cover:
+- The four examples from the docstring ('Hello', 'abcdcba', 'kittens', 'orange').
+- Lengths 0 and 1, which both return False.
+- A set of prime lengths (2 to 101) and composite lengths (4 to 121).
+- Spaces and accented characters, to confirm each one counts as a single character.
+- Every length from 0 to 199, compared against a separate prime check written inside the test.
+
+result: 32 pytest tests for solution.py's prime_length all pass, with no xfails because the function matches its docstring.

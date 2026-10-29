@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wh9xast/test_solution.py) covering documented examples, edge cases, duplicate limits, input preservation, and 5,461 exhaustive small-list cases.
+
+Verified **31 tests pass** with:
+```sh
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+Cache disabled because this environment denies pytest cache access. `solution.py` is unchanged.

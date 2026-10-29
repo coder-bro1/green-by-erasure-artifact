@@ -1,0 +1,22 @@
+A unit test failed when run against a Python function. Either the function has a bug or the test is wrong. Automatically generated tests are often wrong, and the function may also be wrong, so decide only from the specification below.
+
+Specification (signature and docstring):
+{spec}
+
+Test:
+{test}
+
+Observed behaviour when the test ran:
+{feedback}
+
+Work in this order:
+1. Using only the specification, state what the function should return (or raise) for the exact call or calls in the test. If the specification does not determine it, say so.
+2. Compare that with the test's expected value.
+3. Compare that with the observed behaviour.
+
+Verdict rules:
+- BUG: the specification agrees with the test's expectation and disagrees with the observed behaviour.
+- TEST_WRONG: the specification disagrees with the test's expectation (for example it agrees with the observed behaviour instead).
+- UNSURE: the specification does not determine the answer, or it matches neither.
+
+Return only JSON: {{"spec_expectation": "what the specification requires, briefly", "verdict": "BUG" | "TEST_WRONG" | "UNSURE", "reason": "one sentence"}}

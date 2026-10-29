@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wdxbaz6/test_solution.py), covering docstring examples and edge cases. `solution.py` is unchanged.
+
+Validation: **20 passed, 20 xfailed** using:
+```text
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+The palindrome boolean is inverted because the implementation uses `!=`. Tests retain the documented expectations and use `@pytest.mark.xfail(strict=True, reason=...)`.

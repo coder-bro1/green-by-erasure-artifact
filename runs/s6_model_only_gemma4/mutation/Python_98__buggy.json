@@ -1,0 +1,175 @@
+{
+  "pair_id": "Python/98",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_5ee7c47ded3599b7.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_4873911e9587168c.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_79f4e2d2d1458ea9.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_e510324508ab5737.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_17d24859565356f8.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_277e969de9fc3dd5.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_50b74e170e06ae55.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_8e9ee5c40b6ad339.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_c26dee21cb3d5876.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_80f06faca63f8f87.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-98__buggy__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_8e9ee5c40b6ad339.py"
+  ],
+  "baseline": {
+    "tests/test_8e9ee5c40b6ad339.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "4ead4ad94b5f4ec195c636fe83cc0c4b",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "e1fd550cfb054133baf041c2be4fb5e0",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "e924603125294a84895c010e8d8cfa39",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "de3104611813401da19fd87d66fa9469",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "4852e20f52fd484c81c1acba4ec94f85",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "4d51bbdf2e794d848d43f62be965f205",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "bfeeb41b4db54080a802323e7ed540a4",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "12d9762444b0447ba856b9ee1e8fac0b",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "bb9ce35306064b2ca92e89d3508585a0",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "a593275f38114a8d99232d9c0e02f849",
+      "killed_by": [
+        "tests/test_8e9ee5c40b6ad339.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 17.5,
+  "finished": "2026-10-28T21:30:48.566468+00:00"
+}

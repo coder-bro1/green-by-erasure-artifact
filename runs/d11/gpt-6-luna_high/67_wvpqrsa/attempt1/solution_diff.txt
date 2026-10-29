@@ -1,0 +1,30 @@
+diff --git a/solution.py b/solution.py
+index 7538fc0..49ef013 100644
+--- a/solution.py
++++ b/solution.py
+@@ -13,10 +13,20 @@ def fibfib(n: int):
+     >>> fibfib(8)
+     24
+     """
+-    if n == 0:
++    if n < 0:
++        raise ValueError("n must be non-negative")
++
++    if n == 0 or n == 1:
+         return 0
+-    if n == 1:
+-        return 1
+     if n == 2:
+-        return 2
+-    return fibfib(n - 1) + fibfib(n - 2) + fibfib(n - 3)
++        return 1
++
++    previous_three, previous_two, previous_one = 0, 0, 1
++    for _ in range(3, n + 1):
++        current = previous_three + previous_two + previous_one
++        previous_three, previous_two, previous_one = (
++            previous_two,
++            previous_one,
++            current,
++        )
++    return previous_one

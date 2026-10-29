@@ -1,0 +1,431 @@
+{
+  "P1-a": {
+    "pass": true,
+    "pairs": [
+      {
+        "pair_id": "Python/5",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/8",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/9",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/10",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/12",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/13",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/19",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/24",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/27",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/31",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/38",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/43",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/56",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/57",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/62",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/63",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/64",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/65",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/67",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/72",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/74",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/80",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/82",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/85",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/97",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/107",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/108",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/111",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/112",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/117",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/125",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/126",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/130",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/141",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/143",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/146",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/148",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/149",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/151",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/154",
+        "fixed": true,
+        "buggy": false
+      }
+    ]
+  },
+  "P1-c": {
+    "pass": true,
+    "checks": 400
+  },
+  "P1-e": {
+    "pass": true,
+    "errors": []
+  },
+  "P1-b": {
+    "pass": true,
+    "violations": [],
+    "textual_overlaps": 2358,
+    "note": "Textual overlaps are retained for manual inspection; coincidence does not establish data access."
+  },
+  "P1-d": {
+    "pass": true,
+    "sample": [
+      {
+        "test_id": "HumanEvalFix-57__buggy__qwen2-5-coder-7b-instruct__s2__code/t5",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-97__buggy__qwen2-5-coder-7b-instruct__s2__code/t6",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-97__fixed__qwen2-5-coder-7b-instruct__s2__code/t1",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-146__buggy__qwen2-5-coder-7b-instruct__s2__code/t7",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-19__fixed__qwen2-5-coder-7b-instruct__s2__code/t6",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-24__fixed__qwen2-5-coder-7b-instruct__s2__code/t1",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-112__buggy__qwen2-5-coder-7b-instruct__s2__code/t6",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-64__fixed__qwen2-5-coder-7b-instruct__s2__code/t4",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-8__fixed__qwen2-5-coder-7b-instruct__s2__code/t0",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-8__fixed__qwen2-5-coder-7b-instruct__s2__code/t7",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-151__buggy__qwen2-5-coder-7b-instruct__s2__code/t7",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-146__fixed__qwen2-5-coder-7b-instruct__s2__code/t4",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-108__buggy__qwen2-5-coder-7b-instruct__s2__code/t1",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-57__buggy__qwen2-5-coder-7b-instruct__s2__code/t4",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-19__buggy__qwen2-5-coder-7b-instruct__s2__code/t1",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-74__fixed__qwen2-5-coder-7b-instruct__s2__code/t3",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-63__buggy__qwen2-5-coder-7b-instruct__s2__code/t2",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-97__buggy__qwen2-5-coder-7b-instruct__s2__code/t6",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-56__fixed__qwen2-5-coder-7b-instruct__s2__code/t3",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-57__buggy__qwen2-5-coder-7b-instruct__s2__code/t3",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-130__buggy__qwen2-5-coder-7b-instruct__s2__code/t2",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-107__fixed__qwen2-5-coder-7b-instruct__s2__code/t0",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-111__fixed__qwen2-5-coder-7b-instruct__s2__code/t9",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-117__fixed__qwen2-5-coder-7b-instruct__s2__code/t6",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-111__buggy__qwen2-5-coder-7b-instruct__s2__code/t5",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-57__fixed__qwen2-5-coder-7b-instruct__s2__code/t1",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-5__buggy__qwen2-5-coder-7b-instruct__s2__code/t8",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-141__fixed__qwen2-5-coder-7b-instruct__s2__code/t4",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-108__fixed__qwen2-5-coder-7b-instruct__s2__code/t1",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-85__buggy__qwen2-5-coder-7b-instruct__s2__code/t5",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      }
+    ]
+  },
+  "P1-f": {
+    "pass": true,
+    "verified": 10,
+    "required": 10
+  },
+  "P1-i": {
+    "pass": true,
+    "fields": [
+      "model_digest",
+      "ollama_version",
+      "prompt_hashes",
+      "dataset_revision",
+      "harness_commit",
+      "options"
+    ]
+  },
+  "P1-m": {
+    "pass": true
+  },
+  "P1-h": {
+    "pass": true,
+    "evidence": "Offline test_resume_no_repeated_calls and persistent client-cache test; timing fields differ by construction."
+  },
+  "section8_all_pass": true,
+  "unit_test_output": "........................................................................ [ 85%]\n............                                                             [100%]\n84 passed in 23.44s\n"
+}

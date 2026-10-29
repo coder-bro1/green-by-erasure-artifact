@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index c79f76f..ef3eafd 100644
+--- a/solution.py
++++ b/solution.py
+@@ -12,7 +12,7 @@ def cycpattern_check(a , b):
+     l = len(b)
+     pat = b + b
+     for i in range(len(a) - l + 1):
+-        for j in range(len(b) - l + 1):
++        for j in range(max(1, l)):
+             if a[i:i+l] == pat[j:j+l]:
+                 return True
+     return False

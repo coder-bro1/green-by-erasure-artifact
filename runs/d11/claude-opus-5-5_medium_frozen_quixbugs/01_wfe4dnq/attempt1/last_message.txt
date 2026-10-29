@@ -1,0 +1,23 @@
+I wrote `<work>\work\test_solution.py` and the suite passes (5 passed, 9 xfailed), but only because 9 of the tests are marked as expected failures. solution.py has a bug, and tests of its documented behaviour can't pass without changing it. solution.py is unchanged.
+
+**The bug:** solution.py is the QuixBugs `reverse_linked_list` with its known defect. The loop never does `prevnode = node`, so the function always returns `None`, and every node after the original head is cut off. The fix is to add `prevnode = node` right after `node.successor = prevnode`.
+
+**What the tests cover** (command: `python -m pytest test_solution.py`):
+- **5 passing tests** check behaviour that is true of the current code:
+  - an empty list returns `None`
+  - the original head's successor becomes `None`
+  - a single node ends up with `successor` set to `None`
+  - node values are unchanged
+  - the result has no cycle
+- **9 tests marked `xfail(strict=True)`** check what the docstring promises:
+  - a single node returns itself
+  - lists of several lengths come back reversed, including one of 100 items and one with repeated values
+  - the new head is the original tail
+  - the existing nodes are relinked rather than copied
+  - reversing twice gives the original order
+
+**Checks:** I ran the suite against the real solution.py and got 5 passed, 9 xfailed. I also ran it against a copy with the one-line fix in the scratchpad. There, all 9 marked tests passed, so they are correct and not just failing. Because the markers are strict, the suite will report errors once solution.py is fixed, which is the signal to remove them.
+
+If you want the suite to fail on the current code instead, remove the `xfail` decorators.
+
+result: Added `<work>\work\test_solution.py` (5 passed, 9 expected failures); solution.py returns `None` because of a missing `prevnode = node`, so the 9 tests of its documented behaviour are marked as expected failures.

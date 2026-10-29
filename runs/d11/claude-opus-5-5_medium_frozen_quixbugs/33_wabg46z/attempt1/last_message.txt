@@ -1,0 +1,14 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes (6 passed, 8 xfailed), but `subsequences` in solution.py is broken: it returns `[]` for every input, including its own docstring example.
+
+**The bug:** the base case `if k == 0: return []` should be `return [[]]`. Because of it the recursion never builds any sequence. For example, `subsequences(1, 5, 3)` returns `[]` instead of `[[1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]]`. I left solution.py unchanged as asked; git status shows only the new test file.
+
+**How the tests are set up:**
+- **6 tests pass normally.** They check things that are true even with the bug: the function returns a list, and it returns `[]` when k is bigger than the range, the range is empty, or the bounds are reversed. A seventh check (results are ascending and within the range) also passes, but only because there are currently no results to check.
+- **8 tests are marked "expected to fail" (`xfail(strict=True)`).** They check the correct behaviour: the docstring example, k=1, k equal to the range size, negative bounds, and a comparison with `itertools.combinations` on several inputs. They show as expected failures now. Because they're strict, they will fail the run as soon as the bug is fixed, which is the signal to remove the markers.
+- I didn't write any test that treats the current `[]` output as correct.
+
+**Checks:** I ran `pytest -q test_solution.py` and got 6 passed, 8 xfailed. I also ran the same tests against a copy of solution.py with the base case fixed, in the scratchpad. All 8 expected-failure tests then passed their assertions, which confirms their expected values are right.
+
+To fully fix this, change line 17 of solution.py from `return []` to `return [[]]`.
+
+result: Added pytest tests for solution.py in <work>\work\test_solution.py (6 pass, 8 marked expected-to-fail); `subsequences` returns `[]` for every input because its `k == 0` base case should return `[[]]`, and I left solution.py unchanged as asked.

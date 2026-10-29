@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/w4fc46h/test_solution.py) to cover ordinary shifts, zero and full-length shifts, oversized shifts, and zero.
+
+`pytest -q` reports **8 passed, 2 xfailed**. The strict xfails preserve the expected results for negative integers: `circular_shift` counts the minus sign as a character, so it mishandles both shifting `-123` by 1 and reversing its digits with an oversized shift. `solution.py` is unchanged.
+
+Pytest also warned that it could not create its cache due to a permissions error.

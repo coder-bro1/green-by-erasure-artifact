@@ -1,0 +1,23 @@
+I wrote pytest tests for `circular_shift` in <work>\work\test_solution.py and left solution.py unchanged. Running `python -m pytest -v test_solution.py` gives 8 passed and 6 xfailed, with no failures. The xfails are strict and keep the values the docstring promises; they fail because of a bug in solution.py.
+
+**The bug:** the code never rotates the digits. When shift is no larger than the number of digits, it runs:
+```python
+return s[:len(s) - shift] + s[len(s) - shift:]
+```
+This joins the two slices back in their original order, so the result is always the input unchanged. It should put the end slice first:
+```python
+return s[len(s) - shift:] + s[:len(s) - shift]
+```
+As a result, the docstring's own example fails: `circular_shift(12, 1)` returns "12" instead of "21". Any shift from 1 up to one less than the digit count gives back the original number.
+
+**Marked xfail (strict):**
+- `test_docstring_example_shift_one`: (12, 1) should give "21"
+- `test_right_rotation`, 5 cases: (123,1)→"312", (123,2)→"231", (12345,1)→"51234", (12345,3)→"34512", (100,1)→"010"
+
+**Passing tests:**
+- The docstring example (12, 2) gives "12".
+- A shift of 0 or a shift equal to the number of digits leaves the number unchanged.
+- A shift larger than the number of digits reverses it, including very large shifts and single-digit numbers.
+- The result is a string.
+
+These pass only because in those cases the correct output is the input unchanged or reversed, so the bug has no effect on them.

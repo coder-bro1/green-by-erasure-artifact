@@ -1,0 +1,17 @@
+I wrote 21 pytest tests in <work>\work\test_solution.py. `python -m pytest -v test_solution.py` exits green (6 passed, 15 xfailed), but the 15 xfailed tests mean solution.py doesn't do what its docstring says. I left it unchanged as asked.
+
+**The bug:** the docstring says `total_match` returns the list with fewer total characters, and the first list on a tie. The code does the opposite:
+```python
+if l1 <= l2:
+    return lst2
+```
+It returns the list with more characters, and the second list on a tie. Four of the five docstring examples get the wrong answer, for example `total_match(['hi','admin'], ['hI','Hi'])` returns `['hi','admin']` instead of `['hI','Hi']`. Swapping the two return values would fix it.
+
+**How the tests are set up:**
+- **6 pass** because code and spec agree on them: both lists empty, the returned value is always one of the two inputs, the inputs are not modified, tuples are accepted, and ties where both lists hold the same strings.
+- **15 are expected failures** (`xfail(strict=True)`, with a reason naming the bug). They check the documented behavior: the docstring examples, ties returning the first list, empty against non-empty, counting characters rather than items, whitespace, unicode, plus a parametrized set. Because they're strict, they will report as errors once solution.py is fixed, which is the signal to remove the markers.
+
+So "passing" means the suite runs green; the function itself still does not meet its spec.
+
+Files are in <work>\work:
+- test_solution.py

@@ -1,0 +1,61 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/knapsack",
+    "condition": "buggy",
+    "taskset": "quixbugs",
+    "order": 35,
+    "folder": "wxb2pt7",
+    "solution_sha256": "95d483564187bf83364de5f3356de6a97f00115a1ab96c539c7b867896e8632d"
+  },
+  "variant": "frozen",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T23:41:31.981519+00:00",
+  "finished": "2026-10-11T23:42:25.330021+00:00",
+  "seconds": 53.2,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d57-d02c-7b13-bf60-940543c3a6ee",
+  "usage": [
+    {
+      "input_tokens": 96042,
+      "cached_input_tokens": 67200,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1744,
+      "reasoning_output_tokens": 163
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T23:41:31.997144+00:00",
+      "file": "solution.py",
+      "sha256": "f0581209dcedd3aa21b83c86849e21277efc9703a398cbb3d56182c105e090d6",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T23:42:12.061028+00:00",
+      "file": "test_solution.py",
+      "sha256": "c9fc3ebb23630845b1156ccde6b5674e714507b02a4d2a99ae3412393883b578",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T23:42:21.709166+00:00",
+      "file": "pytest.ini",
+      "sha256": "e08279e0036f9813d0874146fda3511dd10119fd454e25e3e5690bf93d95c5cc",
+      "stored": "0002__pytest.ini"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

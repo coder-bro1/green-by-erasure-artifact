@@ -1,0 +1,29 @@
+I wrote 12 pytest tests for `rolling_max` in <work>\work\test_solution.py. Running `python -m pytest -v test_solution.py` gives 8 passed and 4 xfailed. All 4 xfails use `strict=True` and keep the values the docstring says are correct. I did not modify <work>\work\solution.py.
+
+**The bug in solution.py:** inside the loop, every element after the first sets the running maximum like this:
+
+```python
+running_max = max(numbers)
+```
+
+That takes the maximum of the whole input list, not of the elements seen so far. It should be `running_max = max(running_max, n)`. Because of this, later values show up at earlier positions. For the docstring's own example, `rolling_max([1, 2, 3, 2, 3, 4, 2])` returns `[1, 4, 4, 4, 4, 4, 4]` instead of `[1, 2, 3, 3, 3, 4, 4]`.
+
+**Tests marked xfail (strict):**
+- `test_docstring_example`
+- `test_strictly_increasing`
+- `test_increasing_negatives`
+- `test_max_appears_late`
+
+These cover every input where a later element is bigger than everything before it.
+
+**Tests that pass:** the bug only gives the right answer when the first element is already the largest in the list. The passing tests are:
+- empty list
+- single element
+- all elements equal
+- strictly decreasing list
+- first element is the maximum
+- negative numbers where the first is the maximum
+- the input list is not changed
+- the output is the same length as the input
+
+When `solution.py` is fixed, the 4 strict xfails will start passing and pytest will report them as XPASS failures. At that point, remove their xfail markers.

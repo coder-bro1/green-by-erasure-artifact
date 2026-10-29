@@ -1,0 +1,33 @@
+diff --git a/solution.py b/solution.py
+index 473ca5b..c22cfbd 100644
+--- a/solution.py
++++ b/solution.py
+@@ -12,16 +12,16 @@ def histogram(test):
+     histogram('') == {}
+ 
+     """
+-    dict1={}
+-    list1=test.split(" ")
+-    t=1
++    counts = {}
++    for letter in test.split():
++        counts[letter] = counts.get(letter, 0) + 1
+ 
+-    for i in list1:
+-        if(list1.count(i)>t) and i!='':
+-            t=list1.count(i)
+-    if t>0:
+-        for i in list1:
+-            if(list1.count(i)==t):
+-                
+-                dict1[i]=t
+-    return dict1
++    if not counts:
++        return {}
++
++    highest_count = max(counts.values())
++    return {
++        letter: count
++        for letter, count in counts.items()
++        if count == highest_count
++    }

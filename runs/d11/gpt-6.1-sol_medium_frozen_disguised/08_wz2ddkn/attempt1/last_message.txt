@@ -1,0 +1,5 @@
+Added 18 tests in [test_solution.py](/<work>/wz2ddkn/test_solution.py). Confirmed `solution.py` is unchanged.
+
+Ran `python -m pytest -q`: **12 passed, 6 failed**. The failures expose a bug: `max(values)` includes future elements instead of computing the running maximum.
+
+All tests cannot pass against the documented behavior without fixing `solution.py`.

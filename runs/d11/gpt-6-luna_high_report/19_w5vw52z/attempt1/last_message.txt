@@ -1,0 +1,3 @@
+Added [test_solution.py](/<work>/w5vw52z/test_solution.py) with coverage for empty, single-item, sorted, unsorted, and duplicate-pair inputs. `solution.py` is unchanged.
+
+`pytest -q` reports **7 passed, 1 xfailed**. The strict xfail preserves the documented expectation that `[1, 2, 2, 2, 3, 4]` returns `False`; the implementation currently returns `True` because it doesn’t reject values that occur more than twice. Pytest also reported a cache permission warning.

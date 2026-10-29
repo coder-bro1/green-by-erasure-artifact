@@ -1,0 +1,106 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 50,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 380,
+  "violations": [],
+  "n_violations": 0
+ },
+ "P1-m_judge_sees_body": {
+  "n": 0,
+  "examples": []
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 36,
+   "TEST_WRONG": 30
+  },
+  "recovered_judge": {
+   "BUG": 36,
+   "TEST_WRONG": 30
+  },
+  "recovered_with_code": {
+   "BUG": 43,
+   "TEST_WRONG": 23
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 11,
+   "buggy|BUG|REVEALS": 7,
+   "buggy|TEST_WRONG|BROKEN": 16,
+   "buggy|TEST_WRONG|REVEALS": 2,
+   "fixed|BUG|BROKEN": 18,
+   "fixed|TEST_WRONG|BROKEN": 12
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 204,
+    "QUARANTINED": 18,
+    "QUARANTINED_REVEALS": 7,
+    "KEPT": 186,
+    "QUARANTINED_BROKEN": 11
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 222,
+    "QUARANTINED": 18,
+    "QUARANTINED_REVEALS": 7,
+    "KEPT": 204,
+    "QUARANTINED_BROKEN": 11
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 222,
+    "QUARANTINED": 36,
+    "QUARANTINED_REVEALS": 9,
+    "KEPT": 186,
+    "QUARANTINED_BROKEN": 27
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 204,
+    "QUARANTINED": 18,
+    "QUARANTINED_REVEALS": 7,
+    "KEPT": 186,
+    "QUARANTINED_BROKEN": 11
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 229,
+    "KEPT": 211,
+    "QUARANTINED": 18,
+    "QUARANTINED_BROKEN": 18
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 241,
+    "KEPT": 223,
+    "QUARANTINED": 18,
+    "QUARANTINED_BROKEN": 18
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 241,
+    "KEPT": 211,
+    "QUARANTINED": 30,
+    "QUARANTINED_BROKEN": 30
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 229,
+    "KEPT": 211,
+    "QUARANTINED": 18,
+    "QUARANTINED_BROKEN": 18
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 9,
+  "written": 5
+ }
+}

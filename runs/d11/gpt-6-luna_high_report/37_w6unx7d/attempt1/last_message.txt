@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/w6unx7d/test_solution.py) with sequence and larger-value checks. **14 tests pass; 1 strict xfail**.
+
+The xfail checks that `fibfib(25)` is computed efficiently. Its expected value is `755476`, but the solution’s recursive implementation recomputes prior values and exceeds the test’s call-count limit.
+
+Verified with `pytest -q -p no:cacheprovider test_solution.py`.

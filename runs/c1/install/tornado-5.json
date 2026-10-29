@@ -1,0 +1,159 @@
+{
+ "project": "tornado",
+ "bug": 5,
+ "python_pinned": "3.7.0",
+ "python_used": "3.7.0",
+ "started": "2026-10-19 04:32:31",
+ "test_files": [
+  "tornado/test/ioloop_test.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 0,
+  "failed_requirements": [],
+  "setup": [
+   "pip install unittest",
+   "pip install python-gettext"
+  ],
+  "failed_setup": [
+   "pip install unittest"
+  ],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 0,
+  "failed_requirements": [],
+  "setup": [
+   "pip install unittest",
+   "pip install python-gettext"
+  ],
+  "failed_setup": [
+   "pip install unittest"
+  ],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (failures=1)"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (failures=1)"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (failures=1)"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (failures=1)"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 19,
+ "checkout_eol": "lf"
+}

@@ -1,0 +1,123 @@
+{
+  "pair_id": "QuixBugs/topological_ordering",
+  "version": "fixed",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_0753f12d8589fd06.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_997307f4994bf2c7.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_79a4b3410638dc13.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_7a44d42d99ae7704.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_64625d1a508ff437.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_a51a1d64054a5f64.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_5895451c1c8d8c47.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_279cde57d068dcf6.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_979786c0199c32f1.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_d54adafbc9cdfa51.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__fixed__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "40aaf36fe9764d5c82fa6af0c8610826",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "27f4c1dbfc9448ada268823eeb614475",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ea271bdb46634a4aaea047824edfa2ab",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "17e5ef2863d34ccbb818190ada278440",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "35a8582aae114501971a6fd4c569784e",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.7,
+  "finished": "2026-10-28T21:39:57.193658+00:00"
+}

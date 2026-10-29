@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index a7f5d1f..af29c09 100644
+--- a/solution.py
++++ b/solution.py
+@@ -28,7 +28,7 @@ def even_odd_palindrome(n):
+     even_palindrome_count = 0
+     odd_palindrome_count = 0
+ 
+-    for i in range(1, n):
++    for i in range(1, n + 1):
+         if i%2 == 1 and is_palindrome(i):
+                 odd_palindrome_count += 1
+         elif i%2 == 0 and is_palindrome(i):

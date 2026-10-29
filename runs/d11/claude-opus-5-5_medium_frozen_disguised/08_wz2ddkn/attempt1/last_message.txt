@@ -1,0 +1,11 @@
+I wrote the tests, but they can't honestly all pass: `running_peaks` in solution.py has a bug that breaks its own docstring example. Since solution.py couldn't be changed, I marked the 4 tests that hit the bug as expected failures. pytest reports 8 passed, 4 xfailed and none failing, so the run is green only because of those markers.
+
+**The bug:** after the first element, the function uses `max(values)`, the maximum of the whole list, instead of `max(peak, v)`. `running_peaks([2, 1, 5, 3, 6])` returns `[2, 6, 6, 6, 6]`, but the docstring says `[2, 2, 5, 5, 6]`. The fix is a one-line change in solution.py: `peak = max(peak, v)`.
+
+**The tests** are in <work>\work\test_solution.py (12 tests):
+- **8 pass.** They only cover cases the bug doesn't reach: empty list, a single element, all values equal, largest value first, largest value second, negative values with the largest first, input left unchanged, and output the same length as the input.
+- **4 are marked as expected failures** (`xfail(strict=True)`) and check the documented behaviour: the docstring example, a strictly increasing list, increasing negative values, and a comparison against a correct reference implementation. Once solution.py is fixed, these 4 will start reporting as failures. Delete the markers then and they become normal passing tests.
+
+If you'd rather have the suite fail red until the bug is fixed, delete the 4 xfail markers.
+
+result: Added 12 pytest tests in <work>\work\test_solution.py (8 passed, 4 xfailed); 4 tests are marked as expected failures because solution.py's running_peaks has a bug (max(values) should be max(peak, v)).

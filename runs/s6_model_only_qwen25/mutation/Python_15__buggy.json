@@ -1,0 +1,40 @@
+{
+  "pair_id": "Python/15",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_ae0cc4be1ed0db28.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-15__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_c41e9cbae6aa3bcd.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-15__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_3b0aed8a99b87774.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-15__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_c41e9cbae6aa3bcd.py"
+  ],
+  "baseline": {
+    "tests/test_c41e9cbae6aa3bcd.py": "PASS"
+  },
+  "mutants": [],
+  "seconds": 1.6,
+  "finished": "2026-10-28T21:41:44.370874+00:00"
+}

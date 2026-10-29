@@ -1,0 +1,15 @@
+I wrote 16 pytest tests for `sum_product` in <work>\work\test_solution.py, and they all pass (`python -m pytest -q test_solution.py`). The examples in the function's docstring also pass when run with `--doctest-modules`. I did not change <work>\work\solution.py.
+
+The tests check:
+- an empty list returns (0, 1), and the docstring example returns (10, 24)
+- lists with one element, including [0]
+- lists that contain a zero, or only ones
+- all-negative numbers and mixed signs, including a pair of negatives giving a positive product
+- very large integers
+- that the result is a tuple of two ints
+- that the input list is not changed
+- four more cases run through a parametrized test
+
+No test needed `xfail`: the function does what its docstring says, including the empty-list rule (sum 0, product 1).
+
+result: 16 pytest tests for solution.py's sum_product in <work>\work\test_solution.py all pass; the function matches its docstring, so nothing is marked xfail.

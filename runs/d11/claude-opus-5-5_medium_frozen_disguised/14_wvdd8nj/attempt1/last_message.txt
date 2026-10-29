@@ -1,0 +1,14 @@
+I wrote the tests, but they can't pass: `solution.py` has a bug, and I was told not to change it. All 26 tests fail.
+
+**The bug:** the loop in `biggest_proper_factor` checks `num - d == 0`. That is only true when `d == num`, and `d` never reaches `num` in `range(num)`. So the function never returns a value and gives back `None` for every input. I ran it directly: 21, 32 and 7 all came back as `None`, though the docstring says 21 should give 7 and 32 should give 16. The check should be `num % d == 0`, with the loop skipping 0, e.g. `range(num - 1, 0, -1)`.
+
+**The tests** are in `<work>\work\test_solution.py` and check what the docstring promises:
+- **Known answers (10 cases):** the two docstring examples, primes (which should give 1), squares, and composites such as 1001 → 143.
+- **Valid divisor:** the result is an int, at least 1, smaller than `num`, and divides `num` exactly.
+- **Largest divisor:** nothing between the result and `num` also divides `num`.
+
+**Result:** `python -m pytest -q test_solution.py` gives 26 failed, 0 passed. Every failure is because the function returns `None`.
+
+I did not write tests that expect `None` just to get a passing run. They would lock in the bug. Changing the check to `num % d == 0` and skipping 0 should make all 26 pass, but I haven't run that because I didn't edit `solution.py`.
+
+failed: the tests can't pass because `solution.py` has a bug that makes it return `None` for every input, and I wasn't allowed to change it. The tests check the documented behavior and all 26 fail. Changing `num - d == 0` to `num % d == 0` and skipping 0 should fix it.

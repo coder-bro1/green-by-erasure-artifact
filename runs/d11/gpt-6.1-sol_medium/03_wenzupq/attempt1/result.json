@@ -1,0 +1,70 @@
+{
+  "task": {
+    "pair_id": "Python/56",
+    "condition": "buggy",
+    "order": 3,
+    "folder": "wenzupq",
+    "solution_sha256": "17ddff6d10a3372a532107ef735ad9304e1bd9fb66285421365ad96449468ce5"
+  },
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T09:23:49.010330+00:00",
+  "finished": "2026-10-11T09:24:50.727848+00:00",
+  "seconds": 61.3,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12a46-8e9d-7251-bb2a-782131e752d1",
+  "usage": [
+    {
+      "input_tokens": 127936,
+      "cached_input_tokens": 115584,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1355,
+      "reasoning_output_tokens": 87
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": true,
+  "snapshots": [
+    {
+      "time": "2026-10-11T09:23:49.036331+00:00",
+      "file": "solution.py",
+      "sha256": "b85ff4f81bf4ca0ba3911eb755720fedab4c0c778797e77212f51fc668caff7e",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:24:29.672681+00:00",
+      "file": "test_solution.py",
+      "sha256": "bb4e6d8922d2e76d1d2c6b4362c3c6daae3bde68335f7e1528de3ad42bd21776",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T09:24:37.809145+00:00",
+      "file": "solution.py",
+      "sha256": "1899624e2dd812dd15849baf3149789d63ac66e55fd6393ada978144f29efc8e",
+      "stored": "0002__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:24:37.836142+00:00",
+      "file": "test_solution.py",
+      "sha256": "6bf7568ec40d15bf8dfeb75439e1c26a911d4b016121a6f46fd48e2475b8fb7a",
+      "stored": "0003__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T09:24:44.979859+00:00",
+      "file": "pytest.ini",
+      "sha256": "ac2cea70bef854b9f05fb739914fe09ec857d2eb52301205370c975ace575838",
+      "stored": "0004__pytest.ini"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

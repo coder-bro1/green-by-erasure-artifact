@@ -1,0 +1,9 @@
+Added [test_solution.py](/<work>/wmpddpz/test_solution.py) covering edge cases and input preservation. Fixed `solution.py` dropping the final element.
+
+Verified **12 passed**, including the doctest:
+
+```sh
+python -m pytest test_solution.py solution.py -q -p no:cacheprovider --doctest-modules
+```
+
+Explicit paths and disabled caching avoid this environment’s cache-directory permission errors.

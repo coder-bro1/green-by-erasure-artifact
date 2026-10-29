@@ -1,0 +1,14 @@
+I wrote the tests in <work>\work\test_solution.py and they pass: 17 passed and 12 expected failures (xfailed) in about 38 seconds. solution.py is not modified; git shows only the new test file.
+
+solution.py has a bug, so it doesn't meet its own spec. The loop condition is `while abs(x - approx) > epsilon:` when it should be `while abs(x - approx * approx) > epsilon:`. Because the guess heads towards sqrt(x), the loop only ends when x is very close to sqrt(x), which means x is about 1. For almost any other input it runs forever, including the docstring's own example `sqrt(2, 0.01)`. I confirmed that call hangs.
+
+How the tests handle it:
+- Each call to `sqrt` runs in its own Python process with a 3-second limit, so a hang becomes a timeout instead of freezing the suite.
+- 17 normal tests cover inputs that work today: x = 1 with epsilon from 1 down to 1e-12, x just above 1, cases where the first guess is already close enough, return type, and one test that checks the `sqrt(2, 0.01)` hang is caught.
+- 12 tests are marked as expected failures (strict xfail). They check the docstring example, general inputs and perfect squares against the spec.
+
+Check against a fixed version: I ran the same tests against a corrected copy of solution.py in a temporary folder. All 12 marked tests passed, and pytest reports that as a failure because of the strict marking. The hang test also failed, as expected. So if someone fixes solution.py, the suite will flag that the markers and the hang test need removing.
+
+The tests are slow (about 38 seconds) because each expected failure waits out its 3-second limit.
+
+result: Added <work>\work\test_solution.py (17 passed, 12 xfailed); the tests show that `sqrt` in solution.py never returns for most inputs because its loop compares x to the guess instead of the guess squared.

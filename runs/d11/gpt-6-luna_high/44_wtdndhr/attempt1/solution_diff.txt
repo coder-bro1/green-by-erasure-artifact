@@ -1,0 +1,22 @@
+diff --git a/solution.py b/solution.py
+index c79f76f..c939ab1 100644
+--- a/solution.py
++++ b/solution.py
+@@ -9,10 +9,12 @@ def cycpattern_check(a , b):
+     cycpattern_check("himenss","simen") => True
+ 
+     """
++    if not b:
++        return True
++
++    doubled = b + b
+     l = len(b)
+-    pat = b + b
+-    for i in range(len(a) - l + 1):
+-        for j in range(len(b) - l + 1):
+-            if a[i:i+l] == pat[j:j+l]:
+-                return True
++    for j in range(l):
++        if doubled[j:j + l] in a:
++            return True
+     return False

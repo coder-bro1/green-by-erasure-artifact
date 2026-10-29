@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wqy7j5v/test_solution.py) covering examples, edge cases, and exhaustive short sequences. `solution.py` is unchanged.
+
+`python -m pytest -q`: **14 passed, 5 xfailed**.
+
+The five strict xfails preserve the expected values: extra spaces can incorrectly add `''` to the returned dictionary when its count ties the most frequent letter. Added pytest configuration to avoid cache permission errors.

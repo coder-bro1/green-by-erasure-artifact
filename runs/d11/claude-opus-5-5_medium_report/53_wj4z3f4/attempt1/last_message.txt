@@ -1,0 +1,17 @@
+I wrote the tests in `<work>\work\test_solution.py`. The suite runs clean (`python -m pytest test_solution.py`): 18 passed and 7 xfailed (expected failures) in about 35s. I did not change `solution.py`.
+
+**What the tests cover:**
+- **`is_palindrome`:** strings that are palindromes, including the empty string, single characters, and even and odd lengths. Also strings that are not, including the case-sensitive "Aa".
+- **`make_palindrome` with input that is already a palindrome** ('', 'a', 'aa', 'aba', 'racecar', 'abba'): it returns the input unchanged. These pass.
+- **`make_palindrome` with input that is not a palindrome:** the docstring examples 'cat' → 'catac' and 'cata' → 'catac', plus 'ab', 'abc', 'xyz', 'abb' and 'jerry'. Each test checks the exact expected value, that the result is a palindrome, and that it starts with the input. All 7 are marked `@pytest.mark.xfail(strict=True)`.
+
+**Bug in `solution.py`:** `make_palindrome` never returns for any input that is not already a palindrome, so it fails its own `'cat'` and `'cata'` examples. The loop
+```python
+while not is_palindrome(string):
+    beginning_of_suffix += 1
+```
+checks the whole string, which never changes, so the condition is always true. Per the docstring's algorithm it should check the suffix: `while not is_palindrome(string[beginning_of_suffix:]):`.
+
+**Why those tests run in a subprocess:** a plain call would freeze pytest instead of failing. Each of those calls runs in its own Python process with a 5-second limit, and a timeout counts as a failure. I ran them with `--runxfail` and they fail with "make_palindrome('ab') did not return within 5s", so the xfails are caused by the hang and nothing else. Once the loop is fixed these tests will pass, and `strict=True` will make pytest report them as unexpected passes so the markers get removed.
+
+result: Tests for `solution.py` are in `<work>\work\test_solution.py` (18 pass, 7 strict xfail); `make_palindrome` loops forever on any input that isn't already a palindrome, including its own 'cat' example.

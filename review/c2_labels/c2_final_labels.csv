@@ -1,0 +1,77 @@
+case,agent,merged,link,title,rater_A_why,rater_B_why,final_why,rater_A_says,rater_B_says,final_says,how
+C001,OpenAI_Codex,yes,https://github.com/TracecatHQ/tracecat/pull/1493,feat: surface workflow input schema when running from case,I,U,U,N,N,N,adjudicated
+C002,Claude_Code,yes,https://github.com/mlflow/mlflow/pull/17554,Fix InstructionsJudge template variable handling,I,I,I,N,N,N,agreed
+C003,Claude_Code,no,https://github.com/simonw/datasette/pull/2533,"Remove old permission_allowed() methods, complete migration to new allowed() system",W,U,U,N,N,N,adjudicated
+C006,Copilot,yes,https://github.com/mlflow/mlflow/pull/18243,Migrate last 5 files from @mock.patch decorators to context managers,M,M,M,N,N,N,agreed
+C008,OpenAI_Codex,no,https://github.com/netket/netket/pull/2064,Implement SpinfulParticle and ParticleSet,I,I,I,Y,N,Y,adjudicated
+C009,Devin,no,https://github.com/crewAIInc/crewAI/pull/3077,Fix performance issue: cache agent knowledge to avoid reloading on every kickoff,I,I,I,N,N,N,agreed
+C010,OpenAI_Codex,yes,https://github.com/mfat/sshpilot/pull/294,Add jump host selection and agent forwarding,U,U,U,N,N,N,agreed
+C011,OpenAI_Codex,yes,https://github.com/Kiln-AI/Kiln/pull/365,refactor: explicit input_path versus path distinction and better tests,I,I,I,Y,Y,Y,agreed
+C012,Claude_Code,no,https://github.com/llama-farm/llamafarm/pull/32,"PREVIEW: 🚀 feat: LlamaFarm Enterprise AI Framework - Comprehensive Models, Prompts & RAG System",I,U,U,N,N,N,adjudicated
+C013,Devin,no,https://github.com/crewAIInc/crewAI/pull/2034,fix: Remove OpenAI dependency for memory reset when using alternative LLMs,U,U,U,N,N,N,agreed
+C014,OpenAI_Codex,no,https://github.com/charlesvestal/extending-move/pull/476,Implement pitchbend editor for drum pads,I,U,M,N,N,N,adjudicated
+C015,OpenAI_Codex,no,https://github.com/marin-community/levanter/pull/1095,Add torch-free radix cache,W,U,W,N,N,N,adjudicated
+C016,OpenAI_Codex,yes,https://github.com/graphql-python/graphql-server/pull/134,Enable Chalice multipart uploads,E,E,E,N,N,N,agreed
+C017,OpenAI_Codex,no,https://github.com/charlesvestal/extending-move/pull/38,Implement HTML file browser for preset tools,I,E,E,N,N,N,adjudicated
+C019,Copilot,yes,https://github.com/NewFuture/DDNS/pull/528,enhance(noip): Remove base64 dependency and use URL-embedded authentication for NoIP provider,I,I,I,N,N,N,agreed
+C022,OpenAI_Codex,yes,https://github.com/willmiao/ComfyUI-Lora-Manager/pull/573,feat: batch model update refresh using Civitai bulk API,I,I,I,N,N,N,agreed
+C023,Copilot,no,https://github.com/pavelzbornik/whisperX-FastAPI/pull/136,Implement enterprise-grade production enhancements for whisperX FastAPI,I,I,I,N,N,N,agreed
+C025,Devin,no,https://github.com/crewAIInc/crewAI/pull/2792,Fix issue #2791: Task tools now combine with agent tools instead of overriding them,I,I,I,N,Y,Y,adjudicated
+C026,OpenAI_Codex,yes,https://github.com/jrkropp/open-webui-developer-toolkit/pull/621,Update markers to v2 format,I,I,I,Y,N,N,adjudicated
+C027,Copilot,yes,https://github.com/QuantEcon/QuantEcon.py/pull/794,ENH: Add timeit function for multiple runs timing with statistics,I,I,I,N,N,N,agreed
+C028,Devin,no,https://github.com/crewAIInc/crewAI/pull/3523,Fix Windows CLI execution issue with subprocess permissions,W,U,W,N,N,N,adjudicated
+C030,Copilot,yes,https://github.com/microsoft/Qcodes/pull/7240,Fix inferred parameters missing from dataset when explicitly added,E,I,E,N,N,N,adjudicated
+C031,OpenAI_Codex,yes,https://github.com/mfat/sshpilot/pull/296,Add jump host selection and agent forwarding,U,U,U,N,N,N,agreed
+C032,Cursor,yes,https://github.com/WorkflowAI/WorkflowAI/pull/465,send_feedback MCP tool,I,I,I,N,N,N,agreed
+C033,Copilot,yes,https://github.com/deepmodeling/deepmd-kit/pull/4903,feat: Add eval-desc CLI command for descriptor evaluation with 3D output format,I,I,I,N,N,N,agreed
+C034,OpenAI_Codex,yes,https://github.com/Uberi/speech_recognition/pull/845,Add verbose parameter to recognize_vosk(),M,I,I,N,N,N,adjudicated
+C036,Copilot,yes,https://github.com/datalayer/jupyter-mcp-server/pull/41,Add dedicated integration tests CI workflow with standard Python setup and comprehensive matrix testing,M,M,M,N,N,N,agreed
+C038,Copilot,yes,https://github.com/deepmodeling/dpgen/pull/1798,fix(autotest): fix `forward_common_files` for custom `in_lammps` paths,M,M,M,N,N,N,agreed
+C039,Google_Jules,yes,https://github.com/sunriseapps/imagesorcery-mcp/pull/6,Refactor mask handling to use PNG files,I,I,I,N,Y,Y,adjudicated
+C040,Devin,no,https://github.com/ag2ai/ag2/pull/693,Fix Async Mocking in TelegramAgent Tests,W,W,W,N,N,N,agreed
+C041,OpenAI_Codex,yes,https://github.com/mfat/sshpilot/pull/295,Add jump host selection and agent forwarding,U,U,U,N,N,N,agreed
+C042,OpenAI_Codex,yes,https://github.com/mfat/sshpilot/pull/447,Refine hostname handling for alias-only SSH entries,I,I,I,Y,Y,Y,agreed
+C043,Copilot,yes,https://github.com/mlflow/mlflow/pull/15839,Add support for classmethods and staticmethods to @mlflow.trace decorator,U,W,W,N,N,N,adjudicated
+C044,Claude_Code,yes,https://github.com/getzep/zep/pull/420,feat: Enhance CrewAI integration with broader Zep functionality,I,I,I,N,N,N,agreed
+C045,Copilot,no,https://github.com/NVIDIA-NeMo/Curator/pull/987,"Standardize Stage Naming Convention: CamelCase classes, snake_case identifiers",I,I,I,Y,N,Y,adjudicated
+C046,Claude_Code,no,https://github.com/mlflow/mlflow/pull/17454,Add AlignmentOptimizer abstract class for Judge alignment,U,U,U,N,N,N,agreed
+C048,Devin,no,https://github.com/atopile/atopile/pull/1438,Libs: Parts: Fix trait parsing for footprint names containing commas (Issue #1278),E,I,I,N,Y,Y,adjudicated
+C049,Claude_Code,no,https://github.com/pyvista/pyvista/pull/7692,Test version update error handling,U,U,U,N,N,N,agreed
+C050,Devin,no,https://github.com/airbytehq/airbyte/pull/61521,feat(source-file): Add HTTP proxy URL and custom CA certificate support,U,U,U,N,N,N,agreed
+C051,Devin,yes,https://github.com/crewAIInc/crewAI/pull/1937,fix: handle multiple task outputs correctly in conditional tasks,I,I,I,N,N,N,agreed
+C053,Devin,no,https://github.com/crewAIInc/crewAI/pull/2270,fix: Improve knowledge effectiveness in agent and crew execution,I,I,I,N,N,N,agreed
+C055,OpenAI_Codex,yes,https://github.com/MontrealAI/AGI-Alpha-Agent-v0/pull/2053,[alpha_factory] add module entry for business v3 demo,E,E,E,N,N,N,agreed
+C059,Claude_Code,yes,https://github.com/khive-ai/lionagi/pull/844,test: Eliminate API calls from test suite + improve coverage to 85%,M,M,M,N,N,N,agreed
+C060,Copilot,yes,https://github.com/FarisZR/knocker/pull/8,Security Audit: Fix Critical IP Spoofing and Multiple Vulnerabilities,I,I,I,N,Y,Y,adjudicated
+C061,Copilot,yes,https://github.com/NewFuture/DDNS/pull/498,feat(AliESA) 阿里云边缘安全加速 DNS provider support,I,U,U,N,N,N,adjudicated
+C062,OpenAI_Codex,yes,https://github.com/MontrealAI/AGI-Alpha-Agent-v0/pull/2526,[alpha_factory] enhance meta refinement,I,I,I,Y,Y,Y,agreed
+C064,OpenAI_Codex,yes,https://github.com/tomquist/b2500-meter/pull/134,Add flexible modbus payload decoding,I,M,M,N,N,N,adjudicated
+C066,OpenAI_Codex,yes,https://github.com/portiaAI/portia-sdk-python/pull/749,Append plan run ID to trace metadata,M,M,M,N,N,N,agreed
+C067,OpenAI_Codex,yes,https://github.com/wshobson/maverick-mcp/pull/24,feat: add tool estimation config and rate limiting infrastructure,U,E,E,N,N,N,adjudicated
+C069,Copilot,yes,https://github.com/translate/translate/pull/5760,Add support for data-translate-ignore attribute and translate:off/on comments in HTML translation,I,U,M,N,N,N,adjudicated
+C070,Cursor,yes,https://github.com/WorkflowAI/WorkflowAI/pull/509,Implement elegant sorting solution and tests,I,I,I,N,N,N,agreed
+C071,Cursor,yes,https://github.com/getsentry/sentry-python/pull/4459,fix: Ensure tags values are strings,I,I,I,N,N,N,agreed
+C072,Claude_Code,yes,https://github.com/Significant-Gravitas/AutoGPT/pull/11008,fix(backend): prevent duplicate graph executions across multiple executor pods,E,U,U,N,N,N,adjudicated
+C073,OpenAI_Codex,yes,https://github.com/machinewrapped/llm-subtrans/pull/371,Simplify test subtitle helper generation,W,U,W,N,N,N,adjudicated
+C074,Claude_Code,no,https://github.com/Metta-AI/metta/pull/2484,Optimize GitHub Actions workflows with pytest-testmon,W,U,W,N,N,N,adjudicated
+C076,OpenAI_Codex,yes,https://github.com/Ziems/arbor/pull/109,Autodetect GPUs,W,W,W,Y,N,N,adjudicated
+C077,OpenAI_Codex,yes,https://github.com/jrkropp/open-webui-developer-toolkit/pull/354,Fix event emitter usage in responses pipeline,I,I,I,N,N,N,agreed
+C079,Copilot,yes,https://github.com/Ljzd-PRO/KToolBox/pull/274,Fix DDoS Guard cookie field names to use new underscore format,I,I,I,Y,Y,Y,agreed
+C080,Google_Jules,yes,https://github.com/HarrisonKramer/optiland/pull/342,Finalize and Test `optiland.environment` Subpackage,M,M,M,N,Y,Y,adjudicated
+C081,Copilot,yes,https://github.com/microsoft/Olive/pull/1897,Add dynamic version control to Olive documentation based on Git tags,I,U,U,N,N,N,adjudicated
+C082,Claude_Code,yes,https://github.com/pathintegral-institute/mcpm.sh/pull/221,🤖 Add Comprehensive AI Agent Friendly CLI Support,I,I,I,N,N,N,agreed
+C083,OpenAI_Codex,yes,https://github.com/mfat/sshpilot/pull/344,Drop SSH alias handling,I,I,I,Y,Y,Y,agreed
+C085,OpenAI_Codex,yes,https://github.com/swarmauri/swarmauri-sdk/pull/1478,Add IPublish interface and PublishBase,I,W,W,N,N,N,adjudicated
+C086,Devin,no,https://github.com/crewAIInc/crewAI/pull/2070,feat: implement hierarchical agent delegation with allowed_agents parameter,I,E,E,N,N,N,adjudicated
+C088,Devin,no,https://github.com/crewAIInc/crewAI/pull/2069,feat: implement hierarchical agent delegation with allowed_agents parameter,I,I,I,N,N,N,agreed
+C089,OpenAI_Codex,yes,https://github.com/mfat/sshpilot/pull/434,Default HostName to host alias when missing,I,I,I,Y,Y,Y,agreed
+C090,OpenAI_Codex,yes,https://github.com/hald/things-mcp/pull/8,Add initial Heading support for Todos,M,M,M,N,N,N,agreed
+C092,OpenAI_Codex,yes,https://github.com/machinewrapped/llm-subtrans/pull/323,Detect subtitle format and generalize override tags,I,I,I,Y,Y,Y,agreed
+C093,OpenAI_Codex,yes,https://github.com/jaseci-labs/jaseci/pull/1978,A step toward no more subnodelists,I,I,I,N,N,N,agreed
+C094,Devin,no,https://github.com/crewAIInc/crewAI/pull/3063,Fix: Add CREWAI_DISABLE_EMOJIS environment variable to disable emojis in logs,I,I,I,N,N,N,agreed
+C095,Copilot,no,https://github.com/SkBlaz/py3plex/pull/36,Add comprehensive function-level test coverage with robust dependency handling,W,W,W,N,N,N,agreed
+C096,OpenAI_Codex,yes,https://github.com/portiaAI/portia-sdk-python/pull/781,Add SubplanStep and subplan builder support,I,I,I,N,N,N,agreed
+C097,OpenAI_Codex,yes,https://github.com/featureform/enrichmcp/pull/101,Add test for Literal in describe_model,I,I,I,N,N,N,agreed
+C098,Copilot,no,https://github.com/NewFuture/DDNS/pull/493,[Feature] Add AliESA (阿里云边缘安全加速) DNS provider support,I,I,I,N,N,N,agreed
+C099,OpenAI_Codex,yes,https://github.com/swarmauri/swarmauri-sdk/pull/1447,Use websocket for Jupyter IOPub retrieval,I,I,I,N,N,N,agreed
+C100,OpenAI_Codex,yes,https://github.com/andrewm4894/anomstack/pull/193,Trim example scripts,I,I,I,N,Y,Y,adjudicated

@@ -1,0 +1,111 @@
+{
+  "pair_id": "QuixBugs/flatten",
+  "version": "fixed",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_4ca089afa1a861b6.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_b400bc73e1fd48fc.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_9b47adc7015ea0df.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_23acb5f3eede995c.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_9670e7c5fd30a5c7.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_085a00acc9ef2ec3.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_63e634b457548bb1.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_c52873ed6680fe4d.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_4f4608629742be37.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_dc8177eda63df2cd.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-flatten__fixed__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "02a7af9b026740929d94396995f40aa6",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6dd8fafb5cd045d1896667b02eb7e7f9",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "bddb1fd4df434a84b76c9d395e15a903",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.3,
+  "finished": "2026-10-28T21:36:18.516730+00:00"
+}

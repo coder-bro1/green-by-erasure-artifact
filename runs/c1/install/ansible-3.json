@@ -1,0 +1,64 @@
+{
+ "project": "ansible",
+ "bug": 3,
+ "python_pinned": "3.6.9",
+ "python_used": "3.6.8",
+ "started": "2026-10-19 04:50:35",
+ "test_files": [
+  "test/units/module_utils/test_distribution_version.py"
+ ],
+ "checkout_eol": "lf",
+ "install_buggy": {
+  "created": true,
+  "requirements": 11,
+  "failed_requirements": [
+   "ansible-base==2.10.0.dev0"
+  ],
+  "setup": [
+   "python setup.py install",
+   "pip3 install pytest==3.10.1",
+   "pip3 install pytest-mock==1.2"
+  ],
+  "failed_setup": [
+   "python setup.py install"
+  ],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 11,
+  "failed_requirements": [
+   "ansible-base==2.10.0.dev0"
+  ],
+  "setup": [
+   "python setup.py install",
+   "pip3 install pytest==3.10.1",
+   "pip3 install pytest-mock==1.2"
+  ],
+  "failed_setup": [
+   "python setup.py install"
+  ],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest test/units/module_utils/test_distribution_version.py::test_distribution_version"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "norun",
+   "commands": [
+    {
+     "command": "pytest test/units/module_utils/test_distribution_version.py::test_distribution_version",
+     "exit": 4,
+     "outcome": "norun",
+     "import_error": true,
+     "last_line": "E   ModuleNotFoundError: No module named 'grp'"
+    }
+   ]
+  }
+ ],
+ "step2": "fail: the buggy checkout cannot import the project or a dependency",
+ "seconds": 90
+}

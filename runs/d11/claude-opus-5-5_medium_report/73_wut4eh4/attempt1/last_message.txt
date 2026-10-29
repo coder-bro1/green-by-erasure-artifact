@@ -1,0 +1,21 @@
+I wrote 17 pytest tests for `solution.py`, and all of them pass. None needed xfail, because `select_words` matched its docstring in every case I tested. I did not change `solution.py`.
+
+The tests check:
+- **Docstring examples:** all five, including "Mary" with 3 consonants and "Uncle" with 3.
+- **Empty or blank input:** an empty string and a string of only spaces both return an empty list.
+- **Zero consonants:** words made only of vowels are returned.
+- **Letter case:** uppercase vowels are not counted as consonants, uppercase consonants are, and words come back in their original case.
+- **The letter "y":** it counts as a consonant.
+- **Order:** results keep the order the words appear in, and repeated words are kept.
+- **Spacing:** extra spaces before, between or after words make no difference.
+- **No match:** returns an empty list.
+- **Single word:** "strengths" has 8 consonants and is returned.
+- **Fresh list:** each call returns a new list object.
+
+One thing the docstring leaves open: inputs with characters other than letters and spaces. Characters like digits or punctuation would be counted as consonants. I didn't test that, since the docstring says to assume only letters and spaces.
+
+Files are in <work>\work:
+- test_solution.py
+- solution.py (unchanged)
+
+result: 17 pytest tests for select_words in <work>\work\test_solution.py all pass, with no xfails.

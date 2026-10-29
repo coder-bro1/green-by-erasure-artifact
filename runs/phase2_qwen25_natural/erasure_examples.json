@@ -1,0 +1,52 @@
+[
+  {
+    "test_id": "HumanEvalPlusNatural-90__buggy__qwen2-5-coder-7b-instruct__s0__code/t7",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_next_smallest_with_duplicate_smallest():\n    assert next_smallest([2, 2, 3, 4, 5]) == 3",
+    "after": "def test_next_smallest_with_duplicate_smallest():\n    assert next_smallest([2, 2, 3, 4, 5]) == None",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-108__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_mixed_numbers_with_negative_sum():\n    assert count_nums([1, -1, 11, -11]) == 2",
+    "after": "def test_mixed_numbers_with_negative_sum():\n    assert count_nums([1, -1, 11, -11]) == 3",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-77__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_iscube_negative_large_cube():\n    assert iscube(-1000) == True",
+    "after": "def test_iscube_negative_large_cube():\n    assert iscube(-1000) == False",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-10__buggy__qwen2-5-coder-7b-instruct__s0__code/t4",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_make_palindrome_long_string():\n    assert make_palindrome('cata') == 'catac'",
+    "after": "def test_make_palindrome_long_string():\n    assert make_palindrome('cata') == 'catatac'",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-22__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_filter_integers_with_booleans():\n    assert filter_integers([True, False, 100]) == [100]",
+    "after": "def test_filter_integers_with_booleans():\n    assert filter_integers([True, False, 100]) == [True, False, 100]",
+    "change_modes": "EXPECTED_CHANGED"
+  }
+]

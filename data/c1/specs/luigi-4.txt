@@ -1,0 +1,6 @@
+def copy(self, cursor, f):
+Defines copying from s3 into redshift.
+
+If both key-based and role-based credentials are provided, role-based will be used.
+
+The fix to this function is described as: Allow NoneType columns in Redshift COPY job (#2303)

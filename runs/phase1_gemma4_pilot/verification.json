@@ -1,0 +1,331 @@
+{
+  "P1-a": {
+    "pass": true,
+    "pairs": [
+      {
+        "pair_id": "Python/120",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/83",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/53",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/97",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/29",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/115",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/162",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/126",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/79",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/151",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/38",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/84",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/117",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/61",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/11",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/82",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/75",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/37",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/59",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/76",
+        "fixed": true,
+        "buggy": false
+      }
+    ]
+  },
+  "P1-c": {
+    "pass": true,
+    "checks": 400
+  },
+  "P1-e": {
+    "pass": true,
+    "errors": []
+  },
+  "P1-b": {
+    "pass": true,
+    "violations": [],
+    "textual_overlaps": 1967,
+    "note": "Textual overlaps are retained for manual inspection; coincidence does not establish data access."
+  },
+  "P1-d": {
+    "pass": true,
+    "sample": [
+      {
+        "test_id": "HumanEvalFix-53__buggy__gemma4-12b__s0__code/t1",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-126__buggy__gemma4-12b__s0__code/t1",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-11__fixed__gemma4-12b__s0__code/t6",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-83__buggy__gemma4-12b__s0__code/t5",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-151__fixed__gemma4-12b__s0__spec/t9",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-61__fixed__gemma4-12b__s0__spec/t8",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-53__buggy__gemma4-12b__s0__code/t5",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-82__fixed__gemma4-12b__s0__spec/t8",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-38__fixed__gemma4-12b__s0__spec/t7",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-97__fixed__gemma4-12b__s0__code/t7",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-11__buggy__gemma4-12b__s0__code/t7",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-126__buggy__gemma4-12b__s0__spec/t1",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-76__fixed__gemma4-12b__s0__spec/t1",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-11__buggy__gemma4-12b__s0__code/t5",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-82__fixed__gemma4-12b__s0__spec/t6",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-59__fixed__gemma4-12b__s0__spec/t0",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-120__buggy__gemma4-12b__s0__spec/t2",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-151__fixed__gemma4-12b__s0__spec/t7",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-59__fixed__gemma4-12b__s0__spec/t8",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-83__buggy__gemma4-12b__s0__code/t2",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-38__buggy__gemma4-12b__s0__code/t1",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-115__fixed__gemma4-12b__s0__spec/t4",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-76__buggy__gemma4-12b__s0__spec/t9",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-115__buggy__gemma4-12b__s0__code/t3",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-126__buggy__gemma4-12b__s0__code/t8",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-11__fixed__gemma4-12b__s0__code/t2",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-53__buggy__gemma4-12b__s0__code/t8",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-76__buggy__gemma4-12b__s0__code/t8",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-53__fixed__gemma4-12b__s0__code/t3",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-126__buggy__gemma4-12b__s0__spec/t9",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      }
+    ]
+  },
+  "P1-f": {
+    "pass": true,
+    "verified": 10,
+    "required": 10
+  },
+  "P1-i": {
+    "pass": true,
+    "fields": [
+      "model_digest",
+      "ollama_version",
+      "prompt_hashes",
+      "dataset_revision",
+      "harness_commit",
+      "options"
+    ]
+  },
+  "P1-m": {
+    "pass": true
+  },
+  "P1-h": {
+    "pass": true,
+    "evidence": "Offline test_resume_no_repeated_calls and persistent client-cache test; timing fields differ by construction."
+  },
+  "section8_all_pass": true,
+  "unit_test_output": "...........................................................              [100%]\n59 passed in 24.13s\n"
+}

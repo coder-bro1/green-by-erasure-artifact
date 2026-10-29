@@ -1,0 +1,559 @@
+{
+  "pair_id": "HumanEvalPlusNatural/97",
+  "benchmark": "HumanEvalPlusNatural",
+  "version": "fixed",
+  "tests": {
+    "tests/test_c786efe146a0c3ce.py": [
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        0
+      ],
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        0
+      ],
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        0
+      ],
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        0
+      ]
+    ],
+    "tests/test_e05d45f475971458.py": [
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        0
+      ]
+    ],
+    "tests/test_e864accec1534b5d.py": [
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen25_natural",
+        "HumanEvalPlusNatural-97__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        0
+      ]
+    ]
+  },
+  "baseline": {
+    "tests/test_c786efe146a0c3ce.py": "PASS",
+    "tests/test_e05d45f475971458.py": "FAIL",
+    "tests/test_e864accec1534b5d.py": "FAIL"
+  },
+  "baseline_fallback": [
+    false,
+    false
+  ],
+  "coverage_status": "ok",
+  "coverage": {
+    "tests/test_e05d45f475971458.py": {
+      "lines": [
+        13
+      ],
+      "arcs": [
+        [
+          -2,
+          13
+        ],
+        [
+          13,
+          -2
+        ]
+      ]
+    },
+    "tests/test_c786efe146a0c3ce.py": {
+      "lines": [
+        13
+      ],
+      "arcs": [
+        [
+          -2,
+          13
+        ],
+        [
+          13,
+          -2
+        ]
+      ]
+    },
+    "tests/test_e864accec1534b5d.py": {
+      "lines": [
+        13
+      ],
+      "arcs": [
+        [
+          -2,
+          13
+        ],
+        [
+          13,
+          -2
+        ]
+      ]
+    }
+  },
+  "mutants": [
+    {
+      "job_id": "394bba3487704850a848ceddae4bb760",
+      "operator": "core/ReplaceBinaryOperator_Mul_LShift",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.55,
+      "mutant_sha256": "6f4badae0902d6598b8dd9ac4ac5b316183ef30e8ba48163f538ac0ce01924a2"
+    },
+    {
+      "job_id": "8252a19a7d0547649006ebfe15cb65f7",
+      "operator": "core/ReplaceBinaryOperator_Mul_Pow",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.61,
+      "mutant_sha256": "73fe1d70ecde91dae0f1bdc48322f4700886cf154639d1584c2228b1b5fadc2a"
+    },
+    {
+      "job_id": "ab259b777b104200a7ae8762c71fb12a",
+      "operator": "core/NumberReplacer",
+      "occurrence": 0,
+      "start": [
+        13,
+        23
+      ],
+      "end": [
+        13,
+        24
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.59,
+      "mutant_sha256": "a810b68dfce3739895da056769c5ef6a468c259042188d1d6e9d2dc08a7a942d"
+    },
+    {
+      "job_id": "f2734854595c45e5be2d5f596c2dd5c7",
+      "operator": "core/ReplaceBinaryOperator_Mul_BitAnd",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.72,
+      "mutant_sha256": "bc7458267ec3c5ae7512a1cddb2fd15e65dd189925f281339a4c8bffb0e02596"
+    },
+    {
+      "job_id": "50eedc2ca7954ac9ba8c5f59fd9d18a5",
+      "operator": "core/ReplaceBinaryOperator_Mul_FloorDiv",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.64,
+      "mutant_sha256": "6ce253fa9e50b40f7307b1981f1e85c072917862ee629f0615f6d9bc836b83dd"
+    },
+    {
+      "job_id": "ac826e3ac9af46dd8bfe53d7e9d5313c",
+      "operator": "core/NumberReplacer",
+      "occurrence": 2,
+      "start": [
+        13,
+        41
+      ],
+      "end": [
+        13,
+        42
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.56,
+      "mutant_sha256": "485d5b06e94981c23397a0adc301533ee177663e4570f9b351e242ff8f9ab0b2"
+    },
+    {
+      "job_id": "63cc301c3ef841609de7580edd6ab80e",
+      "operator": "core/ReplaceUnaryOperator_Delete_USub",
+      "occurrence": 1,
+      "start": [
+        13,
+        40
+      ],
+      "end": [
+        13,
+        41
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.56,
+      "mutant_sha256": "403b5d5dda03c7a3e6d299e3e3bc00dcc4c8d26580294b3991ed3e615d1eeb2b"
+    },
+    {
+      "job_id": "d8de97cb8161417ea8ff6e165af1521f",
+      "operator": "core/ReplaceBinaryOperator_Mul_Add",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.53,
+      "mutant_sha256": "d9e42484b80250b06aefad204f5b029b03ce2a6d42132f4e903def08d69f9086"
+    },
+    {
+      "job_id": "6b0ce437c0fa4ddbb07869430bd699d2",
+      "operator": "core/ReplaceBinaryOperator_Mul_Mod",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.55,
+      "mutant_sha256": "e1d9fddcb909db1f6b5d6b410d6265e65252baa3e130fa8d71dc62fd88f3c4d9"
+    },
+    {
+      "job_id": "3de60a0f6c614882a1c83a1fc8ccef67",
+      "operator": "core/ReplaceBinaryOperator_Mul_Sub",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.73,
+      "mutant_sha256": "7cc4ac08e44d17dddb0737663cac9223cebfc287a7d1ec79b3641a0fd57a4eab"
+    },
+    {
+      "job_id": "a2064c73fb0641518c35f4a2cbb10a42",
+      "operator": "core/ReplaceUnaryOperator_Delete_USub",
+      "occurrence": 0,
+      "start": [
+        13,
+        22
+      ],
+      "end": [
+        13,
+        23
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.58,
+      "mutant_sha256": "05653cc21ab6fe4e2fceebf48933e34ab0dfe4fdd4cc6dae664eb67a5b5cb6da"
+    },
+    {
+      "job_id": "56ea4e95a29f4a44bfc3bb18598b9f33",
+      "operator": "core/ReplaceBinaryOperator_Mul_Div",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.5,
+      "mutant_sha256": "ba1aabcc9af8e0464afb7dfb71c8d2e6d38cd474bf2db63f6dbd1c7713880ea7"
+    },
+    {
+      "job_id": "a6a0678c0344425ab9f9df51633be8e1",
+      "operator": "core/ReplaceUnaryOperator_USub_UAdd",
+      "occurrence": 1,
+      "start": [
+        13,
+        40
+      ],
+      "end": [
+        13,
+        41
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.5,
+      "mutant_sha256": "ab14b078909518f47bbbf35351e6f48f88853a28950cc8c6bbadea35f422110e"
+    },
+    {
+      "job_id": "a9b65d67e076486a8c7a66326eb9a6c3",
+      "operator": "core/ReplaceUnaryOperator_USub_UAdd",
+      "occurrence": 0,
+      "start": [
+        13,
+        22
+      ],
+      "end": [
+        13,
+        23
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.5,
+      "mutant_sha256": "8c00e385dc9e00a2036c234820b071ddd170df437b9e61bbef460bb7a28fbefa"
+    },
+    {
+      "job_id": "a54f6968d1de47939588c1fdb17e173e",
+      "operator": "core/ReplaceUnaryOperator_USub_Invert",
+      "occurrence": 0,
+      "start": [
+        13,
+        22
+      ],
+      "end": [
+        13,
+        23
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.5,
+      "mutant_sha256": "f39b2cae65675b33a85c992960f4da2bfa07481339e973907f141d4efa22ecf2"
+    },
+    {
+      "job_id": "61181264044c4dc5b78c4dd4220646ff",
+      "operator": "core/ReplaceUnaryOperator_USub_Invert",
+      "occurrence": 1,
+      "start": [
+        13,
+        40
+      ],
+      "end": [
+        13,
+        41
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.58,
+      "mutant_sha256": "eecb057f5a6ceda24be749dc3b4e7ccc263028c229bdccdc7e617c44cb020b6b"
+    },
+    {
+      "job_id": "da18fd24f8b04bdb81a962c589eea75e",
+      "operator": "core/ReplaceBinaryOperator_Mul_BitXor",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.64,
+      "mutant_sha256": "8291a639c8fc6e5990e26401819d237ad1922912d7c134b62f00320ca87a8caf"
+    },
+    {
+      "job_id": "eff7bf411e97480783d8f0776b383bb7",
+      "operator": "core/ReplaceUnaryOperator_USub_Not",
+      "occurrence": 0,
+      "start": [
+        13,
+        22
+      ],
+      "end": [
+        13,
+        23
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.64,
+      "mutant_sha256": "d185017d26028fa787bfbdb070553a5a58491ceae2f50201a88d724f5c42bbf5"
+    },
+    {
+      "job_id": "66d8bb80a4d3496e9ab615450a275c02",
+      "operator": "core/ReplaceBinaryOperator_Mul_BitOr",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.52,
+      "mutant_sha256": "0688f0a3006744b7f82fd1d65d4f0e10ea1437969096fd55eecc35107f9e27eb"
+    },
+    {
+      "job_id": "1348f529fd664c8aa54823e214686c56",
+      "operator": "core/NumberReplacer",
+      "occurrence": 1,
+      "start": [
+        13,
+        23
+      ],
+      "end": [
+        13,
+        24
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.55,
+      "mutant_sha256": "d2860f015a4b6a7ea14552acacec7082203ecbebb389792820ac6d89693f299d"
+    },
+    {
+      "job_id": "65386ba0e3824aa9825a7c27cc641194",
+      "operator": "core/NumberReplacer",
+      "occurrence": 3,
+      "start": [
+        13,
+        41
+      ],
+      "end": [
+        13,
+        42
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.55,
+      "mutant_sha256": "b7f916258c3195d04061e4ec806e8b298a7d7dd98a7f9f7e5a35f7e7ae3dfa9b"
+    },
+    {
+      "job_id": "c0db1306587d47a58a9dad590174826e",
+      "operator": "core/ReplaceBinaryOperator_Mul_RShift",
+      "occurrence": 0,
+      "start": [
+        13,
+        27
+      ],
+      "end": [
+        13,
+        28
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.53,
+      "mutant_sha256": "fd386a3e29f1a07a0f35a82360538101ec1fa6fda246c17581e73d25d3dea58a"
+    },
+    {
+      "job_id": "8a56e030ebb54159aaeac47a979c78e5",
+      "operator": "core/ReplaceUnaryOperator_USub_Not",
+      "occurrence": 1,
+      "start": [
+        13,
+        40
+      ],
+      "end": [
+        13,
+        41
+      ],
+      "killed_by": [
+        "tests/test_c786efe146a0c3ce.py"
+      ],
+      "fallback": false,
+      "seconds": 1.67,
+      "mutant_sha256": "a19ef8a8808e4a9dda5795d597fefee621b499cc4b61f5912145bed2e9f074dd"
+    }
+  ],
+  "seconds": 43.7,
+  "finished": "2026-10-15T09:04:53.010123+00:00"
+}

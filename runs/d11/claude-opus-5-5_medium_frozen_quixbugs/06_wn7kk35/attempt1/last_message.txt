@@ -1,0 +1,13 @@
+The tests are in `<work>\work\test_solution.py` and the suite passes: 16 passed, 10 xfailed. But `sieve()` in solution.py is broken: it returns `[]` for every input. Ten tests check correct prime output, so I had to mark those as expected failures for the suite to pass. I did not modify solution.py.
+
+**The bug:** the prime check is `if any((n % p > 0 for p in primes))`, and `primes` starts empty. `any()` over an empty list is always False, so nothing is ever added. `sieve(30)` returns `[]`. The line should use `all(...)`.
+
+**What the tests cover:**
+- **16 tests that pass now:** the result is a list; bounds of 0, 1 and negative give `[]`; output is sorted with no duplicates and stays within `[2, max]`; and the result never contains a composite, checked against a trial-division reference.
+- **10 tests that check correct output:** `sieve(2) == [2]`, `sieve(3)`, `sieve(10)`, the bound being included when it is prime, `sieve(20)`, the full list of primes up to 100, 168 primes up to 1000, and a match with the reference at 30, 97 and 500. These are marked `xfail(strict=True)` with the reason above, so they don't fail the run while the bug exists.
+
+**Check:** I ran the same tests against a copy of solution.py in the scratchpad with `any` changed to `all`. All 10 marked tests passed, so their expected values are right. Strict mode turns those passes into failures, so whoever fixes solution.py will need to remove the `@BUG` markers.
+
+To run: `python -m pytest -q test_solution.py` from `<work>\work`.
+
+result: Added `<work>\work\test_solution.py` (16 pass, 10 xfail); it shows that `sieve()` in `solution.py` always returns `[]` because it uses `any()` where it needs `all()`.

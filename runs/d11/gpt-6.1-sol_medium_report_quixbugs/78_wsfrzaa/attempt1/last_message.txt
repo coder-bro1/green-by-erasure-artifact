@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wsfrzaa/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **1 passed, 16 xfailed**.
+
+All expected values remain intact. The strict xfails document a bug: component merging modifies a set during iteration, raising `RuntimeError` instead of returning a spanning tree—even for the docstring example.
+
+Added pytest configuration to avoid inaccessible cache directories.

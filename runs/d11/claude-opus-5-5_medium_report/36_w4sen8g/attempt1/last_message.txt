@@ -1,0 +1,15 @@
+I wrote 12 tests for `derivative` in solution.py and all 12 pass (`python -m pytest -q test_solution.py`). I didn't change solution.py.
+
+None of the tests needed `xfail`: the function does what its docstring says, including both docstring examples.
+
+What the tests check:
+- **Values:** the two docstring examples, plus linear, x^2, x^4+1, negative and float coefficients.
+- **Constant polynomial:** a single coefficient gives `[]`.
+- **Empty input:** `[]` gives `[]`.
+- **Shape:** the result is a list one element shorter than the input.
+- **Input:** the input list isn't modified.
+
+The docstring doesn't say what should happen for a constant or empty input. I tested for `[]` in both cases because that's the mathematically sensible answer and what the code returns.
+
+File is in <work>\work:
+- test_solution.py

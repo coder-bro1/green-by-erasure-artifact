@@ -1,0 +1,15 @@
+I wrote the tests in `<work>\work\test_solution.py` and the suite passes (5 passed, 13 expected failures), but 13 of the tests only pass because they're marked as expected to fail. `solution.py` has a bug, and I left it unchanged as you asked.
+
+**The bug:** the last line of `greatest_common_divisor` is `return b`. When the loop ends `b` is always 0, so the function returns 0 for every input. It should be `return a`. For example, `greatest_common_divisor(25, 15)` returns 0 instead of 5, so the examples in its own docstring fail too.
+
+**How the tests handle it:**
+- **Correct-value tests (13):** a range of inputs (coprime, equal, one side 0, large numbers, either argument order) plus a check that the result divides both inputs. They assert the right answer, so they fail with the current code. Each is marked `xfail(strict=True)` with the reason written on it. Because the marking is strict, these tests will start failing once the bug is fixed, as a reminder to remove the markers.
+- **Plain tests (5):** they pass with or without the bug: `gcd(0, 0) == 0`, the result is an `int`, and swapping the arguments gives the same answer.
+
+**Checks run:**
+- `python -m pytest -v test_solution.py` gives 5 passed, 13 xfailed.
+- On a scratch copy with `return a` and the xfail markers removed, all 18 tests pass. So the tests are correct and the failures come only from the bug.
+
+The fix is to change `return b` to `return a` and delete the xfail markers. I didn't make that change because you said not to modify `solution.py`.
+
+result: Tests are in `<work>\work\test_solution.py` and pass (5 passed, 13 expected failures), but `solution.py` has a bug: it ends with `return b` instead of `return a`, so it always returns 0. The 13 correct-value tests are marked expected-to-fail until it's fixed.

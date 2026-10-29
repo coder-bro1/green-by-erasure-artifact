@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wevnc5t/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **19 passed, 6 expected failures**. Those six document the existing bug: values repeated more than twice are incorrectly accepted.
+
+Added pytest configuration to avoid cache permission errors.

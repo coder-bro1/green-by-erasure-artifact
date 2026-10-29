@@ -1,0 +1,89 @@
+{
+  "pair_id": "QuixBugs/kheapsort",
+  "version": "fixed",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_86f0612521dc6229.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_4bbebf8e5cdd8571.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_0e439aba6626634c.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_c9f9ffe8363a627b.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_cdef6a9b731ebca6.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_0fdb9f41e3124321.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_aca5111e0af3ebe0.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_ee8aec0d51727e31.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "f194ac7943a54a48a622d98eaac0ecf1",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c0025b783da746fd81bf7d423167fda4",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.3,
+  "finished": "2026-10-28T22:01:01.248884+00:00"
+}

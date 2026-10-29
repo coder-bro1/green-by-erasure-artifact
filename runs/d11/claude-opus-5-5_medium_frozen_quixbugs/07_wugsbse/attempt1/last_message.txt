@@ -1,0 +1,11 @@
+I added 22 tests in `<work>\work\test_solution.py`. They don't all truly pass: pytest reports **16 passed, 6 xfailed** (expected failures) because `solution.py` has a bug, and I didn't change it as instructed.
+
+**The bug:** `max_sublist_sum` never resets `max_ending_here` to 0 when the running sum goes negative. So it returns the largest sum of a sublist that starts at index 0, or 0 if that is negative. It does not return the largest sum of any sublist. Its own docstring example `[4, -5, 2, 1, -1, 3]` returns 4 instead of 5, and `[-2, 1, -3, 4, -1, 2, 1, -5, 4]` returns 2 instead of 6. The fix is one line in `solution.py`: `max_ending_here = max(0, max_ending_here + x)`.
+
+**What the tests check:** they follow the docstring's definition, `max(sum(arr[i:j]) ...)`, and compare against a slow brute-force reference function:
+- **Passing (16):** cases where the best sublist starts at the beginning, such as empty, single-element, all non-negative and all non-positive lists. Also: the result is never negative, the input isn't changed, and tuples and iterators are accepted.
+- **Expected failures (6):** five cases where the best sublist starts later (including the docstring example) and a random comparison against the brute-force reference. They are marked `xfail(strict=True)`, so once the bug is fixed they will pass unexpectedly and fail the run, which is the cue to remove the markers.
+
+I didn't change any expected values to match the wrong output. A run with `--runxfail` showed all 6 fail on the solution's answer (4 vs 5, 2 vs 6, and so on), while the reference agrees with every expected value.
+
+To run them: `python -m pytest -v <work>\work\test_solution.py`

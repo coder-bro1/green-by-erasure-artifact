@@ -1,0 +1,19 @@
+I wrote the tests in `<work>\work\test_solution.py`. They pass (28 passed, 9 expected failures), but `solution.py` has two bugs: it doesn't do everything its own docstring says. I didn't modify `solution.py`.
+
+**The bugs:**
+1. **The extension is never checked.** The docstring says the part after the dot must be `txt`, `exe` or `dll`, and the code even defines an `allowed` list, but it never uses it. So `validate_filename('file.pdf')`, `'file.'`, `'file.TXT'` and `'a.1234'` all return `'Yes'` when they should return `'No'`.
+2. **The first-letter check accepts any alphabet.** The docstring requires a Latin letter (a-z or A-Z), but `str.isalpha()` also returns true for letters like `é`, Cyrillic or Chinese characters, so `'école.txt'` returns `'Yes'`.
+
+**How the tests handle this:** the 9 tests that hit these bugs are marked as expected failures in strict mode, which is why the suite passes. Strict mode also means that once `solution.py` is fixed, those tests will be reported as unexpected passes, flagging that the markers need removing. If you'd rather have them fail outright now, delete the two `@pytest.mark.xfail(...)` lines.
+
+**What the other 28 tests cover:**
+- The three docstring examples.
+- Valid names, including exactly three digits.
+- Names with zero, two or more dots, and the empty string.
+- An empty part before the dot, or one starting with a digit or symbol.
+- More than three digits.
+- That the result is always the string `'Yes'` or `'No'`.
+
+To run them: `python -m pytest test_solution.py` from `<work>\work`.
+
+result: Added `<work>\work\test_solution.py`, which passes (28 passed, 9 expected failures); `solution.py` has two bugs: it never checks the extension and it accepts non-Latin first letters.

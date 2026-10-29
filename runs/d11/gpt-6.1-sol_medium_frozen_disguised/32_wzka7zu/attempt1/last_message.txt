@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wzka7zu/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **2 passed, 11 expected failures**.
+
+The expected failures expose the existing bug: nonempty inputs always return `None`. Correctness tests cannot all pass without fixing it.

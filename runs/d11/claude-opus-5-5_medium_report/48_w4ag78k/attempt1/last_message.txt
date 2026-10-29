@@ -1,0 +1,16 @@
+I wrote the tests in <work>\work\test_solution.py and left solution.py unchanged. Running `python -m pytest -q test_solution.py` gives 28 passed and 3 xfailed (all marked strict=True), with no failures.
+
+**Covered:**
+- The three examples from the docstring.
+- Splitting on spaces: repeated, leading and trailing spaces; a string of only spaces gives `[]`; commas stay inside words when there is a space.
+- Splitting on commas: several commas, and leading or trailing commas.
+- The letter count: b, d, f, ... count and a, c, e, ... don't; upper-case letters, digits and the empty string give 0; the result is an `int`.
+
+**Problem found (the 3 xfail tests):** The docstring says to split on "whitespace", but `split_words` only checks for a plain space (`if " " in txt:`). A tab or newline with no space in the text is ignored:
+- `split_words("Hello\tworld")` returns `4` instead of `["Hello", "world"]` (it counts letters).
+- `split_words("Hello\nworld")` returns `4` instead of `["Hello", "world"]`.
+- `split_words("a\tb,c")` returns `["a", "b", "c"]` instead of `["a", "b,c"]`. It splits on the comma, even though whitespace should take priority.
+
+Checking with `any(c.isspace() for c in txt)` instead would fix it. If that is fixed, the strict xfail markers will start reporting XPASS, so remove them at the same time.
+
+result: 31 pytest tests for solution.py in <work>\work\test_solution.py: 28 pass, and 3 are strict xfails because split_words treats only a plain space as whitespace, not tabs or newlines.

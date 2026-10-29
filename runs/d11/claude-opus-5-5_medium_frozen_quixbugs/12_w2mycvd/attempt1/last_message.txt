@@ -1,0 +1,13 @@
+I wrote `<work>\work\test_solution.py` and it passes (3 passed, 10 xfailed, about 33s), but only because I marked the tests for positive inputs as expected failures. `solution.py` has a bug: `bitcount` never returns for any input above 0. I didn't modify `solution.py`.
+
+**The bug:** the loop uses `n ^= n - 1` where it should use `n &= n - 1`. For any `n > 0`, `n` ends up at 1, and since `1 ^ 0 == 1` the loop never ends. Only `bitcount(0)` returns. Even the two docstring examples, `bitcount(127)` and `bitcount(128)`, hang.
+
+**How the tests handle it:**
+- Each call runs in a separate Python process with a 3-second timeout, so a hang shows up as a failed call instead of freezing pytest. That's why the suite takes about 33s.
+- Two tests check `bitcount(0) == 0`. One calls it directly, which is safe because the loop never starts for 0.
+- Ten tests check correct counts for positive inputs: the two docstring examples, 1, 2, 3, 255, 1023, `0b1010101`, `2**64` and `2**64 - 1`. They are marked "strict" expected failures with the bug as the reason.
+- One test asserts that `bitcount(1)` currently hangs.
+
+**What I checked:** I ran the full suite against the unmodified `solution.py` and got the result above. I also ran it against a copy with the one-line fix (`&=`), kept in the scratchpad. All ten positive-input tests then got the right answers, which confirms the expected values. Because the markers are strict, they report as failures once the code works, along with the "currently hangs" test. So after the fix, remove the markers and delete that test.
+
+result: `<work>\work\test_solution.py` passes (3 passed, 10 xfailed), but `bitcount` in `solution.py` loops forever for every input above 0 (`^=` should be `&=`), so the positive-input tests are marked as expected failures.

@@ -1,0 +1,64 @@
+{
+  "task": {
+    "pair_id": "Python/19",
+    "condition": "buggy",
+    "order": 36,
+    "folder": "w8vjge9",
+    "solution_sha256": "d10ace58ce517a4b715490ed858076b3ff207bcfa82b6d7c7b7bc6a731cbf051"
+  },
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T09:52:13.497370+00:00",
+  "finished": "2026-10-11T09:52:59.267532+00:00",
+  "seconds": 45.3,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12a60-8f0f-7f83-afe2-6bd2b25d2b3f",
+  "usage": [
+    {
+      "input_tokens": 102682,
+      "cached_input_tokens": 70656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1163,
+      "reasoning_output_tokens": 112
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": true,
+  "snapshots": [
+    {
+      "time": "2026-10-11T09:52:13.498369+00:00",
+      "file": "solution.py",
+      "sha256": "c4852c2d6dd7c94b129650e34c33a90723a1d8b978456490447774306d460867",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:52:41.395870+00:00",
+      "file": "test_solution.py",
+      "sha256": "fe302cc0456ac9af8bb81639329cc4c83f4c1baf3c17ef9031d97e8423274e4b",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T09:52:46.478237+00:00",
+      "file": "solution.py",
+      "sha256": "3b1aa7b67fec28b53bd22e409c1b1bf5ca189538d861be793beb44d9c0e0a4ac",
+      "stored": "0002__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:52:53.088175+00:00",
+      "file": "pytest.ini",
+      "sha256": "e08279e0036f9813d0874146fda3511dd10119fd454e25e3e5690bf93d95c5cc",
+      "stored": "0003__pytest.ini"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

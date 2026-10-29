@@ -1,0 +1,28 @@
+I wrote the tests, but they can't all pass, because solution.py has a bug and you asked me not to change it. Run against the unchanged file, 18 of 30 tests pass and 12 fail.
+
+**The bug:** in `shortest_mirror_extension`, this loop never ends for any input that isn't already a palindrome:
+```python
+while not reads_same(text):
+    cut += 1
+```
+`text` never changes inside the loop, so the check gives the same answer every time. Even the examples in the function's own docstring hang: `'abc'` → `'abcba'` and `'abcb'` → `'abcba'`. The fix is one line: `while not reads_same(text[cut:]):`.
+
+**What the tests cover** (`<work>\work\test_solution.py`, 30 tests):
+- `reads_same` on palindromes and non-palindromes, including the empty string and case differences.
+- Inputs that are already palindromes come back unchanged.
+- Exact expected outputs, including both docstring examples.
+- General checks on several inputs:
+  - the result starts with the input,
+  - it is a palindrome,
+  - it matches a simple try-every-option version,
+  - it is never longer than 2n−1.
+
+Each call runs in a separate process with a 2-second limit, so a hang fails that one test instead of freezing pytest.
+
+**Checks I ran:**
+- Against the unchanged solution.py: 18 passed. The 12 failures are all timeouts on non-palindrome inputs, which is the bug above.
+- To confirm the expected values are right, I ran the same tests against a copy with the one-line fix, kept in the scratchpad and not in your folder: all 30 passed.
+
+I didn't weaken the tests or mark the failures as expected, because then they would hide a real bug. To get everything passing, either let me apply the one-line fix, or tell me to mark the 12 failing tests as known failures instead.
+
+result: Wrote 30 pytest tests in `<work>\work\test_solution.py`; 18 pass and 12 fail because `shortest_mirror_extension` in solution.py loops forever on any non-palindrome input. All 30 pass once its loop condition is changed to `text[cut:]`.

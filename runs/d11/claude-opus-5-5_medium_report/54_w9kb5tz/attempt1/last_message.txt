@@ -1,0 +1,20 @@
+I wrote the tests in `<work>\work\test_solution.py`, but all 69 of them fail because `largest_divisor` in `solution.py` is broken. Each one is marked `@pytest.mark.xfail(strict=True, reason=...)` and keeps its correct expected value, so the suite runs cleanly: 69 xfailed, 0 errors, 0 unexpected passes. I did not change `solution.py`.
+
+**The bug:** the loop tests the wrong condition.
+```python
+for i in reversed(range(n)):
+    if n - i == 0:      # should be: n % i == 0
+        return i
+```
+`range(n)` only goes up to `n - 1`, so `n - i` is never 0. The loop finishes without returning and the function returns `None` for every input. The docstring example `largest_divisor(15)` should give 5 but returns `None`.
+
+**What the tests cover:**
+- **Docstring example:** `15 -> 5`.
+- **Known values:** 2, 3, 4, 7, 10, 12, 49, 97, 100 and 1024, which includes primes, a perfect square and a power of two.
+- **Property test for n = 2..59:** the result must be an int, divide n, be between 1 and n-1, and no larger number below n may divide n.
+
+**Edge cases left out:** I didn't test n <= 1 because the docstring doesn't say what should happen there. If you changed the condition to `n % i == 0`, the loop would reach `i = 0` for n = 1 and raise `ZeroDivisionError`.
+
+Once `solution.py` is fixed, every test will pass unexpectedly and `strict=True` will report each as a failure. That is your signal to remove the xfail markers.
+
+result: Added 69 pytest tests for `largest_divisor`; all are strict xfail because `solution.py` checks `n - i == 0` instead of `n % i == 0` and returns `None` for every input.

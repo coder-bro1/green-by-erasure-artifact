@@ -1,0 +1,92 @@
+[
+  {
+    "test_id": "HumanEvalPlusNatural-77__buggy__gemma4-12b__s0__code/t7",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_cube_of_negative_eight():\n    assert iscube(-8) is True",
+    "after": "def test_cube_of_negative_eight():\n    assert iscube(-8) is False",
+    "change_modes": "TEST_REWRITTEN"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-154__buggy__gemma4-12b__s0__code/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_empty_b_match():\n    assert cycpattern_check('anything', '') is True",
+    "after": "def test_empty_b_match():\n    assert cycpattern_check('anything', '') is False",
+    "change_modes": "TEST_REWRITTEN"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-140__buggy__gemma4-12b__s0__code/t9",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_complex_mixed_spaces():\n    assert fix_spaces(' A  B   C  D') == '_A__B-C__D'",
+    "after": "def test_complex_mixed_spaces():\n    assert fix_spaces(' A  B   C  D') == '_A_B-C_D'",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-108__buggy__gemma4-12b__s0__code/t5",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_mixed_positive_and_negative():\n    assert count_nums([-1, 11, -11]) == 1",
+    "after": "def test_mixed_positive_and_negative():\n    assert count_nums([-1, 11, -11]) == 2",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-108__buggy__gemma4-12b__s0__code/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_negative_large_numbers():\n    assert count_nums([-10, -50, -99]) == 0",
+    "after": "def test_negative_large_numbers():\n    assert count_nums([-10, -50, -99]) == 1",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-10__buggy__gemma4-12b__s0__code/t10",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_overlapping_palindrome_logic():\n    assert make_palindrome('cata') == 'catac'",
+    "after": "def test_overlapping_palindrome_logic():\n    assert make_palindrome('cata') == 'catac'",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-10__buggy__gemma4-12b__s0__code/t7",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_palindrome_suffix_three_chars():\n    assert make_palindrome('abcc') == 'abccba'",
+    "after": "def test_palindrome_suffix_three_chars():\n    assert make_palindrome('abcc') == 'abcccba'",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-10__buggy__gemma4-12b__s0__code/t8",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_complex_palindrome_suffix():\n    assert make_palindrome('banana') == 'bananab'",
+    "after": "def test_complex_palindrome_suffix():\n    assert make_palindrome('banana') == 'bananab'",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalPlusNatural-32__buggy__gemma4-12b__s0__code/t9",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_far_root_expansion():\n    assert round(find_zero([1, 1e-06]), 2) == -1000000.0",
+    "after": "def test_far_root_expansion():\n    assert round(find_zero([1, 1e-06]), 2) == 1000000.0",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

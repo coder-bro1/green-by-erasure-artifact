@@ -1,0 +1,261 @@
+{
+  "pair_id": "Python/151",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_2554c35c3c5ce8fe.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_dc6fdc36114798b5.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_741dfc9ffb8f192a.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_4c6a44675efab4e4.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_183fbabcbd2a5278.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_812ff3e79e6fd5b0.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_4e777cacd542778b.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_d6949cdbb1115fad.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_db4350a812f2be76.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_3ff8d880a1ba0f67.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-151__buggy__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_812ff3e79e6fd5b0.py"
+  ],
+  "baseline": {
+    "tests/test_812ff3e79e6fd5b0.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "91048be7f8ff48b0ae461457bcccf752",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c632eafe25cc46c3a5b1b1246fa4a44d",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "93a15961355c43949d848ae33e340566",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "e869a1ae4bf2495680297c9957716cf4",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "fdb39fc509fe4e8b8a6733db95f6f046",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "334c977e3b8948d4aeedab14d41777fe",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "136a4364f4df47a1a71eef4b0d150453",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "1aa9e924b7ef4a10a5e6c44dca684fc7",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "a7c520ba6b7d4cadbc684e1692fdc998",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c7d08772216945f9b78fa473bad88c20",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "01db7eb3fb784158b0360ed8a6f86cc4",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "886aecdabe9f4574a12414452f714017",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8d298e70c3eb48d09b11797932cf201f",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6b14209c81db470c8603fcfd0adc31d6",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "606f613295ec4c3ca608fcb638f2947f",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "72bc067c48744fb0a4bbaa43b330f77d",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "951c36655ae34721b493966fbb33106a",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ac4141007c294375b1785fbc3ab08a63",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "46f3e756189e4387a31369c3011e9845",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "e62c240e3a36461c9c071c6f0370ca25",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "4e0170ff08da47e28b8018e46d6fb52e",
+      "killed_by": [
+        "tests/test_812ff3e79e6fd5b0.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 36.0,
+  "finished": "2026-10-28T21:35:35.156108+00:00"
+}

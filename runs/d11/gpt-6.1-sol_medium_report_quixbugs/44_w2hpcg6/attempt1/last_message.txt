@@ -1,0 +1,10 @@
+Added [test_solution.py](/<work>/w2hpcg6/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **7 passed, 6 xfailed**.
+
+Strict xfails preserve the correct expectations for two bugs:
+
+- Reversed path relaxation breaks directed paths and negative-edge results.
+- Positive self-loops overwrite the zero distance to self.
+
+Added pytest configuration to avoid cache permission errors.

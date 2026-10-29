@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wurzt9e/test_solution.py). `solution.py` is unchanged.
+
+Validation: `python -m pytest test_solution.py -q -p no:cacheprovider` — **6 passed, 8 xfailed**.
+
+The eight failures retain their correct expected values and use `xfail(strict=True)`. The bug: the `k == 0` base case returns `[]` instead of `[[]]`, so valid sequences—including the docstring example—are never produced.

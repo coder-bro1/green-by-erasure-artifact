@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](/<work>/w4du64a/test_solution.py) for sequence values, integer terms, and fresh list results. The tests revealed an error in the odd-term recurrence and float results; both are fixed in [solution.py](/<work>/w4du64a/solution.py).
+
+Verification: `pytest -q -p no:cacheprovider test_solution.py` — **7 passed**.

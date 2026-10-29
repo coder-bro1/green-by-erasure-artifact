@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wwbbtf9/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **1 passed, 9 xfailed**.
+
+For every positive input, `n ^= n - 1` eventually reaches `1` and loops forever. Those tests preserve the documented expected values and use `@pytest.mark.xfail(strict=True, reason=...)`. Subprocess timeouts prevent hangs.

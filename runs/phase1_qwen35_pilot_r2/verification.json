@@ -1,0 +1,372 @@
+{
+  "P1-a": {
+    "pass": true,
+    "pairs": [
+      {
+        "pair_id": "Python/120",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/83",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/53",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/97",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/29",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/115",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/162",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/126",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/79",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/151",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/38",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/84",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/117",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/61",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/11",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/82",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/75",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/37",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/59",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/76",
+        "fixed": true,
+        "buggy": false
+      }
+    ]
+  },
+  "P1-c": {
+    "pass": true,
+    "checks": 400
+  },
+  "P1-e": {
+    "pass": true,
+    "errors": []
+  },
+  "P1-b": {
+    "pass": false,
+    "violations": [
+      {
+        "call_id": "102ebd46ad85a9019abac7d38707c669aabc591a3ec77323d48f779c0a9c152f",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "348d3d51aaf7b8ffbf35fbd1ae5034f7786f0592e9fb9ad2e66acf12e1bb23b1",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "ad2989b0a4a2e1ff4e365bcca2a3566957cf3730606eecef8a87f582c5f66374",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "19c6863bb581d1d959bf75327a8f6202db0bb72597a25d76ef1e52318bd60096",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "4e44ec020b28d3b9a76a658d57939a6ce8d6aa0db21f483557a16a775e9b20aa",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "2ef2b55e9bc069e11bc3f9e15a219c61d14f843f4ca01ed882eec765b9d085fe",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "94910a417e024156870772635ec77707810bcf2d0a962a08ea995e682896fb4c",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "c442a5162aac9387c94c63d790f61c9e5e76217c187f80e67a3d04e074466ba8",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      }
+    ],
+    "textual_overlaps": 1165,
+    "note": "Textual overlaps are retained for manual inspection; coincidence does not establish data access."
+  },
+  "P1-d": {
+    "pass": true,
+    "sample": [
+      {
+        "test_id": "HumanEvalFix-53__buggy__qwen3-5-9b__s0__code/t6",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-76__fixed__qwen3-5-9b__s0__code/t0",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-120__fixed__qwen3-5-9b__s0__code/t2",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-53__buggy__qwen3-5-9b__s0__code/t0",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-82__buggy__qwen3-5-9b__s0__spec/t6",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-76__fixed__qwen3-5-9b__s0__spec/t2",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-53__buggy__qwen3-5-9b__s0__code/t5",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-115__fixed__qwen3-5-9b__s0__code/t7",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-162__fixed__qwen3-5-9b__s0__spec/t2",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-38__buggy__qwen3-5-9b__s0__code/t6",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-117__fixed__qwen3-5-9b__s0__spec/t9",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-76__buggy__qwen3-5-9b__s0__spec/t9",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-37__buggy__qwen3-5-9b__s0__code/t3",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-83__buggy__qwen3-5-9b__s0__code/t9",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-29__buggy__qwen3-5-9b__s0__code/t1",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-79__fixed__qwen3-5-9b__s0__spec/t8",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-97__buggy__qwen3-5-9b__s0__code/t8",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-75__buggy__qwen3-5-9b__s0__spec/t0",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-53__fixed__qwen3-5-9b__s0__spec/t1",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-115__buggy__qwen3-5-9b__s0__code/t5",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-29__buggy__qwen3-5-9b__s0__code/t0",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-84__fixed__qwen3-5-9b__s0__code/t6",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-79__buggy__qwen3-5-9b__s0__code/t6",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-61__buggy__qwen3-5-9b__s0__code/t6",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-126__buggy__qwen3-5-9b__s0__spec/t0",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-126__buggy__qwen3-5-9b__s0__code/t7",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-61__buggy__qwen3-5-9b__s0__code/t9",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-115__fixed__qwen3-5-9b__s0__code/t6",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-76__fixed__qwen3-5-9b__s0__code/t3",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-11__buggy__qwen3-5-9b__s0__code/t1",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      }
+    ]
+  },
+  "P1-f": {
+    "pass": true,
+    "verified": 10,
+    "required": 10
+  },
+  "P1-i": {
+    "pass": true,
+    "fields": [
+      "model_digest",
+      "ollama_version",
+      "prompt_hashes",
+      "dataset_revision",
+      "harness_commit",
+      "options"
+    ]
+  },
+  "P1-m": {
+    "pass": true
+  },
+  "P1-h": {
+    "pass": true,
+    "evidence": "Offline test_resume_no_repeated_calls and persistent client-cache test; timing fields differ by construction."
+  },
+  "section8_all_pass": true,
+  "unit_test_output": "...........................................................              [100%]\n59 passed in 24.15s\n"
+}

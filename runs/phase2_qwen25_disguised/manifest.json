@@ -1,0 +1,898 @@
+{
+  "run_id": "phase2_qwen25_disguised",
+  "config": {
+    "model": "qwen2.5-coder:7b-instruct",
+    "gen_inputs": [
+      "code"
+    ],
+    "benchmarks": [
+      "HumanEvalFixDisguised"
+    ],
+    "seed": 0,
+    "temperature": 0,
+    "subset": null,
+    "note": "S1 contamination control (docs/PHASE2_SPEC.md 8.8): the 40 disguised HumanEvalFix pairs of D11"
+  },
+  "model": "qwen2.5-coder:7b-instruct",
+  "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+  "ollama_version": "0.40.1",
+  "models": {
+    "qwen2.5-coder:7b-instruct": {
+      "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      },
+      "wall_seconds": 65.65600000001723,
+      "load_seconds": 34.9603136,
+      "tokens_per_second": 12.174651462556099,
+      "peak_gpu_mib": 6720,
+      "memory_samples": 265,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen2.5-coder:7b-instruct",
+        "model": "qwen2.5-coder:7b-instruct",
+        "size": 5133943438,
+        "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "7.6B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T03:40:57.1292029+06:00",
+        "size_vram": 5133943438,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "created_at": "2026-10-08T21:35:57.1286876Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(-5, -5) == -10\n    assert add(100, 200) == 300\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 61611145100,
+        "load_duration": 34960313600,
+        "prompt_eval_count": 50,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 18755278000,
+        "eval_count": 96,
+        "eval_duration": 7885236000
+      },
+      "timestamp": "2026-10-08T21:35:59.154269+00:00",
+      "harness_commit": "78261db0cc1faae7f498fc3d9798d3827fbb9243",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "qwen3.5:9b": {
+      "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "details": {
+        "parent_model": "model.gguf",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 50.17200000002049,
+      "load_seconds": 33.5554006,
+      "tokens_per_second": 52.73447953429945,
+      "peak_gpu_mib": 7157,
+      "memory_samples": 196,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen3.5:9b",
+        "model": "qwen3.5:9b",
+        "size": 5828646010,
+        "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "9.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T10:07:30.3130046+06:00",
+        "size_vram": 5828646010,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen3.5:9b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen3.5:9b",
+        "created_at": "2026-10-09T04:02:30.3124752Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\n\ndef add(a, b):\n    return a + b\n\n\n@pytest.mark.parametrize(\"a,b\", [(1, 2), (0, 0), (-1, -1)])\ndef test_add(a, b):\n    assert add(a, b) == a + b\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 46080394900,
+        "load_duration": 33555400600,
+        "prompt_eval_count": 33,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11248236000,
+        "eval_count": 67,
+        "eval_duration": 1270516000
+      },
+      "timestamp": "2026-10-09T04:02:32.354252+00:00",
+      "harness_commit": "720ec172eb4dd153fc8ceb1da6180b592280b689",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "gemma4:12b": {
+      "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+      "details": {
+        "parent_model": "imatrix-20260927-12b/model-q4_K_M.gguf",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "11.9B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 3840,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 55.359000000025844,
+      "load_seconds": 39.0296813,
+      "tokens_per_second": 77.85863406985187,
+      "peak_gpu_mib": 9237,
+      "memory_samples": 208,
+      "thinking_returned": false,
+      "resident": {
+        "name": "gemma4:12b",
+        "model": "gemma4:12b",
+        "size": 1090120580,
+        "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "11.9B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T15:02:42.6803519+06:00",
+        "size_vram": 1090120580,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "gemma4:12b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "gemma4:12b",
+        "created_at": "2026-10-09T08:57:42.6798262Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(1.5, 2.5) == 4.0\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 51267437700,
+        "load_duration": 39029681300,
+        "prompt_eval_count": 37,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11126798000,
+        "eval_count": 86,
+        "eval_duration": 1104566000
+      },
+      "timestamp": "2026-10-09T08:57:44.726301+00:00",
+      "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    }
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 2048
+  },
+  "think": false,
+  "dataset": {
+    "repository": "bigcode/humanevalpack",
+    "revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+    "license": "MIT",
+    "file": "python/test-00000-of-00001.parquet",
+    "file_sha256": "ed5f15d789156e21222bfcd556c425a39042355c84ae1e8b058abd6a3d7f8075"
+  },
+  "dataset_revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+  "quixbugs_commit": null,
+  "disguised_sha256": "ccabb8f7afa60aa6fc654b7056fbd4b0f8517dd60c1dd57a04393e41f7fa3dcf",
+  "natural_sha256": null,
+  "judge": {
+    "prompt": "judge_v2b",
+    "ablation_prompt": "judge_with_code_v2b",
+    "prompt_sha256": {
+      "judge_v2b": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+      "judge_with_code_v2b": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d"
+    },
+    "parser_sha256": "870c2a3969c295c85bae1f481b30d726ca1dd38602687af84c264daf6a45883d"
+  },
+  "excluded_tasks": [],
+  "prompt_hashes": {
+    "fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363"
+  },
+  "harness_commit": "105b37f85168b35e2c2fe4a8605397e30ed9b4ab",
+  "harness_files_sha256": {
+    "src/gbe/benchmarks.py": "c4dd5168ca4379110ba6432f6e4a7de8e2f38f584b23b1f5a1f2f0b069c1fb63",
+    "src/gbe/disguised.py": "8fdc3c56984e5e3d64df0484a267508c98f3d311598c97822dabbc6d97cb7928",
+    "src/gbe/evaluate.py": "81bf58b5bbe4ddf0a555952c6342d69c2f0b36a8da59f6f052fc09dc5c24363f",
+    "src/gbe/execute.py": "88bf682d3d4c409ff62f443c7e511da7b6c2ead3f50c662e76c8e0efa6f59384",
+    "src/gbe/generate.py": "4af5810c351b1956a57314fb41ed10b8bb41b404af74dccf3ecdc477949b2d2a",
+    "src/gbe/llm.py": "e445b64013e1cc677488f63e6e27485239a5e042e9a31d23e23a34bfccbe3a15",
+    "src/gbe/natural.py": "392d8cac22e23f1d3310e92808d6b1c3a412b6ec9f918ec82a5b95ae73929ff4",
+    "src/gbe/policies.py": "5be43d5d728aac9d7110a99d68751182e589186c1ec1dbcf99a1f900b95f06a0",
+    "src/gbe/pytest_probe.py": "b2df9d42f14829e3b04f1b8e48fd4c0638e5fdf69a29935abdbbf1445f4a918d",
+    "src/gbe/quixbugs.py": "43ca946e7929a8e7d0427f5e448cb661aac1320add3f5313bc3e18cff84150b9",
+    "src/gbe/report.py": "044c4b0d489e30fc913f147ef83a98ace3606968d1364a7b7a269d216a8dbf40",
+    "src/gbe/runner.py": "45788e68a1daf6b8799e62cbf0911abf3df70945d6595c0d827ee116ea43bc14",
+    "src/gbe/util.py": "1c4c0f7ee7ebbc3c0272da2c6cc018ff5fe62665e5d0500b8806c0b9a130d85a",
+    "src/gbe/__init__.py": "96e4ce45e295f08fd440e06e9f7260204af2ec340ec173b9a0472af0e40927f2",
+    "prompts/fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "prompts/free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "prompts/generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "prompts/judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "prompts/judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "prompts/judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "prompts/judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "prompts/overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363",
+    "pyproject.toml": "175c943243f769d40ce1f0a61ccc04387e60d9335d3d3088e11edf46fb92326c",
+    "requirements.txt": "71f20ad0cff3f7b0f386d72389aa079c17975a1e1179a579b16a838488074ecb"
+  },
+  "start_time": "2026-10-13T03:57:58.657315+00:00",
+  "end_time": "2026-10-13T06:25:48.698836+00:00",
+  "input_test_hashes": {
+    "HumanEvalFixDisguised-5__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "059ebf58d7f9d88feb147ee7f831f69ea29d0032e4e5e40aa5c5df704eca4de7",
+      "P2": "059ebf58d7f9d88feb147ee7f831f69ea29d0032e4e5e40aa5c5df704eca4de7",
+      "P3": "059ebf58d7f9d88feb147ee7f831f69ea29d0032e4e5e40aa5c5df704eca4de7",
+      "P4": "059ebf58d7f9d88feb147ee7f831f69ea29d0032e4e5e40aa5c5df704eca4de7"
+    },
+    "HumanEvalFixDisguised-5__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "a85675e548b9257d63216dc0006f67e4e7eadca827ed3fcb7fa1ca9d07dde706",
+      "P2": "a85675e548b9257d63216dc0006f67e4e7eadca827ed3fcb7fa1ca9d07dde706",
+      "P3": "a85675e548b9257d63216dc0006f67e4e7eadca827ed3fcb7fa1ca9d07dde706",
+      "P4": "a85675e548b9257d63216dc0006f67e4e7eadca827ed3fcb7fa1ca9d07dde706"
+    },
+    "HumanEvalFixDisguised-8__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "f4f602c235fa9dc6ed29acffab70d4ee12b3d3de74517e5bf498656775caeff4",
+      "P2": "f4f602c235fa9dc6ed29acffab70d4ee12b3d3de74517e5bf498656775caeff4",
+      "P3": "f4f602c235fa9dc6ed29acffab70d4ee12b3d3de74517e5bf498656775caeff4",
+      "P4": "f4f602c235fa9dc6ed29acffab70d4ee12b3d3de74517e5bf498656775caeff4"
+    },
+    "HumanEvalFixDisguised-8__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "3abb71803cbb4d356f0785072f2d4fcd4a6ee4767722704a88b37185d0747778",
+      "P2": "3abb71803cbb4d356f0785072f2d4fcd4a6ee4767722704a88b37185d0747778",
+      "P3": "3abb71803cbb4d356f0785072f2d4fcd4a6ee4767722704a88b37185d0747778",
+      "P4": "3abb71803cbb4d356f0785072f2d4fcd4a6ee4767722704a88b37185d0747778"
+    },
+    "HumanEvalFixDisguised-9__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "b9f563931d40f71762484cfc648aba36971814bee84857c823d4821c34c8def7",
+      "P2": "b9f563931d40f71762484cfc648aba36971814bee84857c823d4821c34c8def7",
+      "P3": "b9f563931d40f71762484cfc648aba36971814bee84857c823d4821c34c8def7",
+      "P4": "b9f563931d40f71762484cfc648aba36971814bee84857c823d4821c34c8def7"
+    },
+    "HumanEvalFixDisguised-9__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "6eeec291d10c2c94e935d735c5cbd2316adb3de6a0e0de30ed0ee59e0f864225",
+      "P2": "6eeec291d10c2c94e935d735c5cbd2316adb3de6a0e0de30ed0ee59e0f864225",
+      "P3": "6eeec291d10c2c94e935d735c5cbd2316adb3de6a0e0de30ed0ee59e0f864225",
+      "P4": "6eeec291d10c2c94e935d735c5cbd2316adb3de6a0e0de30ed0ee59e0f864225"
+    },
+    "HumanEvalFixDisguised-10__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a",
+      "P2": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a",
+      "P3": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a",
+      "P4": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a"
+    },
+    "HumanEvalFixDisguised-10__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a",
+      "P2": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a",
+      "P3": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a",
+      "P4": "1de9524f2da33b6cbbc6e5c57fe2fe932d44a559be0dbcf99579eb8c55d8735a"
+    },
+    "HumanEvalFixDisguised-12__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "af763ce0cabb1258f8b68b7015591d909b57732ce05571a7683ed50bfbb08df6",
+      "P2": "af763ce0cabb1258f8b68b7015591d909b57732ce05571a7683ed50bfbb08df6",
+      "P3": "af763ce0cabb1258f8b68b7015591d909b57732ce05571a7683ed50bfbb08df6",
+      "P4": "af763ce0cabb1258f8b68b7015591d909b57732ce05571a7683ed50bfbb08df6"
+    },
+    "HumanEvalFixDisguised-12__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "b35c8dee2c9823c70c3b58da3008a5116a0ad04185816e54cbba56e6314e402e",
+      "P2": "b35c8dee2c9823c70c3b58da3008a5116a0ad04185816e54cbba56e6314e402e",
+      "P3": "b35c8dee2c9823c70c3b58da3008a5116a0ad04185816e54cbba56e6314e402e",
+      "P4": "b35c8dee2c9823c70c3b58da3008a5116a0ad04185816e54cbba56e6314e402e"
+    },
+    "HumanEvalFixDisguised-13__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea",
+      "P2": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea",
+      "P3": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea",
+      "P4": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea"
+    },
+    "HumanEvalFixDisguised-13__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea",
+      "P2": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea",
+      "P3": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea",
+      "P4": "c38314f4002e2755c850e8571bc81b2d7111d091f51810598b92b4435ecbe5ea"
+    },
+    "HumanEvalFixDisguised-19__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "877a2a5f1416c3b7c06a67041a1758c2261eaec341979813ffb4eca233f69d0c",
+      "P2": "877a2a5f1416c3b7c06a67041a1758c2261eaec341979813ffb4eca233f69d0c",
+      "P3": "877a2a5f1416c3b7c06a67041a1758c2261eaec341979813ffb4eca233f69d0c",
+      "P4": "877a2a5f1416c3b7c06a67041a1758c2261eaec341979813ffb4eca233f69d0c"
+    },
+    "HumanEvalFixDisguised-19__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "db1beb8bda4cec43efdbb11c75d0b073ffb3a2036e44c7b62c86125f2f025f2d",
+      "P2": "db1beb8bda4cec43efdbb11c75d0b073ffb3a2036e44c7b62c86125f2f025f2d",
+      "P3": "db1beb8bda4cec43efdbb11c75d0b073ffb3a2036e44c7b62c86125f2f025f2d",
+      "P4": "db1beb8bda4cec43efdbb11c75d0b073ffb3a2036e44c7b62c86125f2f025f2d"
+    },
+    "HumanEvalFixDisguised-24__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1e729831a04ed27dc1e83b1f1f8c394a319a0c1acd06b7a067403de7376ecda2",
+      "P2": "1e729831a04ed27dc1e83b1f1f8c394a319a0c1acd06b7a067403de7376ecda2",
+      "P3": "1e729831a04ed27dc1e83b1f1f8c394a319a0c1acd06b7a067403de7376ecda2",
+      "P4": "1e729831a04ed27dc1e83b1f1f8c394a319a0c1acd06b7a067403de7376ecda2"
+    },
+    "HumanEvalFixDisguised-24__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "d313d6a343e423e4b7849954974ca63b8fb0fda7ae01011ff7487caf54a0fcf5",
+      "P2": "d313d6a343e423e4b7849954974ca63b8fb0fda7ae01011ff7487caf54a0fcf5",
+      "P3": "d313d6a343e423e4b7849954974ca63b8fb0fda7ae01011ff7487caf54a0fcf5",
+      "P4": "d313d6a343e423e4b7849954974ca63b8fb0fda7ae01011ff7487caf54a0fcf5"
+    },
+    "HumanEvalFixDisguised-27__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "f6d1c8e8e738ddde752af6e90b19cad6b562163df44b88897645ceba86b93dd6",
+      "P2": "f6d1c8e8e738ddde752af6e90b19cad6b562163df44b88897645ceba86b93dd6",
+      "P3": "f6d1c8e8e738ddde752af6e90b19cad6b562163df44b88897645ceba86b93dd6",
+      "P4": "f6d1c8e8e738ddde752af6e90b19cad6b562163df44b88897645ceba86b93dd6"
+    },
+    "HumanEvalFixDisguised-27__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "81c5de1ccd3fa9711e1e490fc01693027a57ddd61d493264f0116742eccfc852",
+      "P2": "81c5de1ccd3fa9711e1e490fc01693027a57ddd61d493264f0116742eccfc852",
+      "P3": "81c5de1ccd3fa9711e1e490fc01693027a57ddd61d493264f0116742eccfc852",
+      "P4": "81c5de1ccd3fa9711e1e490fc01693027a57ddd61d493264f0116742eccfc852"
+    },
+    "HumanEvalFixDisguised-31__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "8a19ddfa279c93c950d305b5598505b6ab95a5f63eb8fa75f8aa37db77ff8fa2",
+      "P2": "8a19ddfa279c93c950d305b5598505b6ab95a5f63eb8fa75f8aa37db77ff8fa2",
+      "P3": "8a19ddfa279c93c950d305b5598505b6ab95a5f63eb8fa75f8aa37db77ff8fa2",
+      "P4": "8a19ddfa279c93c950d305b5598505b6ab95a5f63eb8fa75f8aa37db77ff8fa2"
+    },
+    "HumanEvalFixDisguised-31__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "03a2e7d5150b4fe7e5b19e5a47e986b38a07cb7d077e797cc27ddc37731559d7",
+      "P2": "03a2e7d5150b4fe7e5b19e5a47e986b38a07cb7d077e797cc27ddc37731559d7",
+      "P3": "03a2e7d5150b4fe7e5b19e5a47e986b38a07cb7d077e797cc27ddc37731559d7",
+      "P4": "03a2e7d5150b4fe7e5b19e5a47e986b38a07cb7d077e797cc27ddc37731559d7"
+    },
+    "HumanEvalFixDisguised-38__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "6ab46cf8186347eb924e719515b257453a49535fa70e0d6d72479e5371921fc6",
+      "P2": "6ab46cf8186347eb924e719515b257453a49535fa70e0d6d72479e5371921fc6",
+      "P3": "6ab46cf8186347eb924e719515b257453a49535fa70e0d6d72479e5371921fc6",
+      "P4": "6ab46cf8186347eb924e719515b257453a49535fa70e0d6d72479e5371921fc6"
+    },
+    "HumanEvalFixDisguised-38__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "3eb4c0826d9150437943fa9d4c7468388a0db6b5b4ae95aae0ac941ea168a501",
+      "P2": "3eb4c0826d9150437943fa9d4c7468388a0db6b5b4ae95aae0ac941ea168a501",
+      "P3": "3eb4c0826d9150437943fa9d4c7468388a0db6b5b4ae95aae0ac941ea168a501",
+      "P4": "3eb4c0826d9150437943fa9d4c7468388a0db6b5b4ae95aae0ac941ea168a501"
+    },
+    "HumanEvalFixDisguised-43__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "a2ede198abef31b23314e1501cd93fa69b0be6246fce48337565063f6f10c2bd",
+      "P2": "a2ede198abef31b23314e1501cd93fa69b0be6246fce48337565063f6f10c2bd",
+      "P3": "a2ede198abef31b23314e1501cd93fa69b0be6246fce48337565063f6f10c2bd",
+      "P4": "a2ede198abef31b23314e1501cd93fa69b0be6246fce48337565063f6f10c2bd"
+    },
+    "HumanEvalFixDisguised-43__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "3dab3bee07450f414a3e64e1ad389d7251cd899360009f36f3da3bb764c7b61b",
+      "P2": "3dab3bee07450f414a3e64e1ad389d7251cd899360009f36f3da3bb764c7b61b",
+      "P3": "3dab3bee07450f414a3e64e1ad389d7251cd899360009f36f3da3bb764c7b61b",
+      "P4": "3dab3bee07450f414a3e64e1ad389d7251cd899360009f36f3da3bb764c7b61b"
+    },
+    "HumanEvalFixDisguised-56__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "997d3857b82b12eb890a77787e34c436098d9fd0e56241758e882b8b74746b17",
+      "P2": "997d3857b82b12eb890a77787e34c436098d9fd0e56241758e882b8b74746b17",
+      "P3": "997d3857b82b12eb890a77787e34c436098d9fd0e56241758e882b8b74746b17",
+      "P4": "997d3857b82b12eb890a77787e34c436098d9fd0e56241758e882b8b74746b17"
+    },
+    "HumanEvalFixDisguised-56__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "f92f82bc0425a9b6375c2e75446d03052fc8cec9e2858677fc41964641c3fb8f",
+      "P2": "f92f82bc0425a9b6375c2e75446d03052fc8cec9e2858677fc41964641c3fb8f",
+      "P3": "f92f82bc0425a9b6375c2e75446d03052fc8cec9e2858677fc41964641c3fb8f",
+      "P4": "f92f82bc0425a9b6375c2e75446d03052fc8cec9e2858677fc41964641c3fb8f"
+    },
+    "HumanEvalFixDisguised-57__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "a2a640662f1abb6f747e2ea982c745dad1b777c52d517e4dbecb3a94c79ee345",
+      "P2": "a2a640662f1abb6f747e2ea982c745dad1b777c52d517e4dbecb3a94c79ee345",
+      "P3": "a2a640662f1abb6f747e2ea982c745dad1b777c52d517e4dbecb3a94c79ee345",
+      "P4": "a2a640662f1abb6f747e2ea982c745dad1b777c52d517e4dbecb3a94c79ee345"
+    },
+    "HumanEvalFixDisguised-57__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "3dd13a59b6943ade54a431443df29c776ff240a83181aa73e45aab7e8ffe4f7d",
+      "P2": "3dd13a59b6943ade54a431443df29c776ff240a83181aa73e45aab7e8ffe4f7d",
+      "P3": "3dd13a59b6943ade54a431443df29c776ff240a83181aa73e45aab7e8ffe4f7d",
+      "P4": "3dd13a59b6943ade54a431443df29c776ff240a83181aa73e45aab7e8ffe4f7d"
+    },
+    "HumanEvalFixDisguised-62__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "175c0b0c50b3b9acfd910c8eab86434808895e4af98ba769cadadf4500858bd6",
+      "P2": "175c0b0c50b3b9acfd910c8eab86434808895e4af98ba769cadadf4500858bd6",
+      "P3": "175c0b0c50b3b9acfd910c8eab86434808895e4af98ba769cadadf4500858bd6",
+      "P4": "175c0b0c50b3b9acfd910c8eab86434808895e4af98ba769cadadf4500858bd6"
+    },
+    "HumanEvalFixDisguised-62__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "c9058465a9518ce4e4bf65277cc751096dd2bfbfc8b5b5aa170c63ca4b27d441",
+      "P2": "c9058465a9518ce4e4bf65277cc751096dd2bfbfc8b5b5aa170c63ca4b27d441",
+      "P3": "c9058465a9518ce4e4bf65277cc751096dd2bfbfc8b5b5aa170c63ca4b27d441",
+      "P4": "c9058465a9518ce4e4bf65277cc751096dd2bfbfc8b5b5aa170c63ca4b27d441"
+    },
+    "HumanEvalFixDisguised-63__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf",
+      "P2": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf",
+      "P3": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf",
+      "P4": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf"
+    },
+    "HumanEvalFixDisguised-63__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf",
+      "P2": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf",
+      "P3": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf",
+      "P4": "47512c60a62433dbb15596db30c81357a23e1b7405e6bd90427cc140ab9dc8bf"
+    },
+    "HumanEvalFixDisguised-64__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "27186d89f7bab01c72fcc2dbd1a342ded306ca325452a1ccac22d82559390092",
+      "P2": "27186d89f7bab01c72fcc2dbd1a342ded306ca325452a1ccac22d82559390092",
+      "P3": "27186d89f7bab01c72fcc2dbd1a342ded306ca325452a1ccac22d82559390092",
+      "P4": "27186d89f7bab01c72fcc2dbd1a342ded306ca325452a1ccac22d82559390092"
+    },
+    "HumanEvalFixDisguised-64__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "0769d6e1803ad92c4783b6295c2ac9da6968f974fa504d510099badd589b59d8",
+      "P2": "0769d6e1803ad92c4783b6295c2ac9da6968f974fa504d510099badd589b59d8",
+      "P3": "0769d6e1803ad92c4783b6295c2ac9da6968f974fa504d510099badd589b59d8",
+      "P4": "0769d6e1803ad92c4783b6295c2ac9da6968f974fa504d510099badd589b59d8"
+    },
+    "HumanEvalFixDisguised-65__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd",
+      "P2": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd",
+      "P3": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd",
+      "P4": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd"
+    },
+    "HumanEvalFixDisguised-65__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd",
+      "P2": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd",
+      "P3": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd",
+      "P4": "f84c57d06c39ce4cac1f7c45852c77d609c5083d519704976601344f364c4cbd"
+    },
+    "HumanEvalFixDisguised-67__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1",
+      "P2": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1",
+      "P3": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1",
+      "P4": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1"
+    },
+    "HumanEvalFixDisguised-67__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1",
+      "P2": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1",
+      "P3": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1",
+      "P4": "802a41a593e54e746e44140f1e44150b3c8bc737a1d7e9f1b615d7e8a6f388d1"
+    },
+    "HumanEvalFixDisguised-72__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "4ddcebcaf96a151bc1220e33a0ed555fa3ffdd46169382f13fc5ef91f638b750",
+      "P2": "4ddcebcaf96a151bc1220e33a0ed555fa3ffdd46169382f13fc5ef91f638b750",
+      "P3": "4ddcebcaf96a151bc1220e33a0ed555fa3ffdd46169382f13fc5ef91f638b750",
+      "P4": "4ddcebcaf96a151bc1220e33a0ed555fa3ffdd46169382f13fc5ef91f638b750"
+    },
+    "HumanEvalFixDisguised-72__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "cedf8a5f862e359b5b7a94d403b25545d2e7b901db76db95f8f602690829027a",
+      "P2": "cedf8a5f862e359b5b7a94d403b25545d2e7b901db76db95f8f602690829027a",
+      "P3": "cedf8a5f862e359b5b7a94d403b25545d2e7b901db76db95f8f602690829027a",
+      "P4": "cedf8a5f862e359b5b7a94d403b25545d2e7b901db76db95f8f602690829027a"
+    },
+    "HumanEvalFixDisguised-74__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "4f718d09c7d5624add6757efd17dcd98fae17b467cb7cd00778ee83d1cdcf80a",
+      "P2": "4f718d09c7d5624add6757efd17dcd98fae17b467cb7cd00778ee83d1cdcf80a",
+      "P3": "4f718d09c7d5624add6757efd17dcd98fae17b467cb7cd00778ee83d1cdcf80a",
+      "P4": "4f718d09c7d5624add6757efd17dcd98fae17b467cb7cd00778ee83d1cdcf80a"
+    },
+    "HumanEvalFixDisguised-74__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "eb44a5097bf22a1ce8490875987234bafdc169f64ea2ea7cec6dddf9e730f1b9",
+      "P2": "eb44a5097bf22a1ce8490875987234bafdc169f64ea2ea7cec6dddf9e730f1b9",
+      "P3": "eb44a5097bf22a1ce8490875987234bafdc169f64ea2ea7cec6dddf9e730f1b9",
+      "P4": "eb44a5097bf22a1ce8490875987234bafdc169f64ea2ea7cec6dddf9e730f1b9"
+    },
+    "HumanEvalFixDisguised-80__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "ef869e10ee29d1eb8156f8a21d0f5ffd9403c766eadc75d64e795974cebc6716",
+      "P2": "ef869e10ee29d1eb8156f8a21d0f5ffd9403c766eadc75d64e795974cebc6716",
+      "P3": "ef869e10ee29d1eb8156f8a21d0f5ffd9403c766eadc75d64e795974cebc6716",
+      "P4": "ef869e10ee29d1eb8156f8a21d0f5ffd9403c766eadc75d64e795974cebc6716"
+    },
+    "HumanEvalFixDisguised-80__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "f4e024c2bcb4f4cac3d0269a8b4172ebd724d760b6b7c4f7afbe77b0ce8d5eeb",
+      "P2": "f4e024c2bcb4f4cac3d0269a8b4172ebd724d760b6b7c4f7afbe77b0ce8d5eeb",
+      "P3": "f4e024c2bcb4f4cac3d0269a8b4172ebd724d760b6b7c4f7afbe77b0ce8d5eeb",
+      "P4": "f4e024c2bcb4f4cac3d0269a8b4172ebd724d760b6b7c4f7afbe77b0ce8d5eeb"
+    },
+    "HumanEvalFixDisguised-82__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1b7edbbb709ed800e097335117f27c4b02670e3375d3efe7a0de677d193fdeac",
+      "P2": "1b7edbbb709ed800e097335117f27c4b02670e3375d3efe7a0de677d193fdeac",
+      "P3": "1b7edbbb709ed800e097335117f27c4b02670e3375d3efe7a0de677d193fdeac",
+      "P4": "1b7edbbb709ed800e097335117f27c4b02670e3375d3efe7a0de677d193fdeac"
+    },
+    "HumanEvalFixDisguised-82__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "70be629fd9cd7ce009829165ba45dc1fc52ddbf514b1d4faef89105da3984a7a",
+      "P2": "70be629fd9cd7ce009829165ba45dc1fc52ddbf514b1d4faef89105da3984a7a",
+      "P3": "70be629fd9cd7ce009829165ba45dc1fc52ddbf514b1d4faef89105da3984a7a",
+      "P4": "70be629fd9cd7ce009829165ba45dc1fc52ddbf514b1d4faef89105da3984a7a"
+    },
+    "HumanEvalFixDisguised-85__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "0656f7c41eb8a8743d0cb40e1001eacd56e4525df52fb5cd33a596957e2fa477",
+      "P2": "0656f7c41eb8a8743d0cb40e1001eacd56e4525df52fb5cd33a596957e2fa477",
+      "P3": "0656f7c41eb8a8743d0cb40e1001eacd56e4525df52fb5cd33a596957e2fa477",
+      "P4": "0656f7c41eb8a8743d0cb40e1001eacd56e4525df52fb5cd33a596957e2fa477"
+    },
+    "HumanEvalFixDisguised-85__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "5401ac709cf5213e5d7aca8973376963c3fb332dd2443ef8cc458ba95703000a",
+      "P2": "5401ac709cf5213e5d7aca8973376963c3fb332dd2443ef8cc458ba95703000a",
+      "P3": "5401ac709cf5213e5d7aca8973376963c3fb332dd2443ef8cc458ba95703000a",
+      "P4": "5401ac709cf5213e5d7aca8973376963c3fb332dd2443ef8cc458ba95703000a"
+    },
+    "HumanEvalFixDisguised-97__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "5e977b14765596f17fdf0b9786baecafdd654b87f87ea001f41c9813858fee45",
+      "P2": "5e977b14765596f17fdf0b9786baecafdd654b87f87ea001f41c9813858fee45",
+      "P3": "5e977b14765596f17fdf0b9786baecafdd654b87f87ea001f41c9813858fee45",
+      "P4": "5e977b14765596f17fdf0b9786baecafdd654b87f87ea001f41c9813858fee45"
+    },
+    "HumanEvalFixDisguised-97__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "55193a49aed3797915b955473989c4dbaed3f00a00b361b8076764339260227d",
+      "P2": "55193a49aed3797915b955473989c4dbaed3f00a00b361b8076764339260227d",
+      "P3": "55193a49aed3797915b955473989c4dbaed3f00a00b361b8076764339260227d",
+      "P4": "55193a49aed3797915b955473989c4dbaed3f00a00b361b8076764339260227d"
+    },
+    "HumanEvalFixDisguised-107__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "3e3d00d77a0fd9a3928ce6a6000dc223515d82d4e8b9003366b4ee7c60c06723",
+      "P2": "3e3d00d77a0fd9a3928ce6a6000dc223515d82d4e8b9003366b4ee7c60c06723",
+      "P3": "3e3d00d77a0fd9a3928ce6a6000dc223515d82d4e8b9003366b4ee7c60c06723",
+      "P4": "3e3d00d77a0fd9a3928ce6a6000dc223515d82d4e8b9003366b4ee7c60c06723"
+    },
+    "HumanEvalFixDisguised-107__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "541cce16213983a1887d861bfdad6390476d115fc3f159eb8a1a154e004b9d0d",
+      "P2": "541cce16213983a1887d861bfdad6390476d115fc3f159eb8a1a154e004b9d0d",
+      "P3": "541cce16213983a1887d861bfdad6390476d115fc3f159eb8a1a154e004b9d0d",
+      "P4": "541cce16213983a1887d861bfdad6390476d115fc3f159eb8a1a154e004b9d0d"
+    },
+    "HumanEvalFixDisguised-108__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "e2d49434c5bad26663dffb7e56f5aec376bd2408e27ef6f0abbd9a88600c6aeb",
+      "P2": "e2d49434c5bad26663dffb7e56f5aec376bd2408e27ef6f0abbd9a88600c6aeb",
+      "P3": "e2d49434c5bad26663dffb7e56f5aec376bd2408e27ef6f0abbd9a88600c6aeb",
+      "P4": "e2d49434c5bad26663dffb7e56f5aec376bd2408e27ef6f0abbd9a88600c6aeb"
+    },
+    "HumanEvalFixDisguised-108__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "12a47b37184f2c3425b7d3a6de797f14b5dd3ceea4bdd223531b3f0b961e1fcb",
+      "P2": "12a47b37184f2c3425b7d3a6de797f14b5dd3ceea4bdd223531b3f0b961e1fcb",
+      "P3": "12a47b37184f2c3425b7d3a6de797f14b5dd3ceea4bdd223531b3f0b961e1fcb",
+      "P4": "12a47b37184f2c3425b7d3a6de797f14b5dd3ceea4bdd223531b3f0b961e1fcb"
+    },
+    "HumanEvalFixDisguised-111__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "6d83d3179fb46bb0c1bb5f7459b70d6b5880c031504367b9f723db8b8acb1aa1",
+      "P2": "6d83d3179fb46bb0c1bb5f7459b70d6b5880c031504367b9f723db8b8acb1aa1",
+      "P3": "6d83d3179fb46bb0c1bb5f7459b70d6b5880c031504367b9f723db8b8acb1aa1",
+      "P4": "6d83d3179fb46bb0c1bb5f7459b70d6b5880c031504367b9f723db8b8acb1aa1"
+    },
+    "HumanEvalFixDisguised-111__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "8ca539ebe4121340461f1ffd10b4b7ff1777ea87e3a6fe03ed9f7073f571530a",
+      "P2": "8ca539ebe4121340461f1ffd10b4b7ff1777ea87e3a6fe03ed9f7073f571530a",
+      "P3": "8ca539ebe4121340461f1ffd10b4b7ff1777ea87e3a6fe03ed9f7073f571530a",
+      "P4": "8ca539ebe4121340461f1ffd10b4b7ff1777ea87e3a6fe03ed9f7073f571530a"
+    },
+    "HumanEvalFixDisguised-112__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "a7178f66c730d6c045d583d24ccec46173d7c425d6754d92b15c470bb2ec06a3",
+      "P2": "a7178f66c730d6c045d583d24ccec46173d7c425d6754d92b15c470bb2ec06a3",
+      "P3": "a7178f66c730d6c045d583d24ccec46173d7c425d6754d92b15c470bb2ec06a3",
+      "P4": "a7178f66c730d6c045d583d24ccec46173d7c425d6754d92b15c470bb2ec06a3"
+    },
+    "HumanEvalFixDisguised-112__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "96a3ce2374c2de638205e8f04212e8db3d65f7f71b1c46beb681ba49ade6419a",
+      "P2": "96a3ce2374c2de638205e8f04212e8db3d65f7f71b1c46beb681ba49ade6419a",
+      "P3": "96a3ce2374c2de638205e8f04212e8db3d65f7f71b1c46beb681ba49ade6419a",
+      "P4": "96a3ce2374c2de638205e8f04212e8db3d65f7f71b1c46beb681ba49ade6419a"
+    },
+    "HumanEvalFixDisguised-117__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "6ab2278558f8a291cdce0a582b6f99787f106195bc431cf7babc1cabee608caf",
+      "P2": "6ab2278558f8a291cdce0a582b6f99787f106195bc431cf7babc1cabee608caf",
+      "P3": "6ab2278558f8a291cdce0a582b6f99787f106195bc431cf7babc1cabee608caf",
+      "P4": "6ab2278558f8a291cdce0a582b6f99787f106195bc431cf7babc1cabee608caf"
+    },
+    "HumanEvalFixDisguised-117__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "eab45c29ffece7d35a59600fe13bbe1e5bcc05b96f42dbc0ab82dcfe9f347f77",
+      "P2": "eab45c29ffece7d35a59600fe13bbe1e5bcc05b96f42dbc0ab82dcfe9f347f77",
+      "P3": "eab45c29ffece7d35a59600fe13bbe1e5bcc05b96f42dbc0ab82dcfe9f347f77",
+      "P4": "eab45c29ffece7d35a59600fe13bbe1e5bcc05b96f42dbc0ab82dcfe9f347f77"
+    },
+    "HumanEvalFixDisguised-125__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "e4bfb32c0f9355540d6cb59453a747d4245916110630e26ee831d5c053c59dc5",
+      "P2": "e4bfb32c0f9355540d6cb59453a747d4245916110630e26ee831d5c053c59dc5",
+      "P3": "e4bfb32c0f9355540d6cb59453a747d4245916110630e26ee831d5c053c59dc5",
+      "P4": "e4bfb32c0f9355540d6cb59453a747d4245916110630e26ee831d5c053c59dc5"
+    },
+    "HumanEvalFixDisguised-125__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "b0d50dc95076d4adaa87dbfcd3ea4ca42090ce896d0cd94e58a3bbb8bc6c5e30",
+      "P2": "b0d50dc95076d4adaa87dbfcd3ea4ca42090ce896d0cd94e58a3bbb8bc6c5e30",
+      "P3": "b0d50dc95076d4adaa87dbfcd3ea4ca42090ce896d0cd94e58a3bbb8bc6c5e30",
+      "P4": "b0d50dc95076d4adaa87dbfcd3ea4ca42090ce896d0cd94e58a3bbb8bc6c5e30"
+    },
+    "HumanEvalFixDisguised-126__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "314d7279a112c0fabc843b587a3965b4570921ef5ef6f9bff7e659e13ee35161",
+      "P2": "314d7279a112c0fabc843b587a3965b4570921ef5ef6f9bff7e659e13ee35161",
+      "P3": "314d7279a112c0fabc843b587a3965b4570921ef5ef6f9bff7e659e13ee35161",
+      "P4": "314d7279a112c0fabc843b587a3965b4570921ef5ef6f9bff7e659e13ee35161"
+    },
+    "HumanEvalFixDisguised-126__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1a65a4b42c2f7080a0433a810a658c8d079a741a2ec149b413e660da1fb53fab",
+      "P2": "1a65a4b42c2f7080a0433a810a658c8d079a741a2ec149b413e660da1fb53fab",
+      "P3": "1a65a4b42c2f7080a0433a810a658c8d079a741a2ec149b413e660da1fb53fab",
+      "P4": "1a65a4b42c2f7080a0433a810a658c8d079a741a2ec149b413e660da1fb53fab"
+    },
+    "HumanEvalFixDisguised-130__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6",
+      "P2": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6",
+      "P3": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6",
+      "P4": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6"
+    },
+    "HumanEvalFixDisguised-130__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6",
+      "P2": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6",
+      "P3": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6",
+      "P4": "43881deed71ed8b86853695d13940c346b620abdb0d8fe8962c27a03001421e6"
+    },
+    "HumanEvalFixDisguised-141__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "43b2a897d4a3568a1236f7a989f08bf619e4d63f5182fa1ceafb17947947316a",
+      "P2": "43b2a897d4a3568a1236f7a989f08bf619e4d63f5182fa1ceafb17947947316a",
+      "P3": "43b2a897d4a3568a1236f7a989f08bf619e4d63f5182fa1ceafb17947947316a",
+      "P4": "43b2a897d4a3568a1236f7a989f08bf619e4d63f5182fa1ceafb17947947316a"
+    },
+    "HumanEvalFixDisguised-141__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "0e3fe6cd44658e002611c657703a9960e8d7cceb18dec466facdcf0188df6c93",
+      "P2": "0e3fe6cd44658e002611c657703a9960e8d7cceb18dec466facdcf0188df6c93",
+      "P3": "0e3fe6cd44658e002611c657703a9960e8d7cceb18dec466facdcf0188df6c93",
+      "P4": "0e3fe6cd44658e002611c657703a9960e8d7cceb18dec466facdcf0188df6c93"
+    },
+    "HumanEvalFixDisguised-143__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "d6a5a7b2d1e2d69157cd21ff60af20720b3c335a940f5d4a62a5991e31dfa014",
+      "P2": "d6a5a7b2d1e2d69157cd21ff60af20720b3c335a940f5d4a62a5991e31dfa014",
+      "P3": "d6a5a7b2d1e2d69157cd21ff60af20720b3c335a940f5d4a62a5991e31dfa014",
+      "P4": "d6a5a7b2d1e2d69157cd21ff60af20720b3c335a940f5d4a62a5991e31dfa014"
+    },
+    "HumanEvalFixDisguised-143__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "2b5f29082c7c49e1767aae6bd989aebf867f9491381975f088d8a171dfc205d3",
+      "P2": "2b5f29082c7c49e1767aae6bd989aebf867f9491381975f088d8a171dfc205d3",
+      "P3": "2b5f29082c7c49e1767aae6bd989aebf867f9491381975f088d8a171dfc205d3",
+      "P4": "2b5f29082c7c49e1767aae6bd989aebf867f9491381975f088d8a171dfc205d3"
+    },
+    "HumanEvalFixDisguised-146__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae",
+      "P2": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae",
+      "P3": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae",
+      "P4": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae"
+    },
+    "HumanEvalFixDisguised-146__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae",
+      "P2": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae",
+      "P3": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae",
+      "P4": "b6ecbbc285c74e5d03fa1a343433e8ed47428e9f2119616d0b0c1a3bc7ca29ae"
+    },
+    "HumanEvalFixDisguised-148__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "c1f294df5a084383ea20408aeec2c6703be8957856380b66d185ba3ab27cd029",
+      "P2": "c1f294df5a084383ea20408aeec2c6703be8957856380b66d185ba3ab27cd029",
+      "P3": "c1f294df5a084383ea20408aeec2c6703be8957856380b66d185ba3ab27cd029",
+      "P4": "c1f294df5a084383ea20408aeec2c6703be8957856380b66d185ba3ab27cd029"
+    },
+    "HumanEvalFixDisguised-148__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "38a70a5e6540467f68eaa94a389743ed3651e27d7bbdfc63c94ac208c9a9234f",
+      "P2": "38a70a5e6540467f68eaa94a389743ed3651e27d7bbdfc63c94ac208c9a9234f",
+      "P3": "38a70a5e6540467f68eaa94a389743ed3651e27d7bbdfc63c94ac208c9a9234f",
+      "P4": "38a70a5e6540467f68eaa94a389743ed3651e27d7bbdfc63c94ac208c9a9234f"
+    },
+    "HumanEvalFixDisguised-149__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "be73fb2eb5be3b61e20b2d630464c29c6a0ae73e8e5cfaac303535a5f5ff786b",
+      "P2": "be73fb2eb5be3b61e20b2d630464c29c6a0ae73e8e5cfaac303535a5f5ff786b",
+      "P3": "be73fb2eb5be3b61e20b2d630464c29c6a0ae73e8e5cfaac303535a5f5ff786b",
+      "P4": "be73fb2eb5be3b61e20b2d630464c29c6a0ae73e8e5cfaac303535a5f5ff786b"
+    },
+    "HumanEvalFixDisguised-149__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "7d0c89d1033413585974aea7fcc276714f04dfe44cd9efc533ae93091823a283",
+      "P2": "7d0c89d1033413585974aea7fcc276714f04dfe44cd9efc533ae93091823a283",
+      "P3": "7d0c89d1033413585974aea7fcc276714f04dfe44cd9efc533ae93091823a283",
+      "P4": "7d0c89d1033413585974aea7fcc276714f04dfe44cd9efc533ae93091823a283"
+    },
+    "HumanEvalFixDisguised-151__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "b618cfc0505cb99513c1acbf60c8e1b6e52ef38eafb5c2b182b96949cdd4e1d5",
+      "P2": "b618cfc0505cb99513c1acbf60c8e1b6e52ef38eafb5c2b182b96949cdd4e1d5",
+      "P3": "b618cfc0505cb99513c1acbf60c8e1b6e52ef38eafb5c2b182b96949cdd4e1d5",
+      "P4": "b618cfc0505cb99513c1acbf60c8e1b6e52ef38eafb5c2b182b96949cdd4e1d5"
+    },
+    "HumanEvalFixDisguised-151__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "5bdb3c347a6c9c9227cdf091e3ad2fd4c13055bca68946e5becb44408eaad932",
+      "P2": "5bdb3c347a6c9c9227cdf091e3ad2fd4c13055bca68946e5becb44408eaad932",
+      "P3": "5bdb3c347a6c9c9227cdf091e3ad2fd4c13055bca68946e5becb44408eaad932",
+      "P4": "5bdb3c347a6c9c9227cdf091e3ad2fd4c13055bca68946e5becb44408eaad932"
+    },
+    "HumanEvalFixDisguised-154__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1ae1db5fc11ab5752405cd9cc7b56a2e369fa892a0ba4999b9d26d7686a6a50b",
+      "P2": "1ae1db5fc11ab5752405cd9cc7b56a2e369fa892a0ba4999b9d26d7686a6a50b",
+      "P3": "1ae1db5fc11ab5752405cd9cc7b56a2e369fa892a0ba4999b9d26d7686a6a50b",
+      "P4": "1ae1db5fc11ab5752405cd9cc7b56a2e369fa892a0ba4999b9d26d7686a6a50b"
+    },
+    "HumanEvalFixDisguised-154__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "c19ecb468aec1dc2777d68be50def22a72220878d1eb3fe13b00fd845bb70b06",
+      "P2": "c19ecb468aec1dc2777d68be50def22a72220878d1eb3fe13b00fd845bb70b06",
+      "P3": "c19ecb468aec1dc2777d68be50def22a72220878d1eb3fe13b00fd845bb70b06",
+      "P4": "c19ecb468aec1dc2777d68be50def22a72220878d1eb3fe13b00fd845bb70b06"
+    }
+  },
+  "unit_seconds": {
+    "HumanEvalFixDisguised-5__buggy__qwen2-5-coder-7b-instruct__s0__code": 177.7029999999977,
+    "HumanEvalFixDisguised-5__fixed__qwen2-5-coder-7b-instruct__s0__code": 68.53099999999904,
+    "HumanEvalFixDisguised-8__buggy__qwen2-5-coder-7b-instruct__s0__code": 180.875,
+    "HumanEvalFixDisguised-8__fixed__qwen2-5-coder-7b-instruct__s0__code": 80.71900000000096,
+    "HumanEvalFixDisguised-9__buggy__qwen2-5-coder-7b-instruct__s0__code": 137.96900000000096,
+    "HumanEvalFixDisguised-9__fixed__qwen2-5-coder-7b-instruct__s0__code": 67.92199999999866,
+    "HumanEvalFixDisguised-10__buggy__qwen2-5-coder-7b-instruct__s0__code": 172.875,
+    "HumanEvalFixDisguised-10__fixed__qwen2-5-coder-7b-instruct__s0__code": 184.25,
+    "HumanEvalFixDisguised-12__buggy__qwen2-5-coder-7b-instruct__s0__code": 169.34299999999712,
+    "HumanEvalFixDisguised-12__fixed__qwen2-5-coder-7b-instruct__s0__code": 67.25,
+    "HumanEvalFixDisguised-13__buggy__qwen2-5-coder-7b-instruct__s0__code": 180.46900000000096,
+    "HumanEvalFixDisguised-13__fixed__qwen2-5-coder-7b-instruct__s0__code": 67.88999999999942,
+    "HumanEvalFixDisguised-19__buggy__qwen2-5-coder-7b-instruct__s0__code": 141.23400000000038,
+    "HumanEvalFixDisguised-19__fixed__qwen2-5-coder-7b-instruct__s0__code": 94.13999999999942,
+    "HumanEvalFixDisguised-24__buggy__qwen2-5-coder-7b-instruct__s0__code": 152.20300000000134,
+    "HumanEvalFixDisguised-24__fixed__qwen2-5-coder-7b-instruct__s0__code": 75.31300000000192,
+    "HumanEvalFixDisguised-27__buggy__qwen2-5-coder-7b-instruct__s0__code": 104.625,
+    "HumanEvalFixDisguised-27__fixed__qwen2-5-coder-7b-instruct__s0__code": 71.51599999999962,
+    "HumanEvalFixDisguised-31__buggy__qwen2-5-coder-7b-instruct__s0__code": 125.76599999999962,
+    "HumanEvalFixDisguised-31__fixed__qwen2-5-coder-7b-instruct__s0__code": 64.93699999999808,
+    "HumanEvalFixDisguised-38__buggy__qwen2-5-coder-7b-instruct__s0__code": 152.9529999999977,
+    "HumanEvalFixDisguised-38__fixed__qwen2-5-coder-7b-instruct__s0__code": 165.625,
+    "HumanEvalFixDisguised-43__buggy__qwen2-5-coder-7b-instruct__s0__code": 84.10900000000038,
+    "HumanEvalFixDisguised-43__fixed__qwen2-5-coder-7b-instruct__s0__code": 75.95300000000134,
+    "HumanEvalFixDisguised-56__buggy__qwen2-5-coder-7b-instruct__s0__code": 125.98500000000058,
+    "HumanEvalFixDisguised-56__fixed__qwen2-5-coder-7b-instruct__s0__code": 64.39099999999962,
+    "HumanEvalFixDisguised-57__buggy__qwen2-5-coder-7b-instruct__s0__code": 158.26600000000326,
+    "HumanEvalFixDisguised-57__fixed__qwen2-5-coder-7b-instruct__s0__code": 68.21800000000076,
+    "HumanEvalFixDisguised-62__buggy__qwen2-5-coder-7b-instruct__s0__code": 159.45300000000134,
+    "HumanEvalFixDisguised-62__fixed__qwen2-5-coder-7b-instruct__s0__code": 86.625,
+    "HumanEvalFixDisguised-63__buggy__qwen2-5-coder-7b-instruct__s0__code": 145.71900000000096,
+    "HumanEvalFixDisguised-63__fixed__qwen2-5-coder-7b-instruct__s0__code": 66.4220000000023,
+    "HumanEvalFixDisguised-64__buggy__qwen2-5-coder-7b-instruct__s0__code": 76.21900000000096,
+    "HumanEvalFixDisguised-64__fixed__qwen2-5-coder-7b-instruct__s0__code": 89.39100000000326,
+    "HumanEvalFixDisguised-65__buggy__qwen2-5-coder-7b-instruct__s0__code": 117.56200000000172,
+    "HumanEvalFixDisguised-65__fixed__qwen2-5-coder-7b-instruct__s0__code": 84.375,
+    "HumanEvalFixDisguised-67__buggy__qwen2-5-coder-7b-instruct__s0__code": 171.01600000000326,
+    "HumanEvalFixDisguised-67__fixed__qwen2-5-coder-7b-instruct__s0__code": 69.06300000000192,
+    "HumanEvalFixDisguised-72__buggy__qwen2-5-coder-7b-instruct__s0__code": 105.98500000000058,
+    "HumanEvalFixDisguised-72__fixed__qwen2-5-coder-7b-instruct__s0__code": 87.70300000000134,
+    "HumanEvalFixDisguised-74__buggy__qwen2-5-coder-7b-instruct__s0__code": 128.67199999999866,
+    "HumanEvalFixDisguised-74__fixed__qwen2-5-coder-7b-instruct__s0__code": 86.82800000000134,
+    "HumanEvalFixDisguised-80__buggy__qwen2-5-coder-7b-instruct__s0__code": 111.70300000000134,
+    "HumanEvalFixDisguised-80__fixed__qwen2-5-coder-7b-instruct__s0__code": 65.28100000000268,
+    "HumanEvalFixDisguised-82__buggy__qwen2-5-coder-7b-instruct__s0__code": 81.1559999999954,
+    "HumanEvalFixDisguised-82__fixed__qwen2-5-coder-7b-instruct__s0__code": 63.140999999995984,
+    "HumanEvalFixDisguised-85__buggy__qwen2-5-coder-7b-instruct__s0__code": 118.36000000000058,
+    "HumanEvalFixDisguised-85__fixed__qwen2-5-coder-7b-instruct__s0__code": 80.3440000000046,
+    "HumanEvalFixDisguised-97__buggy__qwen2-5-coder-7b-instruct__s0__code": 104.45300000000134,
+    "HumanEvalFixDisguised-97__fixed__qwen2-5-coder-7b-instruct__s0__code": 103.18699999999808,
+    "HumanEvalFixDisguised-107__buggy__qwen2-5-coder-7b-instruct__s0__code": 172.21899999999732,
+    "HumanEvalFixDisguised-107__fixed__qwen2-5-coder-7b-instruct__s0__code": 143.9690000000046,
+    "HumanEvalFixDisguised-108__buggy__qwen2-5-coder-7b-instruct__s0__code": 127.15600000000268,
+    "HumanEvalFixDisguised-108__fixed__qwen2-5-coder-7b-instruct__s0__code": 99.95300000000134,
+    "HumanEvalFixDisguised-111__buggy__qwen2-5-coder-7b-instruct__s0__code": 94.7809999999954,
+    "HumanEvalFixDisguised-111__fixed__qwen2-5-coder-7b-instruct__s0__code": 80.7809999999954,
+    "HumanEvalFixDisguised-112__buggy__qwen2-5-coder-7b-instruct__s0__code": 193.7960000000021,
+    "HumanEvalFixDisguised-112__fixed__qwen2-5-coder-7b-instruct__s0__code": 116.5,
+    "HumanEvalFixDisguised-117__buggy__qwen2-5-coder-7b-instruct__s0__code": 170.73399999999674,
+    "HumanEvalFixDisguised-117__fixed__qwen2-5-coder-7b-instruct__s0__code": 141.04699999999866,
+    "HumanEvalFixDisguised-125__buggy__qwen2-5-coder-7b-instruct__s0__code": 92.21800000000076,
+    "HumanEvalFixDisguised-125__fixed__qwen2-5-coder-7b-instruct__s0__code": 63.9059999999954,
+    "HumanEvalFixDisguised-126__buggy__qwen2-5-coder-7b-instruct__s0__code": 97.4210000000021,
+    "HumanEvalFixDisguised-126__fixed__qwen2-5-coder-7b-instruct__s0__code": 78.0,
+    "HumanEvalFixDisguised-130__buggy__qwen2-5-coder-7b-instruct__s0__code": 156.4059999999954,
+    "HumanEvalFixDisguised-130__fixed__qwen2-5-coder-7b-instruct__s0__code": 95.0789999999979,
+    "HumanEvalFixDisguised-141__buggy__qwen2-5-coder-7b-instruct__s0__code": 75.875,
+    "HumanEvalFixDisguised-141__fixed__qwen2-5-coder-7b-instruct__s0__code": 82.92199999999866,
+    "HumanEvalFixDisguised-143__buggy__qwen2-5-coder-7b-instruct__s0__code": 165.39100000000326,
+    "HumanEvalFixDisguised-143__fixed__qwen2-5-coder-7b-instruct__s0__code": 106.25,
+    "HumanEvalFixDisguised-146__buggy__qwen2-5-coder-7b-instruct__s0__code": 125.76499999999942,
+    "HumanEvalFixDisguised-146__fixed__qwen2-5-coder-7b-instruct__s0__code": 74.07800000000134,
+    "HumanEvalFixDisguised-148__buggy__qwen2-5-coder-7b-instruct__s0__code": 100.98500000000058,
+    "HumanEvalFixDisguised-148__fixed__qwen2-5-coder-7b-instruct__s0__code": 76.10899999999674,
+    "HumanEvalFixDisguised-149__buggy__qwen2-5-coder-7b-instruct__s0__code": 114.875,
+    "HumanEvalFixDisguised-149__fixed__qwen2-5-coder-7b-instruct__s0__code": 93.90600000000268,
+    "HumanEvalFixDisguised-151__buggy__qwen2-5-coder-7b-instruct__s0__code": 104.42200000000594,
+    "HumanEvalFixDisguised-151__fixed__qwen2-5-coder-7b-instruct__s0__code": 95.84399999999732,
+    "HumanEvalFixDisguised-154__buggy__qwen2-5-coder-7b-instruct__s0__code": 130.96899999999732,
+    "HumanEvalFixDisguised-154__fixed__qwen2-5-coder-7b-instruct__s0__code": 109.01600000000326
+  }
+}

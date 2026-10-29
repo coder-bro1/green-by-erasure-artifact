@@ -1,0 +1,105 @@
+{
+  "pair_id": "QuixBugs/kheapsort",
+  "version": "fixed",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_82f13de372d9a5b7.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_75ee0344af90685c.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_ef2f1f9083c2b425.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_9be2dbc455bcc3fd.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_82f24de2c63e863e.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_dff1bb8dc73b47a9.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_29ca0650e2522b31.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_38818e7ebec79d96.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_f66c1fa8ab16e9c6.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_1f360565a87fdd5b.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__fixed__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "f194ac7943a54a48a622d98eaac0ecf1",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c0025b783da746fd81bf7d423167fda4",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.3,
+  "finished": "2026-10-28T21:36:42.662213+00:00"
+}

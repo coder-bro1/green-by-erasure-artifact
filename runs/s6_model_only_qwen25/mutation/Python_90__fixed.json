@@ -1,0 +1,169 @@
+{
+  "pair_id": "Python/90",
+  "version": "fixed",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_db30d1f8522c3464.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_3c2153152c7a4c86.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_d5c41fbd2175158c.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_c210be1d75ac876c.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_67a25c191d8db650.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_f5c6fbbc1bd23b39.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_6cf27e7127220036.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_0a4338fbc0523e38.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_618020f3e1439b64.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_50a2637e0d476a12.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-90__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_6cf27e7127220036.py"
+  ],
+  "baseline": {
+    "tests/test_6cf27e7127220036.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "1f9e273b2c14405095a83925ec229aa2",
+      "killed_by": [
+        "tests/test_6cf27e7127220036.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "92c237c4d2c64d4ebb214b13030136a9",
+      "killed_by": [
+        "tests/test_6cf27e7127220036.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8e0a19718a544c73b47561eea0e5d695",
+      "killed_by": [
+        "tests/test_6cf27e7127220036.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "249e96f403b046288ad3e52162f4d1a6",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "646eacd9cc3b481280e483c4d574a8fa",
+      "killed_by": [
+        "tests/test_6cf27e7127220036.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6d64d91e600346f4859028bf99a9a623",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "01d19b23276140ffbb8bb51495257b95",
+      "killed_by": [
+        "tests/test_6cf27e7127220036.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "d642c725684d417198896972b9ed6b27",
+      "killed_by": [
+        "tests/test_6cf27e7127220036.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "0f5d461ef4e548908312800376ddd3a6",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "7672fd75067d4c6db700af06cbf6002a",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 14.0,
+  "finished": "2026-10-28T21:49:39.876181+00:00"
+}

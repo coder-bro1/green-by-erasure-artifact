@@ -1,0 +1,58 @@
+{
+ "project": "spacy",
+ "bug": 5,
+ "python_pinned": "3.7.7",
+ "python_used": "3.7.7",
+ "started": "2026-10-19 01:42:36",
+ "install_buggy": {
+  "created": true,
+  "requirements": 18,
+  "failed_requirements": [],
+  "setup": [
+   "pip3 install -r requirements.txt",
+   "python setup.py build_ext --inplace"
+  ],
+  "failed_setup": [
+   "python setup.py build_ext --inplace"
+  ],
+  "prefer_binary": [
+   "preshed>=3.0.2,<3.1.0"
+  ]
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 18,
+  "failed_requirements": [],
+  "setup": [
+   "pip3 install -r requirements.txt",
+   "python setup.py build_ext --inplace"
+  ],
+  "failed_setup": [
+   "python setup.py build_ext --inplace"
+  ],
+  "prefer_binary": [
+   "preshed>=3.0.2,<3.1.0"
+  ]
+ },
+ "test_commands": [
+  "py.test spacy/tests/test_language.py::test_evaluate_no_pipe"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "norun",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/test_language.py::test_evaluate_no_pipe",
+     "exit": 4,
+     "outcome": "norun",
+     "import_error": true,
+     "last_line": "E   ModuleNotFoundError: No module named 'spacy.pipeline.pipes'"
+    }
+   ]
+  }
+ ],
+ "step2": "fail: the buggy checkout cannot import the project or a dependency",
+ "seconds": 169
+}

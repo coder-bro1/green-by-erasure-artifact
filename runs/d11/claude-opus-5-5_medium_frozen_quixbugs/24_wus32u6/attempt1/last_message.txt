@@ -1,0 +1,16 @@
+I wrote the tests in <work>\work\test_solution.py, but they found a real bug in solution.py, so a plain "everything passes" isn't possible without hiding it. The suite exits green: 18 passed, 6 expected failures marked strict xfail. solution.py is unchanged (`git status` shows only the new test file).
+
+**The bug:** when the first characters match, `longest_common_subsequence` recurses with `(a[1:], b)` instead of `(a[1:], b[1:])`. That lets one character of `b` be matched more than once. For example, `longest_common_subsequence('aa', 'a')` returns `'aa'` (correct: `'a'`), and `('AGGTAB', 'GXTXAYB')` returns `'GGTAB'`, which isn't a subsequence of the second string. It only goes wrong when `a` has repeated characters; the docstring example `('headache', 'pentadactyl') -> 'eadac'` still works.
+
+**What passes (18):**
+- the docstring example
+- empty and no-overlap inputs
+- identical strings
+- cases where one string is a subsequence of the other
+- case sensitivity
+- cases with more than one valid answer, checked as: the result is a subsequence of both strings and has the right length (compared with a standard dynamic-programming LCS)
+- 200 seeded random cases where `a` has no repeated characters, checked the same way
+
+**Expected failures (6):** these test correct behaviour with repeated characters: `aa/a`, `aab/ab`, `aaaa/aa`, the two classic examples `abcbdab/bdcaba` and `AGGTAB/GXTXAYB`, and a random check on strings of a's and b's. Because they're marked strict, they will be reported as errors once solution.py is fixed, which is the signal to remove the markers. If you'd rather have them fail outright now, delete the xfail decorators.
+
+Run with: `python -m pytest -q <work>\work\test_solution.py`

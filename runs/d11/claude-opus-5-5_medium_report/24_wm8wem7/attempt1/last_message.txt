@@ -1,0 +1,17 @@
+I wrote 19 pytest tests for `is_sorted` in <work>\work\test_solution.py, and all 19 pass. I didn't touch <work>\work\solution.py.
+
+No test needed `xfail`, because the function does what its docstring says. It sorts numbers in ascending order, allows a value to appear at most twice, and returns False once any value appears three or more times. All 8 examples in the docstring give the expected result.
+
+Besides those 8 examples, the tests cover:
+- an empty list and a single `[0]`, both True
+- a value appearing exactly twice (`[3,3]`) is allowed
+- a value appearing three times is rejected, whether at the start, at the end, or not next to each other
+- descending lists and pairs return False
+- a list that is out of order only at the end returns False
+- an unsorted list that also has duplicates returns False
+- very large numbers are handled
+- the input list is not changed
+
+The empty-list case isn't in the docstring, so I expected True on the reasoning that nothing in it is out of order.
+
+result: All 19 pytest tests for solution.py's `is_sorted` pass, in <work>\work\test_solution.py. None needed xfail because the function matches its docstring.

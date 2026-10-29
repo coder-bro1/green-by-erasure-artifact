@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](/<work>/wn4sykw/test_solution.py). `pytest -q -p no:cacheprovider test_solution.py` passes: **8 passed, 2 xfailed**.
+
+Both strict xfails preserve the docstring’s expected `False`: the implementation treats a zero as a pair with itself, so `[0]` and `[1, 3, 5, 0]` incorrectly return `True`. `solution.py` was not modified.

@@ -1,0 +1,14 @@
+I wrote the tests in <work>\work\test_solution.py. They found a bug in solution.py: splitting on commas doesn't work. The suite gives 21 passed and 4 expected failures, and solution.py was not changed.
+
+**The bug:** the docstring says `break_text('red,green')` returns `['red', 'green']`, but it actually returns `['red,green']`. The comma branch runs `text.replace(' ', ',').split()`. That splits on whitespace, and that branch only runs when the text has no spaces, so nothing ever gets split. The fix in solution.py would be `return text.split(',')`.
+
+**How the tests handle it:** the 4 comma-splitting tests are marked as expected failures in strict mode. The suite passes now, and once solution.py is fixed those tests will start failing loudly so the marker gets removed.
+
+**What the tests cover:**
+- **Splitting on spaces:** several spaces in a row, spaces at the start and end, tabs mixed with spaces, a single space, and spaces taking priority over commas.
+- **Splitting on commas:** the docstring example plus a few more cases, which are the 4 expected failures. One more check, that the result is a list, passes.
+- **Counting letters:** the docstring example 'bdx' gives 3, plus empty text, the whole alphabet, all-odd and all-even letters, uppercase (not counted), digits and punctuation (ignored), tabs and newlines without a space (counted, not split), and that the result is an int.
+
+Run with `python -m pytest -q test_solution.py` from <work>\work.
+
+result: <work>\work\test_solution.py passes (21 passed, 4 expected failures) and shows that break_text never splits on commas, contrary to its docstring.

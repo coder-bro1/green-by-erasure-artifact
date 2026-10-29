@@ -1,0 +1,347 @@
+{
+  "P1-a": {
+    "pass": true,
+    "pairs": [
+      {
+        "pair_id": "Python/120",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/83",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/53",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/97",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/29",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/115",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/162",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/126",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/79",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/151",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/38",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/84",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/117",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/61",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/11",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/82",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/75",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/37",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/59",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "Python/76",
+        "fixed": true,
+        "buggy": false
+      }
+    ]
+  },
+  "P1-c": {
+    "pass": true,
+    "checks": 400
+  },
+  "P1-e": {
+    "pass": true,
+    "errors": []
+  },
+  "P1-b": {
+    "pass": false,
+    "violations": [
+      {
+        "call_id": "df211293f57a4254c1ce9cf9318e699034c6ecb7cc76d155107b5edcb3e77161",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "c8a9cf1e6b9e502bd0cee170ed56fc2f5dac49c89cb92997ea8f76669fd39035",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      },
+      {
+        "call_id": "c4ecf8217d322becd48f6fd560dce1902d3a497b1a93ffe0789b10dd9a2ca598",
+        "field": "canonical_solution",
+        "kind": "full_field"
+      }
+    ],
+    "textual_overlaps": 1987,
+    "note": "Textual overlaps are retained for manual inspection; coincidence does not establish data access."
+  },
+  "P1-d": {
+    "pass": false,
+    "sample": [
+      {
+        "test_id": "HumanEvalFix-38__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-76__fixed__qwen2-5-coder-7b-instruct__s0__code/t6",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-79__fixed__qwen2-5-coder-7b-instruct__s0__code/t1",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-162__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-59__fixed__qwen2-5-coder-7b-instruct__s0__code/t8",
+        "policy": "P2",
+        "expected": "FLAKY",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-151__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-59__fixed__qwen2-5-coder-7b-instruct__s0__spec/t9",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-29__buggy__qwen2-5-coder-7b-instruct__s0__spec/t4",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-126__buggy__qwen2-5-coder-7b-instruct__s0__code/t2",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-79__fixed__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-84__fixed__qwen2-5-coder-7b-instruct__s0__code/t9",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-117__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-53__fixed__qwen2-5-coder-7b-instruct__s0__spec/t3",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-59__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-11__buggy__qwen2-5-coder-7b-instruct__s0__code/t3",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-37__buggy__qwen2-5-coder-7b-instruct__s0__spec/t0",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-75__fixed__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-75__buggy__qwen2-5-coder-7b-instruct__s0__spec/t0",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-82__fixed__qwen2-5-coder-7b-instruct__s0__code/t1",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-11__fixed__qwen2-5-coder-7b-instruct__s0__spec/t8",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-29__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-151__fixed__qwen2-5-coder-7b-instruct__s0__spec/t2",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-83__fixed__qwen2-5-coder-7b-instruct__s0__code/t1",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-162__fixed__qwen2-5-coder-7b-instruct__s0__code/t3",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalFix-38__fixed__qwen2-5-coder-7b-instruct__s0__spec/t6",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-29__fixed__qwen2-5-coder-7b-instruct__s0__spec/t7",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-79__fixed__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalFix-53__buggy__qwen2-5-coder-7b-instruct__s0__code/t0",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalFix-84__fixed__qwen2-5-coder-7b-instruct__s0__code/t3",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalFix-53__fixed__qwen2-5-coder-7b-instruct__s0__spec/t6",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      }
+    ]
+  },
+  "P1-f": {
+    "pass": true,
+    "verified": 10,
+    "required": 10
+  },
+  "P1-i": {
+    "pass": true,
+    "fields": [
+      "model_digest",
+      "ollama_version",
+      "prompt_hashes",
+      "dataset_revision",
+      "harness_commit",
+      "options"
+    ]
+  },
+  "P1-m": {
+    "pass": true
+  },
+  "P1-h": {
+    "pass": true,
+    "evidence": "Offline test_resume_no_repeated_calls and persistent client-cache test; timing fields differ by construction."
+  },
+  "section8_all_pass": true,
+  "unit_test_output": "...........................................................              [100%]\n59 passed in 25.68s\n"
+}

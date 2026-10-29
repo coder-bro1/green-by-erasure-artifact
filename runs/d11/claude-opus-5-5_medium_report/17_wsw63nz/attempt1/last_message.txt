@@ -1,0 +1,13 @@
+I wrote `<work>\work\test_solution.py` for `largest_divisor`, and all 609 tests pass (`python -m pytest -q test_solution.py`). `solution.py` was not changed. No test is marked xfail, because the function does what its docstring says for every input I tested.
+
+The tests cover:
+- **Docstring example:** `largest_divisor(15) == 5`.
+- **Fixed cases:** primes give 1 (2, 3, 7, 97, 7919), and composites give their largest divisor (4, 6, 10, 49, 100, 1024, 3*7919).
+- **Every n from 2 to 299:** the result is at least 1, smaller than n, divides n, and nothing larger below n divides n.
+- **Second check over the same range:** the result equals n divided by its smallest prime factor.
+
+Two inputs are left untested because the docstring doesn't say what should happen for them:
+- **n = 1:** the loop's only value is 0, so `1 % 0` raises `ZeroDivisionError`.
+- **n = 0 or negative:** the loop never runs and the function returns `None`.
+
+result: 609 pytest tests for `largest_divisor` in `<work>\work\test_solution.py` all pass; no docstring mismatches found, so no xfail tests were needed.

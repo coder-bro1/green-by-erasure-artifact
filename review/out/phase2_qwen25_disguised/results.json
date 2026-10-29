@@ -1,0 +1,134 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 80,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 1535,
+  "violations": [
+   {
+    "call_id": "a277a78aa4904b10f5a1dedfb851543fb947babe9ad9182135f3299c8a7715f3",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "27b42ac9eeaa6133d84425fd4125ad42b5319d420a9ab3c310a676f3d9eb1d62",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   },
+   {
+    "call_id": "38835574b6c8d6df1c993aecf4d6862c7e53bdbf33b9b86443d5ff84094b4271",
+    "purpose": "free_repair",
+    "lines": [
+     "for k in range(1, limit + 1):"
+    ]
+   }
+  ],
+  "n_violations": 3
+ },
+ "P1-m_judge_sees_body": {
+  "n": 0,
+  "examples": []
+ },
+ "verdicts": {
+  "stored": {
+   "TEST_WRONG": 119,
+   "BUG": 183
+  },
+  "recovered_judge": {
+   "TEST_WRONG": 119,
+   "BUG": 183
+  },
+  "recovered_with_code": {
+   "TEST_WRONG": 142,
+   "BUG": 160
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 23,
+   "buggy|BUG|REVEALS": 127,
+   "buggy|TEST_WRONG|BROKEN": 39,
+   "buggy|TEST_WRONG|REVEALS": 41,
+   "fixed|BUG|BROKEN": 27,
+   "fixed|BUG|ENCODES": 6,
+   "fixed|TEST_WRONG|BROKEN": 34,
+   "fixed|TEST_WRONG|ENCODES": 5
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 320,
+    "QUARANTINED": 150,
+    "QUARANTINED_REVEALS": 127,
+    "KEPT": 170,
+    "QUARANTINED_BROKEN": 23
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 399,
+    "KEPT": 249,
+    "QUARANTINED": 150,
+    "QUARANTINED_REVEALS": 127,
+    "QUARANTINED_BROKEN": 23
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 400,
+    "QUARANTINED": 230,
+    "QUARANTINED_REVEALS": 168,
+    "KEPT": 170,
+    "QUARANTINED_BROKEN": 62
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 320,
+    "QUARANTINED": 150,
+    "QUARANTINED_REVEALS": 127,
+    "KEPT": 170,
+    "QUARANTINED_BROKEN": 23
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 361,
+    "KEPT": 328,
+    "QUARANTINED": 33,
+    "QUARANTINED_BROKEN": 27,
+    "QUARANTINED_ENCODES": 6
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 400,
+    "KEPT": 367,
+    "QUARANTINED": 33,
+    "QUARANTINED_BROKEN": 27,
+    "QUARANTINED_ENCODES": 6
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 400,
+    "KEPT": 328,
+    "QUARANTINED": 72,
+    "QUARANTINED_BROKEN": 61,
+    "QUARANTINED_ENCODES": 11
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 361,
+    "KEPT": 328,
+    "QUARANTINED": 33,
+    "QUARANTINED_BROKEN": 27,
+    "QUARANTINED_ENCODES": 6
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 190,
+  "written": 10
+ }
+}

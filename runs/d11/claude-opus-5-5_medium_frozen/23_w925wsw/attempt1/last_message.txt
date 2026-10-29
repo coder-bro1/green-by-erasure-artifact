@@ -1,0 +1,25 @@
+I wrote the tests, but I couldn't make them all pass: solution.py has a bug, and you said not to change it. I ran pytest: 14 tests, 7 pass and 7 fail. The failures are caused by the bug, not by the tests.
+
+**The bug:** in the loop's `else` branch, solution.py uses
+```python
+running_max = max(numbers)   # takes the max of the whole list
+```
+where it should use
+```python
+running_max = max(running_max, n)
+```
+So every position after the first gets the maximum of the entire list, not the maximum seen so far. Even the docstring example fails: `rolling_max([1, 2, 3, 2, 3, 4, 2])` returns `[1, 4, 4, 4, 4, 4, 4]` instead of `[1, 2, 3, 3, 3, 4, 4]`.
+
+**Passing (7):** empty list, single element, strictly decreasing, all-equal values, input list not changed, output length matches input, and one parametrized case (`[9]`). These pass because the bug has no visible effect when the first element is already the largest, or when there's at most one element.
+
+**Failing (7):** the docstring example, strictly increasing, negative numbers, max at the end, and three parametrized cases that compare against a correct reference version.
+
+I didn't weaken the tests or mark the failures as expected just to make the suite pass, because that would hide a real bug.
+
+**Decision for you:** to get a fully passing suite, either:
+- fix that one line in solution.py, after which all 14 tests should pass, or
+- tell me to mark the 7 failing tests as known failures (`xfail`) with a note pointing to the bug.
+
+Test file: <work>\work\test_solution.py. Run it with `python -m pytest -q test_solution.py` in <work>\work.
+
+failed: The tests can't all pass while solution.py stays unchanged. 7 of 14 fail because `rolling_max` uses `max(numbers)` where it should use `max(running_max, n)`.

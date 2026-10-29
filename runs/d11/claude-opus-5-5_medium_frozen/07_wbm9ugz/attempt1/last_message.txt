@@ -1,0 +1,20 @@
+I wrote the tests in <work>\work\test_solution.py and left solution.py unchanged. Running `python -m pytest -q test_solution.py` gives 26 passed and 2 xfailed.
+
+**There is a bug in `decode_cyclic`.** It just returns `encode_cyclic(s)`. `encode_cyclic` moves each full group of 3 characters one place to the left, so calling it again moves them another place left instead of undoing the first move. For example, `encode_cyclic("abc")` gives `"bca"`, and `decode_cyclic("bca")` gives `"cab"` instead of `"abc"`. Decoding only appears to work on strings shorter than 3 characters or groups of identical characters.
+
+Because I couldn't change solution.py, the two tests that expect correct decoding are marked `xfail(strict=True)`:
+- `test_decode_inverts_encode_known_value`: decoding `"bca"` should give `"abc"`.
+- `test_roundtrip_random`: encoding then decoding random strings should give back the original.
+
+The fix in solution.py is `return encode_cyclic(encode_cyclic(s))`. Once that is in, those two tests will pass, and because they are strict, pytest will report them as failures until the markers are removed.
+
+What the passing tests cover:
+- **Known encodings:** `""`, 1–2 character strings, exact multiples of 3, leftover partial groups, spaces and Unicode.
+- **Length and characters kept:** 200 random strings come out the same length with the same characters.
+- **Leftover characters:** a final group of 1 or 2 characters is left as it is.
+- **Encoding three times:** this returns the original string.
+- **Short and trivial decodes:** strings shorter than 3, and groups of identical characters, round-trip correctly.
+- **Current decode behaviour:** a test confirms `decode_cyclic` returns the same as `encode_cyclic`, so this test will fail once the fix is in and should then be deleted.
+- **Test helper:** the correct reference decoder used by the test file is checked against 200 random strings.
+
+result: Added <work>\work\test_solution.py (26 passed, 2 xfailed); the 2 xfails record a real bug: decode_cyclic doesn't undo encode_cyclic.

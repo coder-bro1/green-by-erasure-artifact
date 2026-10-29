@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wadue3r/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **319 passed, 1 xfailed**.
+
+The strict xfail preserves the expected `[2] * 1024` for `2**1024`. The implementation raises `OverflowError` during floating-point conversion, despite the docstring allowing any integer ≥ 1.

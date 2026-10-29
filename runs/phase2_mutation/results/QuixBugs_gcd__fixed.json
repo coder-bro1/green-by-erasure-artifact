@@ -1,0 +1,4648 @@
+{
+  "pair_id": "QuixBugs/gcd",
+  "benchmark": "QuixBugs",
+  "version": "fixed",
+  "tests": {
+    "tests/test_044cd806c2d3adf6.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        7
+      ]
+    ],
+    "tests/test_0484c6e216074261.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        8
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        8
+      ]
+    ],
+    "tests/test_0b225e6853591982.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        6
+      ]
+    ],
+    "tests/test_121573ae9d08528f.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        1
+      ]
+    ],
+    "tests/test_12adb3c0b0d9a2fc.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        9
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        9
+      ]
+    ],
+    "tests/test_19a3efca807e3359.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        9
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        9
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        9
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        9
+      ]
+    ],
+    "tests/test_1a4c007aa539962d.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        2
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        2
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        2
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        2
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        2
+      ]
+    ],
+    "tests/test_1cc7ec3fd5f6cfd8.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        1
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        1
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        1
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        1
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        1
+      ]
+    ],
+    "tests/test_1d33b5dbe5da6a42.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P3",
+        9
+      ]
+    ],
+    "tests/test_1e5653525a5292da.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        7
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        7
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        7
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        7
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        7
+      ]
+    ],
+    "tests/test_25db7cb9178f444b.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        3
+      ]
+    ],
+    "tests/test_2612a22e364aaef1.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        7
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        7
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        7
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        7
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        7
+      ]
+    ],
+    "tests/test_26959e879c083c05.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        5
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        5
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        5
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        5
+      ]
+    ],
+    "tests/test_2becc484de166748.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        8
+      ]
+    ],
+    "tests/test_2e193e05fe537cf7.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        7
+      ]
+    ],
+    "tests/test_32dbc8d16ec30920.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        7
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        7
+      ]
+    ],
+    "tests/test_33d313ace03f504c.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        9
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        9
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        7
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        7
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        7
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        7
+      ]
+    ],
+    "tests/test_379bb37ab468e99d.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        0
+      ]
+    ],
+    "tests/test_3c4008555c9d5f62.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        5
+      ]
+    ],
+    "tests/test_3f062ed3872bb8b0.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        5
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        5
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        5
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        5
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        5
+      ]
+    ],
+    "tests/test_4072baf0f6d156be.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        0
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        0
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        0
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        0
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        0
+      ]
+    ],
+    "tests/test_40e2e4ddf86855f9.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        0
+      ]
+    ],
+    "tests/test_5138759585ac27e1.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        9
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        9
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        9
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        9
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        9
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        9
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        9
+      ]
+    ],
+    "tests/test_568f30fbedb3bc7b.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        0
+      ]
+    ],
+    "tests/test_58a20ccbabed32f3.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P1",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P3",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        8
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        6
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        6
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        6
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        6
+      ]
+    ],
+    "tests/test_5d392aa39bd6de88.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        6
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        6
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        6
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        6
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        6
+      ]
+    ],
+    "tests/test_5ecd901b02d8f749.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        1
+      ]
+    ],
+    "tests/test_62f6e93eb6865f1d.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        8
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        8
+      ]
+    ],
+    "tests/test_69ad8f3ee89cc5a5.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P3",
+        7
+      ]
+    ],
+    "tests/test_6b38788c158724c0.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        2
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        2
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        2
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        2
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        2
+      ]
+    ],
+    "tests/test_6c8dc53a088e9628.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        8
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        8
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        8
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        8
+      ]
+    ],
+    "tests/test_6e8bc01e2c34fcaa.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        2
+      ]
+    ],
+    "tests/test_79ecb7778da3c344.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        2
+      ]
+    ],
+    "tests/test_859e61a9c05972c9.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        9
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        9
+      ]
+    ],
+    "tests/test_880f3782f768e600.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        7
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        7
+      ]
+    ],
+    "tests/test_90770b6f0f299092.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        6
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        6
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        6
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        6
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        6
+      ]
+    ],
+    "tests/test_907cb6b6c983a078.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        1
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        1
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        1
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        1
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        1
+      ]
+    ],
+    "tests/test_927a21b8cdff97d2.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        0
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        0
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        0
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        0
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        0
+      ]
+    ],
+    "tests/test_a10ff38fc275f268.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        5
+      ]
+    ],
+    "tests/test_a1587a7aa22fc39d.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        6
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        6
+      ]
+    ],
+    "tests/test_a27db05a097d49bf.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        4
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        4
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        4
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        4
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        4
+      ]
+    ],
+    "tests/test_a81bed20c0614c73.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        0
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        0
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        0
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        0
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        0
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        0
+      ]
+    ],
+    "tests/test_abf043a8f72d67b6.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P1",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P3",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        4
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        4
+      ]
+    ],
+    "tests/test_b374f171bac3d461.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        8
+      ]
+    ],
+    "tests/test_b6440c880e94ecc1.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        9
+      ]
+    ],
+    "tests/test_cc2ebb9b6b5ea884.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        0
+      ]
+    ],
+    "tests/test_cc3636c938f069a9.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        8
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        8
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        8
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        8
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        8
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        8
+      ]
+    ],
+    "tests/test_cf773afc17101758.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        5
+      ]
+    ],
+    "tests/test_d061c3bcee15586b.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        4
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        4
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        4
+      ]
+    ],
+    "tests/test_d5c2702085ac6183.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        6
+      ]
+    ],
+    "tests/test_d5f91bcf10bea9c3.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        4
+      ]
+    ],
+    "tests/test_d6c810651090218f.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        3
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        3
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        3
+      ]
+    ],
+    "tests/test_da0d9a6ef13eef1b.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        1
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        1
+      ]
+    ],
+    "tests/test_db538b5b0239bc18.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        6
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        6
+      ]
+    ],
+    "tests/test_dbd0f9e202111b9c.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        2
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        2
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        2
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        2
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        2
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        2
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        2
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        2
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        2
+      ]
+    ],
+    "tests/test_e66f0baf339d31f4.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P1",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P3",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        1
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        1
+      ]
+    ],
+    "tests/test_e94247ccb27e379a.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        9
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        9
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        9
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        9
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        9
+      ]
+    ],
+    "tests/test_e95d1ef056273fff.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P3",
+        8
+      ]
+    ],
+    "tests/test_ecc561fc05d1b88c.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        9
+      ]
+    ],
+    "tests/test_f337a03bbdb12617.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P4",
+        3
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P1",
+        3
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P2",
+        3
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P3",
+        3
+      ],
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__fixed__qwen3-5-9b__s0__code",
+        "P4",
+        3
+      ]
+    ],
+    "tests/test_f3a3ac52e423ef86.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        5
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P1",
+        5
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        5
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P3",
+        5
+      ],
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P4",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "GEN",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P1",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P3",
+        5
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "P4",
+        5
+      ]
+    ],
+    "tests/test_f57bb052eda9cd97.py": [
+      [
+        "phase2_qwen25_code",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2",
+        2
+      ],
+      [
+        "phase2_qwen25_spec",
+        "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "P2",
+        2
+      ]
+    ],
+    "tests/test_fe186244c27dc7a9.py": [
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P1",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P2",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P3",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__buggy__gemma4-12b__s0__code",
+        "P4",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "GEN",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P1",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P2",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P3",
+        3
+      ],
+      [
+        "phase2_gemma4_code",
+        "QuixBugs-gcd__fixed__gemma4-12b__s0__code",
+        "P4",
+        3
+      ]
+    ],
+    "tests/test_ff1669c66cc032ca.py": [
+      [
+        "phase2_qwen35_code",
+        "QuixBugs-gcd__buggy__qwen3-5-9b__s0__code",
+        "P2",
+        5
+      ]
+    ]
+  },
+  "baseline": {
+    "tests/test_044cd806c2d3adf6.py": "FAIL",
+    "tests/test_0484c6e216074261.py": "FAIL",
+    "tests/test_0b225e6853591982.py": "FAIL",
+    "tests/test_121573ae9d08528f.py": "FAIL",
+    "tests/test_12adb3c0b0d9a2fc.py": "PASS",
+    "tests/test_19a3efca807e3359.py": "FAIL",
+    "tests/test_1a4c007aa539962d.py": "PASS",
+    "tests/test_1cc7ec3fd5f6cfd8.py": "PASS",
+    "tests/test_1d33b5dbe5da6a42.py": "PASS",
+    "tests/test_1e5653525a5292da.py": "PASS",
+    "tests/test_25db7cb9178f444b.py": "FAIL",
+    "tests/test_2612a22e364aaef1.py": "PASS",
+    "tests/test_26959e879c083c05.py": "PASS",
+    "tests/test_2becc484de166748.py": "PASS",
+    "tests/test_2e193e05fe537cf7.py": "FAIL",
+    "tests/test_32dbc8d16ec30920.py": "FAIL",
+    "tests/test_33d313ace03f504c.py": "PASS",
+    "tests/test_379bb37ab468e99d.py": "FAIL",
+    "tests/test_3c4008555c9d5f62.py": "FAIL",
+    "tests/test_3f062ed3872bb8b0.py": "PASS",
+    "tests/test_4072baf0f6d156be.py": "PASS",
+    "tests/test_40e2e4ddf86855f9.py": "PASS",
+    "tests/test_5138759585ac27e1.py": "PASS",
+    "tests/test_568f30fbedb3bc7b.py": "FAIL",
+    "tests/test_58a20ccbabed32f3.py": "PASS",
+    "tests/test_5d392aa39bd6de88.py": "PASS",
+    "tests/test_5ecd901b02d8f749.py": "FAIL",
+    "tests/test_62f6e93eb6865f1d.py": "PASS",
+    "tests/test_69ad8f3ee89cc5a5.py": "PASS",
+    "tests/test_6b38788c158724c0.py": "PASS",
+    "tests/test_6c8dc53a088e9628.py": "FAIL",
+    "tests/test_6e8bc01e2c34fcaa.py": "FAIL",
+    "tests/test_79ecb7778da3c344.py": "FAIL",
+    "tests/test_859e61a9c05972c9.py": "FAIL",
+    "tests/test_880f3782f768e600.py": "PASS",
+    "tests/test_90770b6f0f299092.py": "PASS",
+    "tests/test_907cb6b6c983a078.py": "PASS",
+    "tests/test_927a21b8cdff97d2.py": "PASS",
+    "tests/test_a10ff38fc275f268.py": "FAIL",
+    "tests/test_a1587a7aa22fc39d.py": "PASS",
+    "tests/test_a27db05a097d49bf.py": "PASS",
+    "tests/test_a81bed20c0614c73.py": "PASS",
+    "tests/test_abf043a8f72d67b6.py": "PASS",
+    "tests/test_b374f171bac3d461.py": "FAIL",
+    "tests/test_b6440c880e94ecc1.py": "FAIL",
+    "tests/test_cc2ebb9b6b5ea884.py": "FAIL",
+    "tests/test_cc3636c938f069a9.py": "PASS",
+    "tests/test_cf773afc17101758.py": "PASS",
+    "tests/test_d061c3bcee15586b.py": "PASS",
+    "tests/test_d5c2702085ac6183.py": "FAIL",
+    "tests/test_d5f91bcf10bea9c3.py": "FAIL",
+    "tests/test_d6c810651090218f.py": "PASS",
+    "tests/test_da0d9a6ef13eef1b.py": "PASS",
+    "tests/test_db538b5b0239bc18.py": "FAIL",
+    "tests/test_dbd0f9e202111b9c.py": "PASS",
+    "tests/test_e66f0baf339d31f4.py": "PASS",
+    "tests/test_e94247ccb27e379a.py": "PASS",
+    "tests/test_e95d1ef056273fff.py": "PASS",
+    "tests/test_ecc561fc05d1b88c.py": "FAIL",
+    "tests/test_f337a03bbdb12617.py": "PASS",
+    "tests/test_f3a3ac52e423ef86.py": "PASS",
+    "tests/test_f57bb052eda9cd97.py": "FAIL",
+    "tests/test_fe186244c27dc7a9.py": "PASS",
+    "tests/test_ff1669c66cc032ca.py": "FAIL"
+  },
+  "baseline_fallback": [
+    false,
+    false
+  ],
+  "coverage_status": "ok",
+  "coverage": {
+    "tests/test_a10ff38fc275f268.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_ecc561fc05d1b88c.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_379bb37ab468e99d.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_abf043a8f72d67b6.py": {
+      "lines": [
+        19,
+        20
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          20,
+          -1
+        ]
+      ]
+    },
+    "tests/test_25db7cb9178f444b.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_4072baf0f6d156be.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_f3a3ac52e423ef86.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_0484c6e216074261.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_2e193e05fe537cf7.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_5138759585ac27e1.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_cf773afc17101758.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_db538b5b0239bc18.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_ff1669c66cc032ca.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_32dbc8d16ec30920.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_90770b6f0f299092.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_907cb6b6c983a078.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_d5c2702085ac6183.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_e94247ccb27e379a.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_fe186244c27dc7a9.py": {
+      "lines": [
+        19,
+        20
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          20,
+          -1
+        ]
+      ]
+    },
+    "tests/test_3c4008555c9d5f62.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_a27db05a097d49bf.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_6b38788c158724c0.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_b374f171bac3d461.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_044cd806c2d3adf6.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_33d313ace03f504c.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_0b225e6853591982.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_a1587a7aa22fc39d.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_880f3782f768e600.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_5d392aa39bd6de88.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_6c8dc53a088e9628.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_3f062ed3872bb8b0.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_cc3636c938f069a9.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_f337a03bbdb12617.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_927a21b8cdff97d2.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_1cc7ec3fd5f6cfd8.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_1e5653525a5292da.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_f57bb052eda9cd97.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_cc2ebb9b6b5ea884.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_19a3efca807e3359.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_12adb3c0b0d9a2fc.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_a81bed20c0614c73.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_b6440c880e94ecc1.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_2612a22e364aaef1.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_568f30fbedb3bc7b.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_79ecb7778da3c344.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_62f6e93eb6865f1d.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_d6c810651090218f.py": {
+      "lines": [
+        19,
+        20
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          20,
+          -1
+        ]
+      ]
+    },
+    "tests/test_2becc484de166748.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_6e8bc01e2c34fcaa.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_e66f0baf339d31f4.py": {
+      "lines": [
+        19,
+        20
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          20,
+          -1
+        ]
+      ]
+    },
+    "tests/test_1a4c007aa539962d.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_26959e879c083c05.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_d061c3bcee15586b.py": {
+      "lines": [
+        19,
+        20
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          20,
+          -1
+        ]
+      ]
+    },
+    "tests/test_d5f91bcf10bea9c3.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_dbd0f9e202111b9c.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_121573ae9d08528f.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_859e61a9c05972c9.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_5ecd901b02d8f749.py": {
+      "lines": [
+        19,
+        20,
+        22
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          -1
+        ],
+        [
+          22,
+          -1
+        ]
+      ]
+    },
+    "tests/test_58a20ccbabed32f3.py": {
+      "lines": [
+        19,
+        20
+      ],
+      "arcs": [
+        [
+          -1,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          20,
+          -1
+        ]
+      ]
+    }
+  },
+  "mutants": [
+    {
+      "job_id": "3cbc9fe79ff440fea98705676d986d31",
+      "operator": "core/ReplaceBinaryOperator_Mod_Div",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 3.28,
+      "mutant_sha256": "4f489a03689d2fb04238e876f9ea2aec3f220970da428e09fabc08d966bd6708"
+    },
+    {
+      "job_id": "56b79958e7e14f9fa4fb117c0a42482a",
+      "operator": "core/ReplaceBinaryOperator_Mod_Pow",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": true,
+      "seconds": 300.17,
+      "mutant_sha256": "1fa4da17c84e70724f150c9774cec16608321703b040d8e46a34192f9d8341a0"
+    },
+    {
+      "job_id": "7654309c52054881a844becc1210e86d",
+      "operator": "core/NumberReplacer",
+      "occurrence": 1,
+      "start": [
+        19,
+        12
+      ],
+      "end": [
+        19,
+        13
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_58a20ccbabed32f3.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_abf043a8f72d67b6.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_d061c3bcee15586b.py",
+        "tests/test_d6c810651090218f.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e66f0baf339d31f4.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py",
+        "tests/test_fe186244c27dc7a9.py"
+      ],
+      "fallback": false,
+      "seconds": 3.27,
+      "mutant_sha256": "760615c3b9bb2646924fa7fb9e84448dd0a2eb7fc918192c1a9e3fb13b47cb60"
+    },
+    {
+      "job_id": "104a44487b8840e8bf71a8d0e7863e70",
+      "operator": "core/ReplaceComparisonOperator_Eq_NotEq",
+      "occurrence": 0,
+      "start": [
+        19,
+        9
+      ],
+      "end": [
+        19,
+        11
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_58a20ccbabed32f3.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_abf043a8f72d67b6.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_d061c3bcee15586b.py",
+        "tests/test_d6c810651090218f.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e66f0baf339d31f4.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py",
+        "tests/test_fe186244c27dc7a9.py"
+      ],
+      "fallback": false,
+      "seconds": 3.17,
+      "mutant_sha256": "15a2d82f1687376d73d2a516707c348a0f426286d71bd1f81dd0bc2dc9e91453"
+    },
+    {
+      "job_id": "e4abdd5b201c4095b3dd4882392e6817",
+      "operator": "core/ReplaceBinaryOperator_Mod_BitAnd",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 3.3,
+      "mutant_sha256": "3d26652aebf9338505966253ded8d72fe596bfeb8a65bfe42de0ddd8b94ac5b5"
+    },
+    {
+      "job_id": "5dce00593b1e454ca4bea6ffa2f3d624",
+      "operator": "core/ReplaceBinaryOperator_Mod_Add",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 28.58,
+      "mutant_sha256": "9eb30f3d2d457f01caca313dcaf7174658dbd3c8853676ca9b91d658d6b90bc6"
+    },
+    {
+      "job_id": "e56261b0b31746ad833b2243cbba8406",
+      "operator": "core/ReplaceComparisonOperator_Eq_Lt",
+      "occurrence": 0,
+      "start": [
+        19,
+        9
+      ],
+      "end": [
+        19,
+        11
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_58a20ccbabed32f3.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_abf043a8f72d67b6.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_d061c3bcee15586b.py",
+        "tests/test_d6c810651090218f.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e66f0baf339d31f4.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py",
+        "tests/test_fe186244c27dc7a9.py"
+      ],
+      "fallback": false,
+      "seconds": 3.31,
+      "mutant_sha256": "bee120e05b7bec2857009a99a66262174184e791011a5dcc0ff0a79d8d7a6132"
+    },
+    {
+      "job_id": "29b18fea52db4cfe881611c67a74091d",
+      "operator": "core/ReplaceBinaryOperator_Mod_BitXor",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 3.27,
+      "mutant_sha256": "4f8903e7beb6ac7b3c436ec109d513186c4e40779f98a972f7888bba832f9f1b"
+    },
+    {
+      "job_id": "7f0bd08584394a7f8a872d8db0f33a20",
+      "operator": "core/NumberReplacer",
+      "occurrence": 0,
+      "start": [
+        19,
+        12
+      ],
+      "end": [
+        19,
+        13
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_58a20ccbabed32f3.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_abf043a8f72d67b6.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_d061c3bcee15586b.py",
+        "tests/test_d6c810651090218f.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e66f0baf339d31f4.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py",
+        "tests/test_fe186244c27dc7a9.py"
+      ],
+      "fallback": false,
+      "seconds": 3.22,
+      "mutant_sha256": "39035470aa8590416402b3b377432c2f6760ad9f1f1bea08a69cfa4d99cd38a3"
+    },
+    {
+      "job_id": "8f2f9428c1774cbba21056c98e17fe18",
+      "operator": "core/ReplaceComparisonOperator_Eq_GtE",
+      "occurrence": 0,
+      "start": [
+        19,
+        9
+      ],
+      "end": [
+        19,
+        11
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 3.17,
+      "mutant_sha256": "bb8ab6ef93b0ebc37859a7d7f576307c8443ce24c544bd94c84c4c708579acd1"
+    },
+    {
+      "job_id": "ca7b2fa382c44117b12d829902ae4002",
+      "operator": "core/ReplaceComparisonOperator_Eq_Gt",
+      "occurrence": 0,
+      "start": [
+        19,
+        9
+      ],
+      "end": [
+        19,
+        11
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_58a20ccbabed32f3.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_abf043a8f72d67b6.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_d061c3bcee15586b.py",
+        "tests/test_d6c810651090218f.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e66f0baf339d31f4.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py",
+        "tests/test_fe186244c27dc7a9.py"
+      ],
+      "fallback": false,
+      "seconds": 3.17,
+      "mutant_sha256": "0c31a46ca11ec1079e45b476ce1fc0c7612d4ddc1a24038dfb30ce97f0392752"
+    },
+    {
+      "job_id": "a2c59e4969bf4d2b9f2ffab763d79956",
+      "operator": "core/ReplaceBinaryOperator_Mod_Sub",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 22.52,
+      "mutant_sha256": "9450d87763b00b3654399bcb6c991751d98153b36fefdada7384386dbeb1c145"
+    },
+    {
+      "job_id": "89a68ce598c244669114a8903b78d324",
+      "operator": "core/ReplaceBinaryOperator_Mod_LShift",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 5.06,
+      "mutant_sha256": "5ffec39c6dcbc12bcef474d7aac06ffbcf3c9a7d7b92d92a67b7c29f3bbf9e8f"
+    },
+    {
+      "job_id": "45960d1c66db4fe4911c27d6f14bd536",
+      "operator": "core/ReplaceBinaryOperator_Mod_RShift",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 3.16,
+      "mutant_sha256": "ca3018c4086ead333e5e0932a377ec462e19515f56e072cee6b4942780ad6803"
+    },
+    {
+      "job_id": "2ec4138c4e454672a8e21160c3cf4b11",
+      "operator": "core/ReplaceBinaryOperator_Mod_FloorDiv",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 3.16,
+      "mutant_sha256": "d5ab53d65d8a713c2aece65cd8a0d2c996b747d80c44873813ac4a49df93d728"
+    },
+    {
+      "job_id": "bd20470c7d4a40e88966b7e80b6e3b44",
+      "operator": "core/ReplaceComparisonOperator_Eq_LtE",
+      "occurrence": 0,
+      "start": [
+        19,
+        9
+      ],
+      "end": [
+        19,
+        11
+      ],
+      "killed_by": [],
+      "fallback": false,
+      "seconds": 3.06,
+      "mutant_sha256": "6c8599f4af1736388653b301b9567f2d302059b75a074995faae79fe029ced46"
+    },
+    {
+      "job_id": "7a5aaa6d3f2b42af955fc7db56c10cd6",
+      "operator": "core/ReplaceBinaryOperator_Mod_Mul",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": true,
+      "seconds": 312.67,
+      "mutant_sha256": "0d1f7cdf3da8f9b08cb433152e8eb415f00445a97a0fdcc6af8f8035610e7eda"
+    },
+    {
+      "job_id": "c8490c945d0346e1b9bbd2abfad47386",
+      "operator": "core/ReplaceBinaryOperator_Mod_BitOr",
+      "occurrence": 0,
+      "start": [
+        22,
+        24
+      ],
+      "end": [
+        22,
+        25
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_3f062ed3872bb8b0.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_5d392aa39bd6de88.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_6b38788c158724c0.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a1587a7aa22fc39d.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f337a03bbdb12617.py",
+        "tests/test_f3a3ac52e423ef86.py"
+      ],
+      "fallback": false,
+      "seconds": 3.34,
+      "mutant_sha256": "f4b781965c4795566924b8da04f86bc083848271791d7b3ee65ee1fa5f5d4960"
+    },
+    {
+      "job_id": "3b5ebeee428c420489c303754632a8ec",
+      "operator": "core/AddNot",
+      "occurrence": 0,
+      "start": [
+        19,
+        7
+      ],
+      "end": [
+        19,
+        13
+      ],
+      "killed_by": [
+        "tests/test_12adb3c0b0d9a2fc.py",
+        "tests/test_1a4c007aa539962d.py",
+        "tests/test_1cc7ec3fd5f6cfd8.py",
+        "tests/test_1e5653525a5292da.py",
+        "tests/test_2612a22e364aaef1.py",
+        "tests/test_26959e879c083c05.py",
+        "tests/test_2becc484de166748.py",
+        "tests/test_33d313ace03f504c.py",
+        "tests/test_4072baf0f6d156be.py",
+        "tests/test_5138759585ac27e1.py",
+        "tests/test_58a20ccbabed32f3.py",
+        "tests/test_62f6e93eb6865f1d.py",
+        "tests/test_880f3782f768e600.py",
+        "tests/test_90770b6f0f299092.py",
+        "tests/test_907cb6b6c983a078.py",
+        "tests/test_927a21b8cdff97d2.py",
+        "tests/test_a27db05a097d49bf.py",
+        "tests/test_a81bed20c0614c73.py",
+        "tests/test_abf043a8f72d67b6.py",
+        "tests/test_cc3636c938f069a9.py",
+        "tests/test_cf773afc17101758.py",
+        "tests/test_d061c3bcee15586b.py",
+        "tests/test_d6c810651090218f.py",
+        "tests/test_dbd0f9e202111b9c.py",
+        "tests/test_e66f0baf339d31f4.py",
+        "tests/test_e94247ccb27e379a.py",
+        "tests/test_f3a3ac52e423ef86.py",
+        "tests/test_fe186244c27dc7a9.py"
+      ],
+      "fallback": false,
+      "seconds": 3.28,
+      "mutant_sha256": "590583249535b7576bb544e1bbacbc2391ed15030acf2103a91b0b4ced3f3d27"
+    }
+  ],
+  "seconds": 733.0,
+  "finished": "2026-10-15T02:46:01.029646+00:00"
+}

@@ -1,0 +1,15 @@
+I wrote pytest tests for `monotonic` in `<work>\work\test_solution.py`. All 23 pass and none needed an xfail mark, because the function does what its docstring says. I did not change `<work>\work\solution.py`.
+
+What the tests cover:
+- **Docstring examples:** the three examples in the docstring.
+- **Edge cases:** an empty list, a single element, and lists where every value is the same.
+- **Repeated values:** lists like `[1, 2, 2, 3]` and `[3, 2, 2, 1]` count as monotonic.
+- **Non-monotonic lists:** several patterns, including mixed directions and dips in the middle or at the end.
+- **Other inputs:** floats, negative numbers, long increasing and decreasing ranges, and strings.
+- **Return value and input:** the function returns an actual `bool`, and it does not change the list passed in.
+
+I checked it by running `python -m pytest -q test_solution.py` (23 passed).
+
+One assumption: I read "monotonically increasing or decreasing" as allowing equal neighbouring values, which is the usual meaning and what the code does.
+
+result: Added 23 pytest tests for `monotonic` in `<work>\work\test_solution.py`; all pass, and none are marked xfail because the code matches its docstring.

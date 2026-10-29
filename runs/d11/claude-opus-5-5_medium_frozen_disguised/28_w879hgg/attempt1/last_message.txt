@@ -1,0 +1,13 @@
+I wrote pytest tests for solution.py and left solution.py unchanged. They found a real bug in `unscramble_triples`. The suite passes with 19 passed and 8 xfailed, but only because the 8 tests that catch the bug are marked as expected failures.
+
+**The bug:** `unscramble_triples` just calls `scramble_triples` again. That moves each triple's first character to the end a second time instead of moving it back, so `unscramble_triples("bca")` returns `"cab"` instead of `"abc"`. To fix it, each full triple should be `chunk[-1] + chunk[:-1]`. Undoing the scramble only works by accident when every full triple is one repeated character, like `"aaa"`.
+
+**What's in the tests** (`<work>\work\test_solution.py`):
+- **`scramble_triples` (all pass):** examples covering empty strings, strings of 1 to 9 characters, a short final group, repeated characters, digits, spaces and non-ASCII text. Also checks that length and characters are kept, the short final group is unchanged, and scrambling three times gives back the original.
+- **`unscramble_triples`:**
+  - Pass: inputs shorter than three characters come back unchanged, and inputs that survive any rotation make a round trip.
+  - Expected failures (8): `unscramble_triples(scramble_triples(x)) == x` and specific unscramble examples. They use `xfail(strict=True)`, so once `unscramble_triples` is fixed they'll report as unexpected passes and the markers can be removed.
+
+To run: `python -m pytest -q test_solution.py` from `<work>\work`.
+
+result: Tests for solution.py are in <work>\work\test_solution.py (19 passed, 8 expected failures); they show `unscramble_triples` doesn't undo `scramble_triples`, so the round-trip tests are marked as expected failures.

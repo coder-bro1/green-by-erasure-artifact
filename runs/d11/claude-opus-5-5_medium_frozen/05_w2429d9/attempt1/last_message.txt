@@ -1,0 +1,18 @@
+I wrote the tests, but they don't all pass, and they can't unless solution.py is changed: `fibfib` has a bug. I ran the suite with pytest: 36 failed, 20 passed. I didn't make the tests match the buggy output, because then they would only confirm the wrong values.
+
+**The bug:** the docstring in solution.py says `fibfib(1) == 0` and `fibfib(2) == 1`, but the code returns 1 and 2:
+```python
+    if n == 1:
+        return 1   # spec says 0
+    if n == 2:
+        return 2   # spec says 1
+```
+Because every later value is built from those starting values, every result from n=1 upward is wrong. For example, `fibfib(5)` returns 11 instead of 4, and `fibfib(8)` returns 68 instead of 24. That means the function fails its own doctest examples.
+
+**What the tests in `<work>\work\test_solution.py` check:**
+- **Passing:** `fibfib(0) == 0`, the rule that each value is the sum of the previous three, and that the result is an `int`. These pass because the code applies that rule correctly; only the starting values are wrong.
+- **Failing:** the n=1 and n=2 starting values, the doctest examples for n=5 and n=8, known values from n=3 to n=14, and a comparison with a small correct version of the function written in the test file for n=0 to 21. These failures are all caused by the bug.
+
+**Decision for you:** to get all the tests passing, change those two lines to `return 0` and `return 1`. The tests should then pass unchanged, though I haven't run them against a fixed version because I wasn't allowed to modify solution.py. If you'd rather keep solution.py as it is, I can mark the spec tests as expected failures or rewrite them to match the current output, but say which you want.
+
+result: Wrote spec-based pytest tests in `<work>\work\test_solution.py`; 36 of 56 fail because `fibfib` in solution.py uses the wrong starting values for n=1 and n=2.

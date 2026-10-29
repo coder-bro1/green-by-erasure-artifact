@@ -1,0 +1,13 @@
+I wrote `<work>\work\test_solution.py`. The suite passes (10 passed, 4 expected failures), but `solution.py` has a bug: when the goal can't be reached it crashes instead of returning `False`. I did not change `solution.py`.
+
+**The bug:** the loop is `while True` instead of `while queue`. When the goal can't be reached, the queue runs empty and `queue.popleft()` raises `IndexError`. The fix would be `while queue:` on line 18.
+
+**Test results** (`python -m pytest test_solution.py -v`):
+- **10 passed:**
+  - 9 cases where the goal is reachable: start is the goal, a direct successor, a 50-node chain, a branching tree, a cycle, a self-loop, a diamond, a node that looks like the goal but isn't the same object, and a check that edges are one-way.
+  - 1 test that checks the current crash with `IndexError`, so a later fix will be noticed.
+- **4 expected failures:** these assert the correct result (`False`) for goals that can't be reached: separate unconnected nodes, a disconnected part of the graph, an edge pointing the wrong way, and a cycle that never reaches the goal. They are marked with `xfail(raises=IndexError, strict=True)`, so they turn into hard failures once `solution.py` is fixed. At that point, remove the markers and the crash-pinning test.
+
+Each test passes a fresh `successors` list because `node.py`'s `Node` shares one list default across all instances.
+
+result: Added pytest tests for the BFS in `<work>\work\solution.py`; 10 pass and 4 are expected failures recording a bug: an unreachable goal raises `IndexError` instead of returning `False`.

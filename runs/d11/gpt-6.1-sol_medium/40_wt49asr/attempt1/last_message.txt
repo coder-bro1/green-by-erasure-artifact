@@ -1,0 +1,9 @@
+Added [test_solution.py](/<work>/wt49asr/test_solution.py) covering primes, composites, perfect squares, and divisor properties for integers 2–200.
+
+All **213 tests pass**:
+
+```powershell
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+Cache disabled to avoid an environment permission error. `solution.py` is unchanged.

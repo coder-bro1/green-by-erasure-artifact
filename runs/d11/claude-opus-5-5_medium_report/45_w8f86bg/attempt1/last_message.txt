@@ -1,0 +1,14 @@
+I wrote pytest tests for `is_prime` in `<work>\work\test_solution.py`. All 37 pass (`python -m pytest -q test_solution.py`), and `solution.py` is unchanged.
+
+**No xfail markers:** `solution.py` does what its docstring says.
+
+The loop only goes up to `n-2` (it uses `range(2, n - 1)`), which looks like an off-by-one. It isn't a bug: a number larger than 2 can't have `n-1` as a divisor. 2 and 3 still come out True because the loop just doesn't run for them. The loop does check every number up to `n`, so it's slow for very large `n`, but the results are correct.
+
+**What the tests cover:**
+- Every example in the docstring.
+- Small and medium primes, including 2, 3 and 7919.
+- Composites, including squares of primes and products of two large primes.
+- 0, 1 and negative numbers, which should all be False.
+- A check against a simple square-root trial-division version for every `n` from -5 to 499.
+
+result: Added 37 pytest tests for `is_prime` in `<work>\work\test_solution.py`; all pass and no xfail markers were needed.

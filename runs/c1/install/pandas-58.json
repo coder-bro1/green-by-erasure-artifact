@@ -1,0 +1,214 @@
+{
+ "project": "pandas",
+ "bug": 58,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 03:45:15",
+ "test_files": [
+  "pandas/tests/arrays/categorical/test_constructors.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 21,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 21,
+  "failed_requirements": [],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+  "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 1.09s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.39s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.59s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.12s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.38s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.39s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.12s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.13s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.41s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.40s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.14s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.11s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.40s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.40s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.13s =============================="
+    },
+    {
+     "command": "pytest pandas/tests/arrays/categorical/test_constructors.py::TestCategoricalConstructors::test_from_codes_with_nullable_int_na_raises",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.14s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 378,
+ "checkout_eol": "lf"
+}

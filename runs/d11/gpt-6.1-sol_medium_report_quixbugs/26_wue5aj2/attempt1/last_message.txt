@@ -1,0 +1,10 @@
+Added [test_solution.py](/<work>/wue5aj2/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **20 passed, 2 xfailed**.
+
+Both failures preserve the expected value and use `xfail(strict=True)`:
+
+- Updating a distance breaks heap ordering, returning `5` instead of `3`.
+- Equal distances trigger `TypeError` when heapq compares `Node` objects.
+
+Added pytest configuration to avoid inaccessible cache directories.

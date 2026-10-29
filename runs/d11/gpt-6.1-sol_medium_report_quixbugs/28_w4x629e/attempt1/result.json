@@ -1,0 +1,55 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/subsequences",
+    "condition": "fixed",
+    "taskset": "quixbugs",
+    "order": 28,
+    "folder": "w4x629e",
+    "solution_sha256": "edcb60f8d5fa8bd97ec7d9948c3ce368db21add1b453d86956db3e0812a18cd7"
+  },
+  "variant": "report",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-12T00:12:06.482769+00:00",
+  "finished": "2026-10-12T00:12:53.736988+00:00",
+  "seconds": 47.0,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d73-ce19-7231-bc92-ddde688e497f",
+  "usage": [
+    {
+      "input_tokens": 94871,
+      "cached_input_tokens": 66816,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1243,
+      "reasoning_output_tokens": 174
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-12T00:12:06.482769+00:00",
+      "file": "solution.py",
+      "sha256": "0b0055f3339388fa5bc25af00a610a07a81af1735420137cb86ca4b9377b68fb",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-12T00:12:40.463360+00:00",
+      "file": "test_solution.py",
+      "sha256": "209e26fd1348d4d01640cb5b1805b6af9f9063c592f347a8880dd9f7066c5c98",
+      "stored": "0001__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

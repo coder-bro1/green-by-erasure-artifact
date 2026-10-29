@@ -1,0 +1,67 @@
+{
+  "pair_id": "Python/162",
+  "version": "fixed",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_9941b3fbb235bb28.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-162__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_848be18c0f631f24.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-162__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_e8b60e7b6fb8babb.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-162__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_7d6c5b0ae034471a.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-162__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_ae267581578883e8.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-162__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_7d6c5b0ae034471a.py",
+    "tests/test_ae267581578883e8.py"
+  ],
+  "baseline": {
+    "tests/test_7d6c5b0ae034471a.py": "PASS",
+    "tests/test_ae267581578883e8.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "d81b2e9586ce4573a37f15f56504ae56",
+      "killed_by": [
+        "tests/test_ae267581578883e8.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 2.9,
+  "finished": "2026-10-28T22:00:01.121509+00:00"
+}

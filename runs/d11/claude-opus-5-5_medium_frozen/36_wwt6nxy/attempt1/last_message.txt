@@ -1,0 +1,17 @@
+The pytest suite passes, but `solution.py` has a bug, so 9 of the 19 tests are marked as expected failures (strict `xfail`). That way they pass now without signing off on the wrong output.
+
+**The bug:** `derivative` returns `[(i * x) for i, x in enumerate(xs)]` and never drops the first term. Every result starts with an extra `0` and is as long as the input. The docstring's own example breaks: `derivative([3, 1, 2, 4, 5])` returns `[0, 1, 4, 12, 20]`, not `[1, 4, 12, 20]`. Adding `[1:]` would fix it. I left `solution.py` unchanged, as asked.
+
+**The tests**, in `<work>\work\test_solution.py`:
+- **Marked as expected failures (9):** the two docstring examples, five more cases (including negatives and floats), a constant polynomial giving `[]`, and the result being one shorter than the input. Because the marker is strict, these tests will error once the bug is fixed, as a reminder to remove the marker.
+- **Passing (10):** properties that hold with or without the bug:
+  - an empty input gives `[]`
+  - the result is a list
+  - the input list isn't changed
+  - the end of the result holds `k * xs[k]` for k ≥ 1, in order, including for a degree-99 polynomial
+
+**Check:** `python -m pytest test_solution.py -v` gave 10 passed, 9 xfailed in 0.12s. I also checked the expected values for the documented behavior by hand.
+
+If you'd rather the suite fail outright to flag the bug, delete the `@KNOWN_BUG` lines.
+
+result: Added 19 pytest tests for `solution.py` in `<work>\work\test_solution.py`; the suite passes (10 passed, 9 expected failures) because `derivative()` keeps an extra leading 0 and the 9 tests of its documented output are marked as known failures.

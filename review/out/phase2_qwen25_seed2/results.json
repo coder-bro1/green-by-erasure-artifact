@@ -1,0 +1,279 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 80,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 1480,
+  "violations": [
+   {
+    "call_id": "fdedf79f771fbf3ebbd204b379c06ec15857baaabe61e64536952a155828f49a",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "c7225f7eeabf20951d42b8956b494024eedae5e960c58818d603e40f0cf0b5b2",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "42be7a4aaa1fb8417920193407a8a5082f497ec30578d0e035189d34f8a77312",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "dc80c6c2659fe892dc26061ddc8197c67a324772a0fad82a9a04b8099f9560cf",
+    "purpose": "judge",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "08b174b2d238d0b429a5dd91a5eba906343b29e4f46ccf1351a42c6eea40686c",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "6bad32844cc5aa8813533bfe52cf34f35a3624c7dceea086b5e3dcb463da475d",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'b', 'c']) == 'a'"
+    ]
+   },
+   {
+    "call_id": "79e040be00aa7c81e109937e5a3cd9246855b71897a4ca2626d165b815b7da8b",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'bb', 'ccc']) == 'ccc'"
+    ]
+   },
+   {
+    "call_id": "36eb24b37c4d41e27026961ffe464de03cddf98908985616d5541108249c8580",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'bb', 'ccc']) == 'ccc'"
+    ]
+   },
+   {
+    "call_id": "e465d1150a988570fa8cb8b0b98e7c6ff3a3b4fd324099481d31e9b46a939c75",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'bb', 'ccc']) == 'ccc'"
+    ]
+   },
+   {
+    "call_id": "9b6d653eed6fd8a0c6dda10112cc6db9237f6f4715e58eff9ba5eac4ebc95e61",
+    "purpose": "judge",
+    "lines": [
+     "assert longest(['a', 'b', 'c']) == 'a'"
+    ]
+   },
+   {
+    "call_id": "c3a18f4440cd3852a87c7cb43620f378a1012a336fcfa4cf4e79fc16a4123bc4",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert longest(['a', 'b', 'c']) == 'a'"
+    ]
+   },
+   {
+    "call_id": "f8cec143f3212d9b8aa02d84d342e635c2bfa9bcb7d104e65e118cc77c71c3a0",
+    "purpose": "judge",
+    "lines": [
+     "assert longest(['a', 'bb', 'ccc']) == 'ccc'"
+    ]
+   },
+   {
+    "call_id": "579866fff08a5ba5064e290af53d236ffa890224e7e8b51acf00d9cfd9cec028",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert longest(['a', 'bb', 'ccc']) == 'ccc'"
+    ]
+   },
+   {
+    "call_id": "fafd05ebaa99e9de973fdcafb25d0a09ec49b73b7a509775228bb5177b65d5bb",
+    "purpose": "free_repair",
+    "lines": [
+     "assert greatest_common_divisor(3, 5) == 1"
+    ]
+   },
+   {
+    "call_id": "f192dc1c44d29223bbce341fece7b4bc3eec03ea846de95303afcbf5354d0eb5",
+    "purpose": "free_repair",
+    "lines": [
+     "assert greatest_common_divisor(3, 5) == 1"
+    ]
+   },
+   {
+    "call_id": "6d064464b8fc05c5a057687d7de7cd92e113fc7818000f70ec587bda22808b44",
+    "purpose": "free_repair",
+    "lines": [
+     "assert greatest_common_divisor(3, 5) == 1"
+    ]
+   },
+   {
+    "call_id": "2bba29ba6fed503f002e4c30ed962feb643874b2dd65c2fd5a3e409ff5e0c8b8",
+    "purpose": "free_repair",
+    "lines": [
+     "assert greatest_common_divisor(25, 15) == 5"
+    ]
+   },
+   {
+    "call_id": "2b97b04302fc70c8879e70ba96adaf8163b2278400ca21daf1ed753d9c2d929c",
+    "purpose": "free_repair",
+    "lines": [
+     "assert greatest_common_divisor(25, 15) == 5"
+    ]
+   },
+   {
+    "call_id": "e9d50d98e7f935f848b9d3c8482d8c552bcaa6a4da27b397250a2f544780dffe",
+    "purpose": "free_repair",
+    "lines": [
+     "assert greatest_common_divisor(25, 15) == 5"
+    ]
+   },
+   {
+    "call_id": "b4880da1f7d467a9b9daecdfa98a2bd4d21d47d7cd8838fd1e3e9f0aa1206eed",
+    "purpose": "judge",
+    "lines": [
+     "assert greatest_common_divisor(3, 5) == 1"
+    ]
+   }
+  ],
+  "n_violations": 121
+ },
+ "P1-m_judge_sees_body": {
+  "n": 5,
+  "examples": [
+   {
+    "call_id": "59d3bbcd4d4991ab08c06df9ef8762431ed795b8b48b415be8a9f2533ceee793",
+    "line": "suf = ['txt', 'exe', 'dll']"
+   },
+   {
+    "call_id": "c26bf89153ab93a2115caddf93caeb75d56be4cb02770bc8190e9aa4cbbc3600",
+    "line": "for i in range(len(a) - l + 1):"
+   },
+   {
+    "call_id": "868bb190d07a24d0c93b6e01123ae96ea8d31a5aecf00ffdb02d3fda1886375d",
+    "line": "for i in range(len(a) - l + 1):"
+   },
+   {
+    "call_id": "421f1affbd508501ef7db7bbbbaf7e226f013fc598569a2ffbe59dd55510ad67",
+    "line": "for i in range(len(a) - l + 1):"
+   },
+   {
+    "call_id": "635e169890115942e9ae1eed47562864afafc1507dcc63be0a6740fd7762d072",
+    "line": "for i in range(len(a) - l + 1):"
+   }
+  ]
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 161,
+   "TEST_WRONG": 134
+  },
+  "recovered_judge": {
+   "BUG": 161,
+   "TEST_WRONG": 134
+  },
+  "recovered_with_code": {
+   "TEST_WRONG": 164,
+   "BUG": 131
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 24,
+   "buggy|BUG|REVEALS": 109,
+   "buggy|TEST_WRONG|BROKEN": 43,
+   "buggy|TEST_WRONG|REVEALS": 46,
+   "fixed|BUG|BROKEN": 20,
+   "fixed|BUG|ENCODES": 8,
+   "fixed|TEST_WRONG|BROKEN": 38,
+   "fixed|TEST_WRONG|ENCODES": 7
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 298,
+    "KEPT": 165,
+    "QUARANTINED": 133,
+    "QUARANTINED_REVEALS": 109,
+    "QUARANTINED_BROKEN": 24
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 381,
+    "KEPT": 248,
+    "QUARANTINED": 133,
+    "QUARANTINED_REVEALS": 109,
+    "QUARANTINED_BROKEN": 24
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 387,
+    "KEPT": 165,
+    "QUARANTINED": 222,
+    "QUARANTINED_REVEALS": 155,
+    "QUARANTINED_BROKEN": 67
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 298,
+    "KEPT": 165,
+    "QUARANTINED": 133,
+    "QUARANTINED_REVEALS": 109,
+    "QUARANTINED_BROKEN": 24
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 330,
+    "KEPT": 302,
+    "QUARANTINED": 28,
+    "QUARANTINED_BROKEN": 20,
+    "QUARANTINED_ENCODES": 8
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 375,
+    "KEPT": 347,
+    "QUARANTINED": 28,
+    "QUARANTINED_BROKEN": 20,
+    "QUARANTINED_ENCODES": 8
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 375,
+    "KEPT": 302,
+    "QUARANTINED": 73,
+    "QUARANTINED_ENCODES": 15,
+    "QUARANTINED_BROKEN": 58
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 330,
+    "KEPT": 302,
+    "QUARANTINED": 28,
+    "QUARANTINED_BROKEN": 20,
+    "QUARANTINED_ENCODES": 8
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 186,
+  "written": 10
+ }
+}

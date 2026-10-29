@@ -1,0 +1,3 @@
+Added inclusive-range tests in [test_solution.py](/<work>/w826esv/test_solution.py). They pass with `pytest -q -p no:cacheprovider test_solution.py`: **4 passed, 5 xfailed**.
+
+The strict xfails cover cases where `n` is itself a palindrome. `solution.py` iterates over `range(1, n)`, excluding `n`, while its docstring says the range is inclusive. I left the expected inclusive results in those tests and did not modify `solution.py`.

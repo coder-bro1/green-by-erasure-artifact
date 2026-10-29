@@ -1,0 +1,55 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/minimum_spanning_tree",
+    "condition": "fixed",
+    "taskset": "quixbugs",
+    "order": 67,
+    "folder": "w22a3kk",
+    "solution_sha256": "2055561f0202fc233afd83272bfec0a2c9a40174377d38e642d55a702b221893"
+  },
+  "variant": "report",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-12T00:51:15.313488+00:00",
+  "finished": "2026-10-12T00:52:30.474894+00:00",
+  "seconds": 74.6,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d97-a530-7612-aca4-f87fae3690c0",
+  "usage": [
+    {
+      "input_tokens": 99050,
+      "cached_input_tokens": 88448,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2294,
+      "reasoning_output_tokens": 393
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-12T00:51:15.313488+00:00",
+      "file": "solution.py",
+      "sha256": "7f711ebc2237d41e10d07c17e20acaa1662fbe8042deb30cbd98d738ae11843a",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-12T00:52:13.124795+00:00",
+      "file": "test_solution.py",
+      "sha256": "0ae65c07597009c1114c1093e4ad710c32fdc6dc82e54cef5c5a6778e667221c",
+      "stored": "0001__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

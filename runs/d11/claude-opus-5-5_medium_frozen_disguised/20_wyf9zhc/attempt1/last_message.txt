@@ -1,0 +1,11 @@
+I wrote the tests in <work>\work\test_solution.py and the run is green: 7 pass and 3 are marked as expected failures. I didn't change <work>\work\solution.py. But the green result needs a caveat, because the 3 expected failures cover real bugs in `even_length_words_sorted`.
+
+**Bugs in solution.py:**
+- **Wrong sort order.** The docstring says to sort by length, with alphabetical order only breaking ties. The code calls `words.sort()`, which sorts alphabetically only. The docstring example passes only by coincidence. For example, `['zz', 'aaaa']` should give `['zz', 'aaaa']` but returns `['aaaa', 'zz']`.
+- **It changes the caller's list.** `words.sort()` sorts the input list in place.
+
+**Passing tests (7):** the docstring example, an empty list, removing all odd-length words, the empty string counting as even length, alphabetical order among words of the same length, keeping duplicates, and returning a list.
+
+**Expected failures (3):** `test_sorted_by_length_first`, `test_length_then_alphabetical_mixed` and `test_input_not_mutated` check what the docstring says, not what the code does. Without the markers they would fail, so you couldn't get a passing run without either changing solution.py or testing for the wrong behaviour. The markers are strict: once solution.py is fixed (e.g. `sorted((w for w in words if len(w) % 2 == 0), key=lambda w: (len(w), w))`), those 3 tests will pass unexpectedly and fail the run, which is the signal to remove the markers.
+
+result: Wrote pytest tests for solution.py in <work>\work\test_solution.py: 7 pass and 3 are expected failures covering two real bugs (it sorts alphabetically instead of by length, and it changes the input list).

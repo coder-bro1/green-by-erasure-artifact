@@ -1,0 +1,17 @@
+I wrote pytest tests for `solution.py` and the run is green: 6 passed, 6 expected failures, none failing. But half of them only pass because they're marked as expected to fail: `solution.py` has a bug that makes it return wrong answers, and I didn't change it, as instructed.
+
+**The bug:** `shortest_paths` (Bellman-Ford) writes its update to the wrong dict. The loop does
+```python
+weight_by_edge[u, v] = min(weight_by_node[u] + weight, weight_by_node[v])
+```
+when it should assign to `weight_by_node[v]`. As a result:
+- No distance is ever updated. Every node except the source comes back as `inf`, so even the example in its own docstring gives the wrong answer.
+- The edge-weights dict the caller passes in gets changed in place.
+
+**What I did about it:** the 6 tests that check the correct results (including the docstring example) are marked "strict xfail", so pytest counts them as expected failures. Once the bug is fixed they will start passing, and pytest will flag that as an error so the markers get removed. If you'd rather have the suite fail now to show the bug, delete the `@BUG` markers.
+
+**Tests in `<work>\work\test_solution.py` (pytest 9.1.1, Python 3.12):**
+- **Passing (6):** the source's distance is 0, every node appears in the result, an empty graph returns only the source, a source with no incoming edges is still included, unreachable nodes are `inf`, and the return value is a dict.
+- **Expected failures (6):** the docstring example, a single edge, a chain that needs several passes, a negative edge giving a shorter path, a cycle with positive weights, and the input not being changed.
+
+result: Wrote `<work>\work\test_solution.py` (6 passed, 6 expected failures); 6 tests are marked expected-to-fail because `solution.py` updates `weight_by_edge` instead of `weight_by_node`, so it returns wrong distances and changes its input.

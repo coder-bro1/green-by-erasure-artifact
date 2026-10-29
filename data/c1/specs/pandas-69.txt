@@ -1,0 +1,5 @@
+def _convert_key(self, key, is_setter: bool = False):
+Require they keys to be the same type as the index. (so we don't
+fallback)
+
+The fix to this function is described as: BUG: ser.at match ser.loc with Float64Index (#31329)

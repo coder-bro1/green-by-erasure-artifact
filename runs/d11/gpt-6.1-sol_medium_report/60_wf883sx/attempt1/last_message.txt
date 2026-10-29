@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wf883sx/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **13 passed, 17 xfailed**.
+
+The implementation counts vowels instead of consonants. The 17 affected cases retain their documented expected values and use `@pytest.mark.xfail(strict=True, reason=...)`.

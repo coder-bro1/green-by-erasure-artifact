@@ -1,0 +1,13 @@
+I wrote the tests in <work>\work\test_solution.py and did not touch solution.py. Running `python -m pytest -q test_solution.py` gives 14 passed and 11 xfailed (strict), with no failures.
+
+**The bug:** `reverse_delete` gets the palindrome flag backwards. Its last line is:
+```python
+return (s,s[::-1] != s)
+```
+It should use `==`. So it returns True when the leftover string is not a palindrome, and False when it is. All three examples in the docstring fail because of this. For example, `reverse_delete("abcdedcba", "ab")` returns `('cdedc', False)` instead of `('cdedc', True)`, and `("abcde", "ae")` returns `('bcd', True)` instead of `('bcd', False)`.
+
+**What the tests cover:**
+- **Passing (14):** the part that deletes characters works correctly. Twelve tests check the leftover string, including an empty `s`, an empty `c`, deleting every character, upper and lower case being treated as different, spaces, and repeated characters in `c`. Two more check that the inputs are not changed and that the flag is a `bool`.
+- **Expected failures (11):** these check the whole returned pair, including the palindrome flag: the 3 docstring examples plus 8 more cases. I kept the correct expected values and marked them `@pytest.mark.xfail(strict=True)`, with the reason explaining the inverted flag. Because they are strict, they will start failing as soon as solution.py is fixed, which is the signal to remove the markers.
+
+result: Tests are in <work>\work\test_solution.py (14 pass, 11 strict xfail). solution.py returns the palindrome flag backwards (`!=` instead of `==`), so all three docstring examples fail.

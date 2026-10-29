@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wakarfr/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **11 passed, 11 xfailed**.
+
+The strict xfails preserve the documented expectations: the implementation reverses `<` and `>`, rejecting valid pairs such as `<>` and accepting invalid pairs such as `><`.

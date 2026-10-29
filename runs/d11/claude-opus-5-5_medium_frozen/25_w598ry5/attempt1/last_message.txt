@@ -1,0 +1,20 @@
+I wrote `<work>\work\test_solution.py` and the suite passes (10 passed, 8 xfailed), but only because those 8 tests are marked as known failures. `correct_bracketing` in `solution.py` has a bug that breaks half of its own docstring examples. I did not modify `solution.py`.
+
+**The bug:** the depth counter is backwards. `">"` adds 1 and `"<"` subtracts 1, so `"<"` acts as the closing bracket. Results against the docstring:
+- `"<"` returns False, as documented.
+- `"<>"` returns False; the docstring says True.
+- `"<<><>>"` returns False; the docstring says True.
+- `"><<>"` returns False, as documented.
+- `"><"` returns True; it should be False, since it starts with a closing bracket.
+
+So no balanced string except the empty string returns True.
+
+**Why the suite still passes:** it is impossible to have tests that both match the spec and pass without changing `solution.py`. So I wrote every test against the documented spec:
+- **10 tests pass:** strings that should return False (for example `"<"`, `"><<>"`, `">"`, `"<<<"`, `"<>><"`), the empty string returning True, and the return type being a bool.
+- **8 tests are marked `xfail(strict=True)` with a reason naming the bug:** balanced strings that should return True (`"<>"`, `"<<><>>"`, `"<><><>"`, `"<<<>>>"`, `"<<><<>>>"`) and strings starting with `">"` that should return False (`"><"`, `"><><"`, `">><<"`).
+
+Because the markers are strict, these 8 tests will turn into errors once the bug is fixed, which is the signal to delete the markers. The fix is to swap the two branches: `"<"` adds 1 and `">"` subtracts 1.
+
+**Decision for you:** if you want a suite that fails until the bug is fixed, remove the `@BUG` decorators.
+
+To run it: `python -m pytest -q <work>\work\test_solution.py`

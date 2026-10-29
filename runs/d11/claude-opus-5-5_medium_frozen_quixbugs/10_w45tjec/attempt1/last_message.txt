@@ -1,0 +1,18 @@
+The suite passes: 306 tests passed and 17 are marked as expected failures (xfail). That's because `next_permutation` in solution.py is broken, and tests of the correct behaviour can't pass without changing solution.py. I didn't change solution.py, and I checked the final run with pytest 9.1.1.
+
+**The bug:** the inner loop has `if perm[j] < perm[i]:` but it should be `if perm[i] < perm[j]:`. It needs the rightmost element larger than the pivot, not smaller. As a result:
+- The docstring example `[3,2,4,1]` returns `[3,1,2,4]` instead of `[3,4,1,2]`.
+- Most inputs return `None`, for example `[0,1]` and `[1,2,3]`.
+- `[1,2,0]` returns `[0,1,2]`, which goes backwards.
+
+**What's in <work>\work\test_solution.py:**
+- **Correct-behaviour tests (17, marked xfail):** the docstring example, 13 hand-picked cases, an exhaustive check of every permutation of 2 to 5 elements against an itertools-based reference, walking all orderings of 4 elements in order, and "each result is larger than its input". They're marked `xfail(strict=True)` with the bug as the reason, so once solution.py is fixed they'll start failing as unexpected passes. That's your signal to remove the markers.
+- **Passing tests:**
+  - The input list is never changed.
+  - When the function returns a list, it's a new list with the same elements.
+  - Tuple input is accepted.
+  - Reverse-sorted input returns `None`.
+  - A check of the reference helper itself.
+  - Tests that pin down what the code returns today. These will start failing when the bug is fixed and should then be deleted.
+
+To run it: `python -m pytest <work>\work\test_solution.py`

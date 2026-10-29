@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index 7c65c52..2600c34 100644
+--- a/solution.py
++++ b/solution.py
+@@ -9,4 +9,4 @@ def multiply(a, b):
+     multiply(2020, 1851) should return 0.
+     multiply(14,-15) should return 20.
+     """
+-    return abs(a % 10) * abs(b % 10) * a * b
++    return (abs(a) % 10) * (abs(b) % 10)

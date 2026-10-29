@@ -1,0 +1,8 @@
+Added 25 tests in [test_solution.py](/<work>/wqw9a24/test_solution.py), covering examples, palindrome checks, weight boundaries, empty lists, and negative/fractional values.
+
+All 25 pass. `solution.py` is unchanged; no xfail markers were needed.
+
+Verified with:
+```text
+python -B -m pytest -q -p no:cacheprovider test_solution.py
+```

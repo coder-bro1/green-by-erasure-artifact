@@ -1,0 +1,22 @@
+I wrote pytest tests for solution.py in <work>\work\test_solution.py. The run gives 28 passed and 9 xfailed, all marked strict. I did not change solution.py.
+
+**Bug in solution.py:** `specialFilter` checks digits against `odd_digits = (1, 2, 3, 5, 7, 9)`, which wrongly includes 2. The docstring says the odd digits are 1, 3, 5, 7, 9. So any number above 10 whose first or last digit is 2 gets counted when it shouldn't be, for example 12, 21, 23, 29, 32, 52, 201 and 1002.
+
+This even breaks the second docstring example. `specialFilter([33, -2, -3, 45, 21, 109])` should return 2, but it returns 3 because 21 is counted.
+
+**xfail tests** (they keep the expected values from the docstring):
+- `test_docstring_example_2`
+- `test_first_or_last_digit_two_not_counted`, which runs 8 cases
+
+**Passing tests cover:**
+- the first docstring example
+- an empty list
+- 10 and below, including exactly 10, are not counted
+- negative numbers are never counted
+- numbers that should count
+- numbers that shouldn't count because of other even digits (0, 4, 6, 8)
+- even digits in the middle are ignored
+- a mixed list
+- duplicates are each counted
+
+result: Wrote <work>\work\test_solution.py (28 passed, 9 strict xfail). solution.py treats 2 as an odd digit, so numbers starting or ending in 2 are miscounted, which breaks docstring example 2.

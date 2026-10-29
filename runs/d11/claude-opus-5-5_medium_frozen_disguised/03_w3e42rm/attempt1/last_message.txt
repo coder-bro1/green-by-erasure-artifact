@@ -1,0 +1,15 @@
+I wrote `<work>\work\test_solution.py` and it runs green: **20 passed, 6 xfailed**. But only because I marked the six tests that hit a real bug in `solution.py` as expected failures. I did not modify solution.py.
+
+**The bug:** `contains_rotation` never checks rotations. The inner loop runs over `range(len(word) - size + 1)`, and since `size = len(word)` that is always `range(1)`. So it only ever compares the word itself against `text`. As a result, two of its own three docstring examples are wrong:
+- `contains_rotation('network', 'orkw')` returns False; the docstring says True.
+- `contains_rotation('abc', 'cb')` returns False; the docstring says True.
+
+The fix would be `range(size)` in the inner loop, but that would mean editing solution.py.
+
+**What the tests cover:**
+- **Passing (20):** cases where the word itself appears in the text, cases where no rotation appears (including the docstring's `'abcde', 'eab'` → False), an empty word (returns True), empty text, a word longer than the text, case sensitivity, and that it returns a bool. There is also a cross-check against a small correct version for inputs the bug doesn't affect.
+- **Expected failures (6):** the two failing docstring examples plus four other real rotation cases. They are marked `xfail(strict=True)`, so they record the bug now and will be reported as errors once the bug is fixed, which is the cue to remove the marker.
+
+If you'd rather the bug actually fail the suite, remove the `@rotation_bug` markers and those six tests will fail.
+
+result: `<work>\work\test_solution.py` passes (20 passed, 6 xfailed). The 6 expected failures record a real bug: `contains_rotation` in solution.py never checks rotations, so 2 of its 3 docstring examples return the wrong answer.

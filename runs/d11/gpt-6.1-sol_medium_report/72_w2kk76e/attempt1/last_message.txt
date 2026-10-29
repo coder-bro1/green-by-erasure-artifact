@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/w2kk76e/test_solution.py) and pytest configuration for restricted cache access. `solution.py` is unchanged.
+
+`python -m pytest -q`: **5 passed, 10 xfailed**.
+
+The product starts at `0`, so it always returns `0`, including for an empty list where the docstring specifies `1`. Affected tests retain their correct expectations and use `@pytest.mark.xfail(strict=True, reason=...)`.

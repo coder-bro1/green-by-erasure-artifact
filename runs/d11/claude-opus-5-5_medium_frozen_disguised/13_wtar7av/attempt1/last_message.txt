@@ -1,0 +1,28 @@
+I wrote the tests, but they can't all pass: solution.py has a bug, and you asked me not to change it. 12 of the 14 tests fail. I left them failing rather than rewrite them to match the bug.
+
+**The bug:** the last line of `solution.py` is
+```python
+return (text, text[::-1] != text)
+```
+The comparison is backwards. It returns True when the remaining text is *not* a palindrome and False when it is. That goes against the function's own docstring, which says it returns True when the text reads the same backwards. So all three docstring examples fail: `strip_and_mirror_check('racecar', 'x')` returns `('racecar', False)` instead of `('racecar', True)`. The fix is to change `!=` to `==`.
+
+**What I checked:** I ran `python -m pytest -q test_solution.py`. All 12 failures differ only in the True/False value, never in the stripped string, so the character-removal part works. The 2 passing tests don't check the True/False value (one checks the stripped string, one checks the return types).
+
+**What the tests cover:**
+- the three docstring examples
+- results that are and aren't palindromes
+- removing characters that turns the text into a palindrome
+- removing several different banned characters
+- empty `banned`, empty text, and every character banned (the empty result counts as a palindrome)
+- a single character
+- upper and lower case treated as different
+- `banned` given as a set or a list
+- the return types
+
+If you fix that line, I'd expect all 14 tests to pass. If you'd rather have tests that accept the current behaviour as correct, I can rewrite them that way, but they would lock the bug in.
+
+Files:
+- `<work>\work\test_solution.py` (new)
+- `<work>\work\solution.py` (unchanged)
+
+result: Tests written in `<work>\work\test_solution.py`, but 12 of 14 fail because `solution.py` gives the opposite True/False answer to its docstring (`!=` should be `==`), and I was told not to change it.

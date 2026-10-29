@@ -1,0 +1,46 @@
+Run: phase2_qwen25_spec
+Buggy pre-repair signal: 164/204 pairs; 164/204 units; 818/1964 tests REVEALS.
+GEN_FAIL units (counted in all unit denominators): 4 of 408: QuixBugs-hanoi__buggy__qwen2-5-coder-7b-instruct__s0__spec, QuixBugs-hanoi__fixed__qwen2-5-coder-7b-instruct__s0__spec, QuixBugs-subsequences__buggy__qwen2-5-coder-7b-instruct__s0__spec, QuixBugs-subsequences__fixed__qwen2-5-coder-7b-instruct__s0__spec
+P2/P3 inversions or neutralizations: 920
+Signal pairs by input (each denominator 204): {"spec": 164}
+
+| Condition | Input | Policy | Final size | REVEALS | ENCODES generated | ENCODES repaired | REPORTED | DROPPED | INVERTED | NEUTRALIZED | OTHER | Quarantined | Quarantined REVEALS | Logical calls | Network calls | LLM seconds | Policy wall seconds |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| buggy | spec | GEN | 1964 | 818 | 31 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 206 | 206 | 1783.270 | 0 |
+| buggy | spec | P1 | 773 | 0 | 31 | 0 | 0 | 818 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| buggy | spec | P2 | 1858 | 0 | 31 | 939 | 0 | 48 | 770 | 0 | 0 | 0 | 0 | 168 | 139 | 612.157 | 1020.248 |
+| buggy | spec | P3 | 974 | 0 | 31 | 17 | 0 | 668 | 12 | 138 | 0 | 0 | 0 | 3222 | 1820 | 9947.745 | 10695.251 |
+| buggy | spec | P4 | 1540 | 605 | 31 | 0 | 605 | 213 | 0 | 0 | 0 | 767 | 605 | 2394 | 2358 | 8319.361 | 8335.614 |
+| fixed | spec | GEN | 1963 | 818 | 31 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 206 | 0 | 0 | 0 |
+| fixed | spec | P1 | 1560 | 818 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| fixed | spec | P2 | 1918 | 1031 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 120 | 82 | 424.234 | 570.538 |
+| fixed | spec | P3 | 1641 | 849 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1074 | 611 | 3985.851 | 4248.559 |
+| fixed | spec | P4 | 1734 | 818 | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 174 | 0 | 825 | 420 | 1494.612 | 1514.611 |
+
+P4 buggy/spec quarantine precision: 605/767 nonflaky tests REVEALS; raw quarantines 767.
+P4 fixed/spec: 174 raw quarantines are false alarms; 174 nonflaky false alarms.
+
+P2/P3 rewritten tests (change-mode denominators): {"P2": 1486, "P3": 667}
+P2/P3 change modes: {"P2": {"ASSERT_REMOVED": 1, "EXCEPTION_EXPECTED": 148, "EXPECTED_CHANGED": 1270, "INPUT_CHANGED": 7, "SETUP_CHANGED": 7, "TEST_REWRITTEN": 53}, "P3": {"ASSERT_ADDED": 12, "ASSERT_WEAKENED": 3, "EXPECTED_CHANGED": 25, "FUNCTION_SHADOWED": 311, "INPUT_CHANGED": 49, "SETUP_CHANGED": 225, "TEST_REWRITTEN": 77}}
+LLM calls by purpose: {"fix_broken": 181, "free_repair": 4296, "generate": 412, "judge": 1566, "judge_with_code": 1566, "overwrite_fallback": 194}
+Total tokens (logical requests): 5482403
+Logical LLM calls: 8215; cache hits: 2579
+Mean seconds per uncached LLM call: 4.714
+Mean seconds per unit: 127.364
+Reasoning-bearing calls: 0
+Flaky rows (excluded): 1
+Generation failures: 4
+Unique network requests: 5636
+Total tokens (unique network requests): 3582654
+LLM serving seconds (unique requests): 26567.230
+Pilot wall seconds: 71299.201
+
+Measured serving seconds per unit (unique requests, all purposes):
+spec: 65.1 s per unit over 408 units (7.38 h)
+
+| Model | Full digest | Peak GPU MiB | Load seconds | Tokens/s | Fully on GPU | Reasoning returned |
+|---|---|---:|---:|---:|---|---|
+| qwen2.5-coder:7b-instruct | dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364 | 6720 | 34.960 | 12.175 | True | False |
+| qwen3.5:9b | 56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90 | 7157 | 33.555 | 52.734 | True | False |
+| gemma4:12b | 6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b | 9237 | 39.030 | 77.859 | True | False |
+Ollama version: 0.40.1

@@ -1,0 +1,1776 @@
+{
+  "seed": "gbe-m5-sample-v1",
+  "part_a": {
+    "A001": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-52__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A002": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-25__buggy__qwen3-5-9b__s0__code/t11",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A003": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-possible_change__buggy__gemma4-12b__s0__code/t5",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A004": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-94__buggy__qwen3-5-9b__s0__code/t7",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A005": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-flatten__buggy__gemma4-12b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A006": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-104__buggy__qwen3-5-9b__s0__code/t7",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A007": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-1__buggy__qwen3-5-9b__s0__code/t0",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A008": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-93__buggy__qwen3-5-9b__s0__code/t2",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "INPUT_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A009": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-29__buggy__qwen3-5-9b__s0__code/t2",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A010": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-shortest_paths__fixed__gemma4-12b__s0__code/t4",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A011": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-2__fixed__qwen2-5-coder-7b-instruct__s0__code/t5",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A012": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-52__buggy__gemma4-12b__s0__code/t8",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A013": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-depth_first_search__fixed__qwen3-5-9b__s0__code/t2",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A014": {
+      "run": "phase2_qwen25_code",
+      "test_id": "QuixBugs-gcd__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "ENCODES"
+    },
+    "A015": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-hanoi__buggy__qwen3-5-9b__s0__code/t3",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A016": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-flatten__buggy__gemma4-12b__s0__code/t2",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_WEAKENED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A017": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-60__buggy__qwen3-5-9b__s0__code/t8",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A018": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-56__buggy__qwen3-5-9b__s0__code/t8",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A019": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-124__buggy__gemma4-12b__s0__code/t6",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A020": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-shunting_yard__buggy__gemma4-12b__s0__code/t0",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A021": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-20__buggy__qwen3-5-9b__s0__code/t0",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A022": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-11__buggy__gemma4-12b__s0__code/t4",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A023": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-possible_change__buggy__gemma4-12b__s0__code/t5",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A024": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-shunting_yard__fixed__gemma4-12b__s0__code/t9",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A025": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-75__buggy__gemma4-12b__s0__code/t2",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A026": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-sqrt__fixed__qwen3-5-9b__s0__code/t5",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A027": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-gcd__buggy__gemma4-12b__s0__code/t0",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A028": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-140__fixed__gemma4-12b__s0__code/t3",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A029": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code/t3",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A030": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-find_first_in_sorted__buggy__gemma4-12b__s0__code/t1",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A031": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-topological_ordering__buggy__qwen3-5-9b__s0__code/t5",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_REMOVED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A032": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-longest_common_subsequence__fixed__qwen3-5-9b__s0__code/t9",
+      "policy": "P2",
+      "condition": "fixed",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A033": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-91__buggy__qwen3-5-9b__s0__code/t2",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A034": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-36__fixed__qwen2-5-coder-7b-instruct__s0__code/t6",
+      "policy": "P2",
+      "condition": "fixed",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A035": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-142__fixed__qwen2-5-coder-7b-instruct__s0__code/t3",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A036": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-140__buggy__gemma4-12b__s0__code/t3",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A037": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-134__buggy__gemma4-12b__s0__code/t6",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A038": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-breadth_first_search__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A039": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-130__fixed__qwen2-5-coder-7b-instruct__s0__code/t5",
+      "policy": "P2",
+      "condition": "fixed",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A040": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-powerset__buggy__gemma4-12b__s0__code/t3",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A041": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code/t5",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A042": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-75__buggy__qwen3-5-9b__s0__code/t5",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A043": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-88__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A044": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-68__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A045": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-4__buggy__qwen3-5-9b__s0__code/t3",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A046": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-48__buggy__gemma4-12b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A047": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-57__buggy__qwen3-5-9b__s0__code/t3",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A048": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-next_permutation__buggy__qwen3-5-9b__s0__code/t3",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A049": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-104__buggy__qwen2-5-coder-7b-instruct__s0__code/t2",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A050": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-76__buggy__qwen3-5-9b__s0__code/t1",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A051": {
+      "run": "phase2_qwen25_code",
+      "test_id": "QuixBugs-kth__buggy__qwen2-5-coder-7b-instruct__s0__code/t1",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A052": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-84__fixed__qwen3-5-9b__s0__code/t9",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "INPUT_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A053": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-powerset__buggy__gemma4-12b__s0__code/t8",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A054": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-84__fixed__qwen3-5-9b__s0__code/t8",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "INPUT_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A055": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-to_base__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A056": {
+      "run": "phase2_qwen25_code",
+      "test_id": "QuixBugs-levenshtein__buggy__qwen2-5-coder-7b-instruct__s0__code/t9",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A057": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-113__buggy__qwen3-5-9b__s0__code/t0",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A058": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-powerset__fixed__gemma4-12b__s0__code/t8",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A059": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code/t5",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A060": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-75__fixed__gemma4-12b__s0__code/t8",
+      "policy": "P2",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "INPUT_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A061": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-45__fixed__qwen3-5-9b__s0__code/t8",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A062": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-92__fixed__qwen3-5-9b__s0__code/t8",
+      "policy": "P2",
+      "condition": "fixed",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A063": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-sqrt__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A064": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-sqrt__buggy__qwen3-5-9b__s0__code/t4",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A065": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-sqrt__fixed__qwen3-5-9b__s0__code/t6",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A066": {
+      "run": "phase2_qwen25_code",
+      "test_id": "QuixBugs-is_valid_parenthesization__buggy__qwen2-5-coder-7b-instruct__s0__code/t4",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A067": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-3__buggy__qwen3-5-9b__s0__code/t8",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A068": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-2__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A069": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-powerset__fixed__gemma4-12b__s0__code/t8",
+      "policy": "P2",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A070": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-gcd__buggy__gemma4-12b__s0__code/t7",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A071": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-flatten__buggy__gemma4-12b__s0__code/t8",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "ASSERT_WEAKENED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A072": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-26__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A073": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-20__buggy__qwen2-5-coder-7b-instruct__s0__code/t1",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A074": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-57__buggy__gemma4-12b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A075": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-151__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A076": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-75__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A077": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-5__buggy__qwen3-5-9b__s0__code/t5",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A078": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-3__buggy__gemma4-12b__s0__code/t2",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A079": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-flatten__buggy__gemma4-12b__s0__code/t1",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_WEAKENED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A080": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-pascal__buggy__gemma4-12b__s0__code/t2",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A081": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-14__buggy__gemma4-12b__s0__code/t9",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A082": {
+      "run": "phase2_qwen25_code",
+      "test_id": "QuixBugs-shunting_yard__fixed__qwen2-5-coder-7b-instruct__s0__code/t8",
+      "policy": "P2",
+      "condition": "fixed",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A083": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-8__buggy__qwen3-5-9b__s0__code/t5",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A084": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-4__buggy__qwen3-5-9b__s0__code/t4",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A085": {
+      "run": "phase2_qwen25_code",
+      "test_id": "QuixBugs-rpn_eval__fixed__qwen2-5-coder-7b-instruct__s0__code/t9",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "EXCEPTION_EXPECTED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A086": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-160__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXPECTED_CHANGED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A087": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-hanoi__buggy__gemma4-12b__s0__code/t2",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A088": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-1__buggy__qwen3-5-9b__s0__code/t2",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A089": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-sqrt__buggy__qwen3-5-9b__s0__code/t0",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "ASSERT_WEAKENED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A090": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-flatten__buggy__gemma4-12b__s0__code/t7",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A091": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-68__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "ENCODES"
+    },
+    "A092": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-72__buggy__gemma4-12b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A093": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-shortest_paths__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "BROKEN",
+      "label": "ENCODES"
+    },
+    "A094": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-31__buggy__gemma4-12b__s0__code/t2",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    },
+    "A095": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-97__fixed__qwen3-5-9b__s0__code/t5",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "BROKEN",
+      "label": "REVEALS"
+    },
+    "A096": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-19__buggy__qwen3-5-9b__s0__code/t7",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A097": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code/t8",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "ASSERT_REMOVED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A098": {
+      "run": "phase2_qwen35_code",
+      "test_id": "QuixBugs-get_factors__buggy__qwen3-5-9b__s0__code/t2",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A099": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-48__fixed__qwen3-5-9b__s0__code/t6",
+      "policy": "P3",
+      "condition": "fixed",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED",
+        "ASSERT_ADDED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A100": {
+      "run": "phase2_gemma4_code",
+      "test_id": "HumanEvalFix-160__buggy__gemma4-12b__s0__code/t5",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A101": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-162__buggy__qwen3-5-9b__s0__code/t8",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "EXCEPTION_EXPECTED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "ENCODES"
+    },
+    "A102": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-19__buggy__qwen3-5-9b__s0__code/t9",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A103": {
+      "run": "phase2_qwen35_code",
+      "test_id": "HumanEvalFix-78__buggy__qwen3-5-9b__s0__code/t1",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "SETUP_CHANGED"
+      ],
+      "gen_label": "BROKEN",
+      "label": "NEUTRAL"
+    },
+    "A104": {
+      "run": "phase2_qwen25_code",
+      "test_id": "HumanEvalFix-106__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+      "policy": "P3",
+      "condition": "buggy",
+      "classifier": [
+        "INPUT_CHANGED",
+        "FUNCTION_SHADOWED"
+      ],
+      "gen_label": "REVEALS",
+      "label": "NEUTRAL"
+    },
+    "A105": {
+      "run": "phase2_gemma4_code",
+      "test_id": "QuixBugs-is_valid_parenthesization__buggy__gemma4-12b__s0__code/t3",
+      "policy": "P2",
+      "condition": "buggy",
+      "classifier": [
+        "TEST_REWRITTEN"
+      ],
+      "gen_label": "REVEALS",
+      "label": "ENCODES"
+    }
+  },
+  "part_b": {
+    "B001": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 75,
+      "pair_id": "Python/107",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B002": {
+      "arm": "gpt-6-luna_high",
+      "order": 69,
+      "pair_id": "Python/154",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B003": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 11,
+      "pair_id": "Python/108",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B004": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 1,
+      "pair_id": "Python/130",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B005": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 15,
+      "pair_id": "Python/117",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B006": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 6,
+      "pair_id": "Python/107",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B007": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 11,
+      "pair_id": "Python/108",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B008": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 4,
+      "pair_id": "Python/141",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B009": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 26,
+      "pair_id": "QuixBugs/shortest_path_length",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B010": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 13,
+      "pair_id": "Python/112",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B011": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 6,
+      "pair_id": "Python/80",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B012": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 36,
+      "pair_id": "Python/62",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B013": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 19,
+      "pair_id": "Python/64",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B014": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 9,
+      "pair_id": "Python/27",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B015": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 33,
+      "pair_id": "Python/125",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B016": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 31,
+      "pair_id": "QuixBugs/breadth_first_search",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B017": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 34,
+      "pair_id": "Python/74",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B018": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 39,
+      "pair_id": "Python/146",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B019": {
+      "arm": "gpt-6-luna_high",
+      "order": 72,
+      "pair_id": "Python/117",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B020": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 38,
+      "pair_id": "Python/108",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B021": {
+      "arm": "gpt-6-luna_high",
+      "order": 41,
+      "pair_id": "Python/74",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B022": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 8,
+      "pair_id": "Python/67",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B023": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 79,
+      "pair_id": "Python/43",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B024": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 25,
+      "pair_id": "Python/56",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B025": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 17,
+      "pair_id": "Python/143",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B026": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 10,
+      "pair_id": "Python/64",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B027": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 40,
+      "pair_id": "Python/63",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B028": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 37,
+      "pair_id": "Python/85",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B029": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 37,
+      "pair_id": "Python/85",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B030": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 35,
+      "pair_id": "QuixBugs/knapsack",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B031": {
+      "arm": "gpt-6-luna_high",
+      "order": 14,
+      "pair_id": "Python/8",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B032": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 8,
+      "pair_id": "QuixBugs/possible_change",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B033": {
+      "arm": "gpt-6-luna_high",
+      "order": 18,
+      "pair_id": "Python/38",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B034": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 20,
+      "pair_id": "Python/149",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B035": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 26,
+      "pair_id": "Python/97",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B036": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 20,
+      "pair_id": "QuixBugs/sqrt",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B037": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 5,
+      "pair_id": "Python/63",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B038": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 24,
+      "pair_id": "Python/141",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B039": {
+      "arm": "gpt-6-luna_high",
+      "order": 53,
+      "pair_id": "Python/130",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B040": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 34,
+      "pair_id": "QuixBugs/gcd",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B041": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 3,
+      "pair_id": "Python/57",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B042": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 5,
+      "pair_id": "Python/63",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B043": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 16,
+      "pair_id": "Python/130",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B044": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 29,
+      "pair_id": "QuixBugs/detect_cycle",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B045": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 35,
+      "pair_id": "Python/112",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B046": {
+      "arm": "gpt-6-luna_high",
+      "order": 5,
+      "pair_id": "Python/13",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B047": {
+      "arm": "gpt-6-luna_high",
+      "order": 30,
+      "pair_id": "Python/149",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B048": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 34,
+      "pair_id": "Python/74",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B049": {
+      "arm": "gpt-6-luna_high",
+      "order": 40,
+      "pair_id": "Python/24",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B050": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 7,
+      "pair_id": "Python/38",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B051": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 49,
+      "pair_id": "Python/111",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B052": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 30,
+      "pair_id": "Python/27",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B053": {
+      "arm": "gpt-6-luna_high",
+      "order": 16,
+      "pair_id": "Python/82",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B054": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 29,
+      "pair_id": "Python/85",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B055": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 33,
+      "pair_id": "Python/125",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B056": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 27,
+      "pair_id": "Python/146",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B057": {
+      "arm": "gpt-6-luna_high",
+      "order": 64,
+      "pair_id": "Python/5",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B058": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 7,
+      "pair_id": "Python/38",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B059": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 35,
+      "pair_id": "Python/112",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B060": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 37,
+      "pair_id": "Python/125",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B061": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 52,
+      "pair_id": "Python/31",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B062": {
+      "arm": "gpt-6.1-sol_medium_frozen_disguised",
+      "order": 29,
+      "pair_id": "Python/57",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B063": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 16,
+      "pair_id": "Python/82",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B064": {
+      "arm": "gpt-6-luna_high",
+      "order": 62,
+      "pair_id": "Python/56",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B065": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 41,
+      "pair_id": "Python/74",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B066": {
+      "arm": "gpt-6.1-sol_medium_frozen_quixbugs",
+      "order": 30,
+      "pair_id": "QuixBugs/rpn_eval",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": false
+    },
+    "B067": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 6,
+      "pair_id": "Python/107",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B068": {
+      "arm": "gpt-6.1-sol_medium_frozen",
+      "order": 16,
+      "pair_id": "Python/80",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B069": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 25,
+      "pair_id": "Python/56",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    },
+    "B070": {
+      "arm": "gpt-6.1-sol_medium",
+      "order": 57,
+      "pair_id": "Python/57",
+      "condition": "fixed",
+      "kind": "control",
+      "regex_flag": false
+    },
+    "B071": {
+      "arm": "gpt-6-luna_high_frozen",
+      "order": 30,
+      "pair_id": "Python/27",
+      "condition": "buggy",
+      "kind": "locked",
+      "regex_flag": true
+    }
+  }
+}

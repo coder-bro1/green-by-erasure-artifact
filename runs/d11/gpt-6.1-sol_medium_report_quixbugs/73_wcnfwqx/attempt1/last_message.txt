@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wcnfwqx/test_solution.py). `solution.py` is unchanged.
+
+Verified with `python -m pytest test_solution.py -q -p no:cacheprovider`: **61 passed, 12 xfailed**.
+
+The strict xfails retain the expected `[]` when `start == end`. The documented preconditions allow this case, but the implementation returns unnecessary moves instead of the shortest solution.

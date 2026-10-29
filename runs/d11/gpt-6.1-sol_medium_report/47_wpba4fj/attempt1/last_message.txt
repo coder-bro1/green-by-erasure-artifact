@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wpba4fj/test_solution.py) covering docstring examples, edge cases, large inputs, and all 2,047 bracket strings up to length 10.
+
+`solution.py` is unchanged. No docstring mismatches required xfails.
+
+Verification: **20 passed** using `python -m pytest test_solution.py -q -p no:cacheprovider`. Explicit collection avoids an inaccessible pytest cache directory.

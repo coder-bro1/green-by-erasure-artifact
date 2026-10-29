@@ -1,0 +1,26 @@
+I wrote 15 tests for `select_words` in <work>\work\test_solution.py. Running pytest gives 5 passed and 10 xfailed (strict), with no failures and no unexpected passes. I did not modify solution.py.
+
+result: The tests are in place and the suite passes, but `select_words` has a real bug: it counts vowels instead of consonants, so all five docstring examples fail.
+
+**The bug:** in <work>\work\solution.py, the loop adds to the counter when a letter *is* a vowel:
+```python
+if word[i].lower() in ["a","e","i","o","u"]:
+    n_consonants += 1
+```
+So it returns words with exactly n vowels. For example, `select_words("Mary had a little lamb", 4)` returns `[]` instead of `["little"]`, and `select_words("simple white space", 2)` returns all three words instead of `[]`. The fix is to use `not in` (the inputs are assumed to be letters only).
+
+**Marked xfail (10 tests):** these keep the expected values from the docstring and the spec:
+- the five docstring examples
+- words with zero consonants
+- uppercase consonants
+- "y" counted as a consonant
+- no match returns an empty list
+- order and duplicates are kept
+
+**Passing (5 tests):** these are cases where the bug makes no difference:
+- empty string (with n=3 and n=0)
+- whitespace-only input
+- several spaces between words, using words with equal vowel and consonant counts ("abba", "cede")
+- the return type is a list
+
+One xfail test first passed by accident because its input gave the same answer either way. I changed its input to "bat cot" so it now exposes the bug.

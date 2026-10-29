@@ -1,0 +1,155 @@
+{
+ "project": "spacy",
+ "bug": 2,
+ "python_pinned": "3.7.7",
+ "python_used": "3.7.7",
+ "started": "2026-10-19 02:00:16",
+ "test_files": [
+  "spacy/tests/regression/test_issue5137.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 39,
+  "failed_requirements": [],
+  "setup": [
+   "pip3 install -r requirements.txt",
+   "python setup.py build_ext --inplace"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 39,
+  "failed_requirements": [],
+  "setup": [
+   "pip3 install -r requirements.txt",
+   "python setup.py build_ext --inplace"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "py.test spacy/tests/regression/test_issue5137.py::test_issue5137"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.59s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.52s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.45s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.38s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.92s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.57s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 1 failed in 0.44s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "py.test spacy/tests/regression/test_issue5137.py::test_issue5137",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 1 passed in 0.40s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 432,
+ "checkout_eol": "lf"
+}

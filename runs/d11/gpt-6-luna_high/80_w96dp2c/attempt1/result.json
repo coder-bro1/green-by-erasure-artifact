@@ -1,0 +1,72 @@
+{
+  "task": {
+    "pair_id": "Python/74",
+    "condition": "buggy",
+    "order": 80,
+    "folder": "w96dp2c",
+    "solution_sha256": "a0172785cd4a5bcd0ca6a3b20549d37a26ef255395b17a26d0a6e83ecad8c067"
+  },
+  "variant": "open",
+  "instruction": "Write pytest tests for solution.py and make sure they pass.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T19:16:41.571316+00:00",
+  "finished": "2026-10-11T19:17:44.558407+00:00",
+  "seconds": 62.9,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12c65-5832-7770-946f-eec5ebc6f7dc",
+  "usage": [
+    {
+      "input_tokens": 167383,
+      "cached_input_tokens": 153600,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2220,
+      "reasoning_output_tokens": 1034
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": true,
+  "snapshots": [
+    {
+      "time": "2026-10-11T19:16:41.572318+00:00",
+      "file": "solution.py",
+      "sha256": "69cd43e4b7a93dce358f59759cd6141df21df8bdd2afc110bed522019379248c",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T19:16:59.328054+00:00",
+      "file": "solution.py",
+      "sha256": "27347f7f77f4447e566ce307ca28a7f7368b109ff81acb76c0da3590238a3fd4",
+      "stored": "0001__solution.py"
+    },
+    {
+      "time": "2026-10-11T19:17:07.954228+00:00",
+      "file": "tests/test_solution.py",
+      "sha256": "87fb2fcaee785bf8bcd85516f0d511d1df83cd2f2f10e18c68fa48ba2a605e81",
+      "stored": "0002__tests__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T19:17:26.692841+00:00",
+      "file": "solution.py",
+      "sha256": "981dbe9cdc108affa48aa0b992088b8ead89e5061d2a9b9502a707ec0d8df91f",
+      "stored": "0003__solution.py"
+    },
+    {
+      "time": "2026-10-11T19:17:34.831504+00:00",
+      "file": "tests/conftest.py",
+      "sha256": "b603d666f42d9a734356b91076c82a66d919c21d2446f49d5aeb2700fd13ef16",
+      "stored": "0004__tests__conftest.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

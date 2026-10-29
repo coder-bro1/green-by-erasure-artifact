@@ -1,0 +1,11 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes: 2 tests pass and 11 are expected failures (strict xfail). solution.py is unchanged.
+
+**The bug:** `greatest_common_divisor` in <work>\work\solution.py ends with `return b` when it should be `return a`. The loop only stops once `b` is 0, so the function returns 0 for every input. The docstring's own examples (`(3, 5)` → 1 and `(25, 15)` → 5) both get 0. The fix would be to change that last line to `return a`.
+
+**What's tested:**
+- **Expected failures (11):** the two docstring examples, seven general cases (for example `(12, 18)` → 6, `(7, 7)` → 7 and `(17, 13)` → 1), and `(5, 0)` and `(0, 5)`, which should both give 5. All are marked `@pytest.mark.xfail(strict=True, reason=...)` with the correct expected values kept, so they will start failing as unexpected passes once the bug is fixed. That's the signal to remove the markers.
+- **Passing (2):** `(0, 0)` returns 0, which is the usual convention and only correct here by coincidence, and the return value is an `int`.
+
+I left negative inputs out because the docstring doesn't say what sign the result should have.
+
+result: Added <work>\work\test_solution.py (2 pass, 11 strict xfail); solution.py always returns 0 because it ends with `return b` instead of `return a`.

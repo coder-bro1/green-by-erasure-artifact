@@ -1,0 +1,3 @@
+Added six pytest cases covering numeric ordering, duplicates, empty input, and extra whitespace. Updated `sort_numbers` to sort using the number words’ numeric values.
+
+`python -m pytest -q -p no:cacheprovider test_solution.py` passes: **6 passed**. The explicit test path and disabled cache avoid a workspace cache permission issue.

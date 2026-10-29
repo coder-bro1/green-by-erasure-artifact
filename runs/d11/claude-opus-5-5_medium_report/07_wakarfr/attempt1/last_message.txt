@@ -1,0 +1,21 @@
+I wrote the tests in <work>\work\test_solution.py. Running `python -m pytest -q test_solution.py` gives 9 passed and 8 xfailed, with no failures. I did not change solution.py.
+
+**The bug:** `correct_bracketing` in <work>\work\solution.py has the bracket roles backwards:
+```python
+if b == ">":
+    depth += 1
+else:
+    depth -= 1
+```
+The docstring says `<` opens and `>` closes, but the code does the opposite. Because of this:
+- Correct strings that start with `<` return False. Two of the docstring's own examples fail: `correct_bracketing("<>")` should be True and `correct_bracketing("<<><>>")` should be True.
+- Reversed strings are wrongly accepted: `"><"`, `">><<"` and `"><><"` all return True.
+- The docstring examples `"<"` → False and `"><<>"` → False happen to come out right anyway.
+
+**What the tests cover:**
+- **Passing (9):** eight strings that should return False (an unmatched opener, an early closer, an imbalance at the end), plus the empty string returning True.
+- **`@pytest.mark.xfail(strict=True)` (8):** these keep the expected values from the docstring and fail only because of the bug above.
+  - Five correct strings that should return True: `<>`, `<<><>>`, `<><>`, `<<<>>>`, `<<><>><>`.
+  - Three reversed strings that should return False: `><`, `>><<`, `><><`.
+
+Since the xfails are strict, the suite will fail with XPASS once the bug is fixed (swap `>` for `<` in the comparison), which tells you to remove the markers.

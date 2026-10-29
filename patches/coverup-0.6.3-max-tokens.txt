@@ -1,0 +1,33 @@
+CoverUp 0.6.3, coverup/coverup.py, main: answer length cap for Ollama models in the S5 audit.
+
+CoverUp sets no answer-length limit. With a local Ollama model, an answer that falls into repetition keeps
+generating until the context window is full; on 15 October three of the first 38 S5 runs waited more than
+10 minutes for one answer (litellm.Timeout after 600 s) and hit the 15-minute run limit without any answer,
+and two more took about 10 minutes. The cap is the study harness's own setting (num_predict 2048; litellm
+maps max_tokens to Ollama's num_predict). No other change. The 38 runs made before the cap were discarded
+and S5 restarted from scratch, so every record uses the same settings.
+
+Before:
+            if "ollama" in args.model:
+                extra_request_pars['api_base'] = args.ollama_api_base
+
+After:
+            if "ollama" in args.model:
+                extra_request_pars['api_base'] = args.ollama_api_base
+                # S5 audit: cap each answer at 2,048 tokens (the study harness's num_predict); without it a
+                # local model that falls into repetition generates until its context is full (> 10 minutes).
+                extra_request_pars['max_tokens'] = 2048
+
+Update, 18 October 2026 (S5 sensitivity rerun, docs/PHASE2_REVISION_PLAN.md stage B-1): the cap is read from the
+environment variable GBE_COVERUP_MAX_TOKENS, default 2048, so the original S5 settings are unchanged:
+
+                import os
+                extra_request_pars['max_tokens'] = int(os.environ.get('GBE_COVERUP_MAX_TOKENS', '2048'))
+
+Second update, 18 October 2026: with GBE_COVERUP_NO_THINK=1 the request also carries reasoning_effort='none',
+which litellm 1.105.0 maps to Ollama's think=false (litellm/llms/ollama/completion/transformation.py). Without it
+Gemma 4 returned every answer in the reasoning field with empty content (the first rerun attempt, set aside in
+.scratch/s5_sensitivity_invalid_thinking). The study harness runs Gemma 4 and Qwen3.5 with think=False as well.
+
+                if os.environ.get('GBE_COVERUP_NO_THINK') == '1':
+                    extra_request_pars['reasoning_effort'] = 'none'

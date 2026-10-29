@@ -1,0 +1,13 @@
+Added [test_solution.py](/<work>/whskrrp/test_solution.py). `solution.py` is unchanged.
+
+Validation: **16 passed, 8 xfailed** using:
+```powershell
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+Strict xfails preserve the documented expected values for two bugs:
+
+- Exact-capacity combinations are incorrectly excluded.
+- Zero-weight items are ignored at capacity zero.
+
+Cache creation hit a filesystem permission error, so the successful run disabled pytest’s cache.

@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](/<work>/wuuevzv/tests/test_solution.py). `solution.py` is unchanged.
+
+`pytest -q -p no:cacheprovider tests` reports **4 passed, 4 xfailed**. The strict xfails cover cases where the implementation contradicts its docstring: it negates the leading digit of positive numbers and makes the leading digit of negative numbers positive. That causes the documented examples and related cases to return incorrect counts.

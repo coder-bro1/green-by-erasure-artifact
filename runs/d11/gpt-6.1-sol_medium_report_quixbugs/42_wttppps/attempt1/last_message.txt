@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wttppps/test_solution.py). `solution.py` is unchanged.
+
+Verified with `python -m pytest test_solution.py -q -p no:cacheprovider`: **77 passed, 43 xfailed**.
+
+The 43 strict expected failures preserve the correct expected values. They expose reversed digits—for example, `to_base(31, 16)` returns `"F1"` instead of the documented `"1F"`.

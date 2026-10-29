@@ -1,0 +1,18 @@
+I wrote the tests in <work>\work\test_solution.py, but solution.py has a bug that means `make_palindrome` only works on inputs that are already palindromes. The suite passes: 27 passed, 5 expected failures (xfail), nothing failed, about 16s. solution.py is unchanged.
+
+**The bug:** `make_palindrome` never returns for any input that isn't already a palindrome, including the docstring examples `'cat'` and `'cata'`. The loop checks the whole string instead of the suffix:
+```python
+while not is_palindrome(string):        # should be: string[beginning_of_suffix:]
+    beginning_of_suffix += 1
+```
+Since `string` never changes, the condition never becomes false.
+
+**What the tests cover:**
+- **`is_palindrome`:** true and false cases, including the empty string, single characters, digits, whitespace, and that it is case- and space-sensitive.
+- **`make_palindrome` on inputs that work:** the empty string returns `''`, and already-palindromic inputs come back unchanged.
+- **`make_palindrome` on the 5 inputs that hang:** these check the correct expected results (`cat`→`catac`, `cata`→`catac`, `xy`→`xyx`, `xyz`→`xyzyx`, `jerry`→`jerryrrej`). They are the 5 expected failures. Each runs in a subprocess with a 3-second timeout so the suite can't freeze. They are marked so that once the bug is fixed they will fail the run, telling you to remove the marker.
+- **One test that records the current hang:** `make_palindrome('ab')` doesn't finish within 1 second. Once the bug is fixed this test will fail, and it should be deleted.
+
+Run it with `python -m pytest test_solution.py` from <work>\work.
+
+result: Added 33 pytest tests in <work>\work\test_solution.py (27 pass, 5 expected failures, 0 fail); `make_palindrome` in solution.py loops forever on any input that isn't already a palindrome, so those cases are marked as expected failures.

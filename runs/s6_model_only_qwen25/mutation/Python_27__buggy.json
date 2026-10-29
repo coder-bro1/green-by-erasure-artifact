@@ -1,0 +1,36 @@
+{
+  "pair_id": "Python/27",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_f69cee6b909c5911.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-27__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_837eda536210659f.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-27__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_f99f8e6c00f84c5e.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-27__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        4
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [],
+  "seconds": 0.0,
+  "finished": "2026-10-28T21:42:09.803863+00:00"
+}

@@ -1,0 +1,23 @@
+I wrote the tests, but they can't pass: `solution.py` has a bug, and you asked me not to change that file. All 12 tests fail.
+
+**The bug:** `common_factor_max(p, q)` in `<work>\work\solution.py` should return the greatest common divisor of `p` and `q`. Its loop only stops once `q` reaches 0, and then it does `return q`, so it always returns 0. Its own docstring examples break: `common_factor_max(12, 18)` gives 0 instead of 6. It should return `p`:
+
+```python
+    while q:
+        p, q = (q, p % q)
+    return q   # should be: return p
+```
+
+**The tests:** `<work>\work\test_solution.py` checks the behaviour the docstring describes:
+- both docstring examples, plus swapped argument order, one number dividing the other, equal inputs and powers of two
+- a zero in either position, e.g. (5, 0) should give 5
+- agreement with Python's built-in `math.gcd` for every pair from 1 to 39
+- that the result is positive and divides both inputs
+
+**Run result:** `python -m pytest -q test_solution.py` gives 12 failed, 0 passed. Every failure is the function returning 0. With the one-line change to `return p`, all of them should pass. I didn't try that, since you asked me not to edit the file.
+
+I didn't weaken the tests to expect 0, because then they would just lock the bug in.
+
+**Decision for you:** either allow the one-line change in `solution.py`, or tell me you really want tests that match the current output of 0.
+
+failed: The tests for solution.py's common_factor_max can't pass because the function always returns 0 (it ends with `return q` instead of `return p`), and solution.py can't be modified; tests are in <work>\work\test_solution.py.

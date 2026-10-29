@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index 241ce89..300f126 100644
+--- a/solution.py
++++ b/solution.py
+@@ -22,7 +22,7 @@ def will_it_fly(q,w):
+ 
+     i, j = 0, len(q)-1
+     while i<j:
+-        if q[i] == q[j]:
++        if q[i] != q[j]:
+             return False
+         i+=1
+         j-=1

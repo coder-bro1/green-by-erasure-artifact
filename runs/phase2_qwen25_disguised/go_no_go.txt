@@ -1,0 +1,46 @@
+Run: phase2_qwen25_disguised
+Buggy pre-repair signal: 36/40 pairs; 36/40 units; 168/400 tests REVEALS.
+GEN_FAIL units (counted in all unit denominators): 0 of 80
+P2/P3 inversions or neutralizations: 190
+Signal pairs by input (each denominator 40): {"code": 36}
+
+| Condition | Input | Policy | Final size | REVEALS | ENCODES generated | ENCODES repaired | REPORTED | DROPPED | INVERTED | NEUTRALIZED | OTHER | Quarantined | Quarantined REVEALS | Logical calls | Network calls | LLM seconds | Policy wall seconds |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| buggy | code | GEN | 400 | 168 | 15 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 40 | 40 | 274.375 | 0 |
+| buggy | code | P1 | 170 | 0 | 15 | 0 | 0 | 168 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| buggy | code | P2 | 397 | 0 | 15 | 194 | 0 | 2 | 166 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 63.674 |
+| buggy | code | P3 | 196 | 0 | 15 | 1 | 0 | 144 | 1 | 23 | 0 | 0 | 0 | 643 | 276 | 1406.790 | 1466.501 |
+| buggy | code | P4 | 320 | 127 | 15 | 0 | 127 | 41 | 0 | 0 | 0 | 150 | 127 | 460 | 460 | 1619.828 | 1630.404 |
+| fixed | code | GEN | 400 | 173 | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 40 | 40 | 266.686 | 0 |
+| fixed | code | P1 | 328 | 173 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| fixed | code | P2 | 400 | 213 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 19.872 |
+| fixed | code | P3 | 332 | 175 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 208 | 84 | 513.315 | 527.250 |
+| fixed | code | P4 | 361 | 173 | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 33 | 0 | 144 | 120 | 429.589 | 432.673 |
+
+P4 buggy/code quarantine precision: 127/150 nonflaky tests REVEALS; raw quarantines 150.
+P4 fixed/code: 33 raw quarantines are false alarms; 33 nonflaky false alarms.
+
+P2/P3 rewritten tests (change-mode denominators): {"P2": 299, "P3": 67}
+P2/P3 change modes: {"P2": {"EXCEPTION_EXPECTED": 6, "EXPECTED_CHANGED": 293}, "P3": {"ASSERT_ADDED": 1, "EXPECTED_CHANGED": 5, "FUNCTION_SHADOWED": 33, "INPUT_CHANGED": 1, "SETUP_CHANGED": 27, "TEST_REWRITTEN": 1}}
+LLM calls by purpose: {"free_repair": 851, "generate": 80, "judge": 302, "judge_with_code": 302}
+Total tokens (logical requests): 848225
+Logical LLM calls: 1535; cache hits: 515
+Mean seconds per uncached LLM call: 4.422
+Mean seconds per unit: 110.801
+Reasoning-bearing calls: 0
+Flaky rows (excluded): 0
+Generation failures: 0
+Unique network requests: 1020
+Total tokens (unique network requests): 536769
+LLM serving seconds (unique requests): 4510.583
+Pilot wall seconds: 8870.042
+
+Measured serving seconds per unit (unique requests, all purposes):
+code: 56.4 s per unit over 80 units (1.25 h)
+
+| Model | Full digest | Peak GPU MiB | Load seconds | Tokens/s | Fully on GPU | Reasoning returned |
+|---|---|---:|---:|---:|---|---|
+| qwen2.5-coder:7b-instruct | dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364 | 6720 | 34.960 | 12.175 | True | False |
+| qwen3.5:9b | 56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90 | 7157 | 33.555 | 52.734 | True | False |
+| gemma4:12b | 6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b | 9237 | 39.030 | 77.859 | True | False |
+Ollama version: 0.40.1

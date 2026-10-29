@@ -1,0 +1,20 @@
+I wrote the tests, but they can't all pass without changing solution.py. The function never sorts the words, and you said not to modify it. Running `python -m pytest -q test_solution.py` in <work>\work gives 8 failed, 4 passed.
+
+**The bug:** in `order_number_words`, the `rank` dictionary is defined but never used. The return line only drops empty strings and rejoins the words, so they come back in their original order. Even the example in the function's own docstring fails: `order_number_words('nine two six')` returns `'nine two six'` instead of `'two six nine'`.
+
+**The tests** check the documented behavior: the docstring example, empty input, a single word, already-sorted input, reversed input, all ten words shuffled, duplicates, extra spaces collapsed, input of only spaces, and a few parametrized pairs and triples.
+- **Passing (4):** the cases where the output order happens to match the input order (empty, single word, already sorted, only spaces).
+- **Failing (8):** every case that needs actual sorting.
+
+I didn't weaken the tests or mark them as expected failures, because that would hide the bug. A one-line fix in solution.py makes all 12 pass:
+```python
+return ' '.join(sorted([w for w in phrase.split(' ') if w], key=lambda w: rank[w]))
+```
+
+If you'd rather leave solution.py alone, the other option is to mark the 8 failing tests `xfail` so the suite goes green. Tell me which you want.
+
+Files are in <work>\work:
+- test_solution.py
+- solution.py (unchanged)
+
+needs input: should I apply the one-line fix to solution.py, or mark the 8 failing tests xfail and leave the code as it is?

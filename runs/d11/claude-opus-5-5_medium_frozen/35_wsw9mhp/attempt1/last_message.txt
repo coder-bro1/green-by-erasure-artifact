@@ -1,0 +1,17 @@
+I wrote the tests in <work>\work\test_solution.py. They found a bug in solution.py: the True/False palindrome check comes out backwards, so the function gives the wrong answer for every input. I left solution.py unchanged as asked, so some tests are marked as expected failures.
+
+Running `python -m pytest -q test_solution.py` gives 18 passed and 9 expected failures (xfail), with no real failures.
+
+**The bug:** `reverse_delete` ends with `return (s, s[::-1] != s)`, which should be `==`. All three docstring examples come out wrong:
+- `reverse_delete("abcde", "ae")` returns `('bcd', True)`; the docstring says `('bcd', False)`.
+- `reverse_delete("abcdedcba", "ab")` returns `('cdedc', False)`; the docstring says `('cdedc', True)`.
+
+**What the tests cover:**
+- **Character deletion (14 cases, all pass):** the docstring examples, empty `s` and empty `c`, deleting every character, case sensitivity and whitespace.
+- **Other basics (all pass):** the result is a `(str, bool)` tuple, the inputs aren't changed, and repeated characters in `c` make no difference.
+- **True/False check (9 cases, expected to fail):** these check the full result against the docstring. The marker is strict, so once solution.py is fixed they will start reporting as failures, as a reminder to remove the marker.
+- **Current behaviour (1 test, passes):** this one confirms the answer is currently backwards. Delete it after the fix.
+
+To fix solution.py, change `!=` to `==` on its last line, remove the `xfail` marker and delete `test_palindrome_flag_is_currently_inverted`. All tests should then pass.
+
+result: Wrote pytest tests for solution.py (18 pass, 9 expected failures); they show its palindrome True/False is backwards (`!=` should be `==`).

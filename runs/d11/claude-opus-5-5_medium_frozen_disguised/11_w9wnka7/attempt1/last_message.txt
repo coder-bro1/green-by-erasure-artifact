@@ -1,0 +1,17 @@
+I wrote the tests, but they don't pass: 10 of 13 fail because `solution.py` has a bug. I didn't change `solution.py` as you asked, and I didn't change the tests to match the bug either.
+
+**The bug:** the docstring says the function returns words with exactly `count` consonants, but the loop adds one for each vowel. So it actually returns words with exactly `count` vowels. The function's own docstring example fails: `words_with_consonants('Big brown fox', 2)` should give `['Big', 'fox']` but returns `[]`, because each of those words has only one vowel.
+
+**What I ran:** `python -m pytest -q test_solution.py` in `<work>\work`. Result: 10 failed, 3 passed.
+- **Passing (3):** empty sentence, a sentence of only spaces, and no matching words. These give the same answer whether you count vowels or consonants.
+- **Failing (10):** the docstring example, keeping word order and duplicates, uppercase vowels, `y` counted as a consonant, extra spaces between words, and five single-word checks (`a`, `b`, `strengths`, `Queue`, `rhythm`).
+
+**The fix:** change one line in `solution.py` so it counts letters that are *not* vowels:
+```python
+if w[k].lower() not in ['a', 'e', 'i', 'o', 'u']:
+```
+I traced through every test by hand with this change and they should all pass, but I haven't run them that way.
+
+The other option is to make the tests pass against the current code, but then they would check vowel counts, which contradicts the docstring. Tell me which you want: fix `solution.py`, or test the current behaviour.
+
+failed: the tests can't pass without modifying solution.py — it counts vowels, not the consonants its docstring promises. Tests are in <work>\work\test_solution.py; 10 of 13 fail.

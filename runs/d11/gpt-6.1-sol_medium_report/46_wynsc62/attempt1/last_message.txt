@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wynsc62/test_solution.py). Left `solution.py` unchanged.
+
+Validation: **16 passed, 9 xfailed** using `python -m pytest test_solution.py -q -p no:cacheprovider`.
+
+Strict expected failures preserve the correct values for two bugs:
+
+- `1` incorrectly returns `True`.
+- Primes greater than `2` incorrectly return `False` because the divisor loop starts at `1`.

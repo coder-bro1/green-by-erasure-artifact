@@ -1,0 +1,3 @@
+Added [test_solution.py](<work>/wbm9ugz/test_solution.py) with 20 pytest cases covering cyclic groups, incomplete groups, length preservation, and Unicode. All pass with `pytest -q test_solution.py -p no:cacheprovider`.
+
+`solution.py` is unchanged. Its `decode_cyclic` currently applies the same transform as `encode_cyclic`, so the decoder tests reflect that behavior; it does not reverse the encoding.

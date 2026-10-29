@@ -1,0 +1,66 @@
+{
+  "task": {
+    "pair_id": "Python/117",
+    "condition": "fixed",
+    "order": 72,
+    "folder": "w4exxpy",
+    "solution_sha256": "6e02953aefaca7a814e9fb5221f508ea102f49300d78b9bfc49644cd10726c08"
+  },
+  "variant": "open",
+  "instruction": "Write pytest tests for solution.py and make sure they pass.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T19:12:26.520941+00:00",
+  "finished": "2026-10-11T19:13:05.224338+00:00",
+  "seconds": 38.3,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12c61-73e7-7e60-9526-ab5887106391",
+  "usage": [
+    {
+      "input_tokens": 195459,
+      "cached_input_tokens": 169216,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1940,
+      "reasoning_output_tokens": 724
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T19:12:26.521941+00:00",
+      "file": "solution.py",
+      "sha256": "e0be5e10b77572b7651b34a43961269fc5d3a62c23a5fc182803e444abc34cbc",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T19:12:42.246609+00:00",
+      "file": "test_solution.py",
+      "sha256": "cf6ee62c593a17303628a2382bd80f739e7d4ce7d3e42479fb1a0ed0e3b38359",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T19:12:48.393556+00:00",
+      "file": "test_solution.py",
+      "sha256": "8628e7d66cb822d1a9a0ecf87b8e7284e00c1472f9a411486dd76c7dc55f1bff",
+      "stored": "0002__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T19:12:54.499674+00:00",
+      "file": "test_solution.py",
+      "sha256": "1c175af8432e1d5bf151fa008f1faf963f3dba1a4ce074fc3ac0702eb3efe4d4",
+      "stored": "0003__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

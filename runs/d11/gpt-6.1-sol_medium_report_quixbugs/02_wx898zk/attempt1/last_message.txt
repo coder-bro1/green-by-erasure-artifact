@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wx898zk/test_solution.py), leaving `solution.py` unchanged.
+
+Validation: `python -m pytest test_solution.py -q -p no:cacheprovider` — **6 passed, 27 xfailed**.
+
+The function never pushes operators onto its stack, so it returns only integers instead of the documented RPN output. Affected tests preserve their expected values and use `@pytest.mark.xfail(strict=True, reason=...)`.

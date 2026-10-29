@@ -1,0 +1,11 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes, but only because 10 of the tests are marked as expected failures: `solution.py` has two real bugs. Running `python -m pytest -q -rx test_solution.py` gives 17 passed and 10 xfailed, in about 6 seconds. `solution.py` is unchanged; `git status` shows only the new test file.
+
+**Bugs in `wrap`**, all checked by running the code:
+1. **The end of the text is dropped.** Whatever text remains after the `while` loop is never added to `lines`. So `wrap("hi", 5)` returns `[]`, `wrap("abcdefgh", 3)` returns `['abc', 'def']` without `'gh'`, and joining the lines never gives back the original text, which the docstring promises.
+2. **It can loop forever.** If the remaining text starts with a space and has no other space in its first `cols+1` characters, `rfind` returns 0 and the loop stops making progress. Both `wrap("hello world", 5)` and `wrap("a b c", 1)` hang.
+
+**How the tests are split:**
+- `TestCurrentBehaviour` (17 tests, passing) covers what does work. It breaks at the last space that fits, including a space exactly at position `cols`. With no space it cuts at `cols` characters. No line is longer than `cols`. The lines it does return match the start of the input exactly, spaces included. The input string is left unchanged.
+- `TestSpecContract` (10 tests) checks what the docstring promises: short text comes back as one line, the end of the text is kept, joining the lines gives back the input, and the function always finishes. Each is marked `xfail(strict=True)` with the bug as the reason. Because the marking is strict, a test that starts passing is reported as a failure. So once the bugs are fixed, the suite will fail until those markers are removed. The two hang tests run `wrap` in a separate process with a 3-second timeout so they can't stall the suite.
+
+The fix would be to add `lines.append(text)` after the loop and stop `rfind` from returning 0. I didn't make it because you said not to modify `solution.py`.

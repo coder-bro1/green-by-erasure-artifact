@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](/<work>/wp8t5y4/test_solution.py). `pytest -q` reports **4 passed, 3 xfailed**.
+
+The strict xfails cover right shifts by one or two places. `solution.py` leaves the digits unchanged for shifts up to the digit count, so it returns `"12"` for the docstring’s `circular_shift(12, 1)` example instead of `"21"`. The file was not modified.

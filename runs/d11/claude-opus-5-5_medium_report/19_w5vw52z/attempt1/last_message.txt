@@ -1,0 +1,19 @@
+I added pytest tests for `is_sorted` in <work>\work\test_solution.py. Running `python -m pytest -q test_solution.py` gives 14 passed and 4 xfailed (all marked `strict=True`). I did not change solution.py.
+
+**What the tests cover:**
+- The docstring examples
+- An empty list
+- Lists containing zero
+- Descending lists
+- A list where only the last pair is out of order
+- A number that appears twice, which is allowed
+- A list with a duplicate that is also out of order
+- That the input list is not changed
+
+**The bug (why 4 tests are xfail):** The docstring says to return False when a number appears more than twice, e.g. `is_sorted([1, 2, 2, 2, 3, 4]) ➞ False`. solution.py counts each number into `count_digit` but never checks those counts. It only checks the order (`lst[i-1] <= lst[i]`), so any non-decreasing list returns True, however many times a number repeats. The four failing tests expect False, as the docstring says, and the function returns True:
+- `[1, 2, 2, 2, 3, 4]` (a docstring example)
+- `[3, 3, 3]`
+- `[1, 2, 4, 4, 4]`
+- `[1, 1, 1, 1]`
+
+A fix would be to return False if any value in `count_digit` is greater than 2.

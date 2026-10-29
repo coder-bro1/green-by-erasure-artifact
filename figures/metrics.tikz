@@ -1,0 +1,35 @@
+\definecolor{oiblue}{HTML}{0072B2}
+\definecolor{oivermillion}{HTML}{D55E00}
+\definecolor{oigreen}{HTML}{009E73}
+\definecolor{oiorange}{HTML}{E69F00}
+\definecolor{oisky}{HTML}{56B4E9}
+\definecolor{oipurple}{HTML}{CC79A7}
+\definecolor{oigrey}{HTML}{999999}
+
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1, horizontal sep=6pt, yticklabels at=edge left},
+  width=5.6cm, height=3.6cm, ymin=0, ymax=100, enlarge x limits=0.16,
+  symbolic x coords={discard, overwrite, free repair, triage}, xtick=data,
+  xticklabels={discard, over-\\write, free\\repair, triage}, xticklabel style={align=center, font=\scriptsize},
+  yticklabel style={font=\scriptsize}, ylabel style={font=\footnotesize},
+  title style={font=\footnotesize, yshift=-4pt}, ymajorgrids, grid style={gray!25},
+  legend style={font=\footnotesize, draw=none, legend columns=3, /tikz/every even column/.append style={column sep=8pt}},
+  area legend]
+\nextgroupplot[title={Qwen2.5-Coder 7B}, ybar=0pt, bar width=4.2pt, legend image code/.code={\draw[#1, draw=none] (0cm,-0.08cm) rectangle (0.3cm,0.12cm);}, ylabel={\%}, legend to name=metricslegend]
+\addplot[fill=oiblue, draw=none] coordinates {(discard,50.2) (overwrite,78.8) (free repair,52.4) (triage,50.2)};
+\addlegendentry{mutation score}
+\addplot[fill=oigreen, draw=none] coordinates {(discard,0.0) (overwrite,0.0) (free repair,0.0) (triage,86.3)};
+\addlegendentry{suites that keep or report the bug evidence}
+\addplot[fill=oivermillion, draw=none] coordinates {(discard,18.6) (overwrite,91.7) (free repair,22.5) (triage,18.6)};
+\addlegendentry{suites that assert the bug}
+\nextgroupplot[title={Qwen3.5 9B}, ybar=0pt, bar width=4.2pt, legend image code/.code={\draw[#1, draw=none] (0cm,-0.08cm) rectangle (0.3cm,0.12cm);}]
+\addplot[fill=oiblue, draw=none] coordinates {(discard,44.6) (overwrite,67.7) (free repair,46.3) (triage,44.6)};
+\addplot[fill=oigreen, draw=none] coordinates {(discard,0.0) (overwrite,0.0) (free repair,0.0) (triage,75.5)};
+\addplot[fill=oivermillion, draw=none] coordinates {(discard,13.7) (overwrite,76.5) (free repair,14.7) (triage,13.7)};
+\nextgroupplot[title={Gemma 4 12B}, ybar=0pt, bar width=4.2pt, legend image code/.code={\draw[#1, draw=none] (0cm,-0.08cm) rectangle (0.3cm,0.12cm);}]
+\addplot[fill=oiblue, draw=none] coordinates {(discard,57.8) (overwrite,80.0) (free repair,57.8) (triage,57.8)};
+\addplot[fill=oigreen, draw=none] coordinates {(discard,0.0) (overwrite,0.0) (free repair,0.0) (triage,83.8)};
+\addplot[fill=oivermillion, draw=none] coordinates {(discard,27.5) (overwrite,94.1) (free repair,27.5) (triage,27.5)};
+\end{groupplot}
+\node[anchor=north] at ($(group c2r1.south) + (0,-0.85cm)$) {\pgfplotslegendfromname{metricslegend}};
+\end{tikzpicture}

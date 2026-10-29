@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wdgah4a/test_solution.py) with 13 cases. `solution.py` is unchanged.
+
+Nonempty lists raise `RecursionError` because the base case handles only empty lists. The 12 affected cases preserve their expected sorted values and use `xfail(strict=True, raises=RecursionError)`.
+
+Verified: **1 passed, 12 xfailed** using:
+```powershell
+python -m pytest -q test_solution.py -p no:cacheprovider
+```

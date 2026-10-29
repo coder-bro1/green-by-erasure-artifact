@@ -1,0 +1,11 @@
+I wrote 10 pytest tests in <work>\work\test_solution.py. Running them gives 9 passed and 1 xfailed (expected failure), with no failures. I did not modify solution.py. One case can't pass honestly: solution.py has a bug where it disagrees with its own docstring.
+
+**The bug:** `most_frequent_letters('')` returns `{'': 1}`, but the docstring says it should return `{}`. The cause is `best = 1` at the start. `''.split(' ')` gives `['']`, and the empty piece's count of 1 equals `best`, so `''` ends up as a key. The same thing happens with doubled spaces: `'a  b'` returns `{'a': 1, '': 1, 'b': 1}`. The spec only describes single spaces, so I did not write a test for that.
+
+**How I handled it:** I wrote the empty-string test to expect the documented `{}` and marked it `xfail(strict=True)` with the reason above. I didn't write a test that accepts the wrong output. Because it is strict, the suite will report an error once solution.py is fixed, which is the signal to remove the marker. If you want a suite that only passes when the code is correct, delete the marker and that test will fail until the bug is fixed.
+
+**What the passing tests cover:** both docstring examples, a single letter, one letter repeated, ties at the maximum (letters with lower counts are left out), a clear winner, all letters distinct, a winner that isn't first, and a new dict being returned on each call.
+
+To check, I ran `python -m pytest -v test_solution.py` (Python 3.12.10, pytest 9.1.1).
+
+result: Added 10 pytest tests in <work>\work\test_solution.py (9 pass, 1 expected failure). The expected failure flags a bug in solution.py: an empty string returns {'': 1} instead of {}.

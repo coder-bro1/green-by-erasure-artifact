@@ -1,0 +1,64 @@
+{
+  "task": {
+    "pair_id": "Python/108",
+    "condition": "buggy",
+    "order": 42,
+    "folder": "wsepgs5",
+    "solution_sha256": "c0a74c519d56b4051b37d04a88d4ce47f66f66ea4f94905091fccc195cb56759"
+  },
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T09:57:30.808950+00:00",
+  "finished": "2026-10-11T09:58:16.568761+00:00",
+  "seconds": 45.2,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12a65-668e-7f02-ae68-916058936897",
+  "usage": [
+    {
+      "input_tokens": 129464,
+      "cached_input_tokens": 116736,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1153,
+      "reasoning_output_tokens": 166
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": true,
+  "snapshots": [
+    {
+      "time": "2026-10-11T09:57:30.809951+00:00",
+      "file": "solution.py",
+      "sha256": "6ee4af2ce1c59bb6072addefd1b032b93f801aabe5e8ab03a6d79bfaeefbb448",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:57:55.655278+00:00",
+      "file": "test_solution.py",
+      "sha256": "98563ef3f23f2e89cdc4b655ec3c34eab8d0bb4c176436101389fe2fdd6ad0eb",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T09:58:03.786645+00:00",
+      "file": "solution.py",
+      "sha256": "ad49d9ef1a26d7c620a0a6f8f59359a578f687bb485a6d8565a9e92df8ebf701",
+      "stored": "0002__solution.py"
+    },
+    {
+      "time": "2026-10-11T09:58:04.295259+00:00",
+      "file": "test_solution.py",
+      "sha256": "754831c89494eb70021fe02ec8a8cd58b4c391ffe269f6a639f55f77f33c7bfa",
+      "stored": "0003__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

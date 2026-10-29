@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wyqfmbt/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **9 passed, 13 xfailed**.
+
+Strict xfails retain the documented expectations and identify two defects:
+
+- Relaxation updates edge weights instead of node distances, leaving reachable nodes at infinity.
+- Nodes appearing only as edge origins are omitted from initialization, causing `KeyError`.

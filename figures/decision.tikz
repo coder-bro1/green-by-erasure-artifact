@@ -1,0 +1,25 @@
+\definecolor{oiblue}{HTML}{0072B2}
+\definecolor{oivermillion}{HTML}{D55E00}
+\definecolor{oigreen}{HTML}{009E73}
+\definecolor{oiorange}{HTML}{E69F00}
+\definecolor{oisky}{HTML}{56B4E9}
+\definecolor{oipurple}{HTML}{CC79A7}
+\definecolor{oigrey}{HTML}{999999}
+
+\begin{tikzpicture}
+\begin{axis}[width=7.4cm, height=5.2cm, xmin=0, xmax=1, ymin=0, ymax=50, domain=0:1, samples=101,
+  xlabel={cost of a false report relative to a missed bug, $c$},
+  ylabel={break-even share of buggy programs $p^*$ (\%)},
+  label style={font=\footnotesize}, tick label style={font=\footnotesize}, grid=major, grid style={gray!20},
+  legend style={font=\scriptsize, at={(0.03,0.97)}, anchor=north west, draw=none, fill=white, fill opacity=0.8, text opacity=1},
+  legend cell align=left]
+\addplot[oiblue, thick, no marks] {100*x*0.3775/(0.8627 + x*0.3775)};
+\addlegendentry{Qwen2.5-Coder 7B ($D$ = 86\%, $F$ = 38\%)}
+\addplot[oivermillion, thick, no marks] {100*x*0.3235/(0.7549 + x*0.3235)};
+\addlegendentry{Qwen3.5 9B ($D$ = 75\%, $F$ = 32\%)}
+\addplot[oigreen, thick, no marks] {100*x*0.1814/(0.8382 + x*0.1814)};
+\addlegendentry{Gemma 4 12B ($D$ = 84\%, $F$ = 18\%)}
+\node[font=\scriptsize, anchor=west] at (axis cs:0.03,22) {triage costs less};
+\node[font=\scriptsize, anchor=north east] at (axis cs:0.98,7) {silent repair costs less};
+\end{axis}
+\end{tikzpicture}

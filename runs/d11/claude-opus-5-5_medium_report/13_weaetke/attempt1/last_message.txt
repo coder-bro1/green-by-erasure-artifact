@@ -1,0 +1,18 @@
+I wrote <work>\work\test_solution.py. All 71 tests pass (`python -m pytest -q test_solution.py`, 0.06s). I did not change solution.py.
+
+The tests check:
+- the docstring example: `tri(3) == [1, 3, 2, 8]`
+- the edge cases n = 0, 1 and 2
+- the single values the docstring gives: tri(1)=3, tri(2)=2, tri(3)=8, tri(4)=3
+- full sequences up to n=9 that I worked out by hand: [1, 3, 2, 8, 3, 15, 4, 24, 5, 35]
+- that the list length is always n+1
+- a comparison against a separate recursive version I wrote from the docstring, for n from 0 to 24
+- the even-term formula and the odd-term recurrence
+- that shorter results match the start of longer ones
+- that the return type is a list
+
+No test failed against the docstring, so none is marked xfail. The code works out tri(n+1) for odd n as (n+3)/2, which matches the stated recurrence.
+
+One thing you might trip over later: the even-indexed terms come back as floats (2.0, 3.0, 4.0, ...), and the odd terms after them are floats too, because the code uses `i / 2`. The docstring example shows whole numbers, `[1, 3, 2, 8]`. Python treats 2.0 and 2 as equal, so the equality tests pass, and I added a test that every value is a whole number. A test that checks for exact `int` type would fail.
+
+result: Added <work>\work\test_solution.py with 71 pytest tests for `tri` in solution.py; all pass, nothing needed xfail. Even-indexed terms come back as floats like 2.0, but they still compare equal to the expected integers.

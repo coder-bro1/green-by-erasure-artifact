@@ -1,0 +1,102 @@
+[
+  {
+    "test_id": "HumanEvalFixDisguised-97__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_last_digit_product_same_numbers():\n    assert last_digit_product(11, 11) == 1",
+    "after": "def test_last_digit_product_same_numbers():\n    assert last_digit_product(11, 11) == 121",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-112__buggy__qwen2-5-coder-7b-instruct__s0__code/t1",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_strip_and_mirror_check_banana():\n    assert strip_and_mirror_check('banana', 'b') == ('anana', True)",
+    "after": "def test_strip_and_mirror_check_banana():\n    assert strip_and_mirror_check('banana', 'b') == ('anana', False)",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-8__buggy__qwen2-5-coder-7b-instruct__s0__code/t1",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_total_and_multiple_single_element():\n    assert total_and_multiple([5]) == (5, 5)",
+    "after": "def test_total_and_multiple_single_element():\n    assert total_and_multiple([5]) == (5, 0)",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-27__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_invert_letter_case_single_char_lower():\n    assert invert_letter_case('a') == 'A'",
+    "after": "def test_invert_letter_case_single_char_lower():\n    assert invert_letter_case('a') == 'a'",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-9__buggy__qwen2-5-coder-7b-instruct__s0__code/t2",
+    "policy": "P2",
+    "gen_actual": "REVEALS",
+    "final_actual": "ENCODES",
+    "expected_final": "ENCODES",
+    "before": "def test_running_peaks_increasing_sequence():\n    assert running_peaks([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]",
+    "after": "def test_running_peaks_increasing_sequence():\n    assert running_peaks([1, 2, 3, 4, 5]) == [1, 5, 5, 5, 5]",
+    "change_modes": "EXPECTED_CHANGED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-12__buggy__qwen2-5-coder-7b-instruct__s0__code/t7",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_first_longest_mixed_lengths():\n    assert first_longest(['abc', 'de', 'fghi', 'jklmno']) == 'jklmno'",
+    "after": "def test_first_longest_mixed_lengths():\n    assert first_longest(['abc', 'de', 'fghi', 'jklmno']) == 'jklmno'",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-5__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_weave_separator_large_numbers():\n    assert weave_separator([100, 200], 50) == [100, 50, 200]",
+    "after": "def test_weave_separator_large_numbers():\n    assert weave_separator([100, 200], 50) == [100, 50, 200]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-9__buggy__qwen2-5-coder-7b-instruct__s0__code/t8",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_running_peaks_with_one_negative_and_one_positive():\n    assert running_peaks([-1, 2, -3, 4, -5]) == [-1, 2, 2, 4, 4]",
+    "after": "def test_running_peaks_with_one_negative_and_one_positive():\n    assert running_peaks([-1, 2, -3, 4, -5]) == [-1, 2, 2, 4, 4]",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-8__buggy__qwen2-5-coder-7b-instruct__s0__code/t3",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_total_and_multiple_negative_numbers():\n    assert total_and_multiple([-1, -2, -3]) == (-6, -6)",
+    "after": "def test_total_and_multiple_negative_numbers():\n    assert total_and_multiple([-1, -2, -3]) == (-6, -6)",
+    "change_modes": "FUNCTION_SHADOWED"
+  },
+  {
+    "test_id": "HumanEvalFixDisguised-5__buggy__qwen2-5-coder-7b-instruct__s0__code/t7",
+    "policy": "P3",
+    "gen_actual": "REVEALS",
+    "final_actual": "NEUTRAL",
+    "expected_final": "NEUTRAL",
+    "before": "def test_weave_separator_repeated_separator():\n    assert weave_separator([5, 5, 5], -1) == [5, -1, 5, -1, 5]",
+    "after": "def test_weave_separator_repeated_separator():\n    assert weave_separator([5, 5, 5], -1) == [5, -1, 5, -1, 5]",
+    "change_modes": "FUNCTION_SHADOWED"
+  }
+]

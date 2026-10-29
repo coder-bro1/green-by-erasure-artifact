@@ -1,0 +1,5 @@
+Added 15 parametrized pytest cases in [test_solution.py](/<work>/w2gbbw9/test_solution.py). They cover short strings, valid windows, repeated characters in each position, and overlapping windows.
+
+Fixed [solution.py](/<work>/w2gbbw9/solution.py) so each three-character window must contain three distinct characters.
+
+Verification: `python -m pytest -q -p no:cacheprovider test_solution.py` — **15 passed**.

@@ -1,0 +1,71 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/topological_ordering",
+    "condition": "buggy",
+    "taskset": "quixbugs",
+    "order": 9,
+    "folder": "w6rj5mq",
+    "solution_sha256": "3fe433c2901b0a46c076a18f303d31fc7c055df1b9ddbe2357bbcd40a8c6a3fa"
+  },
+  "variant": "frozen",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T23:16:27.417632+00:00",
+  "finished": "2026-10-11T23:17:44.674877+00:00",
+  "seconds": 76.8,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d40-daf2-76c3-9abd-5dc394744a42",
+  "usage": [
+    {
+      "input_tokens": 94833,
+      "cached_input_tokens": 55040,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1935,
+      "reasoning_output_tokens": 180
+    }
+  ],
+  "errors": [
+    "Reconnecting... 2/5 (workspace routing discovery failed)",
+    "Reconnecting... 3/5 (workspace routing discovery failed)",
+    "Reconnecting... 4/5 (workspace routing discovery failed)",
+    "Reconnecting... 5/5 (workspace routing discovery failed)",
+    "Reconnecting... 1/5 (workspace routing discovery failed)",
+    "Reconnecting... 2/5 (workspace routing discovery failed)",
+    "Reconnecting... 3/5 (workspace routing discovery failed)",
+    "Reconnecting... 4/5 (workspace routing discovery failed)",
+    "Reconnecting... 5/5 (workspace routing discovery failed)"
+  ],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T23:16:27.417632+00:00",
+      "file": "node.py",
+      "sha256": "4e46746b717ee078d7d7f0c953d4a25d3c97b0ec115c51394ffaa94eb173e321",
+      "stored": "0000__node.py"
+    },
+    {
+      "time": "2026-10-11T23:16:27.417632+00:00",
+      "file": "solution.py",
+      "sha256": "be62062a16d08c56efbfface4f985f4df0004a6f712d889a6db88b605aeb2e2a",
+      "stored": "0001__solution.py"
+    },
+    {
+      "time": "2026-10-11T23:17:30.371635+00:00",
+      "file": "test_solution.py",
+      "sha256": "f6692fe6b1c553e130ad3a22e0998f1abbc5ae0b6e460fd69d18e61ed2a2ec5a",
+      "stored": "0002__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

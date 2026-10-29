@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "green-by-erasure"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["pytest==8.4.2", "pyarrow==19.0.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

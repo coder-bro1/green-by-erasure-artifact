@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wfe4dnq/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **5 passed, 6 expected failures**.
+
+The expected failures document a bug: `prevnode` is never updated, breaking nonempty list reversal. All contract tests cannot pass normally without fixing that bug.

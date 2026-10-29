@@ -1,0 +1,5 @@
+def register_named_middleware(
+        self, middleware, route_names, attach_to="request"
+    ):
+
+The fix to this function is described as: Reverse named_response_middlware execution order, to match normal response middleware execution order. Fixes #1847 Adds a test to ensure fix is correct Adds an example which demonstrates correct blueprint-middlware execution order behavior.

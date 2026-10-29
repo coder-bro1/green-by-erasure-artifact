@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wuyn2hk/test_solution.py) and pytest configuration. `solution.py` remains unchanged.
+
+`python -m pytest -q`: **19 passed, 9 xfailed**.
+
+The strict xfails retain the documented expected values. Upper-partition recursion fails to adjust `k`, causing incorrect results or `IndexError` instead of matching `sorted(arr)[k]`.

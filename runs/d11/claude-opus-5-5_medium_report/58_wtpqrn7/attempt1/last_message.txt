@@ -1,0 +1,13 @@
+I wrote pytest tests for `rolling_max` in `<work>\work\test_solution.py`. All 14 pass when run with `python -m pytest -q test_solution.py`. I did not change `solution.py`.
+
+**Bugs:** none found. `rolling_max` does what its docstring says, so no test needed `@pytest.mark.xfail`.
+
+**What the tests cover:**
+- The example from the docstring.
+- An empty list, a single item, and lists that only go up, only go down, or are all the same.
+- Negative numbers, and lists mixing negative and positive.
+- A list starting with 0, to check that 0 isn't treated as "no maximum yet".
+- That the input list is not changed, and the result is a new list of the same length.
+- Three lists checked against a simple reference (the max of each prefix of the list).
+
+result: 14 pytest tests for `rolling_max` in `<work>\work\test_solution.py` all pass; no bugs found, so no tests needed xfail.

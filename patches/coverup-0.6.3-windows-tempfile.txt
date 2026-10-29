@@ -1,0 +1,18 @@
+CoverUp 0.6.3, coverup/testrunner.py, measure_test_coverage: Windows portability fix for the S5 audit.
+
+On Windows a NamedTemporaryFile opened with delete=True cannot be opened by another process, so pytest
+reported "Permission denied" for every candidate test and CoverUp counted each attempt as failed.
+The file is now created with delete_on_close=False and closed before pytest runs; it is still deleted
+when the with block ends. No other change; CoverUp's prompting, repair and acceptance logic is untouched.
+
+Before:
+    with tempfile.NamedTemporaryFile(prefix="tmp_test_", suffix='.py', dir=str(tests_dir), mode="w") as t:
+        t.write(test)
+        t.flush()
+
+After:
+    with tempfile.NamedTemporaryFile(prefix="tmp_test_", suffix='.py', dir=str(tests_dir), mode="w",
+                                     delete_on_close=False) as t:  # Windows: pytest cannot open a file held open
+        t.write(test)
+        t.flush()
+        t.close()  # deleted when the with block ends (delete=True, delete_on_close=False)

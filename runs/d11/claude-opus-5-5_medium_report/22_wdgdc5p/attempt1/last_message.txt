@@ -1,0 +1,14 @@
+I wrote the tests in <work>\work\test_solution.py, and all 23 pass (`python -m pytest -q test_solution.py`). solution.py is unchanged.
+
+**What the tests cover:**
+- **Docstring examples:** the three examples in the docstring.
+- **Signed-digit rule:** -1, -10, -11 (sums to 0, so it is not counted), -12, -123, -91, -19 and -987654321.
+- **Positives:** 10, 100 and 987654321.
+- **Zero:** 0 and -0 are not counted, because the rule is a digit sum > 0.
+- **Mixed lists:** several lists of positive, negative and zero values.
+- **Very large negatives:** around -10**21.
+- **Other behaviour:** the input list is not changed, and a tuple works as input.
+
+**Docstring mismatches:** none. count_nums does what its docstring says in every case tested, so no test is marked xfail.
+
+result: 23 pytest tests for count_nums in <work>\work\test_solution.py all pass, and none needed xfail because solution.py matches its docstring.

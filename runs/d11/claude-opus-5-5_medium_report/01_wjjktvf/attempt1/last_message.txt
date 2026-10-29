@@ -1,0 +1,15 @@
+I wrote the tests in <work>\work\test_solution.py, and all 15 pass when run with `python -m pytest -q test_solution.py`. I didn't change solution.py, and no test needed an xfail marker.
+
+The tests cover:
+- **Docstring examples:** all three.
+- **Every pair of planets:** the result is the same whichever planet comes first, and is sorted by distance from the Sun.
+- **Full range in both directions:** Mercury to Neptune and Neptune to Mercury.
+- **Empty results:** neighbouring planets and the same planet passed twice both give an empty tuple.
+- **Invalid names give an empty tuple:** Pluto, Sun, Makemake, an empty string, lowercase "earth", and "Earth" with a trailing space.
+- **Return type:** always a tuple.
+
+The code does what its docstring says. One thing in the docstring is slightly off: the example `bf("Earth", "Mercury") ==> ("Venus")` is written so that, in Python, it means the plain string "Venus" rather than a tuple. The code returns the one-item tuple `("Venus",)`, which is clearly what the docstring means since it promises a tuple. My test expects `("Venus",)`.
+
+Two of my tests check behaviour the docstring doesn't actually spell out:
+- Planet names must match capitalisation exactly ("earth" counts as invalid).
+- Passing the same planet twice gives an empty tuple.

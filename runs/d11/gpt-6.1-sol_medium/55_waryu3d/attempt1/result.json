@@ -1,0 +1,58 @@
+{
+  "task": {
+    "pair_id": "Python/151",
+    "condition": "fixed",
+    "order": 55,
+    "folder": "waryu3d",
+    "solution_sha256": "295296b91d8fc2529963eb9d7b3491478f42a2a32e5599407169eea83c5c4550"
+  },
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T10:08:25.167020+00:00",
+  "finished": "2026-10-11T10:09:27.623447+00:00",
+  "seconds": 62.1,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12a6f-6291-7e91-8f97-f2831cd96ae4",
+  "usage": [
+    {
+      "input_tokens": 95294,
+      "cached_input_tokens": 65920,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1740,
+      "reasoning_output_tokens": 257
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T10:08:25.168021+00:00",
+      "file": "solution.py",
+      "sha256": "4d4130a885ed0aa0487df8439c338313d05bcee8059f4fbd96f509264365f21c",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T10:09:09.280387+00:00",
+      "file": "test_solution.py",
+      "sha256": "256718905611d5cab4f34f91ab6379cb12a9d05eec27769a64fdf448027446a0",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T10:09:22.994499+00:00",
+      "file": "pytest.ini",
+      "sha256": "e08279e0036f9813d0874146fda3511dd10119fd454e25e3e5690bf93d95c5cc",
+      "stored": "0002__pytest.ini"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

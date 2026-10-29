@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wdzapbp/test_solution.py) without modifying `solution.py`.
+
+`python -m pytest -q`: **9 passed, 15 xfailed**.
+
+Strict xfails preserve the docstring’s expected values. The implementation incorrectly multiplies by `a * b` and extracts negative unit digits incorrectly.
+
+Added pytest configuration to avoid cache permission errors.

@@ -1,0 +1,144 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 50,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 447,
+  "violations": [
+   {
+    "call_id": "d87fdc7fd1c686c79f359586792ec0f4bbf3ad6c1a1c89a5185aff85e8486c62",
+    "purpose": "free_repair",
+    "lines": [
+     "for i in range(2, a + 1):",
+     "for i in range(2, a + 1):"
+    ]
+   }
+  ],
+  "n_violations": 1
+ },
+ "P1-m_judge_sees_body": {
+  "n": 7,
+  "examples": [
+   {
+    "call_id": "57b2c1992f28e5ef904323028e4cad66b5f11c98d06afd9ab9020e472cecae4c",
+    "line": "def count_depth(s: str) -> int:"
+   },
+   {
+    "call_id": "77c08c5863493c9adfcd9c2703522cb94c6d7d983010814b77581b3d5e7d1640",
+    "line": "dxs = [xs[i] * i for i in range(1, len(xs))]"
+   },
+   {
+    "call_id": "f487ea8219f0b5e9211a5bee9865ed0a443d71d007e2624450b5eb92125fce35",
+    "line": "dxs = [xs[i] * i for i in range(1, len(xs))]"
+   },
+   {
+    "call_id": "06c7fe387587c58ff267fb3a6406ace69a707336c06f1a2582fe0ff3ef2b929c",
+    "line": "for i in range(n - 2, -1, -1):"
+   },
+   {
+    "call_id": "01a881f626206f95969e0e31484dc4d3165e8712ab223d0b518d6395027a3403",
+    "line": "for i in range(n - 2, -1, -1):"
+   }
+  ]
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 27,
+   "UNSURE": 8,
+   "TEST_WRONG": 38
+  },
+  "recovered_judge": {
+   "BUG": 27,
+   "UNSURE": 8,
+   "TEST_WRONG": 38
+  },
+  "recovered_with_code": {
+   "BUG": 30,
+   "UNSURE": 4,
+   "TEST_WRONG": 39
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 9,
+   "buggy|BUG|REVEALS": 7,
+   "buggy|TEST_WRONG|BROKEN": 18,
+   "buggy|TEST_WRONG|REVEALS": 2,
+   "buggy|UNSURE|BROKEN": 3,
+   "buggy|UNSURE|REVEALS": 2,
+   "fixed|BUG|BROKEN": 11,
+   "fixed|TEST_WRONG|BROKEN": 16,
+   "fixed|TEST_WRONG|ENCODES": 2,
+   "fixed|UNSURE|BROKEN": 3
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 231,
+    "KEPT": 210,
+    "QUARANTINED": 21,
+    "QUARANTINED_BROKEN": 12,
+    "QUARANTINED_REVEALS": 9
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 245,
+    "KEPT": 224,
+    "QUARANTINED": 21,
+    "QUARANTINED_BROKEN": 12,
+    "QUARANTINED_REVEALS": 9
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 251,
+    "KEPT": 210,
+    "QUARANTINED": 41,
+    "QUARANTINED_BROKEN": 30,
+    "QUARANTINED_REVEALS": 11
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 226,
+    "KEPT": 210,
+    "QUARANTINED": 16,
+    "QUARANTINED_BROKEN": 9,
+    "QUARANTINED_REVEALS": 7
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 232,
+    "KEPT": 218,
+    "QUARANTINED": 14,
+    "QUARANTINED_BROKEN": 14
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 249,
+    "KEPT": 235,
+    "QUARANTINED": 14,
+    "QUARANTINED_BROKEN": 14
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 250,
+    "KEPT": 218,
+    "QUARANTINED": 32,
+    "QUARANTINED_BROKEN": 30,
+    "QUARANTINED_ENCODES": 2
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 229,
+    "KEPT": 218,
+    "QUARANTINED": 11,
+    "QUARANTINED_BROKEN": 11
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 10,
+  "written": 7
+ }
+}

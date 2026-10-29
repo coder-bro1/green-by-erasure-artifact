@@ -1,0 +1,3 @@
+Added pytest coverage in [tests/test_solution.py](<work>/w64xctf/tests/test_solution.py). All 9 tests pass with `pytest -q tests/test_solution.py -p no:cacheprovider`. `solution.py` is unchanged.
+
+The tests cover ascending and decreasing lists and confirm the input is not modified. The docstring’s triple-duplicate case remains untested: the current implementation returns `True` for it, though the docstring says it should return `False`.

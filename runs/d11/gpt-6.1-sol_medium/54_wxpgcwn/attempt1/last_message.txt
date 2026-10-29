@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wxpgcwn/test_solution.py) with 14 tests covering examples, edge cases, numeric coefficients, repeated derivatives, and input preservation.
+
+Verified: **14 passed** using:
+```sh
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+Caching was disabled because the environment denied cache-directory access. `solution.py` needed no changes.

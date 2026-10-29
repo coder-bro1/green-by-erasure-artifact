@@ -1,0 +1,18 @@
+diff --git a/solution.py b/solution.py
+index 3783ed9..d7ce6b1 100644
+--- a/solution.py
++++ b/solution.py
+@@ -19,9 +19,11 @@ def file_name_check(file_name):
+         return 'No'
+     if len(lst[0]) == 0:
+         return 'No'
+-    if not lst[0][0].isalpha():
++    if not ('a' <= lst[0][0] <= 'z' or 'A' <= lst[0][0] <= 'Z'):
+         return 'No'
+-    t = len([x for x in lst[0] if x.isdigit()])
++    if lst[1] not in suf:
++        return 'No'
++    t = len([x for x in file_name if '0' <= x <= '9'])
+     if t > 3:
+         return 'No'
+     return 'Yes'

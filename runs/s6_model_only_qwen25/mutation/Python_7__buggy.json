@@ -1,0 +1,88 @@
+{
+  "pair_id": "Python/7",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_f30939256d15b257.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_17e654a762c3efbe.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_bef7fccc1ae38373.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_9527e8d17bb1f8c9.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_19cb03da5c2ff771.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_ee7e057b394b487a.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_711374355abfe3a3.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_366b6bce7bfb1263.py": [
+      [
+        "s6_model_only_qwen25",
+        "HumanEvalFix-7__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_19cb03da5c2ff771.py",
+    "tests/test_366b6bce7bfb1263.py",
+    "tests/test_9527e8d17bb1f8c9.py",
+    "tests/test_bef7fccc1ae38373.py",
+    "tests/test_ee7e057b394b487a.py"
+  ],
+  "baseline": {
+    "tests/test_19cb03da5c2ff771.py": "PASS",
+    "tests/test_366b6bce7bfb1263.py": "PASS",
+    "tests/test_9527e8d17bb1f8c9.py": "PASS",
+    "tests/test_bef7fccc1ae38373.py": "PASS",
+    "tests/test_ee7e057b394b487a.py": "PASS"
+  },
+  "mutants": [],
+  "seconds": 1.2,
+  "finished": "2026-10-28T21:41:24.482044+00:00"
+}

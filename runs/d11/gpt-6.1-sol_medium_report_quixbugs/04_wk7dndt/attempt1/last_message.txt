@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wk7dndt/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **14 passed, 8 xfailed**.
+
+Strict xfails preserve the documented expected value, `-1`:
+- Empty lists and targets above the maximum raise `IndexError`.
+- Targets below the minimum or between elements loop forever; tests enforce a timeout.

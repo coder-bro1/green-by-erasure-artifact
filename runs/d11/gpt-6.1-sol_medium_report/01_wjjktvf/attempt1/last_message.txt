@@ -1,0 +1,9 @@
+Added [test_solution.py](/<work>/wjjktvf/test_solution.py), covering examples, all 64 valid planet pairs, and invalid names.
+
+**140 tests passed.** No docstring mismatches or `xfail` markers were needed. `solution.py` is unchanged.
+
+Run without the environment’s cache permission issue:
+
+```powershell
+python -B -m pytest test_solution.py -q -p no:cacheprovider
+```

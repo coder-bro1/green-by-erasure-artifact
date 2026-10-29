@@ -1,0 +1,22 @@
+I wrote `<work>\work\test_solution.py` and the run passes with 12 passed and 3 xfailed. While testing I found that `solution.py` gives wrong answers for any path longer than one edge. I left it unchanged as asked.
+
+**The bug:** `solution.py` is a Dijkstra `shortest_path_length`. When it updates a neighbour's distance it uses `get(unvisited_nodes, nextnode) + length_by_edge[node, nextnode]`, where it should use `distance + length_by_edge[node, nextnode]`. `get` returns 0 for a node not yet in the queue, so a node's distance ends up being just the length of its last edge.
+- A chain a→b→c with lengths 3 and 4 returns 4 instead of 7.
+- A triangle where a→b→c costs 2 and a→c costs 10 returns 10 instead of 2.
+
+**How the tests handle it:** all expected values are the correct shortest-path lengths described in the docstring.
+- **12 passing tests** cover what the code gets right:
+  - start equals goal returns 0
+  - a single edge, including a float length
+  - choosing between direct edges
+  - an unreachable goal returns `inf`
+  - edges only go one way
+  - a cycle doesn't cause an endless loop
+  - the helper functions `get` and `insert_or_update`
+- **3 tests are expected failures** (`xfail(strict=True)`): a two-edge chain, an indirect route shorter than a direct edge, and a 6-node graph. I re-ran them with the expected-failure markers switched off, and each fails on the wrong distance (`4 == 7`, `10 == 2`, `7 == 10`), not on some other error. Because they are strict, once `solution.py` is fixed they will start failing the suite as unexpected passes. Remove the markers at that point.
+
+**Two other notes:**
+- The tests avoid tied distances in the queue. On a tie Python compares the `Node` objects themselves, and `Node` doesn't support that comparison, so the code would raise an error.
+- `node.py` uses shared default lists, so the tests always pass `successors=[]` explicitly.
+
+Run it with `python -m pytest -v <work>\work\test_solution.py`.

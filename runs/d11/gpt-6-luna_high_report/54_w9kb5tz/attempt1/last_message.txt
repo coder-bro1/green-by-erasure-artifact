@@ -1,0 +1,3 @@
+Added [test_solution.py](/<work>/w9kb5tz/test_solution.py) with coverage for the documented example, a composite number, and a prime. All three are strict xfails with their expected values preserved.
+
+`python -m pytest -q` completed successfully: **3 xfailed**. `solution.py` never returns a value because its loop excludes `n`, while its condition requires `i == n`. Pytest also warned that it could not create its cache directory due to permissions.

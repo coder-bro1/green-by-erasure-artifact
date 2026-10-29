@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wytqypt/test_solution.py). `solution.py` is unchanged.
+
+Verified with `python -m pytest test_solution.py -q -p no:cacheprovider`: **13 passed, 11 xfailed**.
+
+Strict xfails preserve the correct expectations. The recurrence advances only the first string, missing mixed-character substrings and overcounting repeated characters. Both docstring examples fail: they return `1` instead of `2` and `4`.

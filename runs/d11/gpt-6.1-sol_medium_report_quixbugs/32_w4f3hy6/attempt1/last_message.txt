@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/w4f3hy6/test_solution.py), leaving `solution.py` unchanged.
+
+Verification: **2 passed, 6 xfailed** using `python -m pytest test_solution.py -q -p no:cacheprovider`.
+
+Strict xfails preserve the correct expected values:
+- `pascal(2)` omits the second row’s final `1`.
+- `pascal(n)` for `n >= 3` raises `IndexError`, including the docstring example.

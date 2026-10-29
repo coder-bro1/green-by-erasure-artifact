@@ -1,0 +1,16 @@
+I wrote the tests in <work>\work\test_solution.py and left solution.py unchanged. The suite runs cleanly: 3 pass and 9 are strict xfails, because `fruit_distribution` gives the wrong answer for every input I tried.
+
+**The bug:** solution.py ends with
+```python
+return n - sum(lis) - 1
+```
+The docstring says the result should be `n - apples - oranges`. The extra `- 1` makes every answer one too low. For example, `fruit_distribution("5 apples and 6 oranges", 19)` returns 7 instead of the documented 8. All four docstring examples fail this way.
+
+**The tests:**
+- **Docstring examples (4 tests):** each one checks a docstring example against its documented answer. All are marked `@pytest.mark.xfail(strict=True)` with the reason above, and the expected values are the docstring's.
+- **Extra cases (5 tests):** zero apples, zero oranges, zero mangoes, swapped counts and larger numbers. These are strict xfails for the same reason.
+- **Passing tests (3):** these only check things the extra `- 1` doesn't affect. The result is an `int`, one more apple lowers the result by exactly 1, and one more fruit in the total raises it by exactly 1.
+
+Because the xfails are strict, the suite will report an unexpected pass once the `- 1` is removed, which is the signal to drop those markers.
+
+result: Wrote <work>\work\test_solution.py (3 passed, 9 strict xfail). Every answer from solution.py is one too low because of an extra `- 1` the docstring doesn't call for.

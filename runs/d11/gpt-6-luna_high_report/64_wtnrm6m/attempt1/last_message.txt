@@ -1,0 +1,3 @@
+Added pytest coverage in [tests/test_solution.py](/<work>/wtnrm6m/tests/test_solution.py). `solution.py` is unchanged.
+
+`pytest tests -q -p no:cacheprovider` reports **14 passed, 2 xfailed**. The strict xfails preserve the docstring’s expected values: the implementation accepts a Greek initial letter, and counts Unicode superscript digits toward the limit, though the rules specify ASCII Latin letters and `0-9`.

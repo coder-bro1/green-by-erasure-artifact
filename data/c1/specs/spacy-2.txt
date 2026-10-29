@@ -1,0 +1,5 @@
+def load_model_from_path(model_path, meta=False, **overrides):
+Load a model from a data directory path. Creates Language class with
+pipeline from meta.json and then calls from_disk() with path.
+
+The fix to this function is described as: Fix passing of component configuration (#5374)

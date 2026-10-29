@@ -1,0 +1,9 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes: 119 passed and 14 are expected failures (xfail). I did not change solution.py.
+
+**There is a bug in solution.py.** `to_base` puts the least significant digit first and never reverses the string, so every result comes out backwards. The docstring example `to_base(31, 16)` should give `'1F'` but returns `'F1'`. Output is only correct when the answer is one digit or reads the same both ways (e.g. `'101'`, `'FF'`). The fix would be `result = alphabet[i] + result` on the last line of the loop.
+
+Because I couldn't fix the code, I took this approach to "make sure they pass":
+- **Tests that pass:** these cover behaviour the bug doesn't touch. They check single-digit and same-both-ways cases, that the result is a string, uppercase letters, that only digits valid for the base appear, and that the output has the right length for every base from 2 to 36.
+- **Strict xfail tests:** these assert the correct behaviour that the bug breaks: the docstring example, multi-digit cases such as `(10, 10) -> '10'` and `(1000, 16) -> '3E8'`, and converting back with `int(to_base(n, b), b) == n`. Each is marked `strict=True` with the bug as the reason. Once `solution.py` is fixed, pytest will report these as unexpectedly passing, which tells you to remove the markers.
+
+result: The pytest suite for solution.py passes (119 passed, 14 xfailed). solution.py has a bug that returns digits backwards (e.g. 31 in base 16 gives 'F1', not '1F'), and the xfailed tests record it.

@@ -1,0 +1,10 @@
+Added [test_solution.py](/<work>/wrq6v92/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **33 passed, 39 xfailed**.
+
+Strict xfails preserve the documented expectations for two bugs:
+
+- Moves target the helper peg instead of the destination, producing incorrect or illegal sequences.
+- When `start == end`, the function returns moves instead of `[]`.
+
+Added pytest configuration to avoid inaccessible cache directories.

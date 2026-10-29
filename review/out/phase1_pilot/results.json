@@ -1,0 +1,314 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": [
+   {
+    "test_id": "HumanEvalFix-37__fixed__qwen2-5-coder-7b-instruct__s0__spec/t9",
+    "stage": "P1",
+    "harness": "NEUTRAL",
+    "reviewer": "ENCODES",
+    "fixed": "TIMEOUT",
+    "buggy": "PASS"
+   }
+  ]
+ },
+ "P1-c_same_input": {
+  "units": 80,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 1624,
+  "violations": [
+   {
+    "call_id": "cedbf939e5406a59808ba2fcc88da991a7f60381488dcc4094df62821f3dda30",
+    "purpose": "free_repair",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "0153987a400f92736ef0add866956b43d2551f470190418e2dc66b87ea917e2a",
+    "purpose": "free_repair",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "6b1c440227fd22d1315d45540f8a01c17e06271b0a4a4af18c9edfb9ae5a1714",
+    "purpose": "free_repair",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "355dc8200b6677a35566b9db8aa5ba46c4e8bd723d203c584bfed2c93ef17d95",
+    "purpose": "judge",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "58ce6b497afb6641605eb4c492cc85ccb5411ffe7a363d611b13e24d9bb6f719",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "0988ad06a49708621ff56874b0e66916281d53e4b700fb081adb48fd02e3dea8",
+    "purpose": "free_repair",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "117ab9cf0463e82b3467ff6b162a178a4db93dcfd002c220e757ebb731ae2fc9",
+    "purpose": "judge",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "50a9e3a30bdac26ef080921932b4280e1768b0c730948cffacc2abf8ab272953",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert string_xor('010', '110') == '100'"
+    ]
+   },
+   {
+    "call_id": "1d2bb1eb9ed190a176bb069dbe3436ca2a705382877ae5812c6fab9e64699773",
+    "purpose": "free_repair",
+    "lines": [
+     "assert filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a') == ['abc', 'array']"
+    ]
+   },
+   {
+    "call_id": "6b5312864af084fe7ec25624d0d7cdff8a6129a335633cb0eac237c38cfb543c",
+    "purpose": "free_repair",
+    "lines": [
+     "assert filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a') == ['abc', 'array']"
+    ]
+   },
+   {
+    "call_id": "2ddc96576995dcb34c595acd314b3bc3e5f412c9974a7d60715a466a1eee361a",
+    "purpose": "free_repair",
+    "lines": [
+     "assert filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a') == ['abc', 'array']"
+    ]
+   },
+   {
+    "call_id": "df211293f57a4254c1ce9cf9318e699034c6ecb7cc76d155107b5edcb3e77161",
+    "purpose": "free_repair",
+    "lines": [
+     "return [x for x in strings if x.startswith(prefix)]"
+    ]
+   },
+   {
+    "call_id": "c8a9cf1e6b9e502bd0cee170ed56fc2f5dac49c89cb92997ea8f76669fd39035",
+    "purpose": "free_repair",
+    "lines": [
+     "return [x for x in strings if x.startswith(prefix)]"
+    ]
+   },
+   {
+    "call_id": "0f8ca9591d0af75707e5fadbbb0743a63682055ad6ed48724c1799cbd96381ef",
+    "purpose": "judge",
+    "lines": [
+     "assert filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a') == ['abc', 'array']"
+    ]
+   },
+   {
+    "call_id": "dae437aee8c474353c415580f814e3def12ba0ea86985b852950c4ad1307904a",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a') == ['abc', 'array']"
+    ]
+   },
+   {
+    "call_id": "530a650f2dc3a1b4c2d76990f094cb9869acc2db84343e7d98da0e7cfd4afd24",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(13195) == 29",
+     "assert largest_prime_factor(13195) == 29"
+    ]
+   },
+   {
+    "call_id": "1bc2a909d2a0b74a4385d8745a1c7e41e24195ba4a34b19c7399cadf7cc8f911",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(13195) == 29",
+     "assert largest_prime_factor(13195) == 29"
+    ]
+   },
+   {
+    "call_id": "33aa41a9f4a593d0817bcee13015c493862446f98fd2c7d208c62336333b96e0",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(13195) == 29",
+     "assert largest_prime_factor(13195) == 29"
+    ]
+   },
+   {
+    "call_id": "950ac32b7e4a9ed2e3c27f56fd25920127c60434215b60fbedaaa79e0689069c",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(2048) == 2"
+    ]
+   },
+   {
+    "call_id": "7cea5529d8350643f01ad18f0354c7a1c8db9b137d0f51153c1bb64b7f0aed33",
+    "purpose": "free_repair",
+    "lines": [
+     "assert largest_prime_factor(2048) == 2"
+    ]
+   }
+  ],
+  "n_violations": 119
+ },
+ "P1-m_judge_sees_body": {
+  "n": 0,
+  "examples": []
+ },
+ "verdicts": {
+  "stored": {
+   "UNSURE": 324
+  },
+  "recovered_judge": {
+   "BUG": 324
+  },
+  "recovered_with_code": {
+   "BUG": 324
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 71,
+   "buggy|BUG|REVEALS": 177,
+   "fixed|BUG|BROKEN": 71,
+   "fixed|BUG|ENCODES": 5
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 200,
+    "QUARANTINED": 127,
+    "QUARANTINED_REVEALS": 93,
+    "QUARANTINED_BROKEN": 34,
+    "KEPT": 73
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 200,
+    "QUARANTINED": 127,
+    "QUARANTINED_REVEALS": 93,
+    "QUARANTINED_BROKEN": 34,
+    "KEPT": 73
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 200,
+    "QUARANTINED": 127,
+    "QUARANTINED_REVEALS": 93,
+    "QUARANTINED_BROKEN": 34,
+    "KEPT": 73
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 200,
+    "QUARANTINED": 127,
+    "QUARANTINED_REVEALS": 93,
+    "QUARANTINED_BROKEN": 34,
+    "KEPT": 73
+   },
+   "buggy|spec|P4_DEFAULT": {
+    "final_size": 183,
+    "QUARANTINED": 121,
+    "QUARANTINED_REVEALS": 84,
+    "QUARANTINED_BROKEN": 37,
+    "KEPT": 62
+   },
+   "buggy|spec|P4_HYBRID": {
+    "final_size": 183,
+    "QUARANTINED": 121,
+    "QUARANTINED_REVEALS": 84,
+    "QUARANTINED_BROKEN": 37,
+    "KEPT": 62
+   },
+   "buggy|spec|P4_KEEP_ALL": {
+    "final_size": 183,
+    "QUARANTINED": 121,
+    "QUARANTINED_REVEALS": 84,
+    "QUARANTINED_BROKEN": 37,
+    "KEPT": 62
+   },
+   "buggy|spec|P4_STRICT": {
+    "final_size": 183,
+    "QUARANTINED": 121,
+    "QUARANTINED_REVEALS": 84,
+    "QUARANTINED_BROKEN": 37,
+    "KEPT": 62
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 200,
+    "KEPT": 164,
+    "QUARANTINED": 36,
+    "QUARANTINED_BROKEN": 34,
+    "QUARANTINED_ENCODES": 2
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 200,
+    "KEPT": 164,
+    "QUARANTINED": 36,
+    "QUARANTINED_BROKEN": 34,
+    "QUARANTINED_ENCODES": 2
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 200,
+    "KEPT": 164,
+    "QUARANTINED": 36,
+    "QUARANTINED_BROKEN": 34,
+    "QUARANTINED_ENCODES": 2
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 200,
+    "KEPT": 164,
+    "QUARANTINED": 36,
+    "QUARANTINED_BROKEN": 34,
+    "QUARANTINED_ENCODES": 2
+   },
+   "fixed|spec|P4_DEFAULT": {
+    "final_size": 183,
+    "KEPT": 143,
+    "QUARANTINED": 40,
+    "QUARANTINED_BROKEN": 37,
+    "QUARANTINED_ENCODES": 3
+   },
+   "fixed|spec|P4_HYBRID": {
+    "final_size": 183,
+    "KEPT": 143,
+    "QUARANTINED": 40,
+    "QUARANTINED_BROKEN": 37,
+    "QUARANTINED_ENCODES": 3
+   },
+   "fixed|spec|P4_KEEP_ALL": {
+    "final_size": 183,
+    "KEPT": 143,
+    "QUARANTINED": 40,
+    "QUARANTINED_BROKEN": 37,
+    "QUARANTINED_ENCODES": 3
+   },
+   "fixed|spec|P4_STRICT": {
+    "final_size": 183,
+    "KEPT": 143,
+    "QUARANTINED": 40,
+    "QUARANTINED_BROKEN": 37,
+    "QUARANTINED_ENCODES": 3
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 191,
+  "written": 10
+ }
+}

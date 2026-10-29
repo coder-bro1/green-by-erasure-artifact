@@ -1,0 +1,5 @@
+Added pytest coverage for boundary cases and the largest supported input. The tests exposed that `even_odd_palindrome` excluded `n`, so I updated it to count the range inclusively.
+
+`pytest -q -p no:cacheprovider test_solution.py` passes: **11 passed**.
+
+Files: [test_solution.py](<work>/wwpgu36/test_solution.py), [solution.py](<work>/wwpgu36/solution.py)

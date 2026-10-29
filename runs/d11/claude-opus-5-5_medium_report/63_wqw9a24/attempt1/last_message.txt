@@ -1,0 +1,16 @@
+I wrote 20 pytest tests for `will_it_fly` in solution.py and all of them pass when run with `python -m pytest -q test_solution.py`. None needed `xfail`, because the function matches its docstring in every case I tested. I did not modify solution.py.
+
+The tests cover:
+- **Docstring examples:** all four are checked.
+- **Weight limit:** a sum exactly equal to the limit flies, and one over it does not.
+- **Palindrome check:** odd and even lengths, including a mismatch only in the middle pair of an even-length list.
+- **Both conditions failing:** unbalanced and too heavy at once, and unbalanced but light.
+- **Edge cases:** single elements, an empty list (always balanced, weight 0), negative weight limits, negative elements, all-zero lists, a float weight limit, and a check that the input list is not changed.
+
+Two of these behaviours aren't stated in the docstring, so the tests assume them:
+- An empty list flies whenever the limit is 0 or more.
+- Negative elements are simply added into the sum.
+
+result: Added 20 pytest tests for will_it_fly in <work>\work\test_solution.py; all pass, no docstring mismatches, so no xfail needed.
+
+File: <work>\work\test_solution.py

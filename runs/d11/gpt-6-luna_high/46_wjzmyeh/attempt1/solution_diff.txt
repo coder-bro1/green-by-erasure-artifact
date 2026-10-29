@@ -1,0 +1,16 @@
+diff --git a/solution.py b/solution.py
+index b2072fd..87d5df8 100644
+--- a/solution.py
++++ b/solution.py
+@@ -16,9 +16,9 @@ def is_prime(n):
+     >>> is_prime(1)
+     False
+     """
+-    if n < 1:
++    if n < 2:
+         return False
+-    for k in range(1, n - 1):
++    for k in range(2, int(n ** 0.5) + 1):
+         if n % k == 0:
+             return False
+     return True

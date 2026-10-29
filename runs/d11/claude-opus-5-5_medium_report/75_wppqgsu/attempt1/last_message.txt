@@ -1,0 +1,16 @@
+I wrote 7 tests for `longest()` in <work>\work\test_solution.py. Only one passes; the other six are marked `@pytest.mark.xfail(strict=True)` because `solution.py` returns None for every non-empty list. The suite runs clean (1 passed, 6 xfailed, Python 3.12, pytest 9.1.1), and I did not modify `solution.py`.
+
+**The bug (<work>\work\solution.py):** the docstring says the function returns the longest string, and the first one if several tie. The loop instead does:
+```python
+maxlen = max(len(x) for x in strings)
+for s in strings:
+    if len(s) > maxlen:
+        return s
+```
+`maxlen` is already the largest length in the list, so `len(s) > maxlen` can never be true. The loop never returns anything and the function falls through to an implicit `return None`. Even the docstring's own examples fail: `longest(['a','b','c'])` should give `'a'` and `longest(['a','bb','ccc'])` should give `'ccc'`. Changing the condition to `len(s) == maxlen` would fix it and keep the "first one wins" tie rule.
+
+**What the tests cover:**
+- **Passes:** an empty list returns None.
+- **Xfail (expected values come from the docstring):** strings of equal length, lengths that increase, a single element, the longest string in the middle, a tie for longest (the first should be returned), and a single empty string.
+
+result: Wrote pytest tests for `solution.longest` (1 passed, 6 strict-xfail); the function returns None for every non-empty list because it checks `len(s) > maxlen` where it should check `==`.

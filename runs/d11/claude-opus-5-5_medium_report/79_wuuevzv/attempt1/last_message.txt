@@ -1,0 +1,19 @@
+I wrote 14 pytest tests for `count_nums`. The suite passes: 6 tests pass and 8 are marked xfail (strict), because `solution.py` does not do what its docstring says. I did not change `solution.py`.
+
+**The bug:** in `digits_sum`, the line `n[0] = n[0] * neg * -1` flips the sign the wrong way. The extra `* -1` should not be there; the line should be `n[0] = n[0] * neg`.
+- For a positive number, the first digit becomes negative. `count_nums([10])` returns 0 instead of 1 (it computes -1 + 0 instead of 1 + 0).
+- For a negative number, the first digit becomes positive. `count_nums([-10])` returns 1 instead of 0 (it computes 1 + 0 instead of -1 + 0).
+
+As a result, two of the three examples in the docstring fail:
+- `count_nums([-1, 11, -11])` returns 2; the docstring says 1.
+- `count_nums([1, 1, 2])` returns 0; the docstring says 3.
+
+**Xfail tests** (expected values follow the docstring; each is marked `@pytest.mark.xfail(strict=True, reason=...)`): both docstring examples above, `[5]`, `[-5]`, `[10]`, `[-10]`, `[-91]` and `[12, 23, 34, -45, -55, -56]` (should be 5; the code returns 6).
+
+**Passing tests:** the empty list, zeros, `[19]`, `[-19]`, a check that the input list is not changed, and `[-1, 1]`. The last one only gets the right total by luck: the code counts -1 instead of 1. A comment in the test says so.
+
+Command run: `python -m pytest -q test_solution.py`
+
+File: <work>\work\test_solution.py
+
+result: Added 14 pytest tests for solution.py (6 pass, 8 strict xfail); `digits_sum` flips the leading digit's sign, so two of the three docstring examples fail.

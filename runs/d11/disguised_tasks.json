@@ -1,0 +1,613 @@
+{
+ "Python/5": {
+  "pair_id": "Python/5",
+  "entry_point": "weave_separator",
+  "original_entry_point": "intersperse",
+  "names": {
+   "intersperse": "weave_separator",
+   "numbers": "values",
+   "delimeter": "sep",
+   "result": "out",
+   "n": "item"
+  },
+  "programs": {
+   "fixed": "from typing import List\n\ndef weave_separator(values: List[int], sep: int) -> List[int]:\n    \"\"\"Return a new list in which sep is placed between every pair of neighbouring items of values.\n\n    >>> weave_separator([7, 8], 0)\n    [7, 0, 8]\n    >>> weave_separator([5, 5, 5], -1)\n    [5, -1, 5, -1, 5]\n    >>> weave_separator([], 2)\n    []\n    \"\"\"\n    if not values:\n        return []\n    out = []\n    for item in values[:-1]:\n        out.append(item)\n        out.append(sep)\n    out.append(values[-1])\n    return out\n",
+   "buggy": "from typing import List\n\ndef weave_separator(values: List[int], sep: int) -> List[int]:\n    \"\"\"Return a new list in which sep is placed between every pair of neighbouring items of values.\n\n    >>> weave_separator([7, 8], 0)\n    [7, 0, 8]\n    >>> weave_separator([5, 5, 5], -1)\n    [5, -1, 5, -1, 5]\n    >>> weave_separator([], 2)\n    []\n    \"\"\"\n    if not values:\n        return []\n    out = []\n    for item in values[:-1]:\n        out.append(item)\n        out.append(sep)\n    return out\n"
+  }
+ },
+ "Python/8": {
+  "pair_id": "Python/8",
+  "entry_point": "total_and_multiple",
+  "original_entry_point": "sum_product",
+  "names": {
+   "sum_product": "total_and_multiple",
+   "numbers": "values",
+   "sum_value": "acc_sum",
+   "prod_value": "acc_prod",
+   "n": "v"
+  },
+  "programs": {
+   "fixed": "from typing import List, Tuple\n\ndef total_and_multiple(values: List[int]) -> Tuple[int, int]:\n    \"\"\"Return a pair (s, p): s is the sum of all integers in values and p is their product. For an empty list, s is 0 and p is 1.\n\n    >>> total_and_multiple([2, 5])\n    (7, 10)\n    >>> total_and_multiple([-3, 4, 1])\n    (2, -12)\n    \"\"\"\n    acc_sum = 0\n    acc_prod = 1\n    for v in values:\n        acc_sum += v\n        acc_prod *= v\n    return (acc_sum, acc_prod)\n",
+   "buggy": "from typing import List, Tuple\n\ndef total_and_multiple(values: List[int]) -> Tuple[int, int]:\n    \"\"\"Return a pair (s, p): s is the sum of all integers in values and p is their product. For an empty list, s is 0 and p is 1.\n\n    >>> total_and_multiple([2, 5])\n    (7, 10)\n    >>> total_and_multiple([-3, 4, 1])\n    (2, -12)\n    \"\"\"\n    acc_sum = 0\n    acc_prod = 0\n    for v in values:\n        acc_sum += v\n        acc_prod *= v\n    return (acc_sum, acc_prod)\n"
+  }
+ },
+ "Python/9": {
+  "pair_id": "Python/9",
+  "entry_point": "running_peaks",
+  "original_entry_point": "rolling_max",
+  "names": {
+   "rolling_max": "running_peaks",
+   "numbers": "values",
+   "running_max": "peak",
+   "result": "out",
+   "n": "v"
+  },
+  "programs": {
+   "fixed": "from typing import List, Tuple\n\ndef running_peaks(values: List[int]) -> List[int]:\n    \"\"\"Return a list whose element i is the largest value among values[0], ..., values[i].\n\n    >>> running_peaks([2, 1, 5, 3, 6])\n    [2, 2, 5, 5, 6]\n    \"\"\"\n    peak = None\n    out = []\n    for v in values:\n        if peak is None:\n            peak = v\n        else:\n            peak = max(peak, v)\n        out.append(peak)\n    return out\n",
+   "buggy": "from typing import List, Tuple\n\ndef running_peaks(values: List[int]) -> List[int]:\n    \"\"\"Return a list whose element i is the largest value among values[0], ..., values[i].\n\n    >>> running_peaks([2, 1, 5, 3, 6])\n    [2, 2, 5, 5, 6]\n    \"\"\"\n    peak = None\n    out = []\n    for v in values:\n        if peak is None:\n            peak = v\n        else:\n            peak = max(values)\n        out.append(peak)\n    return out\n"
+  }
+ },
+ "Python/10": {
+  "pair_id": "Python/10",
+  "entry_point": "shortest_mirror_extension",
+  "original_entry_point": "make_palindrome",
+  "names": {
+   "make_palindrome": "shortest_mirror_extension",
+   "is_palindrome": "reads_same",
+   "string": "text",
+   "beginning_of_suffix": "cut"
+  },
+  "programs": {
+   "fixed": "def reads_same(text: str) -> bool:\n    \"\"\"Return True if text is the same read backwards.\"\"\"\n    return text == text[::-1]\n\ndef shortest_mirror_extension(text: str) -> str:\n    \"\"\"Return the shortest palindrome that starts with text, formed by appending characters to the end of text.\n\n    >>> shortest_mirror_extension('')\n    ''\n    >>> shortest_mirror_extension('abc')\n    'abcba'\n    >>> shortest_mirror_extension('abcb')\n    'abcba'\n    \"\"\"\n    if not text:\n        return ''\n    cut = 0\n    while not reads_same(text[cut:]):\n        cut += 1\n    return text + text[:cut][::-1]\n",
+   "buggy": "def reads_same(text: str) -> bool:\n    \"\"\"Return True if text is the same read backwards.\"\"\"\n    return text == text[::-1]\n\ndef shortest_mirror_extension(text: str) -> str:\n    \"\"\"Return the shortest palindrome that starts with text, formed by appending characters to the end of text.\n\n    >>> shortest_mirror_extension('')\n    ''\n    >>> shortest_mirror_extension('abc')\n    'abcba'\n    >>> shortest_mirror_extension('abcb')\n    'abcba'\n    \"\"\"\n    if not text:\n        return ''\n    cut = 0\n    while not reads_same(text):\n        cut += 1\n    return text + text[:cut][::-1]\n"
+  }
+ },
+ "Python/12": {
+  "pair_id": "Python/12",
+  "entry_point": "first_longest",
+  "original_entry_point": "longest",
+  "names": {
+   "longest": "first_longest",
+   "strings": "words",
+   "maxlen": "top",
+   "s": "w",
+   "x": "item"
+  },
+  "programs": {
+   "fixed": "from typing import List, Optional\n\ndef first_longest(words: List[str]) -> Optional[str]:\n    \"\"\"Return the longest string in words. When several strings share the maximum length, return the earliest one. Return None for an empty list.\n\n    >>> first_longest(['xy', 'abc', 'q'])\n    'abc'\n    >>> first_longest(['no', 'at'])\n    'no'\n    >>> first_longest([])\n    None\n    \"\"\"\n    if not words:\n        return None\n    top = max((len(item) for item in words))\n    for w in words:\n        if len(w) == top:\n            return w\n",
+   "buggy": "from typing import List, Optional\n\ndef first_longest(words: List[str]) -> Optional[str]:\n    \"\"\"Return the longest string in words. When several strings share the maximum length, return the earliest one. Return None for an empty list.\n\n    >>> first_longest(['xy', 'abc', 'q'])\n    'abc'\n    >>> first_longest(['no', 'at'])\n    'no'\n    >>> first_longest([])\n    None\n    \"\"\"\n    if not words:\n        return None\n    top = max((len(item) for item in words))\n    for w in words:\n        if len(w) > top:\n            return w\n"
+  }
+ },
+ "Python/13": {
+  "pair_id": "Python/13",
+  "entry_point": "common_factor_max",
+  "original_entry_point": "greatest_common_divisor",
+  "names": {
+   "greatest_common_divisor": "common_factor_max",
+   "a": "p",
+   "b": "q"
+  },
+  "programs": {
+   "fixed": "def common_factor_max(p: int, q: int) -> int:\n    \"\"\"Return the greatest common divisor of the integers p and q.\n\n    >>> common_factor_max(12, 18)\n    6\n    >>> common_factor_max(7, 13)\n    1\n    \"\"\"\n    while q:\n        p, q = (q, p % q)\n    return p\n",
+   "buggy": "def common_factor_max(p: int, q: int) -> int:\n    \"\"\"Return the greatest common divisor of the integers p and q.\n\n    >>> common_factor_max(12, 18)\n    6\n    >>> common_factor_max(7, 13)\n    1\n    \"\"\"\n    while q:\n        p, q = (q, p % q)\n    return q\n"
+  }
+ },
+ "Python/19": {
+  "pair_id": "Python/19",
+  "entry_point": "order_number_words",
+  "original_entry_point": "sort_numbers",
+  "names": {
+   "sort_numbers": "order_number_words",
+   "numbers": "phrase",
+   "value_map": "rank",
+   "x": "w"
+  },
+  "programs": {
+   "fixed": "from typing import List\n\ndef order_number_words(phrase: str) -> str:\n    \"\"\"phrase holds number words from 'zero' to 'nine' separated by spaces. Return the same words, separated by single spaces, ordered from the smallest number to the largest.\n\n    >>> order_number_words('nine two six')\n    'two six nine'\n    \"\"\"\n    rank = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}\n    return ' '.join(sorted([w for w in phrase.split(' ') if w], key=lambda w: rank[w]))\n",
+   "buggy": "from typing import List\n\ndef order_number_words(phrase: str) -> str:\n    \"\"\"phrase holds number words from 'zero' to 'nine' separated by spaces. Return the same words, separated by single spaces, ordered from the smallest number to the largest.\n\n    >>> order_number_words('nine two six')\n    'two six nine'\n    \"\"\"\n    rank = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}\n    return ' '.join([w for w in phrase.split(' ') if w])\n"
+  }
+ },
+ "Python/24": {
+  "pair_id": "Python/24",
+  "entry_point": "biggest_proper_factor",
+  "original_entry_point": "largest_divisor",
+  "names": {
+   "largest_divisor": "biggest_proper_factor",
+   "n": "num",
+   "i": "d"
+  },
+  "programs": {
+   "fixed": "def biggest_proper_factor(num: int) -> int:\n    \"\"\"Return the largest integer smaller than num that divides num exactly.\n\n    >>> biggest_proper_factor(21)\n    7\n    >>> biggest_proper_factor(32)\n    16\n    \"\"\"\n    for d in reversed(range(num)):\n        if num % d == 0:\n            return d\n",
+   "buggy": "def biggest_proper_factor(num: int) -> int:\n    \"\"\"Return the largest integer smaller than num that divides num exactly.\n\n    >>> biggest_proper_factor(21)\n    7\n    >>> biggest_proper_factor(32)\n    16\n    \"\"\"\n    for d in reversed(range(num)):\n        if num - d == 0:\n            return d\n"
+  }
+ },
+ "Python/27": {
+  "pair_id": "Python/27",
+  "entry_point": "invert_letter_case",
+  "original_entry_point": "flip_case",
+  "names": {
+   "flip_case": "invert_letter_case",
+   "string": "text"
+  },
+  "programs": {
+   "fixed": "def invert_letter_case(text: str) -> str:\n    \"\"\"Return text with every lowercase letter changed to uppercase and every uppercase letter changed to lowercase.\n\n    >>> invert_letter_case('PyThon 3')\n    'pYtHON 3'\n    \"\"\"\n    return text.swapcase()\n",
+   "buggy": "def invert_letter_case(text: str) -> str:\n    \"\"\"Return text with every lowercase letter changed to uppercase and every uppercase letter changed to lowercase.\n\n    >>> invert_letter_case('PyThon 3')\n    'pYtHON 3'\n    \"\"\"\n    return text.lower()\n"
+  }
+ },
+ "Python/31": {
+  "pair_id": "Python/31",
+  "entry_point": "has_no_divisors",
+  "original_entry_point": "is_prime",
+  "names": {
+   "is_prime": "has_no_divisors",
+   "n": "num",
+   "k": "d"
+  },
+  "programs": {
+   "fixed": "def has_no_divisors(num):\n    \"\"\"Return True when num is a prime number and False otherwise. Numbers below 2 are not prime.\n\n    >>> has_no_divisors(9)\n    False\n    >>> has_no_divisors(29)\n    True\n    >>> has_no_divisors(1)\n    False\n    >>> has_no_divisors(97)\n    True\n    \"\"\"\n    if num < 2:\n        return False\n    for d in range(2, num - 1):\n        if num % d == 0:\n            return False\n    return True\n",
+   "buggy": "def has_no_divisors(num):\n    \"\"\"Return True when num is a prime number and False otherwise. Numbers below 2 are not prime.\n\n    >>> has_no_divisors(9)\n    False\n    >>> has_no_divisors(29)\n    True\n    >>> has_no_divisors(1)\n    False\n    >>> has_no_divisors(97)\n    True\n    \"\"\"\n    if num < 1:\n        return False\n    for d in range(1, num - 1):\n        if num % d == 0:\n            return False\n    return True\n"
+  }
+ },
+ "Python/38": {
+  "pair_id": "Python/38",
+  "entry_point": "unscramble_triples",
+  "original_entry_point": "decode_cyclic",
+  "names": {
+   "decode_cyclic": "unscramble_triples",
+   "encode_cyclic": "scramble_triples",
+   "s": "text",
+   "groups": "chunks",
+   "group": "chunk",
+   "i": "k"
+  },
+  "programs": {
+   "fixed": "def scramble_triples(text: str):\n    \"\"\"Split text into consecutive groups of three characters and move the first character of every full group to its end; a shorter final group is left unchanged.\"\"\"\n    chunks = [text[3 * k:min(3 * k + 3, len(text))] for k in range((len(text) + 2) // 3)]\n    chunks = [chunk[1:] + chunk[0] if len(chunk) == 3 else chunk for chunk in chunks]\n    return ''.join(chunks)\n\ndef unscramble_triples(text: str):\n    \"\"\"Undo scramble_triples: given a string produced by scramble_triples, return the string it was produced from.\n    \"\"\"\n    return scramble_triples(scramble_triples(text))\n",
+   "buggy": "def scramble_triples(text: str):\n    \"\"\"Split text into consecutive groups of three characters and move the first character of every full group to its end; a shorter final group is left unchanged.\"\"\"\n    chunks = [text[3 * k:min(3 * k + 3, len(text))] for k in range((len(text) + 2) // 3)]\n    chunks = [chunk[1:] + chunk[0] if len(chunk) == 3 else chunk for chunk in chunks]\n    return ''.join(chunks)\n\ndef unscramble_triples(text: str):\n    \"\"\"Undo scramble_triples: given a string produced by scramble_triples, return the string it was produced from.\n    \"\"\"\n    return scramble_triples(text)\n"
+  }
+ },
+ "Python/43": {
+  "pair_id": "Python/43",
+  "entry_point": "has_opposite_pair",
+  "original_entry_point": "pairs_sum_to_zero",
+  "names": {
+   "pairs_sum_to_zero": "has_opposite_pair",
+   "l": "nums",
+   "l1": "a"
+  },
+  "programs": {
+   "fixed": "def has_opposite_pair(nums):\n    \"\"\"Return True when two different positions of nums hold values that add up to zero, and False otherwise.\n\n    >>> has_opposite_pair([4, -4, 2])\n    True\n    >>> has_opposite_pair([0, 3])\n    False\n    >>> has_opposite_pair([5])\n    False\n    \"\"\"\n    for i, a in enumerate(nums):\n        for j in range(i + 1, len(nums)):\n            if a + nums[j] == 0:\n                return True\n    return False\n",
+   "buggy": "def has_opposite_pair(nums):\n    \"\"\"Return True when two different positions of nums hold values that add up to zero, and False otherwise.\n\n    >>> has_opposite_pair([4, -4, 2])\n    True\n    >>> has_opposite_pair([0, 3])\n    False\n    >>> has_opposite_pair([5])\n    False\n    \"\"\"\n    for i, a in enumerate(nums):\n        for j in range(i, len(nums)):\n            if a + nums[j] == 0:\n                return True\n    return False\n"
+  }
+ },
+ "Python/56": {
+  "pair_id": "Python/56",
+  "entry_point": "angles_balanced",
+  "original_entry_point": "correct_bracketing",
+  "names": {
+   "correct_bracketing": "angles_balanced",
+   "brackets": "marks",
+   "depth": "level",
+   "b": "ch"
+  },
+  "programs": {
+   "fixed": "def angles_balanced(marks: str):\n    \"\"\"marks contains only '<' and '>'. Return True when every '<' is closed by a later '>' and no '>' appears before a matching '<'; otherwise return False.\n\n    >>> angles_balanced('<<>>')\n    True\n    >>> angles_balanced('><')\n    False\n    >>> angles_balanced('<')\n    False\n    \"\"\"\n    level = 0\n    for ch in marks:\n        if ch == '<':\n            level += 1\n        else:\n            level -= 1\n        if level < 0:\n            return False\n    return level == 0\n",
+   "buggy": "def angles_balanced(marks: str):\n    \"\"\"marks contains only '<' and '>'. Return True when every '<' is closed by a later '>' and no '>' appears before a matching '<'; otherwise return False.\n\n    >>> angles_balanced('<<>>')\n    True\n    >>> angles_balanced('><')\n    False\n    >>> angles_balanced('<')\n    False\n    \"\"\"\n    level = 0\n    for ch in marks:\n        if ch == '>':\n            level += 1\n        else:\n            level -= 1\n        if level < 0:\n            return False\n    return level == 0\n"
+  }
+ },
+ "Python/57": {
+  "pair_id": "Python/57",
+  "entry_point": "is_one_direction",
+  "original_entry_point": "monotonic",
+  "names": {
+   "monotonic": "is_one_direction",
+   "l": "seq"
+  },
+  "programs": {
+   "fixed": "def is_one_direction(seq: list):\n    \"\"\"Return True when the elements of seq never decrease or never increase, and False otherwise.\n\n    >>> is_one_direction([1, 1, 3])\n    True\n    >>> is_one_direction([5, 2, 2, 0])\n    True\n    >>> is_one_direction([2, 9, 4])\n    False\n    \"\"\"\n    if seq == sorted(seq) or seq == sorted(seq, reverse=True):\n        return True\n    return False\n",
+   "buggy": "def is_one_direction(seq: list):\n    \"\"\"Return True when the elements of seq never decrease or never increase, and False otherwise.\n\n    >>> is_one_direction([1, 1, 3])\n    True\n    >>> is_one_direction([5, 2, 2, 0])\n    True\n    >>> is_one_direction([2, 9, 4])\n    False\n    \"\"\"\n    if seq == sorted(seq) or seq == sorted(seq, reverse=True):\n        return False\n    return True\n"
+  }
+ },
+ "Python/62": {
+  "pair_id": "Python/62",
+  "entry_point": "poly_slope_coeffs",
+  "original_entry_point": "derivative",
+  "names": {
+   "derivative": "poly_slope_coeffs",
+   "xs": "coeffs",
+   "i": "k",
+   "x": "c"
+  },
+  "programs": {
+   "fixed": "def poly_slope_coeffs(coeffs: list):\n    \"\"\"coeffs lists the coefficients of a polynomial from the constant term upward: coeffs[0] + coeffs[1] * t + coeffs[2] * t**2 + .... Return the coefficients of its derivative in the same order.\n\n    >>> poly_slope_coeffs([5, 0, 3])\n    [0, 6]\n    >>> poly_slope_coeffs([2, 4])\n    [4]\n    \"\"\"\n    return [k * c for k, c in enumerate(coeffs)][1:]\n",
+   "buggy": "def poly_slope_coeffs(coeffs: list):\n    \"\"\"coeffs lists the coefficients of a polynomial from the constant term upward: coeffs[0] + coeffs[1] * t + coeffs[2] * t**2 + .... Return the coefficients of its derivative in the same order.\n\n    >>> poly_slope_coeffs([5, 0, 3])\n    [0, 6]\n    >>> poly_slope_coeffs([2, 4])\n    [4]\n    \"\"\"\n    return [k * c for k, c in enumerate(coeffs)]\n"
+  }
+ },
+ "Python/63": {
+  "pair_id": "Python/63",
+  "entry_point": "tri_sum_seq",
+  "original_entry_point": "fibfib",
+  "names": {
+   "fibfib": "tri_sum_seq",
+   "n": "k"
+  },
+  "programs": {
+   "fixed": "def tri_sum_seq(k: int):\n    \"\"\"A sequence is defined by s(0) = 0, s(1) = 0, s(2) = 1 and s(k) = s(k - 1) + s(k - 2) + s(k - 3) for k > 2. Return s(k).\n\n    >>> tri_sum_seq(2)\n    1\n    >>> tri_sum_seq(6)\n    7\n    >>> tri_sum_seq(9)\n    44\n    \"\"\"\n    if k == 0:\n        return 0\n    if k == 1:\n        return 0\n    if k == 2:\n        return 1\n    return tri_sum_seq(k - 1) + tri_sum_seq(k - 2) + tri_sum_seq(k - 3)\n",
+   "buggy": "def tri_sum_seq(k: int):\n    \"\"\"A sequence is defined by s(0) = 0, s(1) = 0, s(2) = 1 and s(k) = s(k - 1) + s(k - 2) + s(k - 3) for k > 2. Return s(k).\n\n    >>> tri_sum_seq(2)\n    1\n    >>> tri_sum_seq(6)\n    7\n    >>> tri_sum_seq(9)\n    44\n    \"\"\"\n    if k == 0:\n        return 0\n    if k == 1:\n        return 1\n    if k == 2:\n        return 2\n    return tri_sum_seq(k - 1) + tri_sum_seq(k - 2) + tri_sum_seq(k - 3)\n"
+  }
+ },
+ "Python/64": {
+  "pair_id": "Python/64",
+  "entry_point": "count_vowel_sounds",
+  "original_entry_point": "vowels_count",
+  "names": {
+   "vowels_count": "count_vowel_sounds",
+   "s": "word",
+   "vowels": "letters",
+   "n_vowels": "total",
+   "c": "ch"
+  },
+  "programs": {
+   "fixed": "def count_vowel_sounds(word):\n    \"\"\"Return how many vowels word contains. The vowels are a, e, i, o and u in either case; the letter y (or Y) also counts, but only when it is the last character of word.\n\n    >>> count_vowel_sounds('sky')\n    1\n    >>> count_vowel_sounds('Queue')\n    4\n    >>> count_vowel_sounds('Banana')\n    3\n    \"\"\"\n    letters = 'aeiouAEIOU'\n    total = sum((ch in letters for ch in word))\n    if word[-1] == 'y' or word[-1] == 'Y':\n        total += 1\n    return total\n",
+   "buggy": "def count_vowel_sounds(word):\n    \"\"\"Return how many vowels word contains. The vowels are a, e, i, o and u in either case; the letter y (or Y) also counts, but only when it is the last character of word.\n\n    >>> count_vowel_sounds('sky')\n    1\n    >>> count_vowel_sounds('Queue')\n    4\n    >>> count_vowel_sounds('Banana')\n    3\n    \"\"\"\n    letters = 'aeiouyAEIOUY'\n    total = sum((ch in letters for ch in word))\n    return total\n"
+  }
+ },
+ "Python/65": {
+  "pair_id": "Python/65",
+  "entry_point": "rotate_digits",
+  "original_entry_point": "circular_shift",
+  "names": {
+   "circular_shift": "rotate_digits",
+   "x": "num",
+   "shift": "steps",
+   "s": "digits"
+  },
+  "programs": {
+   "fixed": "def rotate_digits(num, steps):\n    \"\"\"Rotate the decimal digits of num to the right by steps positions and return the result as a string. If steps is larger than the number of digits, return the digits in reverse order.\n\n    >>> rotate_digits(4567, 1)\n    '7456'\n    >>> rotate_digits(89, 3)\n    '98'\n    \"\"\"\n    digits = str(num)\n    if steps > len(digits):\n        return digits[::-1]\n    else:\n        return digits[len(digits) - steps:] + digits[:len(digits) - steps]\n",
+   "buggy": "def rotate_digits(num, steps):\n    \"\"\"Rotate the decimal digits of num to the right by steps positions and return the result as a string. If steps is larger than the number of digits, return the digits in reverse order.\n\n    >>> rotate_digits(4567, 1)\n    '7456'\n    >>> rotate_digits(89, 3)\n    '98'\n    \"\"\"\n    digits = str(num)\n    if steps > len(digits):\n        return digits[::-1]\n    else:\n        return digits[:len(digits) - steps] + digits[len(digits) - steps:]\n"
+  }
+ },
+ "Python/67": {
+  "pair_id": "Python/67",
+  "entry_point": "remaining_mangoes",
+  "original_entry_point": "fruit_distribution",
+  "names": {
+   "fruit_distribution": "remaining_mangoes",
+   "s": "note",
+   "n": "total",
+   "lis": "counts",
+   "i": "tok"
+  },
+  "programs": {
+   "fixed": "def remaining_mangoes(note, total):\n    \"\"\"note has the form '<a> apples and <b> oranges'. A basket holds total fruits, each an apple, an orange or a mango. Return the number of mangoes.\n\n    >>> remaining_mangoes('4 apples and 9 oranges', 30)\n    17\n    >>> remaining_mangoes('0 apples and 0 oranges', 7)\n    7\n    \"\"\"\n    counts = list()\n    for tok in note.split(' '):\n        if tok.isdigit():\n            counts.append(int(tok))\n    return total - sum(counts)\n",
+   "buggy": "def remaining_mangoes(note, total):\n    \"\"\"note has the form '<a> apples and <b> oranges'. A basket holds total fruits, each an apple, an orange or a mango. Return the number of mangoes.\n\n    >>> remaining_mangoes('4 apples and 9 oranges', 30)\n    17\n    >>> remaining_mangoes('0 apples and 0 oranges', 7)\n    7\n    \"\"\"\n    counts = list()\n    for tok in note.split(' '):\n        if tok.isdigit():\n            counts.append(int(tok))\n    return total - sum(counts) - 1\n"
+  }
+ },
+ "Python/72": {
+  "pair_id": "Python/72",
+  "entry_point": "can_lift",
+  "original_entry_point": "will_it_fly",
+  "names": {
+   "will_it_fly": "can_lift",
+   "q": "load",
+   "w": "limit"
+  },
+  "programs": {
+   "fixed": "def can_lift(load, limit):\n    \"\"\"Return True when the list load reads the same forwards and backwards and its sum is at most limit; otherwise return False.\n\n    >>> can_lift([4, 1, 4], 10)\n    True\n    >>> can_lift([4, 1, 4], 8)\n    False\n    >>> can_lift([2, 5], 9)\n    False\n    >>> can_lift([6], 7)\n    True\n    \"\"\"\n    if sum(load) > limit:\n        return False\n    i, j = (0, len(load) - 1)\n    while i < j:\n        if load[i] != load[j]:\n            return False\n        i += 1\n        j -= 1\n    return True\n",
+   "buggy": "def can_lift(load, limit):\n    \"\"\"Return True when the list load reads the same forwards and backwards and its sum is at most limit; otherwise return False.\n\n    >>> can_lift([4, 1, 4], 10)\n    True\n    >>> can_lift([4, 1, 4], 8)\n    False\n    >>> can_lift([2, 5], 9)\n    False\n    >>> can_lift([6], 7)\n    True\n    \"\"\"\n    if sum(load) > limit:\n        return False\n    i, j = (0, len(load) - 1)\n    while i < j:\n        if load[i] == load[j]:\n            return False\n        i += 1\n        j -= 1\n    return True\n"
+  }
+ },
+ "Python/74": {
+  "pair_id": "Python/74",
+  "entry_point": "fewer_letters",
+  "original_entry_point": "total_match",
+  "names": {
+   "total_match": "fewer_letters",
+   "lst1": "first",
+   "lst2": "second",
+   "l1": "n1",
+   "l2": "n2",
+   "st": "w"
+  },
+  "programs": {
+   "fixed": "def fewer_letters(first, second):\n    \"\"\"Count the characters in all strings of first and in all strings of second. Return the list with the smaller total; when both totals are equal, return first.\n\n    >>> fewer_letters(['ab', 'c'], ['xyz', 'w'])\n    ['ab', 'c']\n    >>> fewer_letters(['long'], ['a', 'b'])\n    ['a', 'b']\n    >>> fewer_letters([], [])\n    []\n    \"\"\"\n    n1 = 0\n    for w in first:\n        n1 += len(w)\n    n2 = 0\n    for w in second:\n        n2 += len(w)\n    if n1 <= n2:\n        return first\n    else:\n        return second\n",
+   "buggy": "def fewer_letters(first, second):\n    \"\"\"Count the characters in all strings of first and in all strings of second. Return the list with the smaller total; when both totals are equal, return first.\n\n    >>> fewer_letters(['ab', 'c'], ['xyz', 'w'])\n    ['ab', 'c']\n    >>> fewer_letters(['long'], ['a', 'b'])\n    ['a', 'b']\n    >>> fewer_letters([], [])\n    []\n    \"\"\"\n    n1 = 0\n    for w in first:\n        n1 += len(w)\n    n2 = 0\n    for w in second:\n        n2 += len(w)\n    if n1 <= n2:\n        return second\n    else:\n        return first\n"
+  }
+ },
+ "Python/80": {
+  "pair_id": "Python/80",
+  "entry_point": "no_close_repeats",
+  "original_entry_point": "is_happy",
+  "names": {
+   "is_happy": "no_close_repeats",
+   "s": "text"
+  },
+  "programs": {
+   "fixed": "def no_close_repeats(text):\n    \"\"\"Return True when text has at least three characters and every window of three neighbouring characters holds three different characters; otherwise return False.\n\n    >>> no_close_repeats('xyzx')\n    True\n    >>> no_close_repeats('xyx')\n    False\n    >>> no_close_repeats('pq')\n    False\n    \"\"\"\n    if len(text) < 3:\n        return False\n    for i in range(len(text) - 2):\n        if text[i] == text[i + 1] or text[i + 1] == text[i + 2] or text[i] == text[i + 2]:\n            return False\n    return True\n",
+   "buggy": "def no_close_repeats(text):\n    \"\"\"Return True when text has at least three characters and every window of three neighbouring characters holds three different characters; otherwise return False.\n\n    >>> no_close_repeats('xyzx')\n    True\n    >>> no_close_repeats('xyx')\n    False\n    >>> no_close_repeats('pq')\n    False\n    \"\"\"\n    if len(text) < 3:\n        return False\n    for i in range(len(text) - 2):\n        if text[i] == text[i + 1] and text[i + 1] == text[i + 2] and (text[i] == text[i + 2]):\n            return False\n    return True\n"
+  }
+ },
+ "Python/82": {
+  "pair_id": "Python/82",
+  "entry_point": "length_is_prime",
+  "original_entry_point": "prime_length",
+  "names": {
+   "prime_length": "length_is_prime",
+   "string": "text",
+   "l": "size",
+   "i": "d"
+  },
+  "programs": {
+   "fixed": "def length_is_prime(text):\n    \"\"\"Return True when the number of characters in text is a prime number, and False otherwise.\n\n    >>> length_is_prime('abc')\n    True\n    >>> length_is_prime('pythons')\n    True\n    >>> length_is_prime('banana')\n    False\n    \"\"\"\n    size = len(text)\n    if size == 0 or size == 1:\n        return False\n    for d in range(2, size):\n        if size % d == 0:\n            return False\n    return True\n",
+   "buggy": "def length_is_prime(text):\n    \"\"\"Return True when the number of characters in text is a prime number, and False otherwise.\n\n    >>> length_is_prime('abc')\n    True\n    >>> length_is_prime('pythons')\n    True\n    >>> length_is_prime('banana')\n    False\n    \"\"\"\n    size = len(text)\n    if size == 0 or size == 1:\n        return False\n    for d in range(3, size):\n        if size % d == 0:\n            return False\n    return True\n"
+  }
+ },
+ "Python/85": {
+  "pair_id": "Python/85",
+  "entry_point": "even_values_at_odd_slots",
+  "original_entry_point": "add",
+  "names": {
+   "add": "even_values_at_odd_slots",
+   "lst": "values",
+   "i": "k"
+  },
+  "programs": {
+   "fixed": "def even_values_at_odd_slots(values):\n    \"\"\"values is a non-empty list of integers. Return the sum of the even numbers found at odd indexes (1, 3, 5, ...).\n\n    >>> even_values_at_odd_slots([1, 6, 3, 8, 2])\n    14\n    \"\"\"\n    return sum([values[k] for k in range(1, len(values), 2) if values[k] % 2 == 0])\n",
+   "buggy": "def even_values_at_odd_slots(values):\n    \"\"\"values is a non-empty list of integers. Return the sum of the even numbers found at odd indexes (1, 3, 5, ...).\n\n    >>> even_values_at_odd_slots([1, 6, 3, 8, 2])\n    14\n    \"\"\"\n    return sum([values[k] for k in range(1, len(values), 1) if values[k] % 2 == 0])\n"
+  }
+ },
+ "Python/97": {
+  "pair_id": "Python/97",
+  "entry_point": "last_digit_product",
+  "original_entry_point": "multiply",
+  "names": {
+   "multiply": "last_digit_product",
+   "a": "x",
+   "b": "y"
+  },
+  "programs": {
+   "fixed": "def last_digit_product(x, y):\n    \"\"\"Return the product of the last decimal digits of the integers x and y.\n\n    >>> last_digit_product(37, 54)\n    28\n    >>> last_digit_product(-21, 46)\n    54\n    >>> last_digit_product(1990, 13)\n    0\n    \"\"\"\n    return abs(x % 10) * abs(y % 10)\n",
+   "buggy": "def last_digit_product(x, y):\n    \"\"\"Return the product of the last decimal digits of the integers x and y.\n\n    >>> last_digit_product(37, 54)\n    28\n    >>> last_digit_product(-21, 46)\n    54\n    >>> last_digit_product(1990, 13)\n    0\n    \"\"\"\n    return abs(x % 10) * abs(y % 10) * x * y\n"
+  }
+ },
+ "Python/107": {
+  "pair_id": "Python/107",
+  "entry_point": "palindrome_parity_counts",
+  "original_entry_point": "even_odd_palindrome",
+  "names": {
+   "even_odd_palindrome": "palindrome_parity_counts",
+   "is_palindrome": "mirror",
+   "n": "limit",
+   "even_palindrome_count": "evens",
+   "odd_palindrome_count": "odds",
+   "i": "k"
+  },
+  "programs": {
+   "fixed": "def palindrome_parity_counts(limit):\n    \"\"\"Consider the integers from 1 to limit inclusive (1 <= limit <= 1000). Return a pair (even_count, odd_count) with the number of even and of odd palindromic numbers among them.\n\n    >>> palindrome_parity_counts(5)\n    (2, 3)\n    >>> palindrome_parity_counts(22)\n    (5, 6)\n    \"\"\"\n\n    def mirror(limit):\n        return str(limit) == str(limit)[::-1]\n    evens = 0\n    odds = 0\n    for k in range(1, limit + 1):\n        if k % 2 == 1 and mirror(k):\n            odds += 1\n        elif k % 2 == 0 and mirror(k):\n            evens += 1\n    return (evens, odds)\n",
+   "buggy": "def palindrome_parity_counts(limit):\n    \"\"\"Consider the integers from 1 to limit inclusive (1 <= limit <= 1000). Return a pair (even_count, odd_count) with the number of even and of odd palindromic numbers among them.\n\n    >>> palindrome_parity_counts(5)\n    (2, 3)\n    >>> palindrome_parity_counts(22)\n    (5, 6)\n    \"\"\"\n\n    def mirror(limit):\n        return str(limit) == str(limit)[::-1]\n    evens = 0\n    odds = 0\n    for k in range(1, limit):\n        if k % 2 == 1 and mirror(k):\n            odds += 1\n        elif k % 2 == 0 and mirror(k):\n            evens += 1\n    return (evens, odds)\n"
+  }
+ },
+ "Python/108": {
+  "pair_id": "Python/108",
+  "entry_point": "positive_digit_sums",
+  "original_entry_point": "count_nums",
+  "names": {
+   "count_nums": "positive_digit_sums",
+   "arr": "values",
+   "digits_sum": "signed_digit_total",
+   "neg": "sign",
+   "n": "m",
+   "x": "v"
+  },
+  "programs": {
+   "fixed": "def positive_digit_sums(values):\n    \"\"\"Return how many integers in values have a digit sum greater than zero, where the first digit of a negative number counts as negative (for example -45 gives -4 + 5 = 1).\n\n    >>> positive_digit_sums([-12, 3, 0])\n    2\n    >>> positive_digit_sums([24, -8])\n    1\n    >>> positive_digit_sums([])\n    0\n    \"\"\"\n\n    def signed_digit_total(m):\n        sign = 1\n        if m < 0:\n            m, sign = (-1 * m, -1)\n        m = [int(i) for i in str(m)]\n        m[0] = m[0] * sign\n        return sum(m)\n    return len(list(filter(lambda v: v > 0, [signed_digit_total(i) for i in values])))\n",
+   "buggy": "def positive_digit_sums(values):\n    \"\"\"Return how many integers in values have a digit sum greater than zero, where the first digit of a negative number counts as negative (for example -45 gives -4 + 5 = 1).\n\n    >>> positive_digit_sums([-12, 3, 0])\n    2\n    >>> positive_digit_sums([24, -8])\n    1\n    >>> positive_digit_sums([])\n    0\n    \"\"\"\n\n    def signed_digit_total(m):\n        sign = 1\n        if m < 0:\n            m, sign = (-1 * m, -1)\n        m = [int(i) for i in str(m)]\n        m[0] = m[0] * sign * -1\n        return sum(m)\n    return len(list(filter(lambda v: v > 0, [signed_digit_total(i) for i in values])))\n"
+  }
+ },
+ "Python/111": {
+  "pair_id": "Python/111",
+  "entry_point": "most_frequent_letters",
+  "original_entry_point": "histogram",
+  "names": {
+   "histogram": "most_frequent_letters",
+   "test": "text",
+   "dict1": "counts",
+   "list1": "parts",
+   "t": "best",
+   "i": "item"
+  },
+  "programs": {
+   "fixed": "def most_frequent_letters(text):\n    \"\"\"text holds lowercase letters separated by spaces. Return a dictionary that maps each letter occurring most often to its number of occurrences; all letters tied for the maximum are included. An empty string gives an empty dictionary.\n\n    >>> most_frequent_letters('p q p')\n    {'p': 2}\n    >>> most_frequent_letters('z y')\n    {'z': 1, 'y': 1}\n    >>> most_frequent_letters('')\n    {}\n    \"\"\"\n    counts = {}\n    parts = text.split(' ')\n    best = 0\n    for item in parts:\n        if parts.count(item) > best and item != '':\n            best = parts.count(item)\n    if best > 0:\n        for item in parts:\n            if parts.count(item) == best:\n                counts[item] = best\n    return counts\n",
+   "buggy": "def most_frequent_letters(text):\n    \"\"\"text holds lowercase letters separated by spaces. Return a dictionary that maps each letter occurring most often to its number of occurrences; all letters tied for the maximum are included. An empty string gives an empty dictionary.\n\n    >>> most_frequent_letters('p q p')\n    {'p': 2}\n    >>> most_frequent_letters('z y')\n    {'z': 1, 'y': 1}\n    >>> most_frequent_letters('')\n    {}\n    \"\"\"\n    counts = {}\n    parts = text.split(' ')\n    best = 1\n    for item in parts:\n        if parts.count(item) > best and item != '':\n            best = parts.count(item)\n    if best > 0:\n        for item in parts:\n            if parts.count(item) == best:\n                counts[item] = best\n    return counts\n"
+  }
+ },
+ "Python/112": {
+  "pair_id": "Python/112",
+  "entry_point": "strip_and_mirror_check",
+  "original_entry_point": "reverse_delete",
+  "names": {
+   "reverse_delete": "strip_and_mirror_check",
+   "s": "text",
+   "c": "banned",
+   "char": "ch"
+  },
+  "programs": {
+   "fixed": "def strip_and_mirror_check(text, banned):\n    \"\"\"Remove from text every character that also occurs in banned. Return a pair: the remaining string, and True if it reads the same backwards or False if it does not.\n\n    >>> strip_and_mirror_check('racecar', 'x')\n    ('racecar', True)\n    >>> strip_and_mirror_check('banana', 'b')\n    ('anana', True)\n    >>> strip_and_mirror_check('level', 'v')\n    ('leel', True)\n    \"\"\"\n    text = ''.join([ch for ch in text if ch not in banned])\n    return (text, text[::-1] == text)\n",
+   "buggy": "def strip_and_mirror_check(text, banned):\n    \"\"\"Remove from text every character that also occurs in banned. Return a pair: the remaining string, and True if it reads the same backwards or False if it does not.\n\n    >>> strip_and_mirror_check('racecar', 'x')\n    ('racecar', True)\n    >>> strip_and_mirror_check('banana', 'b')\n    ('anana', True)\n    >>> strip_and_mirror_check('level', 'v')\n    ('leel', True)\n    \"\"\"\n    text = ''.join([ch for ch in text if ch not in banned])\n    return (text, text[::-1] != text)\n"
+  }
+ },
+ "Python/117": {
+  "pair_id": "Python/117",
+  "entry_point": "words_with_consonants",
+  "original_entry_point": "select_words",
+  "names": {
+   "select_words": "words_with_consonants",
+   "s": "sentence",
+   "n": "count",
+   "result": "found",
+   "word": "w",
+   "n_consonants": "total",
+   "i": "k"
+  },
+  "programs": {
+   "fixed": "def words_with_consonants(sentence, count):\n    \"\"\"Return, in their original order, the words of sentence (split on whitespace) that contain exactly count consonants. sentence contains only letters and spaces; an empty sentence gives an empty list.\n\n    >>> words_with_consonants('Big brown fox', 2)\n    ['Big', 'fox']\n    >>> words_with_consonants('', 1)\n    []\n    \"\"\"\n    found = []\n    for w in sentence.split():\n        total = 0\n        for k in range(0, len(w)):\n            if w[k].lower() not in ['a', 'e', 'i', 'o', 'u']:\n                total += 1\n        if total == count:\n            found.append(w)\n    return found\n",
+   "buggy": "def words_with_consonants(sentence, count):\n    \"\"\"Return, in their original order, the words of sentence (split on whitespace) that contain exactly count consonants. sentence contains only letters and spaces; an empty sentence gives an empty list.\n\n    >>> words_with_consonants('Big brown fox', 2)\n    ['Big', 'fox']\n    >>> words_with_consonants('', 1)\n    []\n    \"\"\"\n    found = []\n    for w in sentence.split():\n        total = 0\n        for k in range(0, len(w)):\n            if w[k].lower() in ['a', 'e', 'i', 'o', 'u']:\n                total += 1\n        if total == count:\n            found.append(w)\n    return found\n"
+  }
+ },
+ "Python/125": {
+  "pair_id": "Python/125",
+  "entry_point": "break_text",
+  "original_entry_point": "split_words",
+  "names": {
+   "split_words": "break_text",
+   "txt": "text",
+   "i": "ch"
+  },
+  "programs": {
+   "fixed": "def break_text(text):\n    \"\"\"If text contains a space, return text split on whitespace. Otherwise, if it contains a comma, return it split on commas. Otherwise return the number of lowercase letters at an odd position in the alphabet when a is position 0 (b, d, f, ...).\n\n    >>> break_text('one two')\n    ['one', 'two']\n    >>> break_text('red,green')\n    ['red', 'green']\n    >>> break_text('bdx')\n    3\n    \"\"\"\n    if ' ' in text:\n        return text.split()\n    elif ',' in text:\n        return text.replace(',', ' ').split()\n    else:\n        return len([ch for ch in text if ch.islower() and ord(ch) % 2 == 0])\n",
+   "buggy": "def break_text(text):\n    \"\"\"If text contains a space, return text split on whitespace. Otherwise, if it contains a comma, return it split on commas. Otherwise return the number of lowercase letters at an odd position in the alphabet when a is position 0 (b, d, f, ...).\n\n    >>> break_text('one two')\n    ['one', 'two']\n    >>> break_text('red,green')\n    ['red', 'green']\n    >>> break_text('bdx')\n    3\n    \"\"\"\n    if ' ' in text:\n        return text.split()\n    elif ',' in text:\n        return text.replace(' ', ',').split()\n    else:\n        return len([ch for ch in text if ch.islower() and ord(ch) % 2 == 0])\n"
+  }
+ },
+ "Python/126": {
+  "pair_id": "Python/126",
+  "entry_point": "ascending_with_few_repeats",
+  "original_entry_point": "is_sorted",
+  "names": {
+   "is_sorted": "ascending_with_few_repeats",
+   "lst": "nums",
+   "count_digit": "seen",
+   "i": "k"
+  },
+  "programs": {
+   "fixed": "def ascending_with_few_repeats(nums):\n    \"\"\"nums holds non-negative integers. Return True when the list is in non-decreasing order and no value appears more than twice; otherwise return False.\n\n    >>> ascending_with_few_repeats([0, 4, 4, 9])\n    True\n    >>> ascending_with_few_repeats([3, 3, 3])\n    False\n    >>> ascending_with_few_repeats([2, 1])\n    False\n    >>> ascending_with_few_repeats([7])\n    True\n    \"\"\"\n    seen = dict([(k, 0) for k in nums])\n    for k in nums:\n        seen[k] += 1\n    if any((seen[k] > 2 for k in nums)):\n        return False\n    if all((nums[k - 1] <= nums[k] for k in range(1, len(nums)))):\n        return True\n    else:\n        return False\n",
+   "buggy": "def ascending_with_few_repeats(nums):\n    \"\"\"nums holds non-negative integers. Return True when the list is in non-decreasing order and no value appears more than twice; otherwise return False.\n\n    >>> ascending_with_few_repeats([0, 4, 4, 9])\n    True\n    >>> ascending_with_few_repeats([3, 3, 3])\n    False\n    >>> ascending_with_few_repeats([2, 1])\n    False\n    >>> ascending_with_few_repeats([7])\n    True\n    \"\"\"\n    seen = dict([(k, 0) for k in nums])\n    for k in nums:\n        seen[k] += 1\n    if all((nums[k - 1] <= nums[k] for k in range(1, len(nums)))):\n        return True\n    else:\n        return False\n"
+  }
+ },
+ "Python/130": {
+  "pair_id": "Python/130",
+  "entry_point": "odd_even_series",
+  "original_entry_point": "tri",
+  "names": {
+   "tri": "odd_even_series",
+   "n": "count",
+   "my_tri": "seq",
+   "i": "k"
+  },
+  "programs": {
+   "fixed": "def odd_even_series(count):\n    \"\"\"A series t is defined by t(0) = 1, t(1) = 3, t(k) = 1 + k / 2 for even k, and t(k) = t(k - 1) + t(k - 2) + t(k + 1) for odd k >= 3, where t(k + 1) follows the even rule. Return the list [t(0), t(1), ..., t(count)].\n\n    >>> odd_even_series(0)\n    [1]\n    >>> odd_even_series(5)\n    [1, 3, 2.0, 8.0, 3.0, 15.0]\n    \"\"\"\n    if count == 0:\n        return [1]\n    seq = [1, 3]\n    for k in range(2, count + 1):\n        if k % 2 == 0:\n            seq.append(k / 2 + 1)\n        else:\n            seq.append(seq[k - 1] + seq[k - 2] + (k + 3) / 2)\n    return seq\n",
+   "buggy": "def odd_even_series(count):\n    \"\"\"A series t is defined by t(0) = 1, t(1) = 3, t(k) = 1 + k / 2 for even k, and t(k) = t(k - 1) + t(k - 2) + t(k + 1) for odd k >= 3, where t(k + 1) follows the even rule. Return the list [t(0), t(1), ..., t(count)].\n\n    >>> odd_even_series(0)\n    [1]\n    >>> odd_even_series(5)\n    [1, 3, 2.0, 8.0, 3.0, 15.0]\n    \"\"\"\n    if count == 0:\n        return [1]\n    seq = [1, 3]\n    for k in range(2, count + 1):\n        if k % 2 == 0:\n            seq.append(k / 2 + 1)\n        else:\n            seq.append(seq[k - 1] + seq[k - 2] + k + (k + 3) / 2)\n    return seq\n"
+  }
+ },
+ "Python/141": {
+  "pair_id": "Python/141",
+  "entry_point": "validate_filename",
+  "original_entry_point": "file_name_check",
+  "names": {
+   "file_name_check": "validate_filename",
+   "file_name": "name",
+   "suf": "allowed",
+   "lst": "parts",
+   "t": "digits",
+   "x": "ch"
+  },
+  "programs": {
+   "fixed": "def validate_filename(name):\n    \"\"\"Return 'Yes' if name is a valid file name and 'No' otherwise. A valid name contains exactly one dot; the part before the dot is non-empty and starts with a Latin letter (a-z or A-Z); the part after the dot is 'txt', 'exe' or 'dll'; and the whole name contains at most three digits.\n\n    >>> validate_filename('report7.exe')\n    'Yes'\n    >>> validate_filename('7report.exe')\n    'No'\n    >>> validate_filename('x1234.txt')\n    'No'\n    \"\"\"\n    allowed = ['txt', 'exe', 'dll']\n    parts = name.split(sep='.')\n    if len(parts) != 2:\n        return 'No'\n    if not parts[1] in allowed:\n        return 'No'\n    if len(parts[0]) == 0:\n        return 'No'\n    if not parts[0][0].isalpha():\n        return 'No'\n    digits = len([ch for ch in parts[0] if ch.isdigit()])\n    if digits > 3:\n        return 'No'\n    return 'Yes'\n",
+   "buggy": "def validate_filename(name):\n    \"\"\"Return 'Yes' if name is a valid file name and 'No' otherwise. A valid name contains exactly one dot; the part before the dot is non-empty and starts with a Latin letter (a-z or A-Z); the part after the dot is 'txt', 'exe' or 'dll'; and the whole name contains at most three digits.\n\n    >>> validate_filename('report7.exe')\n    'Yes'\n    >>> validate_filename('7report.exe')\n    'No'\n    >>> validate_filename('x1234.txt')\n    'No'\n    \"\"\"\n    allowed = ['txt', 'exe', 'dll']\n    parts = name.split(sep='.')\n    if len(parts) != 2:\n        return 'No'\n    if len(parts[0]) == 0:\n        return 'No'\n    if not parts[0][0].isalpha():\n        return 'No'\n    digits = len([ch for ch in parts[0] if ch.isdigit()])\n    if digits > 3:\n        return 'No'\n    return 'Yes'\n"
+  }
+ },
+ "Python/143": {
+  "pair_id": "Python/143",
+  "entry_point": "keep_prime_length_words",
+  "original_entry_point": "words_in_sentence",
+  "names": {
+   "words_in_sentence": "keep_prime_length_words",
+   "sentence": "phrase",
+   "new_lst": "kept",
+   "word": "w",
+   "flg": "composite",
+   "i": "d"
+  },
+  "programs": {
+   "fixed": "def keep_prime_length_words(phrase):\n    \"\"\"phrase contains words of letters separated by single spaces. Return a string of the words whose length is a prime number, in their original order, separated by single spaces.\n\n    >>> keep_prime_length_words('we built a large house')\n    'we built large house'\n    \"\"\"\n    kept = []\n    for w in phrase.split():\n        composite = 0\n        if len(w) == 1:\n            composite = 1\n        for d in range(2, len(w)):\n            if len(w) % d == 0:\n                composite = 1\n        if composite == 0 or len(w) == 2:\n            kept.append(w)\n    return ' '.join(kept)\n",
+   "buggy": "def keep_prime_length_words(phrase):\n    \"\"\"phrase contains words of letters separated by single spaces. Return a string of the words whose length is a prime number, in their original order, separated by single spaces.\n\n    >>> keep_prime_length_words('we built a large house')\n    'we built large house'\n    \"\"\"\n    kept = []\n    for w in phrase.split():\n        composite = 0\n        for d in range(2, len(w)):\n            if len(w) % d == 0:\n                composite = 1\n        if composite == 0 or len(w) == 2:\n            kept.append(w)\n    return ' '.join(kept)\n"
+  }
+ },
+ "Python/146": {
+  "pair_id": "Python/146",
+  "entry_point": "count_odd_edged",
+  "original_entry_point": "specialFilter",
+  "names": {
+   "specialFilter": "count_odd_edged",
+   "nums": "values",
+   "count": "total",
+   "num": "v",
+   "odd_digits": "odd",
+   "number_as_string": "text"
+  },
+  "programs": {
+   "fixed": "def count_odd_edged(values):\n    \"\"\"Return how many numbers in values are greater than 10 and have both an odd first digit and an odd last digit.\n\n    >>> count_odd_edged([31, 25, 12, 9])\n    1\n    >>> count_odd_edged([57, -73])\n    1\n    \"\"\"\n    total = 0\n    for v in values:\n        if v > 10:\n            odd = (1, 3, 5, 7, 9)\n            text = str(v)\n            if int(text[0]) in odd and int(text[-1]) in odd:\n                total += 1\n    return total\n",
+   "buggy": "def count_odd_edged(values):\n    \"\"\"Return how many numbers in values are greater than 10 and have both an odd first digit and an odd last digit.\n\n    >>> count_odd_edged([31, 25, 12, 9])\n    1\n    >>> count_odd_edged([57, -73])\n    1\n    \"\"\"\n    total = 0\n    for v in values:\n        if v > 10:\n            odd = (1, 2, 3, 5, 7, 9)\n            text = str(v)\n            if int(text[0]) in odd and int(text[-1]) in odd:\n                total += 1\n    return total\n"
+  }
+ },
+ "Python/148": {
+  "pair_id": "Python/148",
+  "entry_point": "planets_between",
+  "original_entry_point": "bf",
+  "names": {
+   "bf": "planets_between",
+   "planet1": "inner",
+   "planet2": "outer",
+   "planet_names": "order",
+   "planet1_index": "a_idx",
+   "planet2_index": "b_idx"
+  },
+  "programs": {
+   "fixed": "def planets_between(inner, outer):\n    \"\"\"The planets in order of distance from the Sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Return a tuple of the planets strictly between inner and outer, nearest to the Sun first. Return an empty tuple if either name is not one of these planets or both names are the same.\n\n    >>> planets_between('Venus', 'Jupiter')\n    ('Earth', 'Mars')\n    >>> planets_between('Saturn', 'Earth')\n    ('Mars', 'Jupiter')\n    \"\"\"\n    order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')\n    if inner not in order or outer not in order or inner == outer:\n        return ()\n    a_idx = order.index(inner)\n    b_idx = order.index(outer)\n    if a_idx < b_idx:\n        return order[a_idx + 1:b_idx]\n    else:\n        return order[b_idx + 1:a_idx]\n",
+   "buggy": "def planets_between(inner, outer):\n    \"\"\"The planets in order of distance from the Sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Return a tuple of the planets strictly between inner and outer, nearest to the Sun first. Return an empty tuple if either name is not one of these planets or both names are the same.\n\n    >>> planets_between('Venus', 'Jupiter')\n    ('Earth', 'Mars')\n    >>> planets_between('Saturn', 'Earth')\n    ('Mars', 'Jupiter')\n    \"\"\"\n    order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupyter', 'Saturn', 'Uranus', 'Neptune')\n    if inner not in order or outer not in order or inner == outer:\n        return ()\n    a_idx = order.index(inner)\n    b_idx = order.index(outer)\n    if a_idx < b_idx:\n        return order[a_idx + 1:b_idx]\n    else:\n        return order[b_idx + 1:a_idx]\n"
+  }
+ },
+ "Python/149": {
+  "pair_id": "Python/149",
+  "entry_point": "even_length_words_sorted",
+  "original_entry_point": "sorted_list_sum",
+  "names": {
+   "sorted_list_sum": "even_length_words_sorted",
+   "lst": "words",
+   "new_lst": "kept",
+   "i": "w"
+  },
+  "programs": {
+   "fixed": "def even_length_words_sorted(words):\n    \"\"\"Remove the strings of odd length from words and return the remaining strings sorted by length; strings of equal length are in alphabetical order.\n\n    >>> even_length_words_sorted(['dd', 'c', 'ab', 'eeee'])\n    ['ab', 'dd', 'eeee']\n    \"\"\"\n    words.sort()\n    kept = []\n    for w in words:\n        if len(w) % 2 == 0:\n            kept.append(w)\n    return sorted(kept, key=len)\n",
+   "buggy": "def even_length_words_sorted(words):\n    \"\"\"Remove the strings of odd length from words and return the remaining strings sorted by length; strings of equal length are in alphabetical order.\n\n    >>> even_length_words_sorted(['dd', 'c', 'ab', 'eeee'])\n    ['ab', 'dd', 'eeee']\n    \"\"\"\n    words.sort()\n    kept = []\n    for w in words:\n        if len(w) % 2 == 0:\n            kept.append(w)\n    return kept\n"
+  }
+ },
+ "Python/151": {
+  "pair_id": "Python/151",
+  "entry_point": "sum_odd_squares",
+  "original_entry_point": "double_the_difference",
+  "names": {
+   "double_the_difference": "sum_odd_squares",
+   "lst": "nums",
+   "i": "x"
+  },
+  "programs": {
+   "fixed": "def sum_odd_squares(nums):\n    \"\"\"Return the sum of the squares of the odd positive integers in nums. Negative numbers and numbers that are not integers are ignored; an empty list gives 0.\n\n    >>> sum_odd_squares([3, 4, 1.5])\n    9\n    >>> sum_odd_squares([-5, 7])\n    49\n    >>> sum_odd_squares([])\n    0\n    \"\"\"\n    return sum([x ** 2 for x in nums if x > 0 and x % 2 != 0 and ('.' not in str(x))])\n",
+   "buggy": "def sum_odd_squares(nums):\n    \"\"\"Return the sum of the squares of the odd positive integers in nums. Negative numbers and numbers that are not integers are ignored; an empty list gives 0.\n\n    >>> sum_odd_squares([3, 4, 1.5])\n    9\n    >>> sum_odd_squares([-5, 7])\n    49\n    >>> sum_odd_squares([])\n    0\n    \"\"\"\n    return sum([x ** 2 for x in nums if x > 0 and '.' not in str(x)])\n"
+  }
+ },
+ "Python/154": {
+  "pair_id": "Python/154",
+  "entry_point": "contains_rotation",
+  "original_entry_point": "cycpattern_check",
+  "names": {
+   "cycpattern_check": "contains_rotation",
+   "a": "text",
+   "b": "word",
+   "l": "size",
+   "pat": "doubled"
+  },
+  "programs": {
+   "fixed": "def contains_rotation(text, word):\n    \"\"\"Return True when word, or any rotation of word, occurs as a substring of text; otherwise return False.\n\n    >>> contains_rotation('network', 'orkw')\n    True\n    >>> contains_rotation('abcde', 'eab')\n    False\n    >>> contains_rotation('abc', 'cb')\n    True\n    \"\"\"\n    size = len(word)\n    doubled = word + word\n    for i in range(len(text) - size + 1):\n        for j in range(size + 1):\n            if text[i:i + size] == doubled[j:j + size]:\n                return True\n    return False\n",
+   "buggy": "def contains_rotation(text, word):\n    \"\"\"Return True when word, or any rotation of word, occurs as a substring of text; otherwise return False.\n\n    >>> contains_rotation('network', 'orkw')\n    True\n    >>> contains_rotation('abcde', 'eab')\n    False\n    >>> contains_rotation('abc', 'cb')\n    True\n    \"\"\"\n    size = len(word)\n    doubled = word + word\n    for i in range(len(text) - size + 1):\n        for j in range(len(word) - size + 1):\n            if text[i:i + size] == doubled[j:j + size]:\n                return True\n    return False\n"
+  }
+ }
+}

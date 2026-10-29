@@ -1,0 +1,15 @@
+I wrote 10 pytest tests for `intersperse` in <work>\work\test_solution.py, and all of them pass (`python -m pytest -q test_solution.py`: 10 passed). The two examples in the docstring also pass when run with `python -m doctest`. I did not modify <work>\work\solution.py.
+
+No test needed an xfail mark, because `solution.py` does what its docstring says.
+
+The tests cover:
+- an empty list
+- the docstring example
+- a single element
+- two elements
+- duplicate values and a delimiter equal to the elements
+- negative numbers
+- a delimiter of 0
+- a general check: output length is 2n-1, the original values sit at the even positions and the delimiter at every odd one
+- the input list is left unchanged
+- a new list is returned, not the input list itself

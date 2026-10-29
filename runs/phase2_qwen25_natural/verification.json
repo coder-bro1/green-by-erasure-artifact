@@ -1,0 +1,356 @@
+{
+  "P1-a": {
+    "pass": true,
+    "pairs": [
+      {
+        "pair_id": "HumanEvalPlusNatural/6",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/10",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/22",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/24",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/32",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/40",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/49",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/57",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/75",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/76",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/77",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/86",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/90",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/91",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/95",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/97",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/108",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/109",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/118",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/124",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/125",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/132",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/134",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/140",
+        "fixed": true,
+        "buggy": false
+      },
+      {
+        "pair_id": "HumanEvalPlusNatural/154",
+        "fixed": true,
+        "buggy": false
+      }
+    ]
+  },
+  "P1-c": {
+    "pass": true,
+    "checks": 250
+  },
+  "P1-e": {
+    "pass": true,
+    "errors": []
+  },
+  "P1-b": {
+    "pass": true,
+    "violations": [],
+    "textual_overlaps": 0,
+    "note": "Textual overlaps are retained for manual inspection; coincidence does not establish data access."
+  },
+  "P1-d": {
+    "pass": true,
+    "sample": [
+      {
+        "test_id": "HumanEvalPlusNatural-6__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-76__fixed__qwen2-5-coder-7b-instruct__s0__code/t9",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-6__fixed__qwen2-5-coder-7b-instruct__s0__code/t0",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-108__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-124__buggy__qwen2-5-coder-7b-instruct__s0__code/t9",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-109__fixed__qwen2-5-coder-7b-instruct__s0__code/t1",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-125__buggy__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-125__buggy__qwen2-5-coder-7b-instruct__s0__code/t2",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-91__fixed__qwen2-5-coder-7b-instruct__s0__code/t8",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-86__buggy__qwen2-5-coder-7b-instruct__s0__code/t9",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-6__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-90__fixed__qwen2-5-coder-7b-instruct__s0__code/t2",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-154__fixed__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-76__buggy__qwen2-5-coder-7b-instruct__s0__code/t7",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-10__fixed__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-125__fixed__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-108__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-108__fixed__qwen2-5-coder-7b-instruct__s0__code/t6",
+        "policy": "P2",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-76__fixed__qwen2-5-coder-7b-instruct__s0__code/t7",
+        "policy": "P2",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-6__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P3",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-24__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P3",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-154__fixed__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P3",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-86__fixed__qwen2-5-coder-7b-instruct__s0__code/t3",
+        "policy": "P4",
+        "expected": "BROKEN",
+        "actual": "BROKEN"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-76__buggy__qwen2-5-coder-7b-instruct__s0__code/t6",
+        "policy": "P4",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-134__fixed__qwen2-5-coder-7b-instruct__s0__code/t7",
+        "policy": "P4",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-6__fixed__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P4",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-125__buggy__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P1",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-95__buggy__qwen2-5-coder-7b-instruct__s0__code/t5",
+        "policy": "P1",
+        "expected": "NEUTRAL",
+        "actual": "NEUTRAL"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-6__fixed__qwen2-5-coder-7b-instruct__s0__code/t8",
+        "policy": "P1",
+        "expected": "REVEALS",
+        "actual": "REVEALS"
+      },
+      {
+        "test_id": "HumanEvalPlusNatural-10__buggy__qwen2-5-coder-7b-instruct__s0__code/t4",
+        "policy": "P2",
+        "expected": "ENCODES",
+        "actual": "ENCODES"
+      }
+    ]
+  },
+  "P1-f": {
+    "pass": false,
+    "verified": 5,
+    "required": 10
+  },
+  "P1-i": {
+    "pass": true,
+    "fields": [
+      "model_digest",
+      "ollama_version",
+      "prompt_hashes",
+      "dataset_revision",
+      "harness_commit",
+      "options"
+    ]
+  },
+  "P1-m": {
+    "pass": true
+  },
+  "P1-h": {
+    "pass": true,
+    "evidence": "Offline test_resume_no_repeated_calls and persistent client-cache test; timing fields differ by construction."
+  },
+  "section8_all_pass": true,
+  "unit_test_output": "........................................................................ [ 80%]\n.................                                                        [100%]\n89 passed in 32.33s\n"
+}

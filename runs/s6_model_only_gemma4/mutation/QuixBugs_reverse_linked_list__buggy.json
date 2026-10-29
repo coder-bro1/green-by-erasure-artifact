@@ -1,0 +1,27 @@
+{
+  "pair_id": "QuixBugs/reverse_linked_list",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_076d5af48552e8d7.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-reverse_linked_list__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "a0cf72081e9247b09cb7b1e385bfa08c",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.1,
+  "finished": "2026-10-28T21:38:21.989986+00:00"
+}

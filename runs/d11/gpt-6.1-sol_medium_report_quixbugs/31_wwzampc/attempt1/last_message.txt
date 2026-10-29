@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wwzampc/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **15 passed, 6 xfailed**.
+
+The six strict xfails retain the expected `-1`: missing values can cause `RecursionError` because the right branch uses `mid` instead of `mid + 1`, so the search stops shrinking.

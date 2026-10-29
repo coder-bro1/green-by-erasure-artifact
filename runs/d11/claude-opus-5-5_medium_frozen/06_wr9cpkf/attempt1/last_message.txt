@@ -1,0 +1,19 @@
+I wrote pytest tests for `solution.py` and they pass: 1016 passed and 1 expected failure (strict xfail), with `solution.py` unchanged.
+
+**Mismatch between the docstring and the code:** the docstring says the count covers 1 to n inclusive, but the code loops over `range(1, n)`, so n itself is never counted. Docstring example 1 is wrong as a result: n=3 should give `(1, 2)` but returns `(1, 1)`. Example 2 (n=12 → `(4, 6)`) still holds, because 12 isn't a palindrome. The tests check what the code actually does, and example 1 is a strict xfail so this shows up in the results. If you decide the code should be inclusive, that test will start passing and strict mode will report it, so take the mark off then.
+
+The tests cover:
+- **Known values:** a table of inputs from n=1 to n=1000 (for example, 1000 → `(48, 60)`).
+- **Output shape:** the result is a tuple of two ints.
+- **n itself is excluded:** 11 → `(4, 5)` but 12 → `(4, 6)`.
+- **Every n from 1 to 1000:** the result matches a separate brute-force count.
+- **Counts never go down** as n increases.
+- **Zero and negative input** return `(0, 0)`.
+- **Both docstring examples.**
+
+Run them with `python -m pytest -q test_solution.py` from `<work>\work`.
+
+Files are in <work>\work:
+- test_solution.py
+
+result: Wrote `<work>\work\test_solution.py` for `solution.py` (1016 passed, 1 xfail); the xfail marks a docstring example the code doesn't match, since it leaves n out of the count.

@@ -1,0 +1,17 @@
+I wrote a pytest suite for `sorted_list_sum` and ran it: 12 tests pass and 4 are marked as expected failures. Those 4 are real bugs in `solution.py`, which I left unchanged as asked.
+
+The tests are in `<work>\work\test_solution.py`.
+
+**What passes (12):** the two docstring examples, an empty list, removing every odd-length string, keeping the empty string (its length, 0, counts as even), a single item, duplicates, alphabetical order among words of the same length, uppercase sorting before lowercase, mixed-length cases where alphabetical and length order happen to agree, and checking that it returns a list of strings.
+
+**What fails and is marked as expected (4):**
+- **No sorting by length:** the docstring says to sort shortest first, then alphabetically, but the code only sorts alphabetically. For example, `sorted_list_sum(["aaaa", "bb"])` returns `["aaaa", "bb"]` when the docstring calls for `["bb", "aaaa"]`. Three tests cover this.
+- **Your list gets reordered:** `lst.sort()` sorts the list you pass in, in place. One test covers this.
+
+The docstring also says "You may assume that all words will have the same length", which contradicts the sorting rule. The current code is only right if that assumption holds. I tested against the length-then-alphabetical rule, because the docstring states it twice.
+
+Each of the 4 marked tests will fail the run once its bug is fixed. At that point, delete its `xfail` marker.
+
+To run it: `cd <work>\work; python -m pytest -v test_solution.py`
+
+result: Added a pytest suite for solution.py (12 passed, 4 marked expected failures); it shows that solution.py doesn't sort by length as its docstring requires and that it reorders the list you pass in.

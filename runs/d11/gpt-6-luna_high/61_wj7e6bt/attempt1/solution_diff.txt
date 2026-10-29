@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index 92f35ba..3f75ea2 100644
+--- a/solution.py
++++ b/solution.py
+@@ -4,4 +4,4 @@ def flip_case(string: str) -> str:
+     >>> flip_case('Hello')
+     'hELLO'
+     """
+-    return string.lower()
++    return string.swapcase()

@@ -1,0 +1,11 @@
+I wrote `<work>\work\test_solution.py` and the suite passes, but solution.py has a bug. The tests mark the 6 bug cases as expected failures rather than hiding them. Result: 23 passed and 6 expected failures. solution.py was not modified.
+
+**The bug:** for a list with no cycle and an even number of nodes, `detect_cycle` raises `AttributeError` instead of returning `False`. On even-length lists the fast pointer `hare` lands on `None`, and the next `hare.successor` check crashes. An empty list (`detect_cycle(None)`) crashes the same way. The fix would be to change the check to `if hare is None or hare.successor is None: return False`.
+
+**What the tests cover:**
+- **Lists with a cycle (all return `True`):** a single node pointing to itself, a two-node cycle, a cycle back to the head for several lengths, and a cycle back into the middle or the last node.
+- **The list is left unchanged** after the function runs.
+- **Lists with no cycle that work:** a single node and odd lengths (3, 5, 7, 11, 101) return `False`.
+- **Bug cases:** even lengths (2, 4, 6, 10, 100) and the empty list. They check for `False` and are marked as expected to fail with `AttributeError`. They are strict, so once solution.py is fixed those tests will show as failures, signalling that the marks should be removed.
+
+result: Added `<work>\work\test_solution.py` for the tortoise-and-hare cycle detector (23 passed, 6 expected failures); solution.py crashes on even-length lists with no cycle and on an empty list.

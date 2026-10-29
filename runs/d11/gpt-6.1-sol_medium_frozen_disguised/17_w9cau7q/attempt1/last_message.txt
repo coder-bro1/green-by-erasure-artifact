@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/w9cau7q/test_solution.py). `solution.py` is unchanged.
+
+Verified with:
+```sh
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+Result: **6 passed, 6 expected failures**. Strict `xfail` marks expose the existing bug: nonempty inputs lose their final item.

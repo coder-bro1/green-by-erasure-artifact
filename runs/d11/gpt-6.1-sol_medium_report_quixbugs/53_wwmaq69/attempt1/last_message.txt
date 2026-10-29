@@ -1,0 +1,9 @@
+Added [test_solution.py](/<work>/wwmaq69/test_solution.py), covering zero, documented examples, bit patterns, large integers, and values from 0–4095.
+
+**43 tests passed**, including the docstring examples:
+
+```powershell
+python -m pytest -q test_solution.py solution.py --doctest-modules -p no:cacheprovider
+```
+
+`solution.py` is unchanged. No docstring discrepancies or xfails were needed. The command avoids an environment-related pytest cache permission issue.

@@ -1,0 +1,7 @@
+Added [test_solution.py](/<work>/wv4nef6/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q`: **9 passed, 13 xfailed**.
+
+Strict xfails preserve the documented expectations: `fibfib(1)` returns `1` instead of `0`, and `fibfib(2)` returns `2` instead of `1`, causing incorrect later values.
+
+Added pytest configuration to avoid filesystem cache permission errors.

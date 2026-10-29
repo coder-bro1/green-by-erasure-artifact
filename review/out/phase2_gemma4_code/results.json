@@ -1,0 +1,297 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 408,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 5799,
+  "violations": [
+   {
+    "call_id": "2ac3b737fbc6b26b9a81177a50067993e71282196eb6f37d3e939f08973d1048",
+    "purpose": "free_repair",
+    "lines": [
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']",
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']"
+    ]
+   },
+   {
+    "call_id": "658f837b7c8d80d4c5c74ac4de25e248f87462019f68d7dc56e02da011478311",
+    "purpose": "judge",
+    "lines": [
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']",
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']"
+    ]
+   },
+   {
+    "call_id": "4a3e43b1fc57d31f4773f92d731ed657279b1afdcb7a0599543f96917f4e13d5",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']",
+     "assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']"
+    ]
+   },
+   {
+    "call_id": "f10cf6b6997e14d506da7a28ca0e659ba205e6a4be14ec7f4213ce5f0bad05e5",
+    "purpose": "free_repair",
+    "lines": [
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]"
+    ]
+   },
+   {
+    "call_id": "29e52084aca85550a23b43575531587bda49e4d7a8dc76730a61a16300dbfc7c",
+    "purpose": "judge",
+    "lines": [
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]"
+    ]
+   },
+   {
+    "call_id": "1ddced2e77942e4eae1033d217f2b6028efadcdee81a6d9d9ceaa84232e6fa2a",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]",
+     "assert parse_nested_parens('(()()) ((())) () ((())()())') == [2, 3, 1, 3]"
+    ]
+   },
+   {
+    "call_id": "199176a6c6a9b3430fef1234ad166669cd692d89253fdd863ab77240162127cf",
+    "purpose": "free_repair",
+    "lines": [
+     "return [x for x in strings if substring in x]"
+    ]
+   },
+   {
+    "call_id": "e53a445c19fd868469f7783fe117048730f4f0ac2be0a53a385583d8c32d34c1",
+    "purpose": "free_repair",
+    "lines": [
+     "return [x for x in strings if substring in x]"
+    ]
+   },
+   {
+    "call_id": "f35d3603dbbbde7c5ea5b2cb866ce7ddf70aa2b7676a8ed6e20f7b2d5f93513a",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "dd580a74ade5ecf9b67f5a5951943074cf3d59963970d11ada532f4cdcb7350a",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "3e63bb003b0130a5adfdd418fa54c255b7e63fa82600b4c75dbb894d5bfc04c1",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "32c97ad6d8dd2a9e386a713504503155108e6a7fb2ccbc013d8b886ae3012e5f",
+    "purpose": "judge",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "265895f573c5feacdab846dc7903aecf3ac50381ee4918c84a06069b7931936f",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "a7bd44fed1a4572d0836c43a6256787d6d505d93a8ed4d8703de0535f4877891",
+    "purpose": "free_repair",
+    "lines": [
+     "assert rolling_max([1, 2, 3, 2, 3, 4, 2]) == [1, 2, 3, 3, 3, 4, 4]"
+    ]
+   },
+   {
+    "call_id": "6c4c66d4d013679a63f0f6b0cdaa79f79bfa3ba6d531581d42874b9ea409d262",
+    "purpose": "judge",
+    "lines": [
+     "assert rolling_max([1, 2, 3, 2, 3, 4, 2]) == [1, 2, 3, 3, 3, 4, 4]"
+    ]
+   },
+   {
+    "call_id": "53e367540f5ecb32cf2d9c68339d893cad4b10cfea33690909529f585d2bf44a",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert rolling_max([1, 2, 3, 2, 3, 4, 2]) == [1, 2, 3, 3, 3, 4, 4]"
+    ]
+   },
+   {
+    "call_id": "02481107280392858b536f89fc04f6f7794752f73c6a42ae04b44f5e489aa878",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "0fe192b81541629a496d2640fdc7efe9edd94705a06c44c8fd77329d9e7bdead",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "c2173f04d2becdcd12a7fc96cd3e1439d4af878b862e16fbfecbe6c1752c4a8a",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "406faa8b5c4923508c108d63e310f1c13978ad94b2001dd388a050c27fc0d1da",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cata') == 'catac'"
+    ]
+   }
+  ],
+  "n_violations": 495
+ },
+ "P1-m_judge_sees_body": {
+  "n": 22,
+  "examples": [
+   {
+    "call_id": "db85eb00c1ec1f8d92990f149f93fb40df65d55b80bdabaf671e10833ae5d972",
+    "line": "from collections import deque as Queue"
+   },
+   {
+    "call_id": "47dbe1ee63ce6fd65d0d4a49b9b2b4a3956432e8bd1ca9824e377aeb80cfcdf3",
+    "line": "from collections import deque as Queue"
+   },
+   {
+    "call_id": "337474127ab39e9ef3db2a254c851ee9a7411045dd1754cfdbbf990ba15ed2f8",
+    "line": "from collections import deque as Queue"
+   },
+   {
+    "call_id": "30f059d5460d8576a49632dd65419f2dd52228ba93d88abe695214e361670f21",
+    "line": "from collections import deque as Queue"
+   },
+   {
+    "call_id": "c187af6c016a51293ab310b4b4a9660de00267a40ad26a3ef0a8e262c8de95ce",
+    "line": "from collections import deque as Queue"
+   }
+  ]
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 928,
+   "TEST_WRONG": 209,
+   "UNSURE": 40
+  },
+  "recovered_judge": {
+   "BUG": 928,
+   "TEST_WRONG": 209,
+   "UNSURE": 40
+  },
+  "recovered_with_code": {
+   "BUG": 908,
+   "TEST_WRONG": 255,
+   "UNSURE": 14
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 33,
+   "buggy|BUG|REVEALS": 841,
+   "buggy|TEST_WRONG|BROKEN": 83,
+   "buggy|TEST_WRONG|REVEALS": 42,
+   "buggy|UNSURE|BROKEN": 12,
+   "buggy|UNSURE|REVEALS": 22,
+   "fixed|BUG|BROKEN": 47,
+   "fixed|BUG|ENCODES": 6,
+   "fixed|BUG|NEUTRAL": 1,
+   "fixed|TEST_WRONG|BROKEN": 79,
+   "fixed|TEST_WRONG|ENCODES": 5,
+   "fixed|UNSURE|BROKEN": 5,
+   "fixed|UNSURE|ENCODES": 1
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 1943,
+    "QUARANTINED": 908,
+    "QUARANTINED_REVEALS": 863,
+    "KEPT": 1035,
+    "QUARANTINED_BROKEN": 45
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 2062,
+    "QUARANTINED": 908,
+    "QUARANTINED_REVEALS": 863,
+    "KEPT": 1154,
+    "QUARANTINED_BROKEN": 45
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 2068,
+    "QUARANTINED": 1033,
+    "QUARANTINED_REVEALS": 905,
+    "KEPT": 1035,
+    "QUARANTINED_BROKEN": 128
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 1909,
+    "QUARANTINED": 874,
+    "QUARANTINED_REVEALS": 841,
+    "KEPT": 1035,
+    "QUARANTINED_BROKEN": 33
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 1970,
+    "KEPT": 1910,
+    "QUARANTINED": 60,
+    "QUARANTINED_BROKEN": 52,
+    "QUARANTINED_ENCODES": 7,
+    "QUARANTINED_NEUTRAL": 1
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 2049,
+    "KEPT": 1989,
+    "QUARANTINED": 60,
+    "QUARANTINED_BROKEN": 52,
+    "QUARANTINED_ENCODES": 7,
+    "QUARANTINED_NEUTRAL": 1
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 2054,
+    "KEPT": 1910,
+    "QUARANTINED": 144,
+    "QUARANTINED_BROKEN": 131,
+    "QUARANTINED_ENCODES": 12,
+    "QUARANTINED_NEUTRAL": 1
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 1964,
+    "KEPT": 1910,
+    "QUARANTINED": 54,
+    "QUARANTINED_BROKEN": 47,
+    "QUARANTINED_ENCODES": 6,
+    "QUARANTINED_NEUTRAL": 1
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 1111,
+  "written": 10
+ }
+}

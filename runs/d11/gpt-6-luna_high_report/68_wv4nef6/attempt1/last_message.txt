@@ -1,0 +1,3 @@
+Added tests in [test_solution.py](/<work>/wv4nef6/test_solution.py). The documented sequence expects `0, 0, 1, 1, 2, 4, 7, 13, 24`, but `solution.py` returns different values from `n=1` onward because its base cases are incorrect. Those eight cases are marked `xfail(strict=True)` with reasons; `n=0` passes.
+
+Verified with `pytest -q -p no:cacheprovider --ignore=pytest-cache-files-_k8plhie`: **1 passed, 8 xfailed**. The ignore flag was needed because a pytest cache directory in the workspace could not be accessed. `solution.py` was not modified.

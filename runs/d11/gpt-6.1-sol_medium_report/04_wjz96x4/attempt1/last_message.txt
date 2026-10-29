@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wjz96x4/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **120 passed, 44 xfailed**.
+
+The strict xfails preserve the documented expectations: `solution.py` spells `Jupiter` as `Jupyter`, causing valid Jupiter inputs to be rejected, incorrect names in returned ranges, and invalid `Jupyter` inputs to be accepted.

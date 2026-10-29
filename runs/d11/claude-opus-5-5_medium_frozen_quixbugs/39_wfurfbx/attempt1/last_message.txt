@@ -1,0 +1,31 @@
+I wrote 13 pytest tests for `solution.py` and the suite runs green: 11 pass and 2 are marked as expected failures. I did not modify `solution.py`. While writing the tests I found a real bug in it.
+
+**The bug:** `depth_first_search` checks `nodesvisited` but never adds anything to it. So whenever the search reaches a cycle before it finds the goal, it loops until Python raises `RecursionError`. This happens in two cases:
+- A cycle where the goal can't be reached at all.
+- A cycle where the goal is reachable, but the search goes into the loop before it tries the branch that leads to the goal.
+
+The fix is one line in `search_from`, but I left it alone because you asked me not to edit the file:
+```python
+nodesvisited.add(node)
+```
+
+**How the tests handle it:** the two cases above are marked `xfail(raises=RecursionError, strict=True)`. That keeps the suite passing while still recording the bug. Because the marks are strict, those two tests will start failing once the bug is fixed, which is your cue to remove the marks. They also lower the recursion limit to 500 while they run, so they fail fast.
+
+**What the 11 passing tests cover:**
+- The start node is the goal.
+- The goal is a direct successor.
+- Isolated nodes, which can't reach each other.
+- A 50-node chain, searched both forward and backward.
+- Edges only count in one direction.
+- The goal sits in a later branch, or in no branch.
+- A diamond-shaped graph.
+- The goal is matched by identity, not by having the same value.
+- Cycles and self-loops where the goal is found before the search loops back.
+
+The tests build every node with its own list of successors. That's because `node.py` uses a shared mutable default (`successors=[]`), which would otherwise leak edges between tests.
+
+Command run: `python -m pytest -v test_solution.py` (Python 3.12.10, pytest 9.1.1) gave 11 passed, 2 xfailed.
+
+File created: <work>\work\test_solution.py
+
+result: Added 13 pytest tests for `depth_first_search` in <work>\work\test_solution.py (11 pass, 2 expected failures). The expected failures record a real bug: `solution.py` never marks nodes as visited, so it recurses forever on cycles.

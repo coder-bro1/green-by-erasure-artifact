@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wfcjjp9/test_solution.py). `solution.py` is unchanged.
+
+Validation: **21 passed, 8 xfailed** using `python -m pytest test_solution.py -q -p no:cacheprovider`.
+
+`decode_cyclic` rotates groups left again instead of reversing the encoding; for example, `"bca"` becomes `"cab"` instead of `"abc"`. Those tests retain the correct expected values and use `@pytest.mark.xfail(strict=True, reason=...)`.

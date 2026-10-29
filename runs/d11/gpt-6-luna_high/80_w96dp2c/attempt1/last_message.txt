@@ -1,0 +1,3 @@
+Added pytest coverage for the shorter total character count, ties, and empty lists. The tests exposed a reversed selection in `total_match`; I corrected it so ties return the first list.
+
+Verified with `pytest tests -q -p no:cacheprovider`: **5 passed**. The tests are in [test_solution.py](<work>/w96dp2c/tests/test_solution.py), with import setup in [conftest.py](<work>/w96dp2c/tests/conftest.py).

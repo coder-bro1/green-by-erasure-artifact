@@ -1,0 +1,16 @@
+I wrote pytest tests for `fruit_distribution` in `solution.py`. All 14 pass (`python -m pytest -q test_solution.py`: 14 passed in 0.02s). I didn't change `solution.py`.
+
+**What the tests cover:**
+- **Docstring examples:** all four, each with the expected value the docstring gives.
+- **More inputs:** zero fruit, zero mangoes, larger numbers, and numbers with more than one digit.
+- **Extra spaces:** repeated spaces between words don't change the result.
+- **Return value:** it is an `int`, and the input string is left unchanged.
+
+None of the tests showed the code disagreeing with its docstring, so none are marked `@pytest.mark.xfail`.
+
+The function finds the numbers by splitting the string on spaces and keeping tokens that are all digits. A number with punctuation stuck to it, such as "5," or "6.", would be skipped. The docstring doesn't say how such input should be handled, so I didn't test for it.
+
+Files are in <work>\work:
+- test_solution.py
+
+result: All 14 new pytest tests for `fruit_distribution` pass with `solution.py` unchanged and none needed xfail.

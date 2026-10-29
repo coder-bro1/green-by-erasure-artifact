@@ -1,0 +1,17 @@
+I wrote `<work>\work\test_solution.py`, and it runs clean, but only because 10 of the 21 tests are marked as expected failures: `solution.py` has a bug. Result is 11 passed, 10 xfailed. Git status confirms `solution.py` was not modified.
+
+**The bug:** in `digits_sum`, the line `n[0] = n[0] * neg * -1` flips the sign of the leading digit the wrong way.
+- For positive numbers it makes the first digit negative, so `1` and `10` come out to -1.
+- For negative numbers it leaves the first digit positive, so `-11` comes out to 2 instead of 0.
+
+Two of the three docstring examples fail because of this:
+- `count_nums([-1, 11, -11])` returns 2; the spec says 1.
+- `count_nums([1, 1, 2])` returns 0; the spec says 3.
+
+**How the tests handle it:** I wrote them against the docstring spec, not the current behaviour.
+- **11 normal tests** cover cases where the code happens to get the right answer: an empty list, zeros, `[19]`, `[-19]`, `[-123]`, `[12, 23, 34, -45, -56, 0]`, that it returns an int, that it doesn't change the input list, that it accepts tuples and generators, and a very large number.
+- **10 tests marked `xfail(strict=True)`** hit the bug: the two failing docstring examples, positive numbers `1, 5, 10, 100` (should be counted), and negative numbers `-1, -10, -11, -100` (should not be counted).
+
+Because the marks are strict, these tests will start failing once someone fixes `solution.py`, as a reminder to remove the marks. If you would rather have tests that lock in the current buggy behaviour, flipping those expectations is a small change.
+
+result: Added `<work>\work\test_solution.py` (11 passed, 10 xfailed) without touching `solution.py`; the 10 expected failures are there because `count_nums` flips the sign of the leading digit and fails 2 of its 3 docstring examples.

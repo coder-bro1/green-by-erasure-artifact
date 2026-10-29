@@ -1,0 +1,3 @@
+Added [test_solution.py](/<work>/w4rk2xn/test_solution.py). The targeted run passed: **7 passed, 3 xfailed**.
+
+The xfails cover internal `y` characters: `vowels_count` counts every `y`, though its docstring says `y` is a vowel only at the end of the word. A later full discovery run hit a permission error while scanning a pytest cache directory; running the test file directly with the cache provider disabled passed. `solution.py` was not modified.

@@ -1,0 +1,12 @@
+diff --git a/solution.py b/solution.py
+index 5d89fb3..3da0ec5 100644
+--- a/solution.py
++++ b/solution.py
+@@ -9,5 +9,5 @@ def monotonic(l: list):
+     True
+     """
+     if l == sorted(l) or l == sorted(l, reverse=True):
+-        return False
+-    return True
++        return True
++    return False

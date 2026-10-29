@@ -1,0 +1,893 @@
+{
+  "run_id": "phase2_qwen25_seed2",
+  "config": {
+    "model": "qwen2.5-coder:7b-instruct",
+    "gen_inputs": [
+      "code"
+    ],
+    "benchmarks": [
+      "HumanEvalFix"
+    ],
+    "seed": 2,
+    "temperature": 0.8,
+    "subset": "configs/phase2_seed_subset.json"
+  },
+  "model": "qwen2.5-coder:7b-instruct",
+  "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+  "ollama_version": "0.40.1",
+  "models": {
+    "qwen2.5-coder:7b-instruct": {
+      "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      },
+      "wall_seconds": 65.65600000001723,
+      "load_seconds": 34.9603136,
+      "tokens_per_second": 12.174651462556099,
+      "peak_gpu_mib": 6720,
+      "memory_samples": 265,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen2.5-coder:7b-instruct",
+        "model": "qwen2.5-coder:7b-instruct",
+        "size": 5133943438,
+        "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "7.6B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T03:40:57.1292029+06:00",
+        "size_vram": 5133943438,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "created_at": "2026-10-08T21:35:57.1286876Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(-5, -5) == -10\n    assert add(100, 200) == 300\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 61611145100,
+        "load_duration": 34960313600,
+        "prompt_eval_count": 50,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 18755278000,
+        "eval_count": 96,
+        "eval_duration": 7885236000
+      },
+      "timestamp": "2026-10-08T21:35:59.154269+00:00",
+      "harness_commit": "78261db0cc1faae7f498fc3d9798d3827fbb9243",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "qwen3.5:9b": {
+      "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "details": {
+        "parent_model": "model.gguf",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 50.17200000002049,
+      "load_seconds": 33.5554006,
+      "tokens_per_second": 52.73447953429945,
+      "peak_gpu_mib": 7157,
+      "memory_samples": 196,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen3.5:9b",
+        "model": "qwen3.5:9b",
+        "size": 5828646010,
+        "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "9.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T10:07:30.3130046+06:00",
+        "size_vram": 5828646010,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen3.5:9b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen3.5:9b",
+        "created_at": "2026-10-09T04:02:30.3124752Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\n\ndef add(a, b):\n    return a + b\n\n\n@pytest.mark.parametrize(\"a,b\", [(1, 2), (0, 0), (-1, -1)])\ndef test_add(a, b):\n    assert add(a, b) == a + b\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 46080394900,
+        "load_duration": 33555400600,
+        "prompt_eval_count": 33,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11248236000,
+        "eval_count": 67,
+        "eval_duration": 1270516000
+      },
+      "timestamp": "2026-10-09T04:02:32.354252+00:00",
+      "harness_commit": "720ec172eb4dd153fc8ceb1da6180b592280b689",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "gemma4:12b": {
+      "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+      "details": {
+        "parent_model": "imatrix-20260927-12b/model-q4_K_M.gguf",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "11.9B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 3840,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 55.359000000025844,
+      "load_seconds": 39.0296813,
+      "tokens_per_second": 77.85863406985187,
+      "peak_gpu_mib": 9237,
+      "memory_samples": 208,
+      "thinking_returned": false,
+      "resident": {
+        "name": "gemma4:12b",
+        "model": "gemma4:12b",
+        "size": 1090120580,
+        "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "11.9B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T15:02:42.6803519+06:00",
+        "size_vram": 1090120580,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "gemma4:12b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "gemma4:12b",
+        "created_at": "2026-10-09T08:57:42.6798262Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(1.5, 2.5) == 4.0\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 51267437700,
+        "load_duration": 39029681300,
+        "prompt_eval_count": 37,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11126798000,
+        "eval_count": 86,
+        "eval_duration": 1104566000
+      },
+      "timestamp": "2026-10-09T08:57:44.726301+00:00",
+      "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    }
+  },
+  "options": {
+    "temperature": 0.8,
+    "seed": 2,
+    "num_ctx": 8192,
+    "num_predict": 2048
+  },
+  "think": false,
+  "dataset": {
+    "repository": "bigcode/humanevalpack",
+    "revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+    "license": "MIT",
+    "file": "python/test-00000-of-00001.parquet",
+    "file_sha256": "ed5f15d789156e21222bfcd556c425a39042355c84ae1e8b058abd6a3d7f8075"
+  },
+  "dataset_revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+  "quixbugs_commit": null,
+  "judge": {
+    "prompt": "judge_v2b",
+    "ablation_prompt": "judge_with_code_v2b",
+    "prompt_sha256": {
+      "judge_v2b": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+      "judge_with_code_v2b": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d"
+    },
+    "parser_sha256": "870c2a3969c295c85bae1f481b30d726ca1dd38602687af84c264daf6a45883d"
+  },
+  "excluded_tasks": [],
+  "prompt_hashes": {
+    "fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363"
+  },
+  "harness_commit": "4f541c26e7a8480d27e349339e2c07f27b96338d",
+  "harness_files_sha256": {
+    "src/gbe/benchmarks.py": "db94f13c4ec5ffce7515b7fd6e0938b2d30d9415855935939022cff561758442",
+    "src/gbe/evaluate.py": "81bf58b5bbe4ddf0a555952c6342d69c2f0b36a8da59f6f052fc09dc5c24363f",
+    "src/gbe/execute.py": "88bf682d3d4c409ff62f443c7e511da7b6c2ead3f50c662e76c8e0efa6f59384",
+    "src/gbe/generate.py": "4af5810c351b1956a57314fb41ed10b8bb41b404af74dccf3ecdc477949b2d2a",
+    "src/gbe/llm.py": "e445b64013e1cc677488f63e6e27485239a5e042e9a31d23e23a34bfccbe3a15",
+    "src/gbe/policies.py": "5be43d5d728aac9d7110a99d68751182e589186c1ec1dbcf99a1f900b95f06a0",
+    "src/gbe/pytest_probe.py": "b2df9d42f14829e3b04f1b8e48fd4c0638e5fdf69a29935abdbbf1445f4a918d",
+    "src/gbe/quixbugs.py": "43ca946e7929a8e7d0427f5e448cb661aac1320add3f5313bc3e18cff84150b9",
+    "src/gbe/report.py": "044c4b0d489e30fc913f147ef83a98ace3606968d1364a7b7a269d216a8dbf40",
+    "src/gbe/runner.py": "1fa3e1c510cc98e09d9fb1f1ce74c823587e34b3a7fe2e3dad09a50cbd8c77b1",
+    "src/gbe/util.py": "955a6a3faf55e11248f14a3cc888ff947f733a845ccf44482e434771a06aa47d",
+    "src/gbe/__init__.py": "96e4ce45e295f08fd440e06e9f7260204af2ec340ec173b9a0472af0e40927f2",
+    "prompts/fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "prompts/free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "prompts/generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "prompts/judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "prompts/judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "prompts/judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "prompts/judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "prompts/overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363",
+    "pyproject.toml": "175c943243f769d40ce1f0a61ccc04387e60d9335d3d3088e11edf46fb92326c",
+    "requirements.txt": "71f20ad0cff3f7b0f386d72389aa079c17975a1e1179a579b16a838488074ecb"
+  },
+  "start_time": "2026-10-12T22:51:03.639456+00:00",
+  "end_time": "2026-10-13T01:22:42.276759+00:00",
+  "input_test_hashes": {
+    "HumanEvalFix-5__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "68d345203011b858574611e9c66703d643a5460bd342e8f1600bb3d5bd058039",
+      "P2": "68d345203011b858574611e9c66703d643a5460bd342e8f1600bb3d5bd058039",
+      "P3": "68d345203011b858574611e9c66703d643a5460bd342e8f1600bb3d5bd058039",
+      "P4": "68d345203011b858574611e9c66703d643a5460bd342e8f1600bb3d5bd058039"
+    },
+    "HumanEvalFix-5__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "5ee6b964c1cef283806ae56584bc7e178d52786e2c8a073b5bbb07ee08fafbb6",
+      "P2": "5ee6b964c1cef283806ae56584bc7e178d52786e2c8a073b5bbb07ee08fafbb6",
+      "P3": "5ee6b964c1cef283806ae56584bc7e178d52786e2c8a073b5bbb07ee08fafbb6",
+      "P4": "5ee6b964c1cef283806ae56584bc7e178d52786e2c8a073b5bbb07ee08fafbb6"
+    },
+    "HumanEvalFix-8__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "5ae80e577b7080407f324bf55259d103bd0ce27b33c597b73be87b98efd8ae1e",
+      "P2": "5ae80e577b7080407f324bf55259d103bd0ce27b33c597b73be87b98efd8ae1e",
+      "P3": "5ae80e577b7080407f324bf55259d103bd0ce27b33c597b73be87b98efd8ae1e",
+      "P4": "5ae80e577b7080407f324bf55259d103bd0ce27b33c597b73be87b98efd8ae1e"
+    },
+    "HumanEvalFix-8__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "b29162b97aaad59305a2bb769fd9a33d97732264d674c8464f064cf798889143",
+      "P2": "b29162b97aaad59305a2bb769fd9a33d97732264d674c8464f064cf798889143",
+      "P3": "b29162b97aaad59305a2bb769fd9a33d97732264d674c8464f064cf798889143",
+      "P4": "b29162b97aaad59305a2bb769fd9a33d97732264d674c8464f064cf798889143"
+    },
+    "HumanEvalFix-9__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "ca1479bae84b4bab580b5da3f47a9ff4b677392836c86c9cd80353b816f1d1fc",
+      "P2": "ca1479bae84b4bab580b5da3f47a9ff4b677392836c86c9cd80353b816f1d1fc",
+      "P3": "ca1479bae84b4bab580b5da3f47a9ff4b677392836c86c9cd80353b816f1d1fc",
+      "P4": "ca1479bae84b4bab580b5da3f47a9ff4b677392836c86c9cd80353b816f1d1fc"
+    },
+    "HumanEvalFix-9__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "f334f16f420cfa21c22abf63bd0b3ec151d1c3e0450f11113daf972c0894bb45",
+      "P2": "f334f16f420cfa21c22abf63bd0b3ec151d1c3e0450f11113daf972c0894bb45",
+      "P3": "f334f16f420cfa21c22abf63bd0b3ec151d1c3e0450f11113daf972c0894bb45",
+      "P4": "f334f16f420cfa21c22abf63bd0b3ec151d1c3e0450f11113daf972c0894bb45"
+    },
+    "HumanEvalFix-10__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "ad743e6a8b3d1c49f30e90559f4ef58ae8e9b27712c37d3ad4fce1bae4280f2a",
+      "P2": "ad743e6a8b3d1c49f30e90559f4ef58ae8e9b27712c37d3ad4fce1bae4280f2a",
+      "P3": "ad743e6a8b3d1c49f30e90559f4ef58ae8e9b27712c37d3ad4fce1bae4280f2a",
+      "P4": "ad743e6a8b3d1c49f30e90559f4ef58ae8e9b27712c37d3ad4fce1bae4280f2a"
+    },
+    "HumanEvalFix-10__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "5da427afdd73b89020e5d2815fb12c01416d9f1c6f62b228bea8a5bc49b7b8ba",
+      "P2": "5da427afdd73b89020e5d2815fb12c01416d9f1c6f62b228bea8a5bc49b7b8ba",
+      "P3": "5da427afdd73b89020e5d2815fb12c01416d9f1c6f62b228bea8a5bc49b7b8ba",
+      "P4": "5da427afdd73b89020e5d2815fb12c01416d9f1c6f62b228bea8a5bc49b7b8ba"
+    },
+    "HumanEvalFix-12__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "c28d0edc573ac9b574d09fbadf67e78058c102a968af445086a6ed3157832c2a",
+      "P2": "c28d0edc573ac9b574d09fbadf67e78058c102a968af445086a6ed3157832c2a",
+      "P3": "c28d0edc573ac9b574d09fbadf67e78058c102a968af445086a6ed3157832c2a",
+      "P4": "c28d0edc573ac9b574d09fbadf67e78058c102a968af445086a6ed3157832c2a"
+    },
+    "HumanEvalFix-12__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "fece50eb6b17f14c791d389e80ff18119678eab4c5f797c77804497d1567eff6",
+      "P2": "fece50eb6b17f14c791d389e80ff18119678eab4c5f797c77804497d1567eff6",
+      "P3": "fece50eb6b17f14c791d389e80ff18119678eab4c5f797c77804497d1567eff6",
+      "P4": "fece50eb6b17f14c791d389e80ff18119678eab4c5f797c77804497d1567eff6"
+    },
+    "HumanEvalFix-13__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "fff31df6df8b5a132062b3baeca081fc9c1d2e1edbffdafba1c5a3ae1017ab5f",
+      "P2": "fff31df6df8b5a132062b3baeca081fc9c1d2e1edbffdafba1c5a3ae1017ab5f",
+      "P3": "fff31df6df8b5a132062b3baeca081fc9c1d2e1edbffdafba1c5a3ae1017ab5f",
+      "P4": "fff31df6df8b5a132062b3baeca081fc9c1d2e1edbffdafba1c5a3ae1017ab5f"
+    },
+    "HumanEvalFix-13__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "6f844cfb6d83ba9bfa97002b7da3982ec302529e48581bd101d2528a31d67486",
+      "P2": "6f844cfb6d83ba9bfa97002b7da3982ec302529e48581bd101d2528a31d67486",
+      "P3": "6f844cfb6d83ba9bfa97002b7da3982ec302529e48581bd101d2528a31d67486",
+      "P4": "6f844cfb6d83ba9bfa97002b7da3982ec302529e48581bd101d2528a31d67486"
+    },
+    "HumanEvalFix-19__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "37827630240227dd84862829f69377431ada0575b29dc40abc2d10fdf63b5ad0",
+      "P2": "37827630240227dd84862829f69377431ada0575b29dc40abc2d10fdf63b5ad0",
+      "P3": "37827630240227dd84862829f69377431ada0575b29dc40abc2d10fdf63b5ad0",
+      "P4": "37827630240227dd84862829f69377431ada0575b29dc40abc2d10fdf63b5ad0"
+    },
+    "HumanEvalFix-19__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "eabf85b0a9275caa73ca1a5fe1f7142693713bfcf7e39a4263136693bdfc0b4c",
+      "P2": "eabf85b0a9275caa73ca1a5fe1f7142693713bfcf7e39a4263136693bdfc0b4c",
+      "P3": "eabf85b0a9275caa73ca1a5fe1f7142693713bfcf7e39a4263136693bdfc0b4c",
+      "P4": "eabf85b0a9275caa73ca1a5fe1f7142693713bfcf7e39a4263136693bdfc0b4c"
+    },
+    "HumanEvalFix-24__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "3851c4dd459258472f29d824c14e2d6ea31b53dfe54f3d29bf0d753e9eb4feb4",
+      "P2": "3851c4dd459258472f29d824c14e2d6ea31b53dfe54f3d29bf0d753e9eb4feb4",
+      "P3": "3851c4dd459258472f29d824c14e2d6ea31b53dfe54f3d29bf0d753e9eb4feb4",
+      "P4": "3851c4dd459258472f29d824c14e2d6ea31b53dfe54f3d29bf0d753e9eb4feb4"
+    },
+    "HumanEvalFix-24__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "43c1b21d05e8401003c4713762580d819dab66cf41fb53d59308a9dddf276688",
+      "P2": "43c1b21d05e8401003c4713762580d819dab66cf41fb53d59308a9dddf276688",
+      "P3": "43c1b21d05e8401003c4713762580d819dab66cf41fb53d59308a9dddf276688",
+      "P4": "43c1b21d05e8401003c4713762580d819dab66cf41fb53d59308a9dddf276688"
+    },
+    "HumanEvalFix-27__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "a4993d90671a12b28f36a56745243d99c1298e59c8a45d9161266e0d55ca258d",
+      "P2": "a4993d90671a12b28f36a56745243d99c1298e59c8a45d9161266e0d55ca258d",
+      "P3": "a4993d90671a12b28f36a56745243d99c1298e59c8a45d9161266e0d55ca258d",
+      "P4": "a4993d90671a12b28f36a56745243d99c1298e59c8a45d9161266e0d55ca258d"
+    },
+    "HumanEvalFix-27__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "5a3854c9c4384022da56f613c8de5123f783e54598f905ea91a7e2fdc1cc7990",
+      "P2": "5a3854c9c4384022da56f613c8de5123f783e54598f905ea91a7e2fdc1cc7990",
+      "P3": "5a3854c9c4384022da56f613c8de5123f783e54598f905ea91a7e2fdc1cc7990",
+      "P4": "5a3854c9c4384022da56f613c8de5123f783e54598f905ea91a7e2fdc1cc7990"
+    },
+    "HumanEvalFix-31__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "693b676b18bc05e56052b684ce26bc5e7aa3bc508ea233cb7507c9d411751bcc",
+      "P2": "693b676b18bc05e56052b684ce26bc5e7aa3bc508ea233cb7507c9d411751bcc",
+      "P3": "693b676b18bc05e56052b684ce26bc5e7aa3bc508ea233cb7507c9d411751bcc",
+      "P4": "693b676b18bc05e56052b684ce26bc5e7aa3bc508ea233cb7507c9d411751bcc"
+    },
+    "HumanEvalFix-31__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "8df29df5ab52f6a5f75acb241138725f5cf515f966347520cbb2c283d64325b0",
+      "P2": "8df29df5ab52f6a5f75acb241138725f5cf515f966347520cbb2c283d64325b0",
+      "P3": "8df29df5ab52f6a5f75acb241138725f5cf515f966347520cbb2c283d64325b0",
+      "P4": "8df29df5ab52f6a5f75acb241138725f5cf515f966347520cbb2c283d64325b0"
+    },
+    "HumanEvalFix-38__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "8a9894f83003375d0b1e89542aee202b0f9f761d13d06b29765253597747881a",
+      "P2": "8a9894f83003375d0b1e89542aee202b0f9f761d13d06b29765253597747881a",
+      "P3": "8a9894f83003375d0b1e89542aee202b0f9f761d13d06b29765253597747881a",
+      "P4": "8a9894f83003375d0b1e89542aee202b0f9f761d13d06b29765253597747881a"
+    },
+    "HumanEvalFix-38__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "acd5e8ec42324676710a4aae8e78fe475e926fb40f95b734813260d1a41d71b1",
+      "P2": "acd5e8ec42324676710a4aae8e78fe475e926fb40f95b734813260d1a41d71b1",
+      "P3": "acd5e8ec42324676710a4aae8e78fe475e926fb40f95b734813260d1a41d71b1",
+      "P4": "acd5e8ec42324676710a4aae8e78fe475e926fb40f95b734813260d1a41d71b1"
+    },
+    "HumanEvalFix-43__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a",
+      "P2": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a",
+      "P3": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a",
+      "P4": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a"
+    },
+    "HumanEvalFix-43__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a",
+      "P2": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a",
+      "P3": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a",
+      "P4": "34c8d9622e08a7bed5cb30c19f08418c4209af12f75161e70b47004d96aae32a"
+    },
+    "HumanEvalFix-56__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "4c3335005153e0e691d0588cb09dd1c673c9700373ed10a7bae40b145f55533f",
+      "P2": "4c3335005153e0e691d0588cb09dd1c673c9700373ed10a7bae40b145f55533f",
+      "P3": "4c3335005153e0e691d0588cb09dd1c673c9700373ed10a7bae40b145f55533f",
+      "P4": "4c3335005153e0e691d0588cb09dd1c673c9700373ed10a7bae40b145f55533f"
+    },
+    "HumanEvalFix-56__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "87518e7cec59ea26050e142035a44708c94d58de0bc8f7a488f33a3c74d50c03",
+      "P2": "87518e7cec59ea26050e142035a44708c94d58de0bc8f7a488f33a3c74d50c03",
+      "P3": "87518e7cec59ea26050e142035a44708c94d58de0bc8f7a488f33a3c74d50c03",
+      "P4": "87518e7cec59ea26050e142035a44708c94d58de0bc8f7a488f33a3c74d50c03"
+    },
+    "HumanEvalFix-57__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "9bc948604ee803cd6b8574fc833a076b5e355a9d2be6b4b2571a3929db15aa46",
+      "P2": "9bc948604ee803cd6b8574fc833a076b5e355a9d2be6b4b2571a3929db15aa46",
+      "P3": "9bc948604ee803cd6b8574fc833a076b5e355a9d2be6b4b2571a3929db15aa46",
+      "P4": "9bc948604ee803cd6b8574fc833a076b5e355a9d2be6b4b2571a3929db15aa46"
+    },
+    "HumanEvalFix-57__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "52088e28faa8ddb92d519aa40b801dc6e31cfd8dcdc96bacfd6294a0d00c91d3",
+      "P2": "52088e28faa8ddb92d519aa40b801dc6e31cfd8dcdc96bacfd6294a0d00c91d3",
+      "P3": "52088e28faa8ddb92d519aa40b801dc6e31cfd8dcdc96bacfd6294a0d00c91d3",
+      "P4": "52088e28faa8ddb92d519aa40b801dc6e31cfd8dcdc96bacfd6294a0d00c91d3"
+    },
+    "HumanEvalFix-62__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "554d99f61155ee5580036e7339f3e5d88391b2abf95d5455e4a17c51ae4101fd",
+      "P2": "554d99f61155ee5580036e7339f3e5d88391b2abf95d5455e4a17c51ae4101fd",
+      "P3": "554d99f61155ee5580036e7339f3e5d88391b2abf95d5455e4a17c51ae4101fd",
+      "P4": "554d99f61155ee5580036e7339f3e5d88391b2abf95d5455e4a17c51ae4101fd"
+    },
+    "HumanEvalFix-62__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "0175b5ddcd306ad5af9e4386d308ece96b6670c6a2b9e9f505df8d3b1b6c85cc",
+      "P2": "0175b5ddcd306ad5af9e4386d308ece96b6670c6a2b9e9f505df8d3b1b6c85cc",
+      "P3": "0175b5ddcd306ad5af9e4386d308ece96b6670c6a2b9e9f505df8d3b1b6c85cc",
+      "P4": "0175b5ddcd306ad5af9e4386d308ece96b6670c6a2b9e9f505df8d3b1b6c85cc"
+    },
+    "HumanEvalFix-63__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f",
+      "P2": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f",
+      "P3": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f",
+      "P4": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f"
+    },
+    "HumanEvalFix-63__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f",
+      "P2": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f",
+      "P3": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f",
+      "P4": "bb1d3667fdcde3e8ac84e8ca104a1d0b5c1cf39aa9295417f53d7f12e4aba72f"
+    },
+    "HumanEvalFix-64__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "088d1cfc38ae6df1a834d89cd7d3ab1c4b3db419e1411d7c784621446a168bc2",
+      "P2": "088d1cfc38ae6df1a834d89cd7d3ab1c4b3db419e1411d7c784621446a168bc2",
+      "P3": "088d1cfc38ae6df1a834d89cd7d3ab1c4b3db419e1411d7c784621446a168bc2",
+      "P4": "088d1cfc38ae6df1a834d89cd7d3ab1c4b3db419e1411d7c784621446a168bc2"
+    },
+    "HumanEvalFix-64__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "b95d6c8b081b238af450e360d4eceb2851b47267e34d36cda1fe6205a05f7392",
+      "P2": "b95d6c8b081b238af450e360d4eceb2851b47267e34d36cda1fe6205a05f7392",
+      "P3": "b95d6c8b081b238af450e360d4eceb2851b47267e34d36cda1fe6205a05f7392",
+      "P4": "b95d6c8b081b238af450e360d4eceb2851b47267e34d36cda1fe6205a05f7392"
+    },
+    "HumanEvalFix-65__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "81465ce22f601afd4965579158a329c47c4eda968ffc8fe015d4d5ee09a57d9d",
+      "P2": "81465ce22f601afd4965579158a329c47c4eda968ffc8fe015d4d5ee09a57d9d",
+      "P3": "81465ce22f601afd4965579158a329c47c4eda968ffc8fe015d4d5ee09a57d9d",
+      "P4": "81465ce22f601afd4965579158a329c47c4eda968ffc8fe015d4d5ee09a57d9d"
+    },
+    "HumanEvalFix-65__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "b34869977c76b128cc9db3a9fd5676e920996b8d5febe94f8cb1af7de36d7356",
+      "P2": "b34869977c76b128cc9db3a9fd5676e920996b8d5febe94f8cb1af7de36d7356",
+      "P3": "b34869977c76b128cc9db3a9fd5676e920996b8d5febe94f8cb1af7de36d7356",
+      "P4": "b34869977c76b128cc9db3a9fd5676e920996b8d5febe94f8cb1af7de36d7356"
+    },
+    "HumanEvalFix-67__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "b361b693bea90ad23d3163fe40bf356576a90b2ee18ad9d03e27a62749f07081",
+      "P2": "b361b693bea90ad23d3163fe40bf356576a90b2ee18ad9d03e27a62749f07081",
+      "P3": "b361b693bea90ad23d3163fe40bf356576a90b2ee18ad9d03e27a62749f07081",
+      "P4": "b361b693bea90ad23d3163fe40bf356576a90b2ee18ad9d03e27a62749f07081"
+    },
+    "HumanEvalFix-67__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "3faa31b7e27b9676bf430582daa5fce990840f3844c8ae05f67b74204694f10c",
+      "P2": "3faa31b7e27b9676bf430582daa5fce990840f3844c8ae05f67b74204694f10c",
+      "P3": "3faa31b7e27b9676bf430582daa5fce990840f3844c8ae05f67b74204694f10c",
+      "P4": "3faa31b7e27b9676bf430582daa5fce990840f3844c8ae05f67b74204694f10c"
+    },
+    "HumanEvalFix-72__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "7d94c617446d952519baec5d6ede3f07c4c02205c50be9c00024591fa649188a",
+      "P2": "7d94c617446d952519baec5d6ede3f07c4c02205c50be9c00024591fa649188a",
+      "P3": "7d94c617446d952519baec5d6ede3f07c4c02205c50be9c00024591fa649188a",
+      "P4": "7d94c617446d952519baec5d6ede3f07c4c02205c50be9c00024591fa649188a"
+    },
+    "HumanEvalFix-72__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "e4d008a0e3a374b76861dc2f328fed6c847cd53c71640661baaeb3b8240bc9eb",
+      "P2": "e4d008a0e3a374b76861dc2f328fed6c847cd53c71640661baaeb3b8240bc9eb",
+      "P3": "e4d008a0e3a374b76861dc2f328fed6c847cd53c71640661baaeb3b8240bc9eb",
+      "P4": "e4d008a0e3a374b76861dc2f328fed6c847cd53c71640661baaeb3b8240bc9eb"
+    },
+    "HumanEvalFix-74__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "6a57615d45f680a9b58ea8146b005adf82dbeafdbffd4718cad3612a8a464822",
+      "P2": "6a57615d45f680a9b58ea8146b005adf82dbeafdbffd4718cad3612a8a464822",
+      "P3": "6a57615d45f680a9b58ea8146b005adf82dbeafdbffd4718cad3612a8a464822",
+      "P4": "6a57615d45f680a9b58ea8146b005adf82dbeafdbffd4718cad3612a8a464822"
+    },
+    "HumanEvalFix-74__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "7a5563e274749d3435a93b099ef5ceb5f702c4b4d6fb11d8fb7fd9ba196d99dd",
+      "P2": "7a5563e274749d3435a93b099ef5ceb5f702c4b4d6fb11d8fb7fd9ba196d99dd",
+      "P3": "7a5563e274749d3435a93b099ef5ceb5f702c4b4d6fb11d8fb7fd9ba196d99dd",
+      "P4": "7a5563e274749d3435a93b099ef5ceb5f702c4b4d6fb11d8fb7fd9ba196d99dd"
+    },
+    "HumanEvalFix-80__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "3a97b514938988ee4d0c0f766cc34abcf4dec747ade8e6efc57676d1c071adcb",
+      "P2": "3a97b514938988ee4d0c0f766cc34abcf4dec747ade8e6efc57676d1c071adcb",
+      "P3": "3a97b514938988ee4d0c0f766cc34abcf4dec747ade8e6efc57676d1c071adcb",
+      "P4": "3a97b514938988ee4d0c0f766cc34abcf4dec747ade8e6efc57676d1c071adcb"
+    },
+    "HumanEvalFix-80__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "70377bf13ae4107376d322e01cdfa0e32dd8105cda184005de8b80e97ebaa59d",
+      "P2": "70377bf13ae4107376d322e01cdfa0e32dd8105cda184005de8b80e97ebaa59d",
+      "P3": "70377bf13ae4107376d322e01cdfa0e32dd8105cda184005de8b80e97ebaa59d",
+      "P4": "70377bf13ae4107376d322e01cdfa0e32dd8105cda184005de8b80e97ebaa59d"
+    },
+    "HumanEvalFix-82__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "f105ec1d416fa0b469590ca7fa44d83b15add9b2ee9d6f3a60aa31aa297d1a82",
+      "P2": "f105ec1d416fa0b469590ca7fa44d83b15add9b2ee9d6f3a60aa31aa297d1a82",
+      "P3": "f105ec1d416fa0b469590ca7fa44d83b15add9b2ee9d6f3a60aa31aa297d1a82",
+      "P4": "f105ec1d416fa0b469590ca7fa44d83b15add9b2ee9d6f3a60aa31aa297d1a82"
+    },
+    "HumanEvalFix-82__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "c377ad4db7e8f11ab4a3a0dfe2f5e1b754478c38d67be4dd140953e56e031d31",
+      "P2": "c377ad4db7e8f11ab4a3a0dfe2f5e1b754478c38d67be4dd140953e56e031d31",
+      "P3": "c377ad4db7e8f11ab4a3a0dfe2f5e1b754478c38d67be4dd140953e56e031d31",
+      "P4": "c377ad4db7e8f11ab4a3a0dfe2f5e1b754478c38d67be4dd140953e56e031d31"
+    },
+    "HumanEvalFix-85__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "13783929ec73f2bc2bb4a91648f901599093eb0ff2f5010d06b8fcaba029b452",
+      "P2": "13783929ec73f2bc2bb4a91648f901599093eb0ff2f5010d06b8fcaba029b452",
+      "P3": "13783929ec73f2bc2bb4a91648f901599093eb0ff2f5010d06b8fcaba029b452",
+      "P4": "13783929ec73f2bc2bb4a91648f901599093eb0ff2f5010d06b8fcaba029b452"
+    },
+    "HumanEvalFix-85__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "5c94202f081795b9255d792daf6c9c60c3ec7ef8f34d93089288b543805fe79c",
+      "P2": "5c94202f081795b9255d792daf6c9c60c3ec7ef8f34d93089288b543805fe79c",
+      "P3": "5c94202f081795b9255d792daf6c9c60c3ec7ef8f34d93089288b543805fe79c",
+      "P4": "5c94202f081795b9255d792daf6c9c60c3ec7ef8f34d93089288b543805fe79c"
+    },
+    "HumanEvalFix-97__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "f72afbefc9b603cf07c5b737c27beb3a572a8b941a92f99e7953e1385fe72a0d",
+      "P2": "f72afbefc9b603cf07c5b737c27beb3a572a8b941a92f99e7953e1385fe72a0d",
+      "P3": "f72afbefc9b603cf07c5b737c27beb3a572a8b941a92f99e7953e1385fe72a0d",
+      "P4": "f72afbefc9b603cf07c5b737c27beb3a572a8b941a92f99e7953e1385fe72a0d"
+    },
+    "HumanEvalFix-97__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "8da32a6776ae935ff20a23a5561b80b065e40987e27676cb3bd1dfb2b4944459",
+      "P2": "8da32a6776ae935ff20a23a5561b80b065e40987e27676cb3bd1dfb2b4944459",
+      "P3": "8da32a6776ae935ff20a23a5561b80b065e40987e27676cb3bd1dfb2b4944459",
+      "P4": "8da32a6776ae935ff20a23a5561b80b065e40987e27676cb3bd1dfb2b4944459"
+    },
+    "HumanEvalFix-107__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "0b7e9d2fe840142715c190ae419dd4c0aa7e68eebde53f19d6c61a4a71d79d97",
+      "P2": "0b7e9d2fe840142715c190ae419dd4c0aa7e68eebde53f19d6c61a4a71d79d97",
+      "P3": "0b7e9d2fe840142715c190ae419dd4c0aa7e68eebde53f19d6c61a4a71d79d97",
+      "P4": "0b7e9d2fe840142715c190ae419dd4c0aa7e68eebde53f19d6c61a4a71d79d97"
+    },
+    "HumanEvalFix-107__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "9085a0b7bf4d6413d9c1386289a9984b35028408a2c96ca9c245ab262c20d410",
+      "P2": "9085a0b7bf4d6413d9c1386289a9984b35028408a2c96ca9c245ab262c20d410",
+      "P3": "9085a0b7bf4d6413d9c1386289a9984b35028408a2c96ca9c245ab262c20d410",
+      "P4": "9085a0b7bf4d6413d9c1386289a9984b35028408a2c96ca9c245ab262c20d410"
+    },
+    "HumanEvalFix-108__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "94e91403b4573a5abd1577e4b1a98ffdf80f3d98031d82b54e2bc1e52bf8b090",
+      "P2": "94e91403b4573a5abd1577e4b1a98ffdf80f3d98031d82b54e2bc1e52bf8b090",
+      "P3": "94e91403b4573a5abd1577e4b1a98ffdf80f3d98031d82b54e2bc1e52bf8b090",
+      "P4": "94e91403b4573a5abd1577e4b1a98ffdf80f3d98031d82b54e2bc1e52bf8b090"
+    },
+    "HumanEvalFix-108__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "7af9a7b8e63f93bc990a7c5b68d698e0f8bdc0265f463c4431c681c73147d287",
+      "P2": "7af9a7b8e63f93bc990a7c5b68d698e0f8bdc0265f463c4431c681c73147d287",
+      "P3": "7af9a7b8e63f93bc990a7c5b68d698e0f8bdc0265f463c4431c681c73147d287",
+      "P4": "7af9a7b8e63f93bc990a7c5b68d698e0f8bdc0265f463c4431c681c73147d287"
+    },
+    "HumanEvalFix-111__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "b64eb02e0528cdcdc2350369767e68cc110ac37ab5975a81db7c5a2233d05aff",
+      "P2": "b64eb02e0528cdcdc2350369767e68cc110ac37ab5975a81db7c5a2233d05aff",
+      "P3": "b64eb02e0528cdcdc2350369767e68cc110ac37ab5975a81db7c5a2233d05aff",
+      "P4": "b64eb02e0528cdcdc2350369767e68cc110ac37ab5975a81db7c5a2233d05aff"
+    },
+    "HumanEvalFix-111__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "061c06a22cbc4461056f9e86564ff1411615b8e8d364b2e75fcac816d94a8170",
+      "P2": "061c06a22cbc4461056f9e86564ff1411615b8e8d364b2e75fcac816d94a8170",
+      "P3": "061c06a22cbc4461056f9e86564ff1411615b8e8d364b2e75fcac816d94a8170",
+      "P4": "061c06a22cbc4461056f9e86564ff1411615b8e8d364b2e75fcac816d94a8170"
+    },
+    "HumanEvalFix-112__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "c9df22d460a72704684183c887d8c2f97cadacc7b1d3ba3d345dbee68bf37c1c",
+      "P2": "c9df22d460a72704684183c887d8c2f97cadacc7b1d3ba3d345dbee68bf37c1c",
+      "P3": "c9df22d460a72704684183c887d8c2f97cadacc7b1d3ba3d345dbee68bf37c1c",
+      "P4": "c9df22d460a72704684183c887d8c2f97cadacc7b1d3ba3d345dbee68bf37c1c"
+    },
+    "HumanEvalFix-112__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "de9cf5a88f3a59c5391c5e41a24d49c046509e68f9373774238515c64391ad48",
+      "P2": "de9cf5a88f3a59c5391c5e41a24d49c046509e68f9373774238515c64391ad48",
+      "P3": "de9cf5a88f3a59c5391c5e41a24d49c046509e68f9373774238515c64391ad48",
+      "P4": "de9cf5a88f3a59c5391c5e41a24d49c046509e68f9373774238515c64391ad48"
+    },
+    "HumanEvalFix-117__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "971dab9ff20d4a63f7f8131a135a1fa3abd7619301e2a415b0dfaf601cfe5478",
+      "P2": "971dab9ff20d4a63f7f8131a135a1fa3abd7619301e2a415b0dfaf601cfe5478",
+      "P3": "971dab9ff20d4a63f7f8131a135a1fa3abd7619301e2a415b0dfaf601cfe5478",
+      "P4": "971dab9ff20d4a63f7f8131a135a1fa3abd7619301e2a415b0dfaf601cfe5478"
+    },
+    "HumanEvalFix-117__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "e9469cdbf4abcbd19a3edebe78ed0d6fa88a98085f18e34188c9a0e5041d5e63",
+      "P2": "e9469cdbf4abcbd19a3edebe78ed0d6fa88a98085f18e34188c9a0e5041d5e63",
+      "P3": "e9469cdbf4abcbd19a3edebe78ed0d6fa88a98085f18e34188c9a0e5041d5e63",
+      "P4": "e9469cdbf4abcbd19a3edebe78ed0d6fa88a98085f18e34188c9a0e5041d5e63"
+    },
+    "HumanEvalFix-125__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300",
+      "P2": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300",
+      "P3": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300",
+      "P4": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300"
+    },
+    "HumanEvalFix-125__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300",
+      "P2": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300",
+      "P3": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300",
+      "P4": "12576f27746e0a9d9ff84fed935166fd6f67a32caa4a2a0577f5fb2d43891300"
+    },
+    "HumanEvalFix-126__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "c9e11cc882913455fb008ad214b7d6bb4bd4a00a39817076c6b6a004c22c8048",
+      "P2": "c9e11cc882913455fb008ad214b7d6bb4bd4a00a39817076c6b6a004c22c8048",
+      "P3": "c9e11cc882913455fb008ad214b7d6bb4bd4a00a39817076c6b6a004c22c8048",
+      "P4": "c9e11cc882913455fb008ad214b7d6bb4bd4a00a39817076c6b6a004c22c8048"
+    },
+    "HumanEvalFix-126__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "ca00b77af25b8bdef18d04bbce4c21794184e54dc770ee94d1062cad1410eb07",
+      "P2": "ca00b77af25b8bdef18d04bbce4c21794184e54dc770ee94d1062cad1410eb07",
+      "P3": "ca00b77af25b8bdef18d04bbce4c21794184e54dc770ee94d1062cad1410eb07",
+      "P4": "ca00b77af25b8bdef18d04bbce4c21794184e54dc770ee94d1062cad1410eb07"
+    },
+    "HumanEvalFix-130__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "75f53699c70784245b00f7530f3570cb5bfaf7fedb48d59fd1a9846d5ba8f041",
+      "P2": "75f53699c70784245b00f7530f3570cb5bfaf7fedb48d59fd1a9846d5ba8f041",
+      "P3": "75f53699c70784245b00f7530f3570cb5bfaf7fedb48d59fd1a9846d5ba8f041",
+      "P4": "75f53699c70784245b00f7530f3570cb5bfaf7fedb48d59fd1a9846d5ba8f041"
+    },
+    "HumanEvalFix-130__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "1ed169adf0c8eb615ab4aa8262eede10c947b5ffe2f5428812f716195974e04b",
+      "P2": "1ed169adf0c8eb615ab4aa8262eede10c947b5ffe2f5428812f716195974e04b",
+      "P3": "1ed169adf0c8eb615ab4aa8262eede10c947b5ffe2f5428812f716195974e04b",
+      "P4": "1ed169adf0c8eb615ab4aa8262eede10c947b5ffe2f5428812f716195974e04b"
+    },
+    "HumanEvalFix-141__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "e9770e09695ddde95be8def824398342dbc3bff6f8f66c9c683340fe73848b0d",
+      "P2": "e9770e09695ddde95be8def824398342dbc3bff6f8f66c9c683340fe73848b0d",
+      "P3": "e9770e09695ddde95be8def824398342dbc3bff6f8f66c9c683340fe73848b0d",
+      "P4": "e9770e09695ddde95be8def824398342dbc3bff6f8f66c9c683340fe73848b0d"
+    },
+    "HumanEvalFix-141__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "dd0597fc2b9bfd4997fb27712bcf5f7264603e700676956c12f728f1edfedfe9",
+      "P2": "dd0597fc2b9bfd4997fb27712bcf5f7264603e700676956c12f728f1edfedfe9",
+      "P3": "dd0597fc2b9bfd4997fb27712bcf5f7264603e700676956c12f728f1edfedfe9",
+      "P4": "dd0597fc2b9bfd4997fb27712bcf5f7264603e700676956c12f728f1edfedfe9"
+    },
+    "HumanEvalFix-143__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "1aa7b6ef21f08aa3ca03dcabf33a7e4704cb36485f8b7f26f0b3f1cc37ed1061",
+      "P2": "1aa7b6ef21f08aa3ca03dcabf33a7e4704cb36485f8b7f26f0b3f1cc37ed1061",
+      "P3": "1aa7b6ef21f08aa3ca03dcabf33a7e4704cb36485f8b7f26f0b3f1cc37ed1061",
+      "P4": "1aa7b6ef21f08aa3ca03dcabf33a7e4704cb36485f8b7f26f0b3f1cc37ed1061"
+    },
+    "HumanEvalFix-143__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "74102979ef9d369a9f47ccb60b9a2678e8f62ba1786d1faa0b857a4f6af6e56e",
+      "P2": "74102979ef9d369a9f47ccb60b9a2678e8f62ba1786d1faa0b857a4f6af6e56e",
+      "P3": "74102979ef9d369a9f47ccb60b9a2678e8f62ba1786d1faa0b857a4f6af6e56e",
+      "P4": "74102979ef9d369a9f47ccb60b9a2678e8f62ba1786d1faa0b857a4f6af6e56e"
+    },
+    "HumanEvalFix-146__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "a5d17c4d3a15cac5dbb5be5790cfd47bce334242519e983df3db8673b4995534",
+      "P2": "a5d17c4d3a15cac5dbb5be5790cfd47bce334242519e983df3db8673b4995534",
+      "P3": "a5d17c4d3a15cac5dbb5be5790cfd47bce334242519e983df3db8673b4995534",
+      "P4": "a5d17c4d3a15cac5dbb5be5790cfd47bce334242519e983df3db8673b4995534"
+    },
+    "HumanEvalFix-146__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "6c8a401694201b1c305a2a10b3d2c4a1bdaf278747d94a0ab9a5226d2cffac13",
+      "P2": "6c8a401694201b1c305a2a10b3d2c4a1bdaf278747d94a0ab9a5226d2cffac13",
+      "P3": "6c8a401694201b1c305a2a10b3d2c4a1bdaf278747d94a0ab9a5226d2cffac13",
+      "P4": "6c8a401694201b1c305a2a10b3d2c4a1bdaf278747d94a0ab9a5226d2cffac13"
+    },
+    "HumanEvalFix-148__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "7371bbcf3cec1c97e7d1255020e97b591819b8e040205f1b95c2c777637a96cb",
+      "P2": "7371bbcf3cec1c97e7d1255020e97b591819b8e040205f1b95c2c777637a96cb",
+      "P3": "7371bbcf3cec1c97e7d1255020e97b591819b8e040205f1b95c2c777637a96cb",
+      "P4": "7371bbcf3cec1c97e7d1255020e97b591819b8e040205f1b95c2c777637a96cb"
+    },
+    "HumanEvalFix-148__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "041372d8736932e0c73dc15f4be689bbb44f42cb37a97d8cf9b3b2738c7a5d17",
+      "P2": "041372d8736932e0c73dc15f4be689bbb44f42cb37a97d8cf9b3b2738c7a5d17",
+      "P3": "041372d8736932e0c73dc15f4be689bbb44f42cb37a97d8cf9b3b2738c7a5d17",
+      "P4": "041372d8736932e0c73dc15f4be689bbb44f42cb37a97d8cf9b3b2738c7a5d17"
+    },
+    "HumanEvalFix-149__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "2b4357c808b653beedfd2c151babb6e0a70492e8b29a3fae03200fc115586d51",
+      "P2": "2b4357c808b653beedfd2c151babb6e0a70492e8b29a3fae03200fc115586d51",
+      "P3": "2b4357c808b653beedfd2c151babb6e0a70492e8b29a3fae03200fc115586d51",
+      "P4": "2b4357c808b653beedfd2c151babb6e0a70492e8b29a3fae03200fc115586d51"
+    },
+    "HumanEvalFix-149__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "c61399258ba9e0e4f58430e0ebe223a2eb1a48a4f130804d7facbee9a20b6e36",
+      "P2": "c61399258ba9e0e4f58430e0ebe223a2eb1a48a4f130804d7facbee9a20b6e36",
+      "P3": "c61399258ba9e0e4f58430e0ebe223a2eb1a48a4f130804d7facbee9a20b6e36",
+      "P4": "c61399258ba9e0e4f58430e0ebe223a2eb1a48a4f130804d7facbee9a20b6e36"
+    },
+    "HumanEvalFix-151__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "7fe47a3353bc7b94aaf6458afb7a2c68d0afed06436ceb8d59f9b5093d7d6f01",
+      "P2": "7fe47a3353bc7b94aaf6458afb7a2c68d0afed06436ceb8d59f9b5093d7d6f01",
+      "P3": "7fe47a3353bc7b94aaf6458afb7a2c68d0afed06436ceb8d59f9b5093d7d6f01",
+      "P4": "7fe47a3353bc7b94aaf6458afb7a2c68d0afed06436ceb8d59f9b5093d7d6f01"
+    },
+    "HumanEvalFix-151__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "a02544e587217a38a48277ab98e4ff43a3b5c556a7e96c28ce55f2f8ddf19576",
+      "P2": "a02544e587217a38a48277ab98e4ff43a3b5c556a7e96c28ce55f2f8ddf19576",
+      "P3": "a02544e587217a38a48277ab98e4ff43a3b5c556a7e96c28ce55f2f8ddf19576",
+      "P4": "a02544e587217a38a48277ab98e4ff43a3b5c556a7e96c28ce55f2f8ddf19576"
+    },
+    "HumanEvalFix-154__buggy__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "5f67a84c2be1245c3b9a2640dbb6f4a33e0702607ad025519e9a343f9020e89a",
+      "P2": "5f67a84c2be1245c3b9a2640dbb6f4a33e0702607ad025519e9a343f9020e89a",
+      "P3": "5f67a84c2be1245c3b9a2640dbb6f4a33e0702607ad025519e9a343f9020e89a",
+      "P4": "5f67a84c2be1245c3b9a2640dbb6f4a33e0702607ad025519e9a343f9020e89a"
+    },
+    "HumanEvalFix-154__fixed__qwen2-5-coder-7b-instruct__s2__code": {
+      "P1": "7f82099671fffbf32494a119f20359d154053309b90f06e3395c4bb82eba2795",
+      "P2": "7f82099671fffbf32494a119f20359d154053309b90f06e3395c4bb82eba2795",
+      "P3": "7f82099671fffbf32494a119f20359d154053309b90f06e3395c4bb82eba2795",
+      "P4": "7f82099671fffbf32494a119f20359d154053309b90f06e3395c4bb82eba2795"
+    }
+  },
+  "unit_seconds": {
+    "HumanEvalFix-5__buggy__qwen2-5-coder-7b-instruct__s2__code": 152.5619999999999,
+    "HumanEvalFix-5__fixed__qwen2-5-coder-7b-instruct__s2__code": 85.125,
+    "HumanEvalFix-8__buggy__qwen2-5-coder-7b-instruct__s2__code": 181.89099999999962,
+    "HumanEvalFix-8__fixed__qwen2-5-coder-7b-instruct__s2__code": 104.32800000000134,
+    "HumanEvalFix-9__buggy__qwen2-5-coder-7b-instruct__s2__code": 109.95299999999952,
+    "HumanEvalFix-9__fixed__qwen2-5-coder-7b-instruct__s2__code": 64.42200000000048,
+    "HumanEvalFix-10__buggy__qwen2-5-coder-7b-instruct__s2__code": 215.28099999999904,
+    "HumanEvalFix-10__fixed__qwen2-5-coder-7b-instruct__s2__code": 283.6409999999996,
+    "HumanEvalFix-12__buggy__qwen2-5-coder-7b-instruct__s2__code": 171.20300000000134,
+    "HumanEvalFix-12__fixed__qwen2-5-coder-7b-instruct__s2__code": 69.28099999999904,
+    "HumanEvalFix-13__buggy__qwen2-5-coder-7b-instruct__s2__code": 175.53100000000086,
+    "HumanEvalFix-13__fixed__qwen2-5-coder-7b-instruct__s2__code": 67.98499999999876,
+    "HumanEvalFix-19__buggy__qwen2-5-coder-7b-instruct__s2__code": 156.5619999999999,
+    "HumanEvalFix-19__fixed__qwen2-5-coder-7b-instruct__s2__code": 97.61000000000058,
+    "HumanEvalFix-24__buggy__qwen2-5-coder-7b-instruct__s2__code": 161.57800000000134,
+    "HumanEvalFix-24__fixed__qwen2-5-coder-7b-instruct__s2__code": 78.35999999999876,
+    "HumanEvalFix-27__buggy__qwen2-5-coder-7b-instruct__s2__code": 141.39000000000124,
+    "HumanEvalFix-27__fixed__qwen2-5-coder-7b-instruct__s2__code": 65.0,
+    "HumanEvalFix-31__buggy__qwen2-5-coder-7b-instruct__s2__code": 123.0,
+    "HumanEvalFix-31__fixed__qwen2-5-coder-7b-instruct__s2__code": 65.23499999999876,
+    "HumanEvalFix-38__buggy__qwen2-5-coder-7b-instruct__s2__code": 134.48400000000038,
+    "HumanEvalFix-38__fixed__qwen2-5-coder-7b-instruct__s2__code": 135.53100000000086,
+    "HumanEvalFix-43__buggy__qwen2-5-coder-7b-instruct__s2__code": 25.67199999999866,
+    "HumanEvalFix-43__fixed__qwen2-5-coder-7b-instruct__s2__code": 16.07800000000134,
+    "HumanEvalFix-56__buggy__qwen2-5-coder-7b-instruct__s2__code": 105.96899999999914,
+    "HumanEvalFix-56__fixed__qwen2-5-coder-7b-instruct__s2__code": 63.57799999999952,
+    "HumanEvalFix-57__buggy__qwen2-5-coder-7b-instruct__s2__code": 113.57800000000134,
+    "HumanEvalFix-57__fixed__qwen2-5-coder-7b-instruct__s2__code": 68.125,
+    "HumanEvalFix-62__buggy__qwen2-5-coder-7b-instruct__s2__code": 187.3130000000001,
+    "HumanEvalFix-62__fixed__qwen2-5-coder-7b-instruct__s2__code": 86.96899999999914,
+    "HumanEvalFix-63__buggy__qwen2-5-coder-7b-instruct__s2__code": 167.15600000000086,
+    "HumanEvalFix-63__fixed__qwen2-5-coder-7b-instruct__s2__code": 66.25,
+    "HumanEvalFix-64__buggy__qwen2-5-coder-7b-instruct__s2__code": 76.54699999999866,
+    "HumanEvalFix-64__fixed__qwen2-5-coder-7b-instruct__s2__code": 96.14099999999962,
+    "HumanEvalFix-65__buggy__qwen2-5-coder-7b-instruct__s2__code": 118.32799999999952,
+    "HumanEvalFix-65__fixed__qwen2-5-coder-7b-instruct__s2__code": 87.09400000000096,
+    "HumanEvalFix-67__buggy__qwen2-5-coder-7b-instruct__s2__code": 221.10899999999856,
+    "HumanEvalFix-67__fixed__qwen2-5-coder-7b-instruct__s2__code": 11.985000000000582,
+    "HumanEvalFix-72__buggy__qwen2-5-coder-7b-instruct__s2__code": 99.28100000000086,
+    "HumanEvalFix-72__fixed__qwen2-5-coder-7b-instruct__s2__code": 65.73399999999856,
+    "HumanEvalFix-74__buggy__qwen2-5-coder-7b-instruct__s2__code": 168.90600000000086,
+    "HumanEvalFix-74__fixed__qwen2-5-coder-7b-instruct__s2__code": 89.125,
+    "HumanEvalFix-80__buggy__qwen2-5-coder-7b-instruct__s2__code": 92.28199999999924,
+    "HumanEvalFix-80__fixed__qwen2-5-coder-7b-instruct__s2__code": 21.59399999999914,
+    "HumanEvalFix-82__buggy__qwen2-5-coder-7b-instruct__s2__code": 89.85900000000038,
+    "HumanEvalFix-82__fixed__qwen2-5-coder-7b-instruct__s2__code": 81.92200000000048,
+    "HumanEvalFix-85__buggy__qwen2-5-coder-7b-instruct__s2__code": 140.09399999999914,
+    "HumanEvalFix-85__fixed__qwen2-5-coder-7b-instruct__s2__code": 130.3119999999999,
+    "HumanEvalFix-97__buggy__qwen2-5-coder-7b-instruct__s2__code": 130.70300000000134,
+    "HumanEvalFix-97__fixed__qwen2-5-coder-7b-instruct__s2__code": 86.6880000000001,
+    "HumanEvalFix-107__buggy__qwen2-5-coder-7b-instruct__s2__code": 206.98399999999856,
+    "HumanEvalFix-107__fixed__qwen2-5-coder-7b-instruct__s2__code": 201.26600000000144,
+    "HumanEvalFix-108__buggy__qwen2-5-coder-7b-instruct__s2__code": 113.84399999999914,
+    "HumanEvalFix-108__fixed__qwen2-5-coder-7b-instruct__s2__code": 97.82799999999952,
+    "HumanEvalFix-111__buggy__qwen2-5-coder-7b-instruct__s2__code": 83.04700000000048,
+    "HumanEvalFix-111__fixed__qwen2-5-coder-7b-instruct__s2__code": 78.28100000000086,
+    "HumanEvalFix-112__buggy__qwen2-5-coder-7b-instruct__s2__code": 167.82799999999952,
+    "HumanEvalFix-112__fixed__qwen2-5-coder-7b-instruct__s2__code": 90.21900000000096,
+    "HumanEvalFix-117__buggy__qwen2-5-coder-7b-instruct__s2__code": 170.07800000000134,
+    "HumanEvalFix-117__fixed__qwen2-5-coder-7b-instruct__s2__code": 86.15599999999904,
+    "HumanEvalFix-125__buggy__qwen2-5-coder-7b-instruct__s2__code": 123.01599999999962,
+    "HumanEvalFix-125__fixed__qwen2-5-coder-7b-instruct__s2__code": 86.875,
+    "HumanEvalFix-126__buggy__qwen2-5-coder-7b-instruct__s2__code": 86.03099999999904,
+    "HumanEvalFix-126__fixed__qwen2-5-coder-7b-instruct__s2__code": 77.06300000000192,
+    "HumanEvalFix-130__buggy__qwen2-5-coder-7b-instruct__s2__code": 214.35900000000038,
+    "HumanEvalFix-130__fixed__qwen2-5-coder-7b-instruct__s2__code": 171.48399999999674,
+    "HumanEvalFix-141__buggy__qwen2-5-coder-7b-instruct__s2__code": 73.625,
+    "HumanEvalFix-141__fixed__qwen2-5-coder-7b-instruct__s2__code": 83.40700000000288,
+    "HumanEvalFix-143__buggy__qwen2-5-coder-7b-instruct__s2__code": 178.71799999999712,
+    "HumanEvalFix-143__fixed__qwen2-5-coder-7b-instruct__s2__code": 176.26599999999962,
+    "HumanEvalFix-146__buggy__qwen2-5-coder-7b-instruct__s2__code": 74.875,
+    "HumanEvalFix-146__fixed__qwen2-5-coder-7b-instruct__s2__code": 88.875,
+    "HumanEvalFix-148__buggy__qwen2-5-coder-7b-instruct__s2__code": 181.90699999999924,
+    "HumanEvalFix-148__fixed__qwen2-5-coder-7b-instruct__s2__code": 76.96800000000076,
+    "HumanEvalFix-149__buggy__qwen2-5-coder-7b-instruct__s2__code": 87.84400000000096,
+    "HumanEvalFix-149__fixed__qwen2-5-coder-7b-instruct__s2__code": 96.06299999999828,
+    "HumanEvalFix-151__buggy__qwen2-5-coder-7b-instruct__s2__code": 98.17099999999846,
+    "HumanEvalFix-151__fixed__qwen2-5-coder-7b-instruct__s2__code": 64.90700000000288,
+    "HumanEvalFix-154__buggy__qwen2-5-coder-7b-instruct__s2__code": 115.71799999999712,
+    "HumanEvalFix-154__fixed__qwen2-5-coder-7b-instruct__s2__code": 98.0470000000023
+  }
+}

@@ -1,0 +1,101 @@
+{
+ "project": "tornado",
+ "bug": 2,
+ "python_pinned": "3.7.0",
+ "python_used": "3.7.0",
+ "started": "2026-10-19 04:42:10",
+ "test_files": [
+  "tornado/test/httpclient_test.py"
+ ],
+ "checkout_eol": "lf",
+ "install_buggy": {
+  "created": true,
+  "requirements": 0,
+  "failed_requirements": [],
+  "setup": [
+   "pip install unittest",
+   "pip install python-gettext"
+  ],
+  "failed_setup": [
+   "pip install unittest"
+  ],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 0,
+  "failed_requirements": [],
+  "setup": [
+   "pip install unittest",
+   "pip install python-gettext"
+  ],
+  "failed_setup": [
+   "pip install unittest"
+  ],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "python -m unittest -q tornado.test.httpclient_test.HTTPClientCommonTestCase.test_redirect_put_without_body"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.httpclient_test.HTTPClientCommonTestCase.test_redirect_put_without_body",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (errors=1)"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.httpclient_test.HTTPClientCommonTestCase.test_redirect_put_without_body",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.httpclient_test.HTTPClientCommonTestCase.test_redirect_put_without_body",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "FAILED (errors=1)"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "python -m unittest -q tornado.test.httpclient_test.HTTPClientCommonTestCase.test_redirect_put_without_body",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "OK"
+    }
+   ]
+  }
+ ],
+ "step2": "pass",
+ "step3": "pass",
+ "seconds": 32
+}

@@ -1,0 +1,5 @@
+Added [pytest tests](/<work>/wtam8wh/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **4 passed, 11 expected failures**.
+
+The expected failures expose an existing bug: every nonempty input returns `None`. They’re marked strict `xfail` so pytest succeeds while documenting the defect.

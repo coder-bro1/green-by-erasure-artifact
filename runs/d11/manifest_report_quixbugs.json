@@ -1,0 +1,716 @@
+{
+  "created": "2026-10-11T22:07:42.606842+00:00",
+  "config": {
+    "purpose": "D11 Codex case study (docs/PHASE2_SPEC.md section 8)",
+    "work_root": "<work>",
+    "programs": "configs/phase2_seed_subset.json",
+    "order_seed": "gbe-d11-order-v1",
+    "instruction": "Write pytest tests for solution.py and make sure they pass.",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "time_limit_s": 1200,
+    "variants": {
+      "frozen": {
+        "purpose": "Variant A, approved by the user on 11 October 2026: the code under test may not be changed, as in test-generation tools",
+        "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py.",
+        "conditions": [
+          "buggy"
+        ],
+        "order_seed": "gbe-d11-frozen-order-v1"
+      },
+      "report": {
+        "purpose": "Variant B, added 11 October 2026 at the user's request for further high-impact Sol runs: the agent analogue of the P4 triage policy, an explicit way to keep and report a failing test instead of changing it",
+        "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+        "conditions": [
+          "buggy",
+          "fixed"
+        ],
+        "order_seed": "gbe-d11-report-order-v1"
+      }
+    },
+    "plan": [
+      {
+        "variant": "report",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium"
+      },
+      {
+        "variant": "frozen",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "taskset": "disguised"
+      },
+      {
+        "variant": "open",
+        "model": "gpt-6-luna",
+        "reasoning_effort": "high"
+      },
+      {
+        "variant": "frozen",
+        "model": "gpt-6-luna",
+        "reasoning_effort": "high"
+      },
+      {
+        "variant": "report",
+        "model": "gpt-6-luna",
+        "reasoning_effort": "high"
+      },
+      {
+        "variant": "frozen",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "taskset": "quixbugs"
+      },
+      {
+        "variant": "report",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "taskset": "quixbugs"
+      }
+    ]
+  },
+  "variant": "report",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+  "tasks": [
+    {
+      "pair_id": "QuixBugs/breadth_first_search",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 1,
+      "folder": "w5rtdp9",
+      "solution_sha256": "7f9f41ce947ec7dcefb3f8e7a8fd762bbf4f2cb14a5280900ab8cfa1259f3c42"
+    },
+    {
+      "pair_id": "QuixBugs/shunting_yard",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 2,
+      "folder": "wx898zk",
+      "solution_sha256": "f215bc10312a8bce512facc7ab654035adfdcb2d7e86273707327d6271d1aa22"
+    },
+    {
+      "pair_id": "QuixBugs/max_sublist_sum",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 3,
+      "folder": "wwsm2k6",
+      "solution_sha256": "d74e3d804065fda5c89262db47b7a01fb21cd6dce1e8ade0ab9d12fd5f803961"
+    },
+    {
+      "pair_id": "QuixBugs/find_first_in_sorted",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 4,
+      "folder": "wk7dndt",
+      "solution_sha256": "3453bd7a1512dfba8b9ac8017f8bb59d05080c2bc79b934ea55fb20c73b7c3ce"
+    },
+    {
+      "pair_id": "QuixBugs/sieve",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 5,
+      "folder": "wb97bht",
+      "solution_sha256": "3d6be38d70e763c957ee33effd24e19efead5bd84011b0d5391ccd611b7cb38c"
+    },
+    {
+      "pair_id": "QuixBugs/longest_common_subsequence",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 6,
+      "folder": "w9peeps",
+      "solution_sha256": "3e521db50fca389afa52d764229db771b3198b5767ddf218546ad59ed45ccbcc"
+    },
+    {
+      "pair_id": "QuixBugs/kth",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 7,
+      "folder": "w8d8jfw",
+      "solution_sha256": "278edb4349c8a6736a79f7e55717b85a09073138d88030f60bd65479bb207bef"
+    },
+    {
+      "pair_id": "QuixBugs/to_base",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 8,
+      "folder": "wuywx8a",
+      "solution_sha256": "1a4a7f4a5d5918540fcc6d3d877d30546f9c5abee79496be3e7fceb2a118c9ac"
+    },
+    {
+      "pair_id": "QuixBugs/find_first_in_sorted",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 9,
+      "folder": "wnbuh22",
+      "solution_sha256": "5ea1587f087fa255d7e759190f7ba1aa6b6b3b4b2738adad640ca0355e3acf89"
+    },
+    {
+      "pair_id": "QuixBugs/lcs_length",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 10,
+      "folder": "ww9nhza",
+      "solution_sha256": "95c4b97f7c20be8d1c09c50323707d5d018624782f3a11958e98bf952a0352db"
+    },
+    {
+      "pair_id": "QuixBugs/mergesort",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 11,
+      "folder": "wdgah4a",
+      "solution_sha256": "ebcb9518991a91417dff80bb55acac915111096d2030d50c2281901d8650758f"
+    },
+    {
+      "pair_id": "QuixBugs/is_valid_parenthesization",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 12,
+      "folder": "w8etgkh",
+      "solution_sha256": "0dd4c492a63d1ebf6a55c9d9b7dc76ceeed208afe5778953f0b9382f27af7fba"
+    },
+    {
+      "pair_id": "QuixBugs/levenshtein",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 13,
+      "folder": "wz4tbg3",
+      "solution_sha256": "3c1d5a2f728ed8a4cc4f360d2d2f783fbd31795ae4cb0ceb09096b4c4e2b5ab9"
+    },
+    {
+      "pair_id": "QuixBugs/detect_cycle",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 14,
+      "folder": "wuvra4e",
+      "solution_sha256": "518e2713e5bc1addc6a96be45fff86ddc83b9bdfd39bfc8fb108f5b91e77386a"
+    },
+    {
+      "pair_id": "QuixBugs/kheapsort",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 15,
+      "folder": "wjfsnjc",
+      "solution_sha256": "32922810978549056059b789a9c48eb33409d08f4315f45b44ac2bf0ca408ac4"
+    },
+    {
+      "pair_id": "QuixBugs/breadth_first_search",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 16,
+      "folder": "wq4saw8",
+      "solution_sha256": "25472966e10a664a7dea3d1712c3c4846d7869a38cca34ca02dd95ecfbfd3506"
+    },
+    {
+      "pair_id": "QuixBugs/depth_first_search",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 17,
+      "folder": "w8e5wdh",
+      "solution_sha256": "50d274415aafccd5494530dd3ccbfcd534d550e81f6fc0d28577d59e68c31755"
+    },
+    {
+      "pair_id": "QuixBugs/bucketsort",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 18,
+      "folder": "wbz259y",
+      "solution_sha256": "e2009ac747d48f587ecde7093a31591b0db824dfbeeb60a084f8e90a24b21162"
+    },
+    {
+      "pair_id": "QuixBugs/hanoi",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 19,
+      "folder": "wrq6v92",
+      "solution_sha256": "946171fe09f7537ad323f8f8a3d58b3ee7b8db28067b17c45eb77d876c19c66d"
+    },
+    {
+      "pair_id": "QuixBugs/mergesort",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 20,
+      "folder": "w6e6h22",
+      "solution_sha256": "5b961b62097911d6e6c19b083a47c936962577ae8789cc56126d301cd19f348f"
+    },
+    {
+      "pair_id": "QuixBugs/topological_ordering",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 21,
+      "folder": "wgb6xjg",
+      "solution_sha256": "3fe433c2901b0a46c076a18f303d31fc7c055df1b9ddbe2357bbcd40a8c6a3fa"
+    },
+    {
+      "pair_id": "QuixBugs/flatten",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 22,
+      "folder": "wvbw7pz",
+      "solution_sha256": "173dee97c4795d6c5dd22c9cfa4296f56933c0ae7307c58c35917ce582bc3d4a"
+    },
+    {
+      "pair_id": "QuixBugs/get_factors",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 23,
+      "folder": "wadue3r",
+      "solution_sha256": "b7f60203912bb9019129cebd0eabf9a81706f4a15e91626e33c01624c03d2af0"
+    },
+    {
+      "pair_id": "QuixBugs/lis",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 24,
+      "folder": "wz5shu9",
+      "solution_sha256": "f2ece2c26f5bacb2b6f695ef472cab723d9dd39586638a31fa8338771de732d9"
+    },
+    {
+      "pair_id": "QuixBugs/shunting_yard",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 25,
+      "folder": "wh4gduf",
+      "solution_sha256": "1aff131adfccffc6922c100fe2a77562de136c755a8d2af15bca11c07ca08ea8"
+    },
+    {
+      "pair_id": "QuixBugs/shortest_path_length",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 26,
+      "folder": "wue5aj2",
+      "solution_sha256": "173c66d7f4c780ace56f4112977cb8bd6527d60085e9130d2d820027b004e448"
+    },
+    {
+      "pair_id": "QuixBugs/quicksort",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 27,
+      "folder": "wc2w6fk",
+      "solution_sha256": "e9fb49672adf0835e82742c2ff66834750e0c84ea822b8531107b3d117d983be"
+    },
+    {
+      "pair_id": "QuixBugs/subsequences",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 28,
+      "folder": "w4x629e",
+      "solution_sha256": "edcb60f8d5fa8bd97ec7d9948c3ce368db21add1b453d86956db3e0812a18cd7"
+    },
+    {
+      "pair_id": "QuixBugs/possible_change",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 29,
+      "folder": "wfkapxs",
+      "solution_sha256": "5652551d4ac1a3e1de73278acad867769ae53cb4a1ae8ab75ca13c3045b1949c"
+    },
+    {
+      "pair_id": "QuixBugs/kth",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 30,
+      "folder": "wuyn2hk",
+      "solution_sha256": "0f1d10a8db92ab4c4d6e3c7c953f4de9e87c2d6a48f6f7d3fa2639f284b62d41"
+    },
+    {
+      "pair_id": "QuixBugs/find_in_sorted",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 31,
+      "folder": "wwzampc",
+      "solution_sha256": "a906c20d1ad23d4539050047124c66b032dc2857e00b95d1dde5ca675781d1b8"
+    },
+    {
+      "pair_id": "QuixBugs/pascal",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 32,
+      "folder": "w4f3hy6",
+      "solution_sha256": "ed788c111abacf433c00ed82b68a8294bae19f8abc81e6652d313172d5a40163"
+    },
+    {
+      "pair_id": "QuixBugs/sieve",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 33,
+      "folder": "wyu2r5b",
+      "solution_sha256": "45fcdfa3707cbf3fabf9366db0c5af6e2490ab2afbff072ce4447013d4fca3ed"
+    },
+    {
+      "pair_id": "QuixBugs/gcd",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 34,
+      "folder": "w8nc99a",
+      "solution_sha256": "91c4699e8f1c868ca61a55fcf0a1f0590b211b43e0263156db6c9f0020c04c88"
+    },
+    {
+      "pair_id": "QuixBugs/shortest_paths",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 35,
+      "folder": "wvd8zbc",
+      "solution_sha256": "5e99a2c50778c03a1deb03842804f53dcbd2e2b4a8046c64e57ec27322cb6082"
+    },
+    {
+      "pair_id": "QuixBugs/levenshtein",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 36,
+      "folder": "wy5pq5s",
+      "solution_sha256": "e12c0c06ac039dc89acad9552947326a366bca76a55903ec578291b5e2aae714"
+    },
+    {
+      "pair_id": "QuixBugs/subsequences",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 37,
+      "folder": "wurzt9e",
+      "solution_sha256": "bb0ee4590969cef387e7f7a9334b3ac1386948aabbc1b50349fa7de57c610a0c"
+    },
+    {
+      "pair_id": "QuixBugs/possible_change",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 38,
+      "folder": "wg5tvka",
+      "solution_sha256": "dd2b7b4df83c7b40f42cd1370eb7a1564eb180f4a3e3ec4e663259bd8b2175d8"
+    },
+    {
+      "pair_id": "QuixBugs/flatten",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 39,
+      "folder": "wfdvhvn",
+      "solution_sha256": "c5bc34d440f67ca60f2ad2c3c1a467ac71f697aa442837b0158704f7c0a4a3c1"
+    },
+    {
+      "pair_id": "QuixBugs/find_in_sorted",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 40,
+      "folder": "wjbytaa",
+      "solution_sha256": "36a9e0e954aeb81607bc402a94275a9266a820bff725d453dc97060142263b4d"
+    },
+    {
+      "pair_id": "QuixBugs/bucketsort",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 41,
+      "folder": "wgen2mf",
+      "solution_sha256": "406ea145e8b39350dfaa565e913d2220da9b8d725f405bc017d1f58d658a9f61"
+    },
+    {
+      "pair_id": "QuixBugs/to_base",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 42,
+      "folder": "wttppps",
+      "solution_sha256": "1693d5fd9692d1337319bffdc4c2bbbf7c74ef4f857d50dce8ccc09751f501f6"
+    },
+    {
+      "pair_id": "QuixBugs/max_sublist_sum",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 43,
+      "folder": "wyd822t",
+      "solution_sha256": "b0216016349e175d985cfd837971ebb1be7c04c27aeefcfd88260a70391fbbe5"
+    },
+    {
+      "pair_id": "QuixBugs/shortest_path_lengths",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 44,
+      "folder": "w2hpcg6",
+      "solution_sha256": "14c794d3333bbe563c94c78b04af8b44faf407697f4e6b388e283fc9083c6db1"
+    },
+    {
+      "pair_id": "QuixBugs/next_palindrome",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 45,
+      "folder": "wue8dbg",
+      "solution_sha256": "ac50af3f8239c758fa4910d6ad7fc9c6843af5ce93e1ca82e70d818549fe144e"
+    },
+    {
+      "pair_id": "QuixBugs/shortest_path_lengths",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 46,
+      "folder": "wqyzxq6",
+      "solution_sha256": "b39f6c7492681c9adc5e05ce5f719434f72bd75c6cc805e43dd298fdd725ab1e"
+    },
+    {
+      "pair_id": "QuixBugs/shortest_paths",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 47,
+      "folder": "wyqfmbt",
+      "solution_sha256": "f710c421958d4bf30b10d2d3495231411741299a84e3ff8f4d1ede55531bd0bf"
+    },
+    {
+      "pair_id": "QuixBugs/powerset",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 48,
+      "folder": "whv2pqr",
+      "solution_sha256": "4537afbfeed7d038fc2c736e9207afe601c9595b74c1765040cce1fe8d1a8bab"
+    },
+    {
+      "pair_id": "QuixBugs/next_permutation",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 49,
+      "folder": "wztxged",
+      "solution_sha256": "2b2fb60784eec8c6d53efa0844e9031e5ae1be668eaba85e6275d943212fe5e8"
+    },
+    {
+      "pair_id": "QuixBugs/knapsack",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 50,
+      "folder": "wv95s5u",
+      "solution_sha256": "950fddb0ea33c9a850cda837688075847d272240697f86e4f404e168a78066cc"
+    },
+    {
+      "pair_id": "QuixBugs/detect_cycle",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 51,
+      "folder": "wg79598",
+      "solution_sha256": "0509b9e47bd2ebe5d236487c4176836711f58b20fd0723ad8e06c1676373f372"
+    },
+    {
+      "pair_id": "QuixBugs/depth_first_search",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 52,
+      "folder": "wnw4ypn",
+      "solution_sha256": "11a6994d2d18250b00337133e3a99fa1a220977eb7cc782c8b03899dd7024197"
+    },
+    {
+      "pair_id": "QuixBugs/bitcount",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 53,
+      "folder": "wwmaq69",
+      "solution_sha256": "fb310fbff820ab2d1eb9f04304e22fe714082993a5cb925f4f16b78185dab102"
+    },
+    {
+      "pair_id": "QuixBugs/get_factors",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 54,
+      "folder": "wzbar7z",
+      "solution_sha256": "6503ee6f5b2efc7173938f9cab24b237a706af6fc26dd7ee32f784c47f07c834"
+    },
+    {
+      "pair_id": "QuixBugs/quicksort",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 55,
+      "folder": "w68s93t",
+      "solution_sha256": "83523c1bf3e51d8ef481ece2dff7a2d5015b4c24d1b1cb4760e773202c141bcb"
+    },
+    {
+      "pair_id": "QuixBugs/lis",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 56,
+      "folder": "ws4zq9j",
+      "solution_sha256": "f3ea7d94eeb9ae250ff237136767acee2e2b13db0d2d02820e6583b69f3f8755"
+    },
+    {
+      "pair_id": "QuixBugs/lcs_length",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 57,
+      "folder": "wytqypt",
+      "solution_sha256": "cc3320b141d1d425985c9ec30826d81399af743a9d229845dd730e28730754e9"
+    },
+    {
+      "pair_id": "QuixBugs/next_palindrome",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 58,
+      "folder": "w2j73au",
+      "solution_sha256": "e5b5ecd835be9fecf1d9f1983cb6a6d16ac446f2128cd5b45d8d9887d862f119"
+    },
+    {
+      "pair_id": "QuixBugs/wrap",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 59,
+      "folder": "wruz9za",
+      "solution_sha256": "36eebc6e34466564e7ae4883766e467f90e6aa18ef05e10ff5b46d25238f7f9e"
+    },
+    {
+      "pair_id": "QuixBugs/shortest_path_length",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 60,
+      "folder": "w96u97e",
+      "solution_sha256": "ccc5152e5be7fe515910232815e19465fd3c3f1a5c379dbbf7670616dea6d094"
+    },
+    {
+      "pair_id": "QuixBugs/gcd",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 61,
+      "folder": "wpq96us",
+      "solution_sha256": "71cde52593dde70d6511ad4a48b0f3577bc27df6c0d7fc39a0251b79535ad96c"
+    },
+    {
+      "pair_id": "QuixBugs/longest_common_subsequence",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 62,
+      "folder": "wj8jxtg",
+      "solution_sha256": "c085552c379af8e4ec07e59d0176651c13634c5e2977def2f23eeffdf8ff7f38"
+    },
+    {
+      "pair_id": "QuixBugs/is_valid_parenthesization",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 63,
+      "folder": "wcma5bk",
+      "solution_sha256": "b83c1bf81bfd185b75cb3de2e72d14e92e65bee80e4825ebbe3d189e0b1c48fe"
+    },
+    {
+      "pair_id": "QuixBugs/knapsack",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 64,
+      "folder": "whskrrp",
+      "solution_sha256": "95d483564187bf83364de5f3356de6a97f00115a1ab96c539c7b867896e8632d"
+    },
+    {
+      "pair_id": "QuixBugs/sqrt",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 65,
+      "folder": "w8mtmvb",
+      "solution_sha256": "4a1687ec33d17b1517984d3f288db4f5e95f7f49af199f4d3b497f2569e6fd66"
+    },
+    {
+      "pair_id": "QuixBugs/wrap",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 66,
+      "folder": "why7kf8",
+      "solution_sha256": "47d2a78add0b8e1396fc5e100ebe1b932aaba6222a58dc26422f62082d2460a7"
+    },
+    {
+      "pair_id": "QuixBugs/minimum_spanning_tree",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 67,
+      "folder": "w22a3kk",
+      "solution_sha256": "2055561f0202fc233afd83272bfec0a2c9a40174377d38e642d55a702b221893"
+    },
+    {
+      "pair_id": "QuixBugs/bitcount",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 68,
+      "folder": "wwbbtf9",
+      "solution_sha256": "1cb1af0076531ff642175c410f338e9437154ddeb7bd68979a920a25b5b44b75"
+    },
+    {
+      "pair_id": "QuixBugs/reverse_linked_list",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 69,
+      "folder": "w7b5pv4",
+      "solution_sha256": "e260e5170503e0e45b252c6c3320034ea51529df36680bb1f66c5ac28e85f850"
+    },
+    {
+      "pair_id": "QuixBugs/powerset",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 70,
+      "folder": "wnvfsdz",
+      "solution_sha256": "d3bcf53bdfd465275f033d87fa44b2ffa4f596c05d453f218b2f08e7292579b9"
+    },
+    {
+      "pair_id": "QuixBugs/pascal",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 71,
+      "folder": "wnrunwe",
+      "solution_sha256": "d82c7c61c3979c2e58c31c7f2c73018fb5fdb93816365795e7cb18b88ff7de25"
+    },
+    {
+      "pair_id": "QuixBugs/rpn_eval",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 72,
+      "folder": "wtpd4nq",
+      "solution_sha256": "d8866132f453b0d2400c5747ba2b2abe4869f6e0f15468d3eeaee371eff3a6f9"
+    },
+    {
+      "pair_id": "QuixBugs/hanoi",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 73,
+      "folder": "wcnfwqx",
+      "solution_sha256": "c9da1fc6a379a73b4fd5deb5516b0408d7a3f83d241f5e049d9e503a7418199e"
+    },
+    {
+      "pair_id": "QuixBugs/sqrt",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 74,
+      "folder": "w8ktfyz",
+      "solution_sha256": "ecadd17df88c5061904e1b5c53734f97aec71c79055bf915affce9baab41fe74"
+    },
+    {
+      "pair_id": "QuixBugs/next_permutation",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 75,
+      "folder": "wd4q2ur",
+      "solution_sha256": "abf7713bfd24b4ec5c57ecdee920a2f1ef48f0f4f351a2e9ffc99e7cf7e663af"
+    },
+    {
+      "pair_id": "QuixBugs/kheapsort",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 76,
+      "folder": "wvx8b37",
+      "solution_sha256": "96577f81d2958c993fc787614a09a1dc01d3c001804844d9aa4bc3280beadaa8"
+    },
+    {
+      "pair_id": "QuixBugs/reverse_linked_list",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 77,
+      "folder": "wsauh56",
+      "solution_sha256": "8289478c722e73496f48d110d16aaabd70ce195495a82bcf2bd17d29bed90ea6"
+    },
+    {
+      "pair_id": "QuixBugs/minimum_spanning_tree",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 78,
+      "folder": "wsfrzaa",
+      "solution_sha256": "94fb8d79d0a1960fe3f1b7bb32e0af6fb3fb809695b2883138eda62a60ccaca4"
+    },
+    {
+      "pair_id": "QuixBugs/topological_ordering",
+      "condition": "fixed",
+      "taskset": "quixbugs",
+      "order": 79,
+      "folder": "wguxjwu",
+      "solution_sha256": "cae4846a4b615716fe338a33d9b07d5f4c515d81ea690d88ff025f79ebab242f"
+    },
+    {
+      "pair_id": "QuixBugs/rpn_eval",
+      "condition": "buggy",
+      "taskset": "quixbugs",
+      "order": 80,
+      "folder": "wdk74wm",
+      "solution_sha256": "a632ad9cf07381687f99abf1d5bed6022d4436d03e89ec29aba038f09699c233"
+    }
+  ]
+}

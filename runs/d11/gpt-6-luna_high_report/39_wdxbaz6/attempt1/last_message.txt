@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](/<work>/wdxbaz6/tests/test_solution.py) and a test import path setup in [conftest.py](/<work>/wdxbaz6/tests/conftest.py). `solution.py` is unchanged.
+
+`pytest -q -p no:cacheprovider tests` reports **7 passed, 6 xfailed**. The strict xfails preserve the docstring’s expected tuples: `reverse_delete` currently returns `True` for non-palindromes and `False` for palindromes, reversing the documented status.

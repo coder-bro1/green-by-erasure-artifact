@@ -1,0 +1,369 @@
+{
+  "pair_id": "Python/21",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_27c15b15149a5cca.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_acd82f5537c0352b.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_d36668fdd3611477.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_7f0425c1cd03032d.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_cc286bf5626ce475.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_de58f2f34649b1f0.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_eb5bb43bc8db7c6c.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_9d6d4866d0a0b81b.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_ccb0880bd43869bc.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_eb82b12af22d88c0.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ],
+    "tests/test_c9886d52af0ac61e.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-21__buggy__gemma4-12b__s0__code",
+        "P2M",
+        10
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_27c15b15149a5cca.py"
+  ],
+  "baseline": {
+    "tests/test_27c15b15149a5cca.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "5a802594908e45a9b7d8bd2f61a57f9e",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "0735a6835f4b4dd4a6cf48e31d368cff",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "cffe1c99c2ad4d019c23c892f2a61f50",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "62e26beb678146948e08f0aa0a155ce0",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "58c14c191d9745d1a6a3b16101168da9",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "7aa06d182c5c4e92816365e1f380cc65",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "d9df8fab6bf74854a05b1f5eb8d02e98",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "f2befb41fa2a442188f0e75bb30b8833",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "da2eab35e9d0496a8ba31adc033f36ae",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8ffb9e166ca948098dc6e5c9582248b3",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "4f31625af0d147158beac7e39e89a542",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "0c431589373845939e28c626a3ba1237",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "e11ad26918e04e879b575dc5fd5a45ed",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "e631e2ee034e40fda340014015551737",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "df8c795e49b7458d861f66c6671e8b89",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "f81d8fbc265e4873a06f6edda0f732e6",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "a12a4250d3ab4e609b7341c831794206",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "7616bf579ab646cda84acc83e7bdb2a0",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "f7266751f8074af5841dd665ac70e322",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "36c73e0e81f54ccc84427edcab303755",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "af8fcd4b18d14e6da0ee029649404a09",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "0a6acfcd2b6f4d92b041929dfba3fcaa",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "9ce104e67847430fa0931667b8cfd067",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "febee70a8de4458ebd1b79228c0e7c51",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8fdcb8b962c7460faa3a2932941b6c64",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "e59b907809f643fe9bdcaf1c45f05c3d",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c926e708e69048e4a5a27dda503d16ae",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "5261af9792f14d9f96c6c46cf81a8559",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6f87a0e52be74431ac134f372b79d925",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "14bcf26f91344df1a2c89f0fa3e6750f",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c9e7b095650140bf813c8fd72a279e5c",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6a961ae7e4c749ecb2586fa84e7b8773",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "4965dd732c334523b817071f0c663de2",
+      "killed_by": [
+        "tests/test_27c15b15149a5cca.py"
+      ],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 50.7,
+  "finished": "2026-10-28T21:25:58.416965+00:00"
+}

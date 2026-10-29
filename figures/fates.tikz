@@ -1,0 +1,38 @@
+\definecolor{oiblue}{HTML}{0072B2}
+\definecolor{oivermillion}{HTML}{D55E00}
+\definecolor{oigreen}{HTML}{009E73}
+\definecolor{oiorange}{HTML}{E69F00}
+\definecolor{oisky}{HTML}{56B4E9}
+\definecolor{oipurple}{HTML}{CC79A7}
+\definecolor{oigrey}{HTML}{999999}
+
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1, horizontal sep=14pt, yticklabels at=edge left},
+  width=5.4cm, height=3.4cm, xmin=0, xmax=100, enlarge y limits=0.18,
+  ytick={1,2,3,4}, yticklabels={triage, free repair, overwrite, discard}, y dir=normal,
+  xtick={0,50,100}, minor xtick={25,75}, xmajorgrids, xminorgrids, grid style={gray!25}, xlabel style={font=\footnotesize},
+  tick label style={font=\scriptsize}, title style={font=\footnotesize, yshift=-4pt},
+  legend style={font=\footnotesize, draw=none, legend columns=4, /tikz/every even column/.append style={column sep=8pt}},
+  area legend]
+\nextgroupplot[title={Qwen2.5-Coder 7B}, xbar stacked, bar width=7pt, legend to name=fateslegend]
+\addplot[fill=oivermillion, draw=white, line width=0.3pt] coordinates {(0.0,4) (92.9,3) (0.8,2) (0.0,1)};
+\addlegendentry{inverted (now asserts the bug)}
+\addplot[fill=oiorange, draw=white, line width=0.3pt] coordinates {(0.0,4) (0.1,3) (16.6,2) (0.0,1)};
+\addlegendentry{neutralized (passes on both versions)}
+\addplot[fill=oigrey, draw=white, line width=0.3pt] coordinates {(100.0,4) (7.0,3) (82.6,2) (23.0,1)};
+\addlegendentry{dropped}
+\addplot[fill=oigreen, draw=white, line width=0.3pt] coordinates {(0.0,4) (0.0,3) (0.0,2) (77.0,1)};
+\addlegendentry{reported as a likely bug}
+\nextgroupplot[title={Qwen3.5 9B}, xbar stacked, bar width=7pt, xlabel={\% of bug-revealing tests}]
+\addplot[fill=oivermillion, draw=white, line width=0.3pt] coordinates {(0.0,4) (89.9,3) (0.5,2) (0.0,1)};
+\addplot[fill=oiorange, draw=white, line width=0.3pt] coordinates {(0.0,4) (0.3,3) (48.2,2) (0.0,1)};
+\addplot[fill=oigrey, draw=white, line width=0.3pt] coordinates {(100.0,4) (9.9,3) (51.3,2) (6.3,1)};
+\addplot[fill=oigreen, draw=white, line width=0.3pt] coordinates {(0.0,4) (0.0,3) (0.0,2) (93.7,1)};
+\nextgroupplot[title={Gemma 4 12B}, xbar stacked, bar width=7pt]
+\addplot[fill=oivermillion, draw=white, line width=0.3pt] coordinates {(0.0,4) (91.0,3) (0.0,2) (0.0,1)};
+\addplot[fill=oiorange, draw=white, line width=0.3pt] coordinates {(0.0,4) (2.0,3) (29.4,2) (0.0,1)};
+\addplot[fill=oigrey, draw=white, line width=0.3pt] coordinates {(100.0,4) (7.0,3) (70.6,2) (5.0,1)};
+\addplot[fill=oigreen, draw=white, line width=0.3pt] coordinates {(0.0,4) (0.0,3) (0.0,2) (95.0,1)};
+\end{groupplot}
+\node[anchor=north] at ($(group c2r1.south) + (0,-0.9cm)$) {\pgfplotslegendfromname{fateslegend}};
+\end{tikzpicture}

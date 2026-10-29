@@ -1,0 +1,13 @@
+I wrote 20 pytest tests for `circular_shift` in `<work>\work\test_solution.py`, and all 20 pass. None are marked xfail, because the function does what its docstring says in every documented case. `solution.py` is unchanged.
+
+The tests cover:
+- the two docstring examples, `(12, 1)` gives "21" and `(12, 2)` gives "12";
+- that the result is a string;
+- shifting right by 1 to 4 places, including numbers with zeros, such as `(100, 1)` giving "010";
+- a shift of 0, and a shift equal to the number of digits, both returning the number unchanged;
+- a shift larger than the number of digits returning the digits reversed, such as `(123, 4)` giving "321" and `(1200, 5)` giving "0021";
+- single-digit numbers.
+
+I left out negative numbers and negative shifts because the docstring doesn't say what should happen. One thing to know if you care about negative numbers: the code counts the minus sign as a digit. For example, `circular_shift(-12, 1)` returns "2-1", and `circular_shift(-12, 3)` returns "-12" unchanged rather than reversing the digits, even though -12 has only two digits.
+
+result: Added 20 pytest tests for `circular_shift` in `<work>\work\test_solution.py`; all pass, none marked xfail.

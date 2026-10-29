@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index 99e3a3b..c464815 100644
+--- a/solution.py
++++ b/solution.py
+@@ -4,6 +4,6 @@ def largest_divisor(n: int) -> int:
+     >>> largest_divisor(15)
+     5
+     """
+-    for i in reversed(range(n)):
+-        if n - i == 0:
++    for i in range(n - 1, 0, -1):
++        if n % i == 0:
+             return i

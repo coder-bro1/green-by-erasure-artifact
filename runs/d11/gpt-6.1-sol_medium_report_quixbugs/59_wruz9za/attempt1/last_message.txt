@@ -1,0 +1,10 @@
+Added [test_solution.py](/<work>/wruz9za/test_solution.py). `solution.py` is unchanged.
+
+`python -m pytest -q` succeeds: **1 passed, 13 xfailed**.
+
+Strict expected failures preserve the documented expectations and expose two bugs:
+
+- The final line is omitted, losing text and spaces.
+- Splitting at a leading space can loop forever; that test uses a subprocess timeout.
+
+Added pytest configuration to avoid workspace cache permission errors.

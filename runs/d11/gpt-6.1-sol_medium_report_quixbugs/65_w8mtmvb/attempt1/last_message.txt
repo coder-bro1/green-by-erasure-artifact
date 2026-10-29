@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/w8mtmvb/test_solution.py). `solution.py` is unchanged.
+
+Verified: **10 passed, 5 strict xfailed** using:
+```powershell
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+The expected failures preserve the documented expectations: three inputs, including the docstring example, fail to terminate; two fractional inputs return values outside the promised tolerance.

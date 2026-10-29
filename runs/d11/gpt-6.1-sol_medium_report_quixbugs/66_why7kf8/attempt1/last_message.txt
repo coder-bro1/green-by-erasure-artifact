@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/why7kf8/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **27 passed, 4 xfailed**.
+
+The four strict `xfail` cases retain their expected values. They expose an infinite loop when the chosen space is at index zero: `wrap()` appends an empty line without consuming text. A test guard prevents hanging.

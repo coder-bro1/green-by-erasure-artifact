@@ -1,0 +1,22 @@
+I wrote the tests in <work>\work\test_solution.py and the suite runs green with `python -m pytest -q test_solution.py`: 205 passed, 315 xfailed (expected failures), 0 failed. solution.py was not modified. But 315 of the tests only "pass" as expected failures, because solution.py has a bug.
+
+**The bug:** the last line of `get_factors` is `return []`, but it should be `return [n]`. As a result, every n > 1 loses its largest prime factor:
+- `get_factors(100)` returns [2, 2, 5]; the docstring says [2, 2, 5, 5].
+- `get_factors(101)` returns []; the docstring says [101].
+- `get_factors(4)` returns [2]; it should be [2, 2].
+
+Only n = 1 gives the right answer, so the docstring's own examples fail.
+
+**How the tests handle it:** tests that check the correct results from the docstring are marked `xfail(strict=True)`. Without that, they would fail. "Strict" means that once solution.py is fixed, they will error out as unexpected passes, signalling that the markers should be removed.
+
+**What's in the file:**
+- **Passing now (205):**
+  - `get_factors(1) == []`.
+  - The function returns a list.
+  - A property check over n = 1..199 plus a few large values: the output is sorted, every element is prime, and their product divides n. These properties still hold with the bug.
+- **Strict xfail (315), checking the correct results:**
+  - Docstring examples and other known factorizations, including 600851475143 = [71, 839, 1471, 6857].
+  - The product of the factors equals n, for n = 2..299.
+  - A prime p returns [p].
+
+No xfail test unexpectedly passed, which confirms the bug affects every n > 1 that was tested. If you want the strict xfails to become ordinary passing tests, the fix is that one line in solution.py, which needs your go-ahead since I was told not to touch it.

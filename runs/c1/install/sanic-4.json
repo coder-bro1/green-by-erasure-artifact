@@ -1,0 +1,87 @@
+{
+ "project": "sanic",
+ "bug": 4,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 02:45:38",
+ "test_files": [
+  "tests/test_requests.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 140,
+  "failed_requirements": [
+   "requests-async==0.5.0"
+  ],
+  "setup": [
+   "python setup.py build",
+   "python setup.py install",
+   "pip3 install -e .[dev]",
+   "pip3 install -e .",
+   "pip3 install -e .[test]"
+  ],
+  "failed_setup": [
+   "python setup.py install",
+   "pip3 install -e .[dev]",
+   "pip3 install -e .",
+   "pip3 install -e .[test]"
+  ],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 140,
+  "failed_requirements": [
+   "requests-async==0.5.0"
+  ],
+  "setup": [
+   "python setup.py build",
+   "python setup.py install",
+   "pip3 install -e .[dev]",
+   "pip3 install -e .",
+   "pip3 install -e .[test]"
+  ],
+  "failed_setup": [
+   "python setup.py install",
+   "pip3 install -e .[dev]",
+   "pip3 install -e .",
+   "pip3 install -e .[test]"
+  ],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest tests/test_requests.py::test_url_for_without_server_name"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_requests.py::test_url_for_without_server_name",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": true,
+     "last_line": "ModuleNotFoundError: No module named 'requests_async'"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest tests/test_requests.py::test_url_for_without_server_name",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": true,
+     "last_line": "ModuleNotFoundError: No module named 'requests_async'"
+    }
+   ]
+  }
+ ],
+ "step2": "fail: the fixed checkout cannot import the project or a dependency",
+ "seconds": 819
+}

@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wsfwwmz/test_solution.py) with 15 cases covering documented examples, negatives, zeros, and large integers.
+
+Pytest: **6 passed, 9 failed**. `solution.py` remains unchanged.
+
+The failures expose implementation bugs—for example, `multiply(148, 412)` returns `975616` instead of `16`. Correctness tests cannot all pass without fixing `solution.py`.

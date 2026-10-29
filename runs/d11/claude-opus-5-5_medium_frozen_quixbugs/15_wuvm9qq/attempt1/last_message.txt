@@ -1,0 +1,13 @@
+I wrote the tests in `<work>\work\test_solution.py` and they pass: **5 passed, 17 xfailed** (`python -m pytest -q test_solution.py`). The 17 xfailed tests are expected failures caused by a bug in `solution.py`, which I left untouched.
+
+**The bug:** `mergesort` only stops recursing on an empty list. For a one-element list it splits off an empty half and passes the same one-element list back into itself forever, so it raises `RecursionError`. Every non-empty input ends up there, so the function only works on `[]`. I confirmed `mergesort([1])` raises `RecursionError`. The fix is a one-line change: `if len(arr) == 0:` becomes `if len(arr) <= 1:`.
+
+**How the tests handle it:**
+- **Passing today (5):** an empty list returns an empty list, and three tests confirm that non-empty inputs currently raise `RecursionError`.
+- **Expected to fail until the bug is fixed (17):** a single element, sorting cases (reversed, already sorted, duplicates, negatives, very large ints), the input not being changed, random lists checked against `sorted()`, and stability. These are marked `xfail(strict=True, raises=RecursionError)`. Once the bug is fixed they will pass, strict mode will turn that into a failure, and you'll know to remove the markers.
+
+To check that the expected-failure tests really test something, I ran the suite against a fixed copy in the scratchpad. All 17 passed, and only the 3 tests that confirm the current bug failed, as intended.
+
+If you'd rather have a suite that only passes once the bug is fixed, delete the `known_bug` markers and the three tests that confirm the current error.
+
+result: Added `<work>\work\test_solution.py` (5 passed, 17 xfailed). It found that `solution.mergesort` recurses forever on any non-empty list, and those 17 tests are marked as expected failures until that's fixed.

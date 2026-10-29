@@ -1,0 +1,55 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/is_valid_parenthesization",
+    "condition": "fixed",
+    "taskset": "quixbugs",
+    "order": 63,
+    "folder": "wcma5bk",
+    "solution_sha256": "b83c1bf81bfd185b75cb3de2e72d14e92e65bee80e4825ebbe3d189e0b1c48fe"
+  },
+  "variant": "report",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-12T00:46:22.030261+00:00",
+  "finished": "2026-10-12T00:47:06.748535+00:00",
+  "seconds": 44.6,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d93-2b8e-7d60-880a-134b69904e44",
+  "usage": [
+    {
+      "input_tokens": 94792,
+      "cached_input_tokens": 89216,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1156,
+      "reasoning_output_tokens": 129
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-12T00:46:22.032505+00:00",
+      "file": "solution.py",
+      "sha256": "422e398d5a05895524156f5c78a7f74297ea2eab95f5f774d56063e91849c201",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-12T00:46:49.926948+00:00",
+      "file": "test_solution.py",
+      "sha256": "8044f51af5fae9879ed7ff06816d1490b43d564c6471501c5fc854b7738e06b9",
+      "stored": "0001__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

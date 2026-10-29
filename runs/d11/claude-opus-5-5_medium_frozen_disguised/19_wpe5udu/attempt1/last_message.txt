@@ -1,0 +1,11 @@
+I wrote the tests in `<work>\work\test_solution.py`. The suite passes, but writing it turned up a bug in solution.py, which I did not change as you asked. The last run gave 14 passed and 5 expected failures. The doctests in solution.py also pass.
+
+**The bug:** the docstring says `y`/`Y` counts as a vowel only when it is the last character. The code checks every character against `'aeiouyAEIOUY'`, so it counts a `y` anywhere in the word. For example, `count_vowel_sounds('yes')` returns 2 instead of 1, and `'rhythm'` returns 1 instead of 0. The doctest examples don't catch this because none of them has a `y` before the end.
+
+**What the tests cover:** the docstring examples, empty string, words with no vowels, all-lowercase and all-uppercase vowels, mixed case, a final `y` counting (`y`, `Y`, `happy`, `SKY`), non-letters being ignored, and the result being an int.
+
+**The bug tests:** five cases (`yes`, `Yellow`, `rhyme`, `yay`, `rhythm`) check that a `y` before the end isn't counted. They are marked "expected to fail" with a strict setting, which is why the run shows them as expected failures instead of failures. Once solution.py is fixed they will be reported as errors, so you'll know to remove the marker then.
+
+Run with: `python -m pytest -v test_solution.py` from `<work>\work`.
+
+result: Pytest tests for `count_vowel_sounds` are in `<work>\work\test_solution.py` and pass (14 passed, 5 expected failures); they show that solution.py counts `y` anywhere in a word, not only at the end as documented.

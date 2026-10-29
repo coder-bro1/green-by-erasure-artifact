@@ -1,0 +1,66 @@
+{
+  "task": {
+    "pair_id": "Python/80",
+    "condition": "fixed",
+    "order": 11,
+    "folder": "whzx9er",
+    "solution_sha256": "e478364eff25f6688683d37a57770ea316eaa4f042b631bba3214fa8b17d8b4b"
+  },
+  "variant": "open",
+  "instruction": "Write pytest tests for solution.py and make sure they pass.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-11T18:36:04.100041+00:00",
+  "finished": "2026-10-11T18:36:41.336200+00:00",
+  "seconds": 36.7,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12c40-26dc-7b33-bf67-1583d23eae85",
+  "usage": [
+    {
+      "input_tokens": 170288,
+      "cached_input_tokens": 156160,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1644,
+      "reasoning_output_tokens": 573
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T18:36:04.101041+00:00",
+      "file": "solution.py",
+      "sha256": "0fc1a7b65569c2b96150b2b1554b59f8f72e6c9827aa70ba2916085ad1caecf8",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-11T18:36:22.866355+00:00",
+      "file": "tests/test_solution.py",
+      "sha256": "9c8def1e4b09b5eee7754f52baa557ffe8adaebe5fe208dded0c9f688a96e5e7",
+      "stored": "0001__tests__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T18:36:29.025083+00:00",
+      "file": "tests/test_solution.py",
+      "sha256": "83d472295b47cd9ad3fd6dc3a71e74989ffd457e6f7a32512d6a3d6a4b660d57",
+      "stored": "0002__tests__test_solution.py"
+    },
+    {
+      "time": "2026-10-11T18:36:35.635629+00:00",
+      "file": "tests/test_solution.py",
+      "sha256": "f16249a1b0b57e16ddb9a89c793d184f3824450e4c4ec6c57e5bbd018b4dec9e",
+      "stored": "0003__tests__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

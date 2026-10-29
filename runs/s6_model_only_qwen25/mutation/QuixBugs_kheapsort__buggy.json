@@ -1,0 +1,49 @@
+{
+  "pair_id": "QuixBugs/kheapsort",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_61e88fee3f1ba868.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_0fdb9f41e3124321.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_459c3ad4f97a9900.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-kheapsort__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "653220c9c84f4c31bcf7ef3d5e47eb59",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6926d0d24e8342a19df338c31c0d0612",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.3,
+  "finished": "2026-10-28T22:01:00.610656+00:00"
+}

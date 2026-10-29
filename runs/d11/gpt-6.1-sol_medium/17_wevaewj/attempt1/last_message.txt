@@ -1,0 +1,8 @@
+Added [test_solution.py](/<work>/wevaewj/test_solution.py) with 39 tests covering documented examples, edge cases, and count combinations.
+
+All 39 pass:
+```sh
+python -m pytest test_solution.py -q -p no:cacheprovider
+```
+
+Cache disabled to avoid a filesystem permission issue. `solution.py` was unchanged.

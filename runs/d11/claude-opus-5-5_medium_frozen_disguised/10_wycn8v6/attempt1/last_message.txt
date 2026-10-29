@@ -1,0 +1,20 @@
+I wrote the tests, but they can't all pass: solution.py has a bug, and I wasn't allowed to change it. 8 of 15 tests fail. I didn't rewrite the tests to match the buggy output, because then they would just lock in the wrong behaviour.
+
+**The bug:** the counting is backwards. The loop adds 1 for every `>` and subtracts 1 for every `<`. So the function answers True when the string is balanced with the brackets flipped.
+- `angles_balanced('<<>>')` returns False. The docstring says True.
+- `angles_balanced('><')` returns True. The docstring says False.
+- `angles_balanced('>>><<<')` returns True. It should be False.
+
+**The tests**, in <work>\work\test_solution.py, check the function against its docstring:
+- **Balanced cases:** `''`, `<>`, `<<>>`, `<><>`, `<<><>>`, and 50 `<` followed by 50 `>`.
+- **Unbalanced cases:** `<`, `>`, `><`, `<<>`, `<>>`, `><<>`, `<>><`, `>>><<<`.
+- **Docstring examples:** the three examples written in the function's docstring.
+
+**Result** (`python -m pytest -q test_solution.py`): 7 pass, 8 fail. The 8 failures are:
+- five of the balanced cases (every one except the empty string)
+- `><` and `>>><<<`
+- the docstring-examples test
+
+**The fix:** swap the two branches in solution.py so `<` adds 1 and `>` subtracts 1. With that change, all 15 tests should pass.
+
+failed: the tests can't all pass without changing solution.py, which inverts '<' and '>' and contradicts its own docstring.

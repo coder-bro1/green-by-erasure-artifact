@@ -1,0 +1,11 @@
+diff --git a/solution.py b/solution.py
+index 8e68a3a..4cc705b 100644
+--- a/solution.py
++++ b/solution.py
+@@ -23,5 +23,5 @@ def tri(n):
+         if i % 2 == 0:
+             my_tri.append(i / 2 + 1)
+         else:
+-            my_tri.append(my_tri[i - 1] + my_tri[i - 2] + i + (i + 3) / 2)
++            my_tri.append(my_tri[i - 1] + my_tri[i - 2] + (i + 3) / 2)
+     return my_tri

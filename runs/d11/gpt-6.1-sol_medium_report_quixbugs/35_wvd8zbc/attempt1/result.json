@@ -1,0 +1,67 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/shortest_paths",
+    "condition": "fixed",
+    "taskset": "quixbugs",
+    "order": 35,
+    "folder": "wvd8zbc",
+    "solution_sha256": "5e99a2c50778c03a1deb03842804f53dcbd2e2b4a8046c64e57ec27322cb6082"
+  },
+  "variant": "report",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-12T00:18:10.118928+00:00",
+  "finished": "2026-10-12T00:19:23.237761+00:00",
+  "seconds": 72.7,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d79-5a89-73b3-b39a-3a60e3a160c6",
+  "usage": [
+    {
+      "input_tokens": 90212,
+      "cached_input_tokens": 81536,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2531,
+      "reasoning_output_tokens": 361
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-12T00:18:10.118928+00:00",
+      "file": "solution.py",
+      "sha256": "06463c6291b18f7edf70c93b2b6ba53c07a8174a16a9fbd2e04699325c31a614",
+      "stored": "0000__solution.py"
+    },
+    {
+      "time": "2026-10-12T00:19:01.334492+00:00",
+      "file": "test_solution.py",
+      "sha256": "d4359e73b46ec224d54530b22969823a5de1f673f060cc42da5b6506c8eb39bd",
+      "stored": "0001__test_solution.py"
+    },
+    {
+      "time": "2026-10-12T00:19:09.463695+00:00",
+      "file": "test_solution.py",
+      "sha256": "4c7a89ef8e19d1da5f10fab6791f888d182d5c4aa787e987efbc12f953062ccb",
+      "stored": "0002__test_solution.py"
+    },
+    {
+      "time": "2026-10-12T00:19:16.582503+00:00",
+      "file": "pytest.ini",
+      "sha256": "e08279e0036f9813d0874146fda3511dd10119fd454e25e3e5690bf93d95c5cc",
+      "stored": "0003__pytest.ini"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

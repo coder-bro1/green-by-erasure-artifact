@@ -1,0 +1,13 @@
+I wrote the tests in <work>\work\test_solution.py and the suite passes (9 passed, 18 xfailed). But solution.py has a bug, so the tests that check correct behavior are marked as expected failures. solution.py was not modified.
+
+**The bug:** in `largest_divisor`, the check is `n - i == 0` where it should be `n % i == 0`. `range(n)` never produces `n`, so the check is never true and the function returns `None` for every input. That includes the docstring's own example: `largest_divisor(15)` gives `None`, not 5. I confirmed this by running it on -3, 0, 1, 2, 15, 49 and 100.
+
+**What the tests cover:**
+- **Correct behavior (18 tests, all expected to fail for now):** known answers like 15→5, primes→1, 49→7, 100→50 and 1024→512; for a few more numbers, a check that the result divides n and nothing larger below n does; and the docstring example. They are marked `xfail(strict=True)` with the bug as the reason. Once `%` is restored, these tests will start passing unexpectedly and pytest will fail the run. That's the signal to remove the markers.
+- **Current behavior (9 tests, passing):** the function returns `None` for normal inputs, and for -5, 0 and 1 it doesn't raise an error.
+
+Without editing solution.py, the only tests that can genuinely pass are ones that assert the buggy output. That's why the correct-behavior tests are marked as expected failures rather than rewritten to match the bug. If you'd rather have plain failing tests that show the bug directly, delete the xfail markers. Once the `%` fix is in, the 9 current-behavior tests will fail and should be deleted.
+
+Run them with `python -m pytest -q <work>\work\test_solution.py`.
+
+result: Added pytest tests in <work>\work\test_solution.py (9 passed, 18 expected failures); solution.py has a bug (`n - i` instead of `n % i`) that makes it always return None, so the correct-behavior tests are marked xfail until it's fixed.

@@ -1,0 +1,460 @@
+{
+  "run_id": "c1_devtests_qwen25_r2",
+  "config": {
+    "model": "qwen2.5-coder:7b-instruct",
+    "gen_inputs": [
+      "code"
+    ],
+    "benchmarks": [
+      "BugsInPy"
+    ],
+    "seed": 0,
+    "temperature": 0,
+    "subset": "configs/c1_devtests_subset.json",
+    "note": "C1 protocol sections 10 and 11 (change 8): developers' tests with environment warm-up; suites and model-answer cache copied from c1_devtests_qwen25"
+  },
+  "model": "qwen2.5-coder:7b-instruct",
+  "model_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+  "ollama_version": "0.40.1",
+  "models": {
+    "qwen2.5-coder:7b-instruct": {
+      "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      },
+      "wall_seconds": 65.65600000001723,
+      "load_seconds": 34.9603136,
+      "tokens_per_second": 12.174651462556099,
+      "peak_gpu_mib": 6720,
+      "memory_samples": 265,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen2.5-coder:7b-instruct",
+        "model": "qwen2.5-coder:7b-instruct",
+        "size": 5133943438,
+        "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "7.6B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T03:40:57.1292029+06:00",
+        "size_vram": 5133943438,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen2.5-coder:7b-instruct",
+        "created_at": "2026-10-08T21:35:57.1286876Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(-5, -5) == -10\n    assert add(100, 200) == 300\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 61611145100,
+        "load_duration": 34960313600,
+        "prompt_eval_count": 50,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 18755278000,
+        "eval_count": 96,
+        "eval_duration": 7885236000
+      },
+      "timestamp": "2026-10-08T21:35:59.154269+00:00",
+      "harness_commit": "78261db0cc1faae7f498fc3d9798d3827fbb9243",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "qwen3.5:9b": {
+      "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "details": {
+        "parent_model": "model.gguf",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 50.17200000002049,
+      "load_seconds": 33.5554006,
+      "tokens_per_second": 52.73447953429945,
+      "peak_gpu_mib": 7157,
+      "memory_samples": 196,
+      "thinking_returned": false,
+      "resident": {
+        "name": "qwen3.5:9b",
+        "model": "qwen3.5:9b",
+        "size": 5828646010,
+        "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "9.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T10:07:30.3130046+06:00",
+        "size_vram": 5828646010,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "qwen3.5:9b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen3.5:9b",
+        "created_at": "2026-10-09T04:02:30.3124752Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\n\ndef add(a, b):\n    return a + b\n\n\n@pytest.mark.parametrize(\"a,b\", [(1, 2), (0, 0), (-1, -1)])\ndef test_add(a, b):\n    assert add(a, b) == a + b\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 46080394900,
+        "load_duration": 33555400600,
+        "prompt_eval_count": 33,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11248236000,
+        "eval_count": 67,
+        "eval_duration": 1270516000
+      },
+      "timestamp": "2026-10-09T04:02:32.354252+00:00",
+      "harness_commit": "720ec172eb4dd153fc8ceb1da6180b592280b689",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    },
+    "gemma4:12b": {
+      "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+      "details": {
+        "parent_model": "imatrix-20260927-12b/model-q4_K_M.gguf",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "11.9B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 3840,
+        "runner": "llamacpp"
+      },
+      "wall_seconds": 55.359000000025844,
+      "load_seconds": 39.0296813,
+      "tokens_per_second": 77.85863406985187,
+      "peak_gpu_mib": 9237,
+      "memory_samples": 208,
+      "thinking_returned": false,
+      "resident": {
+        "name": "gemma4:12b",
+        "model": "gemma4:12b",
+        "size": 1090120580,
+        "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "11.9B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-09T15:02:42.6803519+06:00",
+        "size_vram": 1090120580,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      },
+      "fully_on_gpu": true,
+      "request": {
+        "model": "gemma4:12b",
+        "stream": false,
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 0,
+          "num_ctx": 8192,
+          "num_predict": 2048
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write one pytest test for a function add(a,b) that returns a+b. Return Python code only."
+          }
+        ]
+      },
+      "response": {
+        "model": "gemma4:12b",
+        "created_at": "2026-10-09T08:57:42.6798262Z",
+        "message": {
+          "role": "assistant",
+          "content": "```python\nimport pytest\n\ndef add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n    assert add(0, 0) == 0\n    assert add(1.5, 2.5) == 4.0\n```"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 51267437700,
+        "load_duration": 39029681300,
+        "prompt_eval_count": 37,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 11126798000,
+        "eval_count": 86,
+        "eval_duration": 1104566000
+      },
+      "timestamp": "2026-10-09T08:57:44.726301+00:00",
+      "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+      "prompt_template": "model_check_inline_v1",
+      "prompt_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b",
+      "prompt_template_sha256": "a6410d9ce5bdac959aa85ccb18952cf5480446db016d0f06b71b618ca3a8074b"
+    }
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 8192,
+    "num_predict": 2048
+  },
+  "think": false,
+  "dataset": {
+    "repository": "bigcode/humanevalpack",
+    "revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+    "license": "MIT",
+    "file": "python/test-00000-of-00001.parquet",
+    "file_sha256": "ed5f15d789156e21222bfcd556c425a39042355c84ae1e8b058abd6a3d7f8075"
+  },
+  "dataset_revision": "9a41762f73a8cb23bb5811b73d5aab164efcf378",
+  "quixbugs_commit": null,
+  "disguised_sha256": null,
+  "natural_sha256": null,
+  "c1": {
+    "file": "data/c1/tasks.json",
+    "sha256": "7faf6fc26815631835fa1a7273b74be3e449d45f478947991d968c94f1f49925",
+    "bugsinpy_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+    "tasks": 30,
+    "hash_scope": "task content without the runtime entries (gbe.c1.content_hash)"
+  },
+  "judge": {
+    "prompt": "judge_v2b",
+    "ablation_prompt": "judge_with_code_v2b",
+    "prompt_sha256": {
+      "judge_v2b": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+      "judge_with_code_v2b": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d"
+    },
+    "parser_sha256": "870c2a3969c295c85bae1f481b30d726ca1dd38602687af84c264daf6a45883d"
+  },
+  "excluded_tasks": [],
+  "prompt_hashes": {
+    "fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "generate_c1_v1.txt": "5f4644c34d4247c3a38d59ef70ef90c20cb1ef85704c01a3bc7796dfad015dfa",
+    "generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363"
+  },
+  "harness_commit": "22a25520f83891616947314e8ad82389d6904546",
+  "harness_files_sha256": {
+    "src/gbe/benchmarks.py": "b58012cf8427449a5318097047b0d8343fe7dd9aeac6a945465a6b4d403508c3",
+    "src/gbe/c1.py": "36493ae79730b371ab1a97ba66f05f38fa7e2b9fdfe09afb695bbf9a9272bece",
+    "src/gbe/disguised.py": "8fdc3c56984e5e3d64df0484a267508c98f3d311598c97822dabbc6d97cb7928",
+    "src/gbe/evaluate.py": "09fd3c7d925300b84e0f873233fe7a084e6db235b929fc37bf6c63c78930d241",
+    "src/gbe/execute.py": "48f4782f67d12c68bd5630b66a430172eb8d12a58e63a08651394e571c691e1e",
+    "src/gbe/generate.py": "4af5810c351b1956a57314fb41ed10b8bb41b404af74dccf3ecdc477949b2d2a",
+    "src/gbe/llm.py": "e445b64013e1cc677488f63e6e27485239a5e042e9a31d23e23a34bfccbe3a15",
+    "src/gbe/natural.py": "392d8cac22e23f1d3310e92808d6b1c3a412b6ec9f918ec82a5b95ae73929ff4",
+    "src/gbe/policies.py": "6034ba8f0e5090d1af7914acdbfee88dccd9c427591455129d53097b6e8c0a1c",
+    "src/gbe/pytest_probe.py": "269df951792d42243120dd1611cbaf5b7962a054d3f18960589bee34cb22b72a",
+    "src/gbe/quixbugs.py": "43ca946e7929a8e7d0427f5e448cb661aac1320add3f5313bc3e18cff84150b9",
+    "src/gbe/report.py": "044c4b0d489e30fc913f147ef83a98ace3606968d1364a7b7a269d216a8dbf40",
+    "src/gbe/runner.py": "575992011f242351fea66c392e7bc57b1947770b0fda6731c4fde150fe852692",
+    "src/gbe/util.py": "1c4c0f7ee7ebbc3c0272da2c6cc018ff5fe62665e5d0500b8806c0b9a130d85a",
+    "src/gbe/__init__.py": "96e4ce45e295f08fd440e06e9f7260204af2ec340ec173b9a0472af0e40927f2",
+    "prompts/fix_broken_v1.txt": "8c0d259e729320ea718aee6b0521e2b9443622a2640a1df633c555c7130113ac",
+    "prompts/free_repair_v1.txt": "a83f95d65045bec6cd39992461ed11da9cd50e15407d8b6ed402ba914e2c4c26",
+    "prompts/generate_c1_v1.txt": "5f4644c34d4247c3a38d59ef70ef90c20cb1ef85704c01a3bc7796dfad015dfa",
+    "prompts/generate_v1.txt": "d4683930a3991b569f4f99b74e38bb04a9194c78f639455c3dace5c0dcd3b1cb",
+    "prompts/judge_v1.txt": "112cfbb59d5e9d3b189a3826a5be8247b63b8a05fff85ebc485a49b852efe85a",
+    "prompts/judge_v2b.txt": "e287a64ab9d50b3a791e1d847bb2817e4d4cbfbfcbfff96fa077c27f39389ea8",
+    "prompts/judge_with_code_v1.txt": "93e8292b50e8baa7f85d758101f8ce9f06bcd5311dc85bbeaa0f2cc9772c8aaa",
+    "prompts/judge_with_code_v2b.txt": "c9e63b2d41ac3ebe98844de990c2a42ec6feb2d8bc6de6cf4c310a9b9c3b561d",
+    "prompts/overwrite_fallback_v1.txt": "c1627a0fa3aa5042fe52744815fb04580343e75e6ac0a55cea7793640ae46363",
+    "pyproject.toml": "175c943243f769d40ce1f0a61ccc04387e60d9335d3d3088e11edf46fb92326c",
+    "requirements.txt": "71f20ad0cff3f7b0f386d72389aa079c17975a1e1179a579b16a838488074ecb"
+  },
+  "start_time": "2026-10-22T10:59:54.867476+00:00",
+  "end_time": "2026-10-22T11:18:16.523181+00:00",
+  "input_test_hashes": {
+    "BugsInPy-httpie-4__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36",
+      "P2": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36",
+      "P3": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36",
+      "P4": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36"
+    },
+    "BugsInPy-httpie-4__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36",
+      "P2": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36",
+      "P3": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36",
+      "P4": "98afc8ffa61fecc7a3d5acd6c0e2ec22dbbdab6088b5bd3d8f722d1f27df2a36"
+    },
+    "BugsInPy-pandas-127__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202",
+      "P2": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202",
+      "P3": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202",
+      "P4": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202"
+    },
+    "BugsInPy-pandas-127__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202",
+      "P2": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202",
+      "P3": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202",
+      "P4": "0bce9c86a8e0dc32c3745152aa1753ef84604e8bf2c0cba951168dc8e1810202"
+    },
+    "BugsInPy-pandas-161__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4",
+      "P2": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4",
+      "P3": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4",
+      "P4": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4"
+    },
+    "BugsInPy-pandas-161__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4",
+      "P2": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4",
+      "P3": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4",
+      "P4": "79078254d36d7925c047a6d6f3c609440fcbee7a01ae9dcd2da56d0c7e6221c4"
+    },
+    "BugsInPy-pandas-162__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c",
+      "P2": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c",
+      "P3": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c",
+      "P4": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c"
+    },
+    "BugsInPy-pandas-162__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c",
+      "P2": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c",
+      "P3": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c",
+      "P4": "45875de762510ea1891c4a9e6bd9a6c9670dbdc214b6df378f808e91c7c5d96c"
+    },
+    "BugsInPy-pandas-168__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2",
+      "P2": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2",
+      "P3": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2",
+      "P4": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2"
+    },
+    "BugsInPy-pandas-168__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2",
+      "P2": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2",
+      "P3": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2",
+      "P4": "300308340fb13fea721821ffffb8ebb2409ee518110c3c3a19f1fea077e841a2"
+    },
+    "BugsInPy-pandas-23__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a",
+      "P2": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a",
+      "P3": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a",
+      "P4": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a"
+    },
+    "BugsInPy-pandas-23__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a",
+      "P2": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a",
+      "P3": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a",
+      "P4": "1798344d32d3b9697461c4a71bb54b8d29f80f0098bb6fc5019803fde98bda4a"
+    },
+    "BugsInPy-pandas-58__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c",
+      "P2": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c",
+      "P3": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c",
+      "P4": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c"
+    },
+    "BugsInPy-pandas-58__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c",
+      "P2": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c",
+      "P3": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c",
+      "P4": "461bfa475b4a8096c001d90ce8789c503400e26e88e4c74fbc7d520b965ec60c"
+    },
+    "BugsInPy-spacy-2__buggy__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa",
+      "P2": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa",
+      "P3": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa",
+      "P4": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa"
+    },
+    "BugsInPy-spacy-2__fixed__qwen2-5-coder-7b-instruct__s0__code": {
+      "P1": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa",
+      "P2": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa",
+      "P3": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa",
+      "P4": "fd4881a43ae0b222e3589cc2950cd9e8d0cb9f53df5da6d63fc4e50de48e92aa"
+    }
+  },
+  "unit_seconds": {
+    "BugsInPy-httpie-4__buggy__qwen2-5-coder-7b-instruct__s0__code": 40.437999999994645,
+    "BugsInPy-httpie-4__fixed__qwen2-5-coder-7b-instruct__s0__code": 27.46899999998277,
+    "BugsInPy-pandas-127__buggy__qwen2-5-coder-7b-instruct__s0__code": 65.86000000001513,
+    "BugsInPy-pandas-127__fixed__qwen2-5-coder-7b-instruct__s0__code": 49.421999999991385,
+    "BugsInPy-pandas-161__buggy__qwen2-5-coder-7b-instruct__s0__code": 172.0460000000021,
+    "BugsInPy-pandas-161__fixed__qwen2-5-coder-7b-instruct__s0__code": 53.125,
+    "BugsInPy-pandas-162__buggy__qwen2-5-coder-7b-instruct__s0__code": 121.0,
+    "BugsInPy-pandas-162__fixed__qwen2-5-coder-7b-instruct__s0__code": 42.437000000005355,
+    "BugsInPy-pandas-168__buggy__qwen2-5-coder-7b-instruct__s0__code": 82.26600000000326,
+    "BugsInPy-pandas-168__fixed__qwen2-5-coder-7b-instruct__s0__code": 41.39000000001397,
+    "BugsInPy-pandas-23__buggy__qwen2-5-coder-7b-instruct__s0__code": 98.625,
+    "BugsInPy-pandas-23__fixed__qwen2-5-coder-7b-instruct__s0__code": 72.89000000001397,
+    "BugsInPy-pandas-58__buggy__qwen2-5-coder-7b-instruct__s0__code": 80.04699999999139,
+    "BugsInPy-pandas-58__fixed__qwen2-5-coder-7b-instruct__s0__code": 65.125,
+    "BugsInPy-spacy-2__buggy__qwen2-5-coder-7b-instruct__s0__code": 50.812000000005355,
+    "BugsInPy-spacy-2__fixed__qwen2-5-coder-7b-instruct__s0__code": 37.51500000001397
+  }
+}

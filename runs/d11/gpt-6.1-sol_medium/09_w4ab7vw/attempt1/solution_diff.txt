@@ -1,0 +1,13 @@
+diff --git a/solution.py b/solution.py
+index 763cb9c..55f8139 100644
+--- a/solution.py
++++ b/solution.py
+@@ -11,7 +11,7 @@ def prime_length(string):
+     l = len(string)
+     if l == 0 or l == 1:
+         return False
+-    for i in range(3, l):
++    for i in range(2, l):
+         if l % i == 0:
+             return False
+     return True

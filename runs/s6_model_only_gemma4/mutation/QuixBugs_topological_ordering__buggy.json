@@ -1,0 +1,115 @@
+{
+  "pair_id": "QuixBugs/topological_ordering",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_0753f12d8589fd06.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_997307f4994bf2c7.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_ec027aebdf55ece8.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_d93a775d1e4fc9d9.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_69676e4ae2f6fe1c.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_154eb6efdd1be107.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_9e240fd89b05074b.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_b24a1c7d9ccf99eb.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_69e165db7dc7f079.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-topological_ordering__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "53d8cb8ed4c94eba9c076d22fccab893",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "69dcadc2efb74353b785a05db9822365",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "69c3d286681942db8d329a39407b0493",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "7b3e419e6f3b44f0ad464ce0df3fe346",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "2be7253e2d134a02bc35e2f39945ba12",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.7,
+  "finished": "2026-10-28T21:39:56.171041+00:00"
+}

@@ -1,0 +1,19 @@
+I wrote pytest tests for solution.py and the run is green: 9 passed, 17 xfailed. But `gcd` itself has a bug, and the docstring's own example fails.
+
+**The bug:** the recursive step is `gcd(a % b, b)` instead of `gcd(b, a % b)`. Any call where `b != 0` loops until Python raises RecursionError. I checked this directly: `gcd(35, 21)` raises RecursionError. Only calls with `b == 0` work, e.g. `gcd(5, 0) == 5` and `gcd(0, 0) == 0`.
+
+Since I couldn't change solution.py, the tests are split in two:
+- **9 passing tests** cover what works today: `gcd(a, 0) == a` for several values including very large ones, `gcd(0, 0) == 0`, and that the result is an int. One more test records that `gcd(35, 21)` currently raises RecursionError, so the behaviour can't change without someone noticing.
+- **17 tests marked as expected failures** (`xfail`, `strict=True`, `raises=RecursionError`) say what a correct gcd should return when `b != 0`:
+  - the docstring example `gcd(35, 21) == 7`
+  - 10 known value pairs, including coprime numbers, one dividing the other, equal values, powers of two and large numbers
+  - matching Python's built-in `math.gcd`
+  - giving the same answer with the arguments swapped
+
+Because the markers are strict, these tests will start failing once the bug is fixed. That signals it's time to remove the markers. The one-line fix is `return gcd(b, a % b)`; the pinned RecursionError test should be deleted at the same time.
+
+result: Added pytest tests for solution.py (9 passed, 17 xfailed); `gcd` loops forever whenever b != 0, so the tests for correct results are marked as expected failures.
+
+Files:
+- <work>\work\test_solution.py (new)
+- <work>\work\solution.py (unchanged)

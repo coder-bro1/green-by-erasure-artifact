@@ -1,0 +1,150 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 18,
+  "mismatches": [
+   {
+    "test_id": "HumanEvalFixDisguised-10__fixed__gemma4-12b__s0__code/t9",
+    "stage": "P3",
+    "harness": "BROKEN",
+    "reviewer": "REVEALS",
+    "fixed": "PASS",
+    "buggy": "TIMEOUT"
+   },
+   {
+    "test_id": "HumanEvalFixDisguised-10__fixed__gemma4-12b__s0__code/t8",
+    "stage": "P3",
+    "harness": "BROKEN",
+    "reviewer": "REVEALS",
+    "fixed": "PASS",
+    "buggy": "TIMEOUT"
+   }
+  ]
+ },
+ "P1-c_same_input": {
+  "units": 80,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 953,
+  "violations": [
+   {
+    "call_id": "e6ccff66574e325cdbd37b4cfbbcb8d48a3597bf407c32a2349bd9faa2b2f9a0",
+    "purpose": "free_repair",
+    "lines": [
+     "order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')"
+    ]
+   },
+   {
+    "call_id": "bb2f36ee253b6f81003e3c89220f55c33be00f3657b220a0fc36799d1077f574",
+    "purpose": "free_repair",
+    "lines": [
+     "order = ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')"
+    ]
+   }
+  ],
+  "n_violations": 2
+ },
+ "P1-m_judge_sees_body": {
+  "n": 0,
+  "examples": []
+ },
+ "verdicts": {
+  "stored": {
+   "BUG": 149,
+   "TEST_WRONG": 32,
+   "UNSURE": 15
+  },
+  "recovered_judge": {
+   "BUG": 149,
+   "TEST_WRONG": 32,
+   "UNSURE": 15
+  },
+  "recovered_with_code": {
+   "BUG": 156,
+   "TEST_WRONG": 38,
+   "UNSURE": 2
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 4,
+   "buggy|BUG|REVEALS": 139,
+   "buggy|TEST_WRONG|BROKEN": 13,
+   "buggy|TEST_WRONG|REVEALS": 5,
+   "buggy|UNSURE|REVEALS": 8,
+   "fixed|BUG|BROKEN": 4,
+   "fixed|BUG|ENCODES": 2,
+   "fixed|TEST_WRONG|BROKEN": 11,
+   "fixed|TEST_WRONG|ENCODES": 3,
+   "fixed|UNSURE|BROKEN": 4,
+   "fixed|UNSURE|ENCODES": 3
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 386,
+    "QUARANTINED": 151,
+    "QUARANTINED_REVEALS": 147,
+    "KEPT": 235,
+    "QUARANTINED_BROKEN": 4
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 403,
+    "QUARANTINED": 151,
+    "QUARANTINED_REVEALS": 147,
+    "KEPT": 252,
+    "QUARANTINED_BROKEN": 4
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 404,
+    "QUARANTINED": 169,
+    "QUARANTINED_REVEALS": 152,
+    "KEPT": 235,
+    "QUARANTINED_BROKEN": 17
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 378,
+    "QUARANTINED": 143,
+    "QUARANTINED_REVEALS": 139,
+    "KEPT": 235,
+    "QUARANTINED_BROKEN": 4
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 394,
+    "KEPT": 381,
+    "QUARANTINED": 13,
+    "QUARANTINED_BROKEN": 8,
+    "QUARANTINED_ENCODES": 5
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 408,
+    "KEPT": 395,
+    "QUARANTINED": 13,
+    "QUARANTINED_BROKEN": 8,
+    "QUARANTINED_ENCODES": 5
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 408,
+    "KEPT": 381,
+    "QUARANTINED": 27,
+    "QUARANTINED_BROKEN": 19,
+    "QUARANTINED_ENCODES": 8
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 387,
+    "KEPT": 381,
+    "QUARANTINED": 6,
+    "QUARANTINED_BROKEN": 4,
+    "QUARANTINED_ENCODES": 2
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 199,
+  "written": 10
+ }
+}

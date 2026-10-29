@@ -1,0 +1,18 @@
+I wrote `<work>\work\test_solution.py` for `is_happy` and the suite passes (18 passed, 7 expected failures, 0 failed), but only because the expected failures cover a real bug in `solution.py`. I did not modify `solution.py`.
+
+**The bug:** the docstring says a string is happy only if every 3 consecutive letters are distinct. The code only returns False when all three letters are the same, so any window with just two equal letters gets through:
+- `is_happy("aabb")` returns True; the docstring says False.
+- `is_happy("xyy")` returns True; the docstring says False.
+
+Two of the docstring's own examples fail. The fix would be to change the condition to `s[i] == s[i+1] or s[i+1] == s[i+2] or s[i] == s[i+2]`.
+
+**What the tests cover:**
+- Strings shorter than 3 characters return False.
+- Strings where every 3-letter window is distinct return True.
+- Strings with three identical letters in a row return False.
+- The return value is a bool.
+- Seven strings where two of three letters repeat (`aabb`, `xyy`, `aba`, `abb`, `aab`, `iopaxioi`, `abcdcx`) should return False. These are marked "expected to fail" with the bug as the reason, so they don't break the run. Once `solution.py` is fixed they will pass, and pytest will then report them as failures (that's what `strict=True` does). That is the signal to remove the marker.
+
+I didn't write tests that treat the buggy behaviour as correct. If you'd rather have no expected failures at all, the other option is to let those seven tests fail outright.
+
+result: Added pytest tests for is_happy in <work>\work\test_solution.py (18 passed, 7 xfailed); they expose a bug in solution.py, which wrongly returns True for "aabb" and "xyy".

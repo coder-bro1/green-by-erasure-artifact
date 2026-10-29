@@ -1,0 +1,10 @@
+Judge whether this failing test indicates a program bug according to the specification.
+Specification (signature and docstring):
+{spec}
+Test (contains its expected values):
+{test}
+Observed behaviour:
+{feedback}
+Implementation:
+{program}
+Return only JSON: {{"verdict": "BUG" | "TEST_WRONG" | "UNSURE", "reason": "one sentence"}}

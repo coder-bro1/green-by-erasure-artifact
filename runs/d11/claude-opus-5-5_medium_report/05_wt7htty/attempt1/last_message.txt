@@ -1,0 +1,23 @@
+The tests for `add` in `solution.py` are written and the run is green: 10 passed, 5 xfailed (strict). I did not change `solution.py`.
+
+**Bug in `solution.py`:** the function steps through every index from 1 onward instead of every second one:
+```python
+return sum([lst[i] for i in range(1, len(lst), 1) if lst[i]%2 == 0])
+```
+It should use `range(1, len(lst), 2)`. Because of this, even values at even indices 2, 4, ... are added too, and the docstring says only odd indices count. The docstring's own example fails: `add([4, 2, 6, 7])` returns 8 (2 + 6) instead of 2.
+
+**What the tests cover (`<work>\work\test_solution.py`):**
+- **Passing (10):**
+  - single-element lists
+  - an even value at index 0 being ignored
+  - odd values at odd indices
+  - zeros and negative even numbers
+  - lists with even values at odd indices only
+  - a check that the input list isn't changed
+
+  These pass because none of them has an even value at index 2 or later, so the bug doesn't show.
+- **Strict xfail (5):** the docstring example, plus `[4, 88, 2]` → 88, `[4, 5, 6, 7, 2, 122]` → 122, `[4, 0, 6, 7]` → 0 and `[4, 4, 6, 8]` → 12. Their expected values follow the docstring, and each one fails only because of the step-size bug.
+
+Run with `python -m pytest -v test_solution.py` from `<work>\work`.
+
+result: 15 pytest tests for `add` in `solution.py` (10 pass, 5 strict xfail): it sums even values at every index from 1 onward instead of only odd indices, so its docstring example returns 8 instead of 2.

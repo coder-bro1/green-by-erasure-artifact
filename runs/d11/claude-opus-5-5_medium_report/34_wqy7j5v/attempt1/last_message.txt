@@ -1,0 +1,13 @@
+I wrote tests for `histogram` in `<work>\work\test_solution.py`. All 14 normal tests pass, and 3 more are marked as expected failures (strict xfail) because of one bug. I did not change solution.py.
+
+**What the passing tests cover:** all five docstring examples, a single letter, one letter repeated, a single most-common letter (the others are left out), a three-way tie, order not mattering, all 26 letters once, the return type being a dict, the input string not being changed, and a case where an extra space doesn't hurt because one letter's count is higher.
+
+**The bug (3 xfail tests):** when the input has a double space, or a space at the start or end, the result can include an empty-string `''` key.
+- The function splits the string on single spaces, so extra spaces leave empty `''` pieces.
+- The loop that finds the top count skips `''`, but the loop that builds the result doesn't.
+- So if `''` happens to appear as often as the most common letter, it gets added to the result.
+- Examples: `histogram('a  b')` returns `{'a': 1, '': 1, 'b': 1}`, and `histogram(' a')` returns `{'': 1, 'a': 1}`. The expected values in the tests are `{'a': 1, 'b': 1}` and `{'a': 1}`.
+
+These tests are a judgement call. The docstring only describes letters separated by single spaces, so extra spaces are arguably outside what it promises. But the code's own `i != ''` check shows it means to ignore empty pieces and applies that in only one of its two loops. If you'd rather not test input with extra spaces, delete `test_extra_spaces_do_not_produce_empty_key`.
+
+result: Added `<work>\work\test_solution.py` for `histogram`: 14 tests pass and 3 are marked as expected failures because extra spaces in the input can add an empty-string key.

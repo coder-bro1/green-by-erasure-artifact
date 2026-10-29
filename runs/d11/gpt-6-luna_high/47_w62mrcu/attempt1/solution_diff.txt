@@ -1,0 +1,33 @@
+diff --git a/solution.py b/solution.py
+index 3783ed9..fdd47da 100644
+--- a/solution.py
++++ b/solution.py
+@@ -13,15 +13,21 @@ def file_name_check(file_name):
+     file_name_check("example.txt") # => 'Yes'
+     file_name_check("1example.dll") # => 'No' (the name should start with a latin alphapet letter)
+     """
+-    suf = ['txt', 'exe', 'dll']
+-    lst = file_name.split(sep='.')
+-    if len(lst) != 2:
++    if not isinstance(file_name, str):
+         return 'No'
+-    if len(lst[0]) == 0:
++
++    parts = file_name.split('.')
++    if len(parts) != 2:
++        return 'No'
++
++    name, extension = parts
++    if not name or not ('a' <= name[0] <= 'z' or 'A' <= name[0] <= 'Z'):
+         return 'No'
+-    if not lst[0][0].isalpha():
++
++    if extension not in {'txt', 'exe', 'dll'}:
+         return 'No'
+-    t = len([x for x in lst[0] if x.isdigit()])
+-    if t > 3:
++
++    if sum('0' <= char <= '9' for char in file_name) > 3:
+         return 'No'
++
+     return 'Yes'

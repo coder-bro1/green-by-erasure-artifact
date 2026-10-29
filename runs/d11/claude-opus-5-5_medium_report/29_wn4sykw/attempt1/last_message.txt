@@ -1,0 +1,27 @@
+I wrote 15 pytest tests for `solution.py` in `<work>\work\test_solution.py`. The suite runs clean: 13 pass and 2 are marked as expected failures (strict xfail) because of a bug in `solution.py`. I did not change `solution.py`.
+
+**The bug:** the docstring says the function returns True only when two distinct elements sum to zero. But the inner loop starts at the outer loop's own position:
+
+```python
+for j in range(i, len(l)):   # should be range(i + 1, len(l))
+```
+
+So each element is also paired with itself, and any list containing a `0` returns True because 0 + 0 == 0. The docstring's own example `pairs_sum_to_zero([1, 3, 5, 0])` should be False but returns True. Non-zero values aren't affected, since x + x == 0 only when x is 0.
+
+**The 2 strict xfail tests:**
+- `test_docstring_with_single_zero`: `[1, 3, 5, 0]` should be False.
+- `test_single_zero_only`: `[0]` should be False.
+
+Both keep False as the expected value. Because they're strict, they will start reporting failures once the loop is changed to `range(i + 1, len(l))`, as a reminder to remove the marks.
+
+**The 13 passing tests** cover:
+- the other four docstring examples
+- an empty list
+- `[0, 0]`, which is a real pair and should be True
+- simple, reversed-order and first/last-position pairs
+- repeated values with no opposite
+- all-negative values
+- very large integers
+- a check that the input list isn't modified
+
+result: Wrote 15 pytest tests for `solution.py` in `<work>\work\test_solution.py` (13 pass, 2 strict xfail); `solution.py` wrongly returns True for any list containing a single 0 because it pairs each element with itself.

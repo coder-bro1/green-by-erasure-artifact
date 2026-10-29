@@ -1,0 +1,175 @@
+{
+  "pair_id": "Python/6",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_4b7f9fc839a406ec.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-6__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_a46dcc8026ce605a.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-6__buggy__gemma4-12b__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_38db164c3ab853fb.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-6__buggy__gemma4-12b__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_ac5e6a33543200f6.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-6__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_5d09228e3da908f6.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-6__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_9973c436d4399bda.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-6__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_8eca0eb6b63c8a8e.py": [
+      [
+        "s6_model_only_gemma4",
+        "HumanEvalFix-6__buggy__gemma4-12b__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_a46dcc8026ce605a.py"
+  ],
+  "baseline": {
+    "tests/test_a46dcc8026ce605a.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "80996419a4d44975be8561c7cb802bee",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "058bdf013abc42bcaf9d9602cd23e4ab",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "75383c3329314508be7f0c6d2700d384",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "f78913d0dd4c41a5a7551cb12a7534bb",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "06e44ab4988344809fa9056b89ab586d",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "955bbb76fe964c94ab1a1199367fc040",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "12fadb0b1f3e4642bdb71119873dd833",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "87c2c91373ff480198e09a2da824c3a8",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "d34ebdc845744e23a33ebe198943442f",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ddda49126557403bbc36cfac65118e4d",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ace44629319f48a5a248339c78ed300a",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "8217f8d9a1f1460f976d88dd1cee76f7",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c1d435d8c3544a008c0f4292604307f4",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "953f91f90f5145558398e7ef7992006a",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "b10ad6963ca748e6b9914704b74afa23",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "c20fdeb7477c4558870c81536f15b951",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "3a05cfa1621b472687eacc0a98762d05",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 30.9,
+  "finished": "2026-10-28T21:25:12.216675+00:00"
+}

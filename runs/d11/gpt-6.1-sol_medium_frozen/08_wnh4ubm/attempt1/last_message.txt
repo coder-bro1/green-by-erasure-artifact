@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/wnh4ubm/test_solution.py) and pytest configuration. `solution.py` is unchanged.
+
+`python -m pytest -q`: **12 passed, 8 xfailed**.
+
+The 8 strict expected failures expose an existing off-by-one bug: the function subtracts an extra `1`.

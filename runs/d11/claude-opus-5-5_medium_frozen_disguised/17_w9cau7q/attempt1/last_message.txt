@@ -1,0 +1,14 @@
+The tests are written but they don't all pass: 6 of 8 fail on `python -m pytest -q test_solution.py`. That's because solution.py has a bug. I left it unchanged as you asked.
+
+**The bug:** `weave_separator` loops over `values[:-1]`, adding each item and then `sep`, but never adds the last element afterwards. So every non-empty input loses its last item. `[7, 8]` gives `[7, 0]` instead of `[7, 0, 8]`, and `[42]` gives `[]` instead of `[42]`. This contradicts the function's own docstring examples.
+
+**What the tests check** (all in `<work>\work\test_solution.py`):
+- The three docstring examples.
+- A single-element list.
+- A longer list, and a case where the separator equals the items.
+- That the output length is always 2n-1.
+- That the input list isn't changed and a new list is returned.
+
+**What passes:** the empty-list case and the input-not-changed check.
+
+I didn't write tests that expect the current output, because that would just lock the bug in. Adding `out.append(values[-1])` before `return out` in solution.py fixes it, and then all 8 tests should pass. To get a green run, you'd need to either allow that one-line change or accept tests that match the current behavior.

@@ -1,0 +1,22 @@
+I wrote `<work>\work\test_solution.py` and it passes (5 passed, 11 xfailed), but most of what it checks fails right now because solution.py has a bug. I didn't modify solution.py.
+
+**The bug:** `minimum_spanning_tree` crashes with `RuntimeError: Set changed size during iteration` on every graph that has at least one edge, including the example in its own docstring. Only the empty graph works. The cause is in the union step:
+```python
+for node in group_by_node[v]:
+    group_by_node[node].update(group_by_node[u])   # when node == v, this changes the set being looped over
+```
+The fix would be `group_by_node[node] = group_by_node[u]`.
+
+**What the tests cover:**
+- **Passing now (5):** empty graph returns `set()`, the result is a set, the input isn't changed, and two checks on the helper functions.
+- **Blocked by the bug (11):** these are written for correct behaviour and marked `xfail(strict=True, raises=RuntimeError)`, so they count as expected failures. They cover:
+  - the docstring example
+  - a single edge, a path, a triangle, a star
+  - string node names
+  - negative weights
+  - not changing the input
+  - three graphs where the result must be a valid spanning tree whose total weight matches a brute-force minimum
+
+**Check:** I ran the suite against the real solution.py. I also ran it against a fixed copy in the scratchpad (the original wasn't touched), where all 11 marked tests passed their assertions, so the expected values are correct. Because the markers are strict, those 11 will fail as XPASS once solution.py is fixed, and the markers should then be removed.
+
+result: Added pytest tests for solution.py's minimum_spanning_tree: suite passes (5 passed, 11 xfailed), but solution.py crashes on any graph with an edge, so 11 tests are expected failures until it's fixed.

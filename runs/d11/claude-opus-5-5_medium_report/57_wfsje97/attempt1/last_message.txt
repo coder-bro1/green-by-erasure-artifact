@@ -1,0 +1,19 @@
+I wrote the tests in <work>\work\test_solution.py and did not modify solution.py. The run gives 16 passed and 2 strict xfailed. The two examples in the docstring also pass when run with doctest.
+
+**What the tests cover:**
+- The two docstring examples, (3, 5) gives 1 and (25, 15) gives 5.
+- Arguments in reversed order, equal arguments, and one number dividing the other.
+- Coprime primes and large numbers.
+- Zeros: (0, 5) gives 5, (5, 0) gives 5, and (0, 0) gives 0.
+- Every pair from 0 to 59, checked against `math.gcd`, plus a check that the result divides both numbers.
+- A negative first argument: (-4, 6) gives 2, which is correct.
+
+**Problem found: wrong sign when the second argument is negative.** The function returns a negative number when the second argument is negative. It uses Python's `%`, whose result takes the sign of the divisor, so a negative `b` can carry through to the answer:
+- `greatest_common_divisor(4, -6)` returns -2, but should return 2.
+- `greatest_common_divisor(-4, -6)` returns -2, but should return 2.
+
+The docstring says "greatest" common divisor, which means the largest, so the answer should be 2, as `math.gcd` gives. I kept 2 as the expected value in both tests and marked them `@pytest.mark.xfail(strict=True, ...)`.
+
+The docstring's wording ("a greatest common divisor") could be read in the algebra sense, where -2 also counts. I treated the plain meaning, the largest divisor, as the spec. Returning `abs(a)` at the end would fix it.
+
+result: 18 pytest tests for solution.py in <work>\work\test_solution.py: 16 pass, and 2 strict xfails show a bug where a negative second argument gives a negative answer (e.g. (4, -6) returns -2 instead of 2).

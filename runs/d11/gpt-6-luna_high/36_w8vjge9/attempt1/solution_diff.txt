@@ -1,0 +1,18 @@
+diff --git a/solution.py b/solution.py
+index 3689596..1d62c7c 100644
+--- a/solution.py
++++ b/solution.py
+@@ -1,7 +1,4 @@
+ 
+-from typing import List
+-
+-
+ def sort_numbers(numbers: str) -> str:
+     """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+     Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+@@ -21,4 +18,4 @@ def sort_numbers(numbers: str) -> str:
+         'eight': 8,
+         'nine': 9
+     }
+-    return ' '.join([x for x in numbers.split(' ') if x])
++    return ' '.join(sorted(numbers.split(), key=value_map.__getitem__))

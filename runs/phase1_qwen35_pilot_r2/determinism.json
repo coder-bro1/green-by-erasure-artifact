@@ -1,0 +1,86 @@
+[
+  {
+    "unit_id": "HumanEvalFix-11__buggy__qwen3-5-9b__s0__code",
+    "request": {
+      "model": "qwen3.5:9b",
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "num_predict": 2048
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write 10 top-level pytest test functions named test_* with concrete expected values.\nThe function is importable with: from solution import string_xor\nUse the following generation input as the only information about the function:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n    def xor(i, j):\n        if i == j:\n            return '1'\n        else:\n            return '0'\n\n    return ''.join(xor(x, y) for x, y in zip(a, b))\n\nReturn no explanations, only one fenced Python code block, including necessary imports and helpers.\n\n"
+        }
+      ]
+    },
+    "response": {
+      "model": "qwen3.5:9b",
+      "created_at": "2026-10-09T11:54:49.9800853Z",
+      "message": {
+        "role": "assistant",
+        "content": "```python\nfrom solution import string_xor\n\n\ndef test_string_xor_different_bits():\n    assert string_xor('010', '110') == '100'\n\n\ndef test_string_xor_all_zeros():\n    assert string_xor('000', '000') == '000'\n\n\ndef test_string_xor_all_ones():\n    assert string_xor('111', '111') == '000'\n\n\ndef test_string_xor_mixed_result():\n    assert string_xor('10101', '01010') == '11111'\n\n\ndef test_string_xor_single_bit_zero():\n    assert string_xor('0', '0') == '0'\n\n\ndef test_string_xor_single_bit_one():\n    assert string_xor('1', '0') == '1'\n\n\ndef test_string_xor_empty_strings():\n    assert string_xor('', '') == ''\n\n\ndef test_string_xor_first_longer():\n    assert string_xor('1110', '000') == '1111'\n\n\ndef test_string_xor_second_longer():\n    assert string_xor('000', '1110') == '1110'\n\n\ndef test_string_xor_alternating_pattern():\n    assert string_xor('010101', '101010') == '111111'\n```"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 23061230700,
+      "load_duration": 17141329500,
+      "prompt_eval_count": 208,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 298060000,
+      "eval_count": 303,
+      "eval_duration": 5618673000
+    },
+    "model_digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+    "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+    "timestamp": "2026-10-09T11:54:49.980608+00:00",
+    "duration_s": 25.125,
+    "identical_content": true
+  },
+  {
+    "unit_id": "HumanEvalFix-11__buggy__qwen3-5-9b__s0__spec",
+    "request": {
+      "model": "qwen3.5:9b",
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "num_predict": 2048
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write 10 top-level pytest test functions named test_* with concrete expected values.\nThe function is importable with: from solution import string_xor\nUse the following generation input as the only information about the function:\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n\nReturn no explanations, only one fenced Python code block, including necessary imports and helpers.\n\n"
+        }
+      ]
+    },
+    "response": {
+      "model": "qwen3.5:9b",
+      "created_at": "2026-10-09T11:55:01.2258099Z",
+      "message": {
+        "role": "assistant",
+        "content": "```python\nfrom typing import List\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n    if len(a) != len(b):\n        raise ValueError(\"Strings must be of equal length\")\n    \n    result = []\n    for char_a, char_b in zip(a, b):\n        # Convert characters to integers, perform XOR, then convert back to character\n        res_bit = int(char_a) ^ int(char_b)\n        result.append(str(res_bit))\n    \n    return \"\".join(result)\n\n\n# Top-level pytest test functions\ndef test_string_xor_basic():\n    assert string_xor('010', '110') == '100'\n\ndef test_string_xor_all_zeros():\n    assert string_xor('000', '000') == '000'\n\ndef test_string_xor_all_ones():\n    assert string_xor('111', '111') == '000'\n\ndef test_string_xor_first_different():\n    assert string_xor('100', '000') == '100'\n\ndef test_string_xor_last_different():\n    assert string_xor('000', '001') == '001'\n\ndef test_string_xor_alternating():\n    assert string_xor('0101', '1010') == '1111'\n\ndef test_string_xor_single_bit_zero():\n    assert string_xor('0', '0') == '0'\n\ndef test_string_xor_single_bit_one():\n    assert string_xor('1', '0') == '1'\n\ndef test_string_xor_mixed_pattern():\n    assert string_xor('101010', '010101') == '111111'\n\ndef test_string_xor_reverse_bits():\n    assert string_xor('1111', '0000') == '1111'\n```"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 9205475000,
+      "load_duration": 6298000,
+      "prompt_eval_count": 156,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 274086000,
+      "eval_count": 478,
+      "eval_duration": 8887961000
+    },
+    "model_digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+    "harness_commit": "702f0215f918797a35a51aa7cef85e8b254ad076",
+    "timestamp": "2026-10-09T11:55:01.225809+00:00",
+    "duration_s": 11.25,
+    "identical_content": true
+  }
+]

@@ -1,0 +1,3 @@
+Added [test_solution.py](/<work>/wer9ydv/test_solution.py). `pytest -q -p no:cacheprovider test_solution.py` reports **6 passed, 3 xfailed**; `solution.py` is unchanged.
+
+The strict xfails cover the implementation counting `2` as an odd digit, and the second docstring example: it claims a result of 2, but the implementation returns 3. The written rule also yields 3 for that example, so the example’s stated result conflicts with the rule.

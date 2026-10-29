@@ -1,0 +1,16 @@
+I wrote 33 pytest tests for solution.py in <work>\work\test_solution.py, and all of them pass when I run `python -m pytest -q test_solution.py`. None are marked xfail: both functions do what their docstrings say. `git status` shows solution.py was not modified.
+
+**What the code does:**
+- `encode_cyclic` moves the first character of each full group of three to the end of that group ("abc" becomes "bca"). A shorter group at the end stays as it is.
+- `decode_cyclic` runs `encode_cyclic` twice. Encoding once and then decoding rotates each group three times, which brings back the original string.
+
+**What the tests cover:**
+- Exact encoded outputs for strings of length 0 to 9, including ones whose last group is shorter than three.
+- Exact decoded outputs for known encoded strings.
+- Encoding keeps the same length and the same characters.
+- Non-ASCII characters and whitespace, written as `\u` escapes so the test doesn't depend on how the file is saved.
+- Decoding an encoded string gives back the original, for 200 seeded random strings and for every length from 0 to 11.
+- A group of three different characters actually changes when encoded.
+- Both functions return a `str`.
+
+result: 33 pytest tests for solution.py (`encode_cyclic`/`decode_cyclic`) all pass, with no xfails because the code matches its docstrings; tests are in <work>\work\test_solution.py.

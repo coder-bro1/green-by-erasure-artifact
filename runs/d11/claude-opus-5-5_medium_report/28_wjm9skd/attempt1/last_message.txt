@@ -1,0 +1,10 @@
+I wrote <work>\work\test_solution.py with 32 tests for solution.py, and all 32 pass. I checked this by running `python -m pytest -q test_solution.py` in <work>\work. I did not change solution.py.
+
+No test is marked xfail, because I found no case where solution.py does something different from what its docstrings say.
+
+What the tests check:
+- **`is_palindrome`:** strings that are palindromes (including the empty string and one-character strings) return True. Strings that are not, including the mixed-case "Aba", return False. Upper and lower case are treated as different letters.
+- **`make_palindrome`, fixed examples:** the three examples from the docstring ('' -> '', 'cat' -> 'catac', 'cata' -> 'catac') plus others such as 'jerry' -> 'jerryrrej', 'aab' -> 'aabaa' and 'abb' -> 'abba'.
+- **`make_palindrome`, general rules:** on 10 varied inputs, the result starts with the input, is a palindrome, and is never more than twice the input's length. It also matches the shortest palindrome found by a simple try-every-length helper in the test file, so the "shortest" part of the docstring is tested too.
+
+result: Added <work>\work\test_solution.py with 32 pytest tests for solution.py; all pass and none needed an xfail marker.

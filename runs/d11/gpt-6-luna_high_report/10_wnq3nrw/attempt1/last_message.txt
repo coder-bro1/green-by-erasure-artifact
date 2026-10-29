@@ -1,0 +1,3 @@
+Added pytest coverage in [tests/test_solution.py](/<work>/wnq3nrw/tests/test_solution.py) and configured discovery in [pytest.ini](/<work>/wnq3nrw/pytest.ini). **`pytest -q` passes:** 1 passed, 4 strict xfailed.
+
+The xfails capture docstring mismatches: `total_match` returns the longer list when totals differ and the second list on ties, while the docstring requires the shorter list and the first list on ties. `solution.py` was not modified.

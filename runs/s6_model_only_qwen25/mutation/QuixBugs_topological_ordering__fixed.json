@@ -1,0 +1,123 @@
+{
+  "pair_id": "QuixBugs/topological_ordering",
+  "version": "fixed",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_60fe7a92146865e8.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_b6eb7e3dc0d0262e.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_322e484e5a640e85.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_9cb8e9b6e520cf67.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_2103fff4f3fa42b8.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_ad51ea69aae242d5.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_09df7296613a8273.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_33176345411e088b.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_1065e0f9ce0e7343.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_a81ecdee496101f5.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-topological_ordering__fixed__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "40aaf36fe9764d5c82fa6af0c8610826",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "27f4c1dbfc9448ada268823eeb614475",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ea271bdb46634a4aaea047824edfa2ab",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "17e5ef2863d34ccbb818190ada278440",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "35a8582aae114501971a6fd4c569784e",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.4,
+  "finished": "2026-10-28T22:03:35.295125+00:00"
+}

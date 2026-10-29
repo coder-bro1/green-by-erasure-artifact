@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/w3rpfgq/test_solution.py) covering examples, weight boundaries, and edge cases. `solution.py` is unchanged.
+
+`python -m pytest -q`: **13 passed, 11 xfailed**.
+
+The palindrome check rejects matching mirrored elements and accepts some unbalanced lists. Affected tests preserve the documented expected values and use `@pytest.mark.xfail(strict=True, reason=...)`.

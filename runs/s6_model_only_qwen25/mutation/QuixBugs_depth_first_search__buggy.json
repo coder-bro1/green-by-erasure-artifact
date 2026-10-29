@@ -1,0 +1,153 @@
+{
+  "pair_id": "QuixBugs/depth_first_search",
+  "version": "buggy",
+  "run": "s6_model_only_qwen25",
+  "tests": {
+    "tests/test_472e7567f3b88cd6.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_3824745cc76d394d.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_41043f449d4e461b.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        2
+      ]
+    ],
+    "tests/test_2b2f72346f1af9fb.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_35a2c7b3a02b3302.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_322ff1405454050a.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        5
+      ]
+    ],
+    "tests/test_a10e49bde9abe746.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_c4636b3fe428048e.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_3690ca66ec348ff7.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        8
+      ]
+    ],
+    "tests/test_0da0f46027854adc.py": [
+      [
+        "s6_model_only_qwen25",
+        "QuixBugs-depth_first_search__buggy__qwen2-5-coder-7b-instruct__s0__code",
+        "P2M",
+        9
+      ]
+    ]
+  },
+  "new_tests": [],
+  "baseline": {},
+  "mutants": [
+    {
+      "job_id": "a3e698412f494d8695b02a6bd6b4afb4",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "14cf20986af04a8d8691fea4ac885078",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "0b8819955d7b48889c87d2c6ad7266df",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "99991f56c2654daa8741c030ee68d5e0",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ea3530d0cbad4896aabf218324758043",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "ac468a02e27d493b831530f32e7e1db2",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "bf8101a6673d40ea9bcb5546ad3b4f23",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "231568796f834297af218d36663e20aa",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "66a73c9d3ad74a5fb37502fce6b9ebd9",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "d07446b11055420b8f1927a130916328",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 0.6,
+  "finished": "2026-10-28T22:00:13.088693+00:00"
+}

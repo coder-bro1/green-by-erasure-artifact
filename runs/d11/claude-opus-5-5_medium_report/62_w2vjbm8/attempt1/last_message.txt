@@ -1,0 +1,28 @@
+I wrote 17 pytest tests for `cycpattern_check` in solution.py. Running `python -m pytest -v test_solution.py` gives 13 passed and 4 xfailed. All 4 xfails are caused by one real bug. I did not change solution.py.
+
+**The bug:** the function never checks rotations of the second word. The docstring says it should return True if the second word "or any of its rotations" is a substring of the first word. The code sets `l = len(b)` and then loops over `range(len(b) - l + 1)`, which is always `range(1)`. So it only ever looks at `pat[0:l]`, which is `b` itself, and acts like a plain `b in a` check. A likely fix would be `for j in range(len(b))` (or `range(l)`), but I left the file as it is.
+
+Two of the docstring's own examples fail because of this:
+- `cycpattern_check("abab", "baa")` should be True, because the rotation "aba" is in "abab". The function returns False.
+- `cycpattern_check("himenss", "simen")` should be True, because the rotation "imens" is in "himenss". The function returns False.
+
+**The 4 xfail tests:** each one is marked `@pytest.mark.xfail(strict=True, reason=...)` and keeps the expected value from the docstring:
+- `test_docstring_abab_baa`
+- `test_docstring_himenss_simen`
+- `test_simple_rotation`: `("xxcabxx", "abc")` should be True
+- `test_rotation_equal_length`: `("bca", "abc")` should be True
+
+**The 13 passing tests cover:**
+- the other four docstring examples: abcd/abd, hello/ell, whassup/psus and efef/eeff
+- an exact substring and identical words
+- a second word longer than the first
+- no match, and a single-character match
+- a word that is a rearrangement of the second word but not a rotation (expected False)
+- upper and lower case counting as different
+- an empty second word (True) and an empty first word with a non-empty second word (False)
+
+Files are in <work>\work:
+- test_solution.py (new)
+- solution.py (unchanged)
+
+result: 17 tests for cycpattern_check in test_solution.py: 13 pass, and 4 are strict xfails because solution.py never checks rotations (its inner loop is always `range(1)`), so the docstring examples ("abab","baa") and ("himenss","simen") return False instead of True.

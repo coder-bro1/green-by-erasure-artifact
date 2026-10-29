@@ -1,0 +1,61 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/detect_cycle",
+    "condition": "fixed",
+    "taskset": "quixbugs",
+    "order": 51,
+    "folder": "wg79598",
+    "solution_sha256": "0509b9e47bd2ebe5d236487c4176836711f58b20fd0723ad8e06c1676373f372"
+  },
+  "variant": "report",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py. If a test fails because solution.py does not do what its docstring says, keep the test's expected value, mark the test with @pytest.mark.xfail(strict=True, reason=...) and explain the problem in your final message.",
+  "attempt": 1,
+  "status": "FINISHED",
+  "started": "2026-10-12T00:33:49.663839+00:00",
+  "finished": "2026-10-12T00:34:37.984589+00:00",
+  "seconds": 48.1,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d87-b0a6-7a83-9d4b-f0dd0e337437",
+  "usage": [
+    {
+      "input_tokens": 95746,
+      "cached_input_tokens": 89728,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1554,
+      "reasoning_output_tokens": 84
+    }
+  ],
+  "errors": [],
+  "quota_message": null,
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-12T00:33:49.663839+00:00",
+      "file": "node.py",
+      "sha256": "4e46746b717ee078d7d7f0c953d4a25d3c97b0ec115c51394ffaa94eb173e321",
+      "stored": "0000__node.py"
+    },
+    {
+      "time": "2026-10-12T00:33:49.663839+00:00",
+      "file": "solution.py",
+      "sha256": "0d860bf09b9a67a6ff044e7ee11c44995e253ec7ab922ae997d8dded550856fb",
+      "stored": "0001__solution.py"
+    },
+    {
+      "time": "2026-10-12T00:34:25.220719+00:00",
+      "file": "test_solution.py",
+      "sha256": "05fa7a680403c7172c66c4c2c59deaf762cbd3683f3512d5e90fa427fcb3211c",
+      "stored": "0002__test_solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

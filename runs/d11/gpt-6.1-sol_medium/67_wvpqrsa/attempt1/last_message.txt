@@ -1,0 +1,7 @@
+Added [pytest tests]( /<work>/wvpqrsa/test_solution.py) covering base cases, sequence values, recurrence, and larger inputs. Fixed `solution.py` to match its documented behavior and compute iteratively.
+
+Verified: **46 passed**, including doctests.
+
+```powershell
+python -m pytest -q -p no:cacheprovider --doctest-modules test_solution.py solution.py
+```

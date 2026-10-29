@@ -1,0 +1,12 @@
+I wrote <work>\work\test_solution.py with 16 pytest tests for `pairs_sum_to_zero`, and all 16 pass. I ran them with `python -m pytest -q test_solution.py` and did not change solution.py.
+
+The tests cover:
+- **Docstring examples:** all five from the docstring.
+- **Edge cases:** an empty list, a single `[0]` (False), and `[0, 0]` (True, because the two zeros are separate elements).
+- **Matching pairs:** a simple `[5, -5]`, and a pair split across the first and last positions.
+- **No reuse:** an element is never paired with itself, and duplicates with no opposite number return False.
+- **Other inputs:** all-negative lists, very large integers, a tuple instead of a list, and a check that the input list is unchanged.
+
+solution.py does what its docstring says, so no test needed `@pytest.mark.xfail`.
+
+result: All 16 pytest tests for `pairs_sum_to_zero` in <work>\work\test_solution.py pass, and no xfails were needed.

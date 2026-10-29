@@ -1,0 +1,25 @@
+I wrote the tests in <work>\work\test_solution.py: 3 pass and 10 are marked xfail (strict) because `solution.py` doesn't do what its docstring says. solution.py is unchanged.
+
+**The bug:** in `<work>\work\solution.py` the final comparison is the wrong way round:
+```python
+if l1 <= l2:
+    return lst2
+else:
+    return lst1
+```
+The docstring says to return the list with fewer total characters, and the first list on a tie. The code returns the list with more characters, and the second list on a tie. Four of the five docstring examples fail because of this:
+- `total_match(['hi','admin'], ['hI','Hi'])` returns `['hi','admin']` instead of `['hI','Hi']`.
+- `total_match(['4'], ['1','2','3','4','5'])` returns the 5-element list instead of `['4']`.
+
+The fix would be `return lst1 if l1 <= l2 else lst2`.
+
+**Xfail tests (10), each keeping the docstring's expected value:**
+- 4 of the docstring examples.
+- Ties returning the first list: equal non-empty lists, two empty lists, and lists of different lengths with the same character count. These check that the exact first list object comes back, not just an equal one.
+- Empty vs non-empty, both ways round.
+- That characters are counted, not elements.
+
+**Passing tests (3):**
+- `total_match([], [])` returns `[]`.
+- The inputs are not changed.
+- The result is one of the two input list objects.

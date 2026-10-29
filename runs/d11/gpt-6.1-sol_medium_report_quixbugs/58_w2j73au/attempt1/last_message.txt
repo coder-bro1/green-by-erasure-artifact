@@ -1,0 +1,5 @@
+Added [test_solution.py](/<work>/w2j73au/test_solution.py) and pytest configuration. `solution.py` remains unchanged.
+
+`python -m pytest -q`: **204 passed, 8 xfailed**.
+
+All-nine inputs produce an extra zero—for example, `9` returns `101` instead of `11`. Those tests retain the correct expected values and use `xfail(strict=True)` with an explanatory reason.

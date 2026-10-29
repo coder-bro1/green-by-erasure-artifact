@@ -1,0 +1,62 @@
+{
+ "project": "ansible",
+ "bug": 15,
+ "python_pinned": "3.6.9",
+ "python_used": "3.6.8",
+ "started": "2026-10-19 04:43:56",
+ "test_files": [
+  "test/units/modules/network/eos/test_eos_eapi.py"
+ ],
+ "checkout_eol": "lf",
+ "install_buggy": {
+  "created": true,
+  "requirements": 12,
+  "failed_requirements": [
+   "ansible-base==2.10.0.dev0"
+  ],
+  "setup": [
+   "python setup.py install",
+   "pip3 install pytest==3.10.1"
+  ],
+  "failed_setup": [
+   "python setup.py install"
+  ],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 12,
+  "failed_requirements": [
+   "ansible-base==2.10.0.dev0"
+  ],
+  "setup": [
+   "python setup.py install",
+   "pip3 install pytest==3.10.1"
+  ],
+  "failed_setup": [
+   "python setup.py install"
+  ],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest test/units/modules/network/eos/test_eos_eapi.py::TestEosEapiModule::test_eos_eapi_vrf"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "norun",
+   "commands": [
+    {
+     "command": "pytest test/units/modules/network/eos/test_eos_eapi.py::TestEosEapiModule::test_eos_eapi_vrf",
+     "exit": 4,
+     "outcome": "norun",
+     "import_error": true,
+     "last_line": "(no name '<work>\\\\work\\\\ansible-15\\\\buggy\\\\test\\\\units\\\\modules\\\\network\\\\eos\\\\test_eos_eapi.py::TestEosEapiModule::test_eos_eapi_vrf' in any of [<Module 'test/units/modules/network/eos/test_eos_eapi.py'>])"
+    }
+   ]
+  }
+ ],
+ "step2": "fail: the buggy checkout cannot import the project or a dependency",
+ "seconds": 283
+}

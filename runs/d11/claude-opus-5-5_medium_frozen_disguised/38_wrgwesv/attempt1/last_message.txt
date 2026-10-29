@@ -1,0 +1,20 @@
+I couldn't get the tests to pass, because `solution.py` has a bug and the task said not to modify it. The tests check what the docstring says the function should do. 6 of the 11 fail, including two of the docstring's own examples.
+
+**The bug:** line 17 of `<work>\work\solution.py` flips the sign the wrong way:
+```python
+m[0] = m[0] * sign * -1
+```
+The extra `* -1` reverses the rule. Positive numbers get a negative first digit, so 24 becomes -2+4. Negative numbers get a positive one, so -54 becomes 5+4. Removing `* -1` should fix it, but I haven't changed or tested that.
+
+**What fails:**
+- `positive_digit_sums([-12, 3, 0])` returns 1; the docstring says 2.
+- `positive_digit_sums([24, -8])` returns 2; the docstring says 1.
+- `[-54]` returns 1 instead of 0, `[-11]` returns 1 instead of 0, `[-1, -9]` returns 2 instead of 0, and `[1, 9, 10, 123]` returns 1 instead of 4.
+
+The 5 that pass are cases where the bug happens not to change the answer: the empty list, -45, all zeros, a mixed list and -1999.
+
+I didn't rewrite the tests to match the current output, because they would then lock the bug in. To get a passing suite, either allow fixing line 17, or confirm that tests should record the current behaviour as it is.
+
+The tests are in `<work>\work\test_solution.py`.
+
+failed: tests for `solution.py` can't pass without changing it — the function counts the wrong numbers and breaks 2 of its own docstring examples (6 of 11 tests fail).

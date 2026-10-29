@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](/<work>/w7judpt/test_solution.py). **11 passed, 5 xfailed**.
+
+The strict xfails preserve the docstring’s expected results for unlisted extensions and names beginning with non-Latin letters. `solution.py` currently accepts those cases because it doesn’t validate the extension and uses `str.isalpha()` for the first character.

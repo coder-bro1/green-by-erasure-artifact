@@ -1,0 +1,18 @@
+I wrote the tests and the suite passes: 9 passed, 7 expected failures, 0 failed. The 7 expected failures are there because solution.py has a bug, and I didn't change solution.py.
+
+**The bug:** the palindrome check in `will_it_fly` is reversed.
+```python
+if q[i] == q[j]:
+    return False
+```
+It should be `!=`. As written, any list of two or more items whose ends match is rejected, and lists that aren't palindromes are accepted if they're light enough. Two of the four examples in the function's own docstring give the wrong answer:
+- `will_it_fly([1, 2], 5)` returns True; the docstring says False.
+- `will_it_fly([3, 2, 3], 9)` returns False; the docstring says True.
+
+**The tests** are in `<work>\work\test_solution.py`:
+- **9 that pass on the current code:** the weight-limit checks (too heavy, exactly at the limit, a negative limit), single-item lists, the empty list, and the two docstring examples that already work.
+- **7 that check correct behaviour and fail because of the bug:** the two broken docstring examples, palindromes under the weight limit, and non-palindromes under the weight limit. Each is marked `xfail(strict=True)` with the bug as the reason. Strict means that once someone fixes `==` to `!=`, these 7 will be reported as failures, so the markers have to be removed then.
+
+I ran `python -m pytest -v test_solution.py` (Python 3.12, pytest 9.1.1) to get the numbers above. `git status` shows `test_solution.py` as the only new file, so `solution.py` is unchanged.
+
+result: Added 16 pytest tests in <work>\work\test_solution.py (9 pass, 7 expected failures). solution.py's palindrome check uses `==` where it needs `!=`, so 2 of its 4 docstring examples are wrong.

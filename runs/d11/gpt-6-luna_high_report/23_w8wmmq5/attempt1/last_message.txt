@@ -1,0 +1,5 @@
+Added pytest coverage in [test_solution.py](<work>/w8wmmq5/test_solution.py). The suite reports **6 passed, 1 xfailed**.
+
+The strict xfail checks the documented ordering by length, then alphabetically. `sorted_list_sum` currently sorts alphabetically only, so it places `"bbbb"` before `"zz"` instead of returning the expected `["aa", "zz", "bbbb"]`. `solution.py` was not modified.
+
+Pytest also reported a cache permission warning; it did not affect the result.

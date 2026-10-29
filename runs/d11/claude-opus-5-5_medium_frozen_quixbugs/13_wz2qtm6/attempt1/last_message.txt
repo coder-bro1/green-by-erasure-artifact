@@ -1,0 +1,9 @@
+I added <work>\work\test_solution.py with 112 tests, but it only passes because 51 of them are marked as expected failures: solution.py has a bug and gives wrong answers. I didn't modify solution.py. `python -m pytest -q test_solution.py` gives 61 passed, 51 xfailed.
+
+The bug: at line 28 of <work>\work\solution.py, the largest disk is moved to the spare peg instead of the target peg. The line reads `steps.append((start, helper))` and should be `steps.append((start, end))`. So hanoi(1) returns [(1, 2)] when it should be [(1, 3)], and no output for one or more disks actually solves the puzzle. The step count, 2^n - 1, is still right, which hides the bug unless you replay the moves.
+
+What the tests cover:
+- 61 passing tests check things the current code gets right: height 0 returns an empty list for every start/end pair; the result is a list of 2-element tuples; the number of steps is 2^n - 1 for heights 0 to 10; every step uses valid, distinct pegs; the default arguments behave the same as (1, 3); repeated calls don't share state.
+- 51 expected-failure tests check behaviour the docstring promises: the exact known answers for 1, 2 and 3 disks, and a replay that moves disks peg by peg for heights 1 to 7 and every start/end pair, confirming no move is illegal and the whole stack ends on the target peg. They are marked xfail(strict=True), so once the bug is fixed they will report as unexpected passes and the suite will go red. At that point, remove the markers.
+
+How I checked the tests themselves: I ran the suite against a copy of solution.py with the one-line fix. All 51 expected-failure tests passed against it, so they reject the buggy output and accept the correct one.

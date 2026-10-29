@@ -1,0 +1,25 @@
+I wrote the tests, but they can't all pass: `solution.py` has a bug, and I wasn't allowed to change it. Of 17 tests, 16 fail. The function's own docstring examples fail too: `python -m doctest solution.py` gives 0 passed, 3 failed.
+
+**The bug:** the two return values are swapped. The docstring says the function returns True when a sequence never goes down or never goes up, and the code returns the opposite:
+
+```python
+if seq == sorted(seq) or seq == sorted(seq, reverse=True):
+    return False   # should be True
+return True        # should be False
+```
+
+So `is_one_direction([1, 1, 3])` returns False, though the docstring says True. Every input gets the opposite answer, including an empty list and a single item.
+
+**The tests** are in `<work>\work\test_solution.py`. They check what the docstring promises:
+- sequences that only go up, only go down, or stay flat (ints, floats, negatives, strings, plus the docstring examples) return True;
+- sequences that change direction (`[2, 9, 4]`, `[1, 2, 2, 1]` and others) return False;
+- an empty list and a single item return True;
+- the input list isn't changed.
+
+The only passing test is the one checking that the input isn't changed.
+
+I didn't edit the tests to match the current output: they would pass, but they would treat the bug as correct. Swapping the two `return` lines in `solution.py` would make all 17 tests and the 3 doctests pass. I haven't checked that by running it, since I wasn't allowed to change the file.
+
+**Decision needed:** either allow that two-line fix to `solution.py`, or confirm you really want tests that match the current (inverted) output.
+
+failed: solution.py's is_one_direction returns the opposite of what its docstring says, so tests of the documented behavior can't pass while solution.py stays unchanged (16 of 17 fail; tests are in <work>\work\test_solution.py).

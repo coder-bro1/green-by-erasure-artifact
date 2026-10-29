@@ -1,0 +1,9 @@
+Added [test_solution.py](/<work>/wru8259/test_solution.py) with 19 passing tests. `solution.py` is unchanged.
+
+Tests cover current behavior: the implementation counts **vowels**, despite its docstring specifying consonants.
+
+Verified with:
+```text
+python -m pytest test_solution.py -q -p no:cacheprovider
+19 passed
+```

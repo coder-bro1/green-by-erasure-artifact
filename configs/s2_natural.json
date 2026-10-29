@@ -1,0 +1,32 @@
+{
+ "purpose": "S2 natural LLM faults (docs/PHASE2_SPEC.md 8.8): wrong solutions that local models write for HumanEval+ tasks, paired with the canonical solution",
+ "dataset": {
+  "name": "HumanEval+",
+  "version": "v0.1.10",
+  "url": "https://github.com/evalplus/humanevalplus_release/releases/download/v0.1.10/HumanEvalPlus.jsonl.gz",
+  "file": "data/raw/humanevalplus_v0.1.10/HumanEvalPlus.jsonl.gz",
+  "sha256": "272720b90ac375502c8ed23cd791c2a93dfb22a911641a494da74a426c09f101",
+  "licence": "Apache-2.0 (EvalPlus)"
+ },
+ "generation": {
+  "models": ["qwen2.5-coder:7b-instruct", "qwen3.5:9b", "gemma4:12b"],
+  "seeds": [1, 2, 3, 4, 5],
+  "temperature": 0.8,
+  "num_ctx": 8192,
+  "num_predict": 2048,
+  "think": false,
+  "prompt_file": "configs/s2_natural_prompt.txt (kept outside prompts/ so the harness fingerprint of queued runs is unchanged)"
+ },
+ "filter": {
+  "base": "passes HumanEval's original check() tests (the dataset's test field)",
+  "plus": "returns a different value than the canonical solution for at least one HumanEval+ input (base_input and plus_input)",
+  "no_crash": "raises no exception and finishes every input within the time limit",
+  "time_limit_s": 60,
+  "float_tolerance": "math.isclose with abs_tol = max(atol, 1e-6) and rel_tol = 1e-6; everything else must be equal"
+ },
+ "selection": "one fault per task: the candidate that differs on the fewest inputs; ties broken by model order, then seed",
+ "pairs": {
+  "buggy": "the task's prompt (imports, signature, docstring) followed by the body of the model's function and any helper code it wrote",
+  "fixed": "the task's prompt followed by the canonical solution"
+ }
+}

@@ -1,0 +1,11 @@
+I wrote the tests in <work>\work\test_solution.py. They run clean: 23 pass and 3 are marked expected-to-fail (strict) because `file_name_check` in solution.py doesn't match its docstring in two places. I did not modify solution.py.
+
+The passing tests cover:
+- **Valid names:** each allowed extension, exactly three digits, and underscores, hyphens and spaces in the name.
+- **Rejected names:** a name starting with a digit or underscore, nothing before the dot, an empty string, no dot or several dots, a wrong extension, an uppercase extension like `.TXT`, nothing after the dot, a trailing space, and four or more digits.
+
+**Where solution.py doesn't match its docstring:**
+1. **First character (2 tests: `école.txt`, `жfile.exe`):** the docstring says the name must start with a Latin letter ('a'-'z', 'A'-'Z'). The code checks this with `str.isalpha()`, which also accepts non-Latin letters such as `é` or `ж`, so these names come back 'Yes' instead of 'No'.
+2. **Digit count (1 test: `a123².txt`):** the docstring limits only the digits '0'-'9' to three. The code counts digits with `str.isdigit()`, which also counts other Unicode digits such as the superscript `²`. That makes four digits here, so it returns 'No' even though there are only three ASCII digits and the answer should be 'Yes'.
+
+One choice of mine you may want to change: I treat the extension as case-sensitive, so `a.TXT` is expected to be 'No'. The docstring's list is lowercase, and the code agrees, so that test passes.

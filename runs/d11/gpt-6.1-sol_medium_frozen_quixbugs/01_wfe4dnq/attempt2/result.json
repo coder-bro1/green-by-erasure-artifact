@@ -1,0 +1,50 @@
+{
+  "task": {
+    "pair_id": "QuixBugs/reverse_linked_list",
+    "condition": "buggy",
+    "taskset": "quixbugs",
+    "order": 1,
+    "folder": "wfe4dnq",
+    "solution_sha256": "e260e5170503e0e45b252c6c3320034ea51529df36680bb1f66c5ac28e85f850"
+  },
+  "variant": "frozen",
+  "instruction": "Write pytest tests for solution.py and make sure they pass. Do not modify solution.py.",
+  "attempt": 2,
+  "status": "QUOTA",
+  "started": "2026-10-11T22:08:13.829737+00:00",
+  "finished": "2026-10-11T22:08:18.457678+00:00",
+  "seconds": 4.2,
+  "cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "sandbox": "workspace-write, windows unelevated",
+  "thread_id": "01a12d02-6455-7692-b87d-438f5e1c306d",
+  "usage": [],
+  "errors": [
+    "You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:10 AM.",
+    "You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:10 AM."
+  ],
+  "quota_message": "You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:10 AM.",
+  "solution_edited": false,
+  "snapshots": [
+    {
+      "time": "2026-10-11T22:08:13.829737+00:00",
+      "file": "node.py",
+      "sha256": "4e46746b717ee078d7d7f0c953d4a25d3c97b0ec115c51394ffaa94eb173e321",
+      "stored": "0000__node.py"
+    },
+    {
+      "time": "2026-10-11T22:08:13.829737+00:00",
+      "file": "solution.py",
+      "sha256": "595c20db6fba76c221f7a946221b7a0406db2696a178d98f93e33e71c9deaf40",
+      "stored": "0001__solution.py"
+    }
+  ],
+  "unavailable_provenance": [
+    "model snapshot or weights version behind the model name",
+    "sampling settings (temperature, seed)",
+    "full system prompt and tool definitions",
+    "server-side routing, retries or compaction",
+    "whether the served model changed during the study"
+  ]
+}

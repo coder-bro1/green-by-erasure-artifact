@@ -1,0 +1,60 @@
+Run: phase1_pilot
+Verdict: GO
+Buggy pre-repair signal: 19/20 pairs; 35/40 units; 177/383 tests REVEALS.
+P2/P3 inversions or neutralizations: 191
+Signal pairs by input (each denominator 20): {"code": 18, "spec": 17}
+Signal threshold uses the default code arm (conservative resolution of the 20-unit denominator).
+Section 8 offline checks all pass: True
+
+| Condition | Input | Policy | Final size | REVEALS | ENCODES generated | ENCODES repaired | REPORTED | DROPPED | INVERTED | NEUTRALIZED | OTHER | Quarantined | Quarantined REVEALS | Logical calls | Network calls | LLM seconds | Policy wall seconds |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| buggy | code | GEN | 200 | 93 | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 20 | 20 | 157.500 | 0 |
+| buggy | code | P1 | 73 | 0 | 10 | 0 | 0 | 93 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| buggy | code | P2 | 191 | 0 | 10 | 111 | 0 | 8 | 85 | 0 | 0 | 0 | 0 | 6 | 3 | 44.219 | 79.230 |
+| buggy | code | P3 | 89 | 0 | 10 | 1 | 0 | 82 | 1 | 10 | 0 | 0 | 0 | 354 | 209 | 1185.920 | 1239.034 |
+| buggy | code | P4 | 200 | 93 | 10 | 0 | 93 | 0 | 0 | 0 | 0 | 127 | 93 | 254 | 254 | 773.443 | 773.876 |
+| buggy | spec | GEN | 183 | 84 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 20 | 20 | 131.597 | 0 |
+| buggy | spec | P1 | 62 | 0 | 3 | 0 | 0 | 84 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| buggy | spec | P2 | 179 | 0 | 3 | 111 | 0 | 2 | 82 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 39.811 |
+| buggy | spec | P3 | 86 | 0 | 3 | 0 | 0 | 71 | 0 | 13 | 0 | 0 | 0 | 331 | 176 | 898.711 | 951.893 |
+| buggy | spec | P4 | 183 | 84 | 3 | 0 | 84 | 0 | 0 | 0 | 0 | 121 | 84 | 242 | 166 | 503.750 | 504.626 |
+| fixed | code | GEN | 200 | 96 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 20 | 20 | 131.909 | 0 |
+| fixed | code | P1 | 164 | 96 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| fixed | code | P2 | 198 | 123 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10.017 |
+| fixed | code | P3 | 168 | 96 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 102 | 70 | 350.527 | 371.562 |
+| fixed | code | P4 | 200 | 96 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 36 | 0 | 72 | 70 | 220.391 | 220.593 |
+| fixed | spec | GEN | 183 | 84 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 20 | 0 | 0 | 0 |
+| fixed | spec | P1 | 143 | 84 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.000 |
+| fixed | spec | P2 | 182 | 117 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11.124 |
+| fixed | spec | P3 | 156 | 86 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 103 | 67 | 308.655 | 334.327 |
+| fixed | spec | P4 | 183 | 84 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 40 | 0 | 80 | 68 | 207.875 | 208.174 |
+
+P4 buggy/code quarantine precision: 93/127 nonflaky tests REVEALS; raw quarantines 127.
+P4 buggy/spec quarantine precision: 84/121 nonflaky tests REVEALS; raw quarantines 121.
+P4 fixed/code: 36 raw quarantines are false alarms; 36 nonflaky false alarms.
+P4 fixed/spec: 40 raw quarantines are false alarms; 40 nonflaky false alarms.
+
+P2/P3 rewritten tests (change-mode denominators): {"P2": 312, "P3": 162}
+P2/P3 change modes: {"P2": {"EXCEPTION_EXPECTED": 42, "EXPECTED_CHANGED": 263, "OTHER": 7}, "P3": {"EXPECTED_CHANGED": 3, "INPUT_CHANGED": 2, "OTHER": 157}}
+LLM calls by purpose: {"free_repair": 890, "generate": 80, "judge": 324, "judge_with_code": 324, "overwrite_fallback": 6}
+Total tokens (logical requests): 960762
+Logical LLM calls: 1624; cache hits: 481
+Mean seconds per uncached LLM call: 4.300
+Mean seconds per unit: 125.420
+Reasoning-bearing calls: 0
+Flaky rows (excluded): 1
+Generation failures: 0
+Unique network requests: 1143
+Total tokens (unique network requests): 613893
+LLM serving seconds (unique requests): 4914.497
+Pilot wall seconds: 10034.870
+
+Projected Phase 2 GPU hours (204 pairs, both conditions, code for three models, spec for 7B only):
+qwen2.5-coder:7b-instruct: 13.924 hours; model-check throughput 12.175 tokens/s
+Total projected GPU hours: 13.924
+Projection scales measured serving time by short model-check throughput; excludes temperature/seed ablations and CPU evaluation.
+
+| Model | Full digest | Peak GPU MiB | Load seconds | Tokens/s | Fully on GPU | Reasoning returned |
+|---|---|---:|---:|---:|---|---|
+| qwen2.5-coder:7b-instruct | dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364 | 6720 | 34.960 | 12.175 | True | False |
+Ollama version: 0.40.1

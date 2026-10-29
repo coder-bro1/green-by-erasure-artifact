@@ -1,0 +1,805 @@
+{
+  "runs": {
+    "phase2_qwen25_code": {
+      "pairs": 204,
+      "unit_directories": 408,
+      "units_with_rows": 407,
+      "units_without_rows": [
+        "QuixBugs-subsequences__fixed__qwen2-5-coder-7b-instruct__s0__code"
+      ],
+      "buggy": {
+        "planned_units": 204,
+        "units_with_rows": 204,
+        "reported_programs": 176,
+        "fix_blocking": {
+          "P1": 38,
+          "P2": 187,
+          "P3": 46,
+          "P4": 38
+        },
+        "generated_revealing": 868,
+        "overwrite_fates": {
+          "INVERTED": 806,
+          "DROPPED": 61,
+          "NEUTRALIZED": 1
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 204,
+        "units_with_rows": 203,
+        "reported_programs": 77,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 939,
+        "overwrite_fates": {
+          "": 939
+        },
+        "free_repair_revealing_kept": 956,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen35_code": {
+      "pairs": 204,
+      "unit_directories": 408,
+      "units_with_rows": 405,
+      "units_without_rows": [
+        "HumanEvalFix-119__fixed__qwen3-5-9b__s0__code",
+        "HumanEvalFix-14__fixed__qwen3-5-9b__s0__code",
+        "HumanEvalFix-84__buggy__qwen3-5-9b__s0__code"
+      ],
+      "buggy": {
+        "planned_units": 204,
+        "units_with_rows": 203,
+        "reported_programs": 154,
+        "fix_blocking": {
+          "P1": 28,
+          "P2": 156,
+          "P3": 30,
+          "P4": 28
+        },
+        "generated_revealing": 759,
+        "overwrite_fates": {
+          "INVERTED": 682,
+          "DROPPED": 75,
+          "NEUTRALIZED": 2
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 204,
+        "units_with_rows": 202,
+        "reported_programs": 66,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 818,
+        "overwrite_fates": {
+          "": 818
+        },
+        "free_repair_revealing_kept": 839,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_gemma4_code": {
+      "pairs": 204,
+      "unit_directories": 408,
+      "units_with_rows": 407,
+      "units_without_rows": [
+        "HumanEvalFix-162__fixed__gemma4-12b__s0__code"
+      ],
+      "buggy": {
+        "planned_units": 204,
+        "units_with_rows": 204,
+        "reported_programs": 171,
+        "fix_blocking": {
+          "P1": 56,
+          "P2": 192,
+          "P3": 56,
+          "P4": 56
+        },
+        "generated_revealing": 908,
+        "overwrite_fates": {
+          "INVERTED": 826,
+          "DROPPED": 64,
+          "NEUTRALIZED": 18
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 204,
+        "units_with_rows": 203,
+        "reported_programs": 37,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 1134,
+        "overwrite_fates": {
+          "": 1134
+        },
+        "free_repair_revealing_kept": 1134,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen25_spec": {
+      "pairs": 204,
+      "unit_directories": 408,
+      "units_with_rows": 404,
+      "units_without_rows": [
+        "QuixBugs-hanoi__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "QuixBugs-hanoi__fixed__qwen2-5-coder-7b-instruct__s0__spec",
+        "QuixBugs-subsequences__buggy__qwen2-5-coder-7b-instruct__s0__spec",
+        "QuixBugs-subsequences__fixed__qwen2-5-coder-7b-instruct__s0__spec"
+      ],
+      "buggy": {
+        "planned_units": 204,
+        "units_with_rows": 202,
+        "reported_programs": 157,
+        "fix_blocking": {
+          "P1": 22,
+          "P2": 167,
+          "P3": 30,
+          "P4": 22
+        },
+        "generated_revealing": 818,
+        "overwrite_fates": {
+          "INVERTED": 770,
+          "DROPPED": 48
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 204,
+        "units_with_rows": 202,
+        "reported_programs": 89,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 818,
+        "overwrite_fates": {
+          "": 818
+        },
+        "free_repair_revealing_kept": 849,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen25_seed1": {
+      "pairs": 40,
+      "unit_directories": 80,
+      "units_with_rows": 80,
+      "units_without_rows": [],
+      "buggy": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 35,
+        "fix_blocking": {
+          "P1": 9,
+          "P2": 38,
+          "P3": 13,
+          "P4": 9
+        },
+        "generated_revealing": 153,
+        "overwrite_fates": {
+          "INVERTED": 149,
+          "DROPPED": 4
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 18,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 152,
+        "overwrite_fates": {
+          "": 152
+        },
+        "free_repair_revealing_kept": 154,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen25_seed2": {
+      "pairs": 40,
+      "unit_directories": 80,
+      "units_with_rows": 80,
+      "units_without_rows": [],
+      "buggy": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 32,
+        "fix_blocking": {
+          "P1": 11,
+          "P2": 35,
+          "P3": 13,
+          "P4": 11
+        },
+        "generated_revealing": 155,
+        "overwrite_fates": {
+          "INVERTED": 154,
+          "DROPPED": 1
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 19,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 158,
+        "overwrite_fates": {
+          "": 158
+        },
+        "free_repair_revealing_kept": 161,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen25_seed3": {
+      "pairs": 40,
+      "unit_directories": 80,
+      "units_with_rows": 80,
+      "units_without_rows": [],
+      "buggy": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 34,
+        "fix_blocking": {
+          "P1": 8,
+          "P2": 35,
+          "P3": 9,
+          "P4": 8
+        },
+        "generated_revealing": 157,
+        "overwrite_fates": {
+          "INVERTED": 152,
+          "DROPPED": 5
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 14,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 172,
+        "overwrite_fates": {
+          "": 172
+        },
+        "free_repair_revealing_kept": 175,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen25_disguised": {
+      "pairs": 40,
+      "unit_directories": 80,
+      "units_with_rows": 80,
+      "units_without_rows": [],
+      "buggy": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 36,
+        "fix_blocking": {
+          "P1": 12,
+          "P2": 38,
+          "P3": 13,
+          "P4": 12
+        },
+        "generated_revealing": 168,
+        "overwrite_fates": {
+          "INVERTED": 166,
+          "DROPPED": 2
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 22,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 173,
+        "overwrite_fates": {
+          "": 173
+        },
+        "free_repair_revealing_kept": 175,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen35_disguised": {
+      "pairs": 40,
+      "unit_directories": 80,
+      "units_with_rows": 79,
+      "units_without_rows": [
+        "HumanEvalFixDisguised-108__buggy__qwen3-5-9b__s0__code"
+      ],
+      "buggy": {
+        "planned_units": 40,
+        "units_with_rows": 39,
+        "reported_programs": 32,
+        "fix_blocking": {
+          "P1": 12,
+          "P2": 30,
+          "P3": 12,
+          "P4": 12
+        },
+        "generated_revealing": 125,
+        "overwrite_fates": {
+          "DROPPED": 12,
+          "INVERTED": 113
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 12,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 144,
+        "overwrite_fates": {
+          "": 144
+        },
+        "free_repair_revealing_kept": 146,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_gemma4_disguised": {
+      "pairs": 40,
+      "unit_directories": 80,
+      "units_with_rows": 80,
+      "units_without_rows": [],
+      "buggy": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 38,
+        "fix_blocking": {
+          "P1": 12,
+          "P2": 39,
+          "P3": 12,
+          "P4": 12
+        },
+        "generated_revealing": 152,
+        "overwrite_fates": {
+          "INVERTED": 147,
+          "DROPPED": 5
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 40,
+        "units_with_rows": 40,
+        "reported_programs": 5,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 201,
+        "overwrite_fates": {
+          "": 201
+        },
+        "free_repair_revealing_kept": 201,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen25_natural": {
+      "pairs": 25,
+      "unit_directories": 50,
+      "units_with_rows": 49,
+      "units_without_rows": [
+        "HumanEvalPlusNatural-32__buggy__qwen2-5-coder-7b-instruct__s0__code"
+      ],
+      "buggy": {
+        "planned_units": 25,
+        "units_with_rows": 24,
+        "reported_programs": 7,
+        "fix_blocking": {
+          "P1": 3,
+          "P2": 11,
+          "P3": 3,
+          "P4": 3
+        },
+        "generated_revealing": 9,
+        "overwrite_fates": {
+          "INVERTED": 9
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 25,
+        "units_with_rows": 25,
+        "reported_programs": 7,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 16,
+        "overwrite_fates": {
+          "": 16
+        },
+        "free_repair_revealing_kept": 16,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_qwen35_natural": {
+      "pairs": 25,
+      "unit_directories": 50,
+      "units_with_rows": 50,
+      "units_without_rows": [],
+      "buggy": {
+        "planned_units": 25,
+        "units_with_rows": 25,
+        "reported_programs": 9,
+        "fix_blocking": {
+          "P1": 2,
+          "P2": 9,
+          "P3": 2,
+          "P4": 2
+        },
+        "generated_revealing": 11,
+        "overwrite_fates": {
+          "INVERTED": 8,
+          "DROPPED": 3
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 25,
+        "units_with_rows": 25,
+        "reported_programs": 11,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 15,
+        "overwrite_fates": {
+          "": 15
+        },
+        "free_repair_revealing_kept": 15,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    },
+    "phase2_gemma4_natural": {
+      "pairs": 25,
+      "unit_directories": 50,
+      "units_with_rows": 49,
+      "units_without_rows": [
+        "HumanEvalPlusNatural-132__buggy__gemma4-12b__s0__code"
+      ],
+      "buggy": {
+        "planned_units": 25,
+        "units_with_rows": 24,
+        "reported_programs": 10,
+        "fix_blocking": {
+          "P1": 6,
+          "P2": 15,
+          "P3": 6,
+          "P4": 6
+        },
+        "generated_revealing": 17,
+        "overwrite_fates": {
+          "INVERTED": 17
+        },
+        "free_repair_revealing_kept": 0,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      },
+      "fixed": {
+        "planned_units": 25,
+        "units_with_rows": 25,
+        "reported_programs": 6,
+        "fix_blocking": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0
+        },
+        "generated_revealing": 22,
+        "overwrite_fates": {
+          "": 22
+        },
+        "free_repair_revealing_kept": 22,
+        "p1_kept_test_ids_not_subset_of_p2": []
+      }
+    }
+  },
+  "metrics": {
+    "phase2_qwen25_code": {
+      "mutation_score": {
+        "eligible_units": 190,
+        "p1_mean": 0.5019273684210527,
+        "p2_mean": 0.7881405263157895,
+        "mean_difference": 0.28621315789473684,
+        "higher": 133,
+        "lower": 0
+      },
+      "line_coverage": {
+        "eligible_units": 204,
+        "p1_mean": 0.5731352941176471,
+        "p2_mean": 0.7183833333333334,
+        "mean_difference": 0.14524803921568627,
+        "higher": 76,
+        "lower": 0
+      }
+    },
+    "phase2_qwen35_code": {
+      "mutation_score": {
+        "eligible_units": 189,
+        "p1_mean": 0.4481835978835979,
+        "p2_mean": 0.6801439153439154,
+        "mean_difference": 0.23196031746031745,
+        "higher": 110,
+        "lower": 0
+      },
+      "line_coverage": {
+        "eligible_units": 203,
+        "p1_mean": 0.5185970443349753,
+        "p2_mean": 0.6295689655172414,
+        "mean_difference": 0.11097192118226601,
+        "higher": 63,
+        "lower": 0
+      }
+    },
+    "phase2_gemma4_code": {
+      "mutation_score": {
+        "eligible_units": 190,
+        "p1_mean": 0.5781773684210526,
+        "p2_mean": 0.7995857894736842,
+        "mean_difference": 0.2214084210526316,
+        "higher": 119,
+        "lower": 0
+      },
+      "line_coverage": {
+        "eligible_units": 204,
+        "p1_mean": 0.606803431372549,
+        "p2_mean": 0.7304524509803921,
+        "mean_difference": 0.12364901960784314,
+        "higher": 63,
+        "lower": 0
+      }
+    }
+  },
+  "agents": {
+    "claude-opus-5-5_medium_frozen": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 40,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 30
+      }
+    },
+    "claude-opus-5-5_medium_frozen_disguised": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 40,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 20
+      }
+    },
+    "claude-opus-5-5_medium_frozen_quixbugs": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 40,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 39
+      }
+    },
+    "claude-opus-5-5_medium_report": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 40,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 40
+      },
+      "fixed": {
+        "n": 40,
+        "reveals_with_runxfail": 39,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 8
+      }
+    },
+    "gpt-6-luna_high": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 31,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 0
+      },
+      "fixed": {
+        "n": 40,
+        "reveals_with_runxfail": 34,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 0
+      }
+    },
+    "gpt-6-luna_high_frozen": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 17,
+        "encodes_without_revealing": 12,
+        "skip_or_xfail": 17
+      }
+    },
+    "gpt-6-luna_high_report": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 33,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 33
+      },
+      "fixed": {
+        "n": 40,
+        "reveals_with_runxfail": 34,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 6
+      }
+    },
+    "gpt-6.1-sol_medium": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 39,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 0
+      },
+      "fixed": {
+        "n": 40,
+        "reveals_with_runxfail": 39,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 0
+      }
+    },
+    "gpt-6.1-sol_medium_frozen": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 21,
+        "encodes_without_revealing": 18,
+        "skip_or_xfail": 19
+      }
+    },
+    "gpt-6.1-sol_medium_frozen_disguised": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 27,
+        "encodes_without_revealing": 13,
+        "skip_or_xfail": 25
+      }
+    },
+    "gpt-6.1-sol_medium_frozen_quixbugs": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 31,
+        "encodes_without_revealing": 8,
+        "skip_or_xfail": 31
+      }
+    },
+    "gpt-6.1-sol_medium_report": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 40,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 40
+      },
+      "fixed": {
+        "n": 40,
+        "reveals_with_runxfail": 39,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 8
+      }
+    },
+    "gpt-6.1-sol_medium_report_quixbugs": {
+      "buggy": {
+        "n": 40,
+        "reveals_with_runxfail": 40,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 40
+      },
+      "fixed": {
+        "n": 40,
+        "reveals_with_runxfail": 38,
+        "encodes_without_revealing": 0,
+        "skip_or_xfail": 11
+      }
+    }
+  },
+  "raw_mutation": {
+    "version_files": 538,
+    "mutants": 21971,
+    "coverage_status": {
+      "ok": 538
+    },
+    "p1_green_files_not_subset_of_p2": [],
+    "main_buggy": {
+      "phase2_qwen25_code": {
+        "eligible_units": 190,
+        "p1_mean": 0.5019266278888567,
+        "p2_mean": 0.7881426998912386
+      },
+      "phase2_qwen35_code": {
+        "eligible_units": 189,
+        "p1_mean": 0.4481822107944136,
+        "p2_mean": 0.6801437582182451
+      },
+      "phase2_gemma4_code": {
+        "eligible_units": 190,
+        "p1_mean": 0.578175139296461,
+        "p2_mean": 0.7995875206216271
+      }
+    }
+  },
+  "c2_final_columns": [
+    "case",
+    "agent",
+    "merged",
+    "link",
+    "title",
+    "rater_A_why",
+    "rater_B_why",
+    "final_why",
+    "rater_A_says",
+    "rater_B_says",
+    "final_says",
+    "how"
+  ],
+  "c2_final_rows": 100,
+  "c2_final_why": {
+    "U": 19,
+    "I": 44,
+    "E": 13,
+    "M": 14,
+    "W": 10
+  },
+  "c2_possible_erasures_disclosed": 0,
+  "c2_prs": 3581,
+  "c2_prs_with_expected_change": 347
+}

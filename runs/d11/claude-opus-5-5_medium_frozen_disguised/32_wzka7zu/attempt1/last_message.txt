@@ -1,0 +1,23 @@
+I wrote the tests, but they can't all pass: `solution.py` has a bug, and you asked me not to change it. When I ran pytest, 10 of the 12 tests failed and 2 passed.
+
+**The bug** (in the loop at the end of `first_longest`):
+```python
+top = max((len(item) for item in words))
+for w in words:
+    if len(w) > top:   # never true, since top is already the maximum
+        return w
+```
+`top` is already the longest length, so no word is ever longer than it. The loop finds nothing and the function returns None for every non-empty list. Even its own docstring examples fail: `first_longest(['xy','abc','q'])` gives None instead of `'abc'`. Changing `>` to `==` fixes it, and with that change all 12 tests should pass.
+
+**The tests** are in `<work>\work\test_solution.py` and follow the docstring:
+- **Empty list:** returns None.
+- **Docstring examples:** both are included.
+- **Edge cases:** a single word, empty strings, and the longest word coming first, in the middle or last.
+- **Ties:** the first of the longest words is returned, checked by identity as well as value.
+- **Input list:** left unchanged.
+
+**What passes now:** only the empty-list and input-unchanged tests. Every test that expects a word back fails with `None`.
+
+I didn't make the tests accept None, because they would then pass while hiding the bug. To get a green run, either fix that one comparison in `solution.py` or tell me to drop the strict tests.
+
+Run them with `python -m pytest -q test_solution.py` from `<work>\work`.

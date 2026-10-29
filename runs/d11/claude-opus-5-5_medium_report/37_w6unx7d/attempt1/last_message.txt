@@ -1,0 +1,9 @@
+I wrote the tests in <work>\work\test_solution.py and did not change solution.py. Running `python -m pytest -q test_solution.py` gives 57 passed and 1 xfailed (the expected failure, marked with strict=True).
+
+**What passes:** the starting values (0, 1, 2), the three docstring examples, other known values up to fibfib(15), the rule fibfib(n) = fibfib(n-1) + fibfib(n-2) + fibfib(n-3) for n from 3 to 20, a match against a simple loop-based version for n from 0 to 21, and a check that the result is an int.
+
+**What fails (expected failure):** `test_efficient_call_count`. The docstring says to "efficiently compute" the n-th number, but solution.py just calls itself three times per step and never remembers earlier results. The number of calls grows exponentially. The test wraps `solution.fibfib` to count calls and expects at most 200 calls for fibfib(20); a version that runs in linear time or caches results would need about 20. The actual code makes tens of thousands of calls, so even moderately large inputs (for example n=40) would take far too long. The values it returns are correct.
+
+**Not covered:** the docstring doesn't define negative n, so I didn't test it. With the current code a negative n keeps recursing until Python's recursion limit raises an error.
+
+result: <work>\work\test_solution.py has 58 pytest tests for fibfib: 57 pass and 1 is a strict xfail because solution.py takes exponential time even though its docstring asks for an efficient implementation.

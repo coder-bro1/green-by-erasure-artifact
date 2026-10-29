@@ -1,0 +1,11 @@
+diff --git a/solution.py b/solution.py
+index e6d5337..635074e 100644
+--- a/solution.py
++++ b/solution.py
+@@ -14,4 +14,5 @@ def decode_cyclic(s: str):
+     """
+     takes as input string encoded with encode_cyclic function. Returns decoded string.
+     """
+-    return encode_cyclic(s)
++    # Two left rotations reverse the encoder's single left rotation.
++    return encode_cyclic(encode_cyclic(s))

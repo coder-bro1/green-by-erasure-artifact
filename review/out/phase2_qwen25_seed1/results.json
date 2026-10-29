@@ -1,0 +1,288 @@
+{
+ "P1-d_labels": {
+  "sampled": 30,
+  "strata": 17,
+  "mismatches": []
+ },
+ "P1-c_same_input": {
+  "units": 80,
+  "units_with_different_hashes": []
+ },
+ "P1-e_invariants": {
+  "P1_llm_calls": 0,
+  "P1-P3_kept_not_PASS": [],
+  "P1-P3_quarantined": [],
+  "P4_quarantined_tests_changed": []
+ },
+ "P1-b_leakage": {
+  "calls_checked": 1578,
+  "violations": [
+   {
+    "call_id": "3d50b7b3f5678025c74eb2c7b1e1a19e2ef7d2d168d7ed915c02608e6084bb4a",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "ef5cf84a5a1dbfdaded8f45431deb874cd3e75f25323089eb90aafb3d6b951ae",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "6ef2dcb6b76afc4ce703b520f4fcb36175dd0270ac2c125476e2dc2fbb6df591",
+    "purpose": "free_repair",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "de67e56e52cb32d04336ea263efad2d605c4e4b7448ff7d72052a3e61eaa24b9",
+    "purpose": "judge",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "a20ad7fbd17dabfb53258787175a840ae7b7603034abaa53a3715cd9b0170930",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert sum_product([]) == (0, 1)",
+     "assert sum_product([]) == (0, 1)"
+    ]
+   },
+   {
+    "call_id": "099daf88e4fd81feaf51416d5f94d97cb8234d93dbafabf08a3558b7178ea684",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "40c0ceb4533e175063a9e950dd448e521d76842b8a8899d5c016ce0021c5812f",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "70e13a4db0fedef7adb3f7c5894246564e21f97ed4f3e3ba6fc2c9d9ab9e6d17",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "0b286c03b0b9cb5207ceb565e2d9dfdaf7c7ebe3873f29f9bdc8f20a10413883",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('cata') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "dd6974136149a8f13df50da5de982a8cfca7b8976e36ff56e40ff992ded426c9",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('') == ''",
+     "assert make_palindrome('') == ''",
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "89b87889815926248363695be07edb645fcad05ff785d8902cde293b037e452c",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('') == ''",
+     "assert make_palindrome('') == ''",
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "b8cdb958cc5a481f1d4c55806b63c98ee6e5c6290f09ccce3c7b926dc49b0a44",
+    "purpose": "judge",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "bf251d7f1093fb95561c3a1d648920d004b54da59df82c01827182584bafc9f4",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "aac59f7f10c499f033f14f5d4ad21ea1b1563346060a9fb2b6ed9ea57bf9ec18",
+    "purpose": "judge",
+    "lines": [
+     "assert make_palindrome('cata') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "ef3611a5f17a72d337eb456408acda6ccd083ba405e035761f7107cf196b3141",
+    "purpose": "judge_with_code",
+    "lines": [
+     "assert make_palindrome('cata') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "380e88a29148d52068315fe2bf84b3c2a06161c936d49826a483d0f9fccb1a5e",
+    "purpose": "free_repair",
+    "lines": [
+     "assert make_palindrome('') == ''",
+     "assert make_palindrome('') == ''",
+     "assert make_palindrome('cat') == 'catac'"
+    ]
+   },
+   {
+    "call_id": "eff31e7ca870653a1e8e856c5929c5b2667f033e3badd7c1c43d9fc505ef98bd",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'b', 'c']) == 'a'"
+    ]
+   },
+   {
+    "call_id": "b88789a87b2dd64ae5d5736c46a7fc8b35028b4b8048a3fc87a1cd7242e8ae56",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'b', 'c']) == 'a'"
+    ]
+   },
+   {
+    "call_id": "8646cb13e2a66ff9200b58ab094040cb7dce28a36a3c8af7886be0456afb0961",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'b', 'c']) == 'a'"
+    ]
+   },
+   {
+    "call_id": "c829c53f33545f47bf2d28e87c09ef5fc6988a9feb43bb8936181725bd2cd108",
+    "purpose": "free_repair",
+    "lines": [
+     "assert longest(['a', 'bb', 'ccc']) == 'ccc'"
+    ]
+   }
+  ],
+  "n_violations": 137
+ },
+ "P1-m_judge_sees_body": {
+  "n": 8,
+  "examples": [
+   {
+    "call_id": "da53790911e85aaa032c663b38f09584ee679a5c933a3fe1c55c7bd8365f4918",
+    "line": "return str(n) == str(n)[::-1]"
+   },
+   {
+    "call_id": "2049c64ae2d330dd48a2bbb86e6d130a8039aed30cbfe182197c18fbe0b3bfc4",
+    "line": "return str(n) == str(n)[::-1]"
+   },
+   {
+    "call_id": "3c861de35acf3cf1a48999719eafab6fde6e3b7a9b4d61b806c13471ff77c18e",
+    "line": "return str(n) == str(n)[::-1]"
+   },
+   {
+    "call_id": "c2807731652af0ce4edaaf398767924698fcf1333737c5b604a7922960ce89a5",
+    "line": "return str(n) == str(n)[::-1]"
+   },
+   {
+    "call_id": "7b7de100ba6a81ce76d66bf4d230f1f3774ae3006154df3399c18fb62e36fb7c",
+    "line": "return str(n) == str(n)[::-1]"
+   }
+  ]
+ },
+ "verdicts": {
+  "stored": {
+   "TEST_WRONG": 121,
+   "BUG": 160,
+   "UNSURE": 1
+  },
+  "recovered_judge": {
+   "TEST_WRONG": 121,
+   "BUG": 160,
+   "UNSURE": 1
+  },
+  "recovered_with_code": {
+   "TEST_WRONG": 139,
+   "BUG": 143
+  },
+  "confusion_condition_verdict_genlabel": {
+   "buggy|BUG|BROKEN": 20,
+   "buggy|BUG|REVEALS": 109,
+   "buggy|TEST_WRONG|BROKEN": 39,
+   "buggy|TEST_WRONG|REVEALS": 44,
+   "fixed|BUG|BROKEN": 22,
+   "fixed|BUG|ENCODES": 9,
+   "fixed|TEST_WRONG|BROKEN": 35,
+   "fixed|TEST_WRONG|ENCODES": 3,
+   "fixed|UNSURE|BROKEN": 1
+  },
+  "variants": {
+   "buggy|code|P4_DEFAULT": {
+    "final_size": 292,
+    "KEPT": 163,
+    "QUARANTINED": 129,
+    "QUARANTINED_REVEALS": 109,
+    "QUARANTINED_BROKEN": 20
+   },
+   "buggy|code|P4_HYBRID": {
+    "final_size": 374,
+    "KEPT": 245,
+    "QUARANTINED": 129,
+    "QUARANTINED_REVEALS": 109,
+    "QUARANTINED_BROKEN": 20
+   },
+   "buggy|code|P4_KEEP_ALL": {
+    "final_size": 375,
+    "KEPT": 163,
+    "QUARANTINED": 212,
+    "QUARANTINED_REVEALS": 153,
+    "QUARANTINED_BROKEN": 59
+   },
+   "buggy|code|P4_STRICT": {
+    "final_size": 292,
+    "KEPT": 163,
+    "QUARANTINED": 129,
+    "QUARANTINED_REVEALS": 109,
+    "QUARANTINED_BROKEN": 20
+   },
+   "fixed|code|P4_DEFAULT": {
+    "final_size": 335,
+    "KEPT": 303,
+    "QUARANTINED": 32,
+    "QUARANTINED_BROKEN": 23,
+    "QUARANTINED_ENCODES": 9
+   },
+   "fixed|code|P4_HYBRID": {
+    "final_size": 373,
+    "KEPT": 341,
+    "QUARANTINED": 32,
+    "QUARANTINED_BROKEN": 23,
+    "QUARANTINED_ENCODES": 9
+   },
+   "fixed|code|P4_KEEP_ALL": {
+    "final_size": 373,
+    "KEPT": 303,
+    "QUARANTINED": 70,
+    "QUARANTINED_BROKEN": 58,
+    "QUARANTINED_ENCODES": 12
+   },
+   "fixed|code|P4_STRICT": {
+    "final_size": 334,
+    "KEPT": 303,
+    "QUARANTINED": 31,
+    "QUARANTINED_BROKEN": 22,
+    "QUARANTINED_ENCODES": 9
+   }
+  }
+ },
+ "P1-f_erasure_samples": {
+  "available": 212,
+  "written": 10
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "project": "luigi",
+ "bug": 20,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 05:19:57",
+ "test_files": [
+  "test/task_test.py"
+ ],
+ "checkout_eol": "lf",
+ "install_buggy": {
+  "created": true,
+  "requirements": 189,
+  "failed_requirements": [
+   "requests-async==0.5.0"
+  ],
+  "setup": [],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 189,
+  "failed_requirements": [
+   "requests-async==0.5.0"
+  ],
+  "setup": [],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest test/task_test.py::TaskTest::test_task_to_str_to_task"
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest test/task_test.py::TaskTest::test_task_to_str_to_task",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 2 warnings in 0.27s ========================"
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest test/task_test.py::TaskTest::test_task_to_str_to_task",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 2 warnings in 0.09s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest test/task_test.py::TaskTest::test_task_to_str_to_task",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "======================== 1 failed, 2 warnings in 0.27s ========================"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest test/task_test.py::TaskTest::test_task_to_str_to_task",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "======================== 1 passed, 2 warnings in 0.07s ========================"
+    }
+   ]
+  }
+ ],
+ "step2": "pass",
+ "step3": "pass",
+ "seconds": 945
+}

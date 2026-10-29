@@ -1,0 +1,10 @@
+diff --git a/solution.py b/solution.py
+index 74149be..d3e40e8 100644
+--- a/solution.py
++++ b/solution.py
+@@ -16,4 +16,4 @@ def fruit_distribution(s,n):
+     for i in s.split(' '):
+         if i.isdigit():
+             lis.append(int(i))
+-    return n - sum(lis) - 1
++    return n - sum(lis)

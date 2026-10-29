@@ -1,0 +1,3 @@
+Added pytest coverage in [test_solution.py](<work>/w2vjbm8/test_solution.py). **9 tests pass and 4 are strict xfails.**
+
+The xfails preserve the docstring’s expected `True` results for rotation matches. `cycpattern_check` checks only the original pattern, so it misses those matches. `solution.py` is unchanged. Pytest also reported a cache-directory permission warning; it did not affect the results.

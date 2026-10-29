@@ -1,0 +1,161 @@
+{
+ "project": "pandas",
+ "bug": 161,
+ "python_pinned": "3.8.3",
+ "python_used": "3.8.3",
+ "started": "2026-10-19 03:51:34",
+ "test_files": [
+  "pandas/tests/series/test_missing.py"
+ ],
+ "install_buggy": {
+  "created": true,
+  "requirements": 74,
+  "failed_requirements": [
+   "gcsfs==0.6.2"
+  ],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "install_fixed": {
+  "created": true,
+  "requirements": 74,
+  "failed_requirements": [
+   "gcsfs==0.6.2"
+  ],
+  "setup": [
+   "pip install cython",
+   "pip install numpy",
+   "python setup.py build_ext --inplace -j 0"
+  ],
+  "failed_setup": [],
+  "prefer_binary": []
+ },
+ "test_commands": [
+  "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories"
+ ],
+ "step2": "pass",
+ "runs_crlf": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.48s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.06s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.48s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.06s =============================="
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "round": 1,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.50s =============================="
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.07s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "buggy",
+   "outcome": "fail",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 1,
+     "outcome": "fail",
+     "import_error": false,
+     "last_line": "============================== 3 failed in 0.49s =============================="
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "version": "fixed",
+   "outcome": "pass",
+   "commands": [
+    {
+     "command": "pytest pandas/tests/series/test_missing.py::TestSeriesMissingData::test_fillna_categorical_with_new_categories",
+     "exit": 0,
+     "outcome": "pass",
+     "import_error": false,
+     "last_line": "============================== 3 passed in 0.05s =============================="
+    }
+   ]
+  }
+ ],
+ "step3": "pass",
+ "seconds": 883,
+ "checkout_eol": "lf"
+}

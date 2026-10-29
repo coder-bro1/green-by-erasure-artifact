@@ -1,0 +1,91 @@
+{
+  "pair_id": "QuixBugs/kheapsort",
+  "version": "buggy",
+  "run": "s6_model_only_gemma4",
+  "tests": {
+    "tests/test_6497ad60f7bc8a91.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__buggy__gemma4-12b__s0__code",
+        "P2M",
+        0
+      ]
+    ],
+    "tests/test_69a6d3ed52d28754.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__buggy__gemma4-12b__s0__code",
+        "P2M",
+        1
+      ]
+    ],
+    "tests/test_9be2dbc455bcc3fd.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__buggy__gemma4-12b__s0__code",
+        "P2M",
+        3
+      ]
+    ],
+    "tests/test_9d57df56889ab4cf.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__buggy__gemma4-12b__s0__code",
+        "P2M",
+        4
+      ]
+    ],
+    "tests/test_518fd44b438501f2.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__buggy__gemma4-12b__s0__code",
+        "P2M",
+        6
+      ]
+    ],
+    "tests/test_f66c1fa8ab16e9c6.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__buggy__gemma4-12b__s0__code",
+        "P2M",
+        7
+      ]
+    ],
+    "tests/test_96f6f48c8a1d2719.py": [
+      [
+        "s6_model_only_gemma4",
+        "QuixBugs-kheapsort__buggy__gemma4-12b__s0__code",
+        "P2M",
+        8
+      ]
+    ]
+  },
+  "new_tests": [
+    "tests/test_6497ad60f7bc8a91.py",
+    "tests/test_69a6d3ed52d28754.py",
+    "tests/test_96f6f48c8a1d2719.py",
+    "tests/test_9d57df56889ab4cf.py"
+  ],
+  "baseline": {
+    "tests/test_6497ad60f7bc8a91.py": "PASS",
+    "tests/test_69a6d3ed52d28754.py": "PASS",
+    "tests/test_96f6f48c8a1d2719.py": "PASS",
+    "tests/test_9d57df56889ab4cf.py": "PASS"
+  },
+  "mutants": [
+    {
+      "job_id": "653220c9c84f4c31bcf7ef3d5e47eb59",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    },
+    {
+      "job_id": "6926d0d24e8342a19df338c31c0d0612",
+      "killed_by": [],
+      "mutant_matches": true,
+      "fallback": false
+    }
+  ],
+  "seconds": 5.8,
+  "finished": "2026-10-28T21:36:45.522836+00:00"
+}
