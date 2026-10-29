@@ -1,7 +1,7 @@
-# Green by Erasure: Replication Package
+# Passing Tests, Hidden Bugs: Replication Package
 
-This repository is the replication package for the paper *Green by Erasure: How Failure-Handling Policies Turn
-Bug-Revealing Tests into Fault-Enforcing Tests*, submitted to ICST 2027. It contains the experimental harness,
+This repository is the replication package for the paper *Passing Tests, Hidden Bugs: How Test Repair in
+LLM-Based Test Generation Fools Coverage and Mutation Score*, submitted to ICST 2027. It contains the experimental harness,
 every prompt and configuration, the recorded outputs of all runs, and the scripts that compute the numbers,
 tables and figures reported in the paper.
 
